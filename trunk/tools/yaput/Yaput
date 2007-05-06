@@ -1,0 +1,240 @@
+#!/usr/bin/python
+
+# Original Author:
+#   Michele Campeotto <micampe@micampe.it>
+#   (C) 2004 Michele Campeotto.
+# Yahoo! authorization code by:
+#    Cameron Mallory <cmallory@berserk.org>
+# Glue and debugging:
+#   Eric Weigle <weigle@gmail.com>
+#
+# Rewritten to use Conduit (http://www.conduit-project.org)
+#   John Stowers <john.stowers@gmail.com>
+#
+# License: GNU GPL version 2.
+
+import gtk, gobject
+import sys, os, time
+import urllib, urlparse
+
+import dbus
+if getattr(dbus, 'version', (0,0,0)) >= (0,41,0):
+  import dbus.glib
+
+WIDTH = 250
+HEIGHT = 150
+CONFIG = """<configuration><username type="string">%s</username><showFriends type="bool">True</showFriends><showFamily type="bool">True</showFamily><showPublic type="bool">True</showPublic><tagWith type="string">Conduit</tagWith></configuration>"""
+DEBUG = False
+
+class Uploadr:
+    def __init__(self):
+        self.alpha = 25
+        self.files = []
+
+        self.window = gtk.Window(gtk.WINDOW_TOPLEVEL)
+        self.window.set_title("Uploadr")
+        self.window.connect("delete_event", self._on_window_closed)
+        self.window.set_border_width(10)
+        self.window.set_resizable(False)
+
+        self.vbox = gtk.VBox(False)
+        self.vbox.set_spacing(10)
+
+        self.frame = gtk.Frame()
+        self.frame.set_shadow_type(gtk.SHADOW_IN)
+        self.frame.set_size_request(WIDTH, HEIGHT)
+        self.frame.show()
+
+        self.white = gtk.gdk.Pixbuf(gtk.gdk.COLORSPACE_RGB, False, 8, WIDTH, HEIGHT)
+        try:
+            self.white.fill(0xffffffffL)
+        except OverflowError:
+            print "I'm sorry I can't get white to work on your Python."
+            print "You'll have a black background instead."
+            self.white.fill(0) # looks like crap, but at least doesn't crash
+
+        self.image = gtk.Image()
+        self.logo = self.white_background(gtk.gdk.pixbuf_new_from_file("flickr_logo.gif"))
+        self.image.set_from_pixbuf(self.logo)
+        self.image.show()
+        self.frame.add(self.image)
+
+        self.vbox.pack_start(self.frame, True, True)
+
+        hbox = gtk.HBox(False, 5)
+        hbox.pack_start(gtk.Label("Username: "), False, False)
+        entry = gtk.Entry()
+        entry.connect("changed", self._on_username_changed)
+        hbox.pack_start(entry, True, True)
+        self.vbox.pack_start(hbox)
+
+        config = gtk.Button("Upload")
+        config.connect("clicked", self._on_upload_clicked)
+        self.vbox.pack_start(config)
+
+        self.progress = gtk.ProgressBar()
+        self.progress.set_orientation(gtk.PROGRESS_LEFT_TO_RIGHT)
+        self.progress.set_text("Connecting...")
+        self.vbox.pack_start(self.progress, False, False)
+
+        #setup DND
+        self.vbox.drag_dest_set(
+            gtk.DEST_DEFAULT_MOTION | gtk.DEST_DEFAULT_HIGHLIGHT | gtk.DEST_DEFAULT_DROP,
+            [ ( "text/uri-list", 0, 0 ) ], 
+            gtk.gdk.ACTION_COPY
+            )
+        self.vbox.connect("drag_data_received", self._on_drag_and_drop)
+
+        self.window.add(self.vbox)
+        self.vbox.set_sensitive(False)
+        self.vbox.show()
+        self.window.show_all()
+
+        gobject.timeout_add(500, self.connect_to_conduit)
+
+        if len(sys.argv) > 2:
+        	self.add_files(sys.argv[2:])
+
+    def _on_configure_clicked(self, sender):
+        info = UploadDetails(self.window).run()
+
+    def _on_upload_clicked(self, sender):
+        if len(self.files) > 0:
+            self.vbox.set_sensitive(False)
+            ######
+            # Now ask conduit to upload the photos to Flickr
+            ######
+            self.conduitApp.Sync(self.conduit)
+
+    def _on_window_closed(self, widget, event, data=None):
+        gtk.main_quit()
+        return False
+
+    def _on_username_changed(self, entry):
+        if len(entry.get_text()) > 0:
+            if DEBUG:
+                xml = """<configuration><slow type="bool">True</slow></configuration>"""
+            else:
+                xml = CONFIG % entry.get_text()
+            self.conduitApp.SetDataProviderConfiguration(self.sink, xml)
+
+    def _on_drag_and_drop(self, wid, context, x, y, selection, targetType, time):
+        self.add_files(
+                [urllib.unquote(urlparse.urlsplit(name)[2])
+                    for name in selection.get_uris()
+                        if os.path.isfile(urllib.unquote(urlparse.urlsplit(name)[2]))])
+
+    # ----------------------------------------------------------------------
+    # Sets up the connection to conduit
+    def connect_to_conduit(self):
+        bus = dbus.SessionBus()
+        conduit_object = bus.get_object('org.gnome.Conduit', '/')
+        self.conduitApp = dbus.Interface(conduit_object, 'org.gnome.Conduit')
+
+        try:
+            ######
+            # Build the export interface
+            ######
+            if DEBUG:
+                self.source = self.conduitApp.GetDataSource("TestSource")
+                self.sink = self.conduitApp.GetDataSink("TestSink")
+            else:
+                self.source = self.conduitApp.GetDataSource("FileSource")
+                self.sink = self.conduitApp.GetDataSink("FlickrSink")
+
+            self.conduit = self.conduitApp.BuildConduit(self.source, self.sink)
+            
+            #get an icon for the GUI
+            #key = self.conduitApp.GetDataProviderKey(self.sink)
+            #print self.conduitApp.GetDataProviderInformation(key)
+
+            self.conduitApp.connect_to_signal("SyncCompleted", self.sync_complete_cb)
+            self.conduitApp.connect_to_signal("SyncProgress", self.sync_progress_cb)
+
+            self.progress.set_text("Drop pictures here")
+            self.vbox.set_sensitive(True)
+        except dbus.DBusException, err:
+            self.progress.set_text("Could not Connect")
+            print err
+
+    def sync_complete_cb(self, conduit, error):
+        self.progress.set_fraction(1.0)
+        if error == True:
+            self.progress.set_text("Error")
+        else:
+            self.progress.set_text("Drop pictures here")
+
+        self.files = []
+        self.vbox.set_sensitive(True)
+
+    def sync_progress_cb(self, conduit, progress):
+        self.progress.set_fraction(progress)
+
+    def add_files(self, files):
+        for filename in files:
+            #check if its an image file
+            try:
+                pixbuf = gtk.gdk.pixbuf_new_from_file(filename)
+
+                self.progress.set_text("%s" % (filename.split("/")[-1],))
+
+                # resize to fit in frame
+                if pixbuf.get_height() < pixbuf.get_width():
+                    width = 150
+                    height = int(150.0 / pixbuf.get_width() * pixbuf.get_height())
+                else:
+                    height = 150
+                    width = int(150.0 / pixbuf.get_height() * pixbuf.get_width())
+                pixbuf = pixbuf.scale_simple(width, height, gtk.gdk.INTERP_TILES)
+
+                pixbuf = self.white_background(pixbuf)
+
+                # fade
+                gobject.timeout_add(50, self.do_fade, self.image.get_pixbuf().copy(), pixbuf)
+
+            except gobject.GError:
+                pass
+
+            while gtk.events_pending():
+                gtk.main_iteration(False)
+                time.sleep(0.05)
+
+            if filename not in self.files:
+                self.files.append(filename)
+
+            ###
+            # Add the file to conduit
+            ###
+            self.conduitApp.AddDataToSource(self.source, filename)
+
+        gobject.timeout_add(50, self.do_fade, self.image.get_pixbuf().copy(), self.logo)
+        self.progress.set_text("%s Photos to Upload" % len(self.files))
+
+    def white_background(self, image):
+        x = (WIDTH - image.get_width()) / 2
+        y = (HEIGHT - image.get_height()) / 2
+        composed = self.white.copy()
+        image.composite(composed, x, y,
+                    min(WIDTH, image.get_width()),
+                    min(HEIGHT, image.get_height()),
+                    x, y, 1, 1, gtk.gdk.INTERP_TILES, 255)
+        return composed
+
+    def do_fade(self, pixbuf, new_pixbuf):
+        new_pixbuf.composite(pixbuf,
+                0, 0, pixbuf.get_width(), pixbuf.get_height(),
+                0, 0, 1, 1,
+                gtk.gdk.INTERP_TILES, self.alpha)
+        self.image.set_from_pixbuf(pixbuf)
+        self.alpha += 25
+        if self.alpha < 255:
+            return True
+        else:
+            self.alpha = 25
+            self.image.set_from_pixbuf(new_pixbuf)
+            return False
+
+if __name__ == "__main__":
+    hello = Uploadr()
+    gtk.main()
+
