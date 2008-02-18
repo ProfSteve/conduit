@@ -1,0 +1,9 @@
+2008-01-21  Jorge Gonzalez  <jorgegonz@svn.gnome.org>
+
+        * es/es.po: Added Spanish translation.
+	* Makefile.am: Added es to DOC_LINGUAS
+
+2007-12-16  Daniel Nylander <po@danielnylander.se>
+
+	* sv/sv.po: Added Swedish translation.
+	* Makefile.am: Added sv to DOC_LINGUAS

@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=org.conduit.Application
+Exec=@bindir@/conduit -c
