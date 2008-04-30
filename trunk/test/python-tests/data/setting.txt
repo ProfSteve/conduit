@@ -1,2 +1,0 @@
-key:/foo/bar/9890
-value:9523
