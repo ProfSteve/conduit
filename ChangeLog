@@ -1,5 +1,10 @@
 2008-10-05  John Stowers  <john.stowers@gmail.com>
 
+	* conduit/Main.py: Print the file implementations to help
+	debugging.
+
+2008-10-05  John Stowers  <john.stowers@gmail.com>
+
 	* test/python-tests/TestCoreConvertAudioVideo.py:
 	* test/python-tests/data/folder.list: Fix AudioVideo tests.
 
