@@ -5,6 +5,7 @@ tools/eog-plugin/config.glade
 tools/totem-plugin/conduit.py
 tools/test-db-wrapper/main.glade
 tools/test-db-wrapper/main.glade
+conduit/modules/AmazonS3Module/config.glade
 conduit/modules/GoogleModule/contacts-config.glade
 conduit/modules/OSyncEvoModule.py
 conduit/modules/PicasaDesktopModule/PicasaDesktopModule.py
