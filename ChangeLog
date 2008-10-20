@@ -1,5 +1,11 @@
 2008-10-20  John Stowers  <john.stowers@gmail.com>
 
+	* NEWS:
+	* conduit/__init__.py:
+	* configure.ac: Post release version bump to 0.3.16
+
+2008-10-20  John Stowers  <john.stowers@gmail.com>
+
 	* NEWS: Update NEWS for release
 
 2008-10-20  John Stowers  <john.stowers@gmail.com>

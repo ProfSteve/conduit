@@ -1,3 +1,6 @@
+NEW in 0.3.16:
+==============
+
 NEW in 0.3.15:
 ==============
 * Fixed #523181, Can't sync folders - escaping/unicode problem (John Stowers)
