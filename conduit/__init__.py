@@ -30,7 +30,7 @@ gobject.threads_init()
 ################################################################################
 DIRECTORY = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 IS_INSTALLED = not os.path.exists(os.path.join(DIRECTORY,"ChangeLog"))
-IS_DEVELOPMENT_VERSION = True
+IS_DEVELOPMENT_VERSION = False
 
 # Check the profile directory to prevent crashes when saving settings, etc
 USER_DIR = os.path.join(
