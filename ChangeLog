@@ -1,5 +1,9 @@
 2008-10-20  John Stowers  <john.stowers@gmail.com>
 
+	* NEWS: Update NEWS for release
+
+2008-10-20  John Stowers  <john.stowers@gmail.com>
+
 	* conduit/platform/FileGnomeVfs.py: Only show user visible 
     gnomevfs volumes
 
