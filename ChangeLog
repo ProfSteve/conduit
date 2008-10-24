@@ -1,3 +1,8 @@
+2008-10-24  John Stowers  <john.stowers@gmail.com>
+
+	* conduit/datatypes/File.py: Restore self.FileImpl when unpickling
+	Fixes #557589
+
 2008-10-21  John Stowers  <john.stowers@gmail.com>
 
 	* conduit/conduit: Remove accidental setting of LD_LIBRARY_PATH and
