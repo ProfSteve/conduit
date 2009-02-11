@@ -1,14 +1,14 @@
 # Swedish translation for conduit.
-# Copyright (C) 2007-2008 Free Software Foundation, Inc.
+# Copyright (C) 2007-2009 Free Software Foundation, Inc.
 # This file is distributed under the same license as the conduit package.
-# Daniel Nylander <po@danielnylander.se>, 2007, 2008.
+# Daniel Nylander <po@danielnylander.se>, 2007, 2008, 2009.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: conduit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-01 13:38+0200\n"
-"PO-Revision-Date: 2008-09-01 15:47+0100\n"
+"POT-Creation-Date: 2009-02-11 03:48+0100\n"
+"PO-Revision-Date: 2009-02-11 03:48+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -254,71 +254,71 @@ msgid "Conflicts (%s)"
 msgstr "Konflikter (%s)"
 
 #. Build some liststores to display
-#: ../conduit/gtkui/UI.py:281
+#: ../conduit/gtkui/UI.py:284
 msgid "Convert from"
 msgstr "Konvertera från"
 
-#: ../conduit/gtkui/UI.py:282
+#: ../conduit/gtkui/UI.py:285
 msgid "into"
 msgstr "till"
 
-#: ../conduit/gtkui/UI.py:333
+#: ../conduit/gtkui/UI.py:336
 msgid "Relationship Database"
 msgstr "Relationsdatabas"
 
-#: ../conduit/gtkui/UI.py:337
+#: ../conduit/gtkui/UI.py:340
 msgid "Conversions Available"
 msgstr "Konversioner tillgängliga"
 
-#: ../conduit/gtkui/UI.py:343
+#: ../conduit/gtkui/UI.py:346
 #: ../conduit/gtkui/Tree.py:348
 #: ../conduit/modules/FileModule/FileConfiguration.py:105
 msgid "Name"
 msgstr "Namn"
 
 # FIXME. Kolla denna
-#: ../conduit/gtkui/UI.py:347
+#: ../conduit/gtkui/UI.py:350
 msgid "Loaded"
 msgstr "Inläst"
 
-#: ../conduit/gtkui/UI.py:459
+#: ../conduit/gtkui/UI.py:470
 #: ../conduit/hildonui/UI.py:127
 msgid "Synchronization in progress. Do you want to cancel it?"
 msgstr "Synkronisering pågår. Vill du avbryta den?"
 
-#: ../conduit/gtkui/UI.py:625
+#: ../conduit/gtkui/UI.py:636
 msgid "_Synchronize All"
 msgstr "_Synkronisera allt"
 
-#: ../conduit/gtkui/UI.py:625
+#: ../conduit/gtkui/UI.py:636
 msgid "Synchronizes All Groups"
 msgstr "Synkroniserar alla grupper"
 
-#: ../conduit/gtkui/UI.py:626
+#: ../conduit/gtkui/UI.py:637
 msgid "_Cancel Synchronization"
 msgstr "_Avbryt synkronisering"
 
-#: ../conduit/gtkui/UI.py:626
+#: ../conduit/gtkui/UI.py:637
 msgid "Cancels Currently Synchronizing Groups"
 msgstr "Avbryter aktuella synkroniseringsgrupper"
 
-#: ../conduit/gtkui/UI.py:627
+#: ../conduit/gtkui/UI.py:638
 msgid "_Quit"
 msgstr "_Avsluta"
 
-#: ../conduit/gtkui/UI.py:627
+#: ../conduit/gtkui/UI.py:638
 msgid "Close Conduit"
 msgstr "Stäng Conduit"
 
-#: ../conduit/gtkui/UI.py:667
+#: ../conduit/gtkui/UI.py:678
 msgid "Synchronization Error"
 msgstr "Fel vid synkronisering"
 
-#: ../conduit/gtkui/UI.py:670
+#: ../conduit/gtkui/UI.py:681
 msgid "Synchronization Complete"
 msgstr "Synkronisering färdigställd"
 
-#: ../conduit/gtkui/UI.py:686
+#: ../conduit/gtkui/UI.py:697
 msgid "Synchronizing"
 msgstr "Synkronisering"
 
@@ -853,9 +853,13 @@ msgstr "Uppskickad av ovanstående användare"
 msgid "YouTube Source"
 msgstr "YouTube-källa"
 
-#: ../conduit/modules/iPodModule/iPodModule.py:640
+#: ../conduit/modules/iPodModule/iPodModule.py:650
 msgid "Encoding"
 msgstr "Kodning"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:759
+msgid "Keep converted files"
+msgstr "Behåll konverterade filer"
 
 #: ../conduit/modules/iPodModule/config.glade.h:1
 msgid "<b>Encoding</b>"
