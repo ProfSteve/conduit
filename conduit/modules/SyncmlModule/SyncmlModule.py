@@ -3,6 +3,9 @@ import conduit.dataproviders.DataProvider as DataProvider
 import conduit.dataproviders.DataProviderCategory as DataProviderCategory
 import conduit.dataproviders.BluetoothFactory as BluetoothFactory
 
+import logging
+log = logging.getLogger("modules.syncml")
+
 try:
     import pysyncml
 except ImportError:
@@ -36,30 +39,24 @@ class SyncmlDataProvider(DataProvider.TwoWay):
 
     def handle_event(self, sync_object, event, userdata, err):
         if event == enums.SML_DATA_SYNC_EVENT_ERROR:
-            print "ERRROR"
+            log.error("An error has occurred")
         elif event == enums.SML_DATA_SYNC_EVENT_CONNECT:
-            print "Connect"
+            log.info("Connect")
         elif event == enums.SML_DATA_SYNC_EVENT_GOT_ALL_ALERTS:
-            print "Got all alerts"
+            log.info("Got all alerts")
         elif event == enums.SML_DATA_SYNC_EVENT_GOT_ALL_CHANGES:
-            print "Got All Changes"
+            log.info("Got All Changes")
         elif event == enums.SML_DATA_SYNC_EVENT_GOT_ALL_MAPPINGS:
-            print "Got All Mappings"
+            log.info("Got All Mappings")
         elif event == enums.SML_DATA_SYNC_EVENT_DISCONNECT:
-            print "Disconnect"
+            log.info("Disconnect")
         elif event == enums.SML_DATA_SYNC_EVENT_FINISHED:
-            print "Finished"
+            log.info("Finished")
         else:
-            print "Unexpected error"
+            log.error("An error has occurred (Unexpected event)")
 
     def handle_change(self, sync_object, source, type, uid, data, size, userdata, err):
-        if type == enums.SML_CHANGE_ADD:
-            pass
-        elif type == enums.SML_CHANGE_REPLACE:
-            pass
-        elif type == enums.SML_CHANGE_DELETE:
-            pass
-        print "CHANGE CHANGE CHANGE"
+        self._changes[uid] = (type, data[:size])
         return 1
 
     def handle_devinf(self, sync_object, info, userdata, err):
@@ -74,6 +71,8 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         self._handle_change = pysyncml.ChangeCallback(self.handle_change)
         self._handle_devinf = pysyncml.HandleRemoteDevInfCallback(self.handle_devinf)
 
+        self._changes = None
+
     def refresh(self):
         err = pysyncml.Error()
         self.syncobj = pysyncml.SyncObject.new(enums.SML_SESSION_TYPE_SERVER, enums.SML_TRANSPORT_OBEX_CLIENT, pysyncml.byref(err))
@@ -86,25 +85,59 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         self.syncobj.set_option(enums.SML_DATA_SYNC_CONFIG_USE_WBXML, "1", pysyncml.byref(err))
 
         self.syncobj.add_datastore("text/x-vcard", None, "Contacts", pysyncml.byref(err))
+        self._changes = {}
 
         self.syncobj.register_event_callback(self._handle_event, None)
         self.syncobj.register_change_callback(self._handle_change, None)
         self.syncobj.register_handle_remote_devinf_callback(self._handle_devinf, None)
 
         if not self.syncobj.init(pysyncml.byref(err)):
-            print "FAIL!!!"
+            log.error("Unable to prepare synchronisation")
             return
 
         if not self.syncobj.run(pysyncml.byref(err)):
-            print "RUN FAIL!!!"
+            log.error("Unable to synchronise")
             return
-        print "running..."
+
+        log.info("running sync..")
 
     def get_all(self):
         return []
 
+    def get_changes(self):
+        return self._changes.keys()
+
+    def get(self, uid):
+        type, data = self._changes[uid]
+        return self._blob_to_obj(uid, data)
+
+    def put(self, obj, overwrite, LUID=None):
+        err = syncml.Error()
+        blob = self._obj_to_blob(obj)
+
+        if LUID == None:
+            self.syncobj.add_change(self.source, enums.SML_CHANGE_ADD, "", blob, len(blob), null, byref(err))
+            return None
+
+        self.syncobj.add_change(self.source, enums.SML_CHANGE_REPLACE, uid, blob, len(blob), null, byref(err))
+        return None
+
+    def delete(self, uid):
+        err = syncml.Error()
+        self.syncobj.add_change(self.source, enums.SML_CHANGE_DELETE, uid, "", 0, null, byref(err))
+
+    def finish(self):
+        self.syncobj.send_changes()
+        self._changes = None
+
     def get_UID(self):
         return self.address
+
+    def _blob_to_obj(self, uid, data):
+        raise NotImplementedError
+
+    def _obj_to_blob(self, obj):
+        raise NotImplementedError
 
 class ContactsProvider(SyncmlDataProvider):
 
@@ -116,3 +149,12 @@ class ContactsProvider(SyncmlDataProvider):
     _icon_ = "contact-new"
     _configurable_ = False
     
+    def _blob_to_obj(self, uid, data):
+        c = Contact.Contact()
+        c.set_UID(c)
+        c.set_from_vcard_string(data)
+        return c
+
+    def _obj_to_blob(self, obj):
+        return obj.get_vcard_string()
+
