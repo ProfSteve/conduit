@@ -17,6 +17,7 @@ import enums
 
 MODULES = {
     "BluetoothSyncmlFactory": { "type": "dataprovider-factory"},
+    "SyncmlContactTwoWay": { "type": "dataprovider"},
 }
 
 
@@ -86,16 +87,13 @@ class SyncmlDataProvider(DataProvider.TwoWay):
 
     def refresh(self):
         err = pysyncml.Error()
-        self.syncobj = pysyncml.SyncObject.new(enums.SML_SESSION_TYPE_SERVER, enums.SML_TRANSPORT_OBEX_CLIENT, pysyncml.byref(err))
 
-        self.syncobj.set_option(enums.SML_DATA_SYNC_CONFIG_CONNECTION_TYPE, enums.SML_DATA_SYNC_CONFIG_CONNECTION_BLUETOOTH, pysyncml.byref(err))
-        self.syncobj.set_option(enums.SML_TRANSPORT_CONFIG_BLUETOOTH_ADDRESS, self.address, pysyncml.byref(err))
-        self.syncobj.set_option(enums.SML_TRANSPORT_CONFIG_BLUETOOTH_CHANNEL, "10", pysyncml.byref(err))
+        self._setup_connection()
+        self._setup_datastore()
 
         self.syncobj.set_option(enums.SML_DATA_SYNC_CONFIG_IDENTIFIER, "PC Suite", pysyncml.byref(err))
         self.syncobj.set_option(enums.SML_DATA_SYNC_CONFIG_USE_WBXML, "1", pysyncml.byref(err))
 
-        self.syncobj.add_datastore("text/x-vcard", None, "Contacts", pysyncml.byref(err))
         self._changes = {}
 
         self.syncobj.register_event_callback(self._handle_event, None)
@@ -139,7 +137,7 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         return None
 
     def delete(self, uid):
-        err = syncml.Error()
+        err = pysyncml.Error()
         self.syncobj.add_change(self.source, enums.SML_CHANGE_DELETE, uid, "", 0, null, pysyncml.byref(err))
 
     def finish(self):
@@ -156,6 +154,24 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         raise NotImplementedError
 
 
+class HttpClientProvider(SyncmlDataProvider):
+
+    def _setup_connection(self):
+        err = pysyncml.Error()
+        self.syncobj = pysyncml.SyncObject.new(enums.SML_SESSION_TYPE_CLIENT, enums.SML_TRANSPORT_HTTP_CLIENT, pysyncml.byref(err))
+        self.syncobj.set_option(enums.SML_TRANSPORT_CONFIG_URL, self.address, pysyncml.byref(err))
+
+
+class BluetoothClient(SyncmlDataProvider):
+
+    def _setup_connection(self):
+        err = pysyncml.Error()
+        self.syncobj = pysyncml.SyncObject.new(enums.SML_SESSION_TYPE_SERVER, enums.SML_TRANSPORT_OBEX_CLIENT, pysyncml.byref(err))
+        self.syncobj.set_option(enums.SML_DATA_SYNC_CONFIG_CONNECTION_TYPE, enums.SML_DATA_SYNC_CONFIG_CONNECTION_BLUETOOTH, pysyncml.byref(err))
+        self.syncobj.set_option(enums.SML_TRANSPORT_CONFIG_BLUETOOTH_ADDRESS, self.address, pysyncml.byref(err))
+        self.syncobj.set_option(enums.SML_TRANSPORT_CONFIG_BLUETOOTH_CHANNEL, "10", pysyncml.byref(err))
+
+
 class ContactsProvider(SyncmlDataProvider):
 
     _name_ = "Contacts"
@@ -165,7 +181,11 @@ class ContactsProvider(SyncmlDataProvider):
     _out_type_ = "contact"
     _icon_ = "contact-new"
     _configurable_ = False
-    
+
+    def _setup_datastore(self):
+        err = pysyncml.Error()
+        self.syncobj.add_datastore("text/x-vcard", None, "Contacts", pysyncml.byref(err))
+
     def _blob_to_obj(self, uid, data):
         c = Contact.Contact()
         c.set_UID(c)
@@ -174,4 +194,12 @@ class ContactsProvider(SyncmlDataProvider):
 
     def _obj_to_blob(self, obj):
         return obj.get_vcard_string()
+
+
+#FIXME: Need a nicer design here!
+class BluetoothContactsProvider(BluetoothClient, ContactsProvider):
+    pass
+
+class SyncmlContactTwoWay(HttpClientProvider, ContactsProvider):
+    pass
 
