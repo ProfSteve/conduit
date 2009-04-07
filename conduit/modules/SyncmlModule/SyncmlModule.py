@@ -201,5 +201,7 @@ class BluetoothContactsProvider(BluetoothClient, ContactsProvider):
     pass
 
 class SyncmlContactTwoWay(HttpClientProvider, ContactsProvider):
-    pass
+
+    def __init__(self, *args):
+        SyncmlDataProvider.__init__(self, "http://localhost:1234")
 

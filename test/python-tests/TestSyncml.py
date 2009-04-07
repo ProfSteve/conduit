@@ -16,8 +16,8 @@ import conduit.utils as Utils
 
 #setup the conduit
 test = SimpleSyncTest()
-sourceW = test.get_dataprovider("SyncmlContactTwoWay")
-sinkW = test.get_dataprovider("FolderTwoWay")
+sourceW = test.get_dataprovider("FolderTwoWay")
+sinkW = test.get_dataprovider("SyncmlContactTwoWay")
 test.prepare(sourceW, sinkW)
 test.set_two_way_policy({"conflict":"ask","deleted":"ask"})
 
