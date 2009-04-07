@@ -28,9 +28,9 @@ config["folderGroupName"] = "Tomboy"
 test.configure(source=config)
 
 #check they refresh ok
-test.refresh()
-a = test.get_source_count()
-ok("Got notes to sync (%s)" % a, a > 0)
+#test.refresh()
+#a = test.get_source_count()
+#ok("Got notes to sync (%s)" % a, a > 0)
 
 #sync
 test.set_two_way_sync(True)

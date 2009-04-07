@@ -47,6 +47,8 @@ class SyncmlDataProvider(DataProvider.TwoWay):
             log.info("Connect")
         elif event == enums.SML_DATA_SYNC_EVENT_GOT_ALL_ALERTS:
             log.info("Got all alerts")
+            if self._session_type == enums.SML_SESSION_TYPE_CLIENT:
+                self.syncobj.send_changes(pysyncml.byref(err))
         elif event == enums.SML_DATA_SYNC_EVENT_GOT_ALL_CHANGES:
             log.info("Got All Changes")
             # unlock the Conduit loop - this allows conduit to process the data we just fetched
@@ -54,7 +56,8 @@ class SyncmlDataProvider(DataProvider.TwoWay):
             # don't exit this callback - we want to inject the changes conduit tells us about
             # first.
             #self._put_lock.wait(60)
-            self.syncobj.send_changes(pysyncml.byref(err))
+            if self._session_type == enums.SML_SESSION_TYPE_SERVER:
+                self.syncobj.send_changes(pysyncml.byref(err))
         elif event == enums.SML_DATA_SYNC_EVENT_GOT_ALL_MAPPINGS:
             log.info("Got All Mappings")
         elif event == enums.SML_DATA_SYNC_EVENT_DISCONNECT:
@@ -119,7 +122,10 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         return []
 
     def get_changes(self):
-        return self._changes.keys()
+        a = [key for key, value in self._changes.items() if value[0] == enums.SML_CHANGE_ADD]
+        r = [key for key, value in self._changes.items() if value[0] == enums.SML_CHANGE_REPLACE]
+        d = [key for key, value in self._changes.items() if value[0] == enums.SML_CHANGE_DELETE]
+        return a, r, d
 
     def get(self, uid):
         type, data = self._changes[uid]
@@ -161,6 +167,7 @@ class HttpClientProvider(SyncmlDataProvider):
         self.syncobj = pysyncml.SyncObject.new(enums.SML_SESSION_TYPE_CLIENT, enums.SML_TRANSPORT_HTTP_CLIENT, pysyncml.byref(err))
         self.syncobj.set_option(enums.SML_TRANSPORT_CONFIG_URL, self.address, pysyncml.byref(err))
 
+        self._session_type = enums.SML_SESSION_TYPE_CLIENT
 
 class BluetoothClient(SyncmlDataProvider):
 
@@ -171,6 +178,7 @@ class BluetoothClient(SyncmlDataProvider):
         self.syncobj.set_option(enums.SML_TRANSPORT_CONFIG_BLUETOOTH_ADDRESS, self.address, pysyncml.byref(err))
         self.syncobj.set_option(enums.SML_TRANSPORT_CONFIG_BLUETOOTH_CHANNEL, "10", pysyncml.byref(err))
 
+        self._session_type = enums.SML_SESSION_TYPE_SERVER
 
 class ContactsProvider(SyncmlDataProvider):
 
