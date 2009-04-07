@@ -6,6 +6,8 @@ import conduit.dataproviders.BluetoothFactory as BluetoothFactory
 import logging
 log = logging.getLogger("modules.syncml")
 
+import threading
+
 try:
     import pysyncml
 except ImportError:
@@ -46,6 +48,12 @@ class SyncmlDataProvider(DataProvider.TwoWay):
             log.info("Got all alerts")
         elif event == enums.SML_DATA_SYNC_EVENT_GOT_ALL_CHANGES:
             log.info("Got All Changes")
+            # unlock the Conduit loop - this allows conduit to process the data we just fetched
+            self._refresh_lock.set()
+            # don't exit this callback - we want to inject the changes conduit tells us about
+            # first.
+            #self._put_lock.wait(60)
+            #self.syncobj.send_changes(byref(err))
         elif event == enums.SML_DATA_SYNC_EVENT_GOT_ALL_MAPPINGS:
             log.info("Got All Mappings")
         elif event == enums.SML_DATA_SYNC_EVENT_DISCONNECT:
@@ -70,6 +78,9 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         self._handle_event = pysyncml.EventCallback(self.handle_event)
         self._handle_change = pysyncml.ChangeCallback(self.handle_change)
         self._handle_devinf = pysyncml.HandleRemoteDevInfCallback(self.handle_devinf)
+
+        self._refresh_lock = threading.Event()
+        self._put_lock = threading.Event()
 
         self._changes = None
 
@@ -101,6 +112,11 @@ class SyncmlDataProvider(DataProvider.TwoWay):
 
         log.info("running sync..")
 
+        # block here. EventCallback will fire in other thread. When we get GOT_ALL_CHANGES we can unblock here..
+        # then we block in the EventCallback until Conduit has queued all its changes. Then we unblock libsyncml.
+        # Cripes. Stab my eyes out. NOW.
+        self._refresh_lock.wait(60)
+
     def get_all(self):
         return []
 
@@ -127,7 +143,7 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         self.syncobj.add_change(self.source, enums.SML_CHANGE_DELETE, uid, "", 0, null, byref(err))
 
     def finish(self):
-        self.syncobj.send_changes()
+        self._put_lock.set()
         self._changes = None
 
     def get_UID(self):
@@ -138,6 +154,7 @@ class SyncmlDataProvider(DataProvider.TwoWay):
 
     def _obj_to_blob(self, obj):
         raise NotImplementedError
+
 
 class ContactsProvider(SyncmlDataProvider):
 
