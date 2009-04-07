@@ -53,7 +53,7 @@ class SyncmlDataProvider(DataProvider.TwoWay):
             # don't exit this callback - we want to inject the changes conduit tells us about
             # first.
             #self._put_lock.wait(60)
-            #self.syncobj.send_changes(byref(err))
+            self.syncobj.send_changes(pysyncml.byref(err))
         elif event == enums.SML_DATA_SYNC_EVENT_GOT_ALL_MAPPINGS:
             log.info("Got All Mappings")
         elif event == enums.SML_DATA_SYNC_EVENT_DISCONNECT:
@@ -132,15 +132,15 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         blob = self._obj_to_blob(obj)
 
         if LUID == None:
-            self.syncobj.add_change(self.source, enums.SML_CHANGE_ADD, "", blob, len(blob), null, byref(err))
+            self.syncobj.add_change(self.source, enums.SML_CHANGE_ADD, "", blob, len(blob), null, psyncml.byref(err))
             return None
 
-        self.syncobj.add_change(self.source, enums.SML_CHANGE_REPLACE, uid, blob, len(blob), null, byref(err))
+        self.syncobj.add_change(self.source, enums.SML_CHANGE_REPLACE, uid, blob, len(blob), null, pysyncml.byref(err))
         return None
 
     def delete(self, uid):
         err = syncml.Error()
-        self.syncobj.add_change(self.source, enums.SML_CHANGE_DELETE, uid, "", 0, null, byref(err))
+        self.syncobj.add_change(self.source, enums.SML_CHANGE_DELETE, uid, "", 0, null, pysyncml.byref(err))
 
     def finish(self):
         self._put_lock.set()
