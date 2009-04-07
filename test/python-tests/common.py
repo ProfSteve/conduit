@@ -553,7 +553,7 @@ class SimpleSyncTest(SimpleTest):
         if debug:
             print conduit.GLOBALS.mappingDB.debug()
 
-        return (self.get_source_count(), self.get_sink_count())
+        #return (self.get_source_count(), self.get_sink_count())
 
     def get_sink(self, index=0):
         #support multiple sinks

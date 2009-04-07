@@ -55,7 +55,7 @@ class SyncmlDataProvider(DataProvider.TwoWay):
             self._refresh_lock.set()
             # don't exit this callback - we want to inject the changes conduit tells us about
             # first.
-            #self._put_lock.wait(60)
+            self._put_lock.wait(60)
             if self._session_type == enums.SML_SESSION_TYPE_SERVER:
                 self.syncobj.send_changes(pysyncml.byref(err))
         elif event == enums.SML_DATA_SYNC_EVENT_GOT_ALL_MAPPINGS:
@@ -64,6 +64,7 @@ class SyncmlDataProvider(DataProvider.TwoWay):
             log.info("Disconnect")
         elif event == enums.SML_DATA_SYNC_EVENT_FINISHED:
             log.info("Finished")
+            self._refresh_lock.set()
         else:
             log.error("An error has occurred (Unexpected event)")
 
@@ -148,6 +149,7 @@ class SyncmlDataProvider(DataProvider.TwoWay):
 
     def finish(self, a, b, c):
         self._put_lock.set()
+        self._refresh_lock.wait(60)
         self._changes = None
 
     def get_UID(self):
