@@ -140,7 +140,7 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         err = pysyncml.Error()
         self.syncobj.add_change(self.source, enums.SML_CHANGE_DELETE, uid, "", 0, null, pysyncml.byref(err))
 
-    def finish(self):
+    def finish(self, a, b, c):
         self._put_lock.set()
         self._changes = None
 

@@ -3,7 +3,7 @@ import signal
 import os
 import time
 
-server = subprocess.Popen(["syncml-ds-tool", "--sync", "text/x-vcard", "contacts", "contacts", "--http-server", "1234"])
+server = subprocess.Popen(["syncml-ds-tool", "--sync", "text/x-vcard", "Contacts", "contacts", "--http-server", "1234"])
 
 # no way to tell syncml-ds-tool is running :(
 time.sleep(1)
