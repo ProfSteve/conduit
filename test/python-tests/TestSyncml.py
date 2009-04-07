@@ -25,7 +25,7 @@ test.set_two_way_policy({"conflict":"ask","deleted":"ask"})
 config = {}
 config["folder"] = "file://"+Utils.new_tempdir()
 config["folderGroupName"] = "Tomboy"
-test.configure(sink=config)
+test.configure(source=config)
 
 #check they refresh ok
 test.refresh()
