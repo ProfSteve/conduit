@@ -151,6 +151,7 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         self._put_lock.set()
         self._refresh_lock.wait(60)
         self._changes = None
+        self.syncobj.unref(pysyncml.byref(self.syncobj))
 
     def get_UID(self):
         return self.address
