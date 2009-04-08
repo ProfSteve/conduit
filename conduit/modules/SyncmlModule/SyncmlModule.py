@@ -41,15 +41,37 @@ class BluetoothSyncmlFactory(BluetoothFactory.BluetoothFactory):
 class SyncmlDataProvider(DataProvider.TwoWay):
 
     def handle_event(self, sync_object, event, userdata, err):
+        """ handle_event is called by libsyncml at different stages of a sync
+            This includes when this connect and disconnect and when errors occur.
+
+            It WILL happen in a different thread to whatever thread called syncobject.run()
+        """
         if event == enums.SML_DATA_SYNC_EVENT_ERROR:
             log.error("An error has occurred")
-        elif event == enums.SML_DATA_SYNC_EVENT_CONNECT:
+            #FIXME: log error details
+            return
+
+        if event == enums.SML_DATA_SYNC_EVENT_CONNECT:
             log.info("Connect")
-        elif event == enums.SML_DATA_SYNC_EVENT_GOT_ALL_ALERTS:
+            return
+
+        if event == enums.SML_DATA_SYNC_EVENT_DISCONNECT:
+            log.info("Disconnect")
+            return
+
+        if event == enums.SML_DATA_SYNC_EVENT_FINISHED:
+            log.info("Session complete")
+            # Unlock the sync thread so it can do its cleanup
+            self._refresh_lock.set()
+            return
+
+        if event == enums.SML_DATA_SYNC_EVENT_GOT_ALL_ALERTS:
             log.info("Got all alerts")
             if self._session_type == enums.SML_SESSION_TYPE_CLIENT:
                 self.syncobj.send_changes(pysyncml.byref(err))
-        elif event == enums.SML_DATA_SYNC_EVENT_GOT_ALL_CHANGES:
+            return
+
+        if event == enums.SML_DATA_SYNC_EVENT_GOT_ALL_CHANGES:
             log.info("Got All Changes")
             # unlock the Conduit loop - this allows conduit to process the data we just fetched
             self._refresh_lock.set()
@@ -58,22 +80,31 @@ class SyncmlDataProvider(DataProvider.TwoWay):
             self._put_lock.wait(60)
             if self._session_type == enums.SML_SESSION_TYPE_SERVER:
                 self.syncobj.send_changes(pysyncml.byref(err))
-        elif event == enums.SML_DATA_SYNC_EVENT_GOT_ALL_MAPPINGS:
+                return
+
+        if event == enums.SML_DATA_SYNC_EVENT_GOT_ALL_MAPPINGS:
             log.info("Got All Mappings")
-        elif event == enums.SML_DATA_SYNC_EVENT_DISCONNECT:
-            log.info("Disconnect")
-        elif event == enums.SML_DATA_SYNC_EVENT_FINISHED:
-            log.info("Finished")
-            self._refresh_lock.set()
-        else:
-            log.error("An error has occurred (Unexpected event)")
+            return
+
+        log.error("An error has occurred (Unexpected event)")
 
     def handle_change(self, sync_object, source, type, uid, data, size, userdata, err):
+        """ handle_change is called by libsyncml to tells us about changes on the server or device
+            we are synchronising to.
+
+            This WILL happen in a different thread to where sync is happening.
+        """
         self._changes[uid] = (type, data[:size])
         return 1
 
     def handle_devinf(self, sync_object, info, userdata, err):
-        print "DEVINF!"
+        """ handle_devinf is called by libsyncml to tells us information such as device mfr and firmware
+            version of whatever we are syncing against.
+
+            This WILL happen in a different thread to where sync is happening.
+            There is a known bug with SE C902 where this is called twice - ignore the 2nd one or crashes
+            occur
+        """
         return 1
 
     def __init__(self, address):
@@ -172,6 +203,7 @@ class HttpClientProvider(SyncmlDataProvider):
 
         self._session_type = enums.SML_SESSION_TYPE_CLIENT
 
+
 class BluetoothClient(SyncmlDataProvider):
 
     def _setup_connection(self):
@@ -182,6 +214,7 @@ class BluetoothClient(SyncmlDataProvider):
         self.syncobj.set_option(enums.SML_TRANSPORT_CONFIG_BLUETOOTH_CHANNEL, "10", pysyncml.byref(err))
 
         self._session_type = enums.SML_SESSION_TYPE_SERVER
+
 
 class ContactsProvider(SyncmlDataProvider):
 
