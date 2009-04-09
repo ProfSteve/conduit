@@ -164,7 +164,7 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         return self._blob_to_obj(uid, data)
 
     def put(self, obj, overwrite, LUID=None):
-        err = syncml.Error()
+        err = pysyncml.Error()
         blob = self._obj_to_blob(obj)
 
         if LUID == None:
