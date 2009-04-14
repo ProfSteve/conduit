@@ -8,16 +8,19 @@ class BluetoothFactory(SimpleFactory.SimpleFactory):
     def __init__(self, **kwargs):
         SimpleFactory.SimpleFactory.__init__(self, **kwargs)
 
-        self.bus = dbus.SystemBus()
-        self.bluez = dbus.Interface(self.bus.get_object("org.bluez", "/"), "org.bluez.Manager")
+        try:
+            self.bus = dbus.SystemBus()
+            self.bluez = dbus.Interface(self.bus.get_object("org.bluez", "/"), "org.bluez.Manager")
 
-        adapter_path = self.bluez.DefaultAdapter()
-        self.adapter = dbus.Interface(self.bus.get_object("org.bluez", adapter_path), "org.bluez.Adapter")
+            adapter_path = self.bluez.DefaultAdapter()
+            self.adapter = dbus.Interface(self.bus.get_object("org.bluez", adapter_path), "org.bluez.Adapter")
 
-        self.adapter.connect_to_signal("DeviceCreated", self._device_created)
-        # self.adapter.connect_to_signal("DeviceRemoved", self._device_removed)
+            self.adapter.connect_to_signal("DeviceCreated", self._device_created)
+            # self.adapter.connect_to_signal("DeviceRemoved", self._device_removed)
 
-        # FIXME: Need to listen to property changes and not show paired devices?
+            # FIXME: Need to listen to property changes and not show paired devices?
+        except:
+            pass
 
     def _maybe_new(self, device):
         properties = device.GetProperties()
@@ -39,9 +42,12 @@ class BluetoothFactory(SimpleFactory.SimpleFactory):
         self._maybe_new(device)
 
     def probe(self):
-        for device_path in self.adapter.ListDevices():
-            device = dbus.Interface(self.bus.get_object("org.bluez", device_path), "org.bluez.Device")
-            self._maybe_new(device) 
+        try:
+            for device_path in self.adapter.ListDevices():
+                device = dbus.Interface(self.bus.get_object("org.bluez", device_path), "org.bluez.Device")
+                self._maybe_new(device) 
+        except:
+            pass
 
     def get_args(self, id, **kwargs):
         return (id, )
