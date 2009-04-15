@@ -21,6 +21,7 @@ import enums
 MODULES = {
     "BluetoothSyncmlFactory": { "type": "dataprovider-factory"},
     "SyncmlContactTwoWay": { "type": "dataprovider"},
+    "SyncmlEventsTwoWay" : { "type": "dataprovider"},
 }
 
 
