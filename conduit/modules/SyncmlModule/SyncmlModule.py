@@ -72,8 +72,9 @@ class SyncmlDataProvider(DataProvider.TwoWay):
 
         if event == enums.SML_DATA_SYNC_EVENT_GOT_ALL_ALERTS:
             log.info("Got all alerts")
-            self._syncml_sendall()
-            return
+            if self._session_type == enums.SML_SESSION_TYPE_CLIENT:
+                self._syncml_sendall()
+                return
 
         if event == enums.SML_DATA_SYNC_EVENT_GOT_ALL_CHANGES:
             log.info("Got All Changes")
@@ -201,7 +202,6 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         self._changes = None
         self._queue = None
         self.syncobj.unref(pysyncml.byref(self.syncobj))
-
 
         if self._session_type == enums.SML_SESSION_TYPE_CLIENT:
             self._syncml_run()
