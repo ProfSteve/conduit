@@ -3,6 +3,9 @@ import conduit.dataproviders.DataProvider as DataProvider
 import conduit.dataproviders.DataProviderCategory as DataProviderCategory
 import conduit.dataproviders.BluetoothFactory as BluetoothFactory
 
+import conduit.datatypes.Contact as Contact
+import conduit.datatypes.Event as Event
+
 import logging
 log = logging.getLogger("modules.syncml")
 
@@ -232,7 +235,7 @@ class ContactsProvider(SyncmlDataProvider):
 
     def _blob_to_obj(self, uid, data):
         c = Contact.Contact()
-        c.set_UID(c)
+        c.set_UID(uid)
         c.set_from_vcard_string(data)
         return c
 
