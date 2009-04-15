@@ -37,7 +37,8 @@ class BluetoothSyncmlFactory(BluetoothFactory.BluetoothFactory):
 
     def get_dataproviders(self, id, **props):
         return [
-            ContactsProvider
+            BluetoothContactsProvider,
+            BluetoothEventsProvider
         ]
 
 
@@ -243,11 +244,42 @@ class ContactsProvider(SyncmlDataProvider):
         return obj.get_vcard_string()
 
 
+class EventsProvider(SyncmlDataProvider):
+
+    _name_ = "Calendar"
+    _description_ = "Calendar"
+    _module_type_ = "twoway"
+    _in_type_ = "event"
+    _out_type_ = "event"
+    _icon_ = "x-office-calendar"
+    _configurable_ = False
+
+    def _setup_datastore(self):
+        err = pysyncml.Error()
+        self.syncobj.add_datastore("text/x-vcalendar", None, "Calendar", pysyncml.byref(err))
+
+    def _blob_to_obj(self, uid, data):
+        e = Event.Event()
+        e.set_UID(uid)
+        e.set_from_ical_string(data)
+        return e
+
+    def _obj_to_blob(self, obj):
+        return obj.get_ical_string()
+
+
 #FIXME: Need a nicer design here!
 class BluetoothContactsProvider(BluetoothClient, ContactsProvider):
     pass
+class BluetoothEventsProvider(BluetoothClient, EventsProvider):
+    pass
 
 class SyncmlContactTwoWay(HttpClientProvider, ContactsProvider):
+
+    def __init__(self, *args):
+        SyncmlDataProvider.__init__(self, "http://localhost:1234")
+
+class SyncmlEventsTwoWay(HttpClientProvider, EventsProvider):
 
     def __init__(self, *args):
         SyncmlDataProvider.__init__(self, "http://localhost:1234")
