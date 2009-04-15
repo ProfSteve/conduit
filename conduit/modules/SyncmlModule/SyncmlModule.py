@@ -80,7 +80,7 @@ class SyncmlDataProvider(DataProvider.TwoWay):
             self._put_lock.wait(60)
             if self._session_type == enums.SML_SESSION_TYPE_SERVER:
                 self.syncobj.send_changes(pysyncml.byref(err))
-                return
+            return
 
         if event == enums.SML_DATA_SYNC_EVENT_GOT_ALL_MAPPINGS:
             log.info("Got All Mappings")
