@@ -84,6 +84,7 @@ class SyncmlDataProvider(DataProvider.TwoWay):
                 # first.
                 self._put_lock.wait(60)
                 self._syncml_sendall()
+            return
 
         if event == enums.SML_DATA_SYNC_EVENT_GOT_ALL_MAPPINGS:
             log.info("Got All Mappings")
@@ -197,13 +198,19 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         self._put_lock.set()
         self._refresh_lock.wait(60)
 
-        if self._session_type == enums.SML_SESSION_TYPE_CLIENT:
-            self._syncml_run()
-            self._refresh_lock.wait(60)
-
         self._changes = None
         self._queue = None
         self.syncobj.unref(pysyncml.byref(self.syncobj))
+
+
+        if self._session_type == enums.SML_SESSION_TYPE_CLIENT:
+            self._syncml_run()
+            self._refresh_lock.wait(60)
+            self._refresh_lock.wait(60)
+
+            self._changes = None
+            self._queue = None
+            self.syncobj.unref(pysyncml.byref(self.syncobj))
 
     def get_UID(self):
         return self.address
