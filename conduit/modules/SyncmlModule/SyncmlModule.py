@@ -72,20 +72,18 @@ class SyncmlDataProvider(DataProvider.TwoWay):
 
         if event == enums.SML_DATA_SYNC_EVENT_GOT_ALL_ALERTS:
             log.info("Got all alerts")
-            if self._session_type == enums.SML_SESSION_TYPE_CLIENT:
-                self.syncobj.send_changes(pysyncml.byref(err))
+            self._syncml_sendall()
             return
 
         if event == enums.SML_DATA_SYNC_EVENT_GOT_ALL_CHANGES:
             log.info("Got All Changes")
             # unlock the Conduit loop - this allows conduit to process the data we just fetched
             self._refresh_lock.set()
-            # don't exit this callback - we want to inject the changes conduit tells us about
-            # first.
-            self._put_lock.wait(60)
             if self._session_type == enums.SML_SESSION_TYPE_SERVER:
-                self.syncobj.send_changes(pysyncml.byref(err))
-            return
+                # don't exit this callback - we want to inject the changes conduit tells us about
+                # first.
+                self._put_lock.wait(60)
+                self._syncml_sendall()
 
         if event == enums.SML_DATA_SYNC_EVENT_GOT_ALL_MAPPINGS:
             log.info("Got All Mappings")
@@ -112,20 +110,14 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         """
         return 1
 
-    def __init__(self, address):
-        DataProvider.TwoWay.__init__(self)
-        self.address = address
+    def _syncml_sendall(self):
+        err = pysyncml.Error()
+        for t, uid, blob in self._queue:
+            self.syncobj.add_change(self.source, t, uid, blob, len(blob), null, pysyncml.byref(err))
+        self.syncobj.send_changes(pysyncml.byref(err))
+        self._queue = []
 
-        self._handle_event = pysyncml.EventCallback(self.handle_event)
-        self._handle_change = pysyncml.ChangeCallback(self.handle_change)
-        self._handle_devinf = pysyncml.HandleRemoteDevInfCallback(self.handle_devinf)
-
-        self._refresh_lock = threading.Event()
-        self._put_lock = threading.Event()
-
-        self._changes = None
-
-    def refresh(self):
+    def _syncml_run(self):
         err = pysyncml.Error()
 
         self._setup_connection()
@@ -150,6 +142,26 @@ class SyncmlDataProvider(DataProvider.TwoWay):
 
         log.info("running sync..")
 
+    def __init__(self, address):
+        DataProvider.TwoWay.__init__(self)
+        self.address = address
+
+        self._handle_event = pysyncml.EventCallback(self.handle_event)
+        self._handle_change = pysyncml.ChangeCallback(self.handle_change)
+        self._handle_devinf = pysyncml.HandleRemoteDevInfCallback(self.handle_devinf)
+
+        self._refresh_lock = threading.Event()
+        self._put_lock = threading.Event()
+
+        self._changes = None
+        self._queue = None
+
+    def refresh(self):
+        self._changes = {}
+        self._queue = []
+
+        self._syncml_run()
+
         # block here. EventCallback will fire in other thread. When we get GOT_ALL_CHANGES we can unblock here..
         # then we block in the EventCallback until Conduit has queued all its changes. Then we unblock libsyncml.
         # Cripes. Stab my eyes out. NOW.
@@ -169,24 +181,28 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         return self._blob_to_obj(uid, data)
 
     def put(self, obj, overwrite, LUID=None):
-        err = pysyncml.Error()
         blob = self._obj_to_blob(obj)
 
         if LUID == None:
-            self.syncobj.add_change(self.source, enums.SML_CHANGE_ADD, "", blob, len(blob), null, psyncml.byref(err))
+            self._queue.append((enums.SML_CHANGE_ADD, "", blob))
             return None
 
-        self.syncobj.add_change(self.source, enums.SML_CHANGE_REPLACE, uid, blob, len(blob), null, pysyncml.byref(err))
+        self._queue.append((enums.SML_CHANGE_REPLACE, uid, blob))
         return None
 
     def delete(self, uid):
-        err = pysyncml.Error()
-        self.syncobj.add_change(self.source, enums.SML_CHANGE_DELETE, uid, "", 0, null, pysyncml.byref(err))
+        self._queue.append((enums.SML_CHANGE_DELETE, uid, ""))
 
     def finish(self, a, b, c):
         self._put_lock.set()
         self._refresh_lock.wait(60)
+
+        if self._session_type == enums.SML_SESSION_TYPE_CLIENT:
+            self._syncml_run()
+            self._refresh_lock.wait(60)
+
         self._changes = None
+        self._queue = None
         self.syncobj.unref(pysyncml.byref(self.syncobj))
 
     def get_UID(self):
