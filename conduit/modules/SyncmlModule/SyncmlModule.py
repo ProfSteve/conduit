@@ -87,6 +87,7 @@ class SyncmlDataProvider(DataProvider.TwoWay):
                 # don't exit this callback - we want to inject the changes conduit tells us about
                 # first.
                 self._put_lock.wait(60)
+                self._put_lock.clear()
                 self._syncml_sendall()
             return
 
@@ -172,7 +173,6 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         self._queue = None
 
     def refresh(self):
-        self._changes = {}
         self._queue = []
 
         self._syncml_run()
@@ -181,6 +181,7 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         # then we block in the EventCallback until Conduit has queued all its changes. Then we unblock libsyncml.
         # Cripes. Stab my eyes out. NOW.
         self._refresh_lock.wait(60)
+        self._refresh_lock.clear()
 
     def get_all(self):
         return []
@@ -211,18 +212,19 @@ class SyncmlDataProvider(DataProvider.TwoWay):
     def finish(self, a, b, c):
         self._put_lock.set()
         self._refresh_lock.wait(60)
+        self._refresh_lock.clear()
         self._changes
-        #self.syncobj.unref(pysyncml.byref(self.syncobj))
+        self.syncobj.unref(pysyncml.byref(self.syncobj))
 
         if len(self._queue) > 0 and self._session_type == enums.SML_SESSION_TYPE_CLIENT:
             self._changes = {}
             self._syncml_run()
             self._refresh_lock.wait(60)
+            self._refresh_lock.clear()
             self._refresh_lock.wait(60)
+            self._refresh_lock.clear()
             self._changes = None
-            #self.syncobj.unref(pysyncml.byref(self.syncobj))
-
-        time.sleep(10)
+            self.syncobj.unref(pysyncml.byref(self.syncobj))
 
         self._queue = None
 

@@ -46,6 +46,8 @@ test.sync()
 #ok("Sync completed", abort == False)
 #ok("All notes transferred (%s,%s)" % (a,b), a == b)
 
+time.sleep(2)
+
 os.kill(server.pid, signal.SIGINT)
 
 finished()
