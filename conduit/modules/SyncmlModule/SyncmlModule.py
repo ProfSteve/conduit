@@ -200,7 +200,6 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         self._refresh_lock.wait(60)
 
         self._changes = None
-        self._queue = None
         self.syncobj.unref(pysyncml.byref(self.syncobj))
 
         if self._session_type == enums.SML_SESSION_TYPE_CLIENT:
