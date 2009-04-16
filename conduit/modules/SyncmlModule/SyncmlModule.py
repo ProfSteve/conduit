@@ -1,3 +1,5 @@
+import conduit
+
 import conduit.utils as Utils
 import conduit.dataproviders.DataProvider as DataProvider
 import conduit.dataproviders.DataProviderCategory as DataProviderCategory
@@ -100,6 +102,11 @@ class SyncmlDataProvider(DataProvider.TwoWay):
             This WILL happen in a different thread to where sync is happening.
         """
         self._changes[uid] = (type, data[:size])
+
+        if self._session_type == enums.SML_SESSION_TYPE_CLIENT:
+            err = pysyncml.Error()
+            self.syncobj.add_mapping(source, uid, uid, pysyncml.byref(err))
+
         return 1
 
     def handle_devinf(self, sync_object, info, userdata, err):
@@ -187,10 +194,10 @@ class SyncmlDataProvider(DataProvider.TwoWay):
 
         if LUID == None:
             self._queue.append((enums.SML_CHANGE_ADD, "", blob))
-            return None
+            return conduit.datatypes.Rid(uid=str(hash(blob)), mtime=None, hash=None)
 
         self._queue.append((enums.SML_CHANGE_REPLACE, uid, blob))
-        return None
+        return conduit.datatypes.Rid(uid=uid, mtime=None, hash=None)
 
     def delete(self, uid):
         self._queue.append((enums.SML_CHANGE_DELETE, uid, ""))
@@ -198,19 +205,18 @@ class SyncmlDataProvider(DataProvider.TwoWay):
     def finish(self, a, b, c):
         self._put_lock.set()
         self._refresh_lock.wait(60)
-
         self._changes = None
         self.syncobj.unref(pysyncml.byref(self.syncobj))
 
-        if self._session_type == enums.SML_SESSION_TYPE_CLIENT:
+        if len(self._queue) > 0 and self._session_type == enums.SML_SESSION_TYPE_CLIENT:
             self._changes = {}
             self._syncml_run()
             self._refresh_lock.wait(60)
             self._refresh_lock.wait(60)
-
             self._changes = None
-            self._queue = None
             self.syncobj.unref(pysyncml.byref(self.syncobj))
+
+        self._queue = None
 
     def get_UID(self):
         return self.address

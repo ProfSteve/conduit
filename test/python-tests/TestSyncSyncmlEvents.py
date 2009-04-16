@@ -2,6 +2,7 @@ import subprocess
 import signal
 import os
 import time
+import shutil
 
 server = subprocess.Popen(["./syncml-server.sh", "text/x-vcalendar", "Calendar", "calendar"], cwd="test/python-tests")
 
@@ -21,9 +22,14 @@ sinkW = test.get_dataprovider("SyncmlEventsTwoWay")
 test.prepare(sourceW, sinkW)
 test.set_two_way_policy({"conflict":"ask","deleted":"ask"})
 
+#tempdir
+tempdir = Utils.new_tempdir()
+for f in get_files_from_data_dir("*.ical"):
+    shutil.copy(f, tempdir)
+
 #configure the source and sink
 config = {}
-config["folder"] = "file://"+Utils.new_tempdir()
+config["folder"] = "file://" + tempdir
 config["folderGroupName"] = "Tomboy"
 test.configure(source=config)
 
