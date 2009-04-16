@@ -12,6 +12,7 @@ import logging
 log = logging.getLogger("modules.syncml")
 
 import threading
+import time
 
 try:
     import pysyncml
@@ -101,6 +102,9 @@ class SyncmlDataProvider(DataProvider.TwoWay):
 
             This WILL happen in a different thread to where sync is happening.
         """
+        if self._changes == None:
+            return 1
+
         self._changes[uid] = (type, data[:size])
 
         if self._session_type == enums.SML_SESSION_TYPE_CLIENT:
@@ -122,12 +126,14 @@ class SyncmlDataProvider(DataProvider.TwoWay):
     def _syncml_sendall(self):
         err = pysyncml.Error()
         for t, uid, blob in self._queue:
-            self.syncobj.add_change(self.source, t, uid, blob, len(blob), null, pysyncml.byref(err))
+            self.syncobj.add_change(self.source, t, uid, blob, len(blob), None, pysyncml.byref(err))
         self.syncobj.send_changes(pysyncml.byref(err))
         self._queue = []
 
     def _syncml_run(self):
         err = pysyncml.Error()
+
+        self._changs = {}
 
         self._setup_connection()
         self._setup_datastore()
@@ -205,8 +211,8 @@ class SyncmlDataProvider(DataProvider.TwoWay):
     def finish(self, a, b, c):
         self._put_lock.set()
         self._refresh_lock.wait(60)
-        self._changes = None
-        self.syncobj.unref(pysyncml.byref(self.syncobj))
+        self._changes
+        #self.syncobj.unref(pysyncml.byref(self.syncobj))
 
         if len(self._queue) > 0 and self._session_type == enums.SML_SESSION_TYPE_CLIENT:
             self._changes = {}
@@ -214,7 +220,9 @@ class SyncmlDataProvider(DataProvider.TwoWay):
             self._refresh_lock.wait(60)
             self._refresh_lock.wait(60)
             self._changes = None
-            self.syncobj.unref(pysyncml.byref(self.syncobj))
+            #self.syncobj.unref(pysyncml.byref(self.syncobj))
+
+        time.sleep(10)
 
         self._queue = None
 
@@ -263,6 +271,7 @@ class ContactsProvider(SyncmlDataProvider):
     def _setup_datastore(self):
         err = pysyncml.Error()
         self.syncobj.add_datastore("text/x-vcard", None, "Contacts", pysyncml.byref(err))
+        self.source = "Contacts"
 
     def _blob_to_obj(self, uid, data):
         c = Contact.Contact()
@@ -287,6 +296,7 @@ class EventsProvider(SyncmlDataProvider):
     def _setup_datastore(self):
         err = pysyncml.Error()
         self.syncobj.add_datastore("text/x-vcalendar", None, "Calendar", pysyncml.byref(err))
+        self.source = "Calendar"
 
     def _blob_to_obj(self, uid, data):
         e = Event.Event()
