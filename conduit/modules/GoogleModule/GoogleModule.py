@@ -1,6 +1,7 @@
 import os
 import re
 import urlparse
+import urllib
 import gobject
 import datetime
 import dateutil.parser
@@ -30,16 +31,16 @@ Utils.dataprovider_add_dir_to_path(__file__)
 try:
     import atom.service
     import gdata.service
-    import gdata.photos.service    
+    import gdata.photos.service
     import gdata.calendar.service
     import gdata.contacts.service
     import gdata.docs.service
     import gdata.youtube.service
 
     MODULES = {
-#        "GoogleCalendarTwoWay" : { "type": "dataprovider" },
+        "GoogleCalendarTwoWay" : { "type": "dataprovider" },
         "PicasaTwoWay" :         { "type": "dataprovider" },
-        "YouTubeTwoWay" :        { "type": "dataprovider" },    
+        "YouTubeTwoWay" :        { "type": "dataprovider" },
         "ContactsTwoWay" :       { "type": "dataprovider" },
         "DocumentsSink" :        { "type": "dataprovider" },
     }
@@ -58,7 +59,7 @@ class _GoogleBase:
         self.password = ""
         self.loggedIn = False
         self.service = service
-        
+
         if conduit.GLOBALS.settings.proxy_enabled():
             log.info("Configuring proxy for %s" % self.service)
             host,port,user,password = conduit.GLOBALS.settings.get_proxy()
@@ -119,7 +120,7 @@ class _GoogleCalendar:
 
     @classmethod    
     def from_google_format(cls, calendar):
-        uri = calendar.id.text.split('/')[-1]
+        uri = urllib.unquote(calendar.id.text.split('/')[-1])
         name = calendar.title.text
         return cls(name, uri)
         
