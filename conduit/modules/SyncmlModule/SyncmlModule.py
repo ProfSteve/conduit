@@ -160,6 +160,8 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         DataProvider.TwoWay.__init__(self)
         self.address = address
 
+        self.slowsync = True
+
         self._handle_event = pysyncml.EventCallback(self.handle_event)
         self._handle_change = pysyncml.ChangeCallback(self.handle_change)
         self._handle_devinf = pysyncml.HandleRemoteDevInfCallback(self.handle_devinf)
@@ -182,9 +184,15 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         self._refresh_lock.clear()
 
     def get_all(self):
-        return []
+        return [key for key, value in self._changes.items() if value[0] == enums.SML_CHANGE_ADD or value[0] == enums.SML_CHANGE_REPLACE]
 
     def get_changes(self):
+        # If we end up doing a syncml slowsync we will end up getting all data from the device - so we can't use
+        # the get_changes machinery.
+        if self.slowsync == True:
+            raise NotImplementedError
+
+        # Just report changes to sync engine
         a = [key for key, value in self._changes.items() if value[0] == enums.SML_CHANGE_ADD]
         r = [key for key, value in self._changes.items() if value[0] == enums.SML_CHANGE_REPLACE]
         d = [key for key, value in self._changes.items() if value[0] == enums.SML_CHANGE_DELETE]
