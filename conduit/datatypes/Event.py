@@ -1,4 +1,4 @@
-import vobject 
+import vobject
 import re
 import conduit.datatypes.DataType as DataType
 
@@ -12,7 +12,11 @@ class Event(DataType.DataType):
         self.iCal = vobject.iCalendar()
 
     def set_from_ical_string(self, string):
-        self.iCal = vobject.readOne(string)
+        o = vobject.readOne(string)
+        if o.name == "VCALENDAR":
+            self.iCal = o.vevent
+        else:
+            self.iCal = o
 
     def get_ical_string(self, version=1.0):
         return self.iCal.serialize()
@@ -25,7 +29,7 @@ class Event(DataType.DataType):
     def __setstate__(self, data):
         self.set_from_ical_string(data['ical'])
         DataType.DataType.__setstate__(self, data)
-        
+
     def get_hash(self):
         ical_string = self.get_ical_string()
         p = re.compile('CREATED:.*\n')
