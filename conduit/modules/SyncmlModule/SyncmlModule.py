@@ -331,23 +331,31 @@ class BluetoothContactsProvider(BluetoothClient, ContactsProvider):
 class BluetoothEventsProvider(BluetoothClient, EventsProvider):
     pass
 
+CATEGORY_SYNCMLTEST = DataProviderCategory.DataProviderCategory("Syncml Test")
+
 class SyncmlContactsTwoWay(HttpClient, ContactsProvider):
     _address_ = "http://localhost:1234"
     _store_ = "Contacts"
+    _category_ = CATEGORY_SYNCMLTEST
 MODULES['SyncmlContactsTwoWay'] = {"type":"dataprovider"}
 
 class SyncmlEventsTwoWay(HttpClient, EventsProvider):
     _address_ = "http://localhost:1234"
     _store_ = "Calendar"
-MDOULES['SyncmlEventsTwoWay'] = {"type":"dataprovider"}
+    _category_ = CATEGORY_SYNCMLTEST
+MODULES['SyncmlEventsTwoWay'] = {"type":"dataprovider"}
+
+CATEGORY_SCHEDULEWORLD = DataProviderCategory.DataProviderCategory("ScheduleWorld", "applications-office")
 
 class ScheduleWorldContacts(HttpClient, ContactsProvider):
     _address_ = "http://sync.scheduleworld.com/funambol/ds"
     _store_ = "card"
+    _category_ = CATEGORY_SCHEDULEWORLD
 MODULES['ScheduleWorldContacts'] = {"type":"dataprovider"}
 
 class ScheduleWorldCalendar(HttpClient, EventsProvider):
     _address_ = "http://sync.scheduleworld.com/funambol/ds"
     _store_ = "cal"
+    _category_ = CATEGORY_SCHEDULEWORLD
 MODULES['ScheduleWorldCalendar'] = {"type":"dataprovider"}
 
