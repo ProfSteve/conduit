@@ -126,10 +126,16 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         """
         return 1
 
+    def handle_change_status(self, sync_object, code, newuid, userdata, err):
+        if code < 200 or 299 < code:
+            return 0
+        self.mapping[userdata] = newuid
+        return 1
+
     def _syncml_sendall(self):
         err = pysyncml.Error()
-        for t, uid, blob in self._queue:
-            self.syncobj.add_change(self._store_, t, uid, blob, len(blob), None, pysyncml.byref(err))
+        for t, LUID, uid, blob in self._queue:
+            self.syncobj.add_change(self._store_, t, uid, blob, len(blob), LUID, pysyncml.byref(err))
         self.syncobj.send_changes(pysyncml.byref(err))
         self._queue = []
 
@@ -147,6 +153,7 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         self.syncobj.register_event_callback(self._handle_event, None)
         self.syncobj.register_change_callback(self._handle_change, None)
         self.syncobj.register_handle_remote_devinf_callback(self._handle_devinf, None)
+        self.syncobj.register_change_status_callback(self._handle_change_status)
 
         if not self.syncobj.init(pysyncml.byref(err)):
             log.error("Unable to prepare synchronisation")
@@ -168,6 +175,7 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         self._handle_event = pysyncml.EventCallback(self.handle_event)
         self._handle_change = pysyncml.ChangeCallback(self.handle_change)
         self._handle_devinf = pysyncml.HandleRemoteDevInfCallback(self.handle_devinf)
+        self._handle_change_status = pysyncml.HandleChangeStatusCallback(self.handle_change_status)
 
         self._refresh_lock = threading.Event()
         self._put_lock = threading.Event()
@@ -209,15 +217,15 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         blob = self._obj_to_blob(obj)
 
         if LUID == None:
-            self._queue.append((enums.SML_CHANGE_ADD, "", blob))
             LUID = str(uuid.uuid4())
+            self._queue.append((enums.SML_CHANGE_ADD, LUID, "", blob))
             return conduit.datatypes.Rid(uid=LUID, hash=hash(blob))
 
-        self._queue.append((enums.SML_CHANGE_REPLACE, self.mapping[uid], blob))
+        self._queue.append((enums.SML_CHANGE_REPLACE, LUID, self.mapping[LUID], blob))
         return conduit.datatypes.Rid(uid=LUID, hash=hash(blob))
 
-    def delete(self, uid):
-        self._queue.append((enums.SML_CHANGE_DELETE, uid, ""))
+    def delete(self, LUID):
+        self._queue.append((enums.SML_CHANGE_DELETE, LUID, self.mapping[LUID], ""))
 
     def finish(self, a, b, c):
         self._put_lock.set()
