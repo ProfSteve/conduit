@@ -13,6 +13,7 @@ log = logging.getLogger("modules.syncml")
 
 import threading
 import time
+import uuid
 
 try:
     import pysyncml
@@ -104,7 +105,7 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         if self._changes == None:
             return 1
 
-        if uid in self.mapping:
+        if not uid in self.mapping:
             self.mapping[uid] = str(uuid.uuid4())
         LUID = self.mapping[uid]
 
@@ -175,7 +176,7 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         self._handle_event = pysyncml.EventCallback(self.handle_event)
         self._handle_change = pysyncml.ChangeCallback(self.handle_change)
         self._handle_devinf = pysyncml.HandleRemoteDevInfCallback(self.handle_devinf)
-        self._handle_change_status = pysyncml.HandleChangeStatusCallback(self.handle_change_status)
+        self._handle_change_status = pysyncml.ChangeStatusCallback(self.handle_change_status)
 
         self._refresh_lock = threading.Event()
         self._put_lock = threading.Event()
