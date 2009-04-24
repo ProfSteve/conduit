@@ -204,7 +204,7 @@ class SyncmlDataProvider(DataProvider.TwoWay):
             return conduit.datatypes.Rid(uid=str(hash(blob)), mtime=None, hash=None)
 
         self._queue.append((enums.SML_CHANGE_REPLACE, uid, blob))
-        return conduit.datatypes.Rid(uid=uid, mtime=None, hash=None)
+        return conduit.datatypes.Rid(uid=LUID)
 
     def delete(self, uid):
         self._queue.append((enums.SML_CHANGE_DELETE, uid, ""))
