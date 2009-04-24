@@ -54,8 +54,7 @@ class SyncmlDataProvider(DataProvider.TwoWay):
             It WILL happen in a different thread to whatever thread called syncobject.run()
         """
         if event == enums.SML_DATA_SYNC_EVENT_ERROR:
-            log.error("An error has occurred")
-            #FIXME: log error details
+            log.error("An error has occurred: %s" % err.message)
             return
 
         if event == enums.SML_DATA_SYNC_EVENT_CONNECT:

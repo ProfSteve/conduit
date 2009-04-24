@@ -95,6 +95,10 @@ class Location(c_void_p):
 
 class Error(c_void_p):
 
+    @property
+    def message(self):
+        return lib.smlErrorPrint(byref(self))
+
     unref = lib.smlErrorDeref
 
 
@@ -236,6 +240,9 @@ lib.smlLocationSetName.restype = None
 
 lib.smlErrorDeref.argtypes = [POINTER(Error)]
 lib.smlErrorDeref.restype = None
+
+lib.smlErrorPrint.argtypes = [POINTER(Error)]
+lib.smlErrorPrint.restype = c_char_p
 
 lib.g_thread_init.argtypes = [c_void_p]
 lib.g_thread_init.restype = None
