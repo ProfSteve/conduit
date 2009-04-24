@@ -104,7 +104,11 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         if self._changes == None:
             return 1
 
-        self._changes[uid] = (type, data[:size])
+        if uid in self.mapping:
+            self.mapping[uid] = str(uuid.uuid4())
+        LUID = self.mapping[uid]
+
+        self._changes[LUID] = (type, data[:size])
 
         if self._session_type == enums.SML_SESSION_TYPE_CLIENT:
             err = pysyncml.Error()
@@ -132,8 +136,6 @@ class SyncmlDataProvider(DataProvider.TwoWay):
     def _syncml_run(self):
         err = pysyncml.Error()
 
-        self._changs = {}
-
         self._setup_connection()
         self._setup_datastore()
 
@@ -160,6 +162,7 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         DataProvider.TwoWay.__init__(self)
         self.address = address
 
+        self.mapping = {}
         self.slowsync = True
 
         self._handle_event = pysyncml.EventCallback(self.handle_event)
