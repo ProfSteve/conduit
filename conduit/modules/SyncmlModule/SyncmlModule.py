@@ -240,12 +240,31 @@ class SyncmlDataProvider(DataProvider.TwoWay):
 
 class HttpClientProvider(SyncmlDataProvider):
 
+    _configurable_ = True
+
+    def __init__(self, address):
+        self.update_configuration(
+            username = "",
+            password = ""
+        )
+        SyncmlDataProvider.__init__(self, address)
+
     def _setup_connection(self):
         err = pysyncml.Error()
         self.syncobj = pysyncml.SyncObject.new(enums.SML_SESSION_TYPE_CLIENT, enums.SML_TRANSPORT_HTTP_CLIENT, pysyncml.byref(err))
         self.syncobj.set_option(enums.SML_TRANSPORT_CONFIG_URL, self.address, pysyncml.byref(err))
 
         self._session_type = enums.SML_SESSION_TYPE_CLIENT
+
+    def config_setup(self, config):
+        config.add_section("Account details")
+        config.add_item("Login", "text",
+            config_name = "username"
+        )
+        config.add_item("Password", "text",
+            config_name = "password",
+            password = True
+        )
 
 
 class BluetoothClient(SyncmlDataProvider):
