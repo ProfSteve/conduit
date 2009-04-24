@@ -268,6 +268,10 @@ class HttpClient(SyncmlDataProvider):
             password = True
         )
 
+    def is_configured(self, isSource, isTwoWay):
+        if len(self.username) > 0 and len(self.password) > 0:
+            return True
+        return False
 
 class BluetoothClient(SyncmlDataProvider):
 
