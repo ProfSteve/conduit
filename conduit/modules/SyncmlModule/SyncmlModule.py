@@ -23,8 +23,6 @@ import enums
 
 MODULES = {
     "BluetoothSyncmlFactory": { "type": "dataprovider-factory"},
-    "SyncmlContactTwoWay": { "type": "dataprovider"},
-    "SyncmlEventsTwoWay" : { "type": "dataprovider"},
 }
 
 
@@ -127,7 +125,7 @@ class SyncmlDataProvider(DataProvider.TwoWay):
     def _syncml_sendall(self):
         err = pysyncml.Error()
         for t, uid, blob in self._queue:
-            self.syncobj.add_change(self.source, t, uid, blob, len(blob), None, pysyncml.byref(err))
+            self.syncobj.add_change(self._store_, t, uid, blob, len(blob), None, pysyncml.byref(err))
         self.syncobj.send_changes(pysyncml.byref(err))
         self._queue = []
 
@@ -238,21 +236,21 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         raise NotImplementedError
 
 
-class HttpClientProvider(SyncmlDataProvider):
+class HttpClient(SyncmlDataProvider):
 
     _configurable_ = True
 
-    def __init__(self, address):
+    def __init__(self):
         self.update_configuration(
             username = "",
             password = ""
         )
-        SyncmlDataProvider.__init__(self, address)
+        SyncmlDataProvider.__init__(self, self._address_)
 
     def _setup_connection(self):
         err = pysyncml.Error()
         self.syncobj = pysyncml.SyncObject.new(enums.SML_SESSION_TYPE_CLIENT, enums.SML_TRANSPORT_HTTP_CLIENT, pysyncml.byref(err))
-        self.syncobj.set_option(enums.SML_TRANSPORT_CONFIG_URL, self.address, pysyncml.byref(err))
+        self.syncobj.set_option(enums.SML_TRANSPORT_CONFIG_URL, self._address_, pysyncml.byref(err))
 
         self._session_type = enums.SML_SESSION_TYPE_CLIENT
 
@@ -291,8 +289,7 @@ class ContactsProvider(SyncmlDataProvider):
 
     def _setup_datastore(self):
         err = pysyncml.Error()
-        self.syncobj.add_datastore("text/x-vcard", None, "Contacts", pysyncml.byref(err))
-        self.source = "Contacts"
+        self.syncobj.add_datastore("text/x-vcard", None, self._store_, pysyncml.byref(err))
 
     def _blob_to_obj(self, uid, data):
         c = Contact.Contact()
@@ -316,8 +313,7 @@ class EventsProvider(SyncmlDataProvider):
 
     def _setup_datastore(self):
         err = pysyncml.Error()
-        self.syncobj.add_datastore("text/x-vcalendar", None, "Calendar", pysyncml.byref(err))
-        self.source = "Calendar"
+        self.syncobj.add_datastore("text/x-vcalendar", None, self._store_, pysyncml.byref(err))
 
     def _blob_to_obj(self, uid, data):
         e = Event.Event()
@@ -335,13 +331,23 @@ class BluetoothContactsProvider(BluetoothClient, ContactsProvider):
 class BluetoothEventsProvider(BluetoothClient, EventsProvider):
     pass
 
-class SyncmlContactTwoWay(HttpClientProvider, ContactsProvider):
+class SyncmlContactsTwoWay(HttpClient, ContactsProvider):
+    _address_ = "http://localhost:1234"
+    _store_ = "Contacts"
+MODULES['SyncmlContactsTwoWay'] = {"type":"dataprovider"}
 
-    def __init__(self, *args):
-        SyncmlDataProvider.__init__(self, "http://localhost:1234")
+class SyncmlEventsTwoWay(HttpClient, EventsProvider):
+    _address_ = "http://localhost:1234"
+    _store_ = "Calendar"
+MDOULES['SyncmlEventsTwoWay'] = {"type":"dataprovider"}
 
-class SyncmlEventsTwoWay(HttpClientProvider, EventsProvider):
+class ScheduleWorldContacts(HttpClient, ContactsProvider):
+    _address_ = "http://sync.scheduleworld.com/funambol/ds"
+    _store_ = "card"
+MODULES['ScheduleWorldContacts'] = {"type":"dataprovider"}
 
-    def __init__(self, *args):
-        SyncmlDataProvider.__init__(self, "http://localhost:1234")
+class ScheduleWorldCalendar(HttpClient, EventsProvider):
+    _address_ = "http://sync.scheduleworld.com/funambol/ds"
+    _store_ = "cal"
+MODULES['ScheduleWorldCalendar'] = {"type":"dataprovider"}
 
