@@ -241,11 +241,11 @@ class HttpClient(SyncmlDataProvider):
     _configurable_ = True
 
     def __init__(self):
+        SyncmlDataProvider.__init__(self, self._address_)
         self.update_configuration(
             username = "",
             password = ""
         )
-        SyncmlDataProvider.__init__(self, self._address_)
 
     def _setup_connection(self):
         err = pysyncml.Error()
