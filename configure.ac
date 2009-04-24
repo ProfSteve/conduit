@@ -212,6 +212,7 @@ conduit/modules/NetworkModule/Makefile
 conduit/modules/GConfModule/Makefile
 conduit/modules/ZotoModule/Makefile
 conduit/modules/Firefox3Module/Makefile
+conduit/modules/SyncmlModule/Makefile
 data/Makefile
 data/conduit.desktop.in
 data/conduit.pc

@@ -17,7 +17,8 @@ SUBDIRS = \
 	NetworkModule \
 	GConfModule \
 	ZotoModule \
-	Firefox3Module
+	Firefox3Module \
+	SyncmlModule
 
 conduit_handlersdir = $(libdir)/conduit/modules
 conduit_handlers_PYTHON = \
