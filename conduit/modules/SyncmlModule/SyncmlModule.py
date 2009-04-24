@@ -252,6 +252,10 @@ class HttpClient(SyncmlDataProvider):
         self.syncobj = pysyncml.SyncObject.new(enums.SML_SESSION_TYPE_CLIENT, enums.SML_TRANSPORT_HTTP_CLIENT, pysyncml.byref(err))
         self.syncobj.set_option(enums.SML_TRANSPORT_CONFIG_URL, self._address_, pysyncml.byref(err))
 
+        if self.username != None and len(self.username) > 0:
+            self.syncobj.set_option(enums.SML_DATA_SYNC_CONFIG_AUTH_USERNAME, self.username, pysyncml.byref(err))
+            self.syncobj.set_option(enums.SML_DATA_SYNC_CONFIG_AUTH_PASSWORD, self.password, pysyncml.byref(err))
+
         self._session_type = enums.SML_SESSION_TYPE_CLIENT
 
     def config_setup(self, config):
