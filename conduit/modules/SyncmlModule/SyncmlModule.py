@@ -115,9 +115,9 @@ class SyncmlDataProvider(DataProvider.TwoWay):
 
         self._changes[LUID] = (type, data[:size])
 
-        #if self._session_type == enums.SML_SESSION_TYPE_CLIENT:
-        #    err = pysyncml.Error()
-        #    self.syncobj.add_mapping(source, uid, uid, pysyncml.byref(err))
+        if self._session_type == enums.SML_SESSION_TYPE_CLIENT:
+            err = pysyncml.Error()
+            self.syncobj.add_mapping(source, uid, uid, pysyncml.byref(err))
 
         return 1
 
