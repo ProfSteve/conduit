@@ -147,6 +147,16 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         self.anchor[name] = value
         return 1
 
+    def handle_get_alert_type(self, sync_object, source, alert_type, userdata, err):
+        if alert_type == enums.SML_ALERT_SLOW_SYNC:
+            self.slowsync = True
+        if self.slowsync == True:
+            log.debug("Enabling slow sync")
+            alert_type = enums.SML_ALERT_SLOW_SYNC
+        else:
+            log.debug("Normal sync")
+        return alert_type
+
     def _syncml_sendall(self):
         err = pysyncml.Error()
         for t, LUID, uid, blob in self._queue:
@@ -163,14 +173,16 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         self.syncobj.set_option(enums.SML_DATA_SYNC_CONFIG_IDENTIFIER, "PC Suite", pysyncml.byref(err))
         self.syncobj.set_option(enums.SML_DATA_SYNC_CONFIG_USE_WBXML, "1", pysyncml.byref(err))
 
+        self.slowsync = False
         self._changes = {}
 
         self.syncobj.register_event_callback(self._handle_event, None)
         self.syncobj.register_change_callback(self._handle_change, None)
         self.syncobj.register_handle_remote_devinf_callback(self._handle_devinf, None)
         self.syncobj.register_change_status_callback(self._handle_change_status)
-        self.syncobj.register_set_anchor_callback(self._handle_set_anchor)
-        self.syncobj.register_get_anchor_callback(self._handle_get_anchor)
+        self.syncobj.register_set_anchor_callback(self._handle_set_anchor, None)
+        self.syncobj.register_get_anchor_callback(self._handle_get_anchor, None)
+        self.syncobj.register_get_alert_type_callback(self._handle_get_alert_type, None)
 
         if not self.syncobj.init(pysyncml.byref(err)):
             log.error("Unable to prepare synchronisation")
@@ -188,7 +200,7 @@ class SyncmlDataProvider(DataProvider.TwoWay):
 
         self.anchor = {}
         self.mapping = {}
-        self.slowsync = True
+        self.slowsync = False
 
         self._handle_event = pysyncml.EventCallback(self.handle_event)
         self._handle_change = pysyncml.ChangeCallback(self.handle_change)
@@ -196,6 +208,7 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         self._handle_change_status = pysyncml.ChangeStatusCallback(self.handle_change_status)
         self._handle_get_anchor = pysyncml.GetAnchorCallback(self.handle_get_anchor)
         self._handle_set_anchor = pysyncml.SetAnchorCallback(self.handle_set_anchor)
+        self._handle_get_alert_type = pysyncml.GetAlertTypeCallback(self.handle_get_alert_type)
 
         self._refresh_lock = threading.Event()
         self._put_lock = threading.Event()
