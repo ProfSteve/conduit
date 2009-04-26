@@ -1,4 +1,6 @@
 #! /bin/sh
 killall syncml-ds-tool
-syncml-ds-tool --http-server 1234 --sync $1 $2 $3
-syncml-ds-tool --http-server 1234 --sync $1 $2 $3
+while [ 1 -ne 0 ]
+do
+  syncml-ds-tool --username test --password test --http-server 1234 --sync $1 $2 $3
+done

@@ -137,6 +137,16 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         self.mapping[userdata] = newuid
         return 1
 
+    def handle_get_anchor(self, sync_object, name, userdata, err):
+        anchor = self.anchor[name] if name in self.anchor else None
+        log.debug("get_anchor('%s') returns %s" % (name, anchor or "None"))
+        return anchor
+
+    def handle_set_anchor(self, sync_object, name, value, userdata, err):
+        log.debug("set_anchor('%s', '%s')" % (name, value))
+        self.anchor[name] = value
+        return 1
+
     def _syncml_sendall(self):
         err = pysyncml.Error()
         for t, LUID, uid, blob in self._queue:
@@ -159,6 +169,8 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         self.syncobj.register_change_callback(self._handle_change, None)
         self.syncobj.register_handle_remote_devinf_callback(self._handle_devinf, None)
         self.syncobj.register_change_status_callback(self._handle_change_status)
+        self.syncobj.register_set_anchor_callback(self._handle_set_anchor)
+        self.syncobj.register_get_anchor_callback(self._handle_get_anchor)
 
         if not self.syncobj.init(pysyncml.byref(err)):
             log.error("Unable to prepare synchronisation")
@@ -174,6 +186,7 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         DataProvider.TwoWay.__init__(self)
         self.address = address
 
+        self.anchor = {}
         self.mapping = {}
         self.slowsync = True
 
@@ -181,6 +194,8 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         self._handle_change = pysyncml.ChangeCallback(self.handle_change)
         self._handle_devinf = pysyncml.HandleRemoteDevInfCallback(self.handle_devinf)
         self._handle_change_status = pysyncml.ChangeStatusCallback(self.handle_change_status)
+        self._handle_get_anchor = pysyncml.GetAnchorCallback(self.handle_get_anchor)
+        self._handle_set_anchor = pysyncml.SetAnchorCallback(self.handle_set_anchor)
 
         self._refresh_lock = threading.Event()
         self._put_lock = threading.Event()
