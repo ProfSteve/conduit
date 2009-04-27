@@ -149,12 +149,16 @@ class SyncmlDataProvider(DataProvider.TwoWay):
 
     def handle_get_alert_type(self, sync_object, source, alert_type, userdata, err):
         if alert_type == enums.SML_ALERT_SLOW_SYNC:
+            log.debug("Remote requested slowsync")
             self.slowsync = True
-        if self.slowsync == True:
-            log.debug("Enabling slow sync")
-            alert_type = enums.SML_ALERT_SLOW_SYNC
         else:
-            log.debug("Normal sync")
+            log.debug("Remote requested normal sync")
+            self.slowsync = False
+
+        if self.slowsync == True:
+            log.debug("Going to do a slowsync")
+            alert_type = enums.SML_ALERT_SLOW_SYNC
+
         return alert_type
 
     def _syncml_sendall(self):
