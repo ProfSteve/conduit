@@ -47,6 +47,9 @@ class BluetoothSyncmlFactory(BluetoothFactory.BluetoothFactory):
 
 class SyncmlDataProvider(DataProvider.TwoWay):
 
+    _syncml_version_ = "1.1"
+    _syncml_identifier_ = "PC Suite"
+
     def handle_event(self, sync_object, event, userdata, err):
         """ handle_event is called by libsyncml at different stages of a sync
             This includes when this connect and disconnect and when errors occur.
@@ -177,7 +180,8 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         self._setup_connection()
         self._setup_datastore()
 
-        self.syncobj.set_option(enums.SML_DATA_SYNC_CONFIG_IDENTIFIER, "PC Suite", pysyncml.byref(err))
+        self.syncobj.set_option(enums.SML_DATA_SYNC_CONFIG_VERSION, self._syncml_version_, pysyncml.byref(err))
+        self.syncobj.set_option(enums.SML_DATA_SYNC_CONFIG_IDENTIFIER, self._syncml_identifier_, pysyncml.byref(err))
         self.syncobj.set_option(enums.SML_DATA_SYNC_CONFIG_USE_WBXML, "1", pysyncml.byref(err))
 
         self.slowsync = False
@@ -423,6 +427,7 @@ class ScheduleWorldContacts(HttpClient, ContactsProvider):
     _address_ = "http://sync.scheduleworld.com/funambol/ds"
     _store_ = "card3"
     _mime_ = "text/vcard"
+    _syncml_version_ = "1.2"
     _category_ = CATEGORY_SCHEDULEWORLD
 MODULES['ScheduleWorldContacts'] = {"type":"dataprovider"}
 
@@ -430,6 +435,7 @@ class ScheduleWorldCalendar(HttpClient, EventsProvider):
     _address_ = "http://sync.scheduleworld.com/funambol/ds"
     _store_ = "cal2"
     _mime_ = "text/calendar"
+    _syncml_version_ = "1.2"
     _category_ = CATEGORY_SCHEDULEWORLD
 MODULES['ScheduleWorldCalendar'] = {"type":"dataprovider"}
 
