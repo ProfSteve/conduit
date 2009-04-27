@@ -113,9 +113,12 @@ class SyncmlDataProvider(DataProvider.TwoWay):
             LUID = str(uuid.uuid4())
             self.mapping[LUID] = uid
 
+        log.debug("Got change: %s (LUID: %s)" % (uid, LUID))
+
         self._changes[LUID] = (type, data[:size])
 
         if self._session_type == enums.SML_SESSION_TYPE_CLIENT:
+            log.debug("Adding mapping")
             err = pysyncml.Error()
             self.syncobj.add_mapping(source, uid, uid, pysyncml.byref(err))
 
@@ -352,9 +355,12 @@ class ContactsProvider(SyncmlDataProvider):
     _icon_ = "contact-new"
     _configurable_ = False
 
+    _store_ = "Contacts"
+    _mime_ = "text/x-vcard"
+
     def _setup_datastore(self):
         err = pysyncml.Error()
-        self.syncobj.add_datastore("text/x-vcard", None, self._store_, pysyncml.byref(err))
+        self.syncobj.add_datastore(self._mime_, None, self._store_, pysyncml.byref(err))
 
     def _blob_to_obj(self, uid, data):
         c = Contact.Contact()
@@ -376,9 +382,12 @@ class EventsProvider(SyncmlDataProvider):
     _icon_ = "x-office-calendar"
     _configurable_ = False
 
+    _store_ = "Calendar"
+    _mime_ = "text/x-calendar"
+
     def _setup_datastore(self):
         err = pysyncml.Error()
-        self.syncobj.add_datastore("text/x-vcalendar", None, self._store_, pysyncml.byref(err))
+        self.syncobj.add_datastore(self._mime_, None, self._store_, pysyncml.byref(err))
 
     def _blob_to_obj(self, uid, data):
         e = Event.Event()
@@ -400,13 +409,11 @@ CATEGORY_SYNCMLTEST = DataProviderCategory.DataProviderCategory("Syncml Test")
 
 class SyncmlContactsTwoWay(HttpClient, ContactsProvider):
     _address_ = "http://localhost:1234"
-    _store_ = "Contacts"
     _category_ = CATEGORY_SYNCMLTEST
 MODULES['SyncmlContactsTwoWay'] = {"type":"dataprovider"}
 
 class SyncmlEventsTwoWay(HttpClient, EventsProvider):
     _address_ = "http://localhost:1234"
-    _store_ = "Calendar"
     _category_ = CATEGORY_SYNCMLTEST
 MODULES['SyncmlEventsTwoWay'] = {"type":"dataprovider"}
 
@@ -414,13 +421,15 @@ CATEGORY_SCHEDULEWORLD = DataProviderCategory.DataProviderCategory("ScheduleWorl
 
 class ScheduleWorldContacts(HttpClient, ContactsProvider):
     _address_ = "http://sync.scheduleworld.com/funambol/ds"
-    _store_ = "card"
+    _store_ = "card3"
+    _mime_ = "text/vcard"
     _category_ = CATEGORY_SCHEDULEWORLD
 MODULES['ScheduleWorldContacts'] = {"type":"dataprovider"}
 
 class ScheduleWorldCalendar(HttpClient, EventsProvider):
     _address_ = "http://sync.scheduleworld.com/funambol/ds"
-    _store_ = "cal"
+    _store_ = "cal2"
+    _mime_ = "text/calendar"
     _category_ = CATEGORY_SCHEDULEWORLD
 MODULES['ScheduleWorldCalendar'] = {"type":"dataprovider"}
 
