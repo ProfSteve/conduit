@@ -8,6 +8,7 @@ conduit_PYTHON = \
 	Image.py \
 	SimpleFactory.py \
 	VolumeFactory.py \
+	BluetoothFactory.py \
 	__init__.py
 
 clean-local:
