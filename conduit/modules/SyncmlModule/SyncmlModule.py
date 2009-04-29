@@ -146,7 +146,7 @@ class SyncmlDataProvider(DataProvider.TwoWay):
     def handle_get_anchor(self, sync_object, name, userdata, err):
         anchor = self.anchor[name] if name in self.anchor else None
         log.debug("get_anchor('%s') returns %s" % (name, anchor or "None"))
-        return anchor
+        return pysyncml.strdup(anchor) if anchor else None
 
     def handle_set_anchor(self, sync_object, name, value, userdata, err):
         log.debug("set_anchor('%s', '%s')" % (name, value))

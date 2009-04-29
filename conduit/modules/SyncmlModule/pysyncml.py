@@ -1,6 +1,7 @@
 from ctypes import *
 
 lib = CDLL('libsyncml.so')
+libc = CDLL('libc.so.6')
 
 def instancemethod(method):
     def _(self, *args, **kwargs):
@@ -107,7 +108,7 @@ EventCallback = CFUNCTYPE(None, SyncObject, c_int, c_void_p, Error)
 GetAlertTypeCallback = CFUNCTYPE(c_int, SyncObject, c_char_p, c_int, c_void_p, POINTER(Error))
 ChangeCallback = CFUNCTYPE(c_int, SyncObject, c_char_p, c_int, c_char_p, c_char_p, c_uint, c_void_p, POINTER(Error))
 ChangeStatusCallback = CFUNCTYPE(c_int, SyncObject, c_uint, c_char_p, c_char_p, POINTER(Error))
-GetAnchorCallback = CFUNCTYPE(c_char_p, SyncObject, c_char_p, c_void_p, POINTER(Error))
+GetAnchorCallback = CFUNCTYPE(c_void_p, SyncObject, c_char_p, c_void_p, POINTER(Error))
 SetAnchorCallback = CFUNCTYPE(c_int, SyncObject, c_char_p, c_char_p, c_void_p, POINTER(Error))
 WriteDevInfCallback = CFUNCTYPE(c_int, SyncObject, Info, c_void_p, POINTER(Error))
 ReadDevInfCallback = CFUNCTYPE(Info, SyncObject, c_char_p, c_void_p, POINTER(Error))
@@ -247,3 +248,6 @@ lib.smlErrorPrint.restype = c_char_p
 lib.g_thread_init.argtypes = [c_void_p]
 lib.g_thread_init.restype = None
 
+libc.strdup.argtypes = [c_char_p]
+libc.strdup.restype = c_void_p
+strdup = libc.strdup
