@@ -161,6 +161,10 @@ class SyncmlDataProvider(DataProvider.TwoWay):
             log.debug("Remote requested normal sync")
             self.slowsync = False
 
+        if len(self.anchor) == 0:
+            log.debug("We have no anchors, requesting slowsync")
+            self.slowsync = True
+
         if self.slowsync == True:
             log.debug("Going to do a slowsync")
             alert_type = enums.SML_ALERT_SLOW_SYNC
@@ -170,7 +174,7 @@ class SyncmlDataProvider(DataProvider.TwoWay):
     def _syncml_sendall(self):
         err = pysyncml.Error()
         for t, LUID, uid, blob in self._queue:
-            self.syncobj.add_change(self._store_, t, uid, blob, len(blob), LUID, pysyncml.byref(err))
+            self.syncobj.add_change(self._store_, t, uid, blob if len(blob) > 0 else None, len(blob), LUID, pysyncml.byref(err))
         self.syncobj.send_changes(pysyncml.byref(err))
         self._queue = []
 
