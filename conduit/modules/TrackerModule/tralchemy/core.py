@@ -94,7 +94,11 @@ class Property(Resource, property):
         if instance is None:
             return self
 
-        results = tracker.SparqlQuery("SELECT ?v WHERE { %s %s ?v }" % (instance.uri, self.uri))
+        uri = instance.uri
+        if uri.startswith("http://"):
+            uri = "<%s>" % uri
+
+        results = tracker.SparqlQuery("SELECT ?v WHERE { %s %s ?v }" % (uri, self.uri))
         for result in results:
             #FIXME: What to do about lists of stuff. What to do about stuff that isnt a string.
             result = result[0]

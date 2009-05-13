@@ -10,7 +10,7 @@ import conduit.datatypes.Contact as Contact
 
 Utils.dataprovider_add_dir_to_path(__file__)
 import tralchemy
-from tralchemy.nco import Contact as TrackerContact
+from tralchemy.nco import PersonContact
 
 MODULES = {
     "TrackerContacts": { "type": "dataprovider" },
@@ -32,8 +32,8 @@ class TrackerContacts(DataProvider.TwoWay):
     def refresh(self):
         DataProvider.TwoWay.refresh(self)
         self.contacts = {}
-        for contact in Contact.get():
-            self.contacts[contact.uri] = contact
+        for contact in PersonContact.get():
+            self.contacts[str(contact.uri)] = contact
 
     def get_all(self):
         DataProvider.TwoWay.get_all(self)
@@ -41,7 +41,7 @@ class TrackerContacts(DataProvider.TwoWay):
 
     def get(self, LUID):
         DataProvider.TwoWay.get(self, LUID)
-        tc = self.contact[LUID]
+        tc = self.contacts[LUID]
         c = self._tracker_to_vcard(tc)
         c.set_UID(LUID)
         return c
@@ -64,12 +64,15 @@ class TrackerContacts(DataProvider.TwoWay):
     def _vcard_to_tracker(self, data):
         vcard = data.vcard
 
-        c = TrackerContact()
+        c = PersonContact()
 
         for k, v in vcard.iteritems():
             if k == "account":
+                pass
             elif k == "tel":
+                pass
             elif k == "bday":
+                pass
             elif k == "n":
                 c.namefamily = v.value.family
                 c.namegiven = v.value.given
@@ -77,12 +80,15 @@ class TrackerContacts(DataProvider.TwoWay):
                 c.namehonorificprefix = v.value.prefix
                 c.namehonorificsuffix = v.value.suffix
             elif k == "version":
+                pass
             elif k == "org":
+                pass
             elif k == "nickname":
-                c.nickname = v
+                c.nickname = v.value
             elif k == "email":
+                pass
             elif k == "fn":
-                c.fullname = v
+                c.fullname = v.value
             else:
                 log.warning("Unhandled key: %s" % k)
 
@@ -92,16 +98,15 @@ class TrackerContacts(DataProvider.TwoWay):
         c = Contact.Contact()
 
         if tracker.fullname:
-            c.vcard.('fn') = tracker.fullname
+            c.vcard.add('fn').value = tracker.fullname
 
         if tracker.nickname:
-            c.vcard.add('nickname') = tracker.nickname
+            c.vcard.add('nickname').value = tracker.nickname
 
-        if tracker.namefamily or tracker.namegiven or tracker.nameadditional or
-            tracker.namehonorificprefix or tracker.namehonorificsuffix:
+        if tracker.namefamily or tracker.namegiven or tracker.nameadditional or tracker.namehonorificprefix or tracker.namehonorificsuffix:
             n = vobject.vcard.Name(family=tracker.namefamily, given=tracker.namegiven, additional=tracker.nameadditional,
                                    prefix=tracker.namehonorificprefix, suffix=tracker.namehonorificsuffix)
-            c.add('n') = n
+            c.add('n').value = n
 
         return c
 
