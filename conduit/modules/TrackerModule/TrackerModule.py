@@ -12,6 +12,7 @@ from conduit.datatypes import Rid
 Utils.dataprovider_add_dir_to_path(__file__)
 import tralchemy
 from tralchemy.nco import PersonContact
+import vobject
 
 MODULES = {
     "TrackerContacts": { "type": "dataprovider" },
@@ -101,7 +102,7 @@ class TrackerContacts(DataProvider.TwoWay):
         c = Contact.Contact()
 
         if tracker.fullname:
-            c.vcard.add('fn').value = tracker.fullname
+            c.vcard.fn.value = tracker.fullname
 
         if tracker.nickname:
             c.vcard.add('nickname').value = tracker.nickname
@@ -109,7 +110,7 @@ class TrackerContacts(DataProvider.TwoWay):
         if tracker.namefamily or tracker.namegiven or tracker.nameadditional or tracker.namehonorificprefix or tracker.namehonorificsuffix:
             n = vobject.vcard.Name(family=tracker.namefamily, given=tracker.namegiven, additional=tracker.nameadditional,
                                    prefix=tracker.namehonorificprefix, suffix=tracker.namehonorificsuffix)
-            c.add('n').value = n
+            c.vcard.n.value = n
 
         return c
 

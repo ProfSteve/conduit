@@ -110,7 +110,13 @@ class Property(Resource, property):
     def __set__(self, instance, value):
         if instance is None:
             return
-        self.triples[self._type_] = value
+        if isinstance(value, Resource):
+            if value.uri.startswith("http://"):
+                instance.triples[self.uri] = "<%s>" % value.uri
+            else:
+                instance.triples[self.uri] = value.uri
+        else:
+            instance.triples[self.uri] = '"%s"' % value
 
     def __delete__(self, instance):
         pass
