@@ -7,6 +7,7 @@ import conduit.dataproviders.DataProvider as DataProvider
 import conduit.utils as Utils
 import conduit.Exceptions as Exceptions
 import conduit.datatypes.Contact as Contact
+from conduit.datatypes import Rid
 
 Utils.dataprovider_add_dir_to_path(__file__)
 import tralchemy
@@ -52,6 +53,7 @@ class TrackerContacts(DataProvider.TwoWay):
             self.delete(LUID)
         c = self._vcard_to_tracker(obj)
         c.commit()
+        return Rid(c.uri, mtime=None, hash=None)
 
     def delete(self, LUID):
         if LUID in self.contacts:
@@ -64,9 +66,9 @@ class TrackerContacts(DataProvider.TwoWay):
     def _vcard_to_tracker(self, data):
         vcard = data.vcard
 
-        c = PersonContact()
+        c = PersonContact.create()
 
-        for k, v in vcard.iteritems():
+        for k, v in vcard.contents.iteritems():
             if k == "account":
                 pass
             elif k == "tel":
@@ -74,21 +76,22 @@ class TrackerContacts(DataProvider.TwoWay):
             elif k == "bday":
                 pass
             elif k == "n":
-                c.namefamily = v.value.family
-                c.namegiven = v.value.given
-                c.nameadditional = v.value.additional
-                c.namehonorificprefix = v.value.prefix
-                c.namehonorificsuffix = v.value.suffix
+                x = v[0].value
+                c.namefamily = x.family
+                c.namegiven = x.given
+                c.nameadditional = x.additional
+                c.namehonorificprefix = x.prefix
+                c.namehonorificsuffix = x.suffix
             elif k == "version":
                 pass
             elif k == "org":
                 pass
             elif k == "nickname":
-                c.nickname = v.value
+                c.nickname = v[0].value
             elif k == "email":
                 pass
             elif k == "fn":
-                c.fullname = v.value
+                c.fullname = v[0].value
             else:
                 log.warning("Unhandled key: %s" % k)
 
