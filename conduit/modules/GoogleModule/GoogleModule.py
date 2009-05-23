@@ -61,7 +61,7 @@ class _GoogleBase:
         )
         self.loggedIn = False
         self.service = service
-        self._status = "Not authenticated"
+        self._status = _("Not authenticated")
         self.status_config = None
         
         if conduit.GLOBALS.settings.proxy_enabled():
@@ -83,13 +83,13 @@ class _GoogleBase:
                 self._do_login()
                 self.loggedIn = True
                 self.authenticated = True
-                self._set_status("Authenticated")
+                self._set_status(_("Authenticated"))
             except gdata.service.BadAuthentication:
                 log.info("Error logging in: Incorrect username or password")
-                self._set_status("Incorrect username or password")
+                self._set_status(_("Incorrect username or password"))
             except Exception, e:
                 log.info("Error logging in: %s" % e)
-                self._set_status("Error logging in")
+                self._set_status(_("Error logging in"))
             else:
                 self._login_finished()
                 
@@ -101,7 +101,7 @@ class _GoogleBase:
     def _reset_authentication(self):
         self.loggedIn = False
         self.authenticated = False
-        self._set_status("Not authenticated")
+        self._set_status(_("Not authenticated"))
     
     def _set_username(self, username):
         if self.username != username:
@@ -117,26 +117,23 @@ class _GoogleBase:
         pass
             
     def config_setup(self, config):
-        config.add_section("Google Account")
-        username_config = config.add_item("Email", "text", config_name = "username")
-        password_config = config.add_item("Password", "text", config_name = "password", password = True)
+        config.add_section(_("Google Account"))
+        username_config = config.add_item(_("Email"), "text", config_name = "username")
+        password_config = config.add_item(_("Password"), "text", config_name = "password", password = True)
         
         def _login(button):
             config.apply_config(items = [username_config, password_config])
+            #FIXME: Blocks the UI
             self._login()
 
         if self.authenticated:
-            self._set_status("Authenticated")
+            self._set_status(_("Authenticated"))
         self.status_config = config.add_item(None, "label", xalignment = 0.5, initial_value = self._status)
-        config.add_item("Authenticate", "button", image="dialog-password", action = _login)
+        config.add_item(_("Authenticate"), "button", image="dialog-password", action = _login)
         return username_config, password_config
 
     def is_configured (self, isSource, isTwoWay):
-        if len(self.username) < 1:
-            return False
-        if len(self.password) < 1:
-            return False
-        return True
+        return self.authenticated and len(self.username) > 0 and len(self.password) > 0
 
     def get_UID(self):
         return self.username
@@ -725,9 +722,9 @@ class PicasaTwoWay(_GoogleBase, Image.ImageTwoWay):
     def config_setup(self, config):
         username_config, password_config = _GoogleBase.config_setup(self, config)
         
-        config.add_section("Saved photo settings")
-        self.albums_config = config.add_item("Album", "combotext", config_name = "albumName")
-        config.add_item("Resize photos", "combo", config_name = "imageSize", 
+        config.add_section(_("Saved photo settings"))
+        self.albums_config = config.add_item(_("Album"), "combotext", config_name = "albumName")
+        config.add_item(_("Resize photos"), "combo", config_name = "imageSize", 
             choices = [self.NO_RESIZE] + self.IMAGE_SIZES)
 
     def is_configured (self, isSource, isTwoWay):
@@ -991,12 +988,12 @@ class ContactsTwoWay(_GoogleBase,  DataProvider.TwoWay):
     def config_setup(self, config):
         username_config, password_config = _GoogleBase.config_setup(self, config)
         
-        config.add_section("Contacts group")
+        config.add_section(_("Contacts group"))
         if self.selectedGroup:
             choices = [(self.selectedGroup, self.selectedGroup.get_name())]
         else:
             choices = []
-        self.group_config = config.add_item("Group", "combo", 
+        self.group_config = config.add_item(_("Group"), "combo", 
             config_name = "selectedGroup",
             initial_value_callback = lambda item: self.selectedGroup,
             choices = choices,
@@ -1364,13 +1361,13 @@ class YouTubeTwoWay(_GoogleBase, DataProvider.TwoWay):
     def config_setup(self, config):
         username_config, password_config = _GoogleBase.config_setup(self, config)
         
-        config.add_section("Download videos")
+        config.add_section(_("Download videos"))
         config.add_item(None, "radio", config_name = "filter_type",
-            choices = ((0, "Most viewed"),
-                       (1, "Top rated"),
-                       (2, "User uploaded"),
-                       (3, "User favorites")))
-        config.add_item("Limit downloads", "spin", 
+            choices = ((0, _("Most viewed")),
+                       (1, _("Top rated")),
+                       (2, _("User uploaded")),
+                       (3, _("User favorites"))))
+        config.add_item(_("Limit downloads"), "spin",
             config_name = "max_downloads", 
             minimum = 1,
             disable_check = True, 
