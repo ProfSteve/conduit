@@ -14,7 +14,7 @@ class ModuleWrapper:
     and searching for moldules of certain types, etc.
     """
     	
-    def __init__ (self, klass, initargs, category):
+    def __init__ (self, klass, initargs, category, cached_info = None):
         """
         Initializes the ModuleWrapper with an uninstantiated class
        
@@ -40,8 +40,21 @@ class ModuleWrapper:
         self.initargs =             initargs
         self.category =             category
         
+        self.cached_info = cached_info
+        
         #extract class parameters
-        if klass:
+        if cached_info:
+            log.critical("Creating module wrapper cached info %s" % cached_info)
+            self.name =             cached_info.get("name", "")
+            self.description =      cached_info.get("description", "")
+            self.icon_name =        cached_info.get("icon_name", "")
+            self.module_type =      cached_info.get("module_type", "")
+            self.in_type =          cached_info.get("in_type", "")
+            self.out_type =         cached_info.get("out_type", "")
+            self.configurable =     cached_info.get("configurable", False)
+            self.classname =        cached_info.get("classname", "")
+        elif klass:
+            log.critical("Creating module wrapper for %s" % klass)
             self.name =             getattr(klass, "_name_", "")
             self.description =      getattr(klass, "_description_", "")
             self.icon_name =        getattr(klass, "_icon_", "")
@@ -66,6 +79,17 @@ class ModuleWrapper:
         self.icon_path = ""
         self.icon = {}
         self.descriptiveIcon = None
+        
+    def get_info(self):
+        return {'name': self.name,
+            'description': self.description, 
+            'icon_name': self.icon_name,
+            'module_type': self.module_type,
+            'in_type': self.in_type,
+            'out_type': self.out_type,
+            'configurable': self.configurable,
+            'classname': self.classname,
+            'category': self.category}
 
     def __str__(self):
         return "Wrapper: %s %s (UID: %s)" % (self.get_name(), self.module_type, self.get_UID())
@@ -80,6 +104,8 @@ class ModuleWrapper:
     #
     # 2. They are also serve a way to show the same class in multiple categories
     def get_dnd_key(self):
+        if self.cached_info:
+            return self.classname
         if self.dndKey:
             return self.dndKey
         return self.get_key()
@@ -94,8 +120,11 @@ class ModuleWrapper:
         I suppose I could have used the builtin __getinitargs__ call used with 
         pickle but requires less implementation detail on the part of the DP
         """
-        if len(self.initargs) > 0:
-            return self.classname + ":" + ":".join(self.initargs)
+        initargs = self.initargs
+        if self.cached_info:
+            initargs = initargs[1:]
+        if len(initargs) > 0:
+            return self.classname + ":" + ":".join(initargs)
         else:
             return self.classname
             
@@ -252,7 +281,12 @@ class ModuleWrapper:
         return self.module.get_configuration_xml()
 
     def instantiate_module(self):
+        #log.critical("Cached %s" % self.cached_info)
+        #if self.cached_info:
+        #    self.module = self.klass(self.cached_info, *self.initargs)
+        #else:
         self.module = self.klass(*self.initargs)
+        log.critical("Module instantiated: %s (%s)" % (self.name, self.module))
         
     def is_pending(self):
         return self.module == None

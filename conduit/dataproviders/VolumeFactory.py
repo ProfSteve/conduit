@@ -15,8 +15,7 @@ class VolumeFactory(HalFactory.HalFactory):
     """
 
     def _wait_for_mount(self, udi, props):
-        props.update(self._get_properties(udi))
-
+        props.update(self._get_properties(udi, None))
         if not props.has_key("volume.is_mounted"):
             log.info("Still waiting for HAL to notice: %s" % udi)
             return True
@@ -31,15 +30,16 @@ class VolumeFactory(HalFactory.HalFactory):
             return False
 
     def _maybe_new(self, device_udi):
-        props = self._get_properties(device_udi)
-        if "volume" in [str(c) for c in props.get("info.capabilities", [])]:
-            #this basically checks if the volume mounting procedure has finished
-            if str(props.get("volume.mount_point", "")) == "" or props.has_key("volume.is_mounted") == False:
-                log.info("Waiting for HAL to attempt mount")
-                gobject.timeout_add(1000, self._wait_for_mount, device_udi, props)
-            else:
-                if self.is_interesting(device_udi, props):
-                    self.item_added(device_udi, **props)
+        def properties_handler(props):
+            if "volume" in [str(c) for c in props.get("info.capabilities", [])]:
+                #this basically checks if the volume mounting procedure has finished
+                if str(props.get("volume.mount_point", "")) == "" or props.has_key("volume.is_mounted") == False:
+                    log.info("Waiting for HAL to attempt mount")
+                    gobject.timeout_add(1000, self._wait_for_mount, device_udi, props)
+                else:
+                    if self.is_interesting(device_udi, props):
+                        self.item_added(device_udi, **props)
+        self._get_properties(device_udi, handler = properties_handler)
 
     def probe(self):
         """

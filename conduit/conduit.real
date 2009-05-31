@@ -20,5 +20,8 @@ if os.path.exists(os.path.join(_dirname,"ChangeLog")):
 
 import conduit
 import conduit.Main
-app = conduit.Main.Application()
+
+import cProfile
+cProfile.run('app = conduit.Main.Application()', 'prof')
+#app = 
  

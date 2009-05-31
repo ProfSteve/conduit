@@ -30,7 +30,7 @@ MODULES = {
 class N800Factory(VolumeFactory.VolumeFactory):
     def is_interesting(self, udi, props):
         if props.has_key("info.parent") and props.has_key("info.parent")!="":
-            prop2 = self._get_properties(props["info.parent"])
+            prop2 = self._get_properties(props["info.parent"], None)
             if prop2.has_key("storage.model") and prop2["storage.model"] in ("N800", "N810"):
                 if prop2.has_key("storage.removable") and prop2["storage.removable"] == True:
                     return True
