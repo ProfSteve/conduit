@@ -74,7 +74,7 @@ class ModuleManager(gobject.GObject):
                 for key, value in self.modules_cache.iteritems():
                     if not isinstance(key, basestring) and not isinstance(value, float):
                         raise Exception()
-                log.critical("Modules cache loaded %s" % self.modules_cache)
+                #log.critical("Modules cache loaded %s" % self.modules_cache)
             except:
                 log.warn("Modules cache invalid")
                 self.modules_cache = {}
@@ -210,7 +210,7 @@ class ModuleManager(gobject.GObject):
         """
         try:
             if self._is_factory(filename) or not (filename in self.modules_cache and self.modules_cache[filename]['mtime'] == os.stat(filename).st_mtime):
-                log.critical("Importing file %s" % filename)
+                #log.critical("Importing file %s" % filename)
                 mod = self._import_file(filename)
                 modules_cache = []
                 for modules, infos in mod.MODULES.items():
@@ -245,7 +245,7 @@ class ModuleManager(gobject.GObject):
                 self.filelist[filename]['modules'] = modules_cache
                 self.filelist[filename]['mtime'] = os.stat(filename).st_mtime
             else:
-                log.critical("File %s in cache" % filename)
+                #log.critical("File %s in cache" % filename)
                 self.filelist[filename] = self.modules_cache[filename]
                 for module in self.modules_cache[filename]['modules']:
                     module['filename'] = filename
@@ -284,12 +284,14 @@ class ModuleManager(gobject.GObject):
             else:            
                 self._load_modules_in_file(f, f_data)
         
-        self.modules_cache = self.filelist
-        cache_file = open(self.cache_path, "wb")
-        try:
-            pickle.dump(self.filelist, cache_file)
-        finally:
-            cache_file.close()
+        if self.modules_cache != self.filelist:
+            log.critical("Saving cache")
+            self.modules_cache = self.filelist
+            cache_file = open(self.cache_path, "wb")
+            try:
+                pickle.dump(self.filelist, cache_file)
+            finally:
+                cache_file.close()
 
         for i in self.dataproviderFactories:
             log.critical("Probing %s" % i)

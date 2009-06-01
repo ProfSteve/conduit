@@ -44,7 +44,7 @@ class ModuleWrapper:
         
         #extract class parameters
         if cached_info:
-            log.critical("Creating module wrapper cached info %s" % cached_info)
+            #log.critical("Creating module wrapper cached info %s" % cached_info)
             self.name =             cached_info.get("name", "")
             self.description =      cached_info.get("description", "")
             self.icon_name =        cached_info.get("icon_name", "")
@@ -54,7 +54,7 @@ class ModuleWrapper:
             self.configurable =     cached_info.get("configurable", False)
             self.classname =        cached_info.get("classname", "")
         elif klass:
-            log.critical("Creating module wrapper for %s" % klass)
+            #log.critical("Creating module wrapper for %s" % klass)
             self.name =             getattr(klass, "_name_", "")
             self.description =      getattr(klass, "_description_", "")
             self.icon_name =        getattr(klass, "_icon_", "")

@@ -58,6 +58,7 @@ class iPodFactory(VolumeFactory.VolumeFactory):
 
     def get_dataproviders(self, udi, **kwargs):
         import iPodModule
+        from iPodModule import IPodMusicTwoWay, IPodVideoTwoWay, IPodNoteTwoWay, IPodContactsTwoWay, IPodCalendarTwoWay, IPodPhotoSink
         if not iPodModule.availiable:
             return None
         #Read information about the ipod, like if it supports
