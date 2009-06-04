@@ -68,14 +68,21 @@ class ModuleManager(gobject.GObject):
         if os.path.exists(self.cache_path):
             cache_file = open(self.cache_path, "rb")
             try:
+                num_modules = 0
+                num_files = 0
                 self.modules_cache = pickle.load(cache_file)
                 if not isinstance(self.modules_cache, dict):
                     raise Exception()
                 for key, value in self.modules_cache.iteritems():
-                    if not isinstance(key, basestring) and not isinstance(value, float):
-                        raise Exception()
-                #log.critical("Modules cache loaded %s" % self.modules_cache)
-            except:
+                    if not isinstance(key, basestring):
+                        raise Error("%s not a string" % key)
+                    if not isinstance(value, dict):
+                        raise Error("%s not a dict" % value)
+                    for item in value:
+                        num_modules += 1
+                    num_files += 1
+                log.critical("Number of files %d, Number of modules %d" % (num_files, num_modules))
+            except Error:
                 log.warn("Modules cache invalid")
                 self.modules_cache = {}
             finally:
