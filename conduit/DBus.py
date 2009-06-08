@@ -16,6 +16,11 @@ import conduit.utils as Utils
 import conduit.Conduit as Conduit
 import conduit.SyncSet as SyncSet
 
+
+import gconf
+gconf = gconf.client_get_default()
+GCONF_PATH = "/apps/conduit"
+
 ERROR = -1
 SUCCESS = 0
 
@@ -445,6 +450,16 @@ class DBusInterface(DBusItem):
         self.type_converter = typeConverter
         self.sync_manager = syncManager
 
+        print gconf.all_dirs(GCONF_PATH)
+        for syncset_path in gconf.all_dirs(GCONF_PATH):
+            name = syncset_path.split("/")[-1]
+            if name not in ('gui', 'dbus'):
+                ss = SyncSet.SyncSet(
+                         moduleManager=self.moduleManager,
+                         syncManager=self.sync_manager
+                     )
+                new = SyncSetDBusItem(ss, name)
+                EXPORTED_OBJECTS[new.get_path()] = new
         
         #export the syncsets
         if guiSyncSet != None:
@@ -472,7 +487,19 @@ class DBusInterface(DBusItem):
         i = Utils.uuid_string()
         new = SyncSetDBusItem(ss, i)
         EXPORTED_OBJECTS[new.get_path()] = new
-        return new    
+        return new
+        
+    def _new_named_syncset(self, name):
+        if "/dataprovider/%s" % name in EXPORTED_OBJECTS:
+            return EXPORTED_OBJECTS["/dataprovider/%s" % name]
+        else:
+            ss = SyncSet.SyncSet(
+                        moduleManager=self.moduleManager,
+                        syncManager=self.sync_manager
+                        )
+            new = SyncSetDBusItem(ss, name)
+            EXPORTED_OBJECTS[new.get_path()] = new
+            return new        
     
     def _get_dataprovider(self, key):
         """
@@ -531,6 +558,11 @@ class DBusInterface(DBusItem):
     def NewSyncSet(self):
         self._print("NewSyncSet")
         return self._new_syncset()
+    
+    @dbus.service.method(APPLICATION_DBUS_IFACE, in_signature='', out_signature='o')    
+    def NewNamedSyncSet(self, syncset_name):
+        self._print("NewNamedSyncSet")
+        return self._new_named_syncset()
 
     @dbus.service.method(APPLICATION_DBUS_IFACE, in_signature='', out_signature='as')
     def GetAllDataProviders(self):
