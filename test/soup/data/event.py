@@ -11,6 +11,8 @@ class EventWrapper(soup.data.DataWrapper):
 
     def iter_samples(self):
         for f in self.get_files_from_data_dir("*.ical"):
+            if f.endswith("1.ical"):
+                continue
             txt = open(f).read()
             e = Event.Event()
             e.set_from_ical_string(txt)

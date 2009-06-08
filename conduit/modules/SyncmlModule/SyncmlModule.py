@@ -213,6 +213,8 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         DataProvider.TwoWay.__init__(self)
         self.address = address
 
+        self.running = False
+
         self.anchor = {}
         self.mapping = {}
         self.slowsync = False
@@ -232,6 +234,7 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         self._queue = None
 
     def refresh(self):
+        self.running = True
         self._queue = []
 
         self._syncml_run()
@@ -276,6 +279,9 @@ class SyncmlDataProvider(DataProvider.TwoWay):
         self._queue.append((enums.SML_CHANGE_DELETE, LUID, self.mapping[LUID], ""))
 
     def finish(self, a, b, c):
+        if not self.running:
+            return
+
         self._put_lock.set()
         self._refresh_lock.wait(60)
         self._refresh_lock.clear()
@@ -293,6 +299,7 @@ class SyncmlDataProvider(DataProvider.TwoWay):
             self.syncobj.unref(pysyncml.byref(self.syncobj))
 
         self._queue = None
+        self.running = False
 
     def get_UID(self):
         return self.address

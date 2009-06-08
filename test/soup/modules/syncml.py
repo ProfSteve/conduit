@@ -9,6 +9,7 @@ import conduit.modules.SyncmlModule.SyncmlModule as SyncmlModule
 import os
 import subprocess
 import signal
+import shutil
 
 server_path = os.path.join(soup.get_root(), "test", "python-tests")
 server_script = os.path.join(server_path, "syncml-server.sh")
@@ -44,8 +45,12 @@ class SyncmlContacts(soup.modules.ModuleWrapper, SyncmlBase):
     dir = os.path.join(server_path, "contacts")
 
     def create_dataprovider(self):
+        shutil.rmtree(self.dir)
         self.server = subprocess.Popen([server_script, "text/x-vcard", "Contacts", "contacts"], cwd=server_path)
-        return self.klass()
+        dp = self.klass()
+        dp.username = "test"
+        dp.password = "test"
+        return dp
 
     def destroy_dataprovider(self):
         os.kill(self.server.pid, signal.SIGINT)
@@ -58,8 +63,12 @@ class SyncmlCalendar(soup.modules.ModuleWrapper, SyncmlBase):
     dir = os.path.join(server_path, "calendar")
 
     def create_dataprovider(self):
+        shutil.rmtree(self.dir)
         self.server = subprocess.Popen([server_script, "text/x-vcalendar", "Calendar", "calendar"], cwd=server_path)
-        return self.klass()
+        dp = self.klass()
+        dp.username = "test"
+        dp.password = "test"
+        return dp
 
     def destroy_dataprovider(self):
         os.kill(self.server.pid, signal.SIGINT)
