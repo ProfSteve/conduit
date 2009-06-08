@@ -562,7 +562,7 @@ class IPodFileBase:
         '''
         tags = f.get_media_tags()
         for name, value in self._convert_tags(tags, self.media_to_ipod):
-            log.debug("Got %s = %s" % (name, value))
+            #log.debug("Got %s = %s" % (name, value))
             self.track[name] = value
         #Make sure we have a title to this song, even if it's just the filename
         if self.track['title'] is None:
@@ -580,6 +580,12 @@ class IPodFileBase:
             filename = self.track._userdata_into_default_locale('filename')
         return filename
         
+    def get_hash(self):
+        return str(hash(tuple(self.get_media_tags())))
+
+    def get_snippet(self):
+        return "%(artist)s - %(title)s" % track
+
     def get_media_tags(self):
         '''
         Extends the MediaFile class to include the iPod metadata, instead of
@@ -700,7 +706,9 @@ class IPodMediaTwoWay(IPodBase):
         #self.tracks = {}
         self.tracks_id = {}
         self.track_args = {}
-        self.keep_converted = True
+        self.update_configuration(
+            keep_converted = True,
+        )
         
     def get_db(self):
         if self.db:
@@ -764,9 +772,12 @@ class IPodMediaTwoWay(IPodBase):
     def put(self, f, overwrite, LUID=None):
         self.get_db()
         try:
-            media_file = self._ipodmedia_(db = self.db, f = f, **self.track_args)
-            #FIXME: We keep the db locked while we copy the file. Not good
-            #media_file.
+            if LUID and LUID in self.tracks_id:
+                track = self.tracks_id[LUID]
+                media_file = self._ipodmedia_(db = self.db, track = track, f = f, **self.track_args)
+            else:
+                media_file = self._ipodmedia_(db = self.db, f = f, **self.track_args)
+            #FIXME: We keep the db locked while we copy the file. Not good.
             media_file.copy_ipod()
             self.tracks_id[str(media_file.track['dbid'])] = media_file.track
             #FIXME: Writing the db here is for debug only. Closing does not actually
@@ -846,7 +857,9 @@ class IPodMusicTwoWay(IPodMediaTwoWay):
     def __init__(self, *args):
         IPodMediaTwoWay.__init__(self, *args)
         self.encodings = IPOD_AUDIO_ENCODINGS
-        self.encoding = 'aac'
+        self.update_configuration(
+            encoding = 'mp3',
+        )
 
 IPOD_VIDEO_ENCODINGS = {
     #FIXME: Add iPod mpeg4 restrictions. Follow:
@@ -880,8 +893,10 @@ class IPodVideoTwoWay(IPodMediaTwoWay):
     def __init__(self, *args):
         IPodMediaTwoWay.__init__(self, *args)
         self.encodings = IPOD_VIDEO_ENCODINGS
-        self.encoding = 'mp4_x264'
-        self.video_kind = 'movie'
+        self.update_configuration(
+            encoding = 'mp4_x264',
+            video_kind = 'movie',
+        )
         self._update_track_args()
         
     def _update_track_args(self):
@@ -899,11 +914,5 @@ class IPodVideoTwoWay(IPodMediaTwoWay):
         
     def set_configuration(self, config):
         IPodMediaTwoWay.set_configuration(self, config)
-        if 'video_kind' in config:
-            self.video_kind = config['video_kind']
+        #FIXME Move this to update_configuration callback
         self._update_track_args()
-
-    def get_configuration(self):
-        config = IPodMediaTwoWay.get_configuration(self)
-        config.update({'video_kind':self.video_kind})
-        return config
