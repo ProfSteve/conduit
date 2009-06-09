@@ -7,11 +7,13 @@ import conduit.dataproviders.DataProvider as DataProvider
 import conduit.utils as Utils
 import conduit.Exceptions as Exceptions
 import conduit.datatypes.Contact as Contact
+import conduit.datatypes.Event as Event
 from conduit.datatypes import Rid
 
 Utils.dataprovider_add_dir_to_path(__file__)
 import tralchemy
 from tralchemy.nco import PersonContact
+from tralchemy.ncal import CalendarDataObject
 import vobject
 
 MODULES = {
@@ -113,6 +115,69 @@ class TrackerContacts(DataProvider.TwoWay):
             c.vcard.n.value = n
 
         return c
+
+    def get_UID(self):
+        return ""
+
+class TrackerCalendar(DataProvider.TwoWay):
+
+    _name_ = _("Tracker Calendar")
+    _description_ = _("Synchronize your calendar")
+    _category_ = conduit.dataproviders.CATEGORY_OFFICE
+    _module_type_ = "twoway"
+    _in_type_ = "event"
+    _out_type_ = "event"
+    _icon_ = "x-office-calendar"
+
+    def __init__(self):
+        DataProvider.TwoWay.__init__(self)
+
+    def refresh(self):
+        DataProvider.TwoWay.refresh(self)
+        self.events = {}
+        for event in CalendarDataObject.get():
+            self.events[str(event.uri)] = event
+
+    def get_all(self):
+        DataProvider.TwoWay.get_all(self)
+        return self.events.keys()
+
+    def get(self, LUID):
+        DataProvider.TwoWay.get(self, LUID)
+        tc = self.events[LUID]
+        c = self._tracker_to_ical(tc)
+        c.set_UID(LUID)
+        return c
+
+    def put(self, obj, overwrite, LUID=None):
+        DataProvider.TwoWay.put(self, obj, overwrite, LUID)
+        if LUID != None:
+            self.delete(LUID)
+        c = self._ical_to_tracker(obj)
+        c.commit()
+        return Rid(c.uri, mtime=None, hash=None)
+
+    def delete(self, LUID):
+        if LUID in self.events:
+            self.events[LUID].delete()
+
+    def finish(self, aborted, error, conflict):
+        DataProvider.TwoWay.finish(self)
+        self.events = None
+
+    def _ical_to_tracker(self, data):
+        ical = data.ical
+
+        c = CalendarDataObject.create()
+
+        for k, v in ical.contents.iteritems():
+            log.warning("Unhandled key: %s" % k)
+
+        return c
+
+    def _tracker_to_ical(self, tracker):
+        e = Event.Event()
+        return e
 
     def get_UID(self):
         return ""
