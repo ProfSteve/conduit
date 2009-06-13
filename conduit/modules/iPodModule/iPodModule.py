@@ -47,8 +47,10 @@ except ImportError:
 except locale.Error:
     errormsg = "iPod support disabled (Incorrect locale)"
 
+MODULES = {}
+
 if errormsg:
-    MODULES = {}
+    #MODULES = {}
     log.warn(errormsg)
     #Solve the initialization problem without gpod
     class gpod():
