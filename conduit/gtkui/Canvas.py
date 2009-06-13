@@ -878,7 +878,7 @@ class DataProviderCanvasItem(_CanvasItem):
                 kwargs = {
                     "line_width":2.0,
                     "stroke_color":"black",
-                    #"fill_pattern":pattern
+                    "fill_pattern":pattern
                 }
         elif specifier == "name":
             kwargs = {
