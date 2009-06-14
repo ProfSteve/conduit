@@ -77,7 +77,7 @@ class TrackerContacts(DataProvider.TwoWay):
             elif k == "tel":
                 pass
             elif k == "bday":
-                pass
+                c.birthdate = v[0].value
             elif k == "n":
                 x = v[0].value
                 c.namefamily = x.family
@@ -95,6 +95,8 @@ class TrackerContacts(DataProvider.TwoWay):
                 pass
             elif k == "fn":
                 c.fullname = v[0].value
+            elif k == "x-gender":
+                c.gender = v[0].value
             else:
                 log.warning("Unhandled key: %s" % k)
 
@@ -102,6 +104,9 @@ class TrackerContacts(DataProvider.TwoWay):
 
     def _tracker_to_vcard(self, tracker):
         c = Contact.Contact()
+
+        if tracker.gender:
+            c.vcard.add('x-gender').value = tracker.gender
 
         if tracker.fullname:
             c.vcard.fn.value = tracker.fullname
@@ -113,6 +118,12 @@ class TrackerContacts(DataProvider.TwoWay):
             n = vobject.vcard.Name(family=tracker.namefamily, given=tracker.namegiven, additional=tracker.nameadditional,
                                    prefix=tracker.namehonorificprefix, suffix=tracker.namehonorificsuffix)
             c.vcard.n.value = n
+
+        if tracker.note:
+            c.vcard.add('note').value = tracker.note
+
+        if tracker.addresslocation:
+            pass
 
         return c
 

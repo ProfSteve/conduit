@@ -32,7 +32,7 @@ class Namespace(object):
                     self.__class__.__name__, name))
 
         self.__dict__[name] = cls
-        return value
+        return cls
 
     @property
     def __members__(self):
