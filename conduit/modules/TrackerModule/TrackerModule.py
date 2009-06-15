@@ -12,8 +12,8 @@ from conduit.datatypes import Rid
 
 Utils.dataprovider_add_dir_to_path(__file__)
 import tralchemy
-from tralchemy.nco import PersonContact
-from tralchemy.ncal import CalendarDataObject
+from tralchemy import nco
+from tralchemy import ncal
 import vobject
 
 MODULES = {
@@ -36,7 +36,7 @@ class TrackerContacts(DataProvider.TwoWay):
     def refresh(self):
         DataProvider.TwoWay.refresh(self)
         self.contacts = {}
-        for contact in PersonContact.get():
+        for contact in nco.PersonContact.get():
             self.contacts[str(contact.uri)] = contact
 
     def get_all(self):
@@ -69,7 +69,7 @@ class TrackerContacts(DataProvider.TwoWay):
     def _vcard_to_tracker(self, data):
         vcard = data.vcard
 
-        c = PersonContact.create()
+        c = nco.PersonContact.create()
 
         for k, v in vcard.contents.iteritems():
             if k == "account":
@@ -105,22 +105,82 @@ class TrackerContacts(DataProvider.TwoWay):
     def _tracker_to_vcard(self, tracker):
         c = Contact.Contact()
 
-        if tracker.gender:
-            c.vcard.add('x-gender').value = tracker.gender
-
-        if tracker.fullname:
-            c.vcard.fn.value = tracker.fullname
-
-        if tracker.nickname:
-            c.vcard.add('nickname').value = tracker.nickname
+        for key, value in tracker.properties():
+            if key == "nco:gender":
+                c.vcard.add('x-gender').value = value
+            elif key == "nco:fullName":
+                c.vcard.fn.value = value
+            elif key == "nco:nickname":
+                c.vcard.add('nickname').value = value
+            elif key == "nco:note":
+                c.vcard.add('note').value = value
+            elif key == "nco:hasEmailAddress":
+                em = nco.EmailAddress(value)
+                c.vcard.add('email').value = em.emailaddress
+            elif key == "nco:hasIMAccount":
+                im = nco.IMAccount(value)
+                proto = im.improtocol
+                if proto == "aim":
+                    c.vcard.add('x-aim').value = im.imid
+                elif proto == "icq":
+                    c.vcard.add('x-icq').value = im.imid
+                elif proto == "jabber":
+                    c.vcard.add('x-jabber').value = im.imid
+                elif proto == "msn":
+                    c.vcard.add('x-msn').value = im.imid
+                elif proto == "yahoo":
+                    c.vcard.add('x-yahoo').value = im.imid
+                elif proto == "skype":
+                    c.vcard.add('x-skype-username').value = im.imid
+                elif proto == "gadugadu":
+                    c.vcard.add('x-gadugadu').value = im.imid
+            elif key == "nco:hasPostalAddress":
+                adr = nco.PostalAddress(value)
+                vadr = vobject.vcard.Address()
+                if adr.pobox:
+                    vadr.box = adr.pobox
+                if adr.extendedaddress:
+                    vadr.extended = adr.extendedaddress
+                if adr.streetaddress:
+                    vadr.street = adr.streetaddress
+                if adr.locality:
+                    vadr.city = adr.locality
+                if adr.region:
+                    vadr.region = adr.region
+                if adr.postalcode:
+                    vadr.code = adr.postalcode
+                if adr.country:
+                    vadr.country = adr.country
+                c.vcard.add('addr').value = vadr
+            elif key == "nco:hasPhoneNumber":
+                phone = nco.PhoneNumber(value)
+                c.vcard.add('tel').value = phone.phonenumber
+            elif key == "nco:url":
+                c.vcard.add('url').value = value
+            elif key == "nco:websiteurl":
+                c.vcard.add('x-website-url').value = value
+            elif key == "nco:blogurl":
+                c.vcard.add('x-blog-url').value = value
+            elif key == "nco:foafurl":
+                c.vcard.add('x-foaf-url').value = value
+            elif key == "nco:photo":
+                """ Points to a photo of vic - embed in vcard """
+                pass
+            elif key == "nco:sound":
+                """ Points to a sound of vic - embed in vcard """
+                pass
+            elif key == "nco:key":
+                """ An encryption key in a file - embed in vcard """
+                pass
+            elif key == "nco:contactUID":
+                c.vcard.add("uid").value = value
+            elif key == "nco:hobby":
+                c.vcard.add("x-hobby").value = value
 
         if tracker.namefamily or tracker.namegiven or tracker.nameadditional or tracker.namehonorificprefix or tracker.namehonorificsuffix:
             n = vobject.vcard.Name(family=tracker.namefamily, given=tracker.namegiven, additional=tracker.nameadditional,
                                    prefix=tracker.namehonorificprefix, suffix=tracker.namehonorificsuffix)
             c.vcard.n.value = n
-
-        if tracker.note:
-            c.vcard.add('note').value = tracker.note
 
         if tracker.addresslocation:
             pass
@@ -146,7 +206,7 @@ class TrackerCalendar(DataProvider.TwoWay):
     def refresh(self):
         DataProvider.TwoWay.refresh(self)
         self.events = {}
-        for event in CalendarDataObject.get():
+        for event in nco.CalendarDataObject.get():
             self.events[str(event.uri)] = event
 
     def get_all(self):
@@ -179,7 +239,7 @@ class TrackerCalendar(DataProvider.TwoWay):
     def _ical_to_tracker(self, data):
         ical = data.ical
 
-        c = CalendarDataObject.create()
+        c = nco.CalendarDataObject.create()
 
         for k, v in ical.contents.iteritems():
             log.warning("Unhandled key: %s" % k)
