@@ -284,6 +284,8 @@ class TrackerCalendar(DataProvider.TwoWay):
                 c.lastmodified = v
             elif k == "categories":
                 c.categories = v
+            elif k == "contact":
+                c.contact = v
             elif k == "status":
                 # 'TENTATIVE' etc to an EventStatus instance
                 pass
@@ -320,6 +322,8 @@ class TrackerCalendar(DataProvider.TwoWay):
                 e.iCal.add('last-modified').value = value
             elif key == "ncal:categories":
                 e.iCal.add('categories').value = value
+            elif key == "ncal:contact":
+                e.iCal.add('contact').value = value
             elif key == "ncal:status":
                 # An instance of ncal:EventStatus to represent TENTATIVE etc
                 pass
