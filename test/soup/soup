@@ -2,6 +2,12 @@
 
 import sys, os, unittest, logging
 
+if not "KILL_MY_DATA" in os.environ:
+    print "WARNING: Soup isnt yet able to setup a pristine self contained test environment"
+    print "It will definitely eat tomboy, evolution and tracker data so don't run it!!"
+    print "If you insist, set KILL_MY_DATA environment variable"
+    sys.exit(1)
+
 testsdir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.insert(0, testsdir)
 
