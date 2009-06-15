@@ -47,7 +47,7 @@ class TrackerContacts(DataProvider.TwoWay):
         DataProvider.TwoWay.get(self, LUID)
         tc = self.contacts[LUID]
         c = self._tracker_to_vcard(tc)
-        # set mtime from tracker modified
+        c.set_mtime(tc.modified)
         c.set_UID(LUID)
         return c
 
@@ -232,7 +232,7 @@ class TrackerCalendar(DataProvider.TwoWay):
         DataProvider.TwoWay.get(self, LUID)
         tc = self.events[LUID]
         c = self._tracker_to_ical(tc)
-        #FIXME: Set mtime from tc.modified
+        c.set_mtime(tc.modified)
         c.set_UID(LUID)
         return c
 
