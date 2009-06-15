@@ -6,10 +6,18 @@ bus = dbus.SessionBus()
 tracker_obj = bus.get_object("org.freedesktop.Tracker", "/org/freedesktop/Tracker/Resources")
 tracker = dbus.Interface(tracker_obj, "org.freedesktop.Tracker.Resources")
 
+def tracker_query(sparql):
+    sparql = sparql.replace('\n', '\\n')
+    return tracker.SparqlQuery(sparql)
+
+def tracker_update(sparql):
+    sparql = sparql.replace('\n', '\\n')
+    return tracker.SparqlUpdate(sparql)
+
 # Map tracker prefixes to ontology namespaces and back
 prefix_to_ns = {}
 ns_to_prefix = {}
-for prefix, namespace in tracker.SparqlQuery("SELECT ?prefix, ?ns WHERE { ?ns tracker:prefix ?prefix }"):
+for prefix, namespace in tracker_query("SELECT ?prefix, ?ns WHERE { ?ns tracker:prefix ?prefix }"):
     prefix_to_ns[prefix] = namespace
     ns_to_prefix[namespace] = prefix
 
@@ -49,7 +57,7 @@ class Resource(object):
         uri = self.uri
         if uri.startswith("http://"):
             uri = "<%s>" % uri
-        results = tracker.SparqlQuery("SELECT ?key, ?value WHERE { %s ?key ?value }" % uri)
+        results = tracker_query("SELECT ?key, ?value WHERE { %s ?key ?value }" % uri)
         for key, value in results:
             yield get_classname(str(key)), str(value)
 
@@ -60,7 +68,7 @@ class Resource(object):
             key = getattr(cls, key).uri
             fragment += " . ?o %s %s" % (key, value)
 
-        results = tracker.SparqlQuery("SELECT ?o WHERE { ?o rdf:type %s %s}" % (cls._type_, fragment))
+        results = tracker_query("SELECT ?o WHERE { ?o rdf:type %s %s}" % (cls._type_, fragment))
         for result in results:
             classname = get_classname(result[0])
             yield cls(classname)
@@ -77,7 +85,7 @@ class Resource(object):
         return o
 
     def delete(self):
-        tracker.SparqlUpdate("DELETE { <%s> a %s. }" % (self.uri, self._type_))
+        tracker_update("DELETE { <%s> a %s. }" % (self.uri, self._type_))
 
     def commit(self):
         query = "INSERT { <%s> a %s" % (self.uri, self._type_)
@@ -85,7 +93,7 @@ class Resource(object):
             query += " ; %s %s" % (k, v)
         query += " . }"
         print query
-        tracker.SparqlUpdate(query)
+        tracker_update(query)
         self.triples = {}
 
 
@@ -106,7 +114,7 @@ class Property(Resource, property):
         if uri.startswith("http://"):
             uri = "<%s>" % uri
 
-        results = tracker.SparqlQuery("SELECT ?v WHERE { %s %s ?v }" % (uri, self.uri))
+        results = tracker_query("SELECT ?v WHERE { %s %s ?v }" % (uri, self.uri))
         for result in results:
             #FIXME: What to do about lists of stuff. What to do about stuff that isnt a string.
             result = result[0]
