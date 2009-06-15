@@ -272,6 +272,8 @@ class TrackerCalendar(DataProvider.TwoWay):
                 c.url = v
             elif k == 'recurrence-id':
                 c.recurrenceid = v
+            elif k == "location":
+                c.location = v
             elif k == "status":
                 # 'TENTATIVE' etc to an EventStatus instance
                 pass
@@ -298,6 +300,8 @@ class TrackerCalendar(DataProvider.TwoWay):
                 e.iCal.add('url').value = value
             elif key == "ncal:recurrenceId":
                 e.iCal.add('recurrence-id').value = value
+            elif key == "ncal:location":
+                e.iCal.add('location').value = value
             elif key == "ncal:status":
                 # An instance of ncal:EventStatus to represent TENTATIVE etc
                 pass
