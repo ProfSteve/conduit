@@ -256,6 +256,11 @@ class TrackerCalendar(DataProvider.TwoWay):
                 c.uid = v
             elif k == "url":
                 c.url = v
+            elif k == 'recurrence-id':
+                c.recurrenceid = v
+            elif k == "status":
+                # 'TENTATIVE' etc to an EventStatus instance
+                pass
             else:
                 log.warning("Unhandled key: %s" % k)
 
@@ -277,6 +282,11 @@ class TrackerCalendar(DataProvider.TwoWay):
                 e.ical.add('uid').value = value
             elif key == "ncal:url":
                 e.ical.add('url').value = value
+            elif key == "ncal:recurrenceId":
+                e.ical.add('recurrence-id').value = value
+            elif key == "ncal:status":
+                # An instance of ncal:EventStatus to represent TENTATIVE etc
+                pass
             else:
                 log.warning("Unhandled key: %s" % key)
 
