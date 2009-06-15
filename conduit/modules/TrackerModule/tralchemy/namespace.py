@@ -51,9 +51,9 @@ class Importer(object):
     @staticmethod
     def find_module(name, path=None):
         #FIXME: This function is a bit of a hack
-        if not name.startswith("tralchemy."):
+        if not "tralchemy." in name:
             return None
-        name = name[10:]
+        name = name[name.find("tralchemy.")+10:]
         if name in ('namespace', 'core', 'dbus', 'uuid'):
             return None
         if '.' in name:
