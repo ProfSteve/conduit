@@ -85,6 +85,7 @@ class Resource(object):
         for k, v in self.triples.iteritems():
             query += " ; %s %s" % (k, v)
         query += " . }"
+        print query
         tracker.SparqlUpdate(query)
         self.triples = {}
 

@@ -86,6 +86,23 @@ class TrackerContacts(DataProvider.TwoWay):
                 c.nameadditional = x.additional
                 c.namehonorificprefix = x.prefix
                 c.namehonorificsuffix = x.suffix
+            elif k == "adr":
+                x = v[0].value
+                adr = nco.PostalAddress.create(commit=False)
+                if x.box:
+                    adr.pobox = x.box
+                if x.extended:
+                    adr.extendedaddress = x.extended
+                if x.street:
+                    adr.streetaddress = x.street
+                if x.city:
+                    adr.locality = x.city
+                if x.code:
+                    adr.postalcode = x.code
+                if x.country:
+                    adr.country = x.country
+                adr.commit()
+                c.haspostaladdress = adr
             elif k == "version":
                 pass
             elif k == "org":
