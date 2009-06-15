@@ -62,8 +62,7 @@ class Resource(object):
 
         results = tracker.SparqlQuery("SELECT ?o WHERE { ?o rdf:type %s %s}" % (cls._type_, fragment))
         for result in results:
-            classname = result[0]
-            classname = get_classname(classname)
+            classname = get_classname(result[0])
             yield cls(classname)
 
     @classmethod
