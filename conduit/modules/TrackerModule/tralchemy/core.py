@@ -45,6 +45,14 @@ class Resource(object):
         self.uri = get_classname(uri)
         self.triples = {}
 
+    def properties(self):
+        uri = self.uri
+        if uri.startswith("http://"):
+            uri = "<%s>" % uri
+        results = tracker.SparqlQuery("SELECT ?key, ?value WHERE { %s ?key ?value }" % uri)
+        for key, value in results:
+            yield get_classname(str(key)), str(value)
+
     @classmethod
     def get(cls, **kwargs):
         fragment = ""
@@ -180,12 +188,12 @@ class WrapperFactory(object):
             "__doc__": cls.comment or ""
         }
 
-        # FIXME: subclassof should return an object!!
-        baseclass = cls.subclassof
-        if baseclass:
-            baseclass = [self.get_class(baseclass.uri)]
-        else:
-            baseclass = [Resource]
+        baseclass = []
+        for key, value in cls.properties():
+            if key == "rdfs:subClassOf":
+                baseclass.append(self.get_class(value))
+        if not baseclass:
+            baseclass.append(Resource)
 
         # Does this class have notifications?
         if cls.notify:
