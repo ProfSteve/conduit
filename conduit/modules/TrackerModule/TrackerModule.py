@@ -310,7 +310,7 @@ class TrackerCalendar(DataProvider.TwoWay):
                 e.iCal.add('recurrence-id').value = value
             elif key == "ncal:location":
                 e.iCal.add('location').value = value
-            elif key == "ncal:priority"):
+            elif key == "ncal:priority":
                 e.iCal.add('priority').value = value
             elif key == "ncal:lastModified":
                 e.iCal.add('last-modified').value = value
