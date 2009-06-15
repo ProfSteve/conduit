@@ -266,6 +266,8 @@ class TrackerCalendar(DataProvider.TwoWay):
                 c.dtstart = v
             elif k == "dtend":
                 c.dtend = v
+            elif k == "duration":
+                c.duration = v
             elif k == "uid":
                 c.uid = v
             elif k == "url":
@@ -294,6 +296,8 @@ class TrackerCalendar(DataProvider.TwoWay):
                 e.iCal.add('dtstart').value = value
             elif key == "ncal:dtend":
                 e.iCal.add('dtend').value = value
+            elif key == "ncal:duration":
+                e.iCal.add('duration').value = value
             elif key == "ncal:uid":
                 e.iCal.add('uid').value = value
             elif key == "ncal:url":
