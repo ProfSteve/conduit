@@ -18,7 +18,7 @@ class TrackerContacts(soup.modules.ModuleWrapper):
 
 class TrackerCalendar(soup.modules.ModuleWrapper):
 
-    klass = TrackerContacts.TrackerCalendar
+    klass = TrackerModule.TrackerCalendar
     dataclass = EventWrapper
 
     def create_dataprovider(self):
