@@ -70,7 +70,7 @@ class TrackerContacts(DataProvider.TwoWay):
     def _vcard_to_tracker(self, data):
         vcard = data.vcard
 
-        c = nco.PersonContact.create()
+        c = nco.PersonContact.create(commit=False)
 
         for k, v in vcard.contents.iteritems():
             if k == "account":
@@ -200,9 +200,6 @@ class TrackerContacts(DataProvider.TwoWay):
                                    prefix=tracker.namehonorificprefix, suffix=tracker.namehonorificsuffix)
             c.vcard.n.value = n
 
-        if tracker.addresslocation:
-            pass
-
         return c
 
     def get_UID(self):
@@ -258,7 +255,7 @@ class TrackerCalendar(DataProvider.TwoWay):
     def _ical_to_tracker(self, data):
         ical = data.iCal
 
-        c = ncal.Event.create()
+        c = ncal.Event.create(commit=False)
 
         for k, v in ical.contents.iteritems():
             if k == "description":
