@@ -47,6 +47,7 @@ class TrackerContacts(DataProvider.TwoWay):
         DataProvider.TwoWay.get(self, LUID)
         tc = self.contacts[LUID]
         c = self._tracker_to_vcard(tc)
+        # set mtime from tracker modified
         c.set_UID(LUID)
         return c
 
@@ -206,7 +207,7 @@ class TrackerCalendar(DataProvider.TwoWay):
     def refresh(self):
         DataProvider.TwoWay.refresh(self)
         self.events = {}
-        for event in nco.CalendarDataObject.get():
+        for event in ncal.Event.get():
             self.events[str(event.uri)] = event
 
     def get_all(self):
@@ -217,6 +218,7 @@ class TrackerCalendar(DataProvider.TwoWay):
         DataProvider.TwoWay.get(self, LUID)
         tc = self.events[LUID]
         c = self._tracker_to_ical(tc)
+        #FIXME: Set mtime from tc.modified
         c.set_UID(LUID)
         return c
 
@@ -239,15 +241,45 @@ class TrackerCalendar(DataProvider.TwoWay):
     def _ical_to_tracker(self, data):
         ical = data.ical
 
-        c = nco.CalendarDataObject.create()
+        c = ncal.Event.create()
 
         for k, v in ical.contents.iteritems():
-            log.warning("Unhandled key: %s" % k)
+            if k == "description":
+                c.description = v
+            elif k == "summary":
+                c.summary = v
+            elif k == "dtstart":
+                c.dtstart = v
+            elif k == "dtend":
+                c.dtend = v
+            elif k == "uid":
+                c.uid = v
+            elif k == "url":
+                c.url = v
+            else:
+                log.warning("Unhandled key: %s" % k)
 
         return c
 
     def _tracker_to_ical(self, tracker):
         e = Event.Event()
+
+        for key, value in tracker.properties():
+            if key == "ncal:description":
+                e.ical.add("description").value = value
+            elif key == "ncal:summary":
+                e.ical.add("summary").value = value
+            elif key == "ncal:dtstart":
+                e.ical.add('dtstart').value = value
+            elif key == "ncal:dtend":
+                e.ical.add('dtend').value = value
+            elif key == "ncal:uid":
+                e.ical.add('uid').value = value
+            elif key == "ncal:url":
+                e.ical.add('url').value = value
+            else:
+                log.warning("Unhandled key: %s" % key)
+
         return e
 
     def get_UID(self):
