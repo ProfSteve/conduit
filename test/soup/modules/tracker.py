@@ -15,6 +15,8 @@ class TrackerContacts(soup.modules.ModuleWrapper):
     def create_dataprovider(self):
         return self.klass()
 
+    def destroy_dataprovider(self):
+        pass
 
 class TrackerCalendar(soup.modules.ModuleWrapper):
 
@@ -24,4 +26,5 @@ class TrackerCalendar(soup.modules.ModuleWrapper):
     def create_dataprovider(self):
         return self.klass()
 
-
+    def destroy_dataprovider(self):
+        pass
