@@ -142,6 +142,7 @@ class Property(Resource, property):
 Resource.comment = Property("rdfs:comment")
 Resource.label = Property("rdfs:label")
 Resource.type = Property("rdf:type")
+Resource.modified = Property("tracker:modified")
 
 Property.domain = Property("rdfs:domain")
 Property.subpropertyof = Property("rdfs:subPropertyOf")
