@@ -239,7 +239,7 @@ class TrackerCalendar(DataProvider.TwoWay):
         self.events = None
 
     def _ical_to_tracker(self, data):
-        ical = data.ical
+        ical = data.iCal
 
         c = ncal.Event.create()
 
@@ -271,19 +271,19 @@ class TrackerCalendar(DataProvider.TwoWay):
 
         for key, value in tracker.properties():
             if key == "ncal:description":
-                e.ical.add("description").value = value
+                e.iCal.add("description").value = value
             elif key == "ncal:summary":
-                e.ical.add("summary").value = value
+                e.iCal.add("summary").value = value
             elif key == "ncal:dtstart":
-                e.ical.add('dtstart').value = value
+                e.iCal.add('dtstart').value = value
             elif key == "ncal:dtend":
-                e.ical.add('dtend').value = value
+                e.iCal.add('dtend').value = value
             elif key == "ncal:uid":
-                e.ical.add('uid').value = value
+                e.iCal.add('uid').value = value
             elif key == "ncal:url":
-                e.ical.add('url').value = value
+                e.iCal.add('url').value = value
             elif key == "ncal:recurrenceId":
-                e.ical.add('recurrence-id').value = value
+                e.iCal.add('recurrence-id').value = value
             elif key == "ncal:status":
                 # An instance of ncal:EventStatus to represent TENTATIVE etc
                 pass
