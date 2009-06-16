@@ -267,9 +267,9 @@ class TrackerCalendar(DataProvider.TwoWay):
             elif k == "summary":
                 c.summary = v
             elif k == "dtstart":
-                c.dtstart = v
+                c.dtstart = ncal.NcalDateTime.create(datetime=v)
             elif k == "dtend":
-                c.dtend = v
+                c.dtend = ncal.NcalDateTime.create(datetime=v)
             elif k == "duration":
                 c.duration = v
             elif k == "uid":
@@ -307,9 +307,11 @@ class TrackerCalendar(DataProvider.TwoWay):
             elif key == "ncal:summary":
                 ev.add("summary").value = value
             elif key == "ncal:dtstart":
-                ev.add('dtstart').value = value
+                dt = ncal.NcalDateTime(value)
+                ev.add('dtstart').value = dt.datetime
             elif key == "ncal:dtend":
-                ev.add('dtend').value = value
+                dt = ncal.NcalDateTime(value)
+                ev.add('dtend').value = dt.datetime
             elif key == "ncal:duration":
                 ev.add('duration').value = value
             elif key == "ncal:uid":
