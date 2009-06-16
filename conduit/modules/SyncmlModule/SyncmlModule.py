@@ -269,9 +269,11 @@ class SyncmlDataProvider(DataProvider.TwoWay):
 
         if LUID == None:
             LUID = str(uuid.uuid4())
+            log.debug("Adding data object with new LUID (%s)" % LUID)
             self._queue.append((enums.SML_CHANGE_ADD, LUID, "", blob))
             return conduit.datatypes.Rid(uid=LUID, hash=hash(blob))
 
+        log.debug("Updating data object with existing LUID (%s)" % LUID)
         self._queue.append((enums.SML_CHANGE_REPLACE, LUID, self.mapping[LUID], blob))
         return conduit.datatypes.Rid(uid=LUID, hash=hash(blob))
 
