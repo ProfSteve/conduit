@@ -57,7 +57,7 @@ class TrackerContacts(DataProvider.TwoWay):
             self.delete(LUID)
         c = self._vcard_to_tracker(obj)
         c.commit()
-        return Rid(c.uri, mtime=None, hash=None)
+        return Rid(c.uri, mtime=c.modified, hash=None)
 
     def delete(self, LUID):
         if LUID in self.contacts:
@@ -244,7 +244,7 @@ class TrackerCalendar(DataProvider.TwoWay):
             self.delete(LUID)
         c = self._ical_to_tracker(obj)
         c.commit()
-        return Rid(c.uri, mtime=None, hash=None)
+        return Rid(c.uri, mtime=c.modified, hash=None)
 
     def delete(self, LUID):
         if LUID in self.events:
