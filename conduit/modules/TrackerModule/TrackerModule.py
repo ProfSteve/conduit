@@ -76,7 +76,7 @@ class TrackerContacts(DataProvider.TwoWay):
             if k == "account":
                 pass
             elif k == "tel":
-                pn = nco.PhoneNumber(phonenumber=v[0].value)
+                pn = nco.PhoneNumber.create(phonenumber=v[0].value)
                 c.hasphonenumber = pn
             elif k == "bday":
                 c.birthdate = v[0].value
@@ -111,7 +111,7 @@ class TrackerContacts(DataProvider.TwoWay):
             elif k == "nickname":
                 c.nickname = v[0].value
             elif k == "email":
-                ea = nco.EmailAddress(emailaddress=v[0].value)
+                ea = nco.EmailAddress.create(emailaddress=v[0].value)
                 c.hasemailaddress = ea
             elif k == "fn":
                 c.fullname = v[0].value
