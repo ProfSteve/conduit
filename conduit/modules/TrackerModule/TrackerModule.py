@@ -298,34 +298,36 @@ class TrackerCalendar(DataProvider.TwoWay):
 
     def _tracker_to_ical(self, tracker):
         e = Event.Event()
+        cal = e.iCal
+        ev = e.iCal.add('vevent')
 
         for key, value in tracker.properties():
             if key == "ncal:description":
-                e.iCal.add("description").value = value
+                ev.add("description").value = value
             elif key == "ncal:summary":
-                e.iCal.add("summary").value = value
+                ev.add("summary").value = value
             elif key == "ncal:dtstart":
-                e.iCal.add('dtstart').value = value
+                ev.add('dtstart').value = value
             elif key == "ncal:dtend":
-                e.iCal.add('dtend').value = value
+                ev.add('dtend').value = value
             elif key == "ncal:duration":
-                e.iCal.add('duration').value = value
+                ev.add('duration').value = value
             elif key == "ncal:uid":
-                e.iCal.add('uid').value = value
+                ev.add('uid').value = value
             elif key == "ncal:url":
-                e.iCal.add('url').value = value
+                ev.add('url').value = value
             elif key == "ncal:recurrenceId":
-                e.iCal.add('recurrence-id').value = value
+                ev.add('recurrence-id').value = value
             elif key == "ncal:location":
-                e.iCal.add('location').value = value
+                ev.add('location').value = value
             elif key == "ncal:priority":
-                e.iCal.add('priority').value = value
+                ev.add('priority').value = value
             elif key == "ncal:lastModified":
-                e.iCal.add('last-modified').value = value
+                ev.add('last-modified').value = value
             elif key == "ncal:categories":
-                e.iCal.add('categories').value = value
+                ev.add('categories').value = value
             elif key == "ncal:contact":
-                e.iCal.add('contact').value = value
+                ev.add('contact').value = value
             elif key == "ncal:status":
                 # An instance of ncal:EventStatus to represent TENTATIVE etc
                 pass
