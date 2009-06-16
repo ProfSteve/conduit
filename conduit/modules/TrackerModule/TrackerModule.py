@@ -256,6 +256,8 @@ class TrackerCalendar(DataProvider.TwoWay):
 
     def _ical_to_tracker(self, data):
         ical = data.iCal
+        if ical.name == "VCALENDAR":
+            ical = ical.vevent
 
         c = ncal.Event.create(commit=False)
 
