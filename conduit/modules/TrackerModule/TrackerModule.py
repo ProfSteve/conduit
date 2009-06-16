@@ -171,7 +171,7 @@ class TrackerContacts(DataProvider.TwoWay):
                     vadr.code = adr.postalcode
                 if adr.country:
                     vadr.country = adr.country
-                c.vcard.add('addr').value = vadr
+                c.vcard.add('adr').value = vadr
             elif key == "nco:hasPhoneNumber":
                 phone = nco.PhoneNumber(value)
                 c.vcard.add('tel').value = phone.phonenumber
