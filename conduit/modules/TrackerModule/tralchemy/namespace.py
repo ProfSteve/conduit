@@ -54,7 +54,7 @@ class Importer(object):
         if not "tralchemy." in name:
             return None
         name = name[name.find("tralchemy.")+10:]
-        if name in ('namespace', 'core', 'dbus', 'uuid', 'sys'):
+        if name in ('namespace', 'core', 'dbus', 'uuid', 'sys', 'dateutil'):
             return None
         if '.' in name:
             return None

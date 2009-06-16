@@ -2,6 +2,8 @@
 import dbus
 import uuid
 
+import dateutil.parser
+
 bus = dbus.SessionBus()
 tracker_obj = bus.get_object("org.freedesktop.Tracker", "/org/freedesktop/Tracker/Resources")
 tracker = dbus.Interface(tracker_obj, "org.freedesktop.Tracker.Resources")
@@ -180,8 +182,8 @@ class WrapperFactory(object):
         self.wrapped["xsd:double"] = float
         self.wrapped["rdfs:Literal"] = str
         self.wrapped["xsd:string"] = str
-        self.wrapped['xsd:date'] = str
-        self.wrapped['xsd:dateTime'] = str
+        self.wrapped['xsd:date'] = lambda x: dateutil.parser.parser().parse(x)
+        self.wrapped['xsd:dateTime'] = lambda x: dateutil.parser.parser().parse(x)
 
     def get_class(self, classname):
         classname = get_classname(classname)
