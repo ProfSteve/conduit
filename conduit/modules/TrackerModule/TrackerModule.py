@@ -18,6 +18,7 @@ import vobject
 
 MODULES = {
     "TrackerContacts": { "type": "dataprovider" },
+    "TrackerCalendar": { "type": "dataprovider" },
 }
 
 class TrackerContacts(DataProvider.TwoWay):
