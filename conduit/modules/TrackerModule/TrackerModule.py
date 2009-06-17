@@ -125,6 +125,9 @@ class TrackerContacts(DataProvider.TwoWay):
     def _tracker_to_vcard(self, tracker):
         c = Contact.Contact()
 
+        name = vobject.vcard.Name()
+        c.vcard.n.value = name
+
         for key, value in tracker.properties():
             if key == "nco:gender":
                 c.vcard.add('x-gender').value = value
@@ -196,11 +199,18 @@ class TrackerContacts(DataProvider.TwoWay):
                 c.vcard.add("uid").value = value
             elif key == "nco:hobby":
                 c.vcard.add("x-hobby").value = value
-
-        if tracker.namefamily or tracker.namegiven or tracker.nameadditional or tracker.namehonorificprefix or tracker.namehonorificsuffix:
-            n = vobject.vcard.Name(family=tracker.namefamily, given=tracker.namegiven, additional=tracker.nameadditional,
-                                   prefix=tracker.namehonorificprefix, suffix=tracker.namehonorificsuffix)
-            c.vcard.n.value = n
+            elif key == "nco:nameFamily":
+                name.family = value
+            elif key == "nco:nameGiven":
+                name.given = value
+            elif key == "nco:nameAdditional":
+                name.additonal = value
+            elif key == "nco:nameHonorificPrefix":
+                name.prefix = value
+            elif key == "nco:nameHonorificSuffix":
+                name.suffix = value
+            else:
+                log.warning("Unhandled %s" % key)
 
         return c
 
