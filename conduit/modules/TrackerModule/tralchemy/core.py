@@ -87,6 +87,7 @@ class Resource(object):
         return o
 
     def delete(self):
+        #tracker_update("DELETE { <%s> ?p ?o }" % self.uri)
         tracker_update("DELETE { <%s> a %s. }" % (self.uri, self._type_))
 
     def commit(self):
