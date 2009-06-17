@@ -15,6 +15,7 @@ import tralchemy
 from tralchemy import nco
 from tralchemy import ncal
 import vobject
+from datetime import timedelta
 
 MODULES = {
     "TrackerContacts": { "type": "dataprovider" },
@@ -289,7 +290,7 @@ class TrackerCalendar(DataProvider.TwoWay):
             elif k == "dtend":
                 c.dtend = ncal.NcalDateTime.create(datetime=v[0].value)
             elif k == "duration":
-                c.duration = v[0].value
+                c.duration = v[0].value.seconds / (60 * 60)
             elif k == "uid":
                 c.uid = v[0].value
             elif k == "url":
@@ -331,7 +332,7 @@ class TrackerCalendar(DataProvider.TwoWay):
                 dt = ncal.NcalDateTime(value)
                 ev.add('dtend').value = dt.datetime
             elif key == "ncal:duration":
-                ev.add('duration').value = value
+                ev.add('duration').value = timedelta(0, int(value)*60*60, 0)
             elif key == "ncal:uid":
                 ev.add('uid').value = value
             elif key == "ncal:url":
