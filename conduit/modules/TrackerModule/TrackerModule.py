@@ -263,31 +263,31 @@ class TrackerCalendar(DataProvider.TwoWay):
 
         for k, v in ical.contents.iteritems():
             if k == "description":
-                c.description = v
+                c.description = v[0].value
             elif k == "summary":
-                c.summary = v
+                c.summary = v[0].value
             elif k == "dtstart":
-                c.dtstart = ncal.NcalDateTime.create(datetime=v)
+                c.dtstart = ncal.NcalDateTime.create(datetime=v[0].value)
             elif k == "dtend":
-                c.dtend = ncal.NcalDateTime.create(datetime=v)
+                c.dtend = ncal.NcalDateTime.create(datetime=v[0].value)
             elif k == "duration":
-                c.duration = v
+                c.duration = v[0].value
             elif k == "uid":
-                c.uid = v
+                c.uid = v[0].value
             elif k == "url":
-                c.url = v
+                c.url = v[0].value
             elif k == 'recurrence-id':
-                c.recurrenceid = v
+                c.recurrenceid = v[0].value
             elif k == "location":
-                c.location = v
+                c.location = v[0].value
             elif k == "priority":
-                c.priority = v
+                c.priority = v[0].value
             elif k == "last-modified":
-                c.lastmodified = v
+                c.lastmodified = v[0].value
             elif k == "categories":
-                c.categories = v
+                c.categories = v[0].value
             elif k == "contact":
-                c.contact = v
+                c.contact = v[0].value
             elif k == "status":
                 # 'TENTATIVE' etc to an EventStatus instance
                 pass
