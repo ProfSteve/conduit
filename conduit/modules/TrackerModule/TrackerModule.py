@@ -131,10 +131,12 @@ class TrackerContacts(DataProvider.TwoWay):
         for key, value in tracker.properties():
             if key == "nco:gender":
                 c.vcard.add('x-gender').value = value
-            elif key == "nco:fullName":
+            elif key == "nco:fullname":
                 c.vcard.fn.value = value
             elif key == "nco:nickname":
                 c.vcard.add('nickname').value = value
+            elif key == "nco:birthDate":
+                c.vcard.add("bday").value = value
             elif key == "nco:note":
                 c.vcard.add('note').value = value
             elif key == "nco:hasEmailAddress":
