@@ -82,11 +82,16 @@ class TrackerContacts(DataProvider.TwoWay):
                 c.birthdate = v[0].value
             elif k == "n":
                 x = v[0].value
-                c.namefamily = x.family
-                c.namegiven = x.given
-                c.nameadditional = x.additional
-                c.namehonorificprefix = x.prefix
-                c.namehonorificsuffix = x.suffix
+                if x.family:
+                    c.namefamily = x.family
+                if x.given:
+                    c.namegiven = x.given
+                if x.additional:
+                    c.nameadditional = x.additional
+                if x.prefix:
+                    c.namehonorificprefix = x.prefix
+                if x.suffix:
+                    c.namehonorificsuffix = x.suffix
             elif k == "adr":
                 x = v[0].value
                 adr = nco.PostalAddress.create(commit=False)
