@@ -320,7 +320,8 @@ class TrackerCalendar(DataProvider.TwoWay):
             if key in ("ncal:bysecond", "ncal:byminute", "ncal:byhour", "ncal:bymonthday",
                        "ncal:bymonth", "ncal:bysetpos", "ncal:byweekno", "ncal:byyearday",
                        "ncal:count", "ncal:interval"):
-                v += "%s=%s" % (key, value)
+                k = key[5:].upper()
+                v += "%s=%s" % (k, value)
             elif key == "byday":
                 #v.byday
                 pass
