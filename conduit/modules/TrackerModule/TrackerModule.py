@@ -273,6 +273,47 @@ class TrackerCalendar(DataProvider.TwoWay):
         DataProvider.TwoWay.finish(self)
         self.events = None
 
+    def _create_tracker_recurrence(self, v):
+        t = ncal.RecurrenceRule.create(commit=False)
+        for pair in v[0].value.split(";"):
+            key, value = pair.split("=")
+            key, value = key.lower(), value.lower()
+            if key == "bysecond":
+                t.bysecond = int(value)
+            elif key == "byminute":
+                t.byminute = int(value)
+            elif key == "byhour":
+                t.byhour = int(value)
+            elif key == "byday":
+                #t.byday
+                pass
+            elif key == "bymonthday":
+                t.bymonthday = int(value)
+            elif key == "bymonth":
+                t.bymonth = int(value)
+            elif key == "bysetpos":
+                t.bysetpos = int(value)
+            elif key == "byweekno":
+                t.byweekno = int(value)
+            elif key == "byyearday":
+                t.byyearday = int(value)
+            elif key == "count":
+                t.count = int(value)
+            elif key == "freq":
+                #t.freq
+                pass
+            elif key == "interval":
+                t.interval = int(value)
+            elif key == "until":
+                t.until = value
+            elif key == "wkst":
+                #t.wkst ncal:Weekday
+                pass
+            else:
+                log.debug("Unknown rrule property: %s" % key)
+        t.commit()
+        return t
+
     def _ical_to_tracker(self, data):
         ical = data.iCal
         if ical.name == "VCALENDAR":
@@ -307,6 +348,10 @@ class TrackerCalendar(DataProvider.TwoWay):
                 c.categories = v[0].value
             elif k == "contact":
                 c.contact = v[0].value
+            elif k == "rrule":
+                c.rrule = self._create_tracker_recurrence(v)
+            elif k == "exrule":
+                c.exrule = self._create_tracker_recurrence(v)
             elif k == "status":
                 # 'TENTATIVE' etc to an EventStatus instance
                 pass
