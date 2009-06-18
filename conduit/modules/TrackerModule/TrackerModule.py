@@ -314,6 +314,28 @@ class TrackerCalendar(DataProvider.TwoWay):
         t.commit()
         return t
 
+    def _create_ical_recurrence(self, t):
+        v = ""
+        for key, value in t.properties():
+            if key in ("ncal:bysecond", "ncal:byminute", "ncal:byhour", "ncal:bymonthday",
+                       "ncal:bymonth", "ncal:bysetpos", "ncal:byweekno", "ncal:byyearday",
+                       "ncal:count", "ncal:interval"):
+                v += "%s=%s" % (key, value)
+            elif key == "byday":
+                #v.byday
+                pass
+            elif key == "freq":
+                #v.freq
+                pass
+            elif key == "until":
+                pass
+            elif key == "wkst":
+                #v.wkst ncal:Weekday
+                pass
+            else:
+                log.debug("Unknown rrule property: %s" % key)
+        return v
+
     def _ical_to_tracker(self, data):
         ical = data.iCal
         if ical.name == "VCALENDAR":
@@ -394,6 +416,12 @@ class TrackerCalendar(DataProvider.TwoWay):
                 ev.add('categories').value = value
             elif key == "ncal:contact":
                 ev.add('contact').value = value
+            elif key == "ncal:rrule":
+                rrule = ncal.RecurrenceRule(value)
+                ev.add('rrule').value = self._create_ical_recurrence(rrule)
+            elif key == "ncal:exrule":
+                rrule = ncal.RecurrenceRule(value)
+                ev.add('exrule').value = self._create_ical_recurrence(rrule)
             elif key == "ncal:status":
                 # An instance of ncal:EventStatus to represent TENTATIVE etc
                 pass
