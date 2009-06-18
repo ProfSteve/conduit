@@ -77,7 +77,7 @@ class Resource(object):
 
     @classmethod
     def create(cls, **kwargs):
-        o = cls(kwargs.get('uid', 'urn:uuid:%s' % str(uuid.uuid4())))
+        o = cls(kwargs.get('uid', 'http://localhost/resource/%s' % str(uuid.uuid4())))
         for k, v in kwargs.iteritems():
             if k == "uid" or k =="commit":
                 continue
