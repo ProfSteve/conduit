@@ -414,6 +414,12 @@ class SyncSetDBusItem(DBusItem):
 
         self.syncSet.add_conduit(c)
         
+    @dbus.service.method(SYNCSET_DBUS_IFACE, in_signature='ss', out_signature='s')
+    def RequestDataprovider(self, filter_mime_out, filter_mime_in):
+        from conduit.gtkui.SelectDataproviderDialog import SelectDataproviderDialog
+        return SelectDataproviderDialog(str(filter_mime_out), str(filter_mime_in)).run()
+            
+        
     @dbus.service.method(SYNCSET_DBUS_IFACE, in_signature='o', out_signature='')
     def DeleteConduit(self, cond):
         self._print("DeleteConduit: %s" % cond)
