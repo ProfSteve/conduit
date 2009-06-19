@@ -93,7 +93,11 @@ class Resource(object):
     def commit(self):
         query = "INSERT { <%s> a %s" % (self.uri, self._type_)
         for k, v in self.triples.iteritems():
-            query += " ; %s %s" % (k, v)
+            if isinstance(v, list):
+                for i in v:
+                    query += " ; %s %s" % (k, i)
+            else:
+                query += " ; %s %s" % (k, v)
         query += " . }"
         tracker_update(query)
         self.triples = {}
