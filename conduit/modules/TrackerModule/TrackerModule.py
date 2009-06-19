@@ -136,7 +136,9 @@ class TrackerContacts(DataProvider.TwoWay):
         c.vcard.n.value = name
 
         for key, value in tracker.properties():
-            if key == "nco:gender":
+            if key in ("rdf:type", "tracker:modified", "dc:identifier", "nie:identifier"):
+                continue
+            elif key == "nco:gender":
                 c.vcard.add('x-gender').value = value
             elif key == "nco:fullname":
                 c.vcard.fn.value = value
@@ -389,7 +391,9 @@ class TrackerCalendar(DataProvider.TwoWay):
         ev = e.iCal.add('vevent')
 
         for key, value in tracker.properties():
-            if key == "ncal:description":
+            if key in ("rdf:type", "tracker:modified", "dc:identifier", "nie:identifier"):
+                continue
+            elif key == "ncal:description":
                 ev.add("description").value = value
             elif key == "ncal:summary":
                 ev.add("summary").value = value
