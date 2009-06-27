@@ -12,6 +12,8 @@ class Globals:
         self.mappingDB = None
         #syncManager provides the single point of cancellation when exiting
         self.syncManager = None
+        
+        self.accountManager = None
 
         #the main application
         self.app = None

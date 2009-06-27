@@ -18,6 +18,7 @@ from conduit.SyncSet import SyncSet
 from conduit.Synchronization import SyncManager
 from conduit.DBus import DBusInterface
 from conduit.Settings import Settings
+from conduit.AccountManager import AccountManager
 
 
 log = logging.getLogger("Main")
@@ -171,6 +172,7 @@ class Application(dbus.service.Object):
 
         #Initialize all globals variables
         conduit.GLOBALS.app = self
+        conduit.GLOBALS.accountManager = AccountManager()
         conduit.GLOBALS.moduleManager = ModuleManager(dirs_to_search)
         conduit.GLOBALS.moduleManager.load_all(whitelist, blacklist)
         conduit.GLOBALS.typeConverter = TypeConverter(conduit.GLOBALS.moduleManager)

@@ -82,7 +82,7 @@ class FlickrTwoWay(Image.ImageTwoWay):
     API_KEY="65552e8722b21d299388120c9fa33580"
     SHARED_SECRET="03182987bf7fc4d1"
 
-    def __init__(self, *args):
+    def __init__(self, username = ""):
         Image.ImageTwoWay.__init__(self)
         self.fapi = None
         self.token = None
@@ -90,7 +90,7 @@ class FlickrTwoWay(Image.ImageTwoWay):
         self.photoSetId = None
         self.update_configuration(
             imageSize = "None",
-            username = ("", self._set_username),
+            username = (username, self._set_username),
             photoSetName = "",
             showPublic = True
         )

@@ -19,7 +19,7 @@ import conduit.SyncSet as SyncSet
 
 import gconf
 gconf = gconf.client_get_default()
-GCONF_PATH = "/apps/conduit"
+GCONF_PATH = "/apps/conduit/SyncSets"
 
 ERROR = -1
 SUCCESS = 0

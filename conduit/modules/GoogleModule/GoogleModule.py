@@ -53,10 +53,10 @@ FORMAT_STRING = "%Y-%m-%dT%H:%M:%S"
 
 class _GoogleBase:
     _configurable_ = True
-    def __init__(self, service):
+    def __init__(self, service, username = "", password = ""):
         self.update_configuration(
-            username = ("", self._set_username),
-            password = ("", self._set_password),
+            username = (username, self._set_username),
+            password = (password, self._set_password),
             authenticated = False,
         )
         self.loggedIn = False
@@ -401,9 +401,9 @@ class GoogleCalendarTwoWay(_GoogleBase, DataProvider.TwoWay):
     _out_type_ = "event"
     _icon_ = "appointment-new"
     
-    def __init__(self):
+    def __init__(self, **kwargs):
         DataProvider.TwoWay.__init__(self)
-        _GoogleBase.__init__(self,gdata.calendar.service.CalendarService())
+        _GoogleBase.__init__(self,gdata.calendar.service.CalendarService(), **kwargs)
         self.update_configuration(
             selectedCalendar = (None, _set_calendar, _get_calendar),
         )
@@ -580,9 +580,9 @@ class PicasaTwoWay(_GoogleBase, Image.ImageTwoWay):
     _description_ = _("Synchronize your Google Picasa photos")
     _icon_ = "picasa"
 
-    def __init__(self, *args):
+    def __init__(self, *args, **kwargs):
         Image.ImageTwoWay.__init__(self)
-        _GoogleBase.__init__(self, gdata.photos.service.PhotosService())
+        _GoogleBase.__init__(self, gdata.photos.service.PhotosService(), **kwargs)
         self.update_configuration(
             albumName = "",
             imageSize = "None",
@@ -747,9 +747,9 @@ class ContactsTwoWay(_GoogleBase,  DataProvider.TwoWay):
     _out_type_ = "contact"
     _icon_ = "contact-new"
 
-    def __init__(self, *args):
+    def __init__(self, *args, **kwargs):
         DataProvider.TwoWay.__init__(self)
-        _GoogleBase.__init__(self,gdata.contacts.service.ContactsService())
+        _GoogleBase.__init__(self,gdata.contacts.service.ContactsService(), **kwargs)
         self.update_configuration(
             selectedGroup = (None, self._set_contact_group, self._get_contact_group),
         )
@@ -1085,9 +1085,9 @@ class DocumentsSink(_GoogleBase,  DataProvider.DataSink):
     TYPE_SPREADSHEET = 'spreadsheet'
     TYPE_PRESENTATION = 'presentation'
 
-    def __init__(self, *args):
+    def __init__(self, *args, **kwargs):
         DataProvider.DataSink.__init__(self)
-        _GoogleBase.__init__(self,gdata.docs.service.DocsService())
+        _GoogleBase.__init__(self,gdata.docs.service.DocsService(), **kwargs)
 
         self.update_configuration(
             documentFormat = 'ODT',
@@ -1344,13 +1344,13 @@ class YouTubeTwoWay(_GoogleBase, DataProvider.TwoWay):
     UPLOAD_DEVELOPER_KEY="AI39si6wJ3VA_UWZCWeuA-wmJEpEhGbE3ZxCOZq89JJFy5CpSkFOq8gdZluNvBAM6DW8m7AhliSYPLyfEPJx6XphBq3vOBHuzQ"
     UPLOAD_URL="http://uploads.gdata.youtube.com/feeds/api/users/%(username)s/uploads"
 
-    def __init__(self, *args):
+    def __init__(self, *args, **kwargs):
         youtube_service = gdata.youtube.service.YouTubeService()
         youtube_service.client_id = self.UPLOAD_CLIENT_ID
         youtube_service.developer_key = self.UPLOAD_DEVELOPER_KEY
 
         DataProvider.TwoWay.__init__(self)
-        _GoogleBase.__init__(self,youtube_service)
+        _GoogleBase.__init__(self,youtube_service, **kwargs)
 
         self.entries = None
         self.update_configuration(
