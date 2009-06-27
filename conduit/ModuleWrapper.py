@@ -1,3 +1,4 @@
+import conduit
 import traceback
 import logging
 log = logging.getLogger("ModuleWrapper")
@@ -72,6 +73,9 @@ class ModuleWrapper:
             self.out_type =         ""
             self.classname =        ""
             self.configurable =     False
+        
+        if isinstance(self.category, basestring):
+            self.category = conduit.dataproviders.CATEGORIES[self.category]
 
         self.dndKey = None
         self.enabled = True
