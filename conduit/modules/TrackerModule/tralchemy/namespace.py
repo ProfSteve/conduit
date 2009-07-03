@@ -78,19 +78,19 @@ class NamespaceFinder(object):
     def find_module(name, path=None):
         names = name.split(".")
 
-        # We only support imports of tralchemy.<namespace_name>
-        if len(names) != 2 or names[0] != "tralchemy":
+        # We only support imports of [foo.]tralchemy.namespace_name
+        if len(names) < 2 or names[-2] != "tralchemy":
             return None
 
         # To avoid pain misery and suffering, don't do anything clever for
         # our interals..
-        if names[1] in ("core", "namespace"):
+        if names[-1] in ("core", "namespace"):
             return None
 
-        if not names[1] in namespaces.values():
+        if not names[-1] in namespaces.values():
             return None
 
-        return NamespaceLoader(names[1], path)
+        return NamespaceLoader(names[-1], path)
 
 
 class NamespaceLoader(object):
