@@ -78,31 +78,31 @@ class TrackerContacts(DataProvider.TwoWay):
             if k == "account":
                 pass
             elif k == "tel":
-                pn = nco.PhoneNumber.create(phonenumber=v[0].value)
-                c.hasphonenumber = pn
+                pn = nco.PhoneNumber.create(phoneNumber=v[0].value)
+                c.hasPhoneNumber.append(pn)
             elif k == "bday":
-                c.birthdate = v[0].value
+                c.birthDate = v[0].value
             elif k == "n":
                 x = v[0].value
                 if x.family:
-                    c.namefamily = x.family
+                    c.nameFamily = x.family
                 if x.given:
-                    c.namegiven = x.given
+                    c.nameGiven = x.given
                 if x.additional:
-                    c.nameadditional = x.additional
+                    c.nameAdditional = x.additional
                 if x.prefix:
-                    c.namehonorificprefix = x.prefix
+                    c.nameHonorificPrefix = x.prefix
                 if x.suffix:
-                    c.namehonorificsuffix = x.suffix
+                    c.nameHonorificSuffix = x.suffix
             elif k == "adr":
                 x = v[0].value
                 adr = nco.PostalAddress.create(commit=False)
                 if x.box:
                     adr.pobox = x.box
                 if x.extended:
-                    adr.extendedaddress = x.extended
+                    adr.extendedAddress = x.extended
                 if x.street:
-                    adr.streetaddress = x.street
+                    adr.streetAddress = x.street
                 if x.city:
                     adr.locality = x.city
                 if x.code:
@@ -110,7 +110,7 @@ class TrackerContacts(DataProvider.TwoWay):
                 if x.country:
                     adr.country = x.country
                 adr.commit()
-                c.haspostaladdress = adr
+                c.hasPostalAddress = adr
             elif k == "version":
                 pass
             elif k == "org":
@@ -118,8 +118,8 @@ class TrackerContacts(DataProvider.TwoWay):
             elif k == "nickname":
                 c.nickname = v[0].value
             elif k == "email":
-                ea = nco.EmailAddress.create(emailaddress=v[0].value)
-                c.hasemailaddress = ea
+                ea = nco.EmailAddress.create(emailAddress=v[0].value)
+                c.hasEmailAddress.append(ea)
             elif k == "fn":
                 c.fullname = v[0].value
             elif k == "x-gender":
@@ -150,7 +150,7 @@ class TrackerContacts(DataProvider.TwoWay):
                 c.vcard.add('note').value = value
             elif key == "nco:hasEmailAddress":
                 em = nco.EmailAddress(value)
-                c.vcard.add('email').value = em.emailaddress
+                c.vcard.add('email').value = em.emailAddress
             elif key == "nco:hasIMAccount":
                 im = nco.IMAccount(value)
                 proto = im.improtocol
@@ -173,10 +173,10 @@ class TrackerContacts(DataProvider.TwoWay):
                 vadr = vobject.vcard.Address()
                 if adr.pobox:
                     vadr.box = adr.pobox
-                if adr.extendedaddress:
-                    vadr.extended = adr.extendedaddress
-                if adr.streetaddress:
-                    vadr.street = adr.streetaddress
+                if adr.extendedAddress:
+                    vadr.extended = adr.extendedAddress
+                if adr.streetAddress:
+                    vadr.street = adr.streetAddress
                 if adr.locality:
                     vadr.city = adr.locality
                 if adr.region:
@@ -188,7 +188,7 @@ class TrackerContacts(DataProvider.TwoWay):
                 c.vcard.add('adr').value = vadr
             elif key == "nco:hasPhoneNumber":
                 phone = nco.PhoneNumber(value)
-                c.vcard.add('tel').value = phone.phonenumber
+                c.vcard.add('tel').value = phone.phoneNumber
             elif key == "nco:url":
                 c.vcard.add('url').value = value
             elif key == "nco:websiteurl":
@@ -362,7 +362,7 @@ class TrackerCalendar(DataProvider.TwoWay):
             elif k == "url":
                 c.url = v[0].value
             elif k == 'recurrence-id':
-                c.recurrenceid = v[0].value
+                c.recurrenceId = v[0].value
             elif k == "location":
                 c.location = v[0].value
             elif k == "priority":
