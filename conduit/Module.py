@@ -63,14 +63,13 @@ class ModuleManager(gobject.GObject):
         self.invalidFiles = []
         #Keep a ref to dataprovider factories so they are not collected
         self.dataproviderFactories = []
-        self.cache_path = os.path.join(conduit.USER_DIR, "modules_cache")
+        self.cache_path = os.path.join(conduit.USER_CACHE_DIR, "modules.list")
         self.modules_cache = {}
         if os.path.exists(self.cache_path):
             cache_file = open(self.cache_path, "rb")
             try:
-                num_modules = 0
-                num_files = 0
                 self.modules_cache = pickle.load(cache_file)
+                #We check all the contents so we dont load an invalid cache
                 if not isinstance(self.modules_cache, dict):
                     raise Exception()
                 for key, value in self.modules_cache.iteritems():
@@ -78,10 +77,6 @@ class ModuleManager(gobject.GObject):
                         raise Error("%s not a string" % key)
                     if not isinstance(value, dict):
                         raise Error("%s not a dict" % value)
-                    for item in value:
-                        num_modules += 1
-                    num_files += 1
-                log.critical("Number of files %d, Number of modules %d" % (num_files, num_modules))
             except Error:
                 log.warn("Modules cache invalid")
                 self.modules_cache = {}
