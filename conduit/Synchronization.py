@@ -452,7 +452,7 @@ class SyncWorker(_ThreadedWorker):
 
             try:
                 put_data(sourceWrapper, sinkWrapper, fromData, fromDataRid, True)
-            except:
+            except Exception:
                 log.warn("Forced Put Failed\n%s" % traceback.format_exc())        
 
     def check_thread_not_cancelled(self, dataprovidersToCancel):

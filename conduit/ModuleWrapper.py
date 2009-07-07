@@ -190,18 +190,20 @@ class ModuleWrapper:
         may override this function
         """
         import gtk
-        if not self.icon.has_key(size) or self.icon[size] is None:
+        if size not in self.icon or self.icon[size] is None:
             if self.module_type in ["source", "sink", "twoway", "category"]:
-                try:
-                    info = gtk.icon_theme_get_default().lookup_icon(self.icon_name, size, 0)
+                info = gtk.icon_theme_get_default().lookup_icon(self.icon_name, size, 0)
+                if info:
                     self.icon[size] = info.load_icon()
                     self.icon_path = info.get_filename()
-                except:
+                else:
                     self.icon[size] = None
                     log.warn("Could not load icon %s for %s" % (self.icon_name, self.name))
                     #Last resort: Try the non icon-naming-spec compliant icon
                     self.icon_name = "conduit"
                     info = gtk.icon_theme_get_default().lookup_icon(self.icon_name, size, 0)
+                    if not info:
+                        return None
                     self.icon[size] = info.load_icon()
                     self.icon_path = info.get_filename()
 
@@ -226,52 +228,51 @@ class ModuleWrapper:
 
         if self.descriptiveIcon is None:
             if self.module_type in ["source", "sink", "twoway"]:
-                try:
-                    icon = self.get_icon(isize)
-                    arrowName = "conduit-"+self.module_type
-                    arrow = gtk.icon_theme_get_default().load_icon(arrowName, asize, 0)
+                icon = self.get_icon(isize)
+                if not icon:
+                    return None
+                arrowName = "conduit-"+self.module_type
+                arrow = gtk.icon_theme_get_default().load_icon(arrowName, asize, 0)
 
-                    #Composite the arrow to the right of the icon
-                    dest = gtk.gdk.Pixbuf(
-                                    colorspace=gtk.gdk.COLORSPACE_RGB,
-                                    has_alpha=True,
-                                    bits_per_sample=8,
-                                    width=bwidth,
-                                    height=bheight
-                                    )
-                    dest.fill(0)
+                #Composite the arrow to the right of the icon
+                dest = gtk.gdk.Pixbuf(
+                                colorspace=gtk.gdk.COLORSPACE_RGB,
+                                has_alpha=True,
+                                bits_per_sample=8,
+                                width=bwidth,
+                                height=bheight
+                                )
+                dest.fill(0)
 
-                    #Composite the icon on the left
-                    icon.composite(
-                                dest=dest,
-                                dest_x=0,           #right of icon
-                                dest_y=0,           #at the top
-                                dest_width=isize,   #use whole arrow 1:1
-                                dest_height=isize,  #ditto
-                                offset_x=0,
-                                offset_y=0,
-                                scale_x=1,
-                                scale_y=1,
-                                interp_type=gtk.gdk.INTERP_NEAREST,
-                                overall_alpha=255
-                                )
-                    #Arrow on the right
-                    arrow.composite(
-                                dest=dest,
-                                dest_x=isize,       #right of icon
-                                dest_y=isize-asize, #at the bottom
-                                dest_width=asize,   #use whole arrow 1:1
-                                dest_height=asize,  #ditto
-                                offset_x=isize,     #move self over to the right
-                                offset_y=isize-asize,#at the bottom
-                                scale_x=1,
-                                scale_y=1,
-                                interp_type=gtk.gdk.INTERP_NEAREST,
-                                overall_alpha=255
-                                )
-                    self.descriptiveIcon = dest
-                except:
-                    log.warn("Error getting icon\n%s" % traceback.format_exc())
+                #Composite the icon on the left
+                icon.composite(
+                            dest=dest,
+                            dest_x=0,           #right of icon
+                            dest_y=0,           #at the top
+                            dest_width=isize,   #use whole arrow 1:1
+                            dest_height=isize,  #ditto
+                            offset_x=0,
+                            offset_y=0,
+                            scale_x=1,
+                            scale_y=1,
+                            interp_type=gtk.gdk.INTERP_NEAREST,
+                            overall_alpha=255
+                            )
+                #Arrow on the right
+                arrow.composite(
+                            dest=dest,
+                            dest_x=isize,       #right of icon
+                            dest_y=isize-asize, #at the bottom
+                            dest_width=asize,   #use whole arrow 1:1
+                            dest_height=asize,  #ditto
+                            offset_x=isize,     #move self over to the right
+                            offset_y=isize-asize,#at the bottom
+                            scale_x=1,
+                            scale_y=1,
+                            interp_type=gtk.gdk.INTERP_NEAREST,
+                            overall_alpha=255
+                            )
+                self.descriptiveIcon = dest
             
             elif self.module_type == "category":
                 self.descriptiveIcon = self.get_icon(isize)

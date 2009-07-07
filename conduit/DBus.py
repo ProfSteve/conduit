@@ -280,9 +280,7 @@ class ConduitDBusItem(DBusItem):
             raise ConduitException("Simple exporter must only have one sink")
 
         #Need to call get_icon so that the icon_name/path is loaded
-        try:
-            self.conduit.datasinks[0].get_icon()
-        except:
+        if not self.conduit.datasinks[0].get_icon():
             log.warn("DBus could not lookup dp icon")
 
         info = {}
@@ -329,9 +327,7 @@ class DataProviderDBusItem(DBusItem):
     def GetInformation(self):
         self._print("GetInformation")
         #Need to call get_icon so that the icon_name/path is loaded
-        try:
-            self.dataprovider.get_icon()
-        except:
+        if not self.dataprovider.get_icon():
             log.warn("DBus could not lookup dp icon")
 
         info = {}

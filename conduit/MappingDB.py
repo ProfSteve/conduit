@@ -90,7 +90,7 @@ class MappingDB:
         filename = os.path.abspath(f)
         try:
             self._open_db_and_check_structure(filename)
-        except:
+        except Exception:
             os.unlink(filename)
             self._open_db_and_check_structure(filename)
 

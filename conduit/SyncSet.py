@@ -264,7 +264,7 @@ class SyncSet(gobject.GObject):
                                 if len(key) > 0:
                                     self._restore_dataprovider(cond, key, name, sink, xml_version, False)
 
-        except:
+        except Exception:
             log.warn("Error parsing %s. Exception:\n%s" % (xmlSettingFilePath, traceback.format_exc()))
             os.remove(xmlSettingFilePath)
 
