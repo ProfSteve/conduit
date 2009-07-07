@@ -12,6 +12,8 @@ License: GPLv2
 """
 import sys
 import os.path
+import traceback
+import logging
 
 #support running uninstalled
 _dirname = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
@@ -20,10 +22,16 @@ if os.path.exists(os.path.join(_dirname,"ChangeLog")):
 
 import conduit
 import conduit.Main
+import conduit.Logging as Logging
+log = logging.getLogger("Conduit")
 
 #import cProfile
 #cProfile.run('app = conduit.Main.Application()', 'prof')
 #app = 
 
-app = conduit.Main.Application()
+try:
+    app = conduit.Main.Application()
+except:
+    log.error("Fatal error, exiting. %s" % traceback.format_exc())
+    exit(-1)
  
