@@ -183,11 +183,13 @@ class Application(dbus.service.Object):
         
         #Build both syncsets and put on the bus as early as possible
         self.guiSyncSet = SyncSet(
+                        'gui',
                         moduleManager=conduit.GLOBALS.moduleManager,
                         syncManager=conduit.GLOBALS.syncManager,
                         xmlSettingFilePath=self.settingsFile
                         )
         self.dbusSyncSet = SyncSet(
+                    'dbus',
                     moduleManager=conduit.GLOBALS.moduleManager,
                     syncManager=conduit.GLOBALS.syncManager
                     )
@@ -233,7 +235,7 @@ class Application(dbus.service.Object):
                                 )
 
         #reload the saved sync set
-        self.guiSyncSet.restore_from_xml()
+        self.guiSyncSet.restore()
         self.gui.set_model(self.guiSyncSet)
 
         if self.statusIcon:
@@ -272,40 +274,36 @@ class Application(dbus.service.Object):
 
     @dbus.service.method(APPLICATION_DBUS_IFACE, in_signature='', out_signature='')
     def Quit(self):
-        try:
-            #Hide the GUI first, so we feel responsive    
-            log.info("Closing application")
-            if self.gui != None:
-                self.gui.mainWindow.hide()
-                if conduit.GLOBALS.settings.get("save_on_exit") == True:
-                    self.gui.save_settings(None)
+        #Hide the GUI first, so we feel responsive    
+        log.info("Closing application")
+        if self.gui != None:
+            self.gui.mainWindow.hide()
+            if conduit.GLOBALS.settings.get("save_on_exit") == True:
+                self.gui.save_settings(None)
 
-            #Cancel all syncs
-            self.Cancel()
+        #Cancel all syncs
+        self.Cancel()
 
-            #give the dataprovider factories time to shut down
-            log.info("Closing dataprovider factories")
-            conduit.GLOBALS.moduleManager.quit()
-            
-            #unitialize all dataproviders
-            log.info("Unitializing dataproviders")
-            self.guiSyncSet.quit()
-            log.info("GUI Quit")
-            self.dbusSyncSet.quit()
-            log.info("DBus Quit")
+        #give the dataprovider factories time to shut down
+        log.info("Closing dataprovider factories")
+        conduit.GLOBALS.moduleManager.quit()
+        
+        #unitialize all dataproviders
+        log.info("Unitializing dataproviders")
+        self.guiSyncSet.quit()
+        log.info("GUI Quit")
+        self.dbusSyncSet.quit()
+        log.info("DBus Quit")
 
-            #Save the mapping DB
-            conduit.GLOBALS.mappingDB.save()
-            conduit.GLOBALS.mappingDB.close()
+        #Save the mapping DB
+        conduit.GLOBALS.mappingDB.save()
+        conduit.GLOBALS.mappingDB.close()
 
-            #Save the application settings
-            conduit.GLOBALS.settings.save()
-            
-            log.info("Main Loop Quitting")
-            conduit.GLOBALS.mainloop.quit()
-        except:
-            log.error("Error quiting, forcing close. %s" % traceback.format_exc())
-            sys.exit(-1)
+        #Save the application settings
+        conduit.GLOBALS.settings.save()
+        
+        log.info("Main Loop Quitting")
+        conduit.GLOBALS.mainloop.quit()
 
     @dbus.service.method(APPLICATION_DBUS_IFACE, in_signature='', out_signature='')
     def Synchronize(self):

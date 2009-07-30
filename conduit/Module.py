@@ -286,6 +286,7 @@ class ModuleManager(gobject.GObject):
             else:            
                 self._load_modules_in_file(f, f_data)
         
+        # Save the modules cache if it's different then the file contents
         if self.modules_cache != self.filelist:
             log.critical("Saving cache")
             self.modules_cache = self.filelist

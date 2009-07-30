@@ -18,8 +18,8 @@ import conduit.gtkui.ConfigItems as ConfigItems
 import conduit.Configurator as Configurator
 
 class Error(Exception):
-  """Base exception for all exceptions raised in this module."""
-  pass
+    """Base exception for all exceptions raised in this module."""
+    pass
 
 class ConfigContainer(Configurator.BaseConfigContainer):
     """

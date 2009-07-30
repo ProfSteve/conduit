@@ -76,7 +76,7 @@ class DataProviderTreeModel(gtk.GenericTreeModel):
     def _get_category_index_by_name(self, category_name):
         i = 0
         for j in self.cats:
-            if j.category == category_name:
+            if j.category.key == category_name.key:
                 return i
             i += 1
         return None

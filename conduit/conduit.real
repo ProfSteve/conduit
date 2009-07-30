@@ -32,6 +32,6 @@ log = logging.getLogger("Conduit")
 try:
     app = conduit.Main.Application()
 except:
-    log.error("Fatal error, exiting. %s" % traceback.format_exc())
-    exit(-1)
+    log.error("Error, exiting. %s" % traceback.format_exc())
+    sys.exit(-1)
  

@@ -563,7 +563,7 @@ class MainWindow:
         Saves the GUI settings (window state, position, etc to gconf)
         """
         #save the canvas
-        self.syncSet.save_to_xml()
+        self.syncSet.save()
 
         #GUI settings
         conduit.GLOBALS.settings.set(
