@@ -274,36 +274,40 @@ class Application(dbus.service.Object):
 
     @dbus.service.method(APPLICATION_DBUS_IFACE, in_signature='', out_signature='')
     def Quit(self):
-        #Hide the GUI first, so we feel responsive    
-        log.info("Closing application")
-        if self.gui != None:
-            self.gui.mainWindow.hide()
-            if conduit.GLOBALS.settings.get("save_on_exit") == True:
-                self.gui.save_settings(None)
+        try:
+            #Hide the GUI first, so we feel responsive    
+            log.info("Closing application")
+            if self.gui != None:
+                self.gui.mainWindow.hide()
+                if conduit.GLOBALS.settings.get("save_on_exit") == True:
+                    self.gui.save_settings(None)
 
-        #Cancel all syncs
-        self.Cancel()
+            #Cancel all syncs
+            self.Cancel()
 
-        #give the dataprovider factories time to shut down
-        log.info("Closing dataprovider factories")
-        conduit.GLOBALS.moduleManager.quit()
-        
-        #unitialize all dataproviders
-        log.info("Unitializing dataproviders")
-        self.guiSyncSet.quit()
-        log.info("GUI Quit")
-        self.dbusSyncSet.quit()
-        log.info("DBus Quit")
+            #give the dataprovider factories time to shut down
+            log.info("Closing dataprovider factories")
+            conduit.GLOBALS.moduleManager.quit()
+            
+            #unitialize all dataproviders
+            log.info("Unitializing dataproviders")
+            self.guiSyncSet.quit()
+            log.info("GUI Quit")
+            self.dbusSyncSet.quit()
+            log.info("DBus Quit")
 
-        #Save the mapping DB
-        conduit.GLOBALS.mappingDB.save()
-        conduit.GLOBALS.mappingDB.close()
+            #Save the mapping DB
+            conduit.GLOBALS.mappingDB.save()
+            conduit.GLOBALS.mappingDB.close()
 
-        #Save the application settings
-        conduit.GLOBALS.settings.save()
-        
-        log.info("Main Loop Quitting")
-        conduit.GLOBALS.mainloop.quit()
+            #Save the application settings
+            conduit.GLOBALS.settings.save()
+            
+            log.info("Main Loop Quitting")
+            conduit.GLOBALS.mainloop.quit()
+        except:
+            log.error("Error exiting. Terminating application. %s" % traceback.format_exc())
+            sys.exit(-1)
 
     @dbus.service.method(APPLICATION_DBUS_IFACE, in_signature='', out_signature='')
     def Synchronize(self):
