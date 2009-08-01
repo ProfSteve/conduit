@@ -93,7 +93,7 @@ class ModuleWrapper:
             'out_type': self.out_type,
             'configurable': self.configurable,
             'classname': self.classname,
-            'category': self.category.name}
+            'category': self.category}
 
     def __str__(self):
         return "Wrapper: %s %s (UID: %s)" % (self.get_name(), self.module_type, self.get_UID())
