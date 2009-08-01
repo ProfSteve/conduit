@@ -20,6 +20,8 @@ class Error(Exception):
 class SyncSetGConf(object):
     def get_value(self, value):
         #value = client.get(path)
+        if value is None:
+            return None
         if value.type == gconf.VALUE_PAIR:
             log.critical(value.to_string)
         return {gconf.VALUE_BOOL: value.get_bool, 
