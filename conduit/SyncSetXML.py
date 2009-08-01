@@ -19,7 +19,7 @@ class SyncSetXML(object):
         they are connected) to an xml file so that the 'sync set' can
         be restored later
         """
-
+        log.info("Saving XML Sync Set to %s" % xmlSettingFilePath)
         #Build the application settings xml document
         doc = xml.dom.minidom.Document()
         rootxml = doc.createElement("conduit-application")
@@ -77,6 +77,7 @@ class SyncSetXML(object):
         Restores sync settings from the xml file
         """
 
+        log.info("Restoring XML Sync Set from %s" % xmlSettingFilePath)
            
         #Check the file exists
         if not os.path.isfile(xmlSettingFilePath):

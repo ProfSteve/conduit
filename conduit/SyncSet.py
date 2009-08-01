@@ -139,7 +139,7 @@ class SyncSet(gobject.GObject):
     def save(self, xmlSettingFilePath=None):
         if xmlSettingFilePath == None:
             xmlSettingFilePath = self.xmlSettingFilePath
-        log.info("Saving Sync Set to %s" % self.xmlSettingFilePath)
+        
         #from SyncSetXML import SyncSetXML
         #SyncSetXML().save_to_xml(self, xmlSettingFilePath)
         from SyncSetGConf import SyncSetGConf

@@ -23,7 +23,8 @@ class SyncSetGConf(object):
         if value is None:
             return None
         if value.type == gconf.VALUE_PAIR:
-            log.critical(value.to_string)
+            log.critical("Dont know how to handle pairs: %s" % value.to_string())
+            return None
         return {gconf.VALUE_BOOL: value.get_bool, 
          gconf.VALUE_FLOAT: value.get_float, 
          gconf.VALUE_INT: value.get_int, 
@@ -43,8 +44,14 @@ class SyncSetGConf(object):
         elif vtype in (list, tuple):
             #FIXME We should support more then string lists
             client.set_list(path, gconf.VALUE_STRING, [str(i) for i in value])
+        else:
+            log.error("We cant handle %s yet" % (repr(vtype)))
 
+    #FIXME: Modularize each component, making it possible to only alter parts
+    #       of a syncset.
     def restore(self, syncset):
+        log.info("Restoring SyncSet from GConf: %s" % (SYNCSET_PATH + "/" + syncset.name))
+    
         for path in client.all_dirs(SYNCSET_PATH + "/" + syncset.name):
             cond_name = path.split("/")[-1]
             cond_path = path + "/"
@@ -94,6 +101,8 @@ class SyncSetGConf(object):
                 raise
 
     def save(self, syncset):
+        log.info("Saving SyncSet to GConf: %s" % (SYNCSET_PATH + "/" + syncset.name))
+    
         syncset_path = SYNCSET_PATH + "/" + syncset.name + "/"
         
         client.recursive_unset(SYNCSET_PATH + "/" + syncset.name, 0)
