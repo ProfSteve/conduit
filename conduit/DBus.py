@@ -384,11 +384,30 @@ class SyncSetDBusItem(DBusItem):
         self.syncSet = syncSet
         self.syncSet.connect("conduit-added", self._on_conduit_added)
         self.syncSet.connect("conduit-removed", self._on_conduit_removed)
+
+        self.sync_manager = self.syncSet.syncManager        
+
+        self.conduits = {}
+        #for cond in self.syncSet.conduits:
+        #    i = Utils.uuid_string()
+        #    new = ConduitDBusItem(self.sync_manager, cond, i)
+        #    self.conduits[cond] = new
+
+    def _add_conduit_object(self, cond):
+        i = Utils.uuid_string()
+        new = ConduitDBusItem(self.sync_manager, cond, i)
+        self.conduits[cond] = new    
+        return new
         
     def _on_conduit_added(self, syncset, cond):
+        #if cond not in self.conduits:
+        #    self._add_conduit_object(self)
         self.ConduitAdded()
 
     def _on_conduit_removed(self, syncset, cond):
+        #print dir(self.conduits[cond])
+        if cond in self.conduits:
+            del self.conduits[cond] 
         self.ConduitRemoved()
 
     @dbus.service.signal(SYNCSET_DBUS_IFACE, signature='')
@@ -398,6 +417,10 @@ class SyncSetDBusItem(DBusItem):
     @dbus.service.signal(SYNCSET_DBUS_IFACE, signature='')
     def ConduitRemoved(self):
         self._print("Emmiting DBus signal ConduitRemoved")
+        
+    @dbus.service.method(SYNCSET_DBUS_IFACE, in_signature='', out_signature='ao')
+    def ListConduits(self):
+        return [cond.get_path() for cond in self.conduits]
 
     @dbus.service.method(SYNCSET_DBUS_IFACE, in_signature='o', out_signature='')
     def AddConduit(self, cond):
