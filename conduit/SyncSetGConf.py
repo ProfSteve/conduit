@@ -4,9 +4,15 @@ import os
 import logging
 log = logging.getLogger("SyncSetGConf")
 import traceback
-import gconf
-client = gconf.client_get_default()
 
+import gobject
+try:
+    import gconf
+    client = gconf.client_get_default()
+    GCONF_ENABLED = True
+except:
+    GCONF_ENABLED = False
+    log.warning("GConf is not availiable to save and restore SyncSets")
 
 import conduit
 import conduit.Conduit as Conduit
@@ -17,7 +23,14 @@ SYNCSET_PATH = "/apps/conduit/SyncSet"
 class Error(Exception):
     pass
 
-class SyncSetGConf(object):
+class SyncSetGConf(gobject.GObject):
+    def __init__(self, syncset):
+        gobject.GObject.__init__(self)
+        self.loading = False
+        self.syncset = syncset
+        self.syncset.connect("conduit-added", self._on_conduit_added)
+        self.syncset.connect("conduit-removed", self._on_conduit_removed)
+
     def get_value(self, value):
         #value = client.get(path)
         if value is None:
@@ -47,97 +60,127 @@ class SyncSetGConf(object):
         else:
             log.error("We cant handle %s yet" % (repr(vtype)))
 
-    #FIXME: Modularize each component, making it possible to only alter parts
-    #       of a syncset.
-    def restore(self, syncset):
-        log.info("Restoring SyncSet from GConf: %s" % (SYNCSET_PATH + "/" + syncset.name))
-    
-        for path in client.all_dirs(SYNCSET_PATH + "/" + syncset.name):
-            cond_name = path.split("/")[-1]
-            cond_path = path + "/"
-            try:
-                #create a new conduit
-                cond = Conduit.Conduit(syncset.syncManager, client.get_string(cond_path + "uid"))
+    def restore(self):
+        if not GCONF_ENABLED:
+            return False
+        log.info("Restoring SyncSet from GConf: %s" % (SYNCSET_PATH + "/" + self.syncset.name))
+        
+        self.loading = True
+        try:
+            for path in client.all_dirs(SYNCSET_PATH + "/" + self.syncset.name):
+                cond_name = path.split("/")[-1]
+                cond_path = path + "/"
+                try:
+                    #create a new conduit
+                    cond = Conduit.Conduit(self.syncset.syncManager, client.get_string(cond_path + "uid"))
 
-                #restore conduit specific settings
-                twoway = client.get_bool(cond_path + "twoway")
-                if twoway == True:
-                    cond.enable_two_way_sync()
-                #auto = Settings.string_to_bool(conds.getAttribute("autosync"))
-                autosync = client.get_bool(cond_path + "autosync")
-                if autosync == True:
-                    cond.enable_auto_sync()
-                for policyName in Conduit.CONFLICT_POLICY_NAMES:
-                    policy = client.get_string(cond_path + "%s_policy" % policyName)
-                    if policy:
-                        cond.set_policy(policyName, policy)
+                    #restore conduit specific settings
+                    twoway = client.get_bool(cond_path + "twoway")
+                    if twoway == True:
+                        cond.enable_two_way_sync()
+                    #auto = Settings.string_to_bool(conds.getAttribute("autosync"))
+                    autosync = client.get_bool(cond_path + "autosync")
+                    if autosync == True:
+                        cond.enable_auto_sync()
+                    for policyName in Conduit.CONFLICT_POLICY_NAMES:
+                        policy = client.get_string(cond_path + "%s_policy" % policyName)
+                        if policy:
+                            cond.set_policy(policyName, policy)
 
-                num_sinks = client.get_int(cond_path + "sinks")
-                
-                if client.dir_exists(cond_path + "source"):
-                    source_path = cond_path + "source/"
-                    source_key = client.get_string(source_path + "key")
-                    source_name = client.get_string(source_path + "name")
-                    source_config = client.get_string(source_path + "configxml")
-                    #FIXME Use config values instead of XML
-                    config = {}
-                    for entry in client.all_entries(source_path + "config"):
-                        config[entry.key] = self.get_value(entry.value)
-                    #print config
-                    syncset._restore_dataprovider(cond, source_key, source_name, source_config, "2")
+                    num_sinks = client.get_int(cond_path + "sinks")
                     
-                for i in range(num_sinks):
-                    sink_path = cond_path + "sink%d/" % i
-                    if not client.dir_exists(cond_path + "sink%d" % i):
-                        raise Error("Sink not found")
-                    sink_key = client.get_string(sink_path + "key")
-                    sink_name = client.get_string(sink_path + "name")
-                    sink_config = client.get_string(sink_path + "configxml")
-                    syncset._restore_dataprovider(cond, sink_key, sink_name, sink_config, "2")
+                    if client.dir_exists(cond_path + "source"):
+                        source_path = cond_path + "source/"
+                        source_key = client.get_string(source_path + "key")
+                        source_name = client.get_string(source_path + "name")
+                        source_config = client.get_string(source_path + "configxml")
+                        #FIXME Use config values instead of XML
+                        config = {}
+                        for entry in client.all_entries(source_path + "config"):
+                            config[entry.key] = self.get_value(entry.value)
+                        #print config
+                        self.syncset._restore_dataprovider(cond, source_key, source_name, source_config, "2")
+                        
+                    for i in range(num_sinks):
+                        sink_path = cond_path + "sink%d/" % i
+                        if not client.dir_exists(cond_path + "sink%d" % i):
+                            raise Error("Sink %d not found" % i)
+                        sink_key = client.get_string(sink_path + "key")
+                        sink_name = client.get_string(sink_path + "name")
+                        sink_config = client.get_string(sink_path + "configxml")
+                        self.syncset._restore_dataprovider(cond, sink_key, sink_name, sink_config, "2")
 
-                syncset.add_conduit(cond)
-            except Exception:
-                #log.warning("Unable to restore conduit %s from %s. %s" % (cond_name, syncset.name, traceback.format_exc()))
-                raise
+                    #cond.connect("parameters-changed", self._on_conduit_parameters_changed)
+                    self.syncset.add_conduit(cond)
+                except Exception:
+                    #log.warning("Unable to restore conduit %s from %s. %s" % (cond_name, self.syncset.name, traceback.format_exc()))
+                    #FIXME: On production we probably dont want to raise this exception
+                    raise
+        finally:
+            self.loading = False
+                
 
-    def save(self, syncset):
-        log.info("Saving SyncSet to GConf: %s" % (SYNCSET_PATH + "/" + syncset.name))
+    def _on_conduit_parameters_changed(self, cond):
+        log.info("Saving Conduit to GConf")
+        self.save_conduit(cond)
+        
+    def _on_conduit_removed(self, syncset, cond):
+        self.remove_conduit(cond)
     
-        syncset_path = SYNCSET_PATH + "/" + syncset.name + "/"
-        
-        client.recursive_unset(SYNCSET_PATH + "/" + syncset.name, 0)
-        
-        #Store the conduits
-        for cond in syncset.conduits:
-            conduit_path = syncset_path + cond.uid + "/"
-            client.set_string(conduit_path + "uid", cond.uid)
-            client.set_bool(conduit_path + "twoway", cond.is_two_way())
-            client.set_bool(conduit_path + "autosync", cond.do_auto_sync())
-            for policyName in Conduit.CONFLICT_POLICY_NAMES:
-                client.set_string(conduit_path + ("%s_policy" % policyName),
-                                cond.get_policy(policyName)
-                                )
+    def _on_conduit_added(self, syncset, cond):
+        if not self.loading:
+            self.save_conduit(cond)
+        cond.connect("parameters-changed", self._on_conduit_parameters_changed)
+    
+    def save_conduit(self, cond, with_dps = False):
+        log.critical("Saving conduit")
+        if not GCONF_ENABLED:
+            return False
+        conduit_path = "/".join((SYNCSET_PATH, self.syncset.name, cond.uid)) + "/"
+        client.set_string(conduit_path + "uid", cond.uid)
+        client.set_bool(conduit_path + "twoway", cond.is_two_way())
+        client.set_bool(conduit_path + "autosync", cond.do_auto_sync())
+        for policyName in Conduit.CONFLICT_POLICY_NAMES:
+            client.set_string(conduit_path + ("%s_policy" % policyName),
+                cond.get_policy(policyName)
+            )
             
+        if with_dps:
             #Store the source
             source = cond.datasource
             if source is not None:
-                source_path = conduit_path + "source/"
-                client.set_string(source_path + "key", source.get_key())
-                client.set_string(source_path + "name", source.get_name())
-                #Store source settings
-                #configxml = xml.dom.minidom.parseString(source.get_configuration_xml())
-                client.set_string(source_path + "configxml", source.get_configuration_xml())
-                for key, value in source.module.get_configuration().iteritems():
-                    self.set_value(source_path + "config/" + key, value)
-            
+                self.save_dataprovider(cond, source, "source")
             #Store all sinks
-            #sinksxml = doc.createElement("datasinks")
             for i, sink in enumerate(cond.datasinks):
-                sink_path = conduit_path + "sink%s/" % i
-                client.set_string(sink_path + "key", sink.get_key())
-                client.set_string(sink_path + "name", sink.get_name())
-                #configxml = xml.dom.minidom.parseString(sink.get_configuration_xml())
-                client.set_string(sink_path + "configxml", sink.get_configuration_xml())
-                for key, value in sink.module.get_configuration().iteritems():
-                    self.set_value(sink_path + "config/" + key, value)
-            client.set_int(conduit_path + "sinks", len(cond.datasinks))
+                self.save_dataprovider(cond, sink, "sink%s" % i)
+                
+            client.set_int(conduit_path + "sinks", len(cond.datasinks))        
+    
+    def remove_conduit(self, cond):
+        if not GCONF_ENABLED:
+            return False
+        conduit_path = "/".join((SYNCSET_PATH, self.syncset.name, cond.uid))
+        client.recursive_unset(conduit_path, 0)
+    
+    def save_dataprovider(self, cond, dp, position = "sink"):
+        if not GCONF_ENABLED:
+            return False
+        dp_path = "/".join((SYNCSET_PATH, self.syncset.name, cond.uid, position)) + "/"
+        client.set_string(dp_path + "key", dp.get_key())
+        client.set_string(dp_path + "name", dp.get_name())
+        #Store dp settings
+        client.set_string(dp_path + "configxml", dp.get_configuration_xml())
+        for key, value in dp.module.get_configuration().iteritems():
+            self.set_value(dp_path + "config/" + key, value)    
+
+    def save(self):
+        if not GCONF_ENABLED:
+            return False
+        log.info("Saving SyncSet to GConf: %s" % (SYNCSET_PATH + "/" + self.syncset.name))
+    
+        syncset_path = SYNCSET_PATH + "/" + self.syncset.name + "/"
+        client.recursive_unset(SYNCSET_PATH + "/" + self.syncset.name, 0)
+        
+        #Store the conduits
+        for cond in self.syncset.conduits:
+            self.save_conduit(cond, with_dps=True)

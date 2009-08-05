@@ -14,6 +14,7 @@ log = logging.getLogger("SyncSet")
 import conduit
 import conduit.Conduit as Conduit
 import conduit.Settings as Settings
+import conduit.SyncSetGConf as SyncSetGConf
 
 
 class SyncSet(gobject.GObject):
@@ -36,11 +37,11 @@ class SyncSet(gobject.GObject):
         self.moduleManager = moduleManager
         self.syncManager = syncManager
         self.xmlSettingFilePath = xmlSettingFilePath
+        self.syncsetGConf = SyncSetGConf.SyncSetGConf(self)
         self.conduits = []
 
         self.moduleManager.connect("dataprovider-available", self.on_dataprovider_available_unavailable)
         self.moduleManager.connect("dataprovider-unavailable", self.on_dataprovider_available_unavailable)
-
 
         # FIXME: temporary hack - need to let factories know about this factory :-\!
         self.moduleManager.emit("syncset-added", self)
@@ -128,22 +129,25 @@ class SyncSet(gobject.GObject):
             self.remove_conduit(c)
             
     def restore(self, xmlSettingFilePath=None):
+        #log.info("Restoring Sync Set from %s" % xmlSettingFilePath)
+        #from SyncSetGConf import SyncSetGConf
+        self.syncsetGConf.restore()
+        
+    def restore_from_xml(self, xmlSettingFilePath=None):
         from SyncSetXML import SyncSetXML
         if xmlSettingFilePath == None:
             xmlSettingFilePath = self.xmlSettingFilePath
-        log.info("Restoring Sync Set from %s" % xmlSettingFilePath)
-        #SyncSetXML().restore_from_xml(self, xmlSettingFilePath)
-        from SyncSetGConf import SyncSetGConf
-        SyncSetGConf().restore(self)
+        SyncSetXML().restore_from_xml(self, xmlSettingFilePath)
     
     def save(self, xmlSettingFilePath=None):
+        #from SyncSetGConf import SyncSetGConf
+        self.syncsetGConf.save()
+        
+    def save_to_xml(self, xmlSettingFilePath=None):
+        from SyncSetXML import SyncSetXML
         if xmlSettingFilePath == None:
             xmlSettingFilePath = self.xmlSettingFilePath
-        
-        #from SyncSetXML import SyncSetXML
-        #SyncSetXML().save_to_xml(self, xmlSettingFilePath)
-        from SyncSetGConf import SyncSetGConf
-        SyncSetGConf().save(self)
+        SyncSetXML().save_to_xml(self, xmlSettingFilePath)
 
     def quit(self):
         """
