@@ -78,6 +78,7 @@ class Conduit(gobject.GObject):
             self.uid = uid
 
         #a conduit can hold one datasource and many datasinks (wrappers)
+        self.name = self.uid
         self.datasource = None
         self.datasinks = []
         self.twoWaySyncEnabled = False
@@ -232,6 +233,18 @@ class Conduit(gobject.GObject):
         else:
             log.warn("Could not remove %s" % dataprovider)
             return False
+            
+    def get_name(self):
+        if self.datasource:
+            return self.datasource.get_descriptive_name()
+        else:
+            return self.name
+            
+    def get_icon(self, size=16):
+        if self.datasource:
+            return self.datasource.get_icon(size)
+        else:
+            return None
 
     def can_do_two_way_sync(self):
         """

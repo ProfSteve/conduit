@@ -108,8 +108,9 @@ class ModuleWrapper:
     #
     # 2. They are also serve a way to show the same class in multiple categories
     def get_dnd_key(self):
-        if self.cached_info:
-            return self.classname
+        #TODO: Oops, I think this screws things up, not sure why it was needed
+        #if self.cached_info:
+        #    return self.classname
         if self.dndKey:
             return self.dndKey
         return self.get_key()
@@ -125,6 +126,8 @@ class ModuleWrapper:
         pickle but requires less implementation detail on the part of the DP
         """
         initargs = self.initargs
+        # The module cache inserts the module information on the first item
+        # of initargs, so we must remove it
         if self.cached_info:
             initargs = initargs[1:]
         if len(initargs) > 0:
@@ -146,6 +149,16 @@ class ModuleWrapper:
         Sets the dataproviders user readable name
         """
         self.name = name
+        
+    def get_descriptive_name(self):
+        names = {'file/photo': 'Pictures',
+         'file/video': 'Videos',
+         'file/audio': 'Music',
+         'file': 'Files'}
+        out_name = self.out_type.capitalize()
+        if self.out_type in names:
+            out_name = names[self.out_type]
+        return "%s from %s" % (out_name, self.name)
        
     def get_UID(self):
         """
@@ -206,7 +219,8 @@ class ModuleWrapper:
                         return None
                     self.icon[size] = info.load_icon()
                     self.icon_path = info.get_filename()
-
+        if self.icon[size] and (self.icon[size].get_width() != size or self.icon[size].get_height() != size):
+            self.icon[size] = self.icon[size].scale_simple(size, size, gtk.gdk.INTERP_BILINEAR)
         return self.icon[size]
 
     def get_descriptive_icon(self):
