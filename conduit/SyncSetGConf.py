@@ -70,7 +70,9 @@ class SyncSetGConf(gobject.GObject):
             for path in client.all_dirs(SYNCSET_PATH + "/" + self.syncset.name):
                 cond_name = path.split("/")[-1]
                 cond_path = path + "/"
-                try:
+                if client.get_string(cond_path + "uid") is None:
+                    continue
+                try:                    
                     #create a new conduit
                     cond = Conduit.Conduit(self.syncset.syncManager, client.get_string(cond_path + "uid"))
 
@@ -121,13 +123,17 @@ class SyncSetGConf(gobject.GObject):
                 
 
     def _on_conduit_parameters_changed(self, cond):
-        log.info("Saving Conduit to GConf")
+        log.info("Conduit paremeters changed, saving to GConf")
         self.save_conduit(cond)
         
     def _on_conduit_removed(self, syncset, cond):
         self.remove_conduit(cond)
     
     def _on_conduit_added(self, syncset, cond):
+        #TODO: Not sure this actually works, it still saves conduits right after
+        # loading them
+        
+        # Dont save conduits if we are still loading them
         if not self.loading:
             self.save_conduit(cond)
         cond.connect("parameters-changed", self._on_conduit_parameters_changed)
