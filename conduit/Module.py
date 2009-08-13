@@ -23,6 +23,8 @@ import conduit.Vfs as Vfs
 
 class Error(Exception):
     pass
+    
+from gettext import gettext as _
 
 class ModuleManager(gobject.GObject):
     """
@@ -365,7 +367,7 @@ class ModuleManager(gobject.GObject):
         for (source,sink),(comment,twoway) in Knowledge.PRECONFIGIRED_CONDUITS.items():
             if source in names and sink in names:
                 #return key,key,desc,two-way
-                found.append( (names[source],names[sink],comment,twoway) )
+                found.append( (names[source],names[sink],_(comment),twoway) )
 
         return found
 

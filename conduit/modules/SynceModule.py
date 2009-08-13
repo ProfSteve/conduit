@@ -192,8 +192,8 @@ class SynceTwoWay(DataProvider.TwoWay):
         return "synce-%d" % self._type_id_
 
 class SynceContactsTwoWay(SynceTwoWay):
-    _name_ = "Contacts"
-    _description_ = "Windows Mobile Contacts"
+    _name_ = _("Contacts")
+    _description_ = _("Windows Mobile Contacts")
     _module_type_ = "twoway"
     _in_type_ = "contact"
     _out_type_ = "contact"
@@ -330,8 +330,8 @@ class SynceContactsTwoWay(SynceTwoWay):
       return doc.toxml()
 
 class SynceCalendarTwoWay(SynceTwoWay):
-    _name_ = "Calendar"
-    _description_ = "Windows Mobile Calendar"
+    _name_ = _("Calendar")
+    _description_ = _("Windows Mobile Calendar")
     _module_type_ = "twoway"
     _in_type_ = "note"
     _out_type_ = "note"
@@ -340,8 +340,8 @@ class SynceCalendarTwoWay(SynceTwoWay):
     _configurable_ = False
 
 class SynceTasksTwoWay(SynceTwoWay):
-    _name_ = "Tasks"
-    _description_ = "Windows Mobile Tasks"
+    _name_ = _("Tasks")
+    _description_ = _("Windows Mobile Tasks")
     _module_type_ = "twoway"
     _in_type_ = "note"
     _out_type_ = "note"
