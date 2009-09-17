@@ -52,6 +52,172 @@ class Error(Exception):
 
 PIX_COLUMN, STR_COLUMN, CONDUIT_COLUMN = range(3)
 
+class ConduitWidget(object):
+    def __init__(self, cond, main_window):
+        self.conduit = cond
+        self.main_window = main_window
+        
+        # We have to load the UI file every time because gtk.Builder cant create
+        # several instances from the same file
+        glade_file = os.path.join(conduit.SHARED_DATA_DIR, "conduit_box_ui.glade")
+        builder = gtk.Builder()
+        builder.add_from_file(glade_file)
+        builder.connect_signals(self)
+
+        self.widget = builder.get_object("root")
+        self.revert_action = builder.get_object("revert_action")
+        self.apply_action = builder.get_object("apply_action")
+        self.status_label = builder.get_object("status_label")
+        #builder.get_object("conduit_name_label").set_text(cond.name)
+        self.sizegroup = gtk.SizeGroup(gtk.SIZE_GROUP_HORIZONTAL)
+        self.source_widget = None
+        self.sink_widgets = []
+        self.source_box = builder.get_object("source_vbox")
+        if cond.datasource:
+            self.add_dataprovider(cond.datasource)
+        self.sink_box = builder.get_object("sink_vbox")
+        for datasink in cond.datasinks:
+            self.add_dataprovider(datasink)
+        
+        self.syncing = False
+        self.error_syncing = None
+        self.has_conflicts = False
+        self.is_configured = False
+        
+        cond.connect("dataprovider-added", self.on_dataprovider_added)
+        cond.connect("dataprovider-removed", self.on_dataprovider_removed)
+        cond.connect("sync-started", self.on_sync_started)
+        cond.connect("sync-completed", self.on_sync_completed)
+        
+        self.refresh_status()
+        
+    def on_sync_started(self, cond):
+        self.syncing = True
+        self.refresh_status()
+        
+    def on_sync_completed(self, cond, fatal, nonfatal, conflict):
+        self.syncing = False
+        if fatal:
+            self.error_syncing = "Fatal error"
+        elif nonfatal:
+            self.error_syncing = "Errors during sync"
+        elif conflict:
+            self.error_syncing = "Conflicts during sync"
+        
+    def set_status(self, text, image = None):
+        self.status_label.set_text(text)
+        
+    def refresh_status(self):
+        if self.syncing:
+            self.set_status("Syncing...")
+        elif self.error_syncing:
+            self.set_status(self.error_syncing)
+        elif self.is_configured:
+            self.set_status("Ready")
+        else:
+            self.set_status("Not configured correctly")
+            
+    def on_status_changed(self, dp):
+        self.status_label.set_text(dp.get_status())
+        
+    def on_add_sink_action_activate(self, action):
+        self.main_window.open_add_sink_window(self.conduit)
+        
+    def on_revert_action_activate(self, action):
+        for dp_widget in [self.source_widget] + self.sink_widgets:
+            if not dp_widget:
+                continue
+            modified = dp_widget.config.cancel_config()
+            
+    def on_apply_action_activate(self, action):
+        for dp_widget in [self.source_widget] + self.sink_widgets:
+            if not dp_widget:
+                continue
+            modified = dp_widget.config.apply_config()
+
+    def on_dataprovider_added(self, cond, dp):
+        self.add_dataprovider(dp)
+        
+    def on_dataprovider_removed(self, cond, dp):
+        if dp == cond.datasource:
+            self.remove_dataprovider_widget(self.source_widget)
+        else:
+            for dp_widget in self.sink_widgets:
+                if dp_widget.dp == dp:
+                    self.remove_dataprovider_widget(dp_widget)
+                    break
+        
+    def on_config_changed(self, config, item):
+        modified = True
+        for dp_widget in [self.source_widget] + self.sink_widgets:
+            if not dp_widget:
+                continue
+            modified = dp_widget.config.is_modified()
+            if modified:
+                break
+        self.revert_action.set_sensitive(modified)
+        self.apply_action.set_sensitive(modified)        
+    
+    def add_dataprovider(self, dp):
+        if self.conduit.datasource == dp:
+            self.source_widget = DataproviderWidget(self, dp, source = True)
+            self.source_box.add(self.source_widget.widget)
+            dp.module.connect("status-changed", self.on_status_changed)
+        else:
+            sink_widget = DataproviderWidget(self, dp, source = False)
+            self.sink_widgets.append(sink_widget)
+            self.sink_box.add(sink_widget.widget)
+            
+    def remove_dataprovider_widget(self, dp_widget):
+        if self.source_widget == dp_widget:
+            if not self.source_widget:
+                return
+            self.source_box.remove(self.source_widget.widget)
+            self.source_widget = None
+        elif dp_widget in self.sink_widgets:
+            self.sink_widgets.remove(dp_widget)
+            self.sink_box.remove(dp_widget.widget)
+        else:
+            raise Error("Dataprovider not found on this conduit")
+            
+        
+class DataproviderWidget(object):
+    def __init__(self, conduit_widget, dp, source = True):
+        self.conduit_widget = conduit_widget
+        self.dp = dp
+        self.source = source
+        
+        self.widget = gtk.VBox()
+        hbox = gtk.HBox()
+        hbox.set_spacing(8)
+        icon = gtk.image_new_from_pixbuf(dp.get_icon(48))
+        icon.set_property("pixel-size", 48)
+        label = gtk.Label(dp.get_name())
+        label.props.xalign = 0
+        button_box = gtk.HButtonBox()
+        #config_button = gtk.Button(stock="gtk-preferences")
+        #refresh_button = gtk.Button(stock="gtk-refresh")
+        if not source:
+            remove_button = gtk.Button(stock="gtk-delete")
+            remove_button.connect("clicked", self.on_remove_button_activate)
+            button_box.add(remove_button)
+        hbox.pack_start(icon, expand=False, fill=False)
+        hbox.pack_start(label, expand=True, fill=True)
+        hbox.pack_start(button_box, expand=False, fill=False)
+        self.widget.pack_start(hbox, False, False)
+        self.config = dp.module.get_config_container(ConfigContainer, dp.name, dp.get_icon(), self)
+        self.config.connect("changed", conduit_widget.on_config_changed)
+        config_widget = self.config.get_config_widget()
+        if config_widget:
+            align = gtk.Alignment(xalign=0.5, yalign=0.5)
+            align.add(config_widget)
+            conduit_widget.sizegroup.add_widget(config_widget)
+            self.widget.pack_start(align, False, False)
+        self.widget.show_all()
+        
+    def on_remove_button_activate(self, button):
+        self.conduit_widget.conduit.delete_dataprovider(self.dp)
+
 class MainWindow:
     """
     The main conduit window.
@@ -129,7 +295,7 @@ class MainWindow:
         self.conduits_tree.insert_column_with_attributes(-1, "Conduit Name", 
             gtk.CellRendererText(), text=STR_COLUMN)
 
-        self.conduits_pages = {}
+        self.conduits_widgets = {}
         self.conduits_notebook = self.widgets.get_object("conduits_notebook")
         
         self.add_conduit_label = gtk.Label("Start by adding a new Conduit")
@@ -221,11 +387,14 @@ class MainWindow:
         self.remove_conduit_action.set_sensitive(cond is not None)
         self.sync_conduit_action.set_sensitive(cond is not None)
         
+    def on_sync_conduit_action_activate(self, action):
+        self.selected_conduit.sync()
+        
     def on_conduits_tree_cursor_changed(self, tree):
         #print "Cursor changed"
         model, iter_ = tree.get_selection().get_selected()
         cond = model.get_value(iter_, CONDUIT_COLUMN)
-        page_num = self.conduits_notebook.page_num(self.conduits_pages[cond]['root'])
+        page_num = self.conduits_notebook.page_num(self.conduits_widgets[cond].widget)
         self.conduits_notebook.set_current_page(page_num)
         self.selected_conduit = cond
         self._update_actions()
@@ -233,63 +402,22 @@ class MainWindow:
     def on_remove_conduit_action_activate(self, action):
         self.syncSet.remove_conduit(self.selected_conduit)
         
-    def on_add_sink_action_activate(self, action, cond):
+    def open_add_sink_window(self, cond):
         wizard = DataproviderWizard(self.mainWindow, self.syncSet, self.module_manager,
             ("sink","twoway"), cond)
         wizard.show()
         
-    def _make_dataprovider_widget(self, dp, sizegroup):
-        widget = gtk.VBox()
-        hbox = gtk.HBox()
-        hbox.set_spacing(8)
-        icon = gtk.image_new_from_pixbuf(dp.get_icon(48))
-        icon.set_property("pixel-size", 48)
-        label = gtk.Label(dp.get_name())
-        label.props.xalign = 0
-        config_button = gtk.Button(stock="gtk-preferences")
-        refresh_button = gtk.Button(stock="gtk-refresh")
-        #button_box = gtk.HButtonBox()
-        #button_box.add(config_button)
-        #button_box.add(refresh_button)
-        hbox.pack_start(icon, expand=False, fill=False)
-        hbox.pack_start(label, expand=True, fill=True)
-        #hbox.pack_start(button_box, expand=False, fill=False)
-        widget.pack_start(hbox, False, False)
-        config_container = dp.module.get_config_container(ConfigContainer, dp.name, dp.get_icon(), self)
-        config_widget = config_container.get_config_widget()
-        if config_widget:
-            align = gtk.Alignment(xalign=0.5, yalign=0.5)
-            align.add(config_widget)
-            sizegroup.add_widget(config_widget)
-            widget.pack_start(align, False, False)
-        widget.show_all()
+    def _make_dataprovider_widget(self, dp):
         return widget
         
     def set_busy(self, value):
+        '''
+        Config container implementation to set the current window busy
+        '''
         pass
         
     def _make_conduit_page(self, cond):
-        # We have to load the UI file every time because gtk.Builder cant create
-        # several instances from the same file
-        info = {}
-        glade_file = os.path.join(conduit.SHARED_DATA_DIR, "conduit_box_ui.glade")
-        builder = gtk.Builder()
-        builder.add_from_file(glade_file)
-        builder.connect_signals(self, cond)
-        #builder.connect_signals(self)
-        widget = builder.get_object("root")
-        builder.get_object("conduit_name_label").set_text(cond.name)
-        info['root'] = widget
-        info['sizegroup'] = gtk.SizeGroup(gtk.SIZE_GROUP_HORIZONTAL)
-        source_box = builder.get_object("source_vbox")
-        if cond.datasource:
-            source_box.add(self._make_dataprovider_widget(cond.datasource, info['sizegroup']))
-        info['source_box'] = source_box
-        sink_box = builder.get_object("sink_vbox")
-        for datasink in cond.datasinks:
-            sink_box.add(self._make_dataprovider_widget(datasink, info['sizegroup']))
-        info['sink_box'] = sink_box
-        return info
+        return ConduitWidget(cond, self)
         
     def on_main_window_destroy(self, window):
         self.conduitApplication.Quit()
@@ -304,20 +432,16 @@ class MainWindow:
                     kwargs={"login_function":lambda: True}
                     ).start()
         
-    def on_conduit_dataprovider_added(self, cond, dp):
-        info = self.conduits_pages[cond]
-        if cond.datasource == dp:
-            info['source_box'].add(self._make_dataprovider_widget(dp, info['sizegroup']))
-        else:
-            info['sink_box'].add(self._make_dataprovider_widget(dp, info['sizegroup']))
-        
     def on_conduit_added(self, syncset, cond):
         cond.connect("sync-started", self.on_sync_started)
         cond.connect("sync-completed", self.on_sync_completed)
-        cond.connect("dataprovider-added", self.on_conduit_dataprovider_added)
         iter_ = self.conduits_treemodel.append((cond.get_icon(), cond.get_name(), cond))
-        self.conduits_pages[cond] = self._make_conduit_page(cond)
-        self.conduits_notebook.append_page(self.conduits_pages[cond]['root'])
+        self.conduits_widgets[cond] = ConduitWidget(cond, self)
+        tab_label = gtk.HBox()
+        tab_label.pack_start(gtk.image_new_from_pixbuf(cond.get_icon()))
+        tab_label.pack_start(gtk.Label(cond.get_name()))
+        tab_label.show_all()
+        self.conduits_notebook.append_page(self.conduits_widgets[cond].widget, tab_label)
         path = self.conduits_treemodel.get_string_from_iter(iter_)
         self.conduits_tree.set_cursor(path)
         #cond.connect("sync-conflict", self.conflictResolver.on_conflict)
@@ -334,8 +458,9 @@ class MainWindow:
         if not iter_:
             raise Error("Conduit not found")
         self.conduits_treemodel.remove(iter_)
-        page_num = self.conduits_notebook.page_num(self.conduits_pages[cond]['root'])
+        page_num = self.conduits_notebook.page_num(self.conduits_widgets[cond].widget)
         self.conduits_notebook.remove_page(page_num)
+        del self.conduits_widgets[cond]
 
     def set_model(self, syncSet):
         self.syncSet = syncSet

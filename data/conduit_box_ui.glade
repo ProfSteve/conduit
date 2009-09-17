@@ -24,10 +24,10 @@
           </packing>
         </child>
         <child>
-          <object class="GtkLabel" id="conduit_name_label">
+          <object class="GtkLabel" id="status_label">
             <property name="visible">True</property>
             <property name="xalign">0</property>
-            <property name="label" translatable="yes">&lt;b&gt;Conduit&lt;/b&gt;</property>
+            <property name="label" translatable="yes">Not configured</property>
             <property name="use_markup">True</property>
           </object>
           <packing>
@@ -36,7 +36,6 @@
         </child>
         <child>
           <object class="GtkHButtonBox" id="hbuttonbox2">
-            <property name="visible">True</property>
             <property name="spacing">4</property>
             <child>
               <object class="GtkButton" id="button2">
@@ -81,27 +80,7 @@
       </packing>
     </child>
     <child>
-      <object class="GtkHBox" id="hbox7">
-        <property name="visible">True</property>
-        <property name="border_width">8</property>
-        <property name="spacing">8</property>
-        <child>
-          <object class="GtkLabel" id="label2">
-            <property name="visible">True</property>
-            <property name="xalign">0</property>
-            <property name="label" translatable="yes">Not configured</property>
-            <property name="use_markup">True</property>
-          </object>
-          <packing>
-            <property name="position">0</property>
-          </packing>
-        </child>
-      </object>
-      <packing>
-        <property name="expand">False</property>
-        <property name="fill">False</property>
-        <property name="position">1</property>
-      </packing>
+      <placeholder/>
     </child>
     <child>
       <object class="GtkScrolledWindow" id="scrolledwindow1">
@@ -266,12 +245,12 @@
         <property name="spacing">8</property>
         <property name="layout_style">end</property>
         <child>
-          <object class="GtkButton" id="button4">
+          <object class="GtkButton" id="revert_button">
             <property name="label">gtk-revert-to-saved</property>
             <property name="visible">True</property>
-            <property name="sensitive">False</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
+            <property name="related_action">revert_action</property>
             <property name="use_stock">True</property>
           </object>
           <packing>
@@ -281,12 +260,12 @@
           </packing>
         </child>
         <child>
-          <object class="GtkButton" id="button3">
+          <object class="GtkButton" id="apply_button">
             <property name="label">gtk-apply</property>
             <property name="visible">True</property>
-            <property name="sensitive">False</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
+            <property name="related_action">apply_action</property>
             <property name="use_stock">True</property>
           </object>
           <packing>
@@ -326,5 +305,19 @@
   <object class="GtkImage" id="image3">
     <property name="visible">True</property>
     <property name="stock">gtk-add</property>
+  </object>
+  <object class="GtkAction" id="revert_action">
+    <property name="stock_id">gtk-revert-to-saved</property>
+    <property name="sensitive">False</property>
+    <signal name="activate" handler="on_revert_action_activate"/>
+  </object>
+  <object class="GtkAction" id="apply_action">
+    <property name="stock_id">gtk-apply</property>
+    <property name="sensitive">False</property>
+    <signal name="activate" handler="on_apply_action_activate"/>
+  </object>
+  <object class="GtkAction" id="remove_sink_action">
+    <property name="stock_id">gtk-delete</property>
+    <signal name="activate" handler="on_remove_sink_action_activate"/>
   </object>
 </interface>

@@ -242,6 +242,7 @@
                 <property name="visible">True</property>
                 <property name="show_tabs">False</property>
                 <property name="show_border">False</property>
+                <property name="scrollable">True</property>
                 <child>
                   <placeholder/>
                 </child>
@@ -275,7 +276,7 @@
     </child>
   </object>
   <object class="GtkAction" id="add_conduit_action">
-    <property name="label">Add Conduit</property>
+    <property name="label">Add conduit</property>
     <property name="stock_id">gtk-add</property>
     <property name="is_important">True</property>
     <signal name="activate" handler="on_add_conduit_action_activate"/>
@@ -287,9 +288,11 @@
     <signal name="activate" handler="on_remove_conduit_action_activate"/>
   </object>
   <object class="GtkAction" id="sync_conduit_action">
-    <property name="label">Sync</property>
+    <property name="label">Sync conduit</property>
     <property name="icon_name">mail-send-receive</property>
+    <property name="is_important">True</property>
     <property name="sensitive">False</property>
+    <signal name="activate" handler="on_sync_conduit_action_activate"/>
   </object>
   <object class="GtkAction" id="cancel_sync_action">
     <property name="label">Cancel</property>
