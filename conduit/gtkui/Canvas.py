@@ -150,7 +150,7 @@ class Canvas(goocanvas.Canvas, _StyleMixin):
     ]
 
     WELCOME_MESSAGE = _("Drag a Data Provider here to continue")
-    def __init__(self, parentWindow, typeConverter, syncManager, dataproviderMenu, conduitMenu, msg):
+    def __init__(self, parentWindow, typeConverter, syncManager, gtkbuilder, msg):
         """
         Draws an empty canvas of the appropriate size
         """
@@ -173,7 +173,7 @@ class Canvas(goocanvas.Canvas, _StyleMixin):
 
         self.configurator = WindowConfigurator.WindowConfigurator(self.parentWindow)
 
-        self._setup_popup_menus(dataproviderMenu, conduitMenu)
+        self._setup_popup_menus(gtkbuilder)
 
         #set up DND from the treeview
         self.drag_dest_set(  gtk.gdk.BUTTON1_MASK | gtk.gdk.BUTTON3_MASK,
@@ -214,13 +214,13 @@ class Canvas(goocanvas.Canvas, _StyleMixin):
 
     def _make_hint(self, hint, timeout=4):
         if Knowledge.HINT_TEXT[hint][2]:
-            buttons = [("Show me",hint)]
+            buttons = [(_("Show me"), hint)]
         else:
             buttons = []
         h = self.msg.new_from_text_and_icon(
                             gtk.STOCK_INFO,
-                            Knowledge.HINT_TEXT[hint][0],
-                            Knowledge.HINT_TEXT[hint][1],
+                            _(Knowledge.HINT_TEXT[hint][0]),
+                            _(Knowledge.HINT_TEXT[hint][1]),
                             buttons=buttons,
                             timeout=timeout)
         h.connect("response", self._do_hint)
@@ -234,7 +234,10 @@ class Canvas(goocanvas.Canvas, _StyleMixin):
             return
             
         if newItem == conduitCanvasItem:
-            self._make_hint(Knowledge.HINT_ADD_DATAPROVIDER)
+            if conduitCanvasItem.model.can_sync():
+                self._make_hint(Knowledge.HINT_RIGHT_CLICK_CONFIGURE)
+            else:
+                self._make_hint(Knowledge.HINT_ADD_DATAPROVIDER)
         elif newItem == dataproviderCanvasItem:
             #check if we have a source and a sink
             if conduitCanvasItem.model.can_sync():
@@ -256,29 +259,26 @@ class Canvas(goocanvas.Canvas, _StyleMixin):
                 )
         self._changing_style = False
 
-    def _setup_popup_menus(self, dataproviderPopupXML, conduitPopupXML):
-        """
-        Sets up the popup menus and their callbacks
+    def _setup_popup_menus(self, gtkbuilder):
+        self.dataproviderMenu = gtkbuilder.get_object("DataProviderMenu")
+        self.conduitMenu = gtkbuilder.get_object("ConduitMenu")
 
-        @param conduitPopupXML: The menu which is popped up when the user right
-        clicks on a conduit
-        @type conduitPopupXML: C{gtk.glade.XML}
-        @param dataproviderPopupXML: The menu which is popped up when the user right
-        clicks on a dataprovider
-        @type dataproviderPopupXML: C{gtk.glade.XML}
-        """
+        self.configureMenuItem = gtkbuilder.get_object("configure_dataprovider")
 
-        self.dataproviderMenu = dataproviderPopupXML.get_widget("DataProviderMenu")
-        self.configureMenuItem = dataproviderPopupXML.get_widget("configure")
+        self.twoWayMenuItem = gtkbuilder.get_object("two_way_sync")
+        self.slowSyncMenuItem = gtkbuilder.get_object("slow_sync")
+        self.autoSyncMenuItem = gtkbuilder.get_object("auto_sync")
 
-        self.conduitMenu = conduitPopupXML.get_widget("ConduitMenu")
-        self.twoWayMenuItem = conduitPopupXML.get_widget("two_way_sync")
-        self.slowSyncMenuItem = conduitPopupXML.get_widget("slow_sync")
-        self.autoSyncMenuItem = conduitPopupXML.get_widget("auto_sync")
-
+        #connect the toggled signals
         self.twoWayMenuItem.connect("toggled", self.on_two_way_sync_toggle)
         self.slowSyncMenuItem.connect("toggled", self.on_slow_sync_toggle)
         self.autoSyncMenuItem.connect("toggled", self.on_auto_sync_toggle)
+
+        #connect the dataprovider and conduit menu signals
+        for widget in ( "delete_dataprovider", "configure_dataprovider",
+                        "refresh_dataprovider", "delete_conduit", 
+                        "synchronize_conduit", "refresh_conduit"):
+            gtkbuilder.get_object(widget).connect("activate", getattr(self, "on_%s_clicked" % widget))
 
         #connect the conflict popups
         self.policyWidgets = {}
@@ -286,13 +286,9 @@ class Canvas(goocanvas.Canvas, _StyleMixin):
             for policyValue in Conduit.CONFLICT_POLICY_VALUES:
                 widgetName = "%s_%s" % (policyName,policyValue)
                 #store the widget and connect to toggled signal
-                widget = conduitPopupXML.get_widget(widgetName)
+                widget = gtkbuilder.get_object(widgetName)
                 widget.connect("toggled", self.on_policy_toggle, policyName, policyValue)
                 self.policyWidgets[widgetName] = widget
-                
-        #connect the menu callbacks
-        conduitPopupXML.signal_autoconnect(self)
-        dataproviderPopupXML.signal_autoconnect(self)
 
     def _delete_welcome(self):
         idx = self.root.find_child(self.welcome)
@@ -383,18 +379,6 @@ class Canvas(goocanvas.Canvas, _StyleMixin):
 
         self.selectedDataproviderItem = selected_dataprovider
         self.selectedConduitItem = selected_conduit
-        
-    def get_selected_conduit(self):
-        if self.selectedConduitItem:
-            return self.selectedConduitItem.model
-        else:
-            return None
-    
-    def get_selected_dataprovider(self):
-        if self.selectedDataproviderItem:
-            return self.selectedDataproviderItem.model        
-        else:
-            return None
 
     def _on_conduit_button_press(self, view, target, event):
         """
@@ -514,6 +498,18 @@ class Canvas(goocanvas.Canvas, _StyleMixin):
                 dp.set_status(DataProvider.STATUS_NONE)
             else:
                 dp.set_status(DataProvider.STATUS_DONE_SYNC_NOT_CONFIGURED)
+
+    def get_selected_conduit(self):
+        if self.selectedConduitItem:
+            return self.selectedConduitItem.model
+        else:
+            return None
+
+    def get_selected_dataprovider(self):
+        if self.selectedDataproviderItem:
+            return self.selectedDataproviderItem.model
+        else:
+            return None
 
     def on_conduit_removed(self, sender, conduitRemoved):
         for item in self._get_child_conduit_canvas_items():
