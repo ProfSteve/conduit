@@ -52,7 +52,7 @@ class Error(Exception):
 
 PIX_COLUMN, STR_COLUMN, CONDUIT_COLUMN = range(3)
 
-class ConduitWidget(object):
+class ConduitView(object):
     def __init__(self, cond, main_window):
         self.conduit = cond
         self.main_window = main_window
@@ -70,8 +70,31 @@ class ConduitWidget(object):
         self.status_label = builder.get_object("status_label")
         #builder.get_object("conduit_name_label").set_text(cond.name)
         self.sizegroup = gtk.SizeGroup(gtk.SIZE_GROUP_HORIZONTAL)
-        self.source_widget = None
-        self.sink_widgets = []
+        
+        self.dps_buttons_box = builder.get_object('dps_buttons_box')
+        self.no_sink_label = builder.get_object('no_sink_label')
+        
+        self.dp_notebook = builder.get_object("dp_notebook")
+        
+        self.status_button = builder.get_object('status_button')
+        self.status_button.connect('clicked', self.on_dp_button_clicked)
+        
+        self.status_widget = builder.get_object('status_widget')
+        
+        self.source_button = builder.get_object('source_button')
+        self.source_button.connect('clicked', self.on_dp_button_clicked)
+        
+        self.dp_buttons = [self.status_button]
+        self.db_widgets = []
+        self.button_widgets = {self.status_button: self.status_widget}
+        
+        self.updating_buttons = False
+        
+        self.views = []
+        
+        self.source_view = None
+        self.sink_views = []
+        
         self.source_box = builder.get_object("source_vbox")
         if cond.datasource:
             self.add_dataprovider(cond.datasource)
@@ -90,6 +113,7 @@ class ConduitWidget(object):
         cond.connect("sync-completed", self.on_sync_completed)
         
         self.refresh_status()
+        
         
     def on_sync_started(self, cond):
         self.syncing = True
@@ -124,75 +148,109 @@ class ConduitWidget(object):
         self.main_window.open_add_sink_window(self.conduit)
         
     def on_revert_action_activate(self, action):
-        for dp_widget in [self.source_widget] + self.sink_widgets:
-            if not dp_widget:
+        for dp_view in [self.source_view] + self.sink_views:
+            if not dp_view:
                 continue
-            modified = dp_widget.config.cancel_config()
+            modified = dp_view.config.cancel_config()
             
     def on_apply_action_activate(self, action):
-        for dp_widget in [self.source_widget] + self.sink_widgets:
-            if not dp_widget:
+        for dp_view in [self.source_view] + self.sink_views:
+            if not dp_view:
                 continue
-            modified = dp_widget.config.apply_config()
+            modified = dp_view.config.apply_config()
 
     def on_dataprovider_added(self, cond, dp):
         self.add_dataprovider(dp)
         
     def on_dataprovider_removed(self, cond, dp):
+        #for widget in self.dp_notebook.get_children():
+        #    if widget
         if dp == cond.datasource:
-            self.remove_dataprovider_widget(self.source_widget)
+            self.remove_dataprovider(self.source_view)
         else:
-            for dp_widget in self.sink_widgets:
-                if dp_widget.dp == dp:
-                    self.remove_dataprovider_widget(dp_widget)
+            for dp_view in self.sink_views:
+                if dp_view.dp == dp:
+                    self.remove_dataprovider(dp_view)
                     break
         
     def on_config_changed(self, config, item):
         modified = True
-        for dp_widget in [self.source_widget] + self.sink_widgets:
-            if not dp_widget:
+        for dp_view in [self.source_view] + self.sink_views:
+            if not dp_view:
                 continue
-            modified = dp_widget.config.is_modified()
+            modified = dp_view.config.is_modified()
             if modified:
                 break
         self.revert_action.set_sensitive(modified)
         self.apply_action.set_sensitive(modified)        
+        
+    def on_dp_button_clicked(self, button):
+        if self.updating_buttons:
+            return
+        self.updating_buttons = True
+        for dp_button in self.dp_buttons:
+            if dp_button.get_active():
+                dp_button.set_active(False)
+        button.set_active(True)
+        if button in self.button_widgets:
+            self.dp_notebook.set_current_page(self.dp_notebook.page_num(self.button_widgets[button]))
+        self.updating_buttons = False
     
     def add_dataprovider(self, dp):
+        dp_view = DataproviderView(self, dp, source = self.conduit.datasource == dp)        
+        self.dp_notebook.append_page(dp_view.widget, gtk.Label(dp.get_name()))
         if self.conduit.datasource == dp:
-            self.source_widget = DataproviderWidget(self, dp, source = True)
-            self.source_box.add(self.source_widget.widget)
+            button = self.source_button
+            self.source_view = dp_view
+        else:
+            self.no_sink_label.hide()
+            button = gtk.ToggleButton()
+            button.show_all()
+            self.dps_buttons_box.pack_start(button, False, False)
+            self.sink_views.append(dp_view)
+        button.add(self.make_dp_button(dp))
+        button.connect('clicked', self.on_dp_button_clicked)
+        self.dp_buttons.append(button)
+        self.button_widgets[button] = dp_view.widget
+        return
+        if self.conduit.datasource == dp:
+            self.source_view = DataproviderView(self, dp, source = True)
+            self.source_box.add(self.source_view.widget)
             dp.module.connect("status-changed", self.on_status_changed)
         else:
-            sink_widget = DataproviderWidget(self, dp, source = False)
-            self.sink_widgets.append(sink_widget)
+            sink_view = DataproviderView(self, dp, source = False)
+            self.sink_views.append(sink_widget)
             self.sink_box.add(sink_widget.widget)
             
-    def remove_dataprovider_widget(self, dp_widget):
-        if self.source_widget == dp_widget:
-            if not self.source_widget:
+    def remove_dataprovider(self, dp_view):
+        dp_view.remove_dp()
+        #return
+        if self.source_view == dp_view:
+            if not self.source_view:
                 return
-            self.source_box.remove(self.source_widget.widget)
+            #self.source_box.remove(self.source_widget.widget)
             self.source_widget = None
-        elif dp_widget in self.sink_widgets:
-            self.sink_widgets.remove(dp_widget)
-            self.sink_box.remove(dp_widget.widget)
+        elif dp_view in self.sink_views:
+            self.sink_views.remove(dp_view)
+            #self.sink_box.remove(dp_widget.widget)
         else:
             raise Error("Dataprovider not found on this conduit")
             
         
-class DataproviderWidget(object):
-    def __init__(self, conduit_widget, dp, source = True):
-        self.conduit_widget = conduit_widget
+class DataproviderView(object):
+    def __init__(self, conduit_view, dp, source = True):
+        self.conduit_view = conduit_view
         self.dp = dp
         self.source = source
         
         self.widget = gtk.VBox()
+        self.widget.set_spacing(8)
         hbox = gtk.HBox()
         hbox.set_spacing(8)
         icon = gtk.image_new_from_pixbuf(dp.get_icon(48))
         icon.set_property("pixel-size", 48)
-        label = gtk.Label(dp.get_name())
+        label = gtk.Label("<b>%s</b>" % dp.get_name())
+        label.set_use_markup(True)
         label.props.xalign = 0
         button_box = gtk.HButtonBox()
         #config_button = gtk.Button(stock="gtk-preferences")
@@ -200,23 +258,53 @@ class DataproviderWidget(object):
         if not source:
             remove_button = gtk.Button(stock="gtk-delete")
             remove_button.connect("clicked", self.on_remove_button_activate)
-            button_box.add(remove_button)
+            #button_box.add(remove_button)
+            hbox.pack_end(remove_button, expand=False, fill=False)
         hbox.pack_start(icon, expand=False, fill=False)
         hbox.pack_start(label, expand=True, fill=True)
-        hbox.pack_start(button_box, expand=False, fill=False)
+        #hbox.pack_start(button_box, expand=False, fill=False)
         self.widget.pack_start(hbox, False, False)
-        self.config = dp.module.get_config_container(ConfigContainer, dp.name, dp.get_icon(), self)
-        self.config.connect("changed", conduit_widget.on_config_changed)
-        config_widget = self.config.get_config_widget()
+        try:
+            self.config = dp.module.get_config_container(ConfigContainer, dp.name, dp.get_icon(), self)
+            self.config.connect("changed", conduit_view.on_config_changed)
+            config_widget = self.config.get_config_widget()
+        except Exception:
+            self.config = None
+            config_widget = gtk.Label("Ouch, something went wrong!")
         if config_widget:
-            align = gtk.Alignment(xalign=0.5, yalign=0.5)
+            align = gtk.Alignment(xalign=0.0, yalign=0.0, xscale=1.0, yscale=1.0)
             align.add(config_widget)
-            conduit_widget.sizegroup.add_widget(config_widget)
-            self.widget.pack_start(align, False, False)
+            conduit_view.sizegroup.add_widget(config_widget)
+            #self.widget.pack_start(align, False, False)
+            self.widget.pack_start(align, True, True)
         self.widget.show_all()
+    
+    def make_dp_button(self, button):
+        hbox = gtk.HBox()
+        hbox.set_spacing(4)
+        icon = gtk.image_new_from_pixbuf(self.dp.get_icon())
+        #icon.set_property("pixel-size", 48)
+        label = gtk.Label(self.dp.get_name())
+        #label.props.xalign = 0
+        label.set_alignment(xalign = 0, yalign = 0.5)
+        
+        hbox.pack_start(icon)
+        hbox.pack_start(label)
+        hbox.show_all()
+        
+        button.add(hbox)
+        
+        self.button = button
+        return button
+        
+    def remove_dp(self):
+        parent = self.widget.get_parent()
+        if parent:
+            parent.remove(self.widget)
+            self.widget = None
         
     def on_remove_button_activate(self, button):
-        self.conduit_widget.conduit.delete_dataprovider(self.dp)
+        self.conduit_view.conduit.delete_dataprovider(self.dp)
 
 class MainWindow:
     """
@@ -417,7 +505,7 @@ class MainWindow:
         pass
         
     def _make_conduit_page(self, cond):
-        return ConduitWidget(cond, self)
+        return ConduitView(cond, self)
         
     def on_main_window_destroy(self, window):
         self.conduitApplication.Quit()
@@ -436,7 +524,7 @@ class MainWindow:
         cond.connect("sync-started", self.on_sync_started)
         cond.connect("sync-completed", self.on_sync_completed)
         iter_ = self.conduits_treemodel.append((cond.get_icon(), cond.get_name(), cond))
-        self.conduits_widgets[cond] = ConduitWidget(cond, self)
+        self.conduits_widgets[cond] = ConduitView(cond, self)
         tab_label = gtk.HBox()
         tab_label.pack_start(gtk.image_new_from_pixbuf(cond.get_icon()))
         tab_label.pack_start(gtk.Label(cond.get_name()))

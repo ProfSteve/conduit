@@ -26,6 +26,163 @@ class Error(Exception):
     
 from gettext import gettext as _
 
+def is_factory(filename):
+    return filename.endswith("Factory.py")
+
+def is_module(filename):
+    return filename.endswith("Module.py")
+
+def is_module_dir(dirname):
+    return dirname.endswith("Module")
+    
+def is_valid_path(path):
+    return is_factory(path) or is_module(path)
+
+class ModuleInfo(object):
+
+    def __init__(self, path):
+        self.path = path
+        self.mtime = os.stat(path).st_mtime
+        self.internal_modules = []
+        self.factories = []
+        self.cached = False
+        self.cached_info = []
+
+    def _import_file(self, filename):
+        """
+        Tries to import the specified file. Returns the python module on succes.
+        Primarily for internal use. Note that the python module returned may actually
+        contain several more loadable modules.
+        """
+        mods = pydoc.importfile (filename)
+        try:
+            if (mods.MODULES): pass
+        except AttributeError:
+            log.warn("The file %s is not a valid module. Skipping." % (filename))
+            log.warn("A module must have the variable MODULES defined as a dictionary.")
+            raise
+        for modules, infos in mods.MODULES.items():
+            for i in ModuleWrapper.COMPULSORY_ATTRIBUTES:
+                if i not in infos:
+                    log.warn("Class %s in file %s does define a %s attribute. Skipping." % (modules, filename, i))
+                    raise Exception
+        return mods
+    
+    def _load_module(self, classname, *args, **kwargs):
+        mod = self._import_file(self.path)
+        for module, info in mod.MODULES.items():
+            klass = getattr(mod, module)
+            if getattr(klass, '__name__') == classname:
+                return klass(*args, **kwargs)
+        raise Error("Module %s not found" % classname)
+    
+    def load(self):
+        if self.cached and not self.is_factory():
+            for module_info in self.cached_info:
+                mod_wrapper = ModuleWrapper.ModuleWrapper(
+                    klass=self._load_module,
+                    initargs=(module_info['classname'],),
+                    category=module_info['category'],
+                    cached_info=module_info,
+                )
+                self.internal_modules.append((mod_wrapper, module_info['classname']))
+        else:
+            mod = self._import_file(self.path)
+            for name, info in mod.MODULES.items():
+                klass = getattr(mod, name)
+                if info["type"] == "dataprovider" or info["type"] == "converter":
+                    mod_wrapper = ModuleWrapper.ModuleWrapper(
+                        klass=klass,
+                        initargs=(),
+                        category=getattr(klass, "_category_", conduit.dataproviders.CATEGORY_TEST)
+                    )
+                    #Save the module (signal is emitted in _append_module)
+                    #self._append_module(
+                    #        mod_wrapper,
+                    #        klass
+                    #        )
+                    self.internal_modules.append((mod_wrapper, klass))
+                    self.cached_info.append(mod_wrapper.get_info())
+                    #modules_cache.append(mod_wrapper.get_info())
+                    #log.critical("Saving to cache %s" % mod_wrapper.get_info())                        
+                elif info["type"] == "dataprovider-factory":
+                    #log.critical("Creating factory %s" % self.path)
+                    # build a dict of kwargs to pass to factories
+                    kwargs = {
+                        "moduleManager": self,
+                    }
+                    #instantiate and store the factory
+                    instance = klass(**kwargs)
+                    self.factories.append(instance)
+                else:
+                    log.warn("Class is an unknown type: %s" % klass)
+            #except AttributeError:
+            #    log.warn("Could not find module %s in %s\n%s" % (modules,filename,traceback.format_exc()))
+
+    def is_factory(self):
+        return is_factory(self.path)
+
+    def is_module(self):
+        return is_module(self.path)
+        
+class CacheManager(object):
+
+    def __init__(self, cache_filename = "modules.list"):
+        self.cache_path = os.path.join(conduit.USER_CACHE_DIR, cache_filename)
+        self.modules = {}
+        self._load_cache()
+        
+    def _load_cache(self):
+        if not os.path.exists(self.cache_path):
+            log.info("No modules cache found (doing a cold start)")
+            return
+        cache_file = open(self.cache_path, "rb")
+        try:
+            cache_contents = pickle.load(cache_file)
+            #We check all the contents so we dont load an invalid cache
+            for path, module_info in cache_contents.iteritems():
+                
+                if not isinstance(path, basestring):
+                    raise Error("Error loading cache: key is not a string (clearing cache)")
+                self.modules[path] = ModuleInfo(path)
+                self.modules[path].mtime = module_info['mtime']
+                self.modules[path].cached_info = module_info['cached_info']
+        except Exception:
+            log.warn("Modules cache invalid (clearing cache)")
+            self.modules = {}
+        finally:
+            cache_file.close()
+
+    def _save_cache(self):
+        log.critical("Saving cache")
+        cache = {}
+        for module in self.modules.values():
+            cache[module.path] = {'mtime': module.mtime, 'cached_info': module.cached_info}
+        cache_file = open(self.cache_path, "wb")
+        try:
+            pickle.dump(cache, cache_file)
+        finally:
+            cache_file.close()       
+            
+    def add_module(self, path):
+        if path in self.modules and self.modules[path].mtime == os.stat(path).st_mtime:
+            self.modules[path].cached = True
+        elif os.path.basename(path) not in [os.path.basename(j) for j in self.modules.keys()]:
+            self.modules[path] = ModuleInfo(path)
+    
+    def load(self, blacklist, whitelist):
+        for module in self.modules.values():
+            name, ext = Vfs.uri_get_filename_and_extension(module.path)
+            if whitelist:
+                if name in whitelist:
+                    module.load()
+            elif blacklist:
+                if name not in blacklist: 
+                    module.load()
+            else:
+                module.load()
+        self._save_cache()
+
 class ModuleManager(gobject.GObject):
     """
     Generic dynamic module loader for conduit. Given a path
@@ -57,6 +214,8 @@ class ModuleManager(gobject.GObject):
         @type dirs: C{string[]}
         """
         gobject.GObject.__init__(self)
+        #Initialize our cache so we dont import uneeded modules
+        self.cacheManager = CacheManager()
         #Dict of loaded modulewrappers. key is wrapper.get_key()
         #Stored seperate to the classes because dynamic dataproviders may
         #use the same class but with different initargs (diff keys)
@@ -65,29 +224,9 @@ class ModuleManager(gobject.GObject):
         self.invalidFiles = []
         #Keep a ref to dataprovider factories so they are not collected
         self.dataproviderFactories = []
-        self.cache_path = os.path.join(conduit.USER_CACHE_DIR, "modules.list")
-        self.modules_cache = {}
-        if os.path.exists(self.cache_path):
-            cache_file = open(self.cache_path, "rb")
-            try:
-                self.modules_cache = pickle.load(cache_file)
-                #We check all the contents so we dont load an invalid cache
-                if not isinstance(self.modules_cache, dict):
-                    raise Exception()
-                for key, value in self.modules_cache.iteritems():
-                    if not isinstance(key, basestring):
-                        raise Error("%s not a string" % key)
-                    if not isinstance(value, dict):
-                        raise Error("%s not a dict" % value)
-            except Error:
-                log.warn("Modules cache invalid")
-                self.modules_cache = {}
-            finally:
-                cache_file.close()
-        else:
-            log.critical("No modules cache found")
         #scan all dirs for files in the right format (*Module/*Module.py)
-        self.filelist = self._build_filelist_from_directories(dirs)
+        self._fill_cache_from_directories(dirs)
+        #self.filelist = self._build_filelist_from_directories(dirs)
 
     def _on_dynamic_dataprovider_added(self, monitor, dpw, klass):
         """
@@ -109,7 +248,7 @@ class ModuleManager(gobject.GObject):
         if dataproviderWrapper.module_type in ["source", "sink", "twoway"]:
             self.emit("dataprovider-unavailable", dataproviderWrapper)
 
-    def _build_filelist_from_directories(self, directories=None):
+    def _fill_cache_from_directories(self, directories=None):
         """
         Converts a given array of directories into a list 
         containing the filenames of all qualified modules. Recurses into
@@ -117,9 +256,9 @@ class ModuleManager(gobject.GObject):
         directory in which they reside.
         This method is automatically invoked by the constructor.
         """
-        res = {}
+        #res = {}
         if not directories:
-            return res
+            return
             
         #convert to abs path    
         directories = [os.path.abspath(os.path.expanduser(s)) for s in directories]
@@ -131,23 +270,12 @@ class ModuleManager(gobject.GObject):
                     continue
                 for i in os.listdir(d):
                     f = os.path.join(d,i)
-                    if os.path.isfile(f) and (self._is_module(f) or self._is_factory(f)):
-                        if os.path.basename(f) not in [os.path.basename(j) for j in res.keys()]:
-                            res[f] = {'mtime': os.stat(f).st_mtime}
-                    elif os.path.isdir(f) and self._is_module_dir(f):
+                    if os.path.isfile(f) and is_valid_path(f):
+                        self.cacheManager.add_module(f)
+                    elif os.path.isdir(f) and is_module_dir(f):
                         directories.append(f)
             except OSError, err:
                 log.warn("Error reading directory %s, skipping." % (d))
-        return res
-       
-    def _is_factory(self, filename):
-        return filename.endswith("Factory.py")
-       
-    def _is_module(self, filename):
-        return filename.endswith("Module.py")
-
-    def _is_module_dir(self, dirname):
-        return dirname.endswith("Module")
         
     def _append_module(self, wrapper, klass):
         #Check if the wrapper is unique
@@ -178,35 +306,7 @@ class ModuleManager(gobject.GObject):
         # notify everything that dp is no longer available
         self._emit_unavailable(dpw)
 
-    def _import_file(self, filename):
-        """
-        Tries to import the specified file. Returns the python module on succes.
-        Primarily for internal use. Note that the python module returned may actually
-        contain several more loadable modules.
-        """
-        mods = pydoc.importfile (filename)
-        try:
-            if (mods.MODULES): pass
-        except AttributeError:
-            log.warn("The file %s is not a valid module. Skipping." % (filename))
-            log.warn("A module must have the variable MODULES defined as a dictionary.")
-            raise
-        for modules, infos in mods.MODULES.items():
-            for i in ModuleWrapper.COMPULSORY_ATTRIBUTES:
-                if i not in infos:
-                    log.warn("Class %s in file %s does define a %s attribute. Skipping." % (modules, filename, i))
-                    raise Exception
-        return mods
     
-    def _load_module(self, info, *args, **kwargs):
-        mod = self._import_file(info['filename'])
-        #log.critical("Cached imported file %s: %s" % (info['filename'], mod.MODULES.items()))
-        #log.critical(" Looking for %s" % (info,))
-        for modules, infos in mod.MODULES.items():
-            klass = getattr(mod, modules)
-            if getattr(klass, '__name__') == info['classname']:
-                return klass(*args, **kwargs)
-        raise Error("Module %s not found" % info['classname'])
 
     def _load_modules_in_file(self, filename, f_data):
         """
@@ -234,7 +334,7 @@ class ModuleManager(gobject.GObject):
                             modules_cache.append(mod_wrapper.get_info())
                             #log.critical("Saving to cache %s" % mod_wrapper.get_info())                        
                         elif infos["type"] == "dataprovider-factory":
-                            log.critical("Creating factory %s" % filename)
+                            #log.critical("Creating factory %s" % filename)
                             # build a dict of kwargs to pass to factories
                             kwargs = {
                                 "moduleManager": self,
@@ -249,7 +349,6 @@ class ModuleManager(gobject.GObject):
                 self.filelist[filename]['modules'] = modules_cache
                 self.filelist[filename]['mtime'] = os.stat(filename).st_mtime
             else:
-                #log.critical("File %s in cache" % filename)
                 self.filelist[filename] = self.modules_cache[filename]
                 for module in self.modules_cache[filename]['modules']:
                     module['filename'] = filename
@@ -277,32 +376,17 @@ class ModuleManager(gobject.GObject):
         If whitelist and blacklist are supplied then the name of the file
         is tested against them. Default policy is to load all modules unless
         """
-        for f, f_data in self.filelist.iteritems():
-            name, ext = Vfs.uri_get_filename_and_extension(f)
-            if whitelist:
-                if name in whitelist:
-                    self._load_modules_in_file(f, f_data)
-            elif blacklist:
-                if name not in blacklist: 
-                    self._load_modules_in_file(f, f_data)
-            else:            
-                self._load_modules_in_file(f, f_data)
+        self.cacheManager.load(whitelist, blacklist)
         
-        # Save the modules cache if it's different then the file contents
-        if self.modules_cache != self.filelist:
-            log.critical("Saving cache")
-            self.modules_cache = self.filelist
-            cache_file = open(self.cache_path, "wb")
-            try:
-                pickle.dump(self.filelist, cache_file)
-            finally:
-                cache_file.close()
-
-        for i in self.dataproviderFactories:
-            log.critical("Probing %s" % i)
-            i.connect("dataprovider-removed", self._on_dynamic_dataprovider_removed)
-            i.connect("dataprovider-added", self._on_dynamic_dataprovider_added)
-            i.probe()
+        for module in self.cacheManager.modules.values():
+            for wrapper, klass in module.internal_modules:
+                self._append_module(wrapper, klass)
+            for factory in module.factories:
+                self.dataproviderFactories.append(factory)
+                #log.critical("Probing %s" % factory)
+                factory.connect("dataprovider-removed", self._on_dynamic_dataprovider_removed)
+                factory.connect("dataprovider-added", self._on_dynamic_dataprovider_added)
+                factory.probe()
 
         self.emit('all-modules-loaded')
             

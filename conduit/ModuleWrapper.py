@@ -305,7 +305,7 @@ class ModuleWrapper:
         #    self.module = self.klass(self.cached_info, *self.initargs)
         #else:
         self.module = self.klass(*self.initargs)
-        log.critical("Module instantiated: %s" % (self.module))
+        #log.critical("Module instantiated: %s" % (self.module))
         
     def is_pending(self):
         return self.module == None
