@@ -1,21 +1,16 @@
-import sys
 import os
 import pickle
-import logging
 import time
 import socket
 import locale
 import weakref
 import threading
-import gobject
-import gio
+import logging
 log = logging.getLogger("modules.iPod")
 
 import conduit
+import conduit.Exceptions as Exceptions
 import conduit.dataproviders.DataProvider as DataProvider
-import conduit.dataproviders.DataProviderCategory as DataProviderCategory
-import conduit.dataproviders.MediaPlayerFactory as MediaPlayerFactory
-import conduit.dataproviders.HalFactory as HalFactory
 import conduit.utils as Utils
 import conduit.datatypes.Note as Note
 import conduit.datatypes.Contact as Contact
@@ -529,7 +524,7 @@ class IPodFileBase:
         return str(hash(tuple(self.get_media_tags())))
 
     def get_snippet(self):
-        return "%(artist)s - %(title)s" % track
+        return "%(artist)s - %(title)s" % self.track
 
     def get_media_tags(self):
         '''

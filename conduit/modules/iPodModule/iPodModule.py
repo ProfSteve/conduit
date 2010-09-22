@@ -1,28 +1,13 @@
-import sys
 import os
-import pickle
-import logging
-import time
-import socket
-import locale
-import weakref
-import threading
-import gobject
 import gio
+import logging
 log = logging.getLogger("modules.iPod")
 
-import conduit
 import conduit.dataproviders.DataProvider as DataProvider
 import conduit.dataproviders.DataProviderCategory as DataProviderCategory
 import conduit.dataproviders.MediaPlayerFactory as MediaPlayerFactory
 import conduit.dataproviders.HalFactory as HalFactory
 import conduit.utils as Utils
-import conduit.datatypes.Note as Note
-import conduit.datatypes.Contact as Contact
-import conduit.datatypes.Event as Event
-import conduit.datatypes.File as File
-import conduit.datatypes.Audio as Audio
-import conduit.datatypes.Video as Video
 
 from gettext import gettext as _
 
@@ -97,7 +82,7 @@ class iPhoneFactory(HalFactory.HalFactory):
     
     def get_dataproviders(self, key, **props):
         """ Return a list of dataproviders for this class of device """
-        return [IPodDummy, IPodPhotoSink, iPhoneCalendarsTwoWay]
+        return [IPodDummy, IPodPhotoSink, iPhoneCalendarsTwoWay, iPhoneContactsTwoWay]
 
     def get_args(self, key, **props):
         return (props[PROPS_KEY_UUID], props[PROPS_KEY_TYPE])
