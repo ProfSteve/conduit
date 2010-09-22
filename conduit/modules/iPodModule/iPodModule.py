@@ -52,9 +52,14 @@ except ImportError:
 except locale.Error:
     errormsg = "iPod support disabled (Incorrect locale)"
 
+Utils.dataprovider_add_dir_to_path(__file__)
+from idevice import iPhoneContactsTwoWay, iPhoneCalendarsTwoWay
+
 PROPS_KEY_MOUNT = "CONDUIT_MOUNTPOINT"
 PROPS_KEY_NAME  = "CONDUIT_NAME"
 PROPS_KEY_ICON  = "CONDUIT_ICON"
+PROPS_KEY_UUID  = "CONDUIT_UUID"
+PROPS_KEY_TYPE  = "CONDUIT_TYPE"
 
 if errormsg:
     MODULES = {}
@@ -113,6 +118,8 @@ class iPhoneFactory(HalFactory.HalFactory):
                         props[PROPS_KEY_MOUNT] = root.get_path()
                         props[PROPS_KEY_NAME]  = m.get_name()
                         props[PROPS_KEY_ICON]  = "phone"
+                        props[PROPS_KEY_UUID]  = props["ID_SERIAL_SHORT"]
+                        props[PROPS_KEY_TYPE]  = props["ID_MODEL"]
                         return True
                 log.warning("iPhone not mounted by gvfs")
             else:
@@ -128,10 +135,10 @@ class iPhoneFactory(HalFactory.HalFactory):
     
     def get_dataproviders(self, key, **props):
         """ Return a list of dataproviders for this class of device """
-        return [IPodDummy, IPodPhotoSink]
+        return [IPodDummy, IPodPhotoSink, iPhoneCalendarsTwoWay]
 
     def get_args(self, key, **props):
-        return (props[PROPS_KEY_MOUNT], key)
+        return (props[PROPS_KEY_UUID], props[PROPS_KEY_TYPE])
 
 class iPodFactory(MediaPlayerFactory.MediaPlayerFactory):
 
