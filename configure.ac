@@ -22,7 +22,7 @@ GNOME_DOC_INIT
 ################################################################################
 # Requirements
 ################################################################################
-AM_PATH_PYTHON(2.4)
+AM_PATH_PYTHON(2.5)
 
 ################################################################################
 # Browser Implementation
@@ -30,9 +30,10 @@ AM_PATH_PYTHON(2.4)
 BROWSER_IMPL="webkit"
 
 AC_ARG_WITH([browser_impl],
-            AC_HELP_STRING([--with-browser-impl], [webkit (default), gtkmozembed, system]))
+            AC_HELP_STRING([--with-browser-impl], [webkit (default), system]),
+            [],
+            [with_browser_impl=webkit])
 if test "$with_browser_impl" = "webkit" || 
-   test "$with_browser_impl" = "gtkmozembed" || 
    test "$with_browser_impl" = "system"; then
         BROWSER_IMPL=$with_browser_impl
 fi
@@ -48,6 +49,12 @@ AM_CHECK_PYMOD_VERSION([goocanvas], [pygoocanvas_version], [0.9.0], , AC_MSG_ERR
 AM_CHECK_PYMOD_VERSION([dbus], [__version__], [0.80.0], , AC_MSG_ERROR([Python module dbus >= 0.80.0 required to run Conduit]))
 AM_CHECK_PYMOD_VERSION([gio], [pygio_version], [2.16.1], , AC_MSG_ERROR([Python module gio >= 2.16.1 required to run Conduit]))
 AM_CHECK_PYMOD_VERSION([gudev], [__version__], [147.1], , AC_MSG_ERROR([Python module gudev >= 147.1 required to run Conduit]))
+AM_CHECK_PYMOD_VERSION([gobject], [pygobject_version], [2.21.1], , AC_MSG_ERROR([Python module gobject >= 2.21.1 required to run Conduit]))
+AM_CHECK_PYMOD_VERSION([glib], [pyglib_version], [2.21.1], , AC_MSG_ERROR([Python module glib >= 2.21.1 required to run Conduit]))
+
+if test "$with_browser_impl" = "webkit"; then
+    AM_CHECK_PYMOD([webkit], , , AC_MSG_ERROR([Python module webkit required to run Conduit]))
+fi
 
 ################################################################################
 # DBus
@@ -170,7 +177,6 @@ conduit/modules/FspotModule/Makefile
 conduit/modules/iPodModule/Makefile
 conduit/modules/SmugMugModule/Makefile
 conduit/modules/SmugMugModule/SmugMugAPI/Makefile
-conduit/modules/GoogleModule/Makefile
 conduit/modules/ShutterflyModule/Makefile
 conduit/modules/ShutterflyModule/shutterfly/Makefile
 conduit/modules/RhythmboxModule/Makefile
