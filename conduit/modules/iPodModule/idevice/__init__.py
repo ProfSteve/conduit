@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+import time
+import datetime
 import logging
 log = logging.getLogger("modules.iPhone")
 
@@ -10,18 +12,20 @@ import conduit.Exceptions as Exceptions
 
 import conduit.datatypes.Contact as Contact
 import conduit.datatypes.Event as Event
-import conduit.datatypes.Event as Bookmark
+import conduit.datatypes.Note as Note
 
 from iPhoneDataStorage import *
 from iPhoneSyncAgent import *
 from vCardOutput import *
 from iCalendarOutput import *
 
-class iPhoneBaseTwoWay(DataProvider.TwoWay):
+class _iPhoneBaseTwoWay(DataProvider.TwoWay):
     def __init__(self, *args):
         self.agent = iPhoneSyncAgent()
         self.uuid = str(args[0])
         self.model = str(args[1])
+
+        #FIXME: This blocks. Perhaps we can do it in refresh...
         if self.agent.connect(self.uuid):
             log.info("Connected to %s with uuid %s" % (self.model, self.uuid))
         else:
@@ -54,9 +58,10 @@ class iPhoneBaseTwoWay(DataProvider.TwoWay):
 
     def _refresh(self):
         self.agent.set_data_storage(self.data_class);
-        if self.agent.start_session():
+        sync_type = self.agent.start_session()
+        if sync_type:
             self._phone_uuid = self.agent._phone.get_uuid()
-            self.agent.synchronize()
+            self.agent.synchronize(sync_type)
         self.agent.finish_session()
 
     def get_all(self):
@@ -94,9 +99,50 @@ class iPhoneBaseTwoWay(DataProvider.TwoWay):
         else:
             return self._get_data(LUID).get_rid()
 
+    def get_UID(self):
+        return "%s-%s" % (self.__class__.__name__, self.uuid)
 
+class iPhoneNotesTwoWay(_iPhoneBaseTwoWay):
+    """
+    Notes syncing for iPhone and iPod Touch
+    """
 
-class iPhoneContactsTwoWay(iPhoneBaseTwoWay):
+    _name_ = "iPhone Notes"
+    _description_ = "iPhone and iPod Touch Contact Dataprovider"
+    _category_ = conduit.dataproviders.CATEGORY_MISC
+    _module_type_ = "twoway"
+    _in_type_ = "note"
+    _out_type_ = "note"
+    _icon_ = "note"
+
+    def __init__(self, *args):
+        _iPhoneBaseTwoWay.__init__(self, *args)
+        DataProvider.TwoWay.__init__(self)
+        self.data_class = iPhoneNotesDataStorage()
+        self.storage_entity = iPhoneNoteRecordEntity
+
+    def _convert_note_datetime(self, date):
+        ODD_EPOCH = 978307200
+        #to struct_time
+        st = time.strptime(date, "%Y-%m-%d %H:%M:%S")
+        #for some reason Apple decided the epoch was on a different day?
+        seconds = time.mktime(st) + ODD_EPOCH
+        #Assumes the timestamp is in UTC. Is this correct?
+        return datetime.datetime.fromtimestamp(seconds)
+
+    def get(self, LUID):
+        DataProvider.TwoWay.get(self, LUID)
+        n = None
+        i = self._get_data(LUID)
+        if i:
+            n = Note.Note(
+                    title=i.data.subject,
+                    contents=i.data.content)
+            n.set_UID(i.id)
+            n.set_mtime(self._convert_note_datetime(i.data.dateModified))
+        return n
+
+class iPhoneContactsTwoWay(_iPhoneBaseTwoWay):
     """
     Contact syncing for iPhone and iPod Touch
     """
@@ -110,28 +156,13 @@ class iPhoneContactsTwoWay(iPhoneBaseTwoWay):
     _icon_ = "contact-new"
 
     def __init__(self, *args):
-        iPhoneBaseTwoWay.__init__(self, *args)
+        _iPhoneBaseTwoWay.__init__(self, *args)
         DataProvider.TwoWay.__init__(self)
         self.selectedGroup = None
         self.data_class = iPhoneContactsDataStorage()
         self.storage_entity = iPhoneContactRecordEntity
 
     def get(self, LUID):
-        DataProvider.TwoWay.get(self, LUID)
-        c = None
-        i = self._get_data(LUID)
-        if (None != i):
-            vcard = vCardOutput(self.data_class)
-            c = Contact.Contact()
-            c.set_from_vcard_string(vcard._to_vcard(i))
-        return c
-
-    def get_UID(self):
-        return "iPhoneContactsTwoWay"
-
-    def get(self, LUID):
-        # FIXME: This should be rewritten to translate like iPhoneCalendarTwoWay
-        # After doing that we can get rid of this method.
         DataProvider.TwoWay.get(self, LUID)
         c = None
         i = self._get_data(LUID)
@@ -158,7 +189,7 @@ class iPhoneConduitEvent(DataType.DataType):
     def set_from_ical_string(self, string):
         pass
 
-class iPhoneCalendarsTwoWay(iPhoneBaseTwoWay):
+class iPhoneCalendarsTwoWay(_iPhoneBaseTwoWay):
     """
     Contact syncing for iPhone and iPod Touch
     """
@@ -173,7 +204,7 @@ class iPhoneCalendarsTwoWay(iPhoneBaseTwoWay):
     _configurable_ = True
 
     def __init__(self, *args):
-        iPhoneBaseTwoWay.__init__(self, *args)
+        _iPhoneBaseTwoWay.__init__(self, *args)
         DataProvider.TwoWay.__init__(self)
         self.data_class = iPhoneCalendarsDataStorage()
         self.storage_entity = iPhoneEventRecordEntity
@@ -181,10 +212,6 @@ class iPhoneCalendarsTwoWay(iPhoneBaseTwoWay):
         self.update_configuration(
             _calendarId = ""
         )
-
-    def get_UID(self):
-        # FIXME: This should include the UUID of the phone as well
-        return "iPhoneCalendarsTwoWay-%s" % (self._calendarId)
 
     # Implement this for faster syncs
     #def get_changes(self):

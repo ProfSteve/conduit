@@ -12,7 +12,7 @@ import conduit.utils as Utils
 from gettext import gettext as _
 
 Utils.dataprovider_add_dir_to_path(__file__)
-from idevice import iPhoneContactsTwoWay, iPhoneCalendarsTwoWay
+from idevice import iPhoneContactsTwoWay, iPhoneCalendarsTwoWay, iPhoneNotesTwoWay
 from ipod import IPodMusicTwoWay, IPodVideoTwoWay, IPodNoteTwoWay, IPodContactsTwoWay, IPodCalendarTwoWay, IPodPhotoSink
 
 MODULES = {
@@ -82,7 +82,7 @@ class iPhoneFactory(HalFactory.HalFactory):
     
     def get_dataproviders(self, key, **props):
         """ Return a list of dataproviders for this class of device """
-        return [IPodDummy, IPodPhotoSink, iPhoneCalendarsTwoWay, iPhoneContactsTwoWay]
+        return [IPodDummy, IPodPhotoSink, iPhoneCalendarsTwoWay, iPhoneContactsTwoWay, iPhoneNotesTwoWay]
 
     def get_args(self, key, **props):
         return (props[PROPS_KEY_UUID], props[PROPS_KEY_TYPE])
@@ -153,10 +153,10 @@ class IPodDummy(DataProvider.TwoWay):
 
     def __init__(self, *args):
         DataProvider.TwoWay.__init__(self)
-        print "CONSTRUCTED ", args
-        self.args = args or "q"
+        log.debug("CONSTRUCTED: %s" % ", ".join(args))
+        self.args = args
 
     def get_UID(self):
-        print "-----".join(self.args)
+        return "-----".join(self.args)
 
 
