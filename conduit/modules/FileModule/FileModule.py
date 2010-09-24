@@ -3,6 +3,9 @@ from gettext import gettext as _
 import logging
 log = logging.getLogger("modules.File")
 
+import gio
+import glib
+
 import conduit
 import conduit.dataproviders.DataProvider as DataProvider
 import conduit.dataproviders.DataProviderCategory as DataProviderCategory
@@ -10,7 +13,8 @@ import conduit.dataproviders.File as FileDataProvider
 import conduit.dataproviders.SimpleFactory as SimpleFactory
 import conduit.dataproviders.AutoSync as AutoSync
 import conduit.utils as Utils
-import conduit.Vfs as Vfs
+import conduit.vfs as Vfs
+import conduit.vfs.File as VfsFile
 
 MODULES = {
     "FileSource" :              { "type": "dataprovider" },
@@ -82,7 +86,7 @@ class FolderTwoWay(FileDataProvider.FolderTwoWay, AutoSync.AutoSync):
     _description_ = _("Synchronize folders")
     _configurable_ = True
 
-    DEFAULT_FOLDER = "file://"+os.path.expanduser("~")
+    DEFAULT_FOLDER = "file://"+glib.get_user_special_dir(glib.USER_DIRECTORY_DOCUMENTS)
     DEFAULT_GROUP = "Home"
     DEFAULT_HIDDEN = False
     DEFAULT_COMPARE_IGNORE_MTIME = False
@@ -104,7 +108,7 @@ class FolderTwoWay(FileDataProvider.FolderTwoWay, AutoSync.AutoSync):
         )     
         AutoSync.AutoSync.__init__(self)
 
-        self._monitor = Vfs.FileMonitor()
+        self._monitor = VfsFile.MultipleFileMonitor()
         self._monitor.connect("changed", self._monitor_folder_cb)
 
         self.update_configuration(
@@ -149,4 +153,114 @@ class FolderTwoWay(FileDataProvider.FolderTwoWay, AutoSync.AutoSync):
             self.handle_modified(event_uri)
         elif event == self._monitor.MONITOR_EVENT_DELETED:
             self.handle_deleted(event_uri)
+
+class RemovableDeviceFactory(SimpleFactory.SimpleFactory):
+
+    def __init__(self, **kwargs):
+        SimpleFactory.SimpleFactory.__init__(self, **kwargs)
+        self._volumes = {}
+        self._categories = {}
+
+        self._vm = gio.volume_monitor_get()
+        self._vm.connect("mount-added",self._volume_mounted_cb)
+        self._vm.connect("mount-removed",self._volume_unmounted_cb)
+
+    def _get_mount_udi(self, gmount):
+        #The volume uuid is not always present, so use the mounted root URI instead
+        return gmount.get_root().get_uri()
+
+    def _inspect_and_add_volume(self, device_udi, gmount):
+        #Checks for preconfigured conduits, calls item_added as needed
+        mount = gmount.get_root().get_uri()
+        label = gmount.get_name()
+        self._check_preconfigured(device_udi, mount, label)
+        self.item_added(device_udi, mount=mount, label=label)
+
+    def _volume_mounted_cb(self, monitor, gmount):
+        device_udi = self._get_mount_udi(gmount)
+        log.info("Volume mounted, %s" % device_udi)
+        if device_udi:
+            self._inspect_and_add_volume(device_udi, gmount)
+
+    def _volume_unmounted_cb(self, monitor, gmount):
+        device_udi = self._get_mount_udi(gmount)
+        log.info("Volume unmounted, %s" % device_udi)
+        if device_udi and device_udi in self._volumes:
+            self.item_removed(device_udi)
+
+    def _make_class(self, udi, folder, name):
+        log.info("Creating preconfigured folder dataprovider: %s" % folder)
+        info = {    
+            "DEFAULT_FOLDER":   folder,
+            "_udi_"         :   udi
+        }
+        if name:
+            info["_name_"] = name            
+        
+        klass = type(
+                "FolderTwoWay",
+                (FolderTwoWay,),
+                info)
+        return klass
+
+    def _check_preconfigured(self, udi, mountUri, label):
+        #check for the presence of a mount/.conduit group file
+        #which describe the folder sync groups, and their names,
+        try:
+            groups = FileDataProvider.read_removable_volume_group_file(mountUri)
+        except Exception, e:
+            log.warn("Error reading volume group file: %s" % e)
+            groups = ()
+            
+        if len(groups) > 0:
+            self._volumes[udi] = []
+            for relativeUri,name in groups:
+                klass = self._make_class(
+                                    udi=udi,
+                                    #uri is relative, make it absolute
+                                    folder="%s%s" % (mountUri,relativeUri),
+                                    name=name)
+                self._volumes[udi].append(klass)
+        else:
+            klass = self._make_class(
+                                udi=udi,
+                                folder=mountUri,
+                                name=None)
+            self._volumes[udi] = [klass]
+
+    def probe(self):
+        """
+        Called after initialised to detect already connected volumes
+        """
+        for gmount in self._vm.get_mounts():
+            device_udi = self._get_mount_udi(gmount)
+            if device_udi:
+                self._inspect_and_add_volume(device_udi, gmount)
+
+    def emit_added(self, klass, initargs, category):
+        """
+        Override emit_added to allow duplictes. The custom key is based on
+        the folder and the udi to allow multiple preconfigured groups per
+        usb key
+        """
+        return SimpleFactory.SimpleFactory.emit_added(self, 
+                        klass, 
+                        initargs, 
+                        category, 
+                        customKey="%s-%s" % (klass.DEFAULT_FOLDER, klass._udi_)
+                        )
+
+    def get_category(self, udi, **kwargs):
+        if not self._categories.has_key(udi):
+            self._categories[udi] = DataProviderCategory.DataProviderCategory(
+                    kwargs['label'],
+                    "drive-removable-media",
+                    udi)
+        return self._categories[udi]
+
+    def get_dataproviders(self, udi, **kwargs):
+         return self._volumes.get(udi,())
+         
+    def get_args(self, udi, **kwargs):
+        return ()
 

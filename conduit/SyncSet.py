@@ -46,6 +46,7 @@ class SyncSet(gobject.GObject):
         # FIXME: temporary hack - need to let factories know about this factory :-\!
         self.moduleManager.emit("syncset-added", self)
         
+<<<<<<< HEAD
     def _unitialize_dataproviders(self, cond):
         for dp in cond.get_all_dataproviders():
             if dp.module:
@@ -55,6 +56,9 @@ class SyncSet(gobject.GObject):
                     log.warn("Could not uninitialize %s" % dp, exc_info=True)
                 
     def _restore_dataprovider(self, cond, wrapperKey, dpName="", dpxml="", xml_version="2", trySourceFirst=True):
+=======
+    def _restore_dataprovider(self, cond, wrapperKey, dpName="", dpxml="", trySourceFirst=True):
+>>>>>>> master
         """
         Adds the dataprovider back onto the canvas at the specifed
         location and configures it with the given settings
@@ -69,7 +73,7 @@ class SyncSet(gobject.GObject):
             elif dpxml:
                 for i in dpxml.childNodes:
                     if i.nodeType == i.ELEMENT_NODE and i.localName == "configuration":
-                        wrapper.set_configuration_xml(xmltext=i.toxml(), xmlversion=xml_version)
+                        wrapper.set_configuration_xml(xmltext=i.toxml())
         cond.add_dataprovider(wrapper, trySourceFirst)
 
     def on_dataprovider_available_unavailable(self, loader, dpw):
@@ -109,7 +113,7 @@ class SyncSet(gobject.GObject):
 
     def remove_conduit(self, cond):
         self.emit("conduit-removed", cond)
-        self._unitialize_dataproviders(cond)
+        cond.quit()
         self.conduits.remove(cond)
 
     def get_all_conduits(self):
@@ -154,5 +158,6 @@ class SyncSet(gobject.GObject):
         Calls unitialize on all dataproviders
         """
         for c in self.conduits:
-            self._unitialize_dataproviders(c)
+            c.quit()
+
 

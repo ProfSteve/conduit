@@ -19,7 +19,7 @@ log = logging.getLogger("Module")
 import conduit.dataproviders
 import conduit.ModuleWrapper as ModuleWrapper
 import conduit.Knowledge as Knowledge
-import conduit.Vfs as Vfs
+import conduit.vfs as Vfs
 
 class Error(Exception):
     pass

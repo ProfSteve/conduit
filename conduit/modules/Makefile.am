@@ -8,9 +8,9 @@ SUBDIRS = \
 	FlickrModule \
 	FspotModule \
 	iPodModule \
+	ShotwellModule \
 	SmugMugModule \
 	EvolutionModule \
-	GoogleModule \
 	ShutterflyModule \
 	RhythmboxModule \
 	N800Module \

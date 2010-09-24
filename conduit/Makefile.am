@@ -1,8 +1,7 @@
-SUBDIRS = datatypes dataproviders modules gtkui hildonui utils platform
+SUBDIRS = datatypes dataproviders modules gtkui hildonui utils platform vfs
 
 conduitbindir = $(bindir)
 conduitbin_SCRIPTS = \
-	conduit.real \
 	conduit
 
 conduitdir = $(pythondir)/conduit
@@ -28,7 +27,6 @@ conduit_PYTHON = \
 	Synchronization.py \
 	SyncSet.py \
 	TypeConverter.py \
-	Vfs.py \
 	Web.py \
 	XMLSerialization.py
 	
@@ -41,7 +39,6 @@ DISTCLEANFILES = \
 	
 EXTRA_DIST = \
 	defs.py.in \
-	conduit.real \
 	conduit
 
 clean-local:

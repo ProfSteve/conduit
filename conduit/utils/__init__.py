@@ -165,15 +165,6 @@ def dataprovider_add_dir_to_path(dataproviderfile, directory=""):
     path = os.path.abspath(path)
     sys.path.insert(0,path)
 
-def dataprovider_glade_get_widget(dataproviderfile, gladefilename, widget):
-    """
-    Gets a single gtk widget from a glad file
-    """
-    import gtk.glade
-    path = os.path.join(dataproviderfile, "..", gladefilename)
-    path = os.path.abspath(path)
-    return gtk.glade.XML(path, widget)
-
 def run_dialog(dialog, window=None):
     """
     Runs a given dialog, and makes it transient for
@@ -297,7 +288,7 @@ def datetime_from_timestamp(t):
         raise Exception("Timestamp must be a number")
 
     if t < 0:
-        raise Exception("Timestamps before 1970 are not valid")
+        raise Exception("Timestamps before 1970 are not valid (was %s)" % t)
 
     return datetime.datetime.fromtimestamp(long(t))
 
@@ -313,7 +304,7 @@ def datetime_get_timestamp(d):
 
     f = time.mktime(d.timetuple())
     if f < 0:
-        raise Exception("Timestamps before 1970 are not valid")
+        raise Exception("Timestamps before 1970 are not valid (was %s)" % f)
 
     return long(f)
 
@@ -406,4 +397,17 @@ def exec_command_and_return_result(cmd, arg):
             return None
     except OSError:
         return None
+
+def get_system_data_dirs():
+    """
+    Returns the system data dirs as specified by the XDG spec. 
+    http://standards.freedesktop.org/basedir-spec/latest/
+
+    This function should be removed once g_get_system_data_dirs () is wrapped
+    """
+    data_dirs = os.getenv("XDG_DATA_DIRS")
+    if data_dirs:
+        return data_dirs.split(":")
+    else:
+        return ("/usr/local/share/", "/usr/share/")
 

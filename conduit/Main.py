@@ -42,9 +42,7 @@ class Application(dbus.service.Object):
         self.splash = None
         self.gui = None
         self.statusIcon = None
-        self.dbus = None
         self.guiSyncSet = None
-        self.dbusSyncSet = None
         self.uiLib = None
 
         gobject.set_application_name("Conduit")
@@ -128,7 +126,7 @@ class Application(dbus.service.Object):
 
         log.info("Conduit v%s Installed: %s" % (conduit.VERSION, conduit.IS_INSTALLED))
         log.info("Python: %s" % sys.version)
-        log.info("Platform Implementations: %s,%s,%s" % (conduit.FILE_IMPL,conduit.BROWSER_IMPL, conduit.SETTINGS_IMPL))
+        log.info("Platform Implementations: %s,%s" % (conduit.BROWSER_IMPL, conduit.SETTINGS_IMPL))
         if settings:
             log.info("Settings have been overridden: %s" % settings)
         
@@ -189,11 +187,21 @@ class Application(dbus.service.Object):
                         syncManager=conduit.GLOBALS.syncManager,
                         xmlSettingFilePath=self.settingsFile
                         )
+
         self.dbusSyncSet = SyncSet(
                     'dbus',
                     moduleManager=conduit.GLOBALS.moduleManager,
                     syncManager=conduit.GLOBALS.syncManager
                     )
+
+        #Dbus view...
+        conduit.GLOBALS.dbus = DBusInterface(
+                        conduitApplication=self,
+                        moduleManager=conduit.GLOBALS.moduleManager,
+                        typeConverter=conduit.GLOBALS.typeConverter,
+                        syncManager=conduit.GLOBALS.syncManager,
+                        guiSyncSet=self.guiSyncSet
+                        )
 
         #Set the view models
         if options.build_gui:
@@ -201,19 +209,10 @@ class Application(dbus.service.Object):
             if not options.iconify:
                 self.ShowGUI()
         
-        #Dbus view...
-        self.dbus = DBusInterface(
-                        conduitApplication=self,
-                        moduleManager=conduit.GLOBALS.moduleManager,
-                        typeConverter=conduit.GLOBALS.typeConverter,
-                        syncManager=conduit.GLOBALS.syncManager,
-                        guiSyncSet=self.guiSyncSet,
-                        dbusSyncSet=self.dbusSyncSet
-                        )
-        
         if self.statusIcon:
-            self.dbusSyncSet.connect("conduit-added", self.statusIcon.on_conduit_added)
-            self.dbusSyncSet.connect("conduit-removed", self.statusIcon.on_conduit_removed)
+            dbusSyncSet = conduit.GLOBALS.dbus.get_syncset()
+            dbusSyncSet.connect("conduit-added", self.statusIcon.on_conduit_added)
+            dbusSyncSet.connect("conduit-removed", self.statusIcon.on_conduit_removed)
 
         #hide the splash screen
         self.HideSplash()
@@ -221,6 +220,9 @@ class Application(dbus.service.Object):
             conduit.GLOBALS.mainloop.run()
         except KeyboardInterrupt:
             self.Quit()
+
+    def get_syncset(self):
+        return self.guiSyncSet
 
     @dbus.service.method(APPLICATION_DBUS_IFACE, in_signature='', out_signature='b')
     def HasGUI(self):
@@ -275,40 +277,42 @@ class Application(dbus.service.Object):
 
     @dbus.service.method(APPLICATION_DBUS_IFACE, in_signature='', out_signature='')
     def Quit(self):
-        try:
-            #Hide the GUI first, so we feel responsive    
-            log.info("Closing application")
-            if self.gui != None:
-                self.gui.mainWindow.hide()
-                if conduit.GLOBALS.settings.get("save_on_exit") == True:
-                    self.gui.save_settings(None)
+        #Hide the GUI first, so we feel responsive    
+        log.info("Closing application")
+        if self.gui != None:
+            self.gui.mainWindow.hide()
+            if conduit.GLOBALS.settings.get("save_on_exit") == True:
+                self.gui.save_settings(None)
 
-            #Cancel all syncs
-            self.Cancel()
+        #Cancel all syncs
+        self.Cancel()
 
-            #give the dataprovider factories time to shut down
-            log.info("Closing dataprovider factories")
-            conduit.GLOBALS.moduleManager.quit()
-            
-            #unitialize all dataproviders
-            log.info("Unitializing dataproviders")
-            self.guiSyncSet.quit()
-            log.info("GUI Quit")
-            self.dbusSyncSet.quit()
-            log.info("DBus Quit")
+        #give the dataprovider factories time to shut down
+        log.info("Closing dataprovider factories")
+        conduit.GLOBALS.moduleManager.quit()
+        
+        #unitialize all dataproviders
+        log.info("Unitializing dataproviders")
+        for ss in conduit.GLOBALS.get_all_syncsets():
+            ss.quit()
 
-            #Save the mapping DB
-            conduit.GLOBALS.mappingDB.save()
-            conduit.GLOBALS.mappingDB.close()
+        #Close any open DBus resources. Typically calling syncset.quit() will be 
+        #sufficient, except if a nasty DBus user has been creating Conduits
+        #that are not included in any syncset. In that case they
+        #will not be freed when syncset.quit() is called. dbus.quit()
+        #calls quit() on all such conduits
+        log.info("Closing DBus interface")
+        conduit.GLOBALS.dbus.quit()
 
-            #Save the application settings
-            conduit.GLOBALS.settings.save()
-            
-            log.info("Main Loop Quitting")
-            conduit.GLOBALS.mainloop.quit()
-        except:
-            log.error("Error exiting. Terminating application. %s" % traceback.format_exc())
-            sys.exit(-1)
+        #Save the mapping DB
+        conduit.GLOBALS.mappingDB.save()
+        conduit.GLOBALS.mappingDB.close()
+
+        #Save the application settings
+        conduit.GLOBALS.settings.save()
+        
+        log.info("Main Loop Quitting")
+        conduit.GLOBALS.mainloop.quit()
 
     @dbus.service.method(APPLICATION_DBUS_IFACE, in_signature='', out_signature='')
     def Synchronize(self):

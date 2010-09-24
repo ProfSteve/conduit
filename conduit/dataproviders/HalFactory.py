@@ -1,84 +1,74 @@
 import gobject
-import dbus
+import gudev
+
 import logging
 log = logging.getLogger("dataproviders.HalFactory")
 
 import conduit.utils as Utils
+import conduit.utils.UDev as UDev
 import conduit.dataproviders.SimpleFactory as SimpleFactory
 
+log.info("Module Information: %s" % Utils.get_module_information(gudev, "__version__"))
+
 class HalFactory(SimpleFactory.SimpleFactory):
+    """
+    Base class for Factories that wish to be notified upon changes to
+    the udev subsystem(s) specified in the UDEV_SUBSYSTEMS class attribute
+
+    HalFactory.UDEV_SUBSYSTEMS is a list of strings
+    """
+
+    UDEV_SUBSYSTEMS = None
 
     def __init__(self, **kwargs):
         SimpleFactory.SimpleFactory.__init__(self, **kwargs)
 
-        # Connect to system HAL
-        self.bus = dbus.SystemBus()
-        self.hal_obj = self.bus.get_object("org.freedesktop.Hal", "/org/freedesktop/Hal/Manager")
-        self.hal = dbus.Interface(self.hal_obj, "org.freedesktop.Hal.Manager")
+        assert hasattr(self.UDEV_SUBSYSTEMS, "__iter__")
 
-        # Hookup signals
-        self.hal.connect_to_signal("DeviceAdded", self._device_added)
-        self.hal.connect_to_signal("DeviceRemoved", self._device_removed)
-        self.hal.connect_to_signal("NewCapability", self._new_capability)
+        self.gudev = UDev.UDevHelper(*self.UDEV_SUBSYSTEMS)
+        self.gudev.connect("uevent", self._on_uevent)
 
-    def _maybe_new(self, device_udi):
-        def check_interesting(props):
-            if self.is_interesting(device_udi, props):
-                self.item_added(device_udi, **props)
-        self._get_properties(device_udi, handler = check_interesting)
+    def _print_device(self, device):
+        return
 
-    def _device_added(self, device_udi, *args):
-        self._maybe_new(device_udi)
+        print "subsystem", device.get_subsystem()
+        print "devtype", device.get_devtype()
+        print "name", device.get_name()
+        print "number", device.get_number()
+        print "sysfs_path:", device.get_sysfs_path()
+        print "driver:", device.get_driver()
+        print "action:", device.get_action()
+        print "seqnum:", device.get_seqnum()
+        print "device type:", device.get_device_type()
+        print "device number:", device.get_device_number()
+        print "device file:", device.get_device_file()
+        print "device file symlinks:", ", ".join(device.get_device_file_symlinks())
+        print "device keys:", ", ".join(device.get_property_keys())
+        for device_key in device.get_property_keys():
+            print "   device property %s: %s"  % (device_key, device.get_property(device_key))
 
-    def _new_capability(self, device_udi, *args):
-        if not device_udi in self.items.keys():
-            self._maybe_new(device_udi)
-
-    def _device_removed(self, device_udi):
-        self.item_removed(device_udi)
-
-    def _get_properties(self, device, handler):
-        buf = {}
-        #log.critical("Properties for: %s" % device)
-        def properties_handler(props):
-            log.critical("Properties for: %s" % device)
-            for key, value in props.items():
-                buf[str(key)] = value
-            handler(buf)
-        def error_handler(excp):
-            log.warn("Could not get HAL properties for %s" % device_udi)
-        device_dbus_obj = self.bus.get_object("org.freedesktop.Hal" ,device)
-        if handler:
-            device_dbus_obj.GetAllProperties(dbus_interface="org.freedesktop.Hal.Device", 
-                reply_handler = properties_handler, error_handler = error_handler)
+    def _on_uevent(self, client, action, device):
+        self._print_device(device)
+        if action == "add":
+            log.debug("Device added")
+            self._maybe_new(device)
+        elif action == "change":
+            log.debug("Device changed")
+            self._maybe_new(device)
+        elif action == "remove":
+            log.debug("Device removed")
+            sysfs_path = device.get_sysfs_path()
+            self.item_removed(sysfs_path)
         else:
-            for x, y in device_dbus_obj.GetAllProperties(dbus_interface="org.freedesktop.Hal.Device").items():
-                #DBus *still* does not marshal dbus.String to str correctly,
-                #so we force it to
-                buf[str(x)] = y
-            return buf
-        '''
-        try:
-            device_dbus_obj = self.bus.get_object("org.freedesktop.Hal" ,device)
-            for x, y in device_dbus_obj.GetAllProperties(dbus_interface="org.freedesktop.Hal.Device", 
-                    reply_hanlder = properties_handler).items():
-                #DBus *still* does not marshal dbus.String to str correctly,
-                #so we force it to
-                buf[str(x)] = y
-        except:
-            log.warn("Could not get HAL properties for %s" % device_udi)
-        return buf
-        '''
+            log.info("Device unknown action: %s" % action)
+
+    def _maybe_new(self, device):
+        props = self.gudev.get_device_properties(device)
+        sysfs_path = device.get_sysfs_path()
+        if self.is_interesting(sysfs_path, props):
+            self.item_added(sysfs_path, **props)
 
     def probe(self):
-        """
-        Enumerate HAL for any entries of interest
-        """
-        #devices = self.hal.GetAllDevices()
-        
-        for device in self.hal.GetAllDevices():
-            self._maybe_new(str(device))
-
-    def get_args(self, udi, **kwargs):
-        return (udi,)
+        for d in self.gudev.query_by_subsystems():
+            self._maybe_new(d)
 

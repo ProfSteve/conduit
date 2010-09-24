@@ -29,7 +29,7 @@ gobject.threads_init()
 # Global Constants
 ################################################################################
 DIRECTORY = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-IS_INSTALLED = not os.path.exists(os.path.join(DIRECTORY,"ChangeLog"))
+IS_INSTALLED = not os.path.exists(os.path.join(DIRECTORY,"NEWS"))
 IS_DEVELOPMENT_VERSION = True
 
 #test the existance of some compulsory directories
@@ -47,14 +47,12 @@ if IS_INSTALLED:
     if not PYTHONDIR in sys.path:
         sys.path.insert(0, PYTHONDIR)
 else:
-    VERSION =                   "0.3.17"
+    VERSION =                   "0.3.18"
     LOCALE_DIR =                os.path.join(DIRECTORY, "po")
     SHARED_DATA_DIR =           os.path.join(DIRECTORY, "data")
     SHARED_MODULE_DIR =         os.path.join(DIRECTORY, "conduit", "modules")
     DESKTOP_FILE_DIR =          os.path.join(DIRECTORY, "data")
-                                #{GIO, Python}
-    FILE_IMPL =                 os.environ.get("CONDUIT_FILE_IMPL","GIO")
-                                #{gtkmozembed, webkit, system}
+                                #{webkit, system}
     BROWSER_IMPL =              os.environ.get("CONDUIT_BROWSER_IMPL","webkit")
                                 #{GConf,Python}
     SETTINGS_IMPL =             os.environ.get("CONDUIT_SETTINGS_IMPL","GConf")

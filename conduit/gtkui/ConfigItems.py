@@ -8,13 +8,12 @@ import sys
 
 import gobject
 import gtk
-import gtk.glade
 import logging
 log = logging.getLogger("gtkui.Config")
 
 from gettext import gettext as _
 
-import conduit.Vfs as Vfs
+import conduit.vfs as Vfs
 
 class Error(Exception):
     """Base exception for all exceptions raised in this module."""

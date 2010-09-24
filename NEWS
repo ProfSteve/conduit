@@ -1,6 +1,25 @@
+NEW in 0.3.18:
+==============
+
+Bugs fixed:
+ 614173, 626217, 626572, 584450, 589704, 582530, 568798, 564275, 583668
+
 NEW in 0.3.17:
 ==============
- * Fixed 575000, why am I asked to "name" folders in the "files" data provider?
+ * Fix dbus and configuration, install eog and nautilus extensions by default
+ * Port to GtkBuilder
+ * Use system gdata
+ * UI improvements for hints
+ * Autostart management from UI is improved
+ * Use system installed flickrapi >= 1.2
+ * Update pyfacebook
+ * DB stability improvements
+ * Fix configuration UI
+ * Many translation updates
+ * Many many bug fixes
+ * Remove gnomevfs support
+ * Support for Mac OSX added to Wallpaper Module
+ * Support for Mac OSX added to Firefox 3 Module
 
 NEW in 0.3.16:
 ==============

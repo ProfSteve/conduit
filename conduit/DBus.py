@@ -252,14 +252,17 @@ class ConduitDBusItem(DBusItem):
         self._print("SinkConfigure")
         if len(self.conduit.datasinks) != 1:
             raise ConduitException("Simple exporter must only have one sink")
+
+        dataprovider = self.conduit.datasinks[0]
+
         #FIXME Hard-coded GtkUI
         from conduit.gtkui.WindowConfigurator import WindowConfigurator
         from conduit.gtkui.ConfigContainer import ConfigContainer
         configurator = WindowConfigurator(None)
-        container = self.dataprovider.module.get_config_container(
+        container = dataprovider.module.get_config_container(
                         configContainerKlass=ConfigContainer,
-                        name=self.dataprovider.get_name(),
-                        icon=self.dataprovider.get_icon(),
+                        name=dataprovider.get_name(),
+                        icon=dataprovider.get_icon(),
                         configurator=configurator
         )
         configurator.set_containers([container])
@@ -461,7 +464,7 @@ class SyncSetDBusItem(DBusItem):
         self.syncSet.restore_from_xml(os.path.abspath(path))
 
 class DBusInterface(DBusItem):
-    def __init__(self, conduitApplication, moduleManager, typeConverter, syncManager, guiSyncSet, dbusSyncSet):
+    def __init__(self, conduitApplication, moduleManager, typeConverter, syncManager, guiSyncSet):
         DBusItem.__init__(self, iface=APPLICATION_DBUS_IFACE, path="/")
 
         self.conduitApplication = conduitApplication
@@ -487,13 +490,12 @@ class DBusInterface(DBusItem):
                 EXPORTED_OBJECTS[new.get_path()] = new
         
         #export the syncsets
-        if guiSyncSet != None:
-            new = SyncSetDBusItem(guiSyncSet, "gui")
-            EXPORTED_OBJECTS[new.get_path()] = new
+        new = SyncSetDBusItem(guiSyncSet, "gui")
+        EXPORTED_OBJECTS[new.get_path()] = new
 
-        if dbusSyncSet != None:
-            new = SyncSetDBusItem(dbusSyncSet, "dbus")
-            EXPORTED_OBJECTS[new.get_path()] = new
+        self.sync_set = SyncSet.SyncSet(moduleManager,syncManager)
+        new = SyncSetDBusItem(self.sync_set, "dbus")
+        EXPORTED_OBJECTS[new.get_path()] = new
             
         #export myself
         EXPORTED_OBJECTS[self.get_path()] = self
@@ -524,7 +526,7 @@ class DBusInterface(DBusItem):
                         )
             new = SyncSetDBusItem(ss, name)
             EXPORTED_OBJECTS[new.get_path()] = new
-            return new        
+            return new
     
     def _get_dataprovider(self, key):
         """
@@ -570,6 +572,23 @@ class DBusInterface(DBusItem):
 
     def _on_dataprovider_unavailable(self, loader, dataprovider):
         self.DataproviderUnavailable(dataprovider.get_key())
+
+    def quit(self):
+        #need to call quit() on all sync sets or conduits as they may have been 
+        #created here...
+        for path in EXPORTED_OBJECTS:
+            if path.startswith("/syncset/"):
+                EXPORTED_OBJECTS[path].syncSet.quit()
+            elif path.startswith("/conduit/"):
+                EXPORTED_OBJECTS[path].conduit.quit()
+
+    def get_syncset(self):
+        return self.sync_set
+
+    def get_all_syncsets(self):
+        return [EXPORTED_OBJECTS[path].syncSet
+                    for path in EXPORTED_OBJECTS if path.startswith("/syncset/")
+        ]
 
     @dbus.service.signal(APPLICATION_DBUS_IFACE, signature='s')
     def DataproviderAvailable(self, key):

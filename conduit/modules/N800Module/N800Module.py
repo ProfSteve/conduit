@@ -18,12 +18,12 @@ import conduit.dataproviders.VolumeFactory as VolumeFactory
 import conduit.dataproviders.DataProviderCategory as DataProviderCategory
 import conduit.dataproviders.File as FileDataProvider
 import conduit.Exceptions as Exceptions
-import conduit.Vfs as Vfs
+import conduit.vfs as Vfs
 
 from gettext import gettext as _
 
 MODULES = {
-    "N800Factory" : { "type": "dataprovider-factory" },
+#    "N800Factory" : { "type": "dataprovider-factory" },
 }
 
 

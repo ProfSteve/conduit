@@ -1,4 +1,4 @@
-AC_INIT([conduit], [0.3.17],[john.stowers@gmail.com],[conduit])
+AC_INIT([conduit], [0.3.18],[john.stowers@gmail.com],[conduit])
 AM_INIT_AUTOMAKE([1.9])
 AC_CONFIG_SRCDIR(conduit/__init__.py)
 AC_CONFIG_MACRO_DIR([m4])
@@ -22,21 +22,7 @@ GNOME_DOC_INIT
 ################################################################################
 # Requirements
 ################################################################################
-AM_PATH_PYTHON(2.4)
-
-################################################################################
-# File Implementation
-################################################################################
-FILE_IMPL="GIO"
-
-AC_ARG_WITH([file_impl],
-            AC_HELP_STRING([--with-file-impl], [GIO (default), Python]))
-
-if test "$with_file_impl" = "Python" ; then
-	FILE_IMPL=$with_file_impl
-fi
-
-AC_SUBST(FILE_IMPL)
+AM_PATH_PYTHON(2.5)
 
 ################################################################################
 # Browser Implementation
@@ -44,9 +30,10 @@ AC_SUBST(FILE_IMPL)
 BROWSER_IMPL="webkit"
 
 AC_ARG_WITH([browser_impl],
-            AC_HELP_STRING([--with-browser-impl], [webkit (default), gtkmozembed, system]))
+            AC_HELP_STRING([--with-browser-impl], [webkit (default), system]),
+            [],
+            [with_browser_impl=webkit])
 if test "$with_browser_impl" = "webkit" || 
-   test "$with_browser_impl" = "gtkmozembed" || 
    test "$with_browser_impl" = "system"; then
         BROWSER_IMPL=$with_browser_impl
 fi
@@ -60,9 +47,13 @@ AM_CHECK_PYMOD([vobject], , , AC_MSG_ERROR([Python module vobject required to ru
 AM_CHECK_PYMOD([dateutil], , , AC_MSG_ERROR([Python module dateutil required to run Conduit]))
 AM_CHECK_PYMOD_VERSION([goocanvas], [pygoocanvas_version], [0.9.0], , AC_MSG_ERROR([Python module goocanvas >= 0.9.0 required to run Conduit]))
 AM_CHECK_PYMOD_VERSION([dbus], [__version__], [0.80.0], , AC_MSG_ERROR([Python module dbus >= 0.80.0 required to run Conduit]))
+AM_CHECK_PYMOD_VERSION([gio], [pygio_version], [2.16.1], , AC_MSG_ERROR([Python module gio >= 2.16.1 required to run Conduit]))
+AM_CHECK_PYMOD_VERSION([gudev], [__version__], [147.1], , AC_MSG_ERROR([Python module gudev >= 147.1 required to run Conduit]))
+AM_CHECK_PYMOD_VERSION([gobject], [pygobject_version], [2.21.1], , AC_MSG_ERROR([Python module gobject >= 2.21.1 required to run Conduit]))
+AM_CHECK_PYMOD_VERSION([glib], [pyglib_version], [2.21.1], , AC_MSG_ERROR([Python module glib >= 2.21.1 required to run Conduit]))
 
-if test $FILE_IMPL = "GIO" ; then
-	AM_CHECK_PYMOD_VERSION([gio], [pygio_version], [2.16.1], , AC_MSG_ERROR([Python module gio >= 2.16.1 required to run Conduit]))
+if test "$with_browser_impl" = "webkit"; then
+    AM_CHECK_PYMOD([webkit], , , AC_MSG_ERROR([Python module webkit required to run Conduit]))
 fi
 
 ################################################################################
@@ -164,6 +155,7 @@ Makefile
 conduit/defs.py
 conduit/Makefile
 conduit/utils/Makefile
+conduit/vfs/Makefile
 conduit/datatypes/Makefile
 conduit/dataproviders/Makefile
 conduit/gtkui/Makefile
@@ -179,29 +171,14 @@ conduit/modules/EvolutionModule/Makefile
 conduit/modules/FileModule/Makefile
 conduit/modules/FeedModule/Makefile
 conduit/modules/FlickrModule/Makefile
-conduit/modules/FlickrModule/flickrapi/Makefile
 conduit/modules/FacebookModule/Makefile
 conduit/modules/FacebookModule/pyfacebook/Makefile
 conduit/modules/FspotModule/Makefile
 conduit/modules/iPodModule/Makefile
 conduit/modules/SmugMugModule/Makefile
 conduit/modules/SmugMugModule/SmugMugAPI/Makefile
-conduit/modules/GoogleModule/Makefile
-conduit/modules/GoogleModule/atom/Makefile
-conduit/modules/GoogleModule/gdata/Makefile
-conduit/modules/GoogleModule/gdata/apps/Makefile
-conduit/modules/GoogleModule/gdata/base/Makefile
-conduit/modules/GoogleModule/gdata/blogger/Makefile
-conduit/modules/GoogleModule/gdata/calendar/Makefile
-conduit/modules/GoogleModule/gdata/codesearch/Makefile
-conduit/modules/GoogleModule/gdata/contacts/Makefile
-conduit/modules/GoogleModule/gdata/docs/Makefile
-conduit/modules/GoogleModule/gdata/exif/Makefile
-conduit/modules/GoogleModule/gdata/geo/Makefile
-conduit/modules/GoogleModule/gdata/media/Makefile
-conduit/modules/GoogleModule/gdata/photos/Makefile
-conduit/modules/GoogleModule/gdata/spreadsheet/Makefile
-conduit/modules/GoogleModule/gdata/youtube/Makefile
+conduit/modules/ShotwellModule/Makefile
+conduit/modules/ShotwellModule/shotwell/Makefile
 conduit/modules/ShutterflyModule/Makefile
 conduit/modules/ShutterflyModule/shutterfly/Makefile
 conduit/modules/RhythmboxModule/Makefile
@@ -244,7 +221,6 @@ echo
 echo $PACKAGE v$VERSION
 echo
 echo Prefix............... : $prefix
-echo File Implementation.. : $FILE_IMPL
 echo Browser Implementation: $BROWSER_IMPL
 echo Dbus Services Dir.... : $DBUS_SERVICES_DIR
 echo Nautilus Extension... : $enable_nautilus_extension

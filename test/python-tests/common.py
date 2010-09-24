@@ -23,7 +23,6 @@ conduit.IS_INSTALLED =              False
 conduit.IS_DEVELOPMENT_VERSION =    True
 conduit.SHARED_DATA_DIR =           os.path.join(base_path,"data")
 conduit.SHARED_MODULE_DIR =         os.path.join(base_path,"conduit","modules")
-conduit.FILE_IMPL =                 os.environ.get("CONDUIT_FILE_IMPL","GIO")
 conduit.BROWSER_IMPL =              os.environ.get("CONDUIT_BROWSER_IMPL","system")
 conduit.SETTINGS_IMPL =             os.environ.get("CONDUIT_SETTINGS_IMPL","GConf")
 conduit.GLOBALS.settings =          Settings.Settings()
@@ -33,7 +32,7 @@ import conduit.Logging as Logging
 Logging.enable_debugging()
 
 import conduit.utils as Utils
-import conduit.Vfs as Vfs
+import conduit.vfs as Vfs
 import conduit.Module as Module
 import conduit.TypeConverter as TypeConverter
 import conduit.Synchronization as Synchronization
@@ -46,25 +45,39 @@ import conduit.MappingDB as MappingDB
 from conduit.datatypes import File, Note, Setting, Contact, Email, Text, Video, Photo, Audio, Event, Bookmark
 from conduit.modules import TestModule
 
+def cleanup_threads():
+    #Keep in sync with conduit.Main
 
+    #Cancel all syncs
+    conduit.GLOBALS.cancelled = True
+
+    #cancel all conduits
+    if conduit.GLOBALS.syncManager:
+        conduit.GLOBALS.syncManager.cancel_all()
+
+    #give the dataprovider factories time to shut down
+    if conduit.GLOBALS.moduleManager:
+        conduit.GLOBALS.moduleManager.quit()
+
+    #Save the mapping DB
+    if conduit.GLOBALS.mappingDB:
+        conduit.GLOBALS.mappingDB.save()
+        conduit.GLOBALS.mappingDB.close()
 
 def is_online():
-    try:    
-        return os.environ["CONDUIT_ONLINE"] == "TRUE"
-    except KeyError:
-        return False
+    return os.environ.get("CONDUIT_ONLINE") == "TRUE"
         
 def is_interactive():
-    try:    
-        return os.environ["CONDUIT_INTERACTIVE"] == "TRUE"
-    except KeyError:
-        return False
+    return os.environ.get("CONDUIT_INTERACTIVE") == "TRUE"
 
-def ok(message, code, die=True):
+def ok(message, code, die=None):
+    if die == None:
+        die = os.environ.get("CONDUIT_TESTS_FATAL") == "TRUE"
     if type(code) == int:
         if code == -1:
             print "[FAIL] %s" % message
             if die:
+                cleanup_threads()
                 sys.exit()
             return False
         else:
@@ -74,6 +87,7 @@ def ok(message, code, die=True):
         if code == False:
             print "[FAIL] %s" % message
             if die:
+                cleanup_threads()
                 sys.exit()
             return False
         else:
@@ -87,10 +101,12 @@ def skip(msg="no reason given"):
         elif not is_interactive():
             msg = "interactive tests disabled"
     print "[SKIPPED] (%s)" % msg
+    cleanup_threads()
     sys.exit()
 
 def finished():
     print "[FINISHED]"
+    cleanup_threads()
     sys.exit()
 
 def wait_seconds(s):
@@ -482,6 +498,10 @@ class SimpleTest(object):
                     data,
                     "photo"
                     )
+
+    def finished(self):
+        cleanup_threads()
+        self.sync_set.quit()
         
 class SimpleSyncTest(SimpleTest):
     """
@@ -557,7 +577,8 @@ class SimpleSyncTest(SimpleTest):
     def get_source_count(self):
         try:
             self.source.module.refresh()
-        except Exception: pass
+        except Exception, e:
+            print e
 
         return self.source.module.get_num_items()
 

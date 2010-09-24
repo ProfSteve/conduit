@@ -1,13 +1,10 @@
 conduitdir = $(pythondir)/conduit/platform
 conduit_PYTHON = \
 	__init__.py				\
-	FileGio.py				\
-	FilePython.py			\
 	SettingsGConf.py		\
 	SettingsPython.py		\
 	WebBrowserWebkit.py		\
-	WebBrowserSystem.py		\
-	WebBrowserMozilla.py
+	WebBrowserSystem.py
 	
 clean-local:
 	rm -rf *.pyc *.pyo

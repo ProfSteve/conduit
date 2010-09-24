@@ -367,14 +367,14 @@ class DataProviderBase(gobject.GObject):
                         callable(getattr(self, c, None)))
                         )
 
-    def set_configuration_xml(self, xmltext, xmlversion):
+    def set_configuration_xml(self, xmltext):
         """
         Restores applications settings from XML
 
         @param xmltext: xml representation of settings
         @type xmltext: C{string}
         """
-        xml_configuration = XMLSerialization.Settings(xmltext, xmlversion)
+        xml_configuration = XMLSerialization.Settings(xmltext)
         settings = {}
         for name, value in xml_configuration:
             settings[name] = value
@@ -568,6 +568,10 @@ class DataProviderFactory(gobject.GObject):
         gobject.GObject.__init__(self)
 
     def emit_added(self, klass, initargs, category, customKey=None):
+        """
+        Emits the dataprovider-added signal for the given class with the
+        given conctruction arguments
+        """
         dpw = ModuleWrapper.ModuleWrapper(   
                     klass=klass,
                     initargs=initargs,
@@ -580,10 +584,17 @@ class DataProviderFactory(gobject.GObject):
         return key
 
     def emit_removed(self, key):
+        """
+        Emits the dataprovider-removed signal
+        """
         log.debug("DataProviderFactory %s: Emitting dataprovider-removed for %s" % (self, key))
         self.emit("dataprovider-removed", key)
 
     def probe(self):
+        """
+        Search for appropriate connected devices, calling emit_added or
+        emit_removed for each device
+        """
         pass
 
     def quit(self):
