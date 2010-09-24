@@ -46,7 +46,6 @@ class SyncSet(gobject.GObject):
         # FIXME: temporary hack - need to let factories know about this factory :-\!
         self.moduleManager.emit("syncset-added", self)
         
-<<<<<<< HEAD
     def _unitialize_dataproviders(self, cond):
         for dp in cond.get_all_dataproviders():
             if dp.module:
@@ -56,9 +55,6 @@ class SyncSet(gobject.GObject):
                     log.warn("Could not uninitialize %s" % dp, exc_info=True)
                 
     def _restore_dataprovider(self, cond, wrapperKey, dpName="", dpxml="", xml_version="2", trySourceFirst=True):
-=======
-    def _restore_dataprovider(self, cond, wrapperKey, dpName="", dpxml="", trySourceFirst=True):
->>>>>>> master
         """
         Adds the dataprovider back onto the canvas at the specifed
         location and configures it with the given settings

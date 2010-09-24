@@ -47,7 +47,6 @@ for module in (gettext,):
     if hasattr(module, 'bind_textdomain_codeset'):
         module.bind_textdomain_codeset('conduit','UTF-8')
 
-<<<<<<< HEAD
 class Error(Exception):
     ''' Generic error for the UI'''
     pass
@@ -518,7 +517,6 @@ class MainWindow:
             gtk.icon_theme_get_default().prepend_search_path(i)
         gtk.window_set_default_icon_name("conduit")
 
-<<<<<<< HEAD
         self.conduitApplication = conduitApplication
         self.gladeFile = os.path.join(conduit.SHARED_DATA_DIR, "conduit_ui.glade")
         self.widgets = gtk.Builder()

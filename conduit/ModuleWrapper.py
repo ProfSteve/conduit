@@ -209,7 +209,7 @@ class ModuleWrapper:
                     info = gtk.icon_theme_get_default().lookup_icon(self.icon_name, size, gtk.ICON_LOOKUP_GENERIC_FALLBACK)
                     self.icon[size] = info.load_icon()
                     self.icon_path = info.get_filename()
-                else:
+                except:
                     self.icon[size] = None
                     log.warn("Could not load icon %s for %s" % (self.icon_name, self.name))
                     #Last resort: Try the non icon-naming-spec compliant icon
