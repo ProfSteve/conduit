@@ -1,14 +1,14 @@
-# translation of eu.po to Basque
+# translation of eu_to_be_translate.po to Basque
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2009, 2010.
 msgid ""
 msgstr ""
-"Project-Id-Version: eu\n"
+"Project-Id-Version: eu_to_be_translate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-15 16:28+0100\n"
-"PO-Revision-Date: 2010-03-15 16:30+0100\n"
+"POT-Creation-Date: 2010-10-07 23:35+0200\n"
+"PO-Revision-Date: 2010-10-07 23:41+0200\n"
 "Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>\n"
 "Language-Team: Basque <itzulpena@euskalgnu.org>\n"
 "MIME-Version: 1.0\n"
@@ -24,6 +24,142 @@ msgstr "Conduit sinkronizatzailea"
 #: ../data/conduit.desktop.in.in.h:2
 msgid "Synchronization for GNOME"
 msgstr "Sinkronizazioa GNOMErako"
+
+#: ../data/conduit.ui.h:1
+msgid "Always Up-To-Date"
+msgstr "Beti eguneratuta"
+
+#: ../data/conduit.ui.h:2
+msgid "Ask Me What to Do"
+msgstr "Galdetu beti zer egin"
+
+#: ../data/conduit.ui.h:3
+msgid "Ask me what to do"
+msgstr "Galdetu beti zer egin"
+
+#: ../data/conduit.ui.h:4
+msgid "Compare"
+msgstr "Konparatu"
+
+#: ../data/conduit.ui.h:5
+msgid "Conduit Preferences"
+msgstr "Conduit-en hobespenak"
+
+#: ../data/conduit.ui.h:6
+msgid "Configuration"
+msgstr "Konfigurazioa"
+
+#: ../data/conduit.ui.h:7
+msgid "Conflict Options"
+msgstr "Gatazken aukerak"
+
+#: ../data/conduit.ui.h:8
+msgid "Conflicts"
+msgstr "Gatazkak"
+
+#: ../data/conduit.ui.h:9
+msgid "Data Conversions"
+msgstr "Datuen bihurketak"
+
+#: ../data/conduit.ui.h:10
+msgid "Data Providers"
+msgstr "Datuen hornitzaileak"
+
+#: ../data/conduit.ui.h:11
+msgid "Default Synchronization Options"
+msgstr "Sinkronizazioaren aukera lehenetsiak"
+
+#: ../data/conduit.ui.h:12
+msgid "Delete Options"
+msgstr "Ezabatu aukerak"
+
+#: ../data/conduit.ui.h:13
+msgid "Delete from the corresponding sink"
+msgstr "Ezabatu dagokion sinkronizaziotik"
+
+#: ../data/conduit.ui.h:14
+msgid "Delete the Corresponding Item"
+msgstr "Ezabatu dagokion elementua"
+
+#: ../data/conduit.ui.h:15
+msgid "Editor"
+msgstr "Editorea"
+
+#: ../data/conduit.ui.h:16
+msgid "General"
+msgstr "Orokorra"
+
+#: ../data/conduit.ui.h:17
+msgid "Minimize to notification area"
+msgstr "Minimizatu jakinarazpen-areara"
+
+#: ../data/conduit.ui.h:18
+msgid "Replace the Older Item"
+msgstr "Ordeztu elementu zaharra"
+
+#: ../data/conduit.ui.h:19
+msgid "Replace the older item"
+msgstr "Ordeztu elementu zaharra"
+
+#: ../data/conduit.ui.h:20
+msgid "Resolve Conflicts"
+msgstr "Ebatzi gatazkak"
+
+#: ../data/conduit.ui.h:21
+msgid "Save settings on exit"
+msgstr "Gorde ezarpenak irteeran"
+
+#: ../data/conduit.ui.h:22
+msgid "Show Hints"
+msgstr "Erakutsi iradokizunak"
+
+#: ../data/conduit.ui.h:23
+msgid "Show status icon"
+msgstr "Erakutsi egoeraren ikonoa"
+
+#: ../data/conduit.ui.h:24
+msgid "Skip"
+msgstr "Saltatu"
+
+#: ../data/conduit.ui.h:25
+msgid "Slow Synchronization"
+msgstr "Sinkronizazio motela"
+
+#: ../data/conduit.ui.h:26
+msgid "Start Conduit at login"
+msgstr "Abiarazi Conduit saio-hasieran"
+
+#: ../data/conduit.ui.h:27
+msgid "Synchronization Options"
+msgstr "Sinkronizazioaren aukerak"
+
+#: ../data/conduit.ui.h:28
+msgid "Title"
+msgstr "Titulua"
+
+#: ../data/conduit.ui.h:29
+msgid "Two-Way Synchronization"
+msgstr "Bi bideko sinkronizazioa"
+
+#: ../data/conduit.ui.h:30
+msgid "When an item has been deleted:"
+msgstr "Elementu bat ezabatzen denean:"
+
+#: ../data/conduit.ui.h:31
+msgid "When there is a two-way conflict:"
+msgstr "Bi bideko gatazka dagoenean:"
+
+#: ../data/conduit.ui.h:32
+msgid "_Edit"
+msgstr "_Editatu"
+
+#: ../data/conduit.ui.h:33
+msgid "_File"
+msgstr "_Fitxategia"
+
+#: ../data/conduit.ui.h:34
+msgid "_Help"
+msgstr "_Laguntza"
 
 #: ../conduit/Knowledge.py:8
 msgid "What Do You Want to Synchronize?"
@@ -73,43 +209,44 @@ msgstr "Igo argazkiak Facebook-era"
 msgid "Synchronize Desktop Wallpaper from a RSS Feed"
 msgstr "Sinkronizatu mahaigaineko horma-papera RSS eranskinetatik"
 
-#: ../conduit/Main.py:59
+#: ../conduit/Main.py:57
 msgid "Conduit is a synchronization application."
 msgstr "Conduit sinkronizatzeko aplikazio bat da."
 
-#: ../conduit/Main.py:63
+#: ../conduit/Main.py:61
 #, python-format
 msgid "Launch without GUI. [default: %default]"
 msgstr "Abiarazi GUIrik gabe. [lehenetsia: %default]"
 
-#: ../conduit/Main.py:67
+#: ../conduit/Main.py:65
 #, python-format
 msgid "Save dataprovider configuration to FILE. [default: %default]"
-msgstr "Gorde datu hornitzailearen konfigurazioa fitxategian. [lehenetsia: %default]"
+msgstr ""
+"Gorde datu hornitzailearen konfigurazioa fitxategian. [lehenetsia: %default]"
 
-#: ../conduit/Main.py:71
+#: ../conduit/Main.py:69
 #, python-format
 msgid "Iconify on startup. [default: %default]"
 msgstr "Ikonotu abioan. [lehenetsia: %default]"
 
-#: ../conduit/Main.py:75
+#: ../conduit/Main.py:73
 #, python-format
 msgid "Run with the specified UI. [default: %default]"
 msgstr "Exekutatu zehaztutako UIarekin. [lehenetsia: %default]"
 
-#: ../conduit/Main.py:79
+#: ../conduit/Main.py:77
 msgid "Only load modules in the named files. [default: load all modules]"
 msgstr ""
 "Kargatu moduloak soilik izendatutako fitxategietan. [lehenetsia: kargatu "
 "modulo guztiak]"
 
-#: ../conduit/Main.py:83
+#: ../conduit/Main.py:81
 msgid "Do not load modules in the named files. [default: load all modules]"
 msgstr ""
 "Ez kargatu moduloak izendatutako fitxategietan. [lehenetsia: kargatu modulo "
 "guztiak]"
 
-#: ../conduit/Main.py:87
+#: ../conduit/Main.py:85
 msgid ""
 "Explicitly set internal Conduit settings (keys) to the given values for this "
 "session. [default: do not set]"
@@ -117,7 +254,7 @@ msgstr ""
 "Conduit-en barneko ezarpenak (gakoak) saio honetan emandako baliotara ezarri "
 "esplizitoki. [lehenetsia: ez ezarri]"
 
-#: ../conduit/Main.py:91
+#: ../conduit/Main.py:89
 #, python-format
 msgid ""
 "Enable loading of unfinished or unsupported dataproviders. [default: %"
@@ -126,17 +263,17 @@ msgstr ""
 "Gaitu osatu edo onartu gabeko datuen hornitzaileak kargatzea. [lehenetsia: %"
 "default]"
 
-#: ../conduit/Main.py:95
+#: ../conduit/Main.py:93
 #, python-format
 msgid "Generate more debugging information. [default: %default]"
 msgstr "Sortu arazketako informazio gehiago. [lehenetsia: %default]"
 
-#: ../conduit/Main.py:99
+#: ../conduit/Main.py:97
 #, python-format
 msgid "Generate less debugging information. [default: %default]"
 msgstr "Sortu arazketako informazio gutxiago. [lehenetsia: %default]"
 
-#: ../conduit/Main.py:103
+#: ../conduit/Main.py:101
 #, python-format
 msgid "Generate no debugging information. [default: %default]"
 msgstr "Ez sortu arazketako informaziorik. [lehenetsia: %default]"
@@ -181,7 +318,7 @@ msgstr "Sinkronizazioa saltatuta"
 msgid "Synchronization Cancelled"
 msgstr "Sinkronizazioa bertan behera utzita"
 
-#: ../conduit/dataproviders/DataProvider.py:32
+#: ../conduit/dataproviders/DataProvider.py:32 ../conduit/gtkui/UI.py:743
 msgid "Synchronization Conflict"
 msgstr "Sinkronizazioa gatazkan"
 
@@ -216,12 +353,12 @@ msgid "Files and Folders"
 msgstr "Fitxategiak eta karpetak"
 
 #: ../conduit/dataproviders/__init__.py:7
-#: ../conduit/modules/iPodModule/iPodModule.py:179
+#: ../conduit/modules/iPodModule/iPodModule.py:276
 msgid "Notes"
 msgstr "Oharrak"
 
 #: ../conduit/dataproviders/__init__.py:8
-#: ../conduit/modules/iPodModule/iPodModule.py:367
+#: ../conduit/modules/iPodModule/iPodModule.py:464
 msgid "Photos"
 msgstr "Argazkiak"
 
@@ -253,7 +390,7 @@ msgstr "Proba"
 msgid "Drag a Data Provider here to continue"
 msgstr "Arrastatu datuen hornitzaile bat hona jarraitzeko"
 
-#: ../conduit/gtkui/Canvas.py:217
+#: ../conduit/gtkui/Canvas.py:227
 msgid "Show me"
 msgstr "Erakuts nazazu"
 
@@ -318,7 +455,7 @@ msgid "Conversions Available"
 msgstr "Bihurketa erabilgarriak"
 
 #: ../conduit/gtkui/UI.py:200 ../conduit/gtkui/Tree.py:355
-#: ../conduit/modules/FileModule/FileConfiguration.py:117
+#: ../conduit/modules/FileModule/FileConfiguration.py:118
 msgid "Name"
 msgstr "Izena"
 
@@ -343,41 +480,41 @@ msgstr "Garatzaileak"
 msgid "Synchronization in progress. Do you want to cancel it?"
 msgstr "Sinkronizatzen ari da. Bertan behera uztea nahi duzu?"
 
-#: ../conduit/gtkui/UI.py:711
+#: ../conduit/gtkui/UI.py:712
 msgid "_Synchronize All"
 msgstr "_Sinkronizatu guztiak"
 
-#: ../conduit/gtkui/UI.py:711
+#: ../conduit/gtkui/UI.py:712
 msgid "Synchronizes All Groups"
 msgstr "Sinkronizatu talde guztiak"
 
-#: ../conduit/gtkui/UI.py:712
+#: ../conduit/gtkui/UI.py:713
 msgid "_Cancel Synchronization"
 msgstr "_Utzi sinkronizatzea"
 
-#: ../conduit/gtkui/UI.py:712
+#: ../conduit/gtkui/UI.py:713
 msgid "Cancels Currently Synchronizing Groups"
 msgstr "Bertan behera utzi taldeen uneko sinkronizazioa"
 
-#: ../conduit/gtkui/UI.py:713
+#: ../conduit/gtkui/UI.py:714
 msgid "_Quit"
 msgstr "_Irten"
 
-#: ../conduit/gtkui/UI.py:713
+#: ../conduit/gtkui/UI.py:714
 msgid "Close Conduit"
 msgstr "Itxi Conduit"
 
-#: ../conduit/gtkui/UI.py:753
-msgid "Synchronization Error"
-msgstr "Sinkronizazioko errorea"
+#: ../conduit/gtkui/UI.py:731
+msgid "Synchronizing"
+msgstr "Sinkronizatzen"
 
-#: ../conduit/gtkui/UI.py:756
+#: ../conduit/gtkui/UI.py:737
 msgid "Synchronization Complete"
 msgstr "Sinkronizazioa burututa"
 
-#: ../conduit/gtkui/UI.py:764
-msgid "Synchronizing"
-msgstr "Sinkronizatzen"
+#: ../conduit/gtkui/UI.py:741
+msgid "Synchronization Error"
+msgstr "Sinkronizazioko errorea"
 
 #: ../conduit/gtkui/Tree.py:364
 msgid "Description"
@@ -432,8 +569,8 @@ msgstr "Sinkronizatu zure Banshee-ko erreprodukzio-zerrendak"
 
 #: ../conduit/modules/BansheeModule/BansheeModule.py:187
 #: ../conduit/modules/BansheeModule/BansheeModule.py:188
-#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:116
-#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:117
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:120
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:121
 msgid "Playlists"
 msgstr "Erreprodukzio-zerrendak"
 
@@ -446,7 +583,7 @@ msgid "Synchronize your Box.net files"
 msgstr "Sinkronizatu zure Box.net- webguneko fitxategiak"
 
 #: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:290
-#: ../conduit/modules/FileModule/FileModule.py:82
+#: ../conduit/modules/FileModule/FileModule.py:86
 msgid "Folder"
 msgstr "Karpeta"
 
@@ -470,40 +607,40 @@ msgstr "Horma-papera"
 msgid "Changes your Desktop Wallpaper"
 msgstr "Zure mahaigaineko horma-papera aldatzen du"
 
-#: ../conduit/modules/EvolutionModule/EvolutionModule.py:107
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:110
 #, python-format
 msgid "Select %s"
 msgstr "Hautatu %s"
 
-#: ../conduit/modules/EvolutionModule/EvolutionModule.py:127
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:130
 msgid "Evolution Contacts"
 msgstr "Evolution-eko kontaktuak"
 
-#: ../conduit/modules/EvolutionModule/EvolutionModule.py:128
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:131
 msgid "Synchronize your contacts"
 msgstr "Sinkronizatu zure kontaktuak"
 
-#: ../conduit/modules/EvolutionModule/EvolutionModule.py:178
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:181
 msgid "Evolution Calendar"
 msgstr "Evolution-eko egutegia"
 
-#: ../conduit/modules/EvolutionModule/EvolutionModule.py:179
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:182
 msgid "Synchronize your calendar"
 msgstr "Sinkronizatu zure egutegia"
 
-#: ../conduit/modules/EvolutionModule/EvolutionModule.py:240
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:243
 msgid "Evolution Tasks"
 msgstr "Evolution-eko zereginak"
 
-#: ../conduit/modules/EvolutionModule/EvolutionModule.py:241
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:244
 msgid "Synchronize your tasks"
 msgstr "Sinkronizatu zure zereginak"
 
-#: ../conduit/modules/EvolutionModule/EvolutionModule.py:297
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:300
 msgid "Evolution Memos"
 msgstr "Evolution-eko zirkularrak"
 
-#: ../conduit/modules/EvolutionModule/EvolutionModule.py:298
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:301
 msgid "Synchronize your memos"
 msgstr "Sinkronizatu zure zirkularrak"
 
@@ -533,12 +670,12 @@ msgid "Failed to login"
 msgstr "Huts egin du saio hastean"
 
 #: ../conduit/modules/FacebookModule/FacebookModule.py:145
-#: ../conduit/modules/FspotModule/FspotModule.py:243
+#: ../conduit/modules/FspotModule/FspotModule.py:246
 msgid "Status"
 msgstr "Egoera"
 
 #: ../conduit/modules/FacebookModule/FacebookModule.py:150
-#: ../conduit/modules/iPodModule/iPodModule.py:461
+#: ../conduit/modules/iPodModule/iPodModule.py:566
 #: ../conduit/modules/ZotoModule/ZotoModule.py:252
 msgid "Album"
 msgstr "Albuma"
@@ -600,51 +737,52 @@ msgstr "Deskargatu bideo fitxategiak"
 msgid "Download photo files"
 msgstr "Deskargatu argazki fitxategiak"
 
-#: ../conduit/modules/FileModule/FileConfiguration.py:111
+#: ../conduit/modules/FileModule/FileConfiguration.py:112
 msgid "Icon"
 msgstr "Ikonoa"
 
-#: ../conduit/modules/FileModule/FileConfiguration.py:123
+#: ../conduit/modules/FileModule/FileConfiguration.py:124
 #: ../conduit/modules/GConfModule/GConfModule.py:138
 msgid "Items"
 msgstr "Elementuak"
 
-#: ../conduit/modules/FileModule/FileConfiguration.py:149
+#: ../conduit/modules/FileModule/FileConfiguration.py:150
 #, python-format
 msgid "<i>Contains %s files</i>"
 msgstr "<i>%s fitxategia du</i>"
 
-#: ../conduit/modules/FileModule/FileConfiguration.py:248
+#: ../conduit/modules/FileModule/FileConfiguration.py:249
 msgid "Include file..."
 msgstr "Sartu fitxategia..."
 
-#: ../conduit/modules/FileModule/FileConfiguration.py:258
+#: ../conduit/modules/FileModule/FileConfiguration.py:259
 msgid "All files"
 msgstr "Fitxategi denak"
 
-#: ../conduit/modules/FileModule/FileConfiguration.py:271
+#: ../conduit/modules/FileModule/FileConfiguration.py:272
 msgid "Include folder..."
 msgstr "Sartu karpeta..."
 
-#: ../conduit/modules/FileModule/FileConfiguration.py:314
+#: ../conduit/modules/FileModule/FileConfiguration.py:315
 msgid "Please Name All Folders"
 msgstr "Izendatu karpeta guztiak"
 
-#: ../conduit/modules/FileModule/FileConfiguration.py:315
-msgid "All folders require a descriptive name. To name a folder simply click on it"
+#: ../conduit/modules/FileModule/FileConfiguration.py:316
+msgid ""
+"All folders require a descriptive name. To name a folder simply click on it"
 msgstr ""
 "Karpeta guztiek izen deskriptibo bat behar dute. Karpeta bati izena emateko "
 "egin klik haren gainean"
 
-#: ../conduit/modules/FileModule/FileModule.py:23
+#: ../conduit/modules/FileModule/FileModule.py:27
 msgid "Files"
 msgstr "Fitxategiak"
 
-#: ../conduit/modules/FileModule/FileModule.py:24
+#: ../conduit/modules/FileModule/FileModule.py:28
 msgid "Source for synchronizing multiple files"
 msgstr "Iturburua hainbat fitxategi sinkronizatzeko"
 
-#: ../conduit/modules/FileModule/FileModule.py:83
+#: ../conduit/modules/FileModule/FileModule.py:87
 msgid "Synchronize folders"
 msgstr "Sinkronizatu karpetak"
 
@@ -711,44 +849,46 @@ msgstr "Ez aldatu tamainaz"
 msgid "Photos are public"
 msgstr "Argazkiak publikoak dira"
 
-#: ../conduit/modules/FspotModule/FspotModule.py:25
+#: ../conduit/modules/FspotModule/FspotModule.py:28
 msgid "F-Spot"
 msgstr "F-Spot"
 
-#: ../conduit/modules/FspotModule/FspotModule.py:26
+#: ../conduit/modules/FspotModule/FspotModule.py:29
 msgid "Synchronize your F-Spot photos"
 msgstr "Sinkronizatu F-Spot-eko zure argazkiak"
 
-#: ../conduit/modules/FspotModule/FspotModule.py:152
+#: ../conduit/modules/FspotModule/FspotModule.py:155
 msgid "F-Spot DBus interface is operating in read-only mode"
 msgstr "F-Spot DBus interfazea irakurtzeko soilik moduan ari da lanean"
 
-#: ../conduit/modules/FspotModule/FspotModule.py:218
+#: ../conduit/modules/FspotModule/FspotModule.py:221
 msgid "F-Spot is running"
 msgstr "F-Spot exekutatzen ari da"
 
-#: ../conduit/modules/FspotModule/FspotModule.py:219
+#: ../conduit/modules/FspotModule/FspotModule.py:222
 msgid "Please start F-Spot or activate the D-Bus Extension"
 msgstr "Abiarazi F-Spot edo aktibatu D-Bus hedapena"
 
-#: ../conduit/modules/FspotModule/FspotModule.py:244
+#: ../conduit/modules/FspotModule/FspotModule.py:247
 msgid "Start F-Spot"
 msgstr "Abiarazi F-Spot"
 
-#: ../conduit/modules/FspotModule/FspotModule.py:248
-#: ../conduit/modules/FspotModule/FspotModule.py:249
+#: ../conduit/modules/FspotModule/FspotModule.py:251
+#: ../conduit/modules/FspotModule/FspotModule.py:252
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:72
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:74
 msgid "Tags"
 msgstr "Etiketak"
 
-#: ../conduit/modules/FspotModule/FspotModule.py:262
+#: ../conduit/modules/FspotModule/FspotModule.py:265
 msgid "Add tags"
 msgstr "Gehitu etiketak"
 
-#: ../conduit/modules/FspotModule/FspotModule.py:263
+#: ../conduit/modules/FspotModule/FspotModule.py:266
 msgid "Tag name"
 msgstr "Etiketaren izena"
 
-#: ../conduit/modules/FspotModule/FspotModule.py:266
+#: ../conduit/modules/FspotModule/FspotModule.py:269
 msgid "Add tag"
 msgstr "Gehitu etiketa"
 
@@ -801,130 +941,85 @@ msgstr "Saio-hasieraren xehetasunak"
 msgid "Password"
 msgstr "Pasahitza"
 
-#: ../conduit/modules/GoogleModule/GoogleModule.py:399
-msgid "Google Calendar"
-msgstr "Google-ko egutegia"
-
-#: ../conduit/modules/GoogleModule/GoogleModule.py:400
-msgid "Synchronize your Google Calendar"
-msgstr "Sinkronizatu zure Google-ko egutegia"
-
-#: ../conduit/modules/GoogleModule/GoogleModule.py:582
-msgid "Picasa"
-msgstr "Picasa"
-
-#: ../conduit/modules/GoogleModule/GoogleModule.py:583
-msgid "Synchronize your Google Picasa photos"
-msgstr "Sinkronizatu zure Google Picasa-ko argazkiak"
-
-#: ../conduit/modules/GoogleModule/GoogleModule.py:745
-msgid "Google Contacts"
-msgstr "Google-ko kontaktuak"
-
-#: ../conduit/modules/GoogleModule/GoogleModule.py:746
-msgid "Synchronize your Google Mail contacts"
-msgstr "Sinkronizatu zure Google-ko posta-kontaktuak"
-
-#: ../conduit/modules/GoogleModule/GoogleModule.py:1076
-msgid "Google Documents"
-msgstr "Google-ko dokumentuak"
-
-#: ../conduit/modules/GoogleModule/GoogleModule.py:1077
-msgid "Synchronize your Google Documents"
-msgstr "Sinkronizatu zure Google-ko dokumentuak"
-
-#: ../conduit/modules/GoogleModule/GoogleModule.py:1322
-#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:69
-msgid "Unknown"
-msgstr "Ezezaguna"
-
-#: ../conduit/modules/GoogleModule/GoogleModule.py:1323
-msgid "miscellaneous"
-msgstr "hainbat"
-
-#: ../conduit/modules/GoogleModule/GoogleModule.py:1324
-msgid "No description."
-msgstr "Azalpenik ez."
-
-#: ../conduit/modules/GoogleModule/GoogleModule.py:1333
-msgid "YouTube"
-msgstr "YouTube"
-
-#: ../conduit/modules/GoogleModule/GoogleModule.py:1334
-msgid "Synchronize data from YouTube"
-msgstr "Sinkronizatu datuak YouTube-tik"
-
-#: ../conduit/modules/iPodModule/iPodModule.py:180
+#: ../conduit/modules/iPodModule/iPodModule.py:277
 msgid "Synchronize your iPod notes"
 msgstr "Sinkronizatu zure iPod-eko oharrak"
 
-#: ../conduit/modules/iPodModule/iPodModule.py:295
+#: ../conduit/modules/iPodModule/iPodModule.py:392
 msgid "Contacts"
 msgstr "Kontaktuak"
 
-#: ../conduit/modules/iPodModule/iPodModule.py:296
+#: ../conduit/modules/iPodModule/iPodModule.py:393
 msgid "Synchronize your iPod contacts"
 msgstr "Sinkronizatu zure iPod-eko kontaktuak"
 
-#: ../conduit/modules/iPodModule/iPodModule.py:331
+#: ../conduit/modules/iPodModule/iPodModule.py:428
 msgid "Calendar"
 msgstr "Egutegia"
 
-#: ../conduit/modules/iPodModule/iPodModule.py:332
+#: ../conduit/modules/iPodModule/iPodModule.py:429
 msgid "Synchronize your iPod calendar"
 msgstr "Sinkronizatu zure iPod-eko egutegia"
 
-#: ../conduit/modules/iPodModule/iPodModule.py:368
+#: ../conduit/modules/iPodModule/iPodModule.py:465
 msgid "Synchronize your iPod photos"
 msgstr "Sinkronizatu zure iPod-eko argazkiak"
 
-#: ../conduit/modules/iPodModule/iPodModule.py:465
+#: ../conduit/modules/iPodModule/iPodModule.py:570
 msgid "Delete"
 msgstr "Ezabatu"
 
-#: ../conduit/modules/iPodModule/iPodModule.py:695
-#: ../conduit/modules/iPodModule/iPodModule.py:812
+#: ../conduit/modules/iPodModule/iPodModule.py:573
+msgid "Delete All Photos"
+msgstr "Ezabatu argazki guztiak"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:803
+#: ../conduit/modules/iPodModule/iPodModule.py:920
 #: ../conduit/modules/N800Module/N800Module.py:77
 msgid "Encoding"
 msgstr "Kodeketa"
 
-#: ../conduit/modules/iPodModule/iPodModule.py:811
+#: ../conduit/modules/iPodModule/iPodModule.py:919
 msgid "Conversion options"
 msgstr "Bihurketako aukerak"
 
-#: ../conduit/modules/iPodModule/iPodModule.py:816
+#: ../conduit/modules/iPodModule/iPodModule.py:924
 msgid "Keep converted files"
 msgstr "Mantendu bihurtutako fitxategiak"
 
-#: ../conduit/modules/iPodModule/iPodModule.py:846
-msgid "iPod Music"
-msgstr "iPod musika"
+#. To translators: defaul music folder of N800
+#: ../conduit/modules/iPodModule/iPodModule.py:954
+#: ../conduit/modules/N800Module/N800Module.py:133
+msgid "Music"
+msgstr "Musika"
 
-#: ../conduit/modules/iPodModule/iPodModule.py:847
+#: ../conduit/modules/iPodModule/iPodModule.py:955
 msgid "Synchronize your iPod music"
 msgstr "Sinkronizatu zure iPod-eko musika"
 
-#: ../conduit/modules/iPodModule/iPodModule.py:882
-msgid "iPod Video"
-msgstr "iPod bideoa"
+#. To translators: defaul video folder of N800
+#: ../conduit/modules/iPodModule/iPodModule.py:990
+#: ../conduit/modules/N800Module/N800Module.py:157
+msgid "Video"
+msgstr "Bideoa"
 
-#: ../conduit/modules/iPodModule/iPodModule.py:883
+#: ../conduit/modules/iPodModule/iPodModule.py:991
 msgid "Synchronize your iPod videos"
 msgstr "Sinkronizatu zure iPod-eko bideoak"
 
-#: ../conduit/modules/iPodModule/iPodModule.py:907
+#: ../conduit/modules/iPodModule/iPodModule.py:1015
 msgid "Movie"
 msgstr "Filmeak"
 
-#: ../conduit/modules/iPodModule/iPodModule.py:908
+#: ../conduit/modules/iPodModule/iPodModule.py:1016
 msgid "Music Video"
 msgstr "Musika-bideoa"
 
-#: ../conduit/modules/iPodModule/iPodModule.py:909
+#: ../conduit/modules/iPodModule/iPodModule.py:1017
 msgid "TV Show"
 msgstr "TV programa"
 
-#: ../conduit/modules/iPodModule/iPodModule.py:911
+#: ../conduit/modules/iPodModule/iPodModule.py:1019
 msgid "Video kind"
 msgstr "Bideo mota"
 
@@ -954,11 +1049,6 @@ msgstr "N800 musika"
 msgid "Synchronizes music to a N800 device"
 msgstr "Sinkronizatu musika N800 gailu batekin"
 
-#. To translators: defaul music folder of N800
-#: ../conduit/modules/N800Module/N800Module.py:133
-msgid "Music"
-msgstr "Musika"
-
 #: ../conduit/modules/N800Module/N800Module.py:150
 msgid "N800 Videos"
 msgstr "N800 bideoak"
@@ -966,11 +1056,6 @@ msgstr "N800 bideoak"
 #: ../conduit/modules/N800Module/N800Module.py:151
 msgid "Synchronizes video to a N800 device"
 msgstr "Sinkronizatu bideoak N800 gailu batekin"
-
-#. To translators: defaul video folder of N800
-#: ../conduit/modules/N800Module/N800Module.py:157
-msgid "Video"
-msgstr "Bideoa"
 
 #: ../conduit/modules/N800Module/N800Module.py:174
 msgid "N800 Photos"
@@ -1009,13 +1094,25 @@ msgstr "Sarea"
 msgid "Enable synchronization via network"
 msgstr "Gaitu sare bidez sinkronizatzea"
 
-#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:44
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:48
 msgid "Rhythmbox Music"
 msgstr "Rhythmbox musika"
 
-#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:45
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:49
 msgid "Synchronize songs from your Rhythmbox playlists"
 msgstr "Sinkronizatu abestiak zure Rhythmbox-eko erreprodukzio-zerrendetatik"
+
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:73
+msgid "Unknown"
+msgstr "Ezezaguna"
+
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:37
+msgid "Shotwell"
+msgstr "Shotwell"
+
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:38
+msgid "Sync from your Shotwell photo library"
+msgstr "Sinkronizatu Shotwell-eko zure argazkiak"
 
 #: ../conduit/modules/ShutterflyModule/ShutterflyModule.py:26
 msgid "Shutterfly"
@@ -1045,3 +1142,41 @@ msgstr "Zoto"
 msgid "Synchronize your Zoto photos"
 msgstr "Sinkronizatu Zoto.com webguneko zure argazkiak"
 
+#~ msgid "Google Calendar"
+#~ msgstr "Google-ko egutegia"
+
+#~ msgid "Synchronize your Google Calendar"
+#~ msgstr "Sinkronizatu zure Google-ko egutegia"
+
+#~ msgid "Picasa"
+#~ msgstr "Picasa"
+
+#~ msgid "Synchronize your Google Picasa photos"
+#~ msgstr "Sinkronizatu zure Google Picasa-ko argazkiak"
+
+#~ msgid "Synchronize your Google Mail contacts"
+#~ msgstr "Sinkronizatu zure Google-ko posta-kontaktuak"
+
+#~ msgid "Google Documents"
+#~ msgstr "Google-ko dokumentuak"
+
+#~ msgid "Synchronize your Google Documents"
+#~ msgstr "Sinkronizatu zure Google-ko dokumentuak"
+
+#~ msgid "miscellaneous"
+#~ msgstr "hainbat"
+
+#~ msgid "No description."
+#~ msgstr "Azalpenik ez."
+
+#~ msgid "YouTube"
+#~ msgstr "YouTube"
+
+#~ msgid "Synchronize data from YouTube"
+#~ msgstr "Sinkronizatu datuak YouTube-tik"
+
+#~ msgid "iPod Music"
+#~ msgstr "iPod musika"
+
+#~ msgid "iPod Video"
+#~ msgstr "iPod bideoa"
