@@ -1,0 +1,1146 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Licker Nandor <lickernandor@yahoo.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=conduit&component=documentation and translation\n"
+"POT-Creation-Date: 2010-10-29 22:35+0000\n"
+"PO-Revision-Date: 2010-11-26 08:48+0300\n"
+"Last-Translator: Licker Nandor <lickernandor@yahoo.com>\n"
+"Language-Team: Romanian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);;\n"
+"X-Generator: Virtaal 0.5.2\n"
+
+#: ../data/conduit.desktop.in.in.h:1
+msgid "Conduit Synchronizer"
+msgstr "Sincronizator Conduit"
+
+#: ../data/conduit.desktop.in.in.h:2
+msgid "Synchronization for GNOME"
+msgstr "Sincronizare pentru GNOME"
+
+#: ../data/conduit.ui.h:1
+msgid "Always Up-To-Date"
+msgstr "Întotdeauna actualizat"
+
+#: ../data/conduit.ui.h:2
+msgid "Ask Me What to Do"
+msgstr "Intreabă-mă..."
+
+#: ../data/conduit.ui.h:3
+msgid "Ask me what to do"
+msgstr "Intreabă-mă..."
+
+#: ../data/conduit.ui.h:4
+msgid "Compare"
+msgstr "Compară"
+
+#: ../data/conduit.ui.h:5
+msgid "Conduit Preferences"
+msgstr "Preferințe Conduit"
+
+#: ../data/conduit.ui.h:6
+msgid "Configuration"
+msgstr "Configurație"
+
+#: ../data/conduit.ui.h:7
+msgid "Conflict Options"
+msgstr "Opțiuni pentru conflicte"
+
+#: ../data/conduit.ui.h:8
+msgid "Conflicts"
+msgstr "Conflicte"
+
+#: ../data/conduit.ui.h:9
+msgid "Data Conversions"
+msgstr "Conversii de date"
+
+#: ../data/conduit.ui.h:10
+msgid "Data Providers"
+msgstr "Furnizori de date"
+
+#: ../data/conduit.ui.h:11
+msgid "Default Synchronization Options"
+msgstr "Opțiuni implicite de sincronizare"
+
+#: ../data/conduit.ui.h:12
+msgid "Delete Options"
+msgstr "Opțiuni de ștergere"
+
+#: ../data/conduit.ui.h:13
+msgid "Delete from the corresponding sink"
+msgstr "Șterge din sursa corespunzătoare"
+
+#: ../data/conduit.ui.h:14
+msgid "Delete the Corresponding Item"
+msgstr "Șterge obiectul corespunzător"
+
+#: ../data/conduit.ui.h:15
+msgid "Editor"
+msgstr "Editor"
+
+#: ../data/conduit.ui.h:16
+msgid "General"
+msgstr "General"
+
+#: ../data/conduit.ui.h:17
+msgid "Minimize to notification area"
+msgstr "Minimizează în zona de notificare"
+
+#: ../data/conduit.ui.h:18
+msgid "Replace the Older Item"
+msgstr "Înlocuiește elementul mai vechi"
+
+#: ../data/conduit.ui.h:19
+msgid "Replace the older item"
+msgstr "Înlocuiește obiectul mai vechi"
+
+#: ../data/conduit.ui.h:20
+msgid "Resolve Conflicts"
+msgstr "Rezolvă conflictele"
+
+#: ../data/conduit.ui.h:21
+msgid "Save settings on exit"
+msgstr "Salvează configurările la ieșire"
+
+#: ../data/conduit.ui.h:22
+msgid "Show Hints"
+msgstr "Arată sugestii"
+
+#: ../data/conduit.ui.h:23
+msgid "Show status icon"
+msgstr "Arată pictograma de stare"
+
+#: ../data/conduit.ui.h:24
+msgid "Skip"
+msgstr "Omite"
+
+#: ../data/conduit.ui.h:25
+msgid "Slow Synchronization"
+msgstr "Sincronizare lentă"
+
+#: ../data/conduit.ui.h:26
+msgid "Start Conduit at login"
+msgstr "Lansează Conduit la autentificare"
+
+#: ../data/conduit.ui.h:27
+msgid "Synchronization Options"
+msgstr "Opțiuni de sincronizare"
+
+#: ../data/conduit.ui.h:28
+msgid "Title"
+msgstr "Titlu"
+
+#: ../data/conduit.ui.h:29
+msgid "Two-Way Synchronization"
+msgstr "Sincronizare bidirecțională"
+
+#: ../data/conduit.ui.h:30
+msgid "When an item has been deleted:"
+msgstr "Când un element a fost șters:"
+
+#: ../data/conduit.ui.h:31
+msgid "When there is a two-way conflict:"
+msgstr "Când există un conflict bidirecțional:"
+
+#: ../data/conduit.ui.h:32
+msgid "_Edit"
+msgstr "_Editare"
+
+#: ../data/conduit.ui.h:33
+msgid "_File"
+msgstr "_Fișier"
+
+#: ../data/conduit.ui.h:34
+msgid "_Help"
+msgstr "_Ajutor"
+
+#: ../conduit/Knowledge.py:8
+msgid "What Do You Want to Synchronize?"
+msgstr "Ce doriți să sincronizați?"
+
+#: ../conduit/Knowledge.py:9
+msgid "Drag and Drop a Data Provider on the Canvas"
+msgstr "Trageți și plasați un furnizor de date pe plan"
+
+#: ../conduit/Knowledge.py:11
+msgid "Synchronization Group Created"
+msgstr "Grupul de sincronizare a fost creat"
+
+#: ../conduit/Knowledge.py:12
+msgid "Add Another Data Provider to the Group to Synchronize it"
+msgstr "Adăugați un alt furnizor de date în grup pentru a-l sincroniza"
+
+#: ../conduit/Knowledge.py:14
+msgid "You Are Now Ready to Synchronize"
+msgstr "Sunteți gata să sincronizați"
+
+#: ../conduit/Knowledge.py:15
+msgid "Right Click on Group for Options"
+msgstr "Click-dreapta pe grup pentru opțiuni"
+
+#: ../conduit/Knowledge.py:24
+msgid "Synchronize Two Folders"
+msgstr "Sincronizați două dosare"
+
+#: ../conduit/Knowledge.py:27
+msgid "Backup Folder to Box.net"
+msgstr "Faceți o copie de rezervă pe Box.net"
+
+#: ../conduit/Knowledge.py:30
+msgid "Synchronize Tagged F-Spot Photos to Flickr"
+msgstr "Sincronizează fotografiile F-Spot etichetate cu Flickr"
+
+#: ../conduit/Knowledge.py:33
+msgid "Synchronize Photos to Flickr"
+msgstr "Sincronizează fotografiile cu Flickr"
+
+#: ../conduit/Knowledge.py:36
+msgid "Upload Photos to Facebook"
+msgstr "Încarcă fotografiile pe Facebook"
+
+#: ../conduit/Knowledge.py:39
+msgid "Synchronize Desktop Wallpaper from a RSS Feed"
+msgstr "Descarcă imaginea de fundal dintr-un flux RSS"
+
+#: ../conduit/Main.py:57
+msgid "Conduit is a synchronization application."
+msgstr "Conduit este o aplicație de sincronizare."
+
+#: ../conduit/Main.py:61
+#, python-format
+msgid "Launch without GUI. [default: %default]"
+msgstr "Lansează fără intefață grafică. [implicit: %default]"
+
+#: ../conduit/Main.py:65
+#, python-format
+msgid "Save dataprovider configuration to FILE. [default: %default]"
+msgstr ""
+"Salvează configurația furnizorului de date în Fișier. [implicit: %default]"
+
+#: ../conduit/Main.py:69
+#, python-format
+msgid "Iconify on startup. [default: %default]"
+msgstr "Trimite în zona de notificare la pornire. [implicit: %default]"
+
+#: ../conduit/Main.py:73
+#, python-format
+msgid "Run with the specified UI. [default: %default]"
+msgstr "Rulează cu interfața specificată. [implicit: %default]"
+
+#: ../conduit/Main.py:77
+msgid "Only load modules in the named files. [default: load all modules]"
+msgstr ""
+"Încarcă doar modulele din fișierele specificate. [implicit: încarcă toate "
+"modulele]"
+
+#: ../conduit/Main.py:81
+msgid "Do not load modules in the named files. [default: load all modules]"
+msgstr ""
+"Nu încărca modulele din fișierele specificate. [implicit: încarcă toate "
+"modulele]"
+
+#: ../conduit/Main.py:85
+msgid ""
+"Explicitly set internal Conduit settings (keys) to the given values for this "
+"session. [default: do not set]"
+msgstr ""
+"Setează explicit configurația internă Conduit (cheile) la valorile date "
+"pentru această sesiune. [implicit: nu seta]"
+
+#: ../conduit/Main.py:89
+#, python-format
+msgid ""
+"Enable loading of unfinished or unsupported dataproviders. [default: %"
+"default]"
+msgstr ""
+"Permite încărcarea furnizorilor de date incompleți sau incompatibili. "
+"[implicit: %default]"
+
+#: ../conduit/Main.py:93
+#, python-format
+msgid "Generate more debugging information. [default: %default]"
+msgstr "Generează mai multe informații de depanare. [implicit: %default]"
+
+#: ../conduit/Main.py:97
+#, python-format
+msgid "Generate less debugging information. [default: %default]"
+msgstr "Generează mai puține informații de depanare. [implicit: %default]"
+
+#: ../conduit/Main.py:101
+#, python-format
+msgid "Generate no debugging information. [default: %default]"
+msgstr "Nu genera informații de depanare. [implicit: %default]"
+
+#: ../conduit/dataproviders/DataProvider.py:22
+msgid "Ready"
+msgstr "Gata"
+
+#: ../conduit/dataproviders/DataProvider.py:23
+msgid "New data to sync"
+msgstr "Noi date de sincronizat"
+
+#: ../conduit/dataproviders/DataProvider.py:24
+msgid "Refreshing..."
+msgstr "Se reîmprospătează..."
+
+#: ../conduit/dataproviders/DataProvider.py:25
+msgid "Refreshed OK"
+msgstr "Reîmprospătare reușită"
+
+#: ../conduit/dataproviders/DataProvider.py:26
+msgid "Error Refreshing"
+msgstr "Reîmprospătare eșuată"
+
+#: ../conduit/dataproviders/DataProvider.py:27
+msgid "Synchronizing..."
+msgstr "Se sincronizează..."
+
+#: ../conduit/dataproviders/DataProvider.py:28
+msgid "Synchronized OK"
+msgstr "Sincronizare reușită"
+
+#: ../conduit/dataproviders/DataProvider.py:29
+msgid "Error Synchronizing"
+msgstr "Sincronizare eșuată"
+
+#: ../conduit/dataproviders/DataProvider.py:30
+msgid "Synchronization Skipped"
+msgstr "Sincronizare omisă"
+
+#: ../conduit/dataproviders/DataProvider.py:31
+msgid "Synchronization Cancelled"
+msgstr "Sincronizare anulată"
+
+#: ../conduit/dataproviders/DataProvider.py:32 ../conduit/gtkui/UI.py:743
+msgid "Synchronization Conflict"
+msgstr "Conflict de sincronizare"
+
+#: ../conduit/dataproviders/DataProvider.py:33
+msgid "Not Configured"
+msgstr "Neconfigurat"
+
+#: ../conduit/dataproviders/Image.py:34
+#: ../conduit/modules/FlickrModule/FlickrModule.py:329
+msgid "640x480"
+msgstr "640x480"
+
+#: ../conduit/dataproviders/Image.py:34
+#: ../conduit/modules/FlickrModule/FlickrModule.py:329
+msgid "800x600"
+msgstr "800x600"
+
+#: ../conduit/dataproviders/Image.py:34
+#: ../conduit/modules/FlickrModule/FlickrModule.py:329
+msgid "1024x768"
+msgstr "1024x768"
+
+#. Signifies that a conversion should not take place
+#: ../conduit/dataproviders/Image.py:35
+#: ../conduit/modules/N800Module/N800Module.py:57
+msgid "None"
+msgstr "Niciunul"
+
+#. Default Categories for the DataProviders
+#: ../conduit/dataproviders/__init__.py:6
+msgid "Files and Folders"
+msgstr "Dosare și fișiere"
+
+#: ../conduit/dataproviders/__init__.py:7
+#: ../conduit/modules/iPodModule/iPodModule.py:276
+msgid "Notes"
+msgstr "Notițe"
+
+#: ../conduit/dataproviders/__init__.py:8
+#: ../conduit/modules/iPodModule/iPodModule.py:464
+msgid "Photos"
+msgstr "Fotografii"
+
+#: ../conduit/dataproviders/__init__.py:9
+msgid "Office"
+msgstr "Birou"
+
+#: ../conduit/dataproviders/__init__.py:10
+msgid "Settings"
+msgstr "Configurări"
+
+#: ../conduit/dataproviders/__init__.py:11
+msgid "Miscellaneous"
+msgstr "Diverse"
+
+#: ../conduit/dataproviders/__init__.py:12
+msgid "Media"
+msgstr "Multimedia"
+
+#: ../conduit/dataproviders/__init__.py:13
+msgid "Bookmarks"
+msgstr "Marcaje"
+
+#: ../conduit/dataproviders/__init__.py:14
+msgid "Test"
+msgstr "Test"
+
+#: ../conduit/gtkui/Canvas.py:152
+msgid "Drag a Data Provider here to continue"
+msgstr "Trageți aici un furnizor de date pentru a continua"
+
+#: ../conduit/gtkui/Canvas.py:227
+msgid "Show me"
+msgstr "Arată-mi"
+
+#. Visible column0 is
+#. [pixbuf + source display name] or
+#. [source_data.get_snippet()]
+#: ../conduit/gtkui/ConflictResolver.py:91
+msgid "Source"
+msgstr "Sursă"
+
+#: ../conduit/gtkui/ConflictResolver.py:105
+msgid "Resolution"
+msgstr "Rezoluție"
+
+#. Visible column2 is the display name of source and source data
+#: ../conduit/gtkui/ConflictResolver.py:110
+msgid "Sink"
+msgstr "Sursă"
+
+#: ../conduit/gtkui/ConflictResolver.py:150
+#: ../conduit/gtkui/ConflictResolver.py:151
+#, python-format
+msgid "Conflicts (%s)"
+msgstr "Conflicte (%s)"
+
+#. name,                      #url
+#: ../conduit/gtkui/UI.py:33
+msgid "Introduction"
+msgstr "Introducere"
+
+#: ../conduit/gtkui/UI.py:34
+msgid "Writing a Data Provider"
+msgstr "Scrierea unui furnizor de date"
+
+#: ../conduit/gtkui/UI.py:35
+msgid "API Documentation"
+msgstr "Documentație API"
+
+#: ../conduit/gtkui/UI.py:36
+msgid "Test Results"
+msgstr "Rezultatele testului"
+
+#: ../conduit/gtkui/UI.py:52
+msgid "Examples"
+msgstr "Exemple"
+
+#. Build some liststores to display
+#: ../conduit/gtkui/UI.py:139
+msgid "Convert from"
+msgstr "Conversie din"
+
+#: ../conduit/gtkui/UI.py:140
+msgid "into"
+msgstr "în"
+
+#: ../conduit/gtkui/UI.py:190
+msgid "Relationship Database"
+msgstr "Bază de date de relații"
+
+#: ../conduit/gtkui/UI.py:194
+msgid "Conversions Available"
+msgstr "Conversii disponibile"
+
+#: ../conduit/gtkui/UI.py:200 ../conduit/gtkui/Tree.py:355
+#: ../conduit/modules/FileModule/FileConfiguration.py:118
+msgid "Name"
+msgstr "Nume"
+
+#: ../conduit/gtkui/UI.py:204
+msgid "Loaded"
+msgstr "Încărcat"
+
+#: ../conduit/gtkui/UI.py:329
+#, python-format
+msgid " - %s (Development Version)"
+msgstr " - %s (Versiune de dezvoltare)"
+
+#: ../conduit/gtkui/UI.py:331
+msgid " - Running Uninstalled"
+msgstr " - Rulez dezinstalat"
+
+#: ../conduit/gtkui/UI.py:375
+msgid "Developers"
+msgstr "Dezvoltatori"
+
+#: ../conduit/gtkui/UI.py:539 ../conduit/hildonui/UI.py:127
+msgid "Synchronization in progress. Do you want to cancel it?"
+msgstr "Sincronizare în desfășurare. Doriți să o abandonați?"
+
+#: ../conduit/gtkui/UI.py:712
+msgid "_Synchronize All"
+msgstr "_Sincronizează toate"
+
+#: ../conduit/gtkui/UI.py:712
+msgid "Synchronizes All Groups"
+msgstr "Sincronizează toate grupurile"
+
+#: ../conduit/gtkui/UI.py:713
+msgid "_Cancel Synchronization"
+msgstr "Anulează Sin_cronizarea"
+
+#: ../conduit/gtkui/UI.py:713
+msgid "Cancels Currently Synchronizing Groups"
+msgstr "Anulează grupurile în curs de sincronizare"
+
+#: ../conduit/gtkui/UI.py:714
+msgid "_Quit"
+msgstr "_Ieșire"
+
+#: ../conduit/gtkui/UI.py:714
+msgid "Close Conduit"
+msgstr "Închide Conduit"
+
+#: ../conduit/gtkui/UI.py:731
+msgid "Synchronizing"
+msgstr "Se sincronizează"
+
+#: ../conduit/gtkui/UI.py:737
+msgid "Synchronization Complete"
+msgstr "Sincronizare completă"
+
+#: ../conduit/gtkui/UI.py:741
+msgid "Synchronization Error"
+msgstr "Eroare de sincronizare"
+
+#: ../conduit/gtkui/Tree.py:364
+msgid "Description"
+msgstr "Descriere"
+
+#: ../conduit/gtkui/ConfigItems.py:733
+#, python-format
+msgid "Total: %d"
+msgstr "Total: %d"
+
+#: ../conduit/gtkui/WindowConfigurator.py:14
+msgid "Configure"
+msgstr "Configurează"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:58
+msgid "Backpack Notes"
+msgstr "Backpack Notes"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:59
+msgid "Store things in Backpack Notes"
+msgstr "Stochează date în Backpack Notes"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:105
+#: ../conduit/modules/FlickrModule/FlickrModule.py:307
+#: ../conduit/modules/ZotoModule/ZotoModule.py:243
+msgid "Account details"
+msgstr "Detalii cont"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:106
+msgid "Login"
+msgstr "Autentificare"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:109
+msgid "API key"
+msgstr "Cheie API"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:112
+msgid "Saved notes"
+msgstr "Notițe salvate"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:113
+msgid "Save notes in page"
+msgstr "Salvați notițele în pagină"
+
+#: ../conduit/modules/BansheeModule/BansheeModule.py:52
+msgid "Banshee Playlists"
+msgstr "Liste de redare Banshee"
+
+#: ../conduit/modules/BansheeModule/BansheeModule.py:53
+msgid "Synchronize your Banshee playlists"
+msgstr "Sincronizează listele de redare Banshee"
+
+#: ../conduit/modules/BansheeModule/BansheeModule.py:187
+#: ../conduit/modules/BansheeModule/BansheeModule.py:188
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:120
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:121
+msgid "Playlists"
+msgstr "Liste de redare"
+
+#: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:29
+msgid "Box.net"
+msgstr "Box.net"
+
+#: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:30
+msgid "Synchronize your Box.net files"
+msgstr "Sincronizează fișierele Box.net"
+
+#: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:290
+#: ../conduit/modules/FileModule/FileModule.py:86
+msgid "Folder"
+msgstr "Dosar"
+
+#: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:291
+msgid "Folder name"
+msgstr "Numele dosarului"
+
+#: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:295
+msgid "Load folders"
+msgstr "Încarcă dosarele"
+
+#: ../conduit/modules/ConverterModule.py:91
+msgid "Note-"
+msgstr "Notița-"
+
+#: ../conduit/modules/DesktopWallpaperModule.py:38
+msgid "Wallpaper"
+msgstr "Imagine de fundal"
+
+#: ../conduit/modules/DesktopWallpaperModule.py:39
+msgid "Changes your Desktop Wallpaper"
+msgstr "Schimbă imaginea de fundal"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:110
+#, python-format
+msgid "Select %s"
+msgstr "Selectează %s"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:130
+msgid "Evolution Contacts"
+msgstr "Contacte Evolution"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:131
+msgid "Synchronize your contacts"
+msgstr "Sincronizează contactele"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:181
+msgid "Evolution Calendar"
+msgstr "Calendar Evolution"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:182
+msgid "Synchronize your calendar"
+msgstr "Sincronizează calendarul"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:243
+msgid "Evolution Tasks"
+msgstr "Sarcini Evolution"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:244
+msgid "Synchronize your tasks"
+msgstr "Sincronizează sarcinile"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:300
+msgid "Evolution Memos"
+msgstr "Notițe Evolution"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:301
+msgid "Synchronize your memos"
+msgstr "Sincronizează notițele"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:38
+msgid "Facebook"
+msgstr "Facebook"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:39
+msgid "Synchronize your Facebook photos"
+msgstr "Sincronizează fotografiile Facebook"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:124
+#: ../conduit/modules/FlickrModule/FlickrModule.py:282
+msgid "Loading album list..."
+msgstr "Se încarcă lista de albume..."
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:128
+msgid "Failed to connect"
+msgstr "Conexiunea a eșuat"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:131
+msgid "Logged in"
+msgstr "Autentificat"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:133
+msgid "Failed to login"
+msgstr "Autentificare eșuată"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:145
+#: ../conduit/modules/FspotModule/FspotModule.py:246
+msgid "Status"
+msgstr "Stare"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:150
+#: ../conduit/modules/iPodModule/iPodModule.py:566
+#: ../conduit/modules/ZotoModule/ZotoModule.py:252
+msgid "Album"
+msgstr "Album"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:151
+msgid "Album name"
+msgstr "Numele albumului"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:156
+msgid "Load albums"
+msgstr "Incarcă albume "
+
+#: ../conduit/modules/FeedModule/FeedModule.py:58
+msgid "RSS Feed"
+msgstr "Flux RSS"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:59
+msgid "Synchronize data from RSS enclosures"
+msgstr "Sincronizează datele din atașamente RSS"
+
+#. FIXME: Add Randomize
+#: ../conduit/modules/FeedModule/FeedModule.py:114
+msgid "Feed details"
+msgstr "Detaliile fluxului"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:115
+msgid "Feed address"
+msgstr "Adresa fluxului"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:118
+msgid "Enclosure settings"
+msgstr "Configurările atașamenelor RSS"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:119
+msgid "Limit downloaded enclosures"
+msgstr "Limitează atașamentele descărcate"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:125
+msgid "Limit to"
+msgstr "Limitează la"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:129
+#, fuzzy
+msgid "Randomize enclosures"
+msgstr "Aleatorizează atașamentele"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:133
+msgid "Download types"
+msgstr "Tipuri de descărcări"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:134
+msgid "Download audio files"
+msgstr "Descarcă fișiere audio"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:135
+msgid "Download video files"
+msgstr "Descarcă fișiere video"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:136
+msgid "Download photo files"
+msgstr "Descarcă fișiere foto"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:112
+msgid "Icon"
+msgstr "Iconiță"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:124
+#: ../conduit/modules/GConfModule/GConfModule.py:138
+msgid "Items"
+msgstr "Elemente"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:150
+#, python-format
+msgid "<i>Contains %s files</i>"
+msgstr "<i>Conține %s fișiere</i>"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:249
+msgid "Include file..."
+msgstr "Include fișierul..."
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:259
+msgid "All files"
+msgstr "Toate fișierele"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:272
+msgid "Include folder..."
+msgstr "Include dosarul..."
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:315
+msgid "Please Name All Folders"
+msgstr "Denumiți toate dosarele"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:316
+msgid ""
+"All folders require a descriptive name. To name a folder simply click on it"
+msgstr ""
+"Toate dosarele necesită un nume descriptiv. Pentru a numi un dosar, dați "
+"click pe el"
+
+#: ../conduit/modules/FileModule/FileModule.py:27
+msgid "Files"
+msgstr "Fișiere"
+
+#: ../conduit/modules/FileModule/FileModule.py:28
+msgid "Source for synchronizing multiple files"
+msgstr "Sursă pentru sincronizarea mai multor fișiere"
+
+#: ../conduit/modules/FileModule/FileModule.py:87
+msgid "Synchronize folders"
+msgstr "Sincronizează dosarele"
+
+#: ../conduit/modules/Firefox3Module/Firefox3Module.py:40
+msgid "Firefox 3 Bookmarks"
+msgstr "Marcaje Firefox 3"
+
+#: ../conduit/modules/Firefox3Module/Firefox3Module.py:41
+msgid "Syncronize your Firefox 3 Bookmarks"
+msgstr "Sincronizează marcajele Firefox 3"
+
+#: ../conduit/modules/Firefox3Module/Firefox3Module.py:100
+msgid "Firefox Profile"
+msgstr "Profil Firefox"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:76
+msgid "Flickr"
+msgstr "Flickr"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:77
+msgid "Synchronize your Flickr.com photos"
+msgstr "Sincronizează fotografiile de pe Flickr.com"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:287
+msgid "Failed to connect."
+msgstr "Conexiune eșuată."
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:290
+msgid "Album names loaded."
+msgstr "Numele albumelor au fost încărcate."
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:292
+msgid "Failed to login."
+msgstr "Autentificare eșuată."
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:303
+msgid "Logging in, please wait..."
+msgstr "În curs de autentificare, așteptați..."
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:308
+#: ../conduit/modules/GoogleBookmarksModule.py:67
+#: ../conduit/modules/ZotoModule/ZotoModule.py:244
+msgid "Username"
+msgstr "Numele utilizatorului"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:319
+msgid "Authenticate"
+msgstr "Autentificare"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:323
+#: ../conduit/modules/ZotoModule/ZotoModule.py:251
+msgid "Saved photo settings"
+msgstr "Configurările foto salvate"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:328
+msgid "Resize photos"
+msgstr "Redimensionează fotografiile"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:329
+msgid "Do not resize"
+msgstr "Nu redimensiona"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:332
+msgid "Photos are public"
+msgstr "Fotografiile sunt publice"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:28
+msgid "F-Spot"
+msgstr "F-Spot"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:29
+msgid "Synchronize your F-Spot photos"
+msgstr "Sincronizează fotografiile F-Spot"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:155
+msgid "F-Spot DBus interface is operating in read-only mode"
+msgstr "Interfața F-Spot DBus rulează in modul „doar citire”"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:221
+msgid "F-Spot is running"
+msgstr "F-Spot rulează deja"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:222
+msgid "Please start F-Spot or activate the D-Bus Extension"
+msgstr "Porniți F-Spot sau activați extensia D-Bus"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:247
+msgid "Start F-Spot"
+msgstr "Porniți F-Spot"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:251
+#: ../conduit/modules/FspotModule/FspotModule.py:252
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:72
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:74
+msgid "Tags"
+msgstr "Etichete"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:265
+msgid "Add tags"
+msgstr "Adaugă etichete"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:266
+msgid "Tag name"
+msgstr "Numele etichetei"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:269
+msgid "Add tag"
+msgstr "Adaugă eticheta"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:21
+msgid "Application Settings"
+msgstr "Configurările aplicațiilor"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:22
+msgid "Synchronize your application settings"
+msgstr "Sincronizează configurările aplicațiilor"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:31
+msgid "Metacity"
+msgstr "Metacity"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:32
+msgid "Nautilus"
+msgstr "Nautilus"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:33
+msgid "Preferred Applications"
+msgstr "Aplicații preferate"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:34
+msgid "Desktop Interface"
+msgstr "Interfață desktop"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:35
+msgid "Gnome Terminal"
+msgstr "Terminal Gnome"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:137
+msgid "Applications to Synchronize"
+msgstr "Aplicații de sincronizat"
+
+#: ../conduit/modules/GoogleBookmarksModule.py:19
+msgid "Google Bookmarks"
+msgstr "Marcaje Google"
+
+#: ../conduit/modules/GoogleBookmarksModule.py:20
+msgid "Sync your Google Bookmarks"
+msgstr "Marcaje Google"
+
+#: ../conduit/modules/GoogleBookmarksModule.py:66
+msgid "Login Details"
+msgstr "Autentificare"
+
+#: ../conduit/modules/GoogleBookmarksModule.py:70
+#: ../conduit/modules/ZotoModule/ZotoModule.py:247
+msgid "Password"
+msgstr "Parolă"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:277
+msgid "Synchronize your iPod notes"
+msgstr "Sincronizează notițele de pe iPod"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:392
+msgid "Contacts"
+msgstr "Contacte"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:393
+msgid "Synchronize your iPod contacts"
+msgstr "Sincronizează contactele de pe iPod"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:428
+msgid "Calendar"
+msgstr "Calendar"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:429
+msgid "Synchronize your iPod calendar"
+msgstr "Sincronizează calendarul de pe iPod"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:465
+msgid "Synchronize your iPod photos"
+msgstr "Sincronizează fotografiile de pe iPod"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:570
+msgid "Delete"
+msgstr "Șterge"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:573
+msgid "Delete All Photos"
+msgstr "Șterge toate fotografiile"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:803
+#: ../conduit/modules/iPodModule/iPodModule.py:920
+#: ../conduit/modules/N800Module/N800Module.py:77
+msgid "Encoding"
+msgstr "Codificare"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:919
+msgid "Conversion options"
+msgstr "Opțiuni pentru conversie"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:924
+msgid "Keep converted files"
+msgstr "Păstrează fișierele convertite"
+
+#. To translators: defaul music folder of N800
+#: ../conduit/modules/iPodModule/iPodModule.py:954
+#: ../conduit/modules/N800Module/N800Module.py:133
+msgid "Music"
+msgstr "Muzică"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:955
+msgid "Synchronize your iPod music"
+msgstr "Sincronizează muzica de pe iPod"
+
+#. To translators: defaul video folder of N800
+#: ../conduit/modules/iPodModule/iPodModule.py:990
+#: ../conduit/modules/N800Module/N800Module.py:157
+msgid "Video"
+msgstr "Video"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:991
+msgid "Synchronize your iPod videos"
+msgstr "Sincronizează videourile de pe iPod"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:1015
+msgid "Movie"
+msgstr "Film"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:1016
+msgid "Music Video"
+msgstr "Videoclip"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:1017
+msgid "TV Show"
+msgstr "Emisiune TV"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:1019
+msgid "Video kind"
+msgstr "Tip video"
+
+#. Translators: Translate this in derived classes.
+#: ../conduit/modules/N800Module/N800Module.py:55
+msgid "Conduit"
+msgstr "Conduit"
+
+#: ../conduit/modules/N800Module/N800Module.py:105
+msgid "N800 Files"
+msgstr "Fișiere N800"
+
+#: ../conduit/modules/N800Module/N800Module.py:106
+msgid "Synchronizes files/folders to a N800 device"
+msgstr "Sincronizează fișierele/dosarele cu un dispozitiv N800"
+
+#. To translators: default backup folder of N800
+#: ../conduit/modules/N800Module/N800Module.py:111
+msgid "Backups"
+msgstr "Cópii de rezervă"
+
+#: ../conduit/modules/N800Module/N800Module.py:126
+msgid "N800 Music"
+msgstr "Muzica N8000"
+
+#: ../conduit/modules/N800Module/N800Module.py:127
+msgid "Synchronizes music to a N800 device"
+msgstr "Sincronizează muzica cu un dispozitiv N800"
+
+#: ../conduit/modules/N800Module/N800Module.py:150
+msgid "N800 Videos"
+msgstr "Filme N800"
+
+#: ../conduit/modules/N800Module/N800Module.py:151
+msgid "Synchronizes video to a N800 device"
+msgstr "Sincronizează filmele cu un dispozitiv N800"
+
+#: ../conduit/modules/N800Module/N800Module.py:174
+msgid "N800 Photos"
+msgstr "Fotografii N800"
+
+#: ../conduit/modules/N800Module/N800Module.py:175
+msgid "Synchronizes photos to an N800 device"
+msgstr "Sincronizează fotografiile cu un dispozitiv N800"
+
+#. To translators: default photos folder of N800
+#: ../conduit/modules/N800Module/N800Module.py:181
+msgid "Photo"
+msgstr "Fotografie"
+
+#: ../conduit/modules/NautilusBookmarksModule.py:19
+msgid "Nautilus Bookmarks"
+msgstr "Marcaje Nautilus"
+
+#: ../conduit/modules/NautilusBookmarksModule.py:20
+msgid "Sync your Nautilus Bookmarks"
+msgstr "Sincronizează marcajele Nautilus"
+
+#: ../conduit/modules/NautilusBookmarksModule.py:145
+msgid "Sync bookmarks to local places/files"
+msgstr "Sincronizează marcajele către fișiere/locații locale"
+
+#: ../conduit/modules/NautilusBookmarksModule.py:148
+msgid "Sync bookmarks to remote places/files"
+msgstr "Sincronizează marcajele la distanță"
+
+#: ../conduit/modules/NetworkModule/Server.py:147
+msgid "Network"
+msgstr "Rețea"
+
+#: ../conduit/modules/NetworkModule/Server.py:148
+msgid "Enable synchronization via network"
+msgstr "Permite sincronizarea prin rețea"
+
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:48
+msgid "Rhythmbox Music"
+msgstr "Muzica Rhythmbox"
+
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:49
+msgid "Synchronize songs from your Rhythmbox playlists"
+msgstr "Sincronizează melodii din listele de redare Rhythmbox"
+
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:73
+msgid "Unknown"
+msgstr "Necunoscut"
+
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:37
+msgid "Shotwell"
+msgstr "Shotwell"
+
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:38
+msgid "Sync from your Shotwell photo library"
+msgstr "Sincronizează cu biblioteca foto Shotwell"
+
+#: ../conduit/modules/ShutterflyModule/ShutterflyModule.py:26
+msgid "Shutterfly"
+msgstr "Shutterfly"
+
+#: ../conduit/modules/ShutterflyModule/ShutterflyModule.py:27
+msgid "Synchronize your Shutterfly photos"
+msgstr "Sincronizează fotografiile Shutterfly"
+
+#: ../conduit/modules/ShutterflyModule/shutterfly/shutterfly.py:33
+msgid "%Y-%m-%d %H:%M:%S"
+msgstr "%Y-%m-%d %H:%M:%S"
+
+#: ../conduit/modules/SmugMugModule/SmugMugModule.py:28
+msgid "SmugMug"
+msgstr "SmugMug"
+
+#: ../conduit/modules/SmugMugModule/SmugMugModule.py:29
+msgid "Synchronize your SmugMug.com photos"
+msgstr "Sincronizează fotografiile SmugMug.com"
+
+#: ../conduit/modules/ZotoModule/ZotoModule.py:154
+msgid "Zoto"
+msgstr "Zoto"
+
+#: ../conduit/modules/ZotoModule/ZotoModule.py:155
+msgid "Synchronize your Zoto photos"
+msgstr "Sincronizează fotografiile Zoto"
