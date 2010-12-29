@@ -1,0 +1,1405 @@
+# Danish translation for conduit.
+# Copyright (C) 2010 conduit's COPYRIGHT HOLDER
+# This file is distributed under the same license as the conduit package.
+# Kris Thomsen <lakristho@gmail.com>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: conduit master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-12-29 12:02+0100\n"
+"PO-Revision-Date: 2010-12-12 23:35+0100\n"
+"Last-Translator: Kris Thomsen <lakristho@gmail.com>\n"
+"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../data/conduit.desktop.in.in.h:1
+#: ../data/conduit-autostart.desktop.in.in.h:2
+msgid "Conduit Synchronizer"
+msgstr "Conduit-synkronisering"
+
+#: ../data/conduit.desktop.in.in.h:2
+#: ../data/conduit-autostart.desktop.in.in.h:3
+msgid "Synchronization for GNOME"
+msgstr "Synkronisering til GNOME"
+
+#. Translators: Translate this in derived classes.
+#: ../data/conduit-autostart.desktop.in.in.h:1
+#: ../conduit/modules/N800Module/N800Module.py:55
+msgid "Conduit"
+msgstr "Conduit"
+
+#: ../data/conduit.glade.h:1
+#, fuzzy
+msgid "<b>Default Synchronization Options</b>"
+msgstr "Standardindstillinger for synkronisering"
+
+#: ../data/conduit.glade.h:2
+#, fuzzy
+msgid "<b>General</b>"
+msgstr "Generelt"
+
+#: ../data/conduit.glade.h:3
+#, fuzzy
+msgid "Always Up To Date"
+msgstr "Altid opdateret"
+
+#: ../data/conduit.glade.h:4
+msgid "Ask Me What to Do"
+msgstr "Spørg mig, hvad der skal gøres"
+
+#: ../data/conduit.glade.h:5
+msgid "Ask me what to do"
+msgstr "Spørg mig, hvad der skal gøres"
+
+#: ../data/conduit.glade.h:6
+#, fuzzy
+msgid "Cancel Synchronization"
+msgstr "_Annullér synkronisering"
+
+#: ../data/conduit.glade.h:7
+#, fuzzy
+msgid "Cancel currently synchronizing groups"
+msgstr "Annullerer nuværende synkroniserende grupper"
+
+#: ../data/conduit.glade.h:8
+msgid "Clear Canvas"
+msgstr ""
+
+#: ../data/conduit.glade.h:9
+msgid "Compare"
+msgstr "Sammenlign"
+
+#: ../data/conduit.glade.h:10
+msgid "Conduit Preferences"
+msgstr "Indstillinger for Conduit"
+
+#: ../data/conduit.glade.h:11
+msgid "Configuration"
+msgstr "Konfiguration"
+
+#: ../data/conduit.glade.h:12
+#, fuzzy
+msgid "Configure Item"
+msgstr "Konfigurér"
+
+#: ../data/conduit.glade.h:13
+msgid "Configure the synchronization settings for this item"
+msgstr ""
+
+#: ../data/conduit.glade.h:14
+msgid "Conflict Options"
+msgstr "Indstillinger for konflikter"
+
+#: ../data/conduit.glade.h:15
+msgid "Conflicts"
+msgstr "Konflikter"
+
+#: ../data/conduit.glade.h:16
+#, fuzzy
+msgid "Contents"
+msgstr "Kontakter"
+
+#: ../data/conduit.glade.h:17
+msgid "Data Conversions"
+msgstr "Datakonverteringer"
+
+#: ../data/conduit.glade.h:18
+msgid "Data Providers"
+msgstr "Dataudbydere"
+
+#: ../data/conduit.glade.h:19
+#, fuzzy
+msgid "Delete Group"
+msgstr "Slet"
+
+#: ../data/conduit.glade.h:20
+#, fuzzy
+msgid "Delete Item"
+msgstr "Slet"
+
+#: ../data/conduit.glade.h:21
+msgid "Delete Options"
+msgstr "Slet indstillinger"
+
+#: ../data/conduit.glade.h:22
+msgid "Delete from the corresponding sink"
+msgstr "Slet fra den tilhørende datamodtagerfil"
+
+#: ../data/conduit.glade.h:23
+msgid "Delete the Corresponding Item"
+msgstr "Slet det tilhørende element"
+
+#: ../data/conduit.glade.h:24
+msgid "Editor"
+msgstr "Redigeringsprogram"
+
+#: ../data/conduit.glade.h:25
+msgid "Minimize to notification area"
+msgstr "Minimér til statusfelt"
+
+#: ../data/conduit.glade.h:26
+#, fuzzy
+msgid "Refresh Group"
+msgstr "Genopfriskning fuldført"
+
+#: ../data/conduit.glade.h:27
+#, fuzzy
+msgid "Refresh Item"
+msgstr "Genopfriskning fuldført"
+
+#: ../data/conduit.glade.h:28
+msgid "Replace the Older Item"
+msgstr "Erstat det gamle element"
+
+#: ../data/conduit.glade.h:29
+msgid "Replace the older item"
+msgstr "Erstat det gamle element"
+
+#: ../data/conduit.glade.h:30
+msgid "Resolve Conflicts"
+msgstr "Løs konflikter"
+
+#: ../data/conduit.glade.h:31
+msgid "Save settings on exit"
+msgstr "Gem indstillinger ved afslutning"
+
+#: ../data/conduit.glade.h:32
+msgid "Show Hints"
+msgstr "Vis fif"
+
+#: ../data/conduit.glade.h:33
+msgid "Show status icon"
+msgstr "Vis statusikon"
+
+#: ../data/conduit.glade.h:34
+msgid "Skip"
+msgstr "Spring over"
+
+#: ../data/conduit.glade.h:35
+#, fuzzy
+msgid "Slow Sync"
+msgstr "Langsom synkronisering"
+
+#: ../data/conduit.glade.h:36
+#, fuzzy
+msgid "Sync Options"
+msgstr "Indstillinger for konflikter"
+
+#: ../data/conduit.glade.h:37
+#, fuzzy
+msgid "Synchronize All"
+msgstr "_Synkronisér alt"
+
+#: ../data/conduit.glade.h:38
+#, fuzzy
+msgid "Synchronize Group"
+msgstr "Synkroniserer alle grupper"
+
+#: ../data/conduit.glade.h:39
+#, fuzzy
+msgid "Synchronize group"
+msgstr "Synkroniserer alle grupper"
+
+#: ../data/conduit.glade.h:40
+#, fuzzy
+msgid "Synchronizes all groups"
+msgstr "Synkroniserer alle grupper"
+
+#: ../data/conduit.glade.h:41
+msgid "Title"
+msgstr "Titel"
+
+#: ../data/conduit.glade.h:42
+#, fuzzy
+msgid "Two Way Sync"
+msgstr "Tovejssynkronisering"
+
+#: ../data/conduit.glade.h:43
+msgid "When an item has been deleted:"
+msgstr "Når et element er blevet slettet:"
+
+#: ../data/conduit.glade.h:44
+#, fuzzy
+msgid "When an item is deleted..."
+msgstr "Når et element er blevet slettet:"
+
+#: ../data/conduit.glade.h:45
+#, fuzzy
+msgid "When there is a conflict..."
+msgstr "Når der er en tovejskonflikt:"
+
+#: ../data/conduit.glade.h:46
+#, fuzzy
+msgid "When there is a two way conflict:"
+msgstr "Når der er en tovejskonflikt:"
+
+#: ../data/conduit.glade.h:47
+msgid "_Edit"
+msgstr "_Redigér"
+
+#: ../data/conduit.glade.h:48
+msgid "_File"
+msgstr "_Fil"
+
+#: ../data/conduit.glade.h:49
+msgid "_Help"
+msgstr "_Hjælp"
+
+#: ../conduit/gtkui/Canvas.py:149
+msgid "Drag a Data Provider here to continue"
+msgstr "Træk en dataudbyder hertil for at fortsætte"
+
+#. Visible column0 is
+#. [pixbuf + source display name] or
+#. [source_data.get_snippet()]
+#: ../conduit/gtkui/ConflictResolver.py:91
+msgid "Source"
+msgstr "Kilde"
+
+#: ../conduit/gtkui/ConflictResolver.py:105
+msgid "Resolution"
+msgstr "Opløsning"
+
+#. Visible column2 is the display name of source and source data
+#: ../conduit/gtkui/ConflictResolver.py:110
+msgid "Sink"
+msgstr "Datamodtagerfil"
+
+#: ../conduit/gtkui/ConflictResolver.py:150
+#: ../conduit/gtkui/ConflictResolver.py:151
+#, python-format
+msgid "Conflicts (%s)"
+msgstr "Konflikter (%s)"
+
+#. Build some liststores to display
+#: ../conduit/gtkui/UI.py:284
+msgid "Convert from"
+msgstr "Konvertér fra"
+
+#: ../conduit/gtkui/UI.py:285
+msgid "into"
+msgstr "til"
+
+#: ../conduit/gtkui/UI.py:336
+msgid "Relationship Database"
+msgstr "Forholdsdatabase"
+
+#: ../conduit/gtkui/UI.py:340
+msgid "Conversions Available"
+msgstr "Tilgængelige konverteringer"
+
+#: ../conduit/gtkui/UI.py:346 ../conduit/gtkui/Tree.py:348
+#: ../conduit/modules/FileModule/FileConfiguration.py:105
+msgid "Name"
+msgstr "Navn"
+
+#: ../conduit/gtkui/UI.py:350
+msgid "Loaded"
+msgstr "Indlæst"
+
+#: ../conduit/gtkui/UI.py:470 ../conduit/hildonui/UI.py:127
+msgid "Synchronization in progress. Do you want to cancel it?"
+msgstr "Synkronisering i gang. Vil du annullere den?"
+
+#: ../conduit/gtkui/UI.py:636
+msgid "_Synchronize All"
+msgstr "_Synkronisér alt"
+
+#: ../conduit/gtkui/UI.py:636
+msgid "Synchronizes All Groups"
+msgstr "Synkroniserer alle grupper"
+
+#: ../conduit/gtkui/UI.py:637
+msgid "_Cancel Synchronization"
+msgstr "_Annullér synkronisering"
+
+#: ../conduit/gtkui/UI.py:637
+msgid "Cancels Currently Synchronizing Groups"
+msgstr "Annullerer nuværende synkroniserende grupper"
+
+#: ../conduit/gtkui/UI.py:638
+msgid "_Quit"
+msgstr "_Afslut"
+
+#: ../conduit/gtkui/UI.py:638
+msgid "Close Conduit"
+msgstr "Luk Conduit"
+
+#: ../conduit/gtkui/UI.py:678
+msgid "Synchronization Error"
+msgstr "Synkroniseringsfejl"
+
+#: ../conduit/gtkui/UI.py:681
+msgid "Synchronization Complete"
+msgstr "Synkronisering færdig"
+
+#: ../conduit/gtkui/UI.py:697
+msgid "Synchronizing"
+msgstr "Synkronisering"
+
+#: ../conduit/gtkui/Tree.py:357
+msgid "Description"
+msgstr "Beskrivelse"
+
+#: ../conduit/dataproviders/DataProvider.py:19
+msgid "Ready"
+msgstr "Klar"
+
+#: ../conduit/dataproviders/DataProvider.py:20
+msgid "New data to sync"
+msgstr "Nye data at synkronisere"
+
+#: ../conduit/dataproviders/DataProvider.py:21
+msgid "Refreshing..."
+msgstr "Genopfrisker..."
+
+#: ../conduit/dataproviders/DataProvider.py:22
+msgid "Refreshed OK"
+msgstr "Genopfriskning fuldført"
+
+#: ../conduit/dataproviders/DataProvider.py:23
+msgid "Error Refreshing"
+msgstr "Kunne ikke genopfriske"
+
+#: ../conduit/dataproviders/DataProvider.py:24
+msgid "Synchronizing..."
+msgstr "Synkroniserer..."
+
+#: ../conduit/dataproviders/DataProvider.py:25
+msgid "Synchronized OK"
+msgstr "Synkronisering fuldført"
+
+#: ../conduit/dataproviders/DataProvider.py:26
+msgid "Error Synchronizing"
+msgstr "Kunne ikke synkronisere"
+
+#: ../conduit/dataproviders/DataProvider.py:27
+msgid "Synchronization Skipped"
+msgstr "Synkronisering sprunget over"
+
+#: ../conduit/dataproviders/DataProvider.py:28
+msgid "Synchronization Cancelled"
+msgstr "Synkronisering afbrudt"
+
+#: ../conduit/dataproviders/DataProvider.py:29
+msgid "Synchronization Conflict"
+msgstr "Synkroniseringskonflikt"
+
+#: ../conduit/dataproviders/DataProvider.py:30
+#, fuzzy
+msgid "Not Configured Correctly"
+msgstr "Ikke konfigureret"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:56
+msgid "Backpack Notes"
+msgstr "Rygsæknoter"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:57
+msgid "Store things in Backpack Notes"
+msgstr "Opbevar ting i rygsæknoter"
+
+#: ../conduit/modules/BackpackModule/config.glade.h:1
+#: ../conduit/modules/FlickrModule/config.glade.h:1
+#: ../conduit/modules/GoogleModule/calendar-config.glade.h:1
+#: ../conduit/modules/GoogleModule/documents-config.glade.h:1
+#: ../conduit/modules/GoogleModule/picasa-config.glade.h:1
+#: ../conduit/modules/GoogleModule/youtube-config.glade.h:1
+#: ../conduit/modules/ShutterflyModule/shutterfly.glade.h:1
+#: ../conduit/modules/SmugMugModule/config.glade.h:1
+#: ../conduit/modules/ZotoModule/zoto.glade.h:1
+#, fuzzy
+msgid "<b>Account Details</b>"
+msgstr "Kontodetaljer"
+
+#: ../conduit/modules/BackpackModule/config.glade.h:2
+#, fuzzy
+msgid "<b>Saved Note Settings</b>"
+msgstr "Gem indstillinger for billeder"
+
+#: ../conduit/modules/BackpackModule/config.glade.h:3
+#, fuzzy
+msgid "API key:"
+msgstr "API-nøgle"
+
+#: ../conduit/modules/BackpackModule/config.glade.h:4
+#, fuzzy
+msgid "Backpack"
+msgstr "Rygsæknoter"
+
+#: ../conduit/modules/BackpackModule/config.glade.h:5
+#, fuzzy
+msgid "Save notes in page:"
+msgstr "Gem noter i side"
+
+#: ../conduit/modules/BackpackModule/config.glade.h:6
+#: ../conduit/modules/FlickrModule/config.glade.h:8
+#: ../conduit/modules/GoogleModule/picasa-config.glade.h:8
+#: ../conduit/modules/GoogleModule/youtube-config.glade.h:9
+#: ../conduit/modules/ShutterflyModule/shutterfly.glade.h:6
+#: ../conduit/modules/SmugMugModule/config.glade.h:7
+#: ../conduit/modules/ZotoModule/zoto.glade.h:5
+#, fuzzy
+msgid "Username:"
+msgstr "Brugernavn"
+
+#: ../conduit/modules/BansheeModule/BansheeModule.py:33
+msgid "Banshee Playlists"
+msgstr "Banshee-afspilningslister"
+
+#: ../conduit/modules/BansheeModule/BansheeModule.py:34
+#, fuzzy
+msgid "Sync your Banshee playlists"
+msgstr "Synkronisér dine Banshee-afspilningslister"
+
+#. column 1 is the tag name
+#: ../conduit/modules/BansheeModule/BansheeModule.py:141
+#: ../conduit/modules/FspotModule/FspotModule.py:246
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:132
+#, fuzzy
+msgid "Tag Name"
+msgstr "Mærkenavn"
+
+#: ../conduit/modules/BansheeModule/BansheeModule.py:149
+#: ../conduit/modules/FspotModule/FspotModule.py:254
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:140
+msgid "Enabled"
+msgstr ""
+
+#: ../conduit/modules/BansheeModule/config.glade.h:1
+msgid "<b>Return Playlists</b>"
+msgstr ""
+
+#: ../conduit/modules/BansheeModule/config.glade.h:2
+msgid "Banshee"
+msgstr ""
+
+#: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:29
+#: ../conduit/modules/BoxDotNetModule/config.glade.h:1
+msgid "Box.net"
+msgstr "Box.net"
+
+#: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:30
+#, fuzzy
+msgid "Sync your Box.net files"
+msgstr "Synkronisér dine Box.net-filer"
+
+#: ../conduit/modules/BoxDotNetModule/config.glade.h:2
+#, fuzzy
+msgid "Folder:"
+msgstr "Mappe"
+
+#: ../conduit/modules/BoxDotNetModule/config.glade.h:3
+#: ../conduit/modules/FacebookModule/config.glade.h:3
+#: ../conduit/modules/FlickrModule/config.glade.h:4
+#, fuzzy
+msgid "Load"
+msgstr "Indlæst"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:108
+#, fuzzy, python-format
+msgid "Select %s:"
+msgstr "Vælg %s"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:147
+msgid "Evolution Contacts"
+msgstr "Evolution-kontakter"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:148
+#, fuzzy
+msgid "Sync your contacts"
+msgstr "Synkronisér dine kontakter"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:198
+msgid "Evolution Calendar"
+msgstr "Evolution-kalender"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:199
+#, fuzzy
+msgid "Sync your calendar"
+msgstr "Synkronisér din kalender"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:256
+msgid "Evolution Tasks"
+msgstr "Evolution-opgaver"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:257
+#, fuzzy
+msgid "Sync your tasks"
+msgstr "Synkronisér dine opgaver"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:313
+msgid "Evolution Memos"
+msgstr "Evolution-memo'er"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:314
+#, fuzzy
+msgid "Sync your memos"
+msgstr "Synkronisér dine memo'er"
+
+#: ../conduit/modules/EvolutionModule/config.glade.h:1
+msgid "Addressbook:"
+msgstr ""
+
+#: ../conduit/modules/EvolutionModule/config.glade.h:2
+#, fuzzy
+msgid "Evolution"
+msgstr "Evolution-opgaver"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:37
+#: ../conduit/modules/FacebookModule/config.glade.h:2
+msgid "Facebook"
+msgstr "Facebook"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:38
+#, fuzzy
+msgid "Sync your Facebook photos"
+msgstr "Synkronisér dine Facebook-billeder"
+
+#: ../conduit/modules/FacebookModule/config.glade.h:1
+#: ../conduit/modules/GoogleModule/picasa-config.glade.h:3
+#: ../conduit/modules/iPodModule/config.glade.h:2
+#: ../conduit/modules/ShutterflyModule/shutterfly.glade.h:3
+#: ../conduit/modules/SmugMugModule/config.glade.h:3
+#: ../conduit/modules/ZotoModule/zoto.glade.h:3
+#, fuzzy
+msgid "Album:"
+msgstr "Album"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:57
+#: ../conduit/modules/FeedModule/config.glade.h:9
+msgid "RSS Feed"
+msgstr "RSS-feed"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:58
+#, fuzzy
+msgid "Sync data from RSS enclosures"
+msgstr "Synkronisér data fra RSS-bilag"
+
+#: ../conduit/modules/FeedModule/config.glade.h:1
+#, fuzzy
+msgid "<b>Enclosure Settings</b>"
+msgstr "Bilagsindstillinger"
+
+#: ../conduit/modules/FeedModule/config.glade.h:2
+#, fuzzy
+msgid "<b>Feed Details</b>"
+msgstr "Feed-detaljer"
+
+#: ../conduit/modules/FeedModule/config.glade.h:3
+#, fuzzy
+msgid "Download Audio Files"
+msgstr "Hent lydfiler ned"
+
+#: ../conduit/modules/FeedModule/config.glade.h:4
+#, fuzzy
+msgid "Download Photos"
+msgstr "Hent billedfiler ned"
+
+#: ../conduit/modules/FeedModule/config.glade.h:5
+#, fuzzy
+msgid "Download Video Files"
+msgstr "Hent videofiler ned"
+
+#: ../conduit/modules/FeedModule/config.glade.h:6
+#, fuzzy
+msgid "Feed Address:"
+msgstr "Feed-adresse"
+
+#: ../conduit/modules/FeedModule/config.glade.h:7
+msgid ""
+"Limit the Number of\n"
+"Enclosures Downloaded to:"
+msgstr ""
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:99
+msgid "Icon"
+msgstr "Ikon"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:111
+msgid "Items"
+msgstr "Elementer"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:137
+#, python-format
+msgid "<i>Contains %s files</i>"
+msgstr "<i>Indeholder %s filer</i>"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:228
+msgid "Include file..."
+msgstr "Inkludér fil..."
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:238
+msgid "All files"
+msgstr "Alle filer"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:253
+msgid "Include folder..."
+msgstr "Inkludér mappe..."
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:298
+msgid "Please Name All Folders"
+msgstr "Navngiv venligst alle mapper"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:299
+msgid ""
+"All folders require a descriptive name. To name a folder simply click on it"
+msgstr ""
+"Alle mapper skal have et beskrivende navn. For at navngive en mappe skal du "
+"blot klikke på den"
+
+#: ../conduit/modules/FileModule/FileModule.py:23
+msgid "Files"
+msgstr "Filer"
+
+#: ../conduit/modules/FileModule/FileModule.py:24
+msgid "Source for synchronizing multiple files"
+msgstr "Kilde til synkronisering af flere filer"
+
+#: ../conduit/modules/FileModule/FileModule.py:63
+msgid "Folder"
+msgstr "Mappe"
+
+#: ../conduit/modules/FileModule/FileModule.py:64
+msgid "Synchronize folders"
+msgstr "Synkronisér mapper"
+
+#: ../conduit/modules/FileModule/config.glade.h:1
+#, fuzzy
+msgid "<b>Items to Synchronize</b>"
+msgstr "Programmer til synkronisering"
+
+#: ../conduit/modules/FileModule/config.glade.h:2
+msgid "Add Directory"
+msgstr ""
+
+#: ../conduit/modules/FileModule/config.glade.h:3
+#, fuzzy
+msgid "Add File"
+msgstr "_Fil"
+
+#: ../conduit/modules/FileModule/config.glade.h:4
+msgid "Advanced"
+msgstr ""
+
+#: ../conduit/modules/FileModule/config.glade.h:5
+#, fuzzy
+msgid "File Configuration"
+msgstr "Konfiguration"
+
+#: ../conduit/modules/FileModule/config.glade.h:6
+#, fuzzy
+msgid "Folder Configuration"
+msgstr "Konfiguration"
+
+#: ../conduit/modules/FileModule/config.glade.h:7
+msgid "Folder Location:"
+msgstr ""
+
+#: ../conduit/modules/FileModule/config.glade.h:8
+msgid "Follow Symbolic Links"
+msgstr ""
+
+#: ../conduit/modules/FileModule/config.glade.h:9
+msgid "Ignore File Modification Times"
+msgstr ""
+
+#: ../conduit/modules/FileModule/config.glade.h:10
+#, fuzzy
+msgid "Include Hidden Files"
+msgstr "Inkludér fil..."
+
+#: ../conduit/modules/FileModule/config.glade.h:11
+#, fuzzy
+msgid "Select A Folder"
+msgstr "Filer og mapper"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:76
+#: ../conduit/modules/FlickrModule/config.glade.h:3
+msgid "Flickr"
+msgstr "Flickr"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:77
+#, fuzzy
+msgid "Sync your Flickr.com photos"
+msgstr "Synkronisér dine Flickr.com-billeder"
+
+#: ../conduit/modules/FlickrModule/config.glade.h:2
+#: ../conduit/modules/GoogleModule/picasa-config.glade.h:2
+#: ../conduit/modules/ShutterflyModule/shutterfly.glade.h:2
+#: ../conduit/modules/SmugMugModule/config.glade.h:2
+#: ../conduit/modules/ZotoModule/zoto.glade.h:2
+#, fuzzy
+msgid "<b>Saved Photo Settings</b>"
+msgstr "Gem indstillinger for billeder"
+
+#: ../conduit/modules/FlickrModule/config.glade.h:5
+msgid "Photos are public"
+msgstr "Billeder er offentlige"
+
+#: ../conduit/modules/FlickrModule/config.glade.h:6
+#, fuzzy
+msgid "Photoset Name:"
+msgstr "Billeder"
+
+#: ../conduit/modules/FlickrModule/config.glade.h:7
+#: ../conduit/modules/GoogleModule/picasa-config.glade.h:7
+#: ../conduit/modules/SmugMugModule/config.glade.h:5
+#, fuzzy
+msgid "Resize Photos:"
+msgstr "Skalér billeder"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:25
+#: ../conduit/modules/FspotModule/config.glade.h:3
+msgid "F-Spot"
+msgstr "F-Spot"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:26
+#, fuzzy
+msgid "Sync your F-Spot photos"
+msgstr "Synkronisér dine F-Spot-billeder"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:127
+#, fuzzy
+msgid "F-Spot DBus interface is operating in read only mode"
+msgstr "F-Spot-DBus-grænseflade opererer i læs-kun-tilstand"
+
+#: ../conduit/modules/FspotModule/config.glade.h:1
+msgid "<b>Return Photos Tagged With</b>"
+msgstr ""
+
+#: ../conduit/modules/FspotModule/config.glade.h:2
+msgid "Create Tags: "
+msgstr ""
+
+#: ../conduit/modules/GConfModule/GConfModule.py:21
+#, fuzzy
+msgid "GConf Settings"
+msgstr "Indstillinger"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:22
+msgid "Sync your desktop preferences"
+msgstr ""
+
+#: ../conduit/modules/GoogleModule/GoogleModule.py:369
+#: ../conduit/modules/GoogleModule/calendar-config.glade.h:4
+msgid "Google Calendar"
+msgstr "Google-kalender"
+
+#: ../conduit/modules/GoogleModule/GoogleModule.py:370
+#, fuzzy
+msgid "Sync your Google Calendar"
+msgstr "Synkronisér din Google-kalender"
+
+#: ../conduit/modules/GoogleModule/GoogleModule.py:555
+#: ../conduit/modules/GoogleModule/picasa-config.glade.h:6
+msgid "Picasa"
+msgstr "Picasa"
+
+#: ../conduit/modules/GoogleModule/GoogleModule.py:556
+#, fuzzy
+msgid "Sync your Google Picasa photos"
+msgstr "Synkronisér dine Google Picasa-billeder"
+
+#: ../conduit/modules/GoogleModule/GoogleModule.py:803
+#, fuzzy
+msgid "Google Contacts"
+msgstr "Google-dokumenter"
+
+#: ../conduit/modules/GoogleModule/GoogleModule.py:804
+#, fuzzy
+msgid "Sync your Gmail contacts"
+msgstr "Synkronisér dine Google Mail-kontakter"
+
+#: ../conduit/modules/GoogleModule/GoogleModule.py:1060
+#: ../conduit/modules/GoogleModule/documents-config.glade.h:5
+msgid "Google Documents"
+msgstr "Google-dokumenter"
+
+#: ../conduit/modules/GoogleModule/GoogleModule.py:1061
+#, fuzzy
+msgid "Sync your Google Documents"
+msgstr "Synkronisér dine Google-dokumenter"
+
+#: ../conduit/modules/GoogleModule/GoogleModule.py:1338
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:60
+msgid "Unknown"
+msgstr "Ukendt"
+
+#: ../conduit/modules/GoogleModule/GoogleModule.py:1339
+msgid "miscellaneous"
+msgstr "blandet"
+
+#: ../conduit/modules/GoogleModule/GoogleModule.py:1340
+msgid "No description."
+msgstr "Ingen beskrivelse."
+
+#: ../conduit/modules/GoogleModule/GoogleModule.py:1349
+msgid "YouTube"
+msgstr "YouTube"
+
+#: ../conduit/modules/GoogleModule/GoogleModule.py:1350
+#, fuzzy
+msgid "Sync data from YouTube"
+msgstr "Synkronisér data fra YouTube"
+
+#: ../conduit/modules/GoogleModule/calendar-config.glade.h:2
+#, fuzzy
+msgid "Calendar:"
+msgstr "Kalender"
+
+#: ../conduit/modules/GoogleModule/calendar-config.glade.h:3
+#: ../conduit/modules/GoogleModule/documents-config.glade.h:4
+msgid "Email:"
+msgstr ""
+
+#: ../conduit/modules/GoogleModule/calendar-config.glade.h:5
+#, fuzzy
+msgid "Load Calendars"
+msgstr "Kalender"
+
+#: ../conduit/modules/GoogleModule/calendar-config.glade.h:6
+#: ../conduit/modules/GoogleModule/documents-config.glade.h:6
+#: ../conduit/modules/GoogleModule/picasa-config.glade.h:5
+#: ../conduit/modules/GoogleModule/youtube-config.glade.h:6
+#: ../conduit/modules/ShutterflyModule/shutterfly.glade.h:4
+#: ../conduit/modules/SmugMugModule/config.glade.h:4
+#: ../conduit/modules/ZotoModule/zoto.glade.h:4
+#, fuzzy
+msgid "Password:"
+msgstr "Adgangskode"
+
+#: ../conduit/modules/GoogleModule/documents-config.glade.h:2
+msgid "<b>Downloaded Document Format</b>"
+msgstr ""
+
+#: ../conduit/modules/GoogleModule/documents-config.glade.h:3
+#, fuzzy
+msgid "Documents"
+msgstr "Google-dokumenter"
+
+#: ../conduit/modules/GoogleModule/documents-config.glade.h:7
+#, fuzzy
+msgid "Presentations"
+msgstr "API-dokumentation"
+
+#: ../conduit/modules/GoogleModule/documents-config.glade.h:8
+msgid "Spreadsheets"
+msgstr ""
+
+#: ../conduit/modules/GoogleModule/picasa-config.glade.h:4
+msgid "Login"
+msgstr "Logind"
+
+#: ../conduit/modules/GoogleModule/youtube-config.glade.h:2
+#, fuzzy
+msgid "<b>Download Videos</b>"
+msgstr "Hent videofiler ned"
+
+#: ../conduit/modules/GoogleModule/youtube-config.glade.h:3
+msgid "Favorites of above user"
+msgstr ""
+
+#: ../conduit/modules/GoogleModule/youtube-config.glade.h:4
+msgid "Max retrieved videos (0 is unlimited):"
+msgstr ""
+
+#: ../conduit/modules/GoogleModule/youtube-config.glade.h:5
+#, fuzzy
+msgid "Most viewed"
+msgstr "Film"
+
+#: ../conduit/modules/GoogleModule/youtube-config.glade.h:7
+msgid "Top rated"
+msgstr ""
+
+#: ../conduit/modules/GoogleModule/youtube-config.glade.h:8
+msgid "Uploaded by above user"
+msgstr ""
+
+#: ../conduit/modules/GoogleModule/youtube-config.glade.h:10
+#, fuzzy
+msgid "YouTube Source"
+msgstr "YouTube"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:650
+msgid "Encoding"
+msgstr "Indkodning"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:759
+msgid "Keep converted files"
+msgstr "Behold konverterede filer"
+
+#: ../conduit/modules/iPodModule/config.glade.h:1
+#, fuzzy
+msgid "<b>Encoding</b>"
+msgstr "Indkodning"
+
+#: ../conduit/modules/iPodModule/config.glade.h:3
+#, fuzzy
+msgid "iPod Photos"
+msgstr "Billeder"
+
+#. Translators: Format string used to describe the acceptable formats the
+#. device accepts. The first arg is replaced with DEFAULT_FOLDER and the second
+#. arg is a comma seperated list of encodings
+#: ../conduit/modules/N800Module/N800Module.py:59
+#, python-format
+msgid "%s Format (%s)"
+msgstr ""
+
+#. Signifies that a conversion should not take place
+#: ../conduit/modules/N800Module/N800Module.py:61
+msgid "unchanged"
+msgstr ""
+
+#: ../conduit/modules/N800Module/N800Module.py:123
+msgid "N800 Files"
+msgstr "N800-filer"
+
+#: ../conduit/modules/N800Module/N800Module.py:124
+msgid "Synchronizes files/folders to a N800 device"
+msgstr "Synkronisér filer/mapper til en N800-enhed"
+
+#. To translators: default backup folder of N800
+#: ../conduit/modules/N800Module/N800Module.py:129
+msgid "Backups"
+msgstr "Sikkerhedskopier"
+
+#: ../conduit/modules/N800Module/N800Module.py:144
+msgid "N800 Music"
+msgstr "N800-musik"
+
+#: ../conduit/modules/N800Module/N800Module.py:145
+msgid "Synchronizes music to a N800 device"
+msgstr "Synkronisér musik til en N800-enhed"
+
+#. To translators: defaul music folder of N800
+#: ../conduit/modules/N800Module/N800Module.py:151
+msgid "Music"
+msgstr "Musik"
+
+#: ../conduit/modules/N800Module/N800Module.py:168
+msgid "N800 Videos"
+msgstr "N800-videoer"
+
+#: ../conduit/modules/N800Module/N800Module.py:169
+msgid "Synchronizes video to a N800 device"
+msgstr "Synkronisér video til en N800-enhed"
+
+#. To translators: defaul video folder of N800
+#: ../conduit/modules/N800Module/N800Module.py:175
+msgid "Video"
+msgstr "Video"
+
+#: ../conduit/modules/N800Module/N800Module.py:192
+msgid "N800 Photos"
+msgstr "N800-billeder"
+
+#: ../conduit/modules/N800Module/N800Module.py:193
+#, fuzzy
+msgid "Synchronizes photo to a N800 device"
+msgstr "Synkronisér billeder til en N800-enhed"
+
+#. To translators: default photos folder of N800
+#: ../conduit/modules/N800Module/N800Module.py:199
+msgid "Photo"
+msgstr "Billede"
+
+#: ../conduit/modules/NetworkModule/Server.py:147
+msgid "Network"
+msgstr "Netværk"
+
+#: ../conduit/modules/NetworkModule/Server.py:148
+msgid "Enable synchronization via network"
+msgstr "Aktivér synkronisering via netværk"
+
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:40
+msgid "Rhythmbox Music"
+msgstr "Rhythmbox-musik"
+
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:41
+#, fuzzy
+msgid "Sync songs from your Rhythmbox playlists"
+msgstr "Synkronisér sange fra din Rhythmbox-afspilningsliste"
+
+#: ../conduit/modules/RhythmboxModule/config.glade.h:1
+#, fuzzy
+msgid "<b>Synchronize the Following Playlists</b>"
+msgstr "Synkronisér dine Banshee-afspilningslister"
+
+#: ../conduit/modules/RhythmboxModule/config.glade.h:2
+#, fuzzy
+msgid "Rhythmbox Playlists"
+msgstr "Rhythmbox-musik"
+
+#: ../conduit/modules/ShutterflyModule/ShutterflyModule.py:26
+#: ../conduit/modules/ShutterflyModule/shutterfly.glade.h:5
+msgid "Shutterfly"
+msgstr "Shutterfly"
+
+#: ../conduit/modules/ShutterflyModule/ShutterflyModule.py:27
+#, fuzzy
+msgid "Sync your Shutterfly photos"
+msgstr "Synkronisér dine Shutterfly-billeder"
+
+#: ../conduit/modules/ShutterflyModule/shutterfly/shutterfly.py:33
+msgid "%Y-%m-%d %H:%M:%S"
+msgstr "%d-%m-%Y %H:%M:%S"
+
+#: ../conduit/modules/SmugMugModule/SmugMugModule.py:28
+#: ../conduit/modules/SmugMugModule/config.glade.h:6
+msgid "SmugMug"
+msgstr "SmugMug"
+
+#: ../conduit/modules/SmugMugModule/SmugMugModule.py:29
+#, fuzzy
+msgid "Sync your SmugMug.com photos"
+msgstr "Synkronisér dine SmugMug.com-billeder"
+
+#: ../conduit/modules/ZotoModule/ZotoModule.py:154
+#: ../conduit/modules/ZotoModule/zoto.glade.h:6
+msgid "Zoto"
+msgstr "Zoto"
+
+#: ../conduit/modules/ZotoModule/ZotoModule.py:155
+#, fuzzy
+msgid "Sync your Zoto photos"
+msgstr "Synkronisér dine Zoto-billeder"
+
+#~ msgid "Start Conduit at login"
+#~ msgstr "Start Conduit ved logind"
+
+#~| msgid "Synchronization Error"
+#~ msgid "Synchronization Options"
+#~ msgstr "Indstillinger for synkronisering"
+
+#~ msgid "What Do You Want to Synchronize?"
+#~ msgstr "Hvad vil du synkronisere?"
+
+#~ msgid "Drag and Drop a Data Provider on the Canvas"
+#~ msgstr "Træk og slip en dataudbyder til lærredet"
+
+#~ msgid "Synchronization Group Created"
+#~ msgstr "Synkroniseringsgruppe oprettet"
+
+#~ msgid "Add Another Data Provider to the Group to Synchronize it"
+#~ msgstr "Tilføj en anden dataudbyder til gruppen for at synkronisere den"
+
+#~ msgid "You Are Now Ready to Synchronize"
+#~ msgstr "Du er nu klar til at synkronisere"
+
+#~ msgid "Right Click on Group for Options"
+#~ msgstr "Højreklik på gruppe for indstillinger"
+
+#~ msgid "Synchronize Two Folders"
+#~ msgstr "Synkronisér to mapper"
+
+#~ msgid "Backup Folder to Box.net"
+#~ msgstr "Sikkerhedskopiér mappe til Box.net"
+
+#~ msgid "Synchronize Tagged F-Spot Photos to Flickr"
+#~ msgstr "Synkronisér mærkede F-Spot-billeder til Flickr"
+
+#~ msgid "Synchronize Photos to Flickr"
+#~ msgstr "Synkronisér billeder til Flickr"
+
+#~ msgid "Upload Photos to Facebook"
+#~ msgstr "Læg billeder op på Facebook"
+
+#~ msgid "Synchronize Desktop Wallpaper from a RSS Feed"
+#~ msgstr "Synkronisér skrivebordsbaggrund fra et RSS-feed"
+
+#~ msgid "Conduit is a synchronization application."
+#~ msgstr "Conduit er et synkroniseringsprogram."
+
+#~ msgid "Launch without GUI. [default: %default]"
+#~ msgstr "Start uden brugergrænseflade. [standard: %default]"
+
+#~ msgid "Save dataprovider configuration to FILE. [default: %default]"
+#~ msgstr "Gem dataudbyder-konfiguration til FIL. [standard: %default]"
+
+#~ msgid "Iconify on startup. [default: %default]"
+#~ msgstr "Ikonifisér ved opstart. [standard: %default]"
+
+#~ msgid "Run with the specified UI. [default: %default]"
+#~ msgstr "Kør med den angivne brugerflade [standard: %default]"
+
+#~ msgid "Only load modules in the named files. [default: load all modules]"
+#~ msgstr ""
+#~ "Indlæs kun moduler i de navngivne filer. [standard: indlæs alle moduler]"
+
+#~ msgid "Do not load modules in the named files. [default: load all modules]"
+#~ msgstr ""
+#~ "Indlæs ikke moduler i de navngivne filer. [standard: indlæs alle moduler]"
+
+#~ msgid ""
+#~ "Explicitly set internal Conduit settings (keys) to the given values for "
+#~ "this session. [default: do not set]"
+#~ msgstr ""
+#~ "Sæt interne Conduit-indstillinger (taster) eksplicit for de angivne "
+#~ "værdier for denne session. [standard: sæt ikke]"
+
+#~ msgid ""
+#~ "Enable loading of unfinished or unsupported dataproviders. [default: %"
+#~ "default]"
+#~ msgstr ""
+#~ "Aktivér indlæsning af uafsluttede eller ikke understøttede dataudbydere. "
+#~ "[standard: %default]"
+
+#~ msgid "Generate more debugging information. [default: %default]"
+#~ msgstr "Generér mere fejlsøgningsinformation. [standard: %default]"
+
+#~ msgid "Generate less debugging information. [default: %default]"
+#~ msgstr "Generér mindre fejlsøgningsinformation. [standard: %default]"
+
+#~ msgid "Generate no debugging information. [default: %default]"
+#~ msgstr "Generér ikke fejlsøgningsinformation. [standard: %default]"
+
+#~ msgid "640x480"
+#~ msgstr "640x480"
+
+#~ msgid "800x600"
+#~ msgstr "800x600"
+
+#~ msgid "1024x768"
+#~ msgstr "1024x768"
+
+#~ msgid "None"
+#~ msgstr "Ingen"
+
+#~ msgid "Notes"
+#~ msgstr "Noter"
+
+#~ msgid "Office"
+#~ msgstr "Kontor"
+
+#~ msgid "Miscellaneous"
+#~ msgstr "Blandet"
+
+#~ msgid "Media"
+#~ msgstr "Medie"
+
+#~ msgid "Bookmarks"
+#~ msgstr "Bogmærker"
+
+#~ msgid "Test"
+#~ msgstr "Test"
+
+#~ msgid "Show me"
+#~ msgstr "Vis mig"
+
+#~ msgid "Introduction"
+#~ msgstr "Introduktion"
+
+#~ msgid "Writing a Data Provider"
+#~ msgstr "Skriver til en dataudbyder"
+
+#~ msgid "Test Results"
+#~ msgstr "Testresultater"
+
+#~ msgid "Examples"
+#~ msgstr "Eksempler"
+
+#~ msgid " - %s (Development Version)"
+#~ msgstr " - %s (Udviklingsversion)"
+
+#~ msgid " - Running Uninstalled"
+#~ msgstr " - Kører uinstalleret"
+
+#~ msgid "Developers"
+#~ msgstr "Udviklere"
+
+#~ msgid "Total: %d"
+#~ msgstr "I alt: %d"
+
+#~ msgid "Saved notes"
+#~ msgstr "Gemte noter"
+
+#~ msgid "Playlists"
+#~ msgstr "Afspilningslister"
+
+#~ msgid "Folder name"
+#~ msgstr "Mappenavn"
+
+#~ msgid "Load folders"
+#~ msgstr "Indlæs mapper"
+
+#~ msgid "Note-"
+#~ msgstr "Note-"
+
+#~ msgid "Wallpaper"
+#~ msgstr "Skrivebordsbaggrund"
+
+#~ msgid "Changes your Desktop Wallpaper"
+#~ msgstr "Ændrer din skrivebordsbaggrund"
+
+#~ msgid "Loading album list..."
+#~ msgstr "Indlæser albumliste..."
+
+#~ msgid "Failed to connect"
+#~ msgstr "Kunne ikke forbinde"
+
+#~ msgid "Logged in"
+#~ msgstr "Logget ind"
+
+#~ msgid "Failed to login"
+#~ msgstr "Kunne ikke logge ind"
+
+#~ msgid "Status"
+#~ msgstr "Status"
+
+#~ msgid "Album name"
+#~ msgstr "Albumnavn"
+
+#~ msgid "Load albums"
+#~ msgstr "Indlæs album"
+
+#~ msgid "Limit downloaded enclosures"
+#~ msgstr "Begræns nedhentede bilag"
+
+#~ msgid "Limit to"
+#~ msgstr "Begræns til"
+
+#~ msgid "Randomize enclosures"
+#~ msgstr "Tilpas bilag"
+
+#~ msgid "Download types"
+#~ msgstr "Nedhentningstyper"
+
+#~ msgid "Firefox 3 Bookmarks"
+#~ msgstr "Firefox 3-bogmærker"
+
+#~ msgid "Syncronize your Firefox 3 Bookmarks"
+#~ msgstr "Synkronisér dine Firefox 3-bogmærker"
+
+#~ msgid "Firefox Profile"
+#~ msgstr "Firefox-profil"
+
+#~ msgid "Failed to connect."
+#~ msgstr "Kunne ikke forbinde."
+
+#~ msgid "Album names loaded."
+#~ msgstr "Albumnavne indlæst."
+
+#~ msgid "Failed to login."
+#~ msgstr "Kunne ikke logge ind."
+
+#~ msgid "Logging in, please wait..."
+#~ msgstr "Logger ind, vent venligst..."
+
+#~ msgid "Authenticate"
+#~ msgstr "Godkend"
+
+#~ msgid "Do not resize"
+#~ msgstr "Skalér ikke"
+
+#~ msgid "F-Spot is running"
+#~ msgstr "F-Spot kører"
+
+#~ msgid "Please start F-Spot or activate the D-Bus Extension"
+#~ msgstr "Start venligst F-Spot eller aktivér D-Bus-udvidelsen"
+
+#~ msgid "Start F-Spot"
+#~ msgstr "Start F-Spot"
+
+#~ msgid "Tags"
+#~ msgstr "Mærker"
+
+#~ msgid "Add tags"
+#~ msgstr "Tilføj mærker"
+
+#~ msgid "Add tag"
+#~ msgstr "Tilføj mærke"
+
+#~ msgid "Application Settings"
+#~ msgstr "Indstillinger for program"
+
+#~ msgid "Synchronize your application settings"
+#~ msgstr "Synkronisér dine programindstillinger"
+
+#~ msgid "Metacity"
+#~ msgstr "Metacity"
+
+#~ msgid "Nautilus"
+#~ msgstr "Nautilus"
+
+#~ msgid "Preferred Applications"
+#~ msgstr "Foretrukne programmer"
+
+#~ msgid "Desktop Interface"
+#~ msgstr "Skrivebordsgrænseflade"
+
+#~ msgid "Gnome Terminal"
+#~ msgstr "Gnome-terminal"
+
+#~ msgid "Google Bookmarks"
+#~ msgstr "Google-bogmærker"
+
+#~ msgid "Sync your Google Bookmarks"
+#~ msgstr "Synkronisér dine Google-bogmærker"
+
+#~ msgid "Login Details"
+#~ msgstr "Loginddetaljer"
+
+#~ msgid "Synchronize your iPod notes"
+#~ msgstr "Synkronisér dine iPod-noter"
+
+#~ msgid "Synchronize your iPod contacts"
+#~ msgstr "Synkronisér dine iPod-kontakter"
+
+#~ msgid "Synchronize your iPod calendar"
+#~ msgstr "Synkronisér din iPod-kalender"
+
+#~ msgid "Synchronize your iPod photos"
+#~ msgstr "Synkronisér dine iPod-billeder"
+
+#~ msgid "Delete All Photos"
+#~ msgstr "Slet alle billeder"
+
+#~ msgid "Conversion options"
+#~ msgstr "Konverteringsindstillinger"
+
+#~ msgid "Synchronize your iPod music"
+#~ msgstr "Synkronisér dit iPod-musik"
+
+#~ msgid "Synchronize your iPod videos"
+#~ msgstr "Synkronisér dine iPod-videoer"
+
+#~ msgid "Music Video"
+#~ msgstr "Musikvideo"
+
+#~ msgid "TV Show"
+#~ msgstr "Tv-show"
+
+#~ msgid "Video kind"
+#~ msgstr "Videotype"
+
+#~ msgid "Nautilus Bookmarks"
+#~ msgstr "Nautilus-bogmærker"
+
+#~ msgid "Sync your Nautilus Bookmarks"
+#~ msgstr "Synkronisér dine Nautilus-bogmærker"
+
+#~ msgid "Sync bookmarks to local places/files"
+#~ msgstr "Synkronisér bogmærker til et lokalt sted/lokale filer"
+
+#~ msgid "Sync bookmarks to remote places/files"
+#~ msgstr "Synkronisér bogmærker til fjernsteder/-filer"
+
+#~| msgid "Show me"
+#~ msgid "Shotwell"
+#~ msgstr "Shotwell"
+
+#~| msgid "Synchronize your Shutterfly photos"
+#~ msgid "Sync from your Shotwell photo library"
+#~ msgstr "Synkronisér fra dit Shotwell-billedbibliotek"
+
+#~ msgid "iPod Music"
+#~ msgstr "iPod-musik"
+
+#~ msgid "iPod Video"
+#~ msgstr "iPod-video"
