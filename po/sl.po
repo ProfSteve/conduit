@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: conduit\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=conduit&component=documentation and translation\n"
 "POT-Creation-Date: 2010-09-23 07:39+0000\n"
-"PO-Revision-Date: 2010-09-23 09:48+0100\n"
-"Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
+"PO-Revision-Date: 2011-01-13 18:36+0100\n"
+"Last-Translator: Andrej Žnidaršič <andrej.znidarsic@gmail.com>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: ../data/conduit.desktop.in.in.h:1
 msgid "Conduit Synchronizer"
-msgstr "Usklajevalnik Conduit"
+msgstr "Conduit usklajevalnik "
 
 #: ../data/conduit.desktop.in.in.h:2
 msgid "Synchronization for GNOME"
@@ -1134,269 +1134,184 @@ msgstr "Uskladite svoje fotografije Zoto"
 
 #~ msgid "Google Calendar"
 #~ msgstr "Google koledar"
-
 #~ msgid "Synchronize your Google Calendar"
 #~ msgstr "Uskladite svoj koledar Google"
-
 #~ msgid "Picasa"
 #~ msgstr "Picasa"
-
 #~ msgid "Synchronize your Google Picasa photos"
 #~ msgstr "Uskladite svoje fotografij Google Picasa"
-
 #~ msgid "Google Contacts"
 #~ msgstr "Google stiki"
-
 #~ msgid "Synchronize your Google Mail contacts"
 #~ msgstr "Uskladite svoje stike Google pošte"
-
 #~ msgid "Google Documents"
 #~ msgstr "Dokumenti Google"
-
 #~ msgid "Synchronize your Google Documents"
 #~ msgstr "Uskladite svoje dokumente Google"
-
 #~ msgid "miscellaneous"
 #~ msgstr "razno"
-
 #~ msgid "No description."
 #~ msgstr "Brez opisa."
-
 #~ msgid "YouTube"
 #~ msgstr "YouTube"
-
 #~ msgid "Synchronize data from YouTube"
 #~ msgstr "Uskladite podatke z Youtube"
-
 #~ msgid "iPod Music"
 #~ msgstr "Glasba iPod"
-
 #~ msgid "iPod Video"
 #~ msgstr "iPod Video"
-
 #~ msgid "Create Partnership"
 #~ msgstr "Ustvari družabništvo"
-
 #~ msgid "Windows Mobile Contacts"
 #~ msgstr "Stiki Windows Mobile"
-
 #~ msgid "Windows Mobile Calendar"
 #~ msgstr "Koledar Windows Mobile"
-
 #~ msgid "Tasks"
 #~ msgstr "Naloge"
-
 #~ msgid "Windows Mobile Tasks"
 #~ msgstr "Naloge Windows Mobile"
-
 #~ msgid "Cancel Synchronization"
 #~ msgstr "Prekliči usklajevanje"
-
 #~ msgid "Cancel currently-synchronizing groups"
 #~ msgstr "Prekliči trenutno usklajevane skupine"
-
 #~ msgid "Clear Canvas"
 #~ msgstr "Počisti platno"
-
 #~ msgid "Configure Item"
 #~ msgstr "Nastavi predmet"
-
 #~ msgid "Configure the synchronization settings for this item"
 #~ msgstr "Nastavi možnosti usklajevanja za ta predmet"
-
 #~ msgid "Contents"
 #~ msgstr "Vsebina"
-
 #~ msgid "Delete Group"
 #~ msgstr "Izbriši skupino"
-
 #~ msgid "Delete Item"
 #~ msgstr "Izbriši predmet"
-
 #~ msgid "Refresh Group"
 #~ msgstr "Osveži skupino"
-
 #~ msgid "Refresh Item"
 #~ msgstr "Osveži predmet"
-
 #~ msgid "Synchronize All"
 #~ msgstr "Uskladi vse"
-
 #~ msgid "Synchronize Group"
 #~ msgstr "Uskladi skupino"
-
 #~ msgid "Synchronize group"
 #~ msgstr "Uskladi skupino"
-
 #~ msgid "Synchronizes all groups"
 #~ msgstr "Uskladi vse skupine"
-
 #~ msgid "When an item is deleted..."
 #~ msgstr "Ko je predmet izbrisan ..."
-
 #~ msgid "When there is a conflict..."
 #~ msgstr "Ob sporu ..."
-
 #~ msgid "<b>Account Details</b>"
 #~ msgstr "<b>Podrobnosti računa</b>"
-
 #~ msgid "Calendar:"
 #~ msgstr "Koledar:"
-
 #~ msgid "Email:"
 #~ msgstr "E-pošta:"
-
 #~ msgid "Load Calendars"
 #~ msgstr "Naloži koledarje"
-
 #~ msgid "Password:"
 #~ msgstr "Geslo:"
-
 #~ msgid "Slow Sync"
 #~ msgstr "Počasno usklajevanje"
-
 #~ msgid "Sync Options"
 #~ msgstr "Možnosti usklajevanja"
-
 #~ msgid "Two Way Sync"
 #~ msgstr "Dvosmerno usklajevanje"
-
 #~ msgid "Use built in Web browser"
 #~ msgstr "Uporabi vgrajen brskalnik"
-
 #~ msgid "_About"
 #~ msgstr "_O programu"
-
 #~ msgid "About Conduit"
 #~ msgstr "O programu"
-
 #~ msgid "<b>Saved Note Settings</b>"
 #~ msgstr "<b>Shranjene nastavitve sporočilca</b>"
-
 #~ msgid "Backpack"
 #~ msgstr "Backpack"
-
 #~ msgid "Enabled"
 #~ msgstr "Omogočeno"
-
 #~ msgid "<b>Return Playlists</b>"
 #~ msgstr "<b>Izpisani seznami predvajanja</b>"
-
 #~ msgid "Banshee"
 #~ msgstr "Banshee"
-
 #~ msgid "Folder:"
 #~ msgstr "Mapa:"
-
 #~ msgid "Load"
 #~ msgstr "Naloži"
-
 #~ msgid "Addressbook:"
 #~ msgstr "Imenik:"
-
 #~ msgid "Evolution"
 #~ msgstr "Evolution"
-
 #~ msgid ""
 #~ "Limit the Number of\n"
 #~ "Enclosures Downloaded to:"
 #~ msgstr ""
 #~ "Omeji število prenesenih\n"
 #~ "prilog virov na:"
-
 #~ msgid "Please Enter a Folder Name"
 #~ msgstr "Vnesite ime mape"
-
 #~ msgid ""
 #~ "All folders require a descriptive name. To name a folder enter its name "
 #~ "where indicated"
 #~ msgstr ""
 #~ "Vse mape morajo vsebovati opisno ime. Za poimenovanje mape vnesite njeno "
 #~ "ime, kjer je določeno."
-
 #~ msgid "<b>Items to Synchronize</b>"
 #~ msgstr "<b>Predmeti za usklajevanje</b>"
-
 #~ msgid "Add Directory"
 #~ msgstr "Dodaj mapo"
-
 #~ msgid "Add File"
 #~ msgstr "Dodaj datoteko"
-
 #~ msgid "File Configuration"
 #~ msgstr "Nastavitev datoteke"
-
 #~ msgid "Folder Configuration"
 #~ msgstr "Nastavitev map"
-
 #~ msgid "Folder Location:"
 #~ msgstr "Mesto mape:"
-
 #~ msgid "Ignore File Modification Times"
 #~ msgstr "Prezri čas spremembe"
-
 #~ msgid "Include Hidden Files"
 #~ msgstr "Vključi skrite datoteke"
-
 #~ msgid "Select A Folder"
 #~ msgstr "Izbor mape"
-
 #~ msgid "Photoset Name:"
 #~ msgstr "Ime seta fotografij:"
-
 #~ msgid "F-Spot Photos"
 #~ msgstr "F-Spot fotografije"
-
 #~ msgid "<b>Return Photos Tagged With</b>"
 #~ msgstr "<b>Prikaži fotografije označene z</b>"
-
 #~ msgid "Create Tags: "
 #~ msgstr "Ustvari oznake:"
-
 #~ msgid "Sync your desktop preferences"
 #~ msgstr "Uskladi možnosti namizja"
-
 #~ msgid "Sync contacts from Google"
 #~ msgstr "Uskladi stike z Googlom"
-
 #~ msgid "<b>Donwload Videos</b>"
 #~ msgstr "<b>Prenesi posnetke</b>"
-
 #~ msgid "By user"
 #~ msgstr "Uporabnik"
-
 #~ msgid "Favorites of"
 #~ msgstr "Priljubljeno"
-
 #~ msgid "Max retrieved videos (0 is unlimited):"
 #~ msgstr "Največkrat pridobljeni posnetki (0 ne neomejeno):"
-
 #~ msgid "Top rated"
 #~ msgstr "Visoko ocenjeno"
-
 #~ msgid "Uploaded by"
 #~ msgstr "Objavil"
-
 #~ msgid "User: "
 #~ msgstr "Uporabnik:"
-
 #~ msgid "YouTube Source"
 #~ msgstr "Vir YouTube"
-
 #~ msgid "gtk-delete"
 #~ msgstr "gtk-delete"
-
 #~ msgid "iPod Photos"
 #~ msgstr "iPod fotografije"
-
 #~ msgid "%s Format (%s)"
 #~ msgstr "%s zapis (%s)"
-
 #~ msgid "unchanged"
 #~ msgstr "nespremenjeno"
-
 #~ msgid "<b>Synchronize the Following Playlists</b>"
 #~ msgstr "<b>Uskladi naslednje sezname predvajanja</b>"
-
 #~ msgid "Rhythmbox Playlists"
 #~ msgstr "Rhythmbox seznami predvajanja"
+
