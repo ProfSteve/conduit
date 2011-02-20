@@ -1,17 +1,19 @@
 # translation of conduit.help.HEAD.po to Español
 # Jorge González <jorgegonz@svn.gnome.org>, 2008.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: conduit.help.HEAD\n"
-"POT-Creation-Date: 2008-07-21 05:00+0000\n"
-"PO-Revision-Date: 2008-07-21 21:05+0200\n"
-"Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
+"POT-Creation-Date: 2009-04-07 18:43+0000\n"
+"PO-Revision-Date: 2011-02-20 18:32+0100\n"
+"Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -26,14 +28,17 @@ msgstr ""
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/conduit.xml:214(None)
-msgid "@@image: 'figures/conduit-login.png'; md5=6e4fe96c2d518d23724e1a70a53fa026"
-msgstr "@@image: 'figures/conduit-login.png'; md5=6e4fe96c2d518d23724e1a70a53fa026"
+msgid ""
+"@@image: 'figures/conduit-login.png'; md5=6e4fe96c2d518d23724e1a70a53fa026"
+msgstr ""
+"@@image: 'figures/conduit-login.png'; md5=6e4fe96c2d518d23724e1a70a53fa026"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/conduit.xml:233(None)
 msgid "@@image: 'figures/conduit-dp.png'; md5=ce99ba0bdc70c854b1f8a9999435e250"
-msgstr "@@image: 'figures/conduit-dp.png'; md5=ce99ba0bdc70c854b1f8a9999435e250"
+msgstr ""
+"@@image: 'figures/conduit-dp.png'; md5=ce99ba0bdc70c854b1f8a9999435e250"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -48,14 +53,18 @@ msgstr ""
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/conduit.xml:345(None)
-msgid "@@image: 'figures/network-sync-pc1.png'; md5=118578724965f8af01b66ccdc7e39328"
-msgstr "@@image: 'figures/network-sync-pc1.png'; md5=118578724965f8af01b66ccdc7e39328"
+msgid ""
+"@@image: 'figures/network-sync-pc1.png'; md5=118578724965f8af01b66ccdc7e39328"
+msgstr ""
+"@@image: 'figures/network-sync-pc1.png'; md5=118578724965f8af01b66ccdc7e39328"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/conduit.xml:358(None)
-msgid "@@image: 'figures/network-sync-pc2.png'; md5=565769e5f51b3decfebcfa18989ee391"
-msgstr "@@image: 'figures/network-sync-pc2.png'; md5=565769e5f51b3decfebcfa18989ee391"
+msgid ""
+"@@image: 'figures/network-sync-pc2.png'; md5=565769e5f51b3decfebcfa18989ee391"
+msgstr ""
+"@@image: 'figures/network-sync-pc2.png'; md5=565769e5f51b3decfebcfa18989ee391"
 
 #: C/conduit.xml:14(title)
 msgid "Conduit Manual"
@@ -206,7 +215,8 @@ msgstr ""
 "teléfono móvil"
 
 #: C/conduit.xml:75(para)
-msgid "Steve wants to keep his gnome preferences in sync between his two computers"
+msgid ""
+"Steve wants to keep his gnome preferences in sync between his two computers"
 msgstr ""
 "Isaac quiere mantener sus preferencias de GNOME sincronizadas en sus dos "
 "equipos"
@@ -310,7 +320,8 @@ msgid "Music"
 msgstr "Música"
 
 #: C/conduit.xml:104(para)
-msgid "<ulink type=\"http\" url=\"http://del.icio.us\">Delicious</ulink> (bookmarks)"
+msgid ""
+"<ulink type=\"http\" url=\"http://del.icio.us\">Delicious</ulink> (bookmarks)"
 msgstr ""
 "<ulink type=\"http\" url=\"http://del.icio.us\">Delicious</ulink> "
 "(marcadores)"
@@ -324,8 +335,10 @@ msgstr ""
 "calendario, fuentes, correo-e, fotos)"
 
 #: C/conduit.xml:104(para)
-msgid "<ulink type=\"http\" url=\"http://www.flickr.com\">Flickr</ulink> (photos)"
-msgstr "<ulink type=\"http\" url=\"http://www.flickr.com\">Flickr</ulink> (fotos)"
+msgid ""
+"<ulink type=\"http\" url=\"http://www.flickr.com\">Flickr</ulink> (photos)"
+msgstr ""
+"<ulink type=\"http\" url=\"http://www.flickr.com\">Flickr</ulink> (fotos)"
 
 #: C/conduit.xml:104(para)
 msgid ""
@@ -344,8 +357,10 @@ msgid "A mobile phone"
 msgstr "Un teléfono móvil"
 
 #: C/conduit.xml:105(para)
-msgid "A <ulink type=\"http\" url=\"http://www.nokia.com\">Nokia</ulink> 770/800"
-msgstr "Un <ulink type=\"http\" url=\"http://www.nokia.com\">Nokia</ulink> 770/800"
+msgid ""
+"A <ulink type=\"http\" url=\"http://www.nokia.com\">Nokia</ulink> 770/800"
+msgstr ""
+"Un <ulink type=\"http\" url=\"http://www.nokia.com\">Nokia</ulink> 770/800"
 
 #: C/conduit.xml:105(para)
 msgid ""
@@ -362,7 +377,8 @@ msgid "An iPod"
 msgstr "Un iPod"
 
 #: C/conduit.xml:105(para)
-msgid "They probably also own another electronic device such as <placeholder-1/>"
+msgid ""
+"They probably also own another electronic device such as <placeholder-1/>"
 msgstr ""
 "Probablemente también posean un dispositivo electrónico tal como "
 "<placeholder-1/>"
@@ -506,8 +522,8 @@ msgstr ""
 "<menuchoice><guimenu>Archivo</guimenu><guimenuitem>Guardar</guimenuitem></"
 "menuchoice>. Guarda todos los grupos configurados. Los grupos se guardan "
 "automáticamente cuando sale de Conduit si ha seleccionado <guilabel>Guardar "
-"los ajustes al salir</guilabel> en la <xref linkend=\"conduit-preferences-window\"/"
-">."
+"los ajustes al salir</guilabel> en la <xref linkend=\"conduit-preferences-"
+"window\"/>."
 
 #: C/conduit.xml:145(para)
 msgid ""
@@ -613,15 +629,15 @@ msgstr ""
 
 #: C/conduit.xml:169(title)
 msgid "Configuration Tab"
-msgstr "La solapa de configuración"
+msgstr "La pestaña de configuración"
 
 #: C/conduit.xml:170(para)
 msgid ""
 "The configuration tab is where all of Conduit's global settings are "
 "configured. There are six global settings:"
 msgstr ""
-"La solapa de configuración es donde se configuran todos los ajustes globales "
-"de Conduit. Existen seis ajustes globales."
+"La pestaña de configuración es donde se configuran todos los ajustes "
+"globales de Conduit. Existen seis ajustes globales."
 
 #: C/conduit.xml:173(guilabel)
 msgid "Save Settings on Exit"
@@ -681,21 +697,25 @@ msgstr "Cuando hay un conflicto de dos vías"
 
 #: C/conduit.xml:193(title)
 msgid "Data Providers Tab"
-msgstr "Solapa de proveedores de datos"
+msgstr "Pestaña de proveedores de datos"
 
 #: C/conduit.xml:194(para)
-msgid "This tab shows a list of the data providers that are currently installed."
+msgid ""
+"This tab shows a list of the data providers that are currently installed."
 msgstr ""
-"Esta solapa muestra una lista de los proveedores de datos actualmente "
+"Esta pestaña muestra una lista de los proveedores de datos actualmente "
 "instalados."
 
 #: C/conduit.xml:197(title)
 msgid "Data Conversions Tab"
-msgstr "Solapa de conversiones de datos "
+msgstr "Pestaña de conversiones de datos "
 
 #: C/conduit.xml:198(para)
-msgid "This tab lists the data conversions that Conduit is capable of performing."
-msgstr "Esta solapa lista las conversiones de datos que Conduit es capaz de realizar."
+msgid ""
+"This tab lists the data conversions that Conduit is capable of performing."
+msgstr ""
+"Esta pestaña lista las conversiones de datos que Conduit es capaz de "
+"realizar."
 
 #: C/conduit.xml:201(title)
 msgid "Mapping DB"
@@ -743,7 +763,8 @@ msgstr "Ventana de inicio de sesión de Conduit"
 
 #: C/conduit.xml:217(para)
 msgid "The window shown when logging into data provider websites"
-msgstr "La ventana mostrada al iniciar sesión en páginas web de proveedores de datos"
+msgstr ""
+"La ventana mostrada al iniciar sesión en páginas web de proveedores de datos"
 
 #: C/conduit.xml:225(title)
 msgid "Data Providers and Groups"
@@ -840,7 +861,8 @@ msgstr ""
 
 #: C/conduit.xml:257(para)
 msgid "The top group depicts a two way synchronization of two folders"
-msgstr "El grupo superior describe una sincronización de dos vías para dos carpetas."
+msgstr ""
+"El grupo superior describe una sincronización de dos vías para dos carpetas."
 
 #: C/conduit.xml:258(para)
 msgid ""
@@ -998,7 +1020,8 @@ msgstr ""
 "contendrá el proveedor de datos F-Spot."
 
 #: C/conduit.xml:308(para)
-msgid "Drag Facebook and Picasa data providers into the Group that was just created."
+msgid ""
+"Drag Facebook and Picasa data providers into the Group that was just created."
 msgstr ""
 "Arrastre los proveedores de datos Facebook y Picasa en el grupo que acaba de "
 "crear."
@@ -1141,8 +1164,8 @@ msgstr "Configuración en el segundo equipo"
 msgid ""
 "Still on the second computer, drag the Tomboy dataprovider from the newly "
 "created category onto the canvas. Notice how its name is Remote Tomboy, "
-"indicating it refers to data on the remote, or first, computer. <placeholder-"
-"1/>"
+"indicating it refers to data on the remote, or first, computer. "
+"<placeholder-1/>"
 msgstr ""
 "Aún en el segundo equipo, arrastre el proveedor de datos Tomboy desde la "
 "nueva categoría creada al marco. Note que su nombre es Tomboy remoto, "
@@ -1151,11 +1174,13 @@ msgstr ""
 
 #: C/conduit.xml:364(para)
 msgid "Finally, on the second computer, start the sync in the normal manner."
-msgstr "Finalmente, en el segundo equipo, inicie la sincronización de forma normal."
+msgstr ""
+"Finalmente, en el segundo equipo, inicie la sincronización de forma normal."
 
 #: C/conduit.xml:365(para)
 msgid "Your tomboy notes should now be synchronized between the two computers."
-msgstr "Ahora sus notas de Tomboy deberían estar sincronizadas entre los dos equipos."
+msgstr ""
+"Ahora sus notas de Tomboy deberían estar sincronizadas entre los dos equipos."
 
 #: C/conduit.xml:368(title)
 msgid "File Synchronization"
@@ -1175,4 +1200,3 @@ msgstr ""
 #: C/conduit.xml:0(None)
 msgid "translator-credits"
 msgstr "Jorge González <jorgegonz@svn.gnome.org>, 2007-2008."
-
