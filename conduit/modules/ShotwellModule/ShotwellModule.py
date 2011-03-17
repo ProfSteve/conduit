@@ -1,3 +1,4 @@
+
 import conduit
 import conduit.dataproviders.DataProvider as DataProvider
 import conduit.datatypes.Photo as Photo
@@ -22,7 +23,6 @@ else:
     MODULES = {}
     log.info("Shotwell not installed")
 
-# Why is this not in the standard library?
 def _flatten(lst):
     for elem in lst:
         if type(elem) in (tuple, list):
@@ -32,7 +32,6 @@ def _flatten(lst):
             yield elem
 
 class ShotwellDataProvider(DataProvider.DataSource):
-
 
     _name_ = _('Shotwell')
     _description_ = _('Sync from your Shotwell photo library')
@@ -54,8 +53,7 @@ class ShotwellDataProvider(DataProvider.DataSource):
             shotwell_db.close()
             self._enabled = True
         except:
-            log.warn('Disabling Shotwell module, open of sqlite3 DB failed')
-            self._enabled = False
+            log.warn(_('Disabling Shotwell module, unable to open sqlite3 data source'))
 
     def initialize(self):
         DataProvider.DataSource.initialize(self)
@@ -63,6 +61,7 @@ class ShotwellDataProvider(DataProvider.DataSource):
 
     def set_tags(self, tags):
         self._selected_tag_names = map(lambda x: str(x), tags)
+        log.debug('Configuring to sync tags: %s', str(self._selected_tag_names))
 
     def get_tags(self):
         return self._selected_tag_names
@@ -71,19 +70,22 @@ class ShotwellDataProvider(DataProvider.DataSource):
         shotwell_db = shotwell.ShotwellDB()
         config.add_section(_('Tags'))
         all_tag_names = map(lambda sTag: sTag.name, shotwell_db.tags())
-        config.add_item(_('Tags'), 'list', config_name = 'tags',
-                        choices = all_tag_names)
+        config.add_item(_('Tags'), 'list', config_name = 'tags', choices = all_tag_names)
         shotwell_db.close()
 
     def refresh(self):
         DataProvider.DataSource.refresh(self)
         shotwell_db = shotwell.ShotwellDB()
-        tags = filter(lambda sTag: sTag.name in self._selected_tag_names,
-                      shotwell_db.tags())
+        tags = filter(lambda sTag: sTag.name in self._selected_tag_names, shotwell_db.tags())
+        log.debug('Tags to sync:')
+        if log.isEnabledFor(logging.DEBUG):
+            for sTag in tags:
+                log.debug('\t%s', str(sTag))
         tagged_photos = list(_flatten(map(lambda sTag: sTag.photoIDs, tags)))
-        self._shotwell_photos = filter(lambda sPhoto: str(sPhoto.id) in \
-                                       tagged_photos, shotwell_db.photos())
-        log.debug('Found %i photos to sync', len(self._shotwell_photos))
+        log.debug('Photo IDs for tags(%s): %s', str(tags), str(tagged_photos))
+        log.debug('All Photo IDs: %s', map(lambda x: str(x.id), shotwell_db.photos()))
+        self._shotwell_photos = filter(lambda sPhoto: str(sPhoto.id) in tagged_photos, shotwell_db.photos())
+        log.debug('%i photos (from %i tags) to sync', len(self._shotwell_photos), len(tags))
         shotwell_db.close()
 
     def get_all(self):
@@ -92,11 +94,10 @@ class ShotwellDataProvider(DataProvider.DataSource):
 
     def get(self, LUID):
         DataProvider.DataSource.get(self, LUID)
-        sPhoto = filter(lambda sPhoto: str(sPhoto.id) == LUID,
-                        self._shotwell_photos)[0]
+        sPhoto = filter(lambda sPhoto: str(sPhoto.id) == LUID, self._shotwell_photos)[0]
         photo = Photo.Photo('file://' + sPhoto.filename)
         photo.set_UID(LUID)
-        photo.set_caption(sPhoto.title)
+        log.debug('Returning photo(%s) for LUID(%s)', sPhoto.filename, LUID)
         return photo
 
     def get_UID(self):

@@ -1,7 +1,19 @@
 import os.path
+import re
 import sqlite3
 import string
 import sys
+
+# These can be plain photo IDs (legacy), or new "source IDs"
+# which have leading text indicating the type, followed by a
+# hex-encoded ID.  For photos the type is "thumb" (others
+# include "tag", "video" and "event")
+def source_id_to_legacy(sourceID):
+    stringSourceID = str(sourceID)
+    if re.match("^[a-z]+", stringSourceID):
+        return str(int(re.sub("^[a-z]+", "", stringSourceID), 16))
+    else:
+        return stringSourceID
 
 class Version(object):
 
@@ -32,7 +44,7 @@ class Event(object):
 
 
     def __init__(self, id, name):
-        self._id = id
+        self._id = source_id_to_legacy(id)
         self._name = name
 
     def __str__(self):
@@ -52,10 +64,10 @@ class Tag(object):
 
 
     def __init__(self, id, name, photo_id_list_csv):
-        self._id = id
+        self._id = source_id_to_legacy(id)
         self._name = name
-        self._photoIDs = filter(lambda x: x != None and len(x) > 0,
-                                string.split(photo_id_list_csv, ','))
+        self._photoIDs = map(source_id_to_legacy, filter(lambda x: x != None and len(x) > 0,
+                                                   string.split(photo_id_list_csv, ',')))
 
     def __str__(self):
         return 'Tag(id=' + str(self.id) + ';name=' + str(self.name) + \
@@ -79,13 +91,13 @@ class Photo(object):
 
     def __init__(self, id, filename, width=None, height=None, filesize=None,
                  timestamp=None, eventID=None, title=''):
-        self._id = id
+        self._id = source_id_to_legacy(id)
         self._filename = filename
         self._width = width
         self._height = height
         self._filesize = filesize
         self._timestamp = timestamp
-        self._eventID = eventID
+        self._eventID = source_id_to_legacy(eventID)
         self._title = title
 
     def __str__(self):
@@ -231,3 +243,22 @@ class ShotwellDB(_ReadOnlySqlite3Database):
         else:
             return self._selectMany(self._PHOTO_SQL_WITH_TITLE,
                                     RowMapper.photo_with_title)
+
+    def dump(self):
+        print "ShotwellDB dump:"
+        print "    Version: " + str(self.version())
+        print "    Tags   : "
+        for tag in self.tags():
+            print "             " + str(tag)
+            for photoID in tag.photoIDs:
+                print "                 PhotoID[" + str(self.photo(photoID)) + "]"
+        for photo in self.photos():
+            print "             " + str(photo)
+
+def main():
+    db = ShotwellDB()
+    db.dump()
+    db.close()
+
+if __name__ == "__main__":
+    main()
