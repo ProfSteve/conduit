@@ -4,15 +4,16 @@
 #
 # Gabriel Felipe Cornejo Salas <gnomeusr@gmail.com>, 2008.
 # Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008, 2009, 2010.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: conduit.HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=conduit&component=documentation and translation\n"
-"POT-Creation-Date: 2010-09-23 07:39+0000\n"
-"PO-Revision-Date: 2010-09-25 10:40+0200\n"
-"Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
+"product=conduit&keywords=I18N+L10N&component=documentation and translation\n"
+"POT-Creation-Date: 2011-03-17 21:01+0000\n"
+"PO-Revision-Date: 2011-03-21 10:05+0100\n"
+"Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -68,7 +69,6 @@ msgid "Data Providers"
 msgstr "Proveedores de datos"
 
 #: ../data/conduit.ui.h:11
-#| msgid "<b>Default Synchronization Options</b>"
 msgid "Default Synchronization Options"
 msgstr "Opciones de sincronización predeterminadas"
 
@@ -89,7 +89,6 @@ msgid "Editor"
 msgstr "Editor"
 
 #: ../data/conduit.ui.h:16
-#| msgid "<b>General</b>"
 msgid "General"
 msgstr "General"
 
@@ -880,8 +879,8 @@ msgstr "Iniciar F-Spot"
 
 #: ../conduit/modules/FspotModule/FspotModule.py:251
 #: ../conduit/modules/FspotModule/FspotModule.py:252
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:72
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:74
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:71
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:73
 msgid "Tags"
 msgstr "Etiquetas"
 
@@ -975,7 +974,6 @@ msgid "Delete"
 msgstr "Eliminar"
 
 #: ../conduit/modules/iPodModule/iPodModule.py:573
-#| msgid "Delete Options"
 msgid "Delete All Photos"
 msgstr "Eliminar todas las fotos"
 
@@ -1112,15 +1110,19 @@ msgstr "Sincronizr las canciones de sus listas de reproducción de Rhythmbox"
 msgid "Unknown"
 msgstr "Desconocido"
 
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:37
-#| msgid "Show me"
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:36
 msgid "Shotwell"
 msgstr "Shotwell"
 
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:38
-#| msgid "Synchronize your Shutterfly photos"
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:37
 msgid "Sync from your Shotwell photo library"
 msgstr "Sincronizar con la biblioteca de fotos Shotwell"
+
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:56
+msgid "Disabling Shotwell module, unable to open sqlite3 data source"
+msgstr ""
+"Desactivando el módulo Shotwell, no se pudo abrir la fuente de datos de "
+"sqlite3"
 
 #: ../conduit/modules/ShutterflyModule/ShutterflyModule.py:26
 msgid "Shutterfly"
