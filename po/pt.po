@@ -1,20 +1,20 @@
 # conduit's Portuguese translation
-# Copyright © 2008, 2009 conduit
+# Copyright © 2008, 2009, 2010, 2011 conduit
 # This file is distributed under the same license as the conduit package.
-#
-# António Lima <amrlima@gmail.com>, 2008, 2009., 200, 2010.
+# António Lima <amrlima@gmail.com>, 2008, 2009, 2010, 2011.
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: conduit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-10-27 23:51+0100\n"
-"PO-Revision-Date: 2010-10-26 23:37+0000\n"
+"POT-Creation-Date: 2011-03-22 00:07+0000\n"
+"PO-Revision-Date: 2011-03-20 21:30+0000\n"
 "Last-Translator: António Lima <amrlima@gmail.com>\n"
 "Language-Team: gnome_pt@yahoogroups.com\n"
+"Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8 bit\n"
-"Language: pt\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Virtaal 0.6.1\n"
 "X-Poedit-Language: Portuguese\n"
@@ -225,8 +225,8 @@ msgstr "Iniciar sem IGU. [por omissão: %default]"
 #, python-format
 msgid "Save dataprovider configuration to FILE. [default: %default]"
 msgstr ""
-"Gravar configuração do fornecedor de dados para FICHEIRO. [por omissão: %"
-"default]"
+"Gravar configuração do fornecedor de dados para FICHEIRO. [por omissão: "
+"%default]"
 
 #: ../conduit/Main.py:69
 #, python-format
@@ -261,8 +261,8 @@ msgstr ""
 #: ../conduit/Main.py:89
 #, python-format
 msgid ""
-"Enable loading of unfinished or unsupported dataproviders. [default: %"
-"default]"
+"Enable loading of unfinished or unsupported dataproviders. [default: "
+"%default]"
 msgstr ""
 "Activar carregamento de fornecedores de dados inacabados ou não suportados. "
 "[por omissão: %default]"
@@ -879,8 +879,8 @@ msgstr "Iniciar o F-Spot"
 
 #: ../conduit/modules/FspotModule/FspotModule.py:251
 #: ../conduit/modules/FspotModule/FspotModule.py:252
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:72
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:74
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:71
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:73
 msgid "Tags"
 msgstr "Etiquetas"
 
@@ -1110,13 +1110,18 @@ msgstr "Sincronizar músicas das suas listas de reprodução do Rhythmbox"
 msgid "Unknown"
 msgstr "Desconhecido"
 
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:37
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:36
 msgid "Shotwell"
 msgstr "Shotwell"
 
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:38
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:37
 msgid "Sync from your Shotwell photo library"
 msgstr "Sincronizar a partir da biblioteca de fotos do Shotwell"
+
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:56
+msgid "Disabling Shotwell module, unable to open sqlite3 data source"
+msgstr ""
+"A desactivar o módulo Shotwell, incapaz de abrir fonte de dados sqlite3"
 
 #: ../conduit/modules/ShutterflyModule/ShutterflyModule.py:26
 msgid "Shutterfly"
