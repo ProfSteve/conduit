@@ -7,10 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: conduit master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-29 12:02+0100\n"
-"PO-Revision-Date: 2010-12-12 23:35+0100\n"
+"POT-Creation-Date: 2011-04-03 20:10+0200\n"
+"PO-Revision-Date: 2011-04-02 23:35+0100\n"
 "Last-Translator: Kris Thomsen <lakristho@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -253,8 +254,8 @@ msgstr ""
 #: ../conduit/Main.py:89
 #, python-format
 msgid ""
-"Enable loading of unfinished or unsupported dataproviders. [default: %"
-"default]"
+"Enable loading of unfinished or unsupported dataproviders. [default: "
+"%default]"
 msgstr ""
 "Aktivér indlæsning af uafsluttede eller ikke understøttede dataudbydere. "
 "[standard: %default]"
@@ -871,8 +872,8 @@ msgstr "Start F-Spot"
 
 #: ../conduit/modules/FspotModule/FspotModule.py:251
 #: ../conduit/modules/FspotModule/FspotModule.py:252
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:72
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:74
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:71
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:73
 msgid "Tags"
 msgstr "Mærker"
 
@@ -1102,13 +1103,17 @@ msgstr "Synkronisér sange fra din Rhythmbox-afspilningsliste"
 msgid "Unknown"
 msgstr "Ukendt"
 
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:37
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:36
 msgid "Shotwell"
 msgstr "Shotwell"
 
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:38
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:37
 msgid "Sync from your Shotwell photo library"
 msgstr "Synkronisér fra dit Shotwell-billedbibliotek"
+
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:56
+msgid "Disabling Shotwell module, unable to open sqlite3 data source"
+msgstr "Deaktiverer Shotwell-modul, kan ikke åbne sqlite3-datakilde"
 
 #: ../conduit/modules/ShutterflyModule/ShutterflyModule.py:26
 msgid "Shutterfly"
