@@ -6,15 +6,16 @@
 # Hendrik Richter <hendrikr@gnome.org>, 2008.
 # Mario Blättermann <mariobl@gnome.org>, 2008-2010.
 # Christian Kirbach <Christian.Kirbach@googlemail.com>, 2009, 2010.
+# Wolfgang Stöggl <c72578@yahoo.de>, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: conduit\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=conduit&component=documentation and translation\n"
-"POT-Creation-Date: 2010-09-23 07:39+0000\n"
-"PO-Revision-Date: 2010-09-23 20:41+0100\n"
-"Last-Translator: Mario Blättermann <mariobl@gnome.org>\n"
+"product=conduit&keywords=I18N+L10N&component=documentation and translation\n"
+"POT-Creation-Date: 2011-04-03 18:10+0000\n"
+"PO-Revision-Date: 2011-04-04 20:19+0200\n"
+"Last-Translator: Wolfgang Stoeggl <c72578@yahoo.de>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -49,7 +50,7 @@ msgstr "Vergleichen"
 
 #: ../data/conduit.ui.h:5
 msgid "Conduit Preferences"
-msgstr "Conduit – Einstellungen"
+msgstr "Conduit-Einstellungen"
 
 #: ../data/conduit.ui.h:6
 msgid "Configuration"
@@ -260,7 +261,8 @@ msgstr ""
 #: ../conduit/Main.py:89
 #, python-format
 msgid ""
-"Enable loading of unfinished or unsupported dataproviders. [default: %default]"
+"Enable loading of unfinished or unsupported dataproviders. [default: %"
+"default]"
 msgstr ""
 "Laden von unvollständig eingerichteten oder nicht unterstützten Datenquellen "
 "aktivieren. [Vorgabe: %default]"
@@ -273,7 +275,8 @@ msgstr "Mehr Informationen zur Fehlerdiagnose erstellen. [Vorgabe: %default]"
 #: ../conduit/Main.py:97
 #, python-format
 msgid "Generate less debugging information. [default: %default]"
-msgstr "Weniger Informationen zur Fehlerdiagnose erstellen. [Vorgabe: %default]"
+msgstr ""
+"Weniger Informationen zur Fehlerdiagnose erstellen. [Vorgabe: %default]"
 
 #: ../conduit/Main.py:101
 #, python-format
@@ -877,8 +880,8 @@ msgstr "F-Spot starten"
 
 #: ../conduit/modules/FspotModule/FspotModule.py:251
 #: ../conduit/modules/FspotModule/FspotModule.py:252
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:72
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:74
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:71
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:73
 msgid "Tags"
 msgstr "Markierungen"
 
@@ -1110,13 +1113,19 @@ msgstr "Lieder aus Rhythmbox-Wiedergabelisten abgleichen"
 msgid "Unknown"
 msgstr "Unbekannt"
 
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:37
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:36
 msgid "Shotwell"
 msgstr "Shotwell"
 
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:38
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:37
 msgid "Sync from your Shotwell photo library"
 msgstr "Fotos aus Ihrer Shotwell-Sammlung abgleichen"
+
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:56
+msgid "Disabling Shotwell module, unable to open sqlite3 data source"
+msgstr ""
+"Shotwell-Modul wird deaktiviert, sqlite3-Datenquelle kann nicht geöffnet "
+"werden"
 
 #: ../conduit/modules/ShutterflyModule/ShutterflyModule.py:26
 msgid "Shutterfly"
