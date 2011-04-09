@@ -1,14 +1,14 @@
 # Swedish translation for conduit.
-# Copyright (C) 2007-2010 Free Software Foundation, Inc.
+# Copyright (C) 2007-2011 Free Software Foundation, Inc.
 # This file is distributed under the same license as the conduit package.
-# Daniel Nylander <po@danielnylander.se>, 2007, 2008, 2009, 2010.
+# Daniel Nylander <po@danielnylander.se>, 2007, 2008, 2009, 2010, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: conduit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-10-02 07:19+0200\n"
-"PO-Revision-Date: 2010-10-02 07:20+0100\n"
+"POT-Creation-Date: 2011-04-09 10:13+0200\n"
+"PO-Revision-Date: 2011-04-09 10:13+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -862,8 +862,8 @@ msgstr "Starta F-Spot"
 
 #: ../conduit/modules/FspotModule/FspotModule.py:251
 #: ../conduit/modules/FspotModule/FspotModule.py:252
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:72
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:74
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:71
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:73
 msgid "Tags"
 msgstr "Taggar"
 
@@ -1093,13 +1093,17 @@ msgstr "Synkronisera låtar från dina Rhythmbox-spellistor"
 msgid "Unknown"
 msgstr "Okänt"
 
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:37
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:36
 msgid "Shotwell"
 msgstr "Shotwell"
 
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:38
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:37
 msgid "Sync from your Shotwell photo library"
 msgstr "Synkronisera från ditt Shotwell-fotobibliotek"
+
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:56
+msgid "Disabling Shotwell module, unable to open sqlite3 data source"
+msgstr "Inaktiverar Shotwell-modulen, kunde inte öppna sqlite3-datakälla"
 
 #: ../conduit/modules/ShutterflyModule/ShutterflyModule.py:26
 msgid "Shutterfly"
