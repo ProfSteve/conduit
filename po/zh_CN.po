@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: conduit master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=conduit&component=documentation and translation\n"
-"POT-Creation-Date: 2011-02-20 17:34+0000\n"
-"PO-Revision-Date: 2011-03-01 23:21+0800\n"
+"product=conduit&keywords=I18N+L10N&component=documentation and translation\n"
+"POT-Creation-Date: 2011-04-09 08:13+0000\n"
+"PO-Revision-Date: 2011-04-17 13:46+0800\n"
 "Last-Translator: Yinghua Wang <wantinghard@gmail.com>\n"
 "Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -863,8 +863,8 @@ msgstr "启动 F-Spot"
 
 #: ../conduit/modules/FspotModule/FspotModule.py:251
 #: ../conduit/modules/FspotModule/FspotModule.py:252
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:72
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:74
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:71
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:73
 msgid "Tags"
 msgstr "标记"
 
@@ -1094,13 +1094,17 @@ msgstr "从 Rhythmbox 播放列表同步歌曲"
 msgid "Unknown"
 msgstr "未知"
 
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:37
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:36
 msgid "Shotwell"
 msgstr "Shotwell"
 
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:38
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:37
 msgid "Sync from your Shotwell photo library"
 msgstr "从您的 Shotwell 照片库同步"
+
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:56
+msgid "Disabling Shotwell module, unable to open sqlite3 data source"
+msgstr "禁用 Shotwell 模块，因为无法打开 sqlite3 数据源"
 
 #: ../conduit/modules/ShutterflyModule/ShutterflyModule.py:26
 msgid "Shutterfly"
