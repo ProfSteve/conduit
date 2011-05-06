@@ -13,16 +13,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: conduit\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=condui"
-"t&component=documentation and translation\n"
-"POT-Creation-Date: 2010-09-23 07:39+0000\n"
-"PO-Revision-Date: 2010-09-23 13:43-0200\n"
-"Last-Translator: Djavan Fagundes <djavan@comum.org>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=conduit&keywords=I18N+L10N&component=documentation and translation\n"
+"POT-Creation-Date: 2011-04-20 19:33+0000\n"
+"PO-Revision-Date: 2011-05-02 09:41-0300\n"
+"Last-Translator: Adorilson Bezerra <adorilson@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
-"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Virtaal 0.6.1\n"
 
@@ -44,7 +44,7 @@ msgstr "Pergunte-me o que fazer"
 
 #: ../data/conduit.ui.h:3
 msgid "Ask me what to do"
-msgstr "Me pergunta o que fazer"
+msgstr "Pergunte-me o que fazer"
 
 #: ../data/conduit.ui.h:4
 msgid "Compare"
@@ -55,37 +55,30 @@ msgid "Conduit Preferences"
 msgstr "Preferências do Conduit"
 
 #: ../data/conduit.ui.h:6
-#| msgid "Configure"
 msgid "Configuration"
 msgstr "Configuração"
 
 #: ../data/conduit.ui.h:7
-#| msgid "Conflicts (%s)"
 msgid "Conflict Options"
 msgstr "Opções de conflitos"
 
 #: ../data/conduit.ui.h:8
-#| msgid "Conflicts (%s)"
 msgid "Conflicts"
 msgstr "Conflitos"
 
 #: ../data/conduit.ui.h:9
-#| msgid "Conversion options"
 msgid "Data Conversions"
-msgstr "Conversões de data"
+msgstr "Conversões de tipos de dados"
 
 #: ../data/conduit.ui.h:10
-#| msgid "Writing a Data Provider"
 msgid "Data Providers"
-msgstr "Provedores de datas"
+msgstr "Provedores de dados"
 
 #: ../data/conduit.ui.h:11
-#| msgid "_Cancel Synchronization"
 msgid "Default Synchronization Options"
-msgstr "Opções padrão de sincronização"
+msgstr "Opções padrões de sincronização"
 
 #: ../data/conduit.ui.h:12
-#| msgid "Delete"
 msgid "Delete Options"
 msgstr "Opções de exclusão"
 
@@ -98,7 +91,6 @@ msgid "Delete the Corresponding Item"
 msgstr "Apagar o item correspondente"
 
 #: ../data/conduit.ui.h:15
-#| msgid "into"
 msgid "Editor"
 msgstr "Editor"
 
@@ -119,12 +111,10 @@ msgid "Replace the older item"
 msgstr "Substitui o item antigo"
 
 #: ../data/conduit.ui.h:20
-#| msgid "Google Contacts"
 msgid "Resolve Conflicts"
 msgstr "Resolver conflitos"
 
 #: ../data/conduit.ui.h:21
-#| msgid "Saved photo settings"
 msgid "Save settings on exit"
 msgstr "Salvar preferências ao sair"
 
@@ -141,7 +131,6 @@ msgid "Skip"
 msgstr "Pular"
 
 #: ../data/conduit.ui.h:25
-#| msgid "_Cancel Synchronization"
 msgid "Slow Synchronization"
 msgstr "Sincronização lenta"
 
@@ -150,17 +139,14 @@ msgid "Start Conduit at login"
 msgstr "Iniciar o Conduit ao iniciar sessão"
 
 #: ../data/conduit.ui.h:27
-#| msgid "Synchronization Error"
 msgid "Synchronization Options"
 msgstr "Opções de sincronização"
 
 #: ../data/conduit.ui.h:28
-#| msgid "Files"
 msgid "Title"
 msgstr "Título"
 
 #: ../data/conduit.ui.h:29
-#| msgid "_Cancel Synchronization"
 msgid "Two-Way Synchronization"
 msgstr "Sincronização de mão-dupla"
 
@@ -173,12 +159,10 @@ msgid "When there is a two-way conflict:"
 msgstr "Quando é um conflito de mão-dupla:"
 
 #: ../data/conduit.ui.h:32
-#| msgid "_Quit"
 msgid "_Edit"
 msgstr "_Editar"
 
 #: ../data/conduit.ui.h:33
-#| msgid "Files"
 msgid "_File"
 msgstr "_Arquivo"
 
@@ -474,7 +458,7 @@ msgstr "para"
 
 #: ../conduit/gtkui/UI.py:190
 msgid "Relationship Database"
-msgstr "Banco de dados de relacionamento"
+msgstr "Banco de dados relacional"
 
 #: ../conduit/gtkui/UI.py:194
 msgid "Conversions Available"
@@ -902,8 +886,8 @@ msgstr "Iniciar F-Spot"
 
 #: ../conduit/modules/FspotModule/FspotModule.py:251
 #: ../conduit/modules/FspotModule/FspotModule.py:252
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:72
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:74
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:71
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:73
 msgid "Tags"
 msgstr "Etiquetas"
 
@@ -1036,7 +1020,7 @@ msgstr "Sincroniza seus vídeos com o iPod"
 
 #: ../conduit/modules/iPodModule/iPodModule.py:1015
 msgid "Movie"
-msgstr "Vídeos"
+msgstr "Filmes"
 
 #: ../conduit/modules/iPodModule/iPodModule.py:1016
 msgid "Music Video"
@@ -1133,15 +1117,19 @@ msgstr "Sincroniza músicas das suas listas de reprodução do Rhythmbox"
 msgid "Unknown"
 msgstr "Desconhecido"
 
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:37
-#| msgid "Show me"
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:36
 msgid "Shotwell"
 msgstr "Shotwell"
 
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:38
-#| msgid "Synchronize your Shutterfly photos"
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:37
 msgid "Sync from your Shotwell photo library"
 msgstr "Sincroniza com sua biblioteca do Shotwell"
+
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:56
+msgid "Disabling Shotwell module, unable to open sqlite3 data source"
+msgstr ""
+"Desabilitando o módulo Shotwell, não foi possível abrir fonte de dados "
+"sqlite3"
 
 #: ../conduit/modules/ShutterflyModule/ShutterflyModule.py:26
 msgid "Shutterfly"
