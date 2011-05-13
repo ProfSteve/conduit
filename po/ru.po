@@ -1,16 +1,20 @@
+# Russian translation for conduit.
+# Copyright (C) 2007-2010 Free Software Foundation, Inc.
+# This file is distributed under the same license as the conduit package.
+# Yuri Myasoedov <omerta13@yandex.ru>, 2011.
+
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.3.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-29 00:01+0300\n"
-"PO-Revision-Date: 2010-03-25 23:30+0300\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=conduit&keywords=I18N+L10N&component=documentation and translation\n"
+"POT-Creation-Date: 2011-03-17 21:01+0000\n"
+"PO-Revision-Date: 2011-05-13 23:48+0300\n"
 "Last-Translator: Yuri Myasoedov <omerta13@yandex.ru>\n"
-"Language-Team: \n"
+"Language-Team: Russian <gnome-cyr@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 "X-Poedit-Language: Russian\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 
@@ -21,6 +25,164 @@ msgstr "Синхронизатор Conduit"
 #: ../data/conduit.desktop.in.in.h:2
 msgid "Synchronization for GNOME"
 msgstr "Синхронизация в GNOME"
+
+#: ../data/conduit.ui.h:1
+msgid "Always Up-To-Date"
+msgstr "Обновлять всегда"
+
+#: ../data/conduit.ui.h:2
+msgid "Ask Me What to Do"
+msgstr "Спросить меня, что делать"
+
+#: ../data/conduit.ui.h:3
+#| msgid "Ask Me What to Do"
+msgid "Ask me what to do"
+msgstr "Спросить меня, что делать"
+
+#: ../data/conduit.ui.h:4
+msgid "Compare"
+msgstr "Сравнить"
+
+#: ../data/conduit.ui.h:5
+#| msgid "Conduit Properties"
+msgid "Conduit Preferences"
+msgstr "Настройки Conduit"
+
+#: ../data/conduit.ui.h:6
+msgid "Configuration"
+msgstr "Параметры"
+
+#: ../data/conduit.ui.h:7
+#| msgid "Conflicts (%s)"
+msgid "Conflict Options"
+msgstr "Параметры конфликтов"
+
+#: ../data/conduit.ui.h:8
+#| msgid "Conflicts (%s)"
+msgid "Conflicts"
+msgstr "Конфликты"
+
+#: ../data/conduit.ui.h:9
+#| msgid "Conversion options"
+msgid "Data Conversions"
+msgstr "Преобразования данных"
+
+#: ../data/conduit.ui.h:10
+#| msgid "Writing a Data Provider"
+msgid "Data Providers"
+msgstr "Источники данных"
+
+#: ../data/conduit.ui.h:11
+#| msgid "_Cancel Synchronization"
+msgid "Default Synchronization Options"
+msgstr "Параметры синхронизации по умолчанию"
+
+#: ../data/conduit.ui.h:12
+#| msgid "Delete Group"
+msgid "Delete Options"
+msgstr "Удалить параметры"
+
+#: ../data/conduit.ui.h:13
+#| msgid "Delete from the corresponding Sink"
+msgid "Delete from the corresponding sink"
+msgstr "Удалить из соответствующего приёмника"
+
+#: ../data/conduit.ui.h:14
+#| msgid "Delete from the corresponding Sink"
+msgid "Delete the Corresponding Item"
+msgstr "Удалить соответствующий объект"
+
+#: ../data/conduit.ui.h:15
+msgid "Editor"
+msgstr "Редактор"
+
+#: ../data/conduit.ui.h:16
+#| msgid "<b>General</b>"
+msgid "General"
+msgstr "Общие"
+
+#: ../data/conduit.ui.h:17
+#| msgid "Minimize to Tray Icon"
+msgid "Minimize to notification area"
+msgstr "Сворачивать в область уведомления"
+
+#: ../data/conduit.ui.h:18
+msgid "Replace the Older Item"
+msgstr "Заменить старый объект"
+
+#: ../data/conduit.ui.h:19
+#| msgid "Replace the Older Item"
+msgid "Replace the older item"
+msgstr "Заменить более старый объект"
+
+#: ../data/conduit.ui.h:20
+msgid "Resolve Conflicts"
+msgstr "Разрешить конфликты"
+
+#: ../data/conduit.ui.h:21
+#| msgid "Saved photo settings"
+msgid "Save settings on exit"
+msgstr "Сохранять параметры при выходе"
+
+#: ../data/conduit.ui.h:22
+msgid "Show Hints"
+msgstr "Показывать подсказки"
+
+#: ../data/conduit.ui.h:23
+#| msgid "Show Status Icon"
+msgid "Show status icon"
+msgstr "Показывать значок состояния"
+
+#: ../data/conduit.ui.h:24
+msgid "Skip"
+msgstr "Пропустить"
+
+#: ../data/conduit.ui.h:25
+#| msgid "_Cancel Synchronization"
+msgid "Slow Synchronization"
+msgstr "Медленная синхронизация"
+
+#: ../data/conduit.ui.h:26
+msgid "Start Conduit at login"
+msgstr "Запускать Conduit при старте"
+
+#: ../data/conduit.ui.h:27
+#| msgid "Synchronization Error"
+msgid "Synchronization Options"
+msgstr "Параметры синхронизации"
+
+#: ../data/conduit.ui.h:28
+msgid "Title"
+msgstr "Название"
+
+#: ../data/conduit.ui.h:29
+#| msgid "<b>Two Way Synchronisation</b>"
+msgid "Two-Way Synchronization"
+msgstr "Двунаправленная синхронизация"
+
+#: ../data/conduit.ui.h:30
+#| msgid "When an Item Has Been Deleted"
+msgid "When an item has been deleted:"
+msgstr "При удалении объекта:"
+
+#: ../data/conduit.ui.h:31
+#| msgid "When There is a Conflict"
+msgid "When there is a two-way conflict:"
+msgstr "При возникновении двунаправленного конфликта:"
+
+#: ../data/conduit.ui.h:32
+#| msgid "Editor"
+msgid "_Edit"
+msgstr "_Правка"
+
+#: ../data/conduit.ui.h:33
+#| msgid "Files"
+msgid "_File"
+msgstr "_Файл"
+
+#: ../data/conduit.ui.h:34
+msgid "_Help"
+msgstr "_Справка"
 
 #: ../conduit/Knowledge.py:8
 msgid "What Do You Want to Synchronize?"
@@ -70,68 +232,58 @@ msgstr "Загрузить снимки на Facebook"
 msgid "Synchronize Desktop Wallpaper from a RSS Feed"
 msgstr "Синхронизировать обои рабочего стола с ленты RSS"
 
-#: ../conduit/Main.py:59
+#: ../conduit/Main.py:57
 msgid "Conduit is a synchronization application."
 msgstr "Conduit — приложения для синхронизации."
 
-#: ../conduit/Main.py:63
+#: ../conduit/Main.py:61
 #, python-format
 msgid "Launch without GUI. [default: %default]"
 msgstr "Запускать без графического интерфейса. [по умолчанию: %default]"
 
-#: ../conduit/Main.py:67
+#: ../conduit/Main.py:65
 #, python-format
 msgid "Save dataprovider configuration to FILE. [default: %default]"
 msgstr "Сохранять настройки источника данных в ФАЙЛ. [по умолчанию: %default]"
 
-#: ../conduit/Main.py:71
+#: ../conduit/Main.py:69
 #, python-format
 msgid "Iconify on startup. [default: %default]"
 msgstr "Минимизировать при запуске. [по умолчанию: %default]"
 
-#: ../conduit/Main.py:75
+#: ../conduit/Main.py:73
 #, python-format
 msgid "Run with the specified UI. [default: %default]"
 msgstr "Запускать с определённым интерфейсом. [по умолчанию: %default]"
 
-#: ../conduit/Main.py:79
+#: ../conduit/Main.py:77
 msgid "Only load modules in the named files. [default: load all modules]"
-msgstr ""
-"Загружать модули только из указанных файлов. [по умолчанию: загружать все "
-"модули]"
+msgstr "Загружать модули только из указанных файлов. [по умолчанию: загружать все модули]"
 
-#: ../conduit/Main.py:83
+#: ../conduit/Main.py:81
 msgid "Do not load modules in the named files. [default: load all modules]"
 msgstr "Не загружать модули из указанных файлов. [default: load all modules]"
 
-#: ../conduit/Main.py:87
-msgid ""
-"Explicitly set internal Conduit settings (keys) to the given values for this "
-"session. [default: do not set]"
-msgstr ""
-"Присвойте внутренним параметрам (ключам) Conduit данные значения для этого "
-"сеанса. [по умолчанию: не присваивать]"
+#: ../conduit/Main.py:85
+msgid "Explicitly set internal Conduit settings (keys) to the given values for this session. [default: do not set]"
+msgstr "Присвойте внутренним параметрам (ключам) Conduit данные значения для этого сеанса. [по умолчанию: не присваивать]"
 
-#: ../conduit/Main.py:91
+#: ../conduit/Main.py:89
 #, python-format
-msgid ""
-"Enable loading of unfinished or unsupported dataproviders. [default: %"
-"default]"
-msgstr ""
-"Разрешить загрузку незавершённых и неподдерживаемых источников данных. [по "
-"умолчанию: %default]"
+msgid "Enable loading of unfinished or unsupported dataproviders. [default: %default]"
+msgstr "Разрешить загрузку незавершённых и неподдерживаемых источников данных. [по умолчанию: %default]"
 
-#: ../conduit/Main.py:95
+#: ../conduit/Main.py:93
 #, python-format
 msgid "Generate more debugging information. [default: %default]"
 msgstr "Выдавать больше отладочной информации. [по умолчанию: %default]"
 
-#: ../conduit/Main.py:99
+#: ../conduit/Main.py:97
 #, python-format
 msgid "Generate less debugging information. [default: %default]"
 msgstr "Выдавать меньше отладочной информации. [по умолчанию: %default]"
 
-#: ../conduit/Main.py:103
+#: ../conduit/Main.py:101
 #, python-format
 msgid "Generate no debugging information. [default: %default]"
 msgstr "Не выдавать отладочную информацию. [по умолчанию: %default]"
@@ -177,6 +329,7 @@ msgid "Synchronization Cancelled"
 msgstr "Синхронизация отменена"
 
 #: ../conduit/dataproviders/DataProvider.py:32
+#: ../conduit/gtkui/UI.py:743
 msgid "Synchronization Conflict"
 msgstr "Конфликт при синхронизации"
 
@@ -211,12 +364,12 @@ msgid "Files and Folders"
 msgstr "Файлы и папки"
 
 #: ../conduit/dataproviders/__init__.py:7
-#: ../conduit/modules/iPodModule/iPodModule.py:179
+#: ../conduit/modules/iPodModule/iPodModule.py:276
 msgid "Notes"
 msgstr "Заметки"
 
 #: ../conduit/dataproviders/__init__.py:8
-#: ../conduit/modules/iPodModule/iPodModule.py:367
+#: ../conduit/modules/iPodModule/iPodModule.py:464
 msgid "Photos"
 msgstr "Снимки"
 
@@ -248,7 +401,7 @@ msgstr "Тест"
 msgid "Drag a Data Provider here to continue"
 msgstr "Перетащите сюда источник данных"
 
-#: ../conduit/gtkui/Canvas.py:217
+#: ../conduit/gtkui/Canvas.py:227
 msgid "Show me"
 msgstr "Показать меня"
 
@@ -312,8 +465,9 @@ msgstr "База данных взаимосвязи"
 msgid "Conversions Available"
 msgstr "Доступные преобразования"
 
-#: ../conduit/gtkui/UI.py:200 ../conduit/gtkui/Tree.py:355
-#: ../conduit/modules/FileModule/FileConfiguration.py:117
+#: ../conduit/gtkui/UI.py:200
+#: ../conduit/gtkui/Tree.py:355
+#: ../conduit/modules/FileModule/FileConfiguration.py:118
 msgid "Name"
 msgstr "Название"
 
@@ -334,45 +488,46 @@ msgstr " — запуск удалённого приложения"
 msgid "Developers"
 msgstr "Разработчики"
 
-#: ../conduit/gtkui/UI.py:539 ../conduit/hildonui/UI.py:127
+#: ../conduit/gtkui/UI.py:539
+#: ../conduit/hildonui/UI.py:127
 msgid "Synchronization in progress. Do you want to cancel it?"
 msgstr "Выполняется синхронизация. Вы хотите её отменить?"
 
-#: ../conduit/gtkui/UI.py:711
+#: ../conduit/gtkui/UI.py:712
 msgid "_Synchronize All"
 msgstr "_Синхронизировать всё"
 
-#: ../conduit/gtkui/UI.py:711
+#: ../conduit/gtkui/UI.py:712
 msgid "Synchronizes All Groups"
 msgstr "Синхронизирует все группы"
 
-#: ../conduit/gtkui/UI.py:712
+#: ../conduit/gtkui/UI.py:713
 msgid "_Cancel Synchronization"
 msgstr "_Отменить синхронизацию"
 
-#: ../conduit/gtkui/UI.py:712
+#: ../conduit/gtkui/UI.py:713
 msgid "Cancels Currently Synchronizing Groups"
 msgstr "Сбрасывает текущие группы синхронизации"
 
-#: ../conduit/gtkui/UI.py:713
+#: ../conduit/gtkui/UI.py:714
 msgid "_Quit"
 msgstr "_Закончить"
 
-#: ../conduit/gtkui/UI.py:713
+#: ../conduit/gtkui/UI.py:714
 msgid "Close Conduit"
 msgstr "Закрыть Conduit"
 
-#: ../conduit/gtkui/UI.py:753
-msgid "Synchronization Error"
-msgstr "Ошибка синхронизации"
+#: ../conduit/gtkui/UI.py:731
+msgid "Synchronizing"
+msgstr "Синхронизация"
 
-#: ../conduit/gtkui/UI.py:756
+#: ../conduit/gtkui/UI.py:737
 msgid "Synchronization Complete"
 msgstr "Синхронизация выполнена"
 
-#: ../conduit/gtkui/UI.py:764
-msgid "Synchronizing"
-msgstr "Синхронизация"
+#: ../conduit/gtkui/UI.py:741
+msgid "Synchronization Error"
+msgstr "Ошибка синхронизации"
 
 #: ../conduit/gtkui/Tree.py:364
 msgid "Description"
@@ -427,8 +582,8 @@ msgstr "Синхронизировать списки воспроизведен
 
 #: ../conduit/modules/BansheeModule/BansheeModule.py:187
 #: ../conduit/modules/BansheeModule/BansheeModule.py:188
-#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:116
-#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:117
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:120
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:121
 msgid "Playlists"
 msgstr "Списки воспроизведений"
 
@@ -441,7 +596,7 @@ msgid "Synchronize your Box.net files"
 msgstr "Синхронизировать файлы Box.net"
 
 #: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:290
-#: ../conduit/modules/FileModule/FileModule.py:82
+#: ../conduit/modules/FileModule/FileModule.py:86
 msgid "Folder"
 msgstr "Папка"
 
@@ -465,40 +620,40 @@ msgstr "Обои"
 msgid "Changes your Desktop Wallpaper"
 msgstr "Меняет обои рабочего стола"
 
-#: ../conduit/modules/EvolutionModule/EvolutionModule.py:107
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:110
 #, python-format
 msgid "Select %s"
 msgstr "Выберите %s"
 
-#: ../conduit/modules/EvolutionModule/EvolutionModule.py:127
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:130
 msgid "Evolution Contacts"
 msgstr "Контакты Evolution"
 
-#: ../conduit/modules/EvolutionModule/EvolutionModule.py:128
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:131
 msgid "Synchronize your contacts"
 msgstr "Синхронизировать контакты"
 
-#: ../conduit/modules/EvolutionModule/EvolutionModule.py:178
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:181
 msgid "Evolution Calendar"
 msgstr "Календарь Evolution"
 
-#: ../conduit/modules/EvolutionModule/EvolutionModule.py:179
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:182
 msgid "Synchronize your calendar"
 msgstr "Синхронизировать календарь"
 
-#: ../conduit/modules/EvolutionModule/EvolutionModule.py:240
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:243
 msgid "Evolution Tasks"
 msgstr "Задачи Evolution"
 
-#: ../conduit/modules/EvolutionModule/EvolutionModule.py:241
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:244
 msgid "Synchronize your tasks"
 msgstr "Синхронизировать задачи"
 
-#: ../conduit/modules/EvolutionModule/EvolutionModule.py:297
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:300
 msgid "Evolution Memos"
 msgstr "Заметки Evolution"
 
-#: ../conduit/modules/EvolutionModule/EvolutionModule.py:298
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:301
 msgid "Synchronize your memos"
 msgstr "Синхронизировать заметки"
 
@@ -528,12 +683,12 @@ msgid "Failed to login"
 msgstr "Не удалось войти в систему"
 
 #: ../conduit/modules/FacebookModule/FacebookModule.py:145
-#: ../conduit/modules/FspotModule/FspotModule.py:243
+#: ../conduit/modules/FspotModule/FspotModule.py:246
 msgid "Status"
 msgstr "Состояние"
 
 #: ../conduit/modules/FacebookModule/FacebookModule.py:150
-#: ../conduit/modules/iPodModule/iPodModule.py:461
+#: ../conduit/modules/iPodModule/iPodModule.py:566
 #: ../conduit/modules/ZotoModule/ZotoModule.py:252
 msgid "Album"
 msgstr "Альбом"
@@ -595,52 +750,49 @@ msgstr "Загружать видеофайлы"
 msgid "Download photo files"
 msgstr "Загружать файлы снимков"
 
-#: ../conduit/modules/FileModule/FileConfiguration.py:111
+#: ../conduit/modules/FileModule/FileConfiguration.py:112
 msgid "Icon"
 msgstr "Значок"
 
-#: ../conduit/modules/FileModule/FileConfiguration.py:123
+#: ../conduit/modules/FileModule/FileConfiguration.py:124
 #: ../conduit/modules/GConfModule/GConfModule.py:138
 msgid "Items"
 msgstr "Элементы"
 
-#: ../conduit/modules/FileModule/FileConfiguration.py:149
+#: ../conduit/modules/FileModule/FileConfiguration.py:150
 #, python-format
 msgid "<i>Contains %s files</i>"
 msgstr "<i>Содержит файлов: %s</i>"
 
-#: ../conduit/modules/FileModule/FileConfiguration.py:248
+#: ../conduit/modules/FileModule/FileConfiguration.py:249
 msgid "Include file..."
 msgstr "Включить файл…"
 
-#: ../conduit/modules/FileModule/FileConfiguration.py:258
+#: ../conduit/modules/FileModule/FileConfiguration.py:259
 msgid "All files"
 msgstr "Все файлы"
 
-#: ../conduit/modules/FileModule/FileConfiguration.py:271
+#: ../conduit/modules/FileModule/FileConfiguration.py:272
 msgid "Include folder..."
 msgstr "Включить папку…"
 
-#: ../conduit/modules/FileModule/FileConfiguration.py:314
+#: ../conduit/modules/FileModule/FileConfiguration.py:315
 msgid "Please Name All Folders"
 msgstr "Дайте имена всем папкам"
 
-#: ../conduit/modules/FileModule/FileConfiguration.py:315
-msgid ""
-"All folders require a descriptive name. To name a folder simply click on it"
-msgstr ""
-"У каждой папки должно быть описательное имя. Чтобы дать папке имя, щёлкните "
-"по ней"
+#: ../conduit/modules/FileModule/FileConfiguration.py:316
+msgid "All folders require a descriptive name. To name a folder simply click on it"
+msgstr "У каждой папки должно быть описательное имя. Чтобы дать папке имя, щёлкните по ней"
 
-#: ../conduit/modules/FileModule/FileModule.py:23
+#: ../conduit/modules/FileModule/FileModule.py:27
 msgid "Files"
 msgstr "Файлы"
 
-#: ../conduit/modules/FileModule/FileModule.py:24
+#: ../conduit/modules/FileModule/FileModule.py:28
 msgid "Source for synchronizing multiple files"
 msgstr "Источник синхронизации многих файлов"
 
-#: ../conduit/modules/FileModule/FileModule.py:83
+#: ../conduit/modules/FileModule/FileModule.py:87
 msgid "Synchronize folders"
 msgstr "Синхронизировать папки"
 
@@ -707,44 +859,46 @@ msgstr "Не изменять размер"
 msgid "Photos are public"
 msgstr "Снимки доступны для всех"
 
-#: ../conduit/modules/FspotModule/FspotModule.py:25
+#: ../conduit/modules/FspotModule/FspotModule.py:28
 msgid "F-Spot"
 msgstr "F-Spot"
 
-#: ../conduit/modules/FspotModule/FspotModule.py:26
+#: ../conduit/modules/FspotModule/FspotModule.py:29
 msgid "Synchronize your F-Spot photos"
 msgstr "Синхронизировать снимки F-Spot"
 
-#: ../conduit/modules/FspotModule/FspotModule.py:152
+#: ../conduit/modules/FspotModule/FspotModule.py:155
 msgid "F-Spot DBus interface is operating in read-only mode"
 msgstr "Интерфейс F-Spot DBus работает в режиме «только для чтения»"
 
-#: ../conduit/modules/FspotModule/FspotModule.py:218
+#: ../conduit/modules/FspotModule/FspotModule.py:221
 msgid "F-Spot is running"
 msgstr "F-Spot запущен"
 
-#: ../conduit/modules/FspotModule/FspotModule.py:219
+#: ../conduit/modules/FspotModule/FspotModule.py:222
 msgid "Please start F-Spot or activate the D-Bus Extension"
 msgstr "Запустите F-Spot или включите расширение D-Bus"
 
-#: ../conduit/modules/FspotModule/FspotModule.py:244
+#: ../conduit/modules/FspotModule/FspotModule.py:247
 msgid "Start F-Spot"
 msgstr "Запустить F-Spot"
 
-#: ../conduit/modules/FspotModule/FspotModule.py:248
-#: ../conduit/modules/FspotModule/FspotModule.py:249
+#: ../conduit/modules/FspotModule/FspotModule.py:251
+#: ../conduit/modules/FspotModule/FspotModule.py:252
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:71
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:73
 msgid "Tags"
 msgstr "Метки"
 
-#: ../conduit/modules/FspotModule/FspotModule.py:262
+#: ../conduit/modules/FspotModule/FspotModule.py:265
 msgid "Add tags"
 msgstr "Добавить метки"
 
-#: ../conduit/modules/FspotModule/FspotModule.py:263
+#: ../conduit/modules/FspotModule/FspotModule.py:266
 msgid "Tag name"
 msgstr "Название метки"
 
-#: ../conduit/modules/FspotModule/FspotModule.py:266
+#: ../conduit/modules/FspotModule/FspotModule.py:269
 msgid "Add tag"
 msgstr "Добавить метку"
 
@@ -797,130 +951,85 @@ msgstr "Подробности об учётной записи"
 msgid "Password"
 msgstr "Пароль"
 
-#: ../conduit/modules/GoogleModule/GoogleModule.py:399
-msgid "Google Calendar"
-msgstr "Календарь Google"
-
-#: ../conduit/modules/GoogleModule/GoogleModule.py:400
-msgid "Synchronize your Google Calendar"
-msgstr "Синхронизировать календарь Google"
-
-#: ../conduit/modules/GoogleModule/GoogleModule.py:582
-msgid "Picasa"
-msgstr "Picasa"
-
-#: ../conduit/modules/GoogleModule/GoogleModule.py:583
-msgid "Synchronize your Google Picasa photos"
-msgstr "Синхронизировать снимки Google Picasa"
-
-#: ../conduit/modules/GoogleModule/GoogleModule.py:745
-msgid "Google Contacts"
-msgstr "Контакты Google"
-
-#: ../conduit/modules/GoogleModule/GoogleModule.py:746
-msgid "Synchronize your Google Mail contacts"
-msgstr "Синхронизировать контакты Google Mail"
-
-#: ../conduit/modules/GoogleModule/GoogleModule.py:1076
-msgid "Google Documents"
-msgstr "Документы Google"
-
-#: ../conduit/modules/GoogleModule/GoogleModule.py:1077
-msgid "Synchronize your Google Documents"
-msgstr "Синхронизировать документы Google"
-
-#: ../conduit/modules/GoogleModule/GoogleModule.py:1322
-#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:69
-msgid "Unknown"
-msgstr "Неизвестно"
-
-#: ../conduit/modules/GoogleModule/GoogleModule.py:1323
-msgid "miscellaneous"
-msgstr "разное"
-
-#: ../conduit/modules/GoogleModule/GoogleModule.py:1324
-msgid "No description."
-msgstr "Описание отсутствует."
-
-#: ../conduit/modules/GoogleModule/GoogleModule.py:1333
-msgid "YouTube"
-msgstr "YouTube"
-
-#: ../conduit/modules/GoogleModule/GoogleModule.py:1334
-msgid "Synchronize data from YouTube"
-msgstr "Синхронизировать данные из YouTube"
-
-#: ../conduit/modules/iPodModule/iPodModule.py:180
+#: ../conduit/modules/iPodModule/iPodModule.py:277
 msgid "Synchronize your iPod notes"
 msgstr "Синхронизировать заметки iPod"
 
-#: ../conduit/modules/iPodModule/iPodModule.py:295
+#: ../conduit/modules/iPodModule/iPodModule.py:392
 msgid "Contacts"
 msgstr "Контакты"
 
-#: ../conduit/modules/iPodModule/iPodModule.py:296
+#: ../conduit/modules/iPodModule/iPodModule.py:393
 msgid "Synchronize your iPod contacts"
 msgstr "Синхронизировать контакты iPod"
 
-#: ../conduit/modules/iPodModule/iPodModule.py:331
+#: ../conduit/modules/iPodModule/iPodModule.py:428
 msgid "Calendar"
 msgstr "Календарь"
 
-#: ../conduit/modules/iPodModule/iPodModule.py:332
+#: ../conduit/modules/iPodModule/iPodModule.py:429
 msgid "Synchronize your iPod calendar"
 msgstr "Синхронизировать календарь iPod"
 
-#: ../conduit/modules/iPodModule/iPodModule.py:368
+#: ../conduit/modules/iPodModule/iPodModule.py:465
 msgid "Synchronize your iPod photos"
 msgstr "Синхронизировать снимки iPod"
 
-#: ../conduit/modules/iPodModule/iPodModule.py:465
+#: ../conduit/modules/iPodModule/iPodModule.py:570
 msgid "Delete"
 msgstr "Удалить"
 
-#: ../conduit/modules/iPodModule/iPodModule.py:695
-#: ../conduit/modules/iPodModule/iPodModule.py:812
+#: ../conduit/modules/iPodModule/iPodModule.py:573
+msgid "Delete All Photos"
+msgstr "Удалить все снимки"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:803
+#: ../conduit/modules/iPodModule/iPodModule.py:920
 #: ../conduit/modules/N800Module/N800Module.py:77
 msgid "Encoding"
 msgstr "Кодировка"
 
-#: ../conduit/modules/iPodModule/iPodModule.py:811
+#: ../conduit/modules/iPodModule/iPodModule.py:919
 msgid "Conversion options"
 msgstr "Параметры преобразования"
 
-#: ../conduit/modules/iPodModule/iPodModule.py:816
+#: ../conduit/modules/iPodModule/iPodModule.py:924
 msgid "Keep converted files"
 msgstr "Сохранять преобразованные файлы"
 
-#: ../conduit/modules/iPodModule/iPodModule.py:846
-msgid "iPod Music"
-msgstr "Музыка iPod"
+#. To translators: defaul music folder of N800
+#: ../conduit/modules/iPodModule/iPodModule.py:954
+#: ../conduit/modules/N800Module/N800Module.py:133
+msgid "Music"
+msgstr "Музыка"
 
-#: ../conduit/modules/iPodModule/iPodModule.py:847
+#: ../conduit/modules/iPodModule/iPodModule.py:955
 msgid "Synchronize your iPod music"
 msgstr "Синхронизировать музыку iPod"
 
-#: ../conduit/modules/iPodModule/iPodModule.py:882
-msgid "iPod Video"
-msgstr "Видео iPod"
+#. To translators: defaul video folder of N800
+#: ../conduit/modules/iPodModule/iPodModule.py:990
+#: ../conduit/modules/N800Module/N800Module.py:157
+msgid "Video"
+msgstr "Видео"
 
-#: ../conduit/modules/iPodModule/iPodModule.py:883
+#: ../conduit/modules/iPodModule/iPodModule.py:991
 msgid "Synchronize your iPod videos"
 msgstr "Синхронизировать видео iPod"
 
-#: ../conduit/modules/iPodModule/iPodModule.py:907
+#: ../conduit/modules/iPodModule/iPodModule.py:1015
 msgid "Movie"
 msgstr "Кино"
 
-#: ../conduit/modules/iPodModule/iPodModule.py:908
+#: ../conduit/modules/iPodModule/iPodModule.py:1016
 msgid "Music Video"
 msgstr "Музыка и видео"
 
-#: ../conduit/modules/iPodModule/iPodModule.py:909
+#: ../conduit/modules/iPodModule/iPodModule.py:1017
 msgid "TV Show"
 msgstr "ТВ шоу"
 
-#: ../conduit/modules/iPodModule/iPodModule.py:911
+#: ../conduit/modules/iPodModule/iPodModule.py:1019
 msgid "Video kind"
 msgstr "Разное видео"
 
@@ -950,11 +1059,6 @@ msgstr "Музыка N800"
 msgid "Synchronizes music to a N800 device"
 msgstr "Синхронизирует музыку на устройство N800"
 
-#. To translators: defaul music folder of N800
-#: ../conduit/modules/N800Module/N800Module.py:133
-msgid "Music"
-msgstr "Музыка"
-
 #: ../conduit/modules/N800Module/N800Module.py:150
 msgid "N800 Videos"
 msgstr "Видео N800"
@@ -962,11 +1066,6 @@ msgstr "Видео N800"
 #: ../conduit/modules/N800Module/N800Module.py:151
 msgid "Synchronizes video to a N800 device"
 msgstr "Синхронизирует видео на устройство N800"
-
-#. To translators: defaul video folder of N800
-#: ../conduit/modules/N800Module/N800Module.py:157
-msgid "Video"
-msgstr "Видео"
 
 #: ../conduit/modules/N800Module/N800Module.py:174
 msgid "N800 Photos"
@@ -1005,13 +1104,31 @@ msgstr "Сеть"
 msgid "Enable synchronization via network"
 msgstr "Разрешить синхронизацию по сети"
 
-#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:44
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:48
 msgid "Rhythmbox Music"
 msgstr "Музыка Rhythmbox"
 
-#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:45
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:49
 msgid "Synchronize songs from your Rhythmbox playlists"
 msgstr "Синхронизировать композиции из списков воспроизведений Rhythmbox"
+
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:73
+msgid "Unknown"
+msgstr "Неизвестно"
+
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:36
+#| msgid "Show me"
+msgid "Shotwell"
+msgstr "Shotwell"
+
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:37
+#| msgid "Synchronize your Shutterfly photos"
+msgid "Sync from your Shotwell photo library"
+msgstr "Синхронизировать из фотоколлекции Shotwell"
+
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:56
+msgid "Disabling Shotwell module, unable to open sqlite3 data source"
+msgstr "Отключение модуля Shotwell, не удалось открыть источник данных sqlite3"
 
 #: ../conduit/modules/ShutterflyModule/ShutterflyModule.py:26
 msgid "Shutterfly"
@@ -1041,173 +1158,3 @@ msgstr "Zoto"
 msgid "Synchronize your Zoto photos"
 msgstr "Синхронизировать снимки Zoto"
 
-#~ msgid "Not Configured Correctly"
-#~ msgstr "Некорректная настройка"
-
-#~ msgid "<b>Saved Note Settings</b>"
-#~ msgstr "<b>Параметры сохранённых заметок</b>"
-
-#~ msgid "Addressbook"
-#~ msgstr "Адресная книга"
-
-#~ msgid ""
-#~ "Limit the Number of\n"
-#~ "Enclosures Downloded to:"
-#~ msgstr ""
-#~ "Огрничить число вложений,\n"
-#~ "скачиваемых в:"
-
-#~ msgid "<b>Items to Synchronize</b>"
-#~ msgstr "<b>Синхронизируемые объекты</b>"
-
-#~ msgid "Add Directory"
-#~ msgstr "Добавить каталог"
-
-#~ msgid "Add File"
-#~ msgstr "Добавить файл"
-
-#~ msgid "File Configuration"
-#~ msgstr "Параметры файла"
-
-#~ msgid "Folder Configuration"
-#~ msgstr "Параметры папки"
-
-#~ msgid "Folder Location:"
-#~ msgstr "Расположение папки:"
-
-#~ msgid "Include Hidden Files"
-#~ msgstr "Включить скрытые файлы"
-
-#~ msgid "Select A Folder"
-#~ msgstr "Выберите папку"
-
-#~ msgid "<b>Return Photos Tagged With</b>"
-#~ msgstr "<b>Возвращать фотографии с метками</b>"
-
-#~ msgid "Email"
-#~ msgstr "Электронная почта"
-
-#~ msgid "<b>Return Emails Matching</b>"
-#~ msgstr "<b>Возвращать письма, проходящие по этим условиям</b>"
-
-#~ msgid "<b>Saved Email Settings</b>"
-#~ msgstr "<b>Параметры сохранённых писем</b>"
-
-#~ msgid "<b>When Saving Emails</b>"
-#~ msgstr "<b>При сохранении почты</b>"
-
-#~ msgid "All Emails"
-#~ msgstr "Все письма"
-
-#~ msgid "Attach Label to Email"
-#~ msgstr "Добавить метку к письму"
-
-#~ msgid "Emails With Label"
-#~ msgstr "Письма с меткой"
-
-#~ msgid "Gmail Emails"
-#~ msgstr "Письма в Gmail"
-
-#~ msgid "Gmail Sink Properties"
-#~ msgstr "Свойства синхронизации Gmail"
-
-#~ msgid "Password:   "
-#~ msgstr "Пароль:   "
-
-#~ msgid "Save With Label"
-#~ msgstr "Сохранять с меткой"
-
-#~ msgid "Unread Emails"
-#~ msgstr "Непрочитанные письма"
-
-#~ msgid "Username: "
-#~ msgstr "Имя пользователя: "
-
-#, fuzzy
-#~ msgid "Email:"
-#~ msgstr "Электронная почта"
-
-#~ msgid "Settings Configuration"
-#~ msgstr "Настройка параметров"
-
-#, fuzzy
-#~ msgid "User: "
-#~ msgstr "Имя пользователя: "
-
-#~ msgid "<b>General</b>"
-#~ msgstr "<b>Общие</b>"
-
-#~ msgid "<b>Two Way Synchronisation</b>"
-#~ msgstr "<b>Двунаправленная синхронизация</b>"
-
-#~ msgid "Ask Me What to Do"
-#~ msgstr "Спросить меня, что делать"
-
-#~ msgid "Clear Canvas"
-#~ msgstr "Убрать все синхропары"
-
-#~ msgid "Compare"
-#~ msgstr "Сравнить"
-
-#~ msgid "Conduit Properties"
-#~ msgstr "Параметры Conduit"
-
-#~ msgid "Configuration"
-#~ msgstr "Параметры"
-
-#~ msgid "Configure Item"
-#~ msgstr "Настроить объект"
-
-#~ msgid "Configure the Synchronization Settings for this Item"
-#~ msgstr "Изменить параметры синхронизации этого объекта"
-
-#~ msgid "Delete Group"
-#~ msgstr "Удалить группу"
-
-#~ msgid "Delete from the corresponding Sink"
-#~ msgstr "Удалить из соответствующей синхропары"
-
-#~ msgid "Editor"
-#~ msgstr "Редактор"
-
-#~ msgid "Enable iPod and USB Key Support"
-#~ msgstr "Включить поддержку iPod и USB Key"
-
-#~ msgid "Minimize to Tray Icon"
-#~ msgstr "Сворачивать в область уведомления"
-
-#~ msgid "Refresh Group"
-#~ msgstr "Обновить группу"
-
-#~ msgid "Refresh Item"
-#~ msgstr "Обновить объект"
-
-#~ msgid "Replace the Older Item"
-#~ msgstr "Заменить старый объект"
-
-#~ msgid "Resolve Conflicts"
-#~ msgstr "Разрешить конфликты"
-
-#~ msgid "Show Status Icon"
-#~ msgstr "Показывать значок статуса"
-
-#~ msgid "Skip"
-#~ msgstr "Пропустить"
-
-#~ msgid "Slow Sync"
-#~ msgstr "Медленная синхронизация"
-
-#~ msgid "Title"
-#~ msgstr "Название"
-
-#~ msgid "Two Way Sync"
-#~ msgstr "Двунаправленная синхронизация"
-
-#~ msgid "When There is a Conflict"
-#~ msgstr "При возникновении конфликта"
-
-#~ msgid "When an Item Has Been Deleted"
-#~ msgstr "Когда объект уже удалён"
-
-#~ msgid "dialog1"
-#~ msgstr "dialog1"
