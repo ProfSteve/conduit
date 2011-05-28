@@ -6,17 +6,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Conduit master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-25 23:56+0100\n"
-"PO-Revision-Date: 2010-12-25 23:56+0100\n"
-"Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=conduit&keywords=I18N+L10N&component=documentation and translation\n"
+"POT-Creation-Date: 2011-05-06 12:47+0000\n"
+"PO-Revision-Date: 2011-05-08 10:11+0100\n"
+"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian <gnome at fsf dot hu>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../data/conduit.desktop.in.in.h:1
 msgid "Conduit Synchronizer"
@@ -257,8 +258,8 @@ msgstr ""
 #: ../conduit/Main.py:89
 #, python-format
 msgid ""
-"Enable loading of unfinished or unsupported dataproviders. [default: "
-"%default]"
+"Enable loading of unfinished or unsupported dataproviders. [default: %"
+"default]"
 msgstr ""
 "Befejezetlen vagy nem támogatott adatszolgáltatók betöltése. "
 "[alapértelmezett: %default]"
@@ -878,8 +879,8 @@ msgstr "F-Spot indítása"
 
 #: ../conduit/modules/FspotModule/FspotModule.py:251
 #: ../conduit/modules/FspotModule/FspotModule.py:252
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:72
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:74
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:71
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:73
 msgid "Tags"
 msgstr "Címkék"
 
@@ -1109,13 +1110,17 @@ msgstr "Zeneszámok szinkronizálása a Rythmbox lejátszólistákról"
 msgid "Unknown"
 msgstr "Ismeretlen"
 
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:37
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:36
 msgid "Shotwell"
 msgstr "Shotwell"
 
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:38
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:37
 msgid "Sync from your Shotwell photo library"
 msgstr "Fényképek szinkronizálása Shotwell fényképgyűjteményből"
+
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:56
+msgid "Disabling Shotwell module, unable to open sqlite3 data source"
+msgstr "A Shotwell modul letiltása, nem lehet megnyitni az sqlite3 adatforrást"
 
 #: ../conduit/modules/ShutterflyModule/ShutterflyModule.py:26
 msgid "Shutterfly"
