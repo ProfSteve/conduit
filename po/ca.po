@@ -3,18 +3,21 @@
 # Copyright (C) 2008 The Free Software Foundation, Inc.
 # This file is distributed under the same license as the conduit package.
 # David Planella <david.planella@gmail.com>, 2008, 2009.
+# Jaume Planas <jplanas@itberga.com>, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: conduit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-06-14 11:23+0200\n"
-"PO-Revision-Date: 2009-06-14 11:27+0200\n"
-"Last-Translator: David Planella <david.planella@gmail.com>\n"
-"Language-Team: Catalan <tradgnome@softcatala.net>\n"
+"POT-Creation-Date: 2011-07-23 19:55+0200\n"
+"PO-Revision-Date: 2011-07-21 23:42+0200\n"
+"Last-Translator: Jaume Planas <jplanas@itberga.com>\n"
+"Language-Team: Catalan <tradgnome@softcatala.org>\n"
+"Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
 
 #: ../data/conduit.desktop.in.in.h:1
 msgid "Conduit Synchronizer"
@@ -24,209 +27,375 @@ msgstr "Sincronitzador Conduit"
 msgid "Synchronization for GNOME"
 msgstr "Sincronització per al GNOME"
 
-#: ../data/conduit.glade.h:1
-msgid "<b>Default Synchronization Options</b>"
-msgstr "<b>Opcions de sincronització predeterminades</b>"
-
-#: ../data/conduit.glade.h:2
-msgid "<b>General</b>"
-msgstr "<b>General</b>"
-
-#: ../data/conduit.glade.h:3
+#: ../data/conduit.ui.h:1
 msgid "Always Up-To-Date"
 msgstr "Sempre actualitzat"
 
-#: ../data/conduit.glade.h:4
+#: ../data/conduit.ui.h:2
 msgid "Ask Me What to Do"
-msgstr "Demana'm què vull fer"
+msgstr "Demana'm què vols que faci"
 
-#: ../data/conduit.glade.h:5
+#: ../data/conduit.ui.h:3
 msgid "Ask me what to do"
-msgstr "Demana'm què vull fer"
+msgstr "Demana'm què vols que faci"
 
-#: ../data/conduit.glade.h:6
-msgid "Cancel Synchronization"
-msgstr "Cancel·la la sincronització"
-
-#: ../data/conduit.glade.h:7
-msgid "Cancel currently-synchronizing groups"
-msgstr "Cancel·la els grups en sincronització"
-
-#: ../data/conduit.glade.h:8
-msgid "Clear Canvas"
-msgstr "Neteja el llenç"
-
-#: ../data/conduit.glade.h:9
+#: ../data/conduit.ui.h:4
 msgid "Compare"
 msgstr "Compara"
 
-#: ../data/conduit.glade.h:10
+#: ../data/conduit.ui.h:5
 msgid "Conduit Preferences"
 msgstr "Preferències del Conduit"
 
-#: ../data/conduit.glade.h:11
+#: ../data/conduit.ui.h:6
 msgid "Configuration"
 msgstr "Configuració"
 
-#: ../data/conduit.glade.h:12
-msgid "Configure Item"
-msgstr "Configura l'element"
-
-#: ../data/conduit.glade.h:13
-msgid "Configure the synchronization settings for this item"
-msgstr "Configura els paràmetres de sincronització per a aquest element"
-
-#: ../data/conduit.glade.h:14
+#: ../data/conduit.ui.h:7
 msgid "Conflict Options"
 msgstr "Opcions de conflicte"
 
-#: ../data/conduit.glade.h:15
+#: ../data/conduit.ui.h:8
 msgid "Conflicts"
 msgstr "Conflictes"
 
-#: ../data/conduit.glade.h:16
-msgid "Contents"
-msgstr "Continguts"
-
-#: ../data/conduit.glade.h:17
+#: ../data/conduit.ui.h:9
 msgid "Data Conversions"
 msgstr "Conversions de dades"
 
-#: ../data/conduit.glade.h:18
+#: ../data/conduit.ui.h:10
 msgid "Data Providers"
 msgstr "Proveïdors de dades"
 
-#: ../data/conduit.glade.h:19
-msgid "Delete Group"
-msgstr "Suprimeix el grup"
+#: ../data/conduit.ui.h:11
+msgid "Default Synchronization Options"
+msgstr "Opcions de sincronització per defecte"
 
-#: ../data/conduit.glade.h:20
-msgid "Delete Item"
-msgstr "Suprimeix l'element"
-
-#: ../data/conduit.glade.h:21
+#: ../data/conduit.ui.h:12
 msgid "Delete Options"
 msgstr "Opcions de supressió"
 
-#: ../data/conduit.glade.h:22
+#: ../data/conduit.ui.h:13
 msgid "Delete from the corresponding sink"
 msgstr "Suprimeix de la destinació corresponent"
 
-#: ../data/conduit.glade.h:23
+#: ../data/conduit.ui.h:14
 msgid "Delete the Corresponding Item"
 msgstr "Suprimeix l'element corresponent"
 
-#: ../data/conduit.glade.h:24
+#: ../data/conduit.ui.h:15
 msgid "Editor"
 msgstr "Editor"
 
-#: ../data/conduit.glade.h:25
+#: ../data/conduit.ui.h:16
+msgid "General"
+msgstr "General"
+
+#: ../data/conduit.ui.h:17
 msgid "Minimize to notification area"
 msgstr "Minimitza a l'àrea de notificació"
 
-#: ../data/conduit.glade.h:26
-msgid "Refresh Group"
-msgstr "Refresca el grup"
-
-#: ../data/conduit.glade.h:27
-msgid "Refresh Item"
-msgstr "Refresca l'element"
-
-#: ../data/conduit.glade.h:28
+#: ../data/conduit.ui.h:18
 msgid "Replace the Older Item"
 msgstr "Reemplaça l'element antic"
 
-#: ../data/conduit.glade.h:29
+#: ../data/conduit.ui.h:19
 msgid "Replace the older item"
 msgstr "Reemplaça l'element antic"
 
-#: ../data/conduit.glade.h:30
+#: ../data/conduit.ui.h:20
 msgid "Resolve Conflicts"
 msgstr "Resol els conflictes"
 
-#: ../data/conduit.glade.h:31
+#: ../data/conduit.ui.h:21
 msgid "Save settings on exit"
 msgstr "Desa la configuració en sortir"
 
-#: ../data/conduit.glade.h:32
+#: ../data/conduit.ui.h:22
 msgid "Show Hints"
 msgstr "Mostra els indicadors de funció"
 
-#: ../data/conduit.glade.h:33
+#: ../data/conduit.ui.h:23
 msgid "Show status icon"
 msgstr "Mostra la icona d'estat"
 
-#: ../data/conduit.glade.h:34
+#: ../data/conduit.ui.h:24
 msgid "Skip"
 msgstr "Omet"
 
-#: ../data/conduit.glade.h:35
+#: ../data/conduit.ui.h:25
 msgid "Slow Synchronization"
 msgstr "Sincronització lenta"
 
-#: ../data/conduit.glade.h:36
+#: ../data/conduit.ui.h:26
 msgid "Start Conduit at login"
 msgstr "Inicia el Conduit en entrar"
 
-#: ../data/conduit.glade.h:37
+#: ../data/conduit.ui.h:27
 msgid "Synchronization Options"
 msgstr "Opcions de sincronització"
 
-#: ../data/conduit.glade.h:38
-msgid "Synchronize All"
-msgstr "Sincronitza-ho tot"
-
-#: ../data/conduit.glade.h:39
-msgid "Synchronize Group"
-msgstr "Sincronitza el grup"
-
-#: ../data/conduit.glade.h:40
-msgid "Synchronize group"
-msgstr "Sincronitza el grup"
-
-#: ../data/conduit.glade.h:41
-msgid "Synchronizes all groups"
-msgstr "Sincronitza tots els grups"
-
-#: ../data/conduit.glade.h:42
+#: ../data/conduit.ui.h:28
 msgid "Title"
 msgstr "Títol"
 
-#: ../data/conduit.glade.h:43
+#: ../data/conduit.ui.h:29
 msgid "Two-Way Synchronization"
 msgstr "Sincronització a dues bandes"
 
-#: ../data/conduit.glade.h:44
+#: ../data/conduit.ui.h:30
 msgid "When an item has been deleted:"
 msgstr "Quan s'hagi suprimit un element:"
 
-#: ../data/conduit.glade.h:45
-msgid "When an item is deleted..."
-msgstr "Quan s'hagi suprimit un element..."
-
-#: ../data/conduit.glade.h:46
-msgid "When there is a conflict..."
-msgstr "Quan hi hagi un conflicte..."
-
-#: ../data/conduit.glade.h:47
+#: ../data/conduit.ui.h:31
 msgid "When there is a two-way conflict:"
 msgstr "Quan hi hagi un conflicte a dues bandes:"
 
-#: ../data/conduit.glade.h:48
+#: ../data/conduit.ui.h:32
 msgid "_Edit"
 msgstr "_Edita"
 
-#: ../data/conduit.glade.h:49
+#: ../data/conduit.ui.h:33
 msgid "_File"
 msgstr "_Fitxer"
 
-#: ../data/conduit.glade.h:50
+#: ../data/conduit.ui.h:34
 msgid "_Help"
 msgstr "A_juda"
+
+#: ../conduit/Knowledge.py:8
+msgid "What Do You Want to Synchronize?"
+msgstr "Què voleu sincronitzar?"
+
+#: ../conduit/Knowledge.py:9
+msgid "Drag and Drop a Data Provider on the Canvas"
+msgstr "Arrossegueu i deixeu anar un proveïdor de dades a l'àrea de dibuix"
+
+#: ../conduit/Knowledge.py:11
+msgid "Synchronization Group Created"
+msgstr "S'ha creat el grup de sincronització"
+
+#: ../conduit/Knowledge.py:12
+msgid "Add Another Data Provider to the Group to Synchronize it"
+msgstr "Afegiu un altre proveïdor de dades al grup per sincronitzar-lo"
+
+#: ../conduit/Knowledge.py:14
+msgid "You Are Now Ready to Synchronize"
+msgstr "Ja esteu a punt per sincronizar"
+
+#: ../conduit/Knowledge.py:15
+msgid "Right Click on Group for Options"
+msgstr "Feu clic amb el botó secundari al grup per obrir les opcions"
+
+#: ../conduit/Knowledge.py:24
+msgid "Synchronize Two Folders"
+msgstr "Sincronitza dues carpetes"
+
+#: ../conduit/Knowledge.py:27
+msgid "Backup Folder to Box.net"
+msgstr "Fes una còpia de seguretat de la carpeta al Box.net"
+
+#: ../conduit/Knowledge.py:30
+msgid "Synchronize Tagged F-Spot Photos to Flickr"
+msgstr "Sincronitzeu les fotos etiquetades de l'F-Spot amb el Flickr"
+
+#: ../conduit/Knowledge.py:33
+msgid "Synchronize Photos to Flickr"
+msgstr "Sincronitzeu les fotos amb el Flickr"
+
+#: ../conduit/Knowledge.py:36
+msgid "Upload Photos to Facebook"
+msgstr "Pugeu fotos al Facebook"
+
+#: ../conduit/Knowledge.py:39
+msgid "Synchronize Desktop Wallpaper from a RSS Feed"
+msgstr "Sincronitzeu el fons de pantalla de l'escriptori des d'un canal RSS"
+
+#: ../conduit/Main.py:57
+msgid "Conduit is a synchronization application."
+msgstr "El Conduit és una aplicació de sincronització."
+
+#: ../conduit/Main.py:61
+#, python-format
+msgid "Launch without GUI. [default: %default]"
+msgstr "Executa sense la GUI. [per defecte: %default]"
+
+#: ../conduit/Main.py:65
+#, python-format
+msgid "Save dataprovider configuration to FILE. [default: %default]"
+msgstr ""
+"Desa la configuració del proveïdor de dades al FITXER. [per defecte: "
+"%default]"
+
+#: ../conduit/Main.py:69
+#, python-format
+msgid "Iconify on startup. [default: %default]"
+msgstr "Iconofica a l'inici. [per defecte: %default]"
+
+#: ../conduit/Main.py:73
+#, python-format
+msgid "Run with the specified UI. [default: %default]"
+msgstr "Executa amb la UI especificada. [per defecte: %default]"
+
+#: ../conduit/Main.py:77
+msgid "Only load modules in the named files. [default: load all modules]"
+msgstr ""
+"Carrega només els mòduls que hi ha als fitxers esmentats. [per defecte: "
+"carrega tots els mòduls]"
+
+#: ../conduit/Main.py:81
+msgid "Do not load modules in the named files. [default: load all modules]"
+msgstr ""
+"No carreguis els mòduls que hi ha als fitxers esmentats. [per defecte: "
+"carrega tots els mòduls]"
+
+#: ../conduit/Main.py:85
+msgid ""
+"Explicitly set internal Conduit settings (keys) to the given values for this "
+"session. [default: do not set]"
+msgstr ""
+"Estableix els paràmetres interns (claus) del Conduit explícitament en els "
+"valors donats per a aquesta sessió. [per defecte: no estableixis]"
+
+#: ../conduit/Main.py:89
+#, python-format
+msgid ""
+"Enable loading of unfinished or unsupported dataproviders. [default: "
+"%default]"
+msgstr ""
+"Permet la càrrega de proveïdors de dades no finalitzats o no permesos. [per "
+"defecte: %default]"
+
+#: ../conduit/Main.py:93
+#, python-format
+msgid "Generate more debugging information. [default: %default]"
+msgstr "Genera més informació de depuració. [per defecte: %default]"
+
+#: ../conduit/Main.py:97
+#, python-format
+msgid "Generate less debugging information. [default: %default]"
+msgstr "Genera menys informació de depuració. [per defecte: %default]"
+
+#: ../conduit/Main.py:101
+#, python-format
+msgid "Generate no debugging information. [default: %default]"
+msgstr "No generis informació de depuració. [per defecte: %default]"
+
+#: ../conduit/dataproviders/DataProvider.py:22
+msgid "Ready"
+msgstr "A punt"
+
+#: ../conduit/dataproviders/DataProvider.py:23
+msgid "New data to sync"
+msgstr "Dades noves a sincronitzar"
+
+#: ../conduit/dataproviders/DataProvider.py:24
+msgid "Refreshing..."
+msgstr "S'està refrescant..."
+
+#: ../conduit/dataproviders/DataProvider.py:25
+msgid "Refreshed OK"
+msgstr "S'ha refrescat correctament"
+
+#: ../conduit/dataproviders/DataProvider.py:26
+msgid "Error Refreshing"
+msgstr "S'ha produït un error en sincronitzar"
+
+#: ../conduit/dataproviders/DataProvider.py:27
+msgid "Synchronizing..."
+msgstr "S'està sincronitzant..."
+
+#: ../conduit/dataproviders/DataProvider.py:28
+msgid "Synchronized OK"
+msgstr "S'ha sincronitzat correctament"
+
+#: ../conduit/dataproviders/DataProvider.py:29
+msgid "Error Synchronizing"
+msgstr "S'ha produït un error en sincronitzar"
+
+#: ../conduit/dataproviders/DataProvider.py:30
+msgid "Synchronization Skipped"
+msgstr "S'ha omès la sincronització"
+
+#: ../conduit/dataproviders/DataProvider.py:31
+msgid "Synchronization Cancelled"
+msgstr "S'ha cancel·lat la sincronització"
+
+#: ../conduit/dataproviders/DataProvider.py:32 ../conduit/gtkui/UI.py:743
+msgid "Synchronization Conflict"
+msgstr "Conflicte de sincronització"
+
+#: ../conduit/dataproviders/DataProvider.py:33
+msgid "Not Configured"
+msgstr "Sense configurar"
+
+#: ../conduit/dataproviders/Image.py:34
+#: ../conduit/modules/FlickrModule/FlickrModule.py:329
+msgid "640x480"
+msgstr "640x480"
+
+#: ../conduit/dataproviders/Image.py:34
+#: ../conduit/modules/FlickrModule/FlickrModule.py:329
+msgid "800x600"
+msgstr "800x600"
+
+#: ../conduit/dataproviders/Image.py:34
+#: ../conduit/modules/FlickrModule/FlickrModule.py:329
+msgid "1024x768"
+msgstr "1024x768"
+
+#. Signifies that a conversion should not take place
+#: ../conduit/dataproviders/Image.py:35
+#: ../conduit/modules/N800Module/N800Module.py:57
+msgid "None"
+msgstr "Cap"
+
+#. Default Categories for the DataProviders
+#: ../conduit/dataproviders/__init__.py:6
+msgid "Files and Folders"
+msgstr "Fitxers i carpetes"
+
+#: ../conduit/dataproviders/__init__.py:7
+#: ../conduit/modules/iPodModule/iPodModule.py:276
+msgid "Notes"
+msgstr "Anotacions"
+
+#: ../conduit/dataproviders/__init__.py:8
+#: ../conduit/modules/iPodModule/iPodModule.py:464
+msgid "Photos"
+msgstr "Fotografies"
+
+#: ../conduit/dataproviders/__init__.py:9
+msgid "Office"
+msgstr "Oficina"
+
+#: ../conduit/dataproviders/__init__.py:10
+msgid "Settings"
+msgstr "Paràmetres"
+
+#: ../conduit/dataproviders/__init__.py:11
+msgid "Miscellaneous"
+msgstr "Miscel·lània"
+
+#: ../conduit/dataproviders/__init__.py:12
+msgid "Media"
+msgstr "Elements multimèdia"
+
+#: ../conduit/dataproviders/__init__.py:13
+msgid "Bookmarks"
+msgstr "Adreces d'interés"
+
+#: ../conduit/dataproviders/__init__.py:14
+msgid "Test"
+msgstr "Prova"
 
 #: ../conduit/gtkui/Canvas.py:152
 msgid "Drag a Data Provider here to continue"
 msgstr "Arrossegueu un proveïdor de dades cap aquí per a continuar"
+
+#: ../conduit/gtkui/Canvas.py:227
+msgid "Show me"
+msgstr "Mostra'm"
 
 #. Visible column0 is
 #. [pixbuf + source display name] or
@@ -262,133 +431,118 @@ msgstr "Destinació"
 msgid "Conflicts (%s)"
 msgstr "Conflictes (%s)"
 
+#. name,                      #url
+#: ../conduit/gtkui/UI.py:33
+msgid "Introduction"
+msgstr "Introducció"
+
+#: ../conduit/gtkui/UI.py:34
+msgid "Writing a Data Provider"
+msgstr "Escriptura d'un proveïdor de dades"
+
+#: ../conduit/gtkui/UI.py:35
+msgid "API Documentation"
+msgstr "Documentació de l'API"
+
+#: ../conduit/gtkui/UI.py:36
+msgid "Test Results"
+msgstr "Resultats de la prova"
+
+#: ../conduit/gtkui/UI.py:52
+msgid "Examples"
+msgstr "Exemples"
+
 #. Build some liststores to display
-#: ../conduit/gtkui/UI.py:321
+#: ../conduit/gtkui/UI.py:139
 msgid "Convert from"
 msgstr "Converteix de"
 
-#: ../conduit/gtkui/UI.py:322
+#: ../conduit/gtkui/UI.py:140
 msgid "into"
 msgstr "a"
 
-#: ../conduit/gtkui/UI.py:373
+#: ../conduit/gtkui/UI.py:190
 msgid "Relationship Database"
 msgstr "Base de dades relacional"
 
-#: ../conduit/gtkui/UI.py:377
+#: ../conduit/gtkui/UI.py:194
 msgid "Conversions Available"
 msgstr "Conversions disponibles"
 
-#: ../conduit/gtkui/UI.py:383 ../conduit/gtkui/Tree.py:348
-#: ../conduit/modules/FileModule/FileConfiguration.py:117
+#: ../conduit/gtkui/UI.py:200 ../conduit/gtkui/Tree.py:355
+#: ../conduit/modules/FileModule/FileConfiguration.py:118
 msgid "Name"
 msgstr "Nom"
 
-#: ../conduit/gtkui/UI.py:387
+#: ../conduit/gtkui/UI.py:204
 msgid "Loaded"
 msgstr "Carregat"
 
-#: ../conduit/gtkui/UI.py:515 ../conduit/hildonui/UI.py:127
+#: ../conduit/gtkui/UI.py:329
+#, python-format
+msgid " - %s (Development Version)"
+msgstr " - %s (versió de desenvolupament)"
+
+#: ../conduit/gtkui/UI.py:331
+msgid " - Running Uninstalled"
+msgstr " - Execució sense instal·lació"
+
+#: ../conduit/gtkui/UI.py:375
+msgid "Developers"
+msgstr "Desenvolupadors"
+
+#: ../conduit/gtkui/UI.py:539 ../conduit/hildonui/UI.py:127
 msgid "Synchronization in progress. Do you want to cancel it?"
 msgstr "Sincronització en progrés. Voleu cancel·lar-la?"
 
-#: ../conduit/gtkui/UI.py:681
+#: ../conduit/gtkui/UI.py:712
 msgid "_Synchronize All"
 msgstr "Sincronitza-ho _tot"
 
-#: ../conduit/gtkui/UI.py:681
+#: ../conduit/gtkui/UI.py:712
 msgid "Synchronizes All Groups"
 msgstr "Sincronitza tots els grups"
 
-#: ../conduit/gtkui/UI.py:682
+#: ../conduit/gtkui/UI.py:713
 msgid "_Cancel Synchronization"
 msgstr "_Cancel·la la sincronització"
 
-#: ../conduit/gtkui/UI.py:682
+#: ../conduit/gtkui/UI.py:713
 msgid "Cancels Currently Synchronizing Groups"
 msgstr "Cancel·la els grups que s'estiguin sincronitzant actualment"
 
-#: ../conduit/gtkui/UI.py:683
+#: ../conduit/gtkui/UI.py:714
 msgid "_Quit"
 msgstr "_Surt"
 
-#: ../conduit/gtkui/UI.py:683
+#: ../conduit/gtkui/UI.py:714
 msgid "Close Conduit"
 msgstr "Tanca el Conduit"
 
-#: ../conduit/gtkui/UI.py:723
-msgid "Synchronization Error"
-msgstr "Error de sincronització"
-
-#: ../conduit/gtkui/UI.py:726
-msgid "Synchronization Complete"
-msgstr "S'ha completat la sincronització"
-
-#: ../conduit/gtkui/UI.py:742
+#: ../conduit/gtkui/UI.py:731
 msgid "Synchronizing"
 msgstr "S'està sincronitzant"
 
-#: ../conduit/gtkui/Tree.py:357
+#: ../conduit/gtkui/UI.py:737
+msgid "Synchronization Complete"
+msgstr "S'ha completat la sincronització"
+
+#: ../conduit/gtkui/UI.py:741
+msgid "Synchronization Error"
+msgstr "Error de sincronització"
+
+#: ../conduit/gtkui/Tree.py:364
 msgid "Description"
 msgstr "Descripció"
 
-#: ../conduit/gtkui/ConfigItems.py:729
+#: ../conduit/gtkui/ConfigItems.py:733
 #, python-format
 msgid "Total: %d"
 msgstr "Total: %d"
 
 #: ../conduit/gtkui/WindowConfigurator.py:14
-#, fuzzy
 msgid "Configure"
-msgstr "Configura l'element"
-
-#: ../conduit/dataproviders/DataProvider.py:20
-msgid "Ready"
-msgstr "A punt"
-
-#: ../conduit/dataproviders/DataProvider.py:21
-msgid "New data to sync"
-msgstr "Dades noves a sincronitzar"
-
-#: ../conduit/dataproviders/DataProvider.py:22
-msgid "Refreshing..."
-msgstr "S'està refrescant..."
-
-#: ../conduit/dataproviders/DataProvider.py:23
-msgid "Refreshed OK"
-msgstr "S'ha refrescat correctament"
-
-#: ../conduit/dataproviders/DataProvider.py:24
-msgid "Error Refreshing"
-msgstr "S'ha produït un error en sincronitzar"
-
-#: ../conduit/dataproviders/DataProvider.py:25
-msgid "Synchronizing..."
-msgstr "S'està sincronitzant..."
-
-#: ../conduit/dataproviders/DataProvider.py:26
-msgid "Synchronized OK"
-msgstr "S'ha sincronitzat correctament"
-
-#: ../conduit/dataproviders/DataProvider.py:27
-msgid "Error Synchronizing"
-msgstr "S'ha produït un error en sincronitzar"
-
-#: ../conduit/dataproviders/DataProvider.py:28
-msgid "Synchronization Skipped"
-msgstr "S'ha omès la sincronització"
-
-#: ../conduit/dataproviders/DataProvider.py:29
-msgid "Synchronization Cancelled"
-msgstr "S'ha cancel·lat la sincronització"
-
-#: ../conduit/dataproviders/DataProvider.py:30
-msgid "Synchronization Conflict"
-msgstr "Conflicte de sincronització"
-
-#: ../conduit/dataproviders/DataProvider.py:31
-msgid "Not Configured"
-msgstr "Sense configurar"
+msgstr "Configura"
 
 #: ../conduit/modules/BackpackModule/BackpackModule.py:58
 msgid "Backpack Notes"
@@ -398,6 +552,28 @@ msgstr "Anotacions del Backpack"
 msgid "Store things in Backpack Notes"
 msgstr "Emmagatzema coses en anotacions del Backpack"
 
+#: ../conduit/modules/BackpackModule/BackpackModule.py:105
+#: ../conduit/modules/FlickrModule/FlickrModule.py:307
+#: ../conduit/modules/ZotoModule/ZotoModule.py:243
+msgid "Account details"
+msgstr "Detalls del compte"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:106
+msgid "Login"
+msgstr "Entra"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:109
+msgid "API key"
+msgstr "Clau de l'API"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:112
+msgid "Saved notes"
+msgstr "Anotacions desades"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:113
+msgid "Save notes in page"
+msgstr "Desa les anotacions a la pàgina"
+
 #: ../conduit/modules/BansheeModule/BansheeModule.py:52
 msgid "Banshee Playlists"
 msgstr "Llistes de reproducció del Banshee"
@@ -405,6 +581,13 @@ msgstr "Llistes de reproducció del Banshee"
 #: ../conduit/modules/BansheeModule/BansheeModule.py:53
 msgid "Synchronize your Banshee playlists"
 msgstr "Sincronitzeu les vostres llistes de reproducció del Banshee"
+
+#: ../conduit/modules/BansheeModule/BansheeModule.py:187
+#: ../conduit/modules/BansheeModule/BansheeModule.py:188
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:120
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:121
+msgid "Playlists"
+msgstr "Llistes de reproducció"
 
 #: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:29
 msgid "Box.net"
@@ -414,35 +597,65 @@ msgstr "Box.net"
 msgid "Synchronize your Box.net files"
 msgstr "Sincronitzeu els vostres fitxers del Box.net"
 
-#: ../conduit/modules/EvolutionModule/EvolutionModule.py:127
+#: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:290
+#: ../conduit/modules/FileModule/FileModule.py:86
+msgid "Folder"
+msgstr "Carpeta"
+
+#: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:291
+msgid "Folder name"
+msgstr "Nom de la carpeta"
+
+#: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:295
+msgid "Load folders"
+msgstr "Carrega les carpetes"
+
+#: ../conduit/modules/ConverterModule.py:91
+msgid "Note-"
+msgstr "Nota-"
+
+#: ../conduit/modules/DesktopWallpaperModule.py:38
+msgid "Wallpaper"
+msgstr "Fons de pantalla"
+
+#: ../conduit/modules/DesktopWallpaperModule.py:39
+msgid "Changes your Desktop Wallpaper"
+msgstr "Canvia el fons de pantalla de l'escriptori"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:110
+#, python-format
+msgid "Select %s"
+msgstr "Seleccioneu %s"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:130
 msgid "Evolution Contacts"
 msgstr "Contactes de l'Evolution"
 
-#: ../conduit/modules/EvolutionModule/EvolutionModule.py:128
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:131
 msgid "Synchronize your contacts"
 msgstr "Sincronitzeu els vostres contactes"
 
-#: ../conduit/modules/EvolutionModule/EvolutionModule.py:178
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:181
 msgid "Evolution Calendar"
 msgstr "Calendari de l'Evolution"
 
-#: ../conduit/modules/EvolutionModule/EvolutionModule.py:179
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:182
 msgid "Synchronize your calendar"
 msgstr "Sincronitzeu el vostre calendari"
 
-#: ../conduit/modules/EvolutionModule/EvolutionModule.py:240
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:243
 msgid "Evolution Tasks"
 msgstr "Tasques de l'Evolution"
 
-#: ../conduit/modules/EvolutionModule/EvolutionModule.py:241
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:244
 msgid "Synchronize your tasks"
 msgstr "Sincronitzeu les vostres tasques"
 
-#: ../conduit/modules/EvolutionModule/EvolutionModule.py:297
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:300
 msgid "Evolution Memos"
 msgstr "Anotacions de l'Evolution"
 
-#: ../conduit/modules/EvolutionModule/EvolutionModule.py:298
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:301
 msgid "Synchronize your memos"
 msgstr "Sincronitzeu les vostres anotacions"
 
@@ -457,20 +670,38 @@ msgstr "Sincronitzeu les vostres fotos del Facebook"
 #: ../conduit/modules/FacebookModule/FacebookModule.py:124
 #: ../conduit/modules/FlickrModule/FlickrModule.py:282
 msgid "Loading album list..."
-msgstr ""
+msgstr "S'està carregant la llista d'àlbums..."
 
 #: ../conduit/modules/FacebookModule/FacebookModule.py:128
 msgid "Failed to connect"
-msgstr ""
+msgstr "Ha fallat la connexió"
 
 #: ../conduit/modules/FacebookModule/FacebookModule.py:131
-#, fuzzy
 msgid "Logged in"
-msgstr "Entrada"
+msgstr "Connectat"
 
 #: ../conduit/modules/FacebookModule/FacebookModule.py:133
 msgid "Failed to login"
-msgstr ""
+msgstr "Ha fallat en entrar"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:145
+#: ../conduit/modules/FspotModule/FspotModule.py:246
+msgid "Status"
+msgstr "Estat"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:150
+#: ../conduit/modules/iPodModule/iPodModule.py:566
+#: ../conduit/modules/ZotoModule/ZotoModule.py:252
+msgid "Album"
+msgstr "Àlbum"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:151
+msgid "Album name"
+msgstr "Nom de l'àlbum"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:156
+msgid "Load albums"
+msgstr "Carrega els àlbums"
 
 #: ../conduit/modules/FeedModule/FeedModule.py:58
 msgid "RSS Feed"
@@ -480,24 +711,66 @@ msgstr "Canal RSS"
 msgid "Synchronize data from RSS enclosures"
 msgstr "Sincronitzeu dades de contenidors RSS"
 
-#: ../conduit/modules/FileModule/FileConfiguration.py:111
+#. FIXME: Add Randomize
+#: ../conduit/modules/FeedModule/FeedModule.py:114
+msgid "Feed details"
+msgstr "Detalls del canal"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:115
+msgid "Feed address"
+msgstr "Adreça del canal"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:118
+msgid "Enclosure settings"
+msgstr "Paràmetres del contenidor"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:119
+msgid "Limit downloaded enclosures"
+msgstr "Limita els contenidors baixats"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:125
+msgid "Limit to"
+msgstr "Limita a"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:129
+msgid "Randomize enclosures"
+msgstr "Contenidors a l'atzar"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:133
+msgid "Download types"
+msgstr "Baixa els tipus"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:134
+msgid "Download audio files"
+msgstr "Baixa els fitxers d'àudio"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:135
+msgid "Download video files"
+msgstr "Baixa els fitxers de vídeo"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:136
+msgid "Download photo files"
+msgstr "Baixa els fitxers de fotografia"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:112
 msgid "Icon"
 msgstr "Icona"
 
-#: ../conduit/modules/FileModule/FileConfiguration.py:123
+#: ../conduit/modules/FileModule/FileConfiguration.py:124
+#: ../conduit/modules/GConfModule/GConfModule.py:138
 msgid "Items"
 msgstr "Elements"
 
-#: ../conduit/modules/FileModule/FileConfiguration.py:149
+#: ../conduit/modules/FileModule/FileConfiguration.py:150
 #, python-format
 msgid "<i>Contains %s files</i>"
 msgstr "<i>Conté %s fitxers</i>"
 
-#: ../conduit/modules/FileModule/FileConfiguration.py:247
+#: ../conduit/modules/FileModule/FileConfiguration.py:249
 msgid "Include file..."
 msgstr "Inclou un fitxer..."
 
-#: ../conduit/modules/FileModule/FileConfiguration.py:257
+#: ../conduit/modules/FileModule/FileConfiguration.py:259
 msgid "All files"
 msgstr "Tots els fitxers"
 
@@ -505,43 +778,38 @@ msgstr "Tots els fitxers"
 msgid "Include folder..."
 msgstr "Inclou una carpeta..."
 
-#: ../conduit/modules/FileModule/FileConfiguration.py:317
+#: ../conduit/modules/FileModule/FileConfiguration.py:315
 msgid "Please Name All Folders"
 msgstr "Hauríeu d'anomenar totes les carpetes"
 
-#: ../conduit/modules/FileModule/FileConfiguration.py:318
+#: ../conduit/modules/FileModule/FileConfiguration.py:316
 msgid ""
 "All folders require a descriptive name. To name a folder simply click on it"
 msgstr ""
 "Totes les carpetes han de tenir un nom que les descrigui. Feu clic en una "
 "carpeta per a donar-li un nom"
 
-#: ../conduit/modules/FileModule/FileModule.py:23
+#: ../conduit/modules/FileModule/FileModule.py:27
 msgid "Files"
 msgstr "Fitxers"
 
-#: ../conduit/modules/FileModule/FileModule.py:24
+#: ../conduit/modules/FileModule/FileModule.py:28
 msgid "Source for synchronizing multiple files"
 msgstr "Font per a sincronitzar múltiples fitxers"
 
-#: ../conduit/modules/FileModule/FileModule.py:96
-msgid "Folder"
-msgstr "Carpeta"
-
-#: ../conduit/modules/FileModule/FileModule.py:97
+#: ../conduit/modules/FileModule/FileModule.py:87
 msgid "Synchronize folders"
 msgstr "Sincronitza carpetes"
 
-#: ../conduit/modules/Firefox3Module/Firefox3Module.py:26
+#: ../conduit/modules/Firefox3Module/Firefox3Module.py:40
 msgid "Firefox 3 Bookmarks"
-msgstr ""
+msgstr "Adreces d'interès del Firefox 3"
 
-#: ../conduit/modules/Firefox3Module/Firefox3Module.py:27
-#, fuzzy
+#: ../conduit/modules/Firefox3Module/Firefox3Module.py:41
 msgid "Syncronize your Firefox 3 Bookmarks"
-msgstr "Sincronitzeu les vostres fotos del Flickr.com"
+msgstr "Sincronitzeu les vostres adreces d'interès del Firefox 3"
 
-#: ../conduit/modules/Firefox3Module/Firefox3Module.py:87
+#: ../conduit/modules/Firefox3Module/Firefox3Module.py:100
 msgid "Firefox Profile"
 msgstr "Perfil del Firefox"
 
@@ -555,68 +823,90 @@ msgstr "Sincronitzeu les vostres fotos del Flickr.com"
 
 #: ../conduit/modules/FlickrModule/FlickrModule.py:287
 msgid "Failed to connect."
-msgstr ""
+msgstr "Ha fallat en connectar."
 
 #: ../conduit/modules/FlickrModule/FlickrModule.py:290
-#, fuzzy
 msgid "Album names loaded."
-msgstr "Nom de l'àlbum"
+msgstr "S'han carregat els noms d'àlbum."
 
 #: ../conduit/modules/FlickrModule/FlickrModule.py:292
 msgid "Failed to login."
-msgstr ""
+msgstr "Ha fallat en entrar."
 
 #: ../conduit/modules/FlickrModule/FlickrModule.py:303
 msgid "Logging in, please wait..."
-msgstr ""
+msgstr "S'està entrant..."
 
-#: ../conduit/modules/FlickrModule/FlickrModule.py:307
-#, fuzzy
-msgid "Account details"
-msgstr "<b>Detalls del compte</b>"
+#: ../conduit/modules/FlickrModule/FlickrModule.py:308
+#: ../conduit/modules/GoogleBookmarksModule.py:67
+#: ../conduit/modules/ZotoModule/ZotoModule.py:244
+msgid "Username"
+msgstr "Nom d'usuari"
 
-#: ../conduit/modules/FlickrModule/FlickrModule.py:318
+#: ../conduit/modules/FlickrModule/FlickrModule.py:319
 msgid "Authenticate"
-msgstr ""
+msgstr "Autentica"
 
-#: ../conduit/modules/FlickrModule/FlickrModule.py:322
-#, fuzzy
+#: ../conduit/modules/FlickrModule/FlickrModule.py:323
+#: ../conduit/modules/ZotoModule/ZotoModule.py:251
 msgid "Saved photo settings"
-msgstr "<b>Paràmetres desats de les fotos</b>"
-
-#: ../conduit/modules/FlickrModule/FlickrModule.py:327
-#, fuzzy
-msgid "Resize photos"
-msgstr "Canvi de mida de les fotos:"
+msgstr "Paràmetres desats de les fotos"
 
 #: ../conduit/modules/FlickrModule/FlickrModule.py:328
-msgid "Do not resize"
-msgstr ""
+msgid "Resize photos"
+msgstr "Canvia la mida de les fotos"
 
-#: ../conduit/modules/FlickrModule/FlickrModule.py:331
+#: ../conduit/modules/FlickrModule/FlickrModule.py:329
+msgid "Do not resize"
+msgstr "No canviïs la mida de les fotos"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:332
 msgid "Photos are public"
 msgstr "Les fotos són públiques"
 
-#: ../conduit/modules/FspotModule/FspotModule.py:25
+#: ../conduit/modules/FspotModule/FspotModule.py:28
 msgid "F-Spot"
 msgstr "F-Spot"
 
-#: ../conduit/modules/FspotModule/FspotModule.py:26
+#: ../conduit/modules/FspotModule/FspotModule.py:29
 msgid "Synchronize your F-Spot photos"
 msgstr "Sincronitzeu les vostres fotos de l'F-Spot"
 
-#: ../conduit/modules/FspotModule/FspotModule.py:152
+#: ../conduit/modules/FspotModule/FspotModule.py:155
 msgid "F-Spot DBus interface is operating in read-only mode"
 msgstr ""
 "La interfície DBus de l'F-Spot està funcionant en mode de només lectura"
 
-#: ../conduit/modules/FspotModule/FspotModule.py:218
+#: ../conduit/modules/FspotModule/FspotModule.py:221
 msgid "F-Spot is running"
-msgstr ""
+msgstr "S'està executant l'F-Spot"
 
-#: ../conduit/modules/FspotModule/FspotModule.py:219
+#: ../conduit/modules/FspotModule/FspotModule.py:222
 msgid "Please start F-Spot or activate the D-Bus Extension"
-msgstr ""
+msgstr "Inicieu l'F-Spot o activeu l'extensió del D-Bus"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:247
+msgid "Start F-Spot"
+msgstr "Inicia l'F-Spot"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:251
+#: ../conduit/modules/FspotModule/FspotModule.py:252
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:71
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:73
+msgid "Tags"
+msgstr "Etiquetes"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:265
+msgid "Add tags"
+msgstr "Afegeix etiquetes"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:266
+msgid "Tag name"
+msgstr "Nom de l'etiqueta"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:269
+msgid "Add tag"
+msgstr "Afegeix una etiqueta"
 
 #: ../conduit/modules/GConfModule/GConfModule.py:21
 msgid "Application Settings"
@@ -626,99 +916,133 @@ msgstr "Paràmetres de les aplicacions"
 msgid "Synchronize your application settings"
 msgstr "Sincronitzeu els vostres paràmetres de les aplicacions"
 
+#: ../conduit/modules/GConfModule/GConfModule.py:31
+msgid "Metacity"
+msgstr "Metacity"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:32
+msgid "Nautilus"
+msgstr "Nautilus"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:33
+msgid "Preferred Applications"
+msgstr "Aplicacions preferides"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:34
+msgid "Desktop Interface"
+msgstr "Interfície de l'escriptori"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:35
+msgid "Gnome Terminal"
+msgstr "Terminal del GNOME"
+
 #: ../conduit/modules/GConfModule/GConfModule.py:137
-#, fuzzy
 msgid "Applications to Synchronize"
-msgstr "Sincronitzador Conduit"
+msgstr "Aplicacions a sincronitzar"
 
-#: ../conduit/modules/GoogleModule/GoogleModule.py:399
-#: ../conduit/modules/GoogleModule/calendar-config.glade.h:4
-msgid "Google Calendar"
-msgstr "Calendari del Google"
+#: ../conduit/modules/GoogleBookmarksModule.py:19
+msgid "Google Bookmarks"
+msgstr "Adreces d'interès del Google"
 
-#: ../conduit/modules/GoogleModule/GoogleModule.py:400
-msgid "Synchronize your Google Calendar"
-msgstr "Sincronitzeu el vostre calendari del Google"
+#: ../conduit/modules/GoogleBookmarksModule.py:20
+msgid "Sync your Google Bookmarks"
+msgstr "Sincronitzeu les vostres adreces d'interès del Google"
 
-#: ../conduit/modules/GoogleModule/GoogleModule.py:582
-msgid "Picasa"
-msgstr "Picasa"
+#: ../conduit/modules/GoogleBookmarksModule.py:66
+msgid "Login Details"
+msgstr "Detalls de l'entrada"
 
-#: ../conduit/modules/GoogleModule/GoogleModule.py:583
-msgid "Synchronize your Google Picasa photos"
-msgstr "Sincronitzeu les vostres fotos del Google Picasa"
+#: ../conduit/modules/GoogleBookmarksModule.py:70
+#: ../conduit/modules/ZotoModule/ZotoModule.py:247
+msgid "Password"
+msgstr "Contrasenya"
 
-#: ../conduit/modules/GoogleModule/GoogleModule.py:745
-msgid "Google Contacts"
-msgstr "Contactes del Google"
+#: ../conduit/modules/iPodModule/iPodModule.py:277
+msgid "Synchronize your iPod notes"
+msgstr "Sincronitzeu les vostres anotacions de l'iPod"
 
-#: ../conduit/modules/GoogleModule/GoogleModule.py:746
-msgid "Synchronize your Google Mail contacts"
-msgstr "Sincronitzeu els vostres contactes del Google Mail"
+#: ../conduit/modules/iPodModule/iPodModule.py:392
+msgid "Contacts"
+msgstr "Contactes"
 
-#: ../conduit/modules/GoogleModule/GoogleModule.py:1076
-msgid "Google Documents"
-msgstr "Documents del Google"
+#: ../conduit/modules/iPodModule/iPodModule.py:393
+msgid "Synchronize your iPod contacts"
+msgstr "Sincronitzeu els vostres contactes de l'iPod"
 
-#: ../conduit/modules/GoogleModule/GoogleModule.py:1077
-msgid "Synchronize your Google Documents"
-msgstr "Sincronitzeu els vostres documents del Google"
+#: ../conduit/modules/iPodModule/iPodModule.py:428
+msgid "Calendar"
+msgstr "Calendari"
 
-#: ../conduit/modules/GoogleModule/GoogleModule.py:1322
-#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:69
-msgid "Unknown"
-msgstr "Desconegut"
+#: ../conduit/modules/iPodModule/iPodModule.py:429
+msgid "Synchronize your iPod calendar"
+msgstr "Sincronitzeu el vostre calendari de l'iPod"
 
-#: ../conduit/modules/GoogleModule/GoogleModule.py:1323
-msgid "miscellaneous"
-msgstr "miscel·lània"
+#: ../conduit/modules/iPodModule/iPodModule.py:465
+msgid "Synchronize your iPod photos"
+msgstr "Sincronitzeu les vostres fotos de l'iPod"
 
-#: ../conduit/modules/GoogleModule/GoogleModule.py:1324
-msgid "No description."
-msgstr "Sense descripció."
+#: ../conduit/modules/iPodModule/iPodModule.py:570
+msgid "Delete"
+msgstr "Suprimeix"
 
-#: ../conduit/modules/GoogleModule/GoogleModule.py:1333
-msgid "YouTube"
-msgstr "YouTube"
+#: ../conduit/modules/iPodModule/iPodModule.py:573
+msgid "Delete All Photos"
+msgstr "Suprimeix totes les fotos"
 
-#: ../conduit/modules/GoogleModule/GoogleModule.py:1334
-msgid "Synchronize data from YouTube"
-msgstr "Sincronitzeu les dades del YouTube"
-
-#: ../conduit/modules/GoogleModule/calendar-config.glade.h:1
-msgid "<b>Account Details</b>"
-msgstr "<b>Detalls del compte</b>"
-
-#: ../conduit/modules/GoogleModule/calendar-config.glade.h:2
-msgid "Calendar:"
-msgstr "Calendari:"
-
-#: ../conduit/modules/GoogleModule/calendar-config.glade.h:3
-msgid "Email:"
-msgstr "Correu electrònic:"
-
-#: ../conduit/modules/GoogleModule/calendar-config.glade.h:5
-msgid "Load Calendars"
-msgstr "Carrega els calendaris"
-
-#: ../conduit/modules/GoogleModule/calendar-config.glade.h:6
-msgid "Password:"
-msgstr "Contrasenya:"
-
-#: ../conduit/modules/iPodModule/iPodModule.py:695
+#: ../conduit/modules/iPodModule/iPodModule.py:803
+#: ../conduit/modules/iPodModule/iPodModule.py:920
 #: ../conduit/modules/N800Module/N800Module.py:77
 msgid "Encoding"
 msgstr "Codificació"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:919
+msgid "Conversion options"
+msgstr "Opcions de conversió"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:924
+msgid "Keep converted files"
+msgstr "Conserva els fitxers convertits"
+
+#. To translators: defaul music folder of N800
+#: ../conduit/modules/iPodModule/iPodModule.py:954
+#: ../conduit/modules/N800Module/N800Module.py:133
+msgid "Music"
+msgstr "Música"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:955
+msgid "Synchronize your iPod music"
+msgstr "Sincronitzeu la vostra música de l'iPod"
+
+#. To translators: defaul video folder of N800
+#: ../conduit/modules/iPodModule/iPodModule.py:990
+#: ../conduit/modules/N800Module/N800Module.py:157
+msgid "Video"
+msgstr "Vídeo"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:991
+msgid "Synchronize your iPod videos"
+msgstr "Sincronitzeu els vostres vídeos de l'iPod"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:1015
+msgid "Movie"
+msgstr "Pel·lícula"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:1016
+msgid "Music Video"
+msgstr "Vídeo musical"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:1017
+msgid "TV Show"
+msgstr "Programa de televisió"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:1019
+msgid "Video kind"
+msgstr "Tipus de vídeo"
 
 #. Translators: Translate this in derived classes.
 #: ../conduit/modules/N800Module/N800Module.py:55
 msgid "Conduit"
 msgstr "Conduit"
-
-#. Signifies that a conversion should not take place
-#: ../conduit/modules/N800Module/N800Module.py:57
-msgid "None"
-msgstr ""
 
 #: ../conduit/modules/N800Module/N800Module.py:105
 msgid "N800 Files"
@@ -741,11 +1065,6 @@ msgstr "Música de l'N800"
 msgid "Synchronizes music to a N800 device"
 msgstr "Sincronitza música amb un dispositiu N800"
 
-#. To translators: defaul music folder of N800
-#: ../conduit/modules/N800Module/N800Module.py:133
-msgid "Music"
-msgstr "Música"
-
 #: ../conduit/modules/N800Module/N800Module.py:150
 msgid "N800 Videos"
 msgstr "Vídeos de l'N800"
@@ -753,11 +1072,6 @@ msgstr "Vídeos de l'N800"
 #: ../conduit/modules/N800Module/N800Module.py:151
 msgid "Synchronizes video to a N800 device"
 msgstr "Sincronitza vídeos amb un dispositiu N800"
-
-#. To translators: defaul video folder of N800
-#: ../conduit/modules/N800Module/N800Module.py:157
-msgid "Video"
-msgstr "Vídeo"
 
 #: ../conduit/modules/N800Module/N800Module.py:174
 msgid "N800 Photos"
@@ -772,6 +1086,22 @@ msgstr "Sincroniteu les fotos amb un dispositiu N800"
 msgid "Photo"
 msgstr "Foto"
 
+#: ../conduit/modules/NautilusBookmarksModule.py:19
+msgid "Nautilus Bookmarks"
+msgstr "Adreces d'interès del Nautilus"
+
+#: ../conduit/modules/NautilusBookmarksModule.py:20
+msgid "Sync your Nautilus Bookmarks"
+msgstr "Sincronitzeu les vostres adreces d'interès del Nautilus"
+
+#: ../conduit/modules/NautilusBookmarksModule.py:145
+msgid "Sync bookmarks to local places/files"
+msgstr "Sincronizeu les adreces d'interès amb llocs/fitxers locals"
+
+#: ../conduit/modules/NautilusBookmarksModule.py:148
+msgid "Sync bookmarks to remote places/files"
+msgstr "Sincronizeu les adreces d'interès amb llocs/fitxers remots"
+
 #: ../conduit/modules/NetworkModule/Server.py:147
 msgid "Network"
 msgstr "Xarxa"
@@ -780,14 +1110,32 @@ msgstr "Xarxa"
 msgid "Enable synchronization via network"
 msgstr "Habilita la sincronització a través de la xarxa"
 
-#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:44
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:48
 msgid "Rhythmbox Music"
 msgstr "Música del Rhythmbox"
 
-#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:45
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:49
 msgid "Synchronize songs from your Rhythmbox playlists"
 msgstr ""
 "Sincronitzeu cançons de les vostres llistes de reproducció del Rhythmbox"
+
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:73
+msgid "Unknown"
+msgstr "Desconegut"
+
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:36
+msgid "Shotwell"
+msgstr "Shotwell"
+
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:37
+msgid "Sync from your Shotwell photo library"
+msgstr "Sincronitzeu de la vostra biblioteca de fotos del Shotwell"
+
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:56
+msgid "Disabling Shotwell module, unable to open sqlite3 data source"
+msgstr ""
+"S'està inhabilitant el mòdul del Shotwell, no es pot obrir la font de dades "
+"de l'sqlite3"
 
 #: ../conduit/modules/ShutterflyModule/ShutterflyModule.py:26
 msgid "Shutterfly"
@@ -817,23 +1165,89 @@ msgstr "Zoto"
 msgid "Synchronize your Zoto photos"
 msgstr "Sincronitzeu les vostres fotos del Zoto"
 
+#~ msgid "Cancel Synchronization"
+#~ msgstr "Cancel·la la sincronització"
+
+#~ msgid "Cancel currently-synchronizing groups"
+#~ msgstr "Cancel·la els grups en sincronització"
+
+#~ msgid "Clear Canvas"
+#~ msgstr "Neteja el llenç"
+
+#~ msgid "Configure Item"
+#~ msgstr "Configura l'element"
+
+#~ msgid "Configure the synchronization settings for this item"
+#~ msgstr "Configura els paràmetres de sincronització per a aquest element"
+
+#~ msgid "Delete Group"
+#~ msgstr "Suprimeix el grup"
+
+#~ msgid "Refresh Group"
+#~ msgstr "Refresca el grup"
+
+#~ msgid "Refresh Item"
+#~ msgstr "Refresca l'element"
+
+#~ msgid "Synchronize All"
+#~ msgstr "Sincronitza-ho tot"
+
+#~ msgid "Synchronize Group"
+#~ msgstr "Sincronitza el grup"
+
+#~ msgid "Synchronize group"
+#~ msgstr "Sincronitza el grup"
+
+#~ msgid "Synchronizes all groups"
+#~ msgstr "Sincronitza tots els grups"
+
+#~ msgid "When an item is deleted..."
+#~ msgstr "Quan s'hagi suprimit un element..."
+
+#~ msgid "When there is a conflict..."
+#~ msgstr "Quan hi hagi un conflicte..."
+
+#~ msgid "Google Calendar"
+#~ msgstr "Calendari del Google"
+
+#~ msgid "Synchronize your Google Calendar"
+#~ msgstr "Sincronitzeu el vostre calendari del Google"
+
+#~ msgid "Picasa"
+#~ msgstr "Picasa"
+
+#~ msgid "Synchronize your Google Picasa photos"
+#~ msgstr "Sincronitzeu les vostres fotos del Google Picasa"
+
+#~ msgid "Synchronize your Google Mail contacts"
+#~ msgstr "Sincronitzeu els vostres contactes del Google Mail"
+
+#~ msgid "Google Documents"
+#~ msgstr "Documents del Google"
+
+#~ msgid "Synchronize your Google Documents"
+#~ msgstr "Sincronitzeu els vostres documents del Google"
+
+#~ msgid "No description."
+#~ msgstr "Sense descripció."
+
+#~ msgid "YouTube"
+#~ msgstr "YouTube"
+
+#~ msgid "Synchronize data from YouTube"
+#~ msgstr "Sincronitzeu les dades del YouTube"
+
+#~ msgid "<b>Account Details</b>"
+#~ msgstr "<b>Detalls del compte</b>"
+
+#~ msgid "Email:"
+#~ msgstr "Correu electrònic:"
+
 #~ msgid "<b>Saved Note Settings</b>"
 #~ msgstr "<b>Paràmetres desats de les anotacions</b>"
 
-#~ msgid "API key:"
-#~ msgstr "Clau de l'API:"
-
 #~ msgid "Backpack"
 #~ msgstr "Backpack"
-
-#~ msgid "Save notes in page:"
-#~ msgstr "Desa les anotacions a la pàgina:"
-
-#~ msgid "Username:"
-#~ msgstr "Nom d'usuari"
-
-#~ msgid "Playlist Name"
-#~ msgstr "Nom de la llista de reproducció"
 
 #~ msgid "Enabled"
 #~ msgstr "Habilitat"
@@ -850,35 +1264,11 @@ msgstr "Sincronitzeu les vostres fotos del Zoto"
 #~ msgid "Load"
 #~ msgstr "Carrega"
 
-#~ msgid "Select %s:"
-#~ msgstr "Seleccioneu %s:"
-
 #~ msgid "Addressbook:"
 #~ msgstr "Llibreta d'adreces:"
 
 #~ msgid "Evolution"
 #~ msgstr "Evolution"
-
-#~ msgid "Album:"
-#~ msgstr "Àlbum:"
-
-#~ msgid "<b>Enclosure Settings</b>"
-#~ msgstr "<b>Paràmetres del contenidor</b>"
-
-#~ msgid "<b>Feed Details</b>"
-#~ msgstr "<b>Detalls del canal</b>"
-
-#~ msgid "Download Audio Files"
-#~ msgstr "Baixa els fitxers d'àudio"
-
-#~ msgid "Download Photos"
-#~ msgstr "Baixa les fotos"
-
-#~ msgid "Download Video Files"
-#~ msgstr "Baixa els fitxers de vídeo"
-
-#~ msgid "Feed Address:"
-#~ msgstr "Adreça del canal:"
 
 #~ msgid ""
 #~ "Limit the Number of\n"
@@ -886,9 +1276,6 @@ msgstr "Sincronitzeu les vostres fotos del Zoto"
 #~ msgstr ""
 #~ "Limita el nombre de\n"
 #~ "contenidors a baixar a:"
-
-#~ msgid "Randomize Enclosures"
-#~ msgstr "Contenidors a l'atzar"
 
 #~ msgid "<b>Items to Synchronize</b>"
 #~ msgstr "<b>Elements a sincronitzar</b>"
@@ -926,9 +1313,6 @@ msgstr "Sincronitzeu les vostres fotos del Zoto"
 #~ msgid "Photoset Name:"
 #~ msgstr "Nom del conjunt de fotos:"
 
-#~ msgid "Tag Name"
-#~ msgstr "Nom de l'etiqueta"
-
 #~ msgid "<b>Return Photos Tagged With</b>"
 #~ msgstr "<b>Recupera les fotos etiquetades amb</b>"
 
@@ -937,9 +1321,6 @@ msgstr "Sincronitzeu les vostres fotos del Zoto"
 
 #~ msgid "<b>Downloaded Document Format</b>"
 #~ msgstr "<b>Format del document baixat</b>"
-
-#~ msgid "Documents"
-#~ msgstr "Documents"
 
 #~ msgid "Presentations"
 #~ msgstr "Presentacions"
@@ -956,9 +1337,6 @@ msgstr "Sincronitzeu les vostres fotos del Zoto"
 #~ msgid "Max retrieved videos (0 is unlimited):"
 #~ msgstr "Nombre màxim de vídeos recollits (0 vol dir sense límit):"
 
-#~ msgid "Most viewed"
-#~ msgstr "Els més vistos"
-
 #~ msgid "Top rated"
 #~ msgstr "Els més ben puntuats"
 
@@ -967,9 +1345,6 @@ msgstr "Sincronitzeu les vostres fotos del Zoto"
 
 #~ msgid "YouTube Source"
 #~ msgstr "Font del YouTube"
-
-#~ msgid "Keep converted files"
-#~ msgstr "Conserva els fitxers convertits"
 
 #~ msgid "<b>Encoding</b>"
 #~ msgstr "<b>Codificació</b>"
@@ -1028,9 +1403,6 @@ msgstr "Sincronitzeu les vostres fotos del Zoto"
 #~ msgstr ""
 #~ "Totes les carpetes han de tenir un nom que les descrigui. Per a donar un "
 #~ "nom a una carpeta, introduïu aquest on se us indiqui"
-
-#~ msgid "Folder Name:"
-#~ msgstr "Nom de la carpeta:"
 
 #~ msgid "F-Spot Photos"
 #~ msgstr "Fotos de l'F-Spot"
@@ -1121,9 +1493,6 @@ msgstr "Sincronitzeu les vostres fotos del Zoto"
 
 #~ msgid "Email"
 #~ msgstr "Correu electrònic"
-
-#~ msgid "<b>Login Details</b>"
-#~ msgstr "<b>Detalls de l'entrada</b>"
 
 #~ msgid "<b>Saved Email Settings</b>"
 #~ msgstr "<b>Paràmetres desats del correu</b>"
