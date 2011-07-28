@@ -1,0 +1,1195 @@
+# translation of conduit.help.master.po to Basque
+# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2011.
+# Basque translation for conduit.
+# Copyright (C) 2010 conduit's COPYRIGHT HOLDER
+# This file is distributed under the same license as the conduit package.
+msgid ""
+msgstr ""
+"Project-Id-Version: conduit.help.master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-09-09 12:40+0000\n"
+"PO-Revision-Date: 2011-04-14 18:25+0200\n"
+"Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>\n"
+"Language-Team: Basque <itzulpena@euskalgnu.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n\n"
+"\n"
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: C/conduit.xml:122(None)
+msgid ""
+"@@image: 'figures/conduit-gui-parts.png'; "
+"md5=e7c7ebe8cac03bd0768e2de105155630"
+msgstr ""
+"@@image: 'figures/conduit-gui-parts.png'; "
+"md5=e7c7ebe8cac03bd0768e2de105155630"
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: C/conduit.xml:214(None)
+msgid "@@image: 'figures/conduit-login.png'; md5=6e4fe96c2d518d23724e1a70a53fa026"
+msgstr "@@image: 'figures/conduit-login.png'; md5=6e4fe96c2d518d23724e1a70a53fa026"
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: C/conduit.xml:233(None)
+msgid "@@image: 'figures/conduit-dp.png'; md5=ce99ba0bdc70c854b1f8a9999435e250"
+msgstr "@@image: 'figures/conduit-dp.png'; md5=ce99ba0bdc70c854b1f8a9999435e250"
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: C/conduit.xml:279(None)
+msgid ""
+"@@image: 'figures/conduit-folder-configuration.png'; "
+"md5=ece672e8cf42e26947eee6e3fb5af7f9"
+msgstr ""
+"@@image: 'figures/conduit-folder-configuration.png'; "
+"md5=ece672e8cf42e26947eee6e3fb5af7f9"
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: C/conduit.xml:345(None)
+msgid ""
+"@@image: 'figures/network-sync-pc1.png'; "
+"md5=118578724965f8af01b66ccdc7e39328"
+msgstr ""
+"@@image: 'figures/network-sync-pc1.png'; "
+"md5=118578724965f8af01b66ccdc7e39328"
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: C/conduit.xml:358(None)
+msgid ""
+"@@image: 'figures/network-sync-pc2.png'; "
+"md5=565769e5f51b3decfebcfa18989ee391"
+msgstr ""
+"@@image: 'figures/network-sync-pc2.png'; "
+"md5=565769e5f51b3decfebcfa18989ee391"
+
+#: C/conduit.xml:14(title)
+msgid "Conduit Manual"
+msgstr "Conduit-en eskuliburua"
+
+#: C/conduit.xml:16(para)
+msgid "Conduit is a program that synchronizes things"
+msgstr "Conduit gauzak sinkronizatzen dituen programa da"
+
+#: C/conduit.xml:19(year)
+msgid "2007"
+msgstr "2007"
+
+#: C/conduit.xml:20(holder)
+msgid "John Stowers"
+msgstr "John Stowers"
+
+#: C/conduit.xml:23(publishername)
+msgid "GNOME Documentation Project"
+msgstr "GNOME dokumentazio proiektua"
+
+#: C/conduit.xml:28(firstname)
+msgid "John"
+msgstr "John"
+
+#: C/conduit.xml:29(surname)
+msgid "Stowers"
+msgstr "Stowers"
+
+#: C/conduit.xml:32(firstname)
+msgid "Brent"
+msgstr "Brent"
+
+#: C/conduit.xml:33(surname)
+msgid "Gueth"
+msgstr "Gueth"
+
+#: C/conduit.xml:39(revnumber)
+msgid "Conduit Manual 1.0"
+msgstr "Conduit-en eskuliburuaren 1.0 bertsioa"
+
+#: C/conduit.xml:40(date)
+msgid "2008-01-03"
+msgstr "2008-01-03"
+
+#: C/conduit.xml:44(releaseinfo)
+msgid "This manual describes version 1.0 of Conduit"
+msgstr "Eskuliburu honetan Conduit-en 1.0 bertsioa azaltzen da"
+
+#: C/conduit.xml:48(title)
+msgid "What is Conduit"
+msgstr "Zer da Conduit?"
+
+#: C/conduit.xml:49(para)
+msgid ""
+"<ulink type=\"http\" url=\"http://www.conduit-project.org\">Conduit</ulink> is a "
+"synchronization application for GNOME. It allows you to synchronize your "
+"files, photos, emails, contacts, notes, calendar data and any other type of "
+"personal information and synchronize that data with another computer, an "
+"online service, or even another electronic device. Conduit manages the "
+"synchronization and conversion of data into other formats. For example, "
+"Conduit allows you to;"
+msgstr ""
+"<ulink type=\"http\" url=\"http://www.conduit-project.org\">Conduit</ulink> "
+"GNOMErako sinkronizazio-aplikazioa da. Conduit-ek fitxategiak, argazkiak, "
+"mezu elektronikoak, kontaktuak, oharrak, egutegi-datuak nahiz bestelako "
+"informazio pertsonalak sinkronizatzen lagunduko dizu, baita datu horiek "
+"guztiak beste ordenagailu batekin, lineako zerbitzu batekin edota gailu "
+"elektroniko batekin sinkronizatzen ere. Conduit-ek datuen sinkronizazioa "
+"nahiz datuen beste formatu batzuetarako bihurketa kudeatzen ditu. Esate "
+"baterako, hau guztia egin dezakezu Conduit-ekin:"
+
+#: C/conduit.xml:53(para)
+msgid ""
+"Synchronize your <ulink type=\"http\" "
+"url=\"http://www.gnome.org/projects/tomboy/\">Tomboy notes</ulink> with "
+"another computer"
+msgstr ""
+"Zure <ulink type=\"http\" url=\"http://www.gnome.org/projects/tomboy/\">Tomboy "
+"oharrak</ulink> beste ordenagailu batekin sinkronizatu"
+
+#: C/conduit.xml:56(para)
+msgid ""
+"Synchronize your PIM data to your mobile phone, <ulink type=\"http\" "
+"url=\"http://en.wikipedia.org/wiki/IPod\">iPod</ulink>, <ulink type=\"http\" "
+"url=\"http://en.wikipedia.org/wiki/Nokia_N800\">Nokia Internet tablet</ulink>, "
+"or between computers"
+msgstr ""
+"Zure PIM datuak zure gailu mugikorrarekin, <ulink type=\"http\" "
+"url=\"http://en.wikipedia.org/wiki/IPod\">iPod</ulink>-arekin, <ulink "
+"type=\"http\" url=\"http://en.wikipedia.org/wiki/Nokia_N800\">Nokia Internet "
+"tablet</ulink>-ekin, nahiz ordenagailu artean sinkronizatu"
+
+#: C/conduit.xml:59(para)
+msgid ""
+"Upload photos to <ulink type=\"http\" "
+"url=\"http://www.flickr.com\">Flickr</ulink>, <ulink type=\"http\" "
+"url=\"http://picasaweb.google.com\">Picasa</ulink>, <ulink type=\"http\" "
+"url=\"http://www.smugmug.com\">Smugmug</ulink>, <ulink type=\"http\" "
+"url=\"http://shutterfly.com\">Shutterfly</ulink> and your iPod,"
+msgstr ""
+"Argazkiak kargatu <ulink type=\"http\" "
+"url=\"http://www.flickr.com\">Flickr</ulink>-era, <ulink type=\"http\" "
+"url=\"http://picasaweb.google.com\">Picasa</ulink>-ra, <ulink type=\"http\" "
+"url=\"http://www.smugmug.com\">Smugmug</ulink>-era, <ulink type=\"http\" "
+"url=\"http://shutterfly.com\">Shutterfly</ulink>-era eta zure iPod-era,"
+
+#: C/conduit.xml:61(para)
+msgid "... and many more"
+msgstr "... eta beste asko"
+
+#: C/conduit.xml:63(para)
+msgid ""
+"Any combination you can imagine, Conduit will take care of the conversion "
+"and synchronization."
+msgstr ""
+"Zuk irudika dezakezun edozein konbinaziotan, Conduit-ek bihurketaz eta "
+"sinkronizazioaz arduratuko da."
+
+#: C/conduit.xml:65(title)
+msgid "Use Cases"
+msgstr "Erabilera-adibideak"
+
+#: C/conduit.xml:68(para)
+msgid ""
+"Fred wants to sync his tomboy notes with <ulink type=\"http\" "
+"url=\"http://www.google.com/notebook\">Google notebook</ulink>"
+msgstr ""
+"Asierrek sinkronizatu nahi ditu bere Tomboy oharrak <ulink type=\"http\" "
+"url=\"http://www.google.com/notebook\">Google notebook</ulink>-ekin"
+
+#: C/conduit.xml:71(para)
+msgid ""
+"Joey wants to sync whatever is on his desktop to his <ulink type=\"http\" "
+"url=\"http://www.backpackit.com\">backpack account</ulink>"
+msgstr ""
+"Amaiak mahaigaineko zerbait sinkronizatu nahi du bere <ulink type=\"http\" "
+"url=\"http://www.backpackit.com\">Backpack kontuarekin</ulink>"
+
+#: C/conduit.xml:73(para)
+msgid "Nellie wants to keep a directory on his laptop and his desktop in sync"
+msgstr ""
+"Ainhoak sinkronizatuta eduki nahi du bere ordenagailu eramangarriko "
+"direktorio bat bere mahaigaineko ordenagailuarekin"
+
+#: C/conduit.xml:74(para)
+msgid "Paul wants to keep his evolution contacts in sync with his mobile phone"
+msgstr ""
+"Paulek sinkronizatuta eduki nahi ditu Evolution-eko kontaktuak bere telefono "
+"mugikorrarekin"
+
+#: C/conduit.xml:75(para)
+msgid "Steve wants to keep his gnome preferences in sync between his two computers"
+msgstr ""
+"Urkok sinkronizatuta eduki nahi ditu bere Gnome hobespenak bere bi "
+"ordenagailuen artean"
+
+#: C/conduit.xml:77(para)
+msgid ""
+"John wants to keep a directory of <ulink type=\"http\" "
+"url=\"http://openoffice.org\">OpenOffice</ulink> documents in sync with copies "
+"held on <ulink type=\"http\" url=\"http://docs.google.com\">Google Docs</ulink>"
+msgstr ""
+"Jonek <ulink type=\"http\" url=\"http://openoffice.org\">OpenOffice</ulink> "
+"dokumentuen direktorio bat sinkronizatuta eduki nahi du <ulink type=\"http\" "
+"url=\"http://docs.google.com\">Google Docs</ulink>-eko kopiekin"
+
+#: C/conduit.xml:79(para)
+msgid ""
+"Pete wants to have photos saved to his server to be pushed to an external "
+"back up (usb hard drive / off-site ftp)"
+msgstr ""
+"Beñatek zerbitzarian gordeta eduki nahi ditu argazkiak, kanpoko babeskopia "
+"batera eramateko (usb disko gogorrera / kanpoko FTP gunera)"
+
+#: C/conduit.xml:83(title)
+#: C/conduit.xml:114(title)
+#: C/conduit.xml:254(title)
+msgid "Introduction"
+msgstr "Sarrera"
+
+#: C/conduit.xml:84(para)
+msgid ""
+"Conduit's goals are to synchronize your data as seamlessly as possible, be "
+"it from remote device or remote websites. It is about extending your life as "
+"you see it needs to be, no longer constrained by data, devices or formats. "
+"Conduit enables you to take your data where you want when you want. All of "
+"your mobile devices could be synchronized automatically by Conduit. Home "
+"file back-ups to a remote server? Synced automatically."
+msgstr ""
+"Conduit-en helburua da zure datuak arazorik gabe sinkronizatzea, urruneko "
+"gailuetatik nahiz webguneetatik. Kontua da zure bizitza zure beharren "
+"arabera zabaltzea, eta datuek, gailuek edo formatuek ez murriztea. Conduit-"
+"ek aukera ematen dizu zure datuak nahi duzun lekura eramateko. Conduit-ek "
+"automatikoki sinkroniza ditzake zure gailu mugikor guztiak. Etxeko "
+"fitxategien babeskopiak urruneko zerbitzarian? Automatikoki sinkronizatuta."
+
+#: C/conduit.xml:85(para)
+msgid ""
+"It may sometimes seem that Conduit is overly complicated, one of the design "
+"goals has always been to make the interface as simple and intuitive as "
+"possible. However Conduit is much more powerful then the simplistic design "
+"may lead on. This documentation will describe all the configuration options "
+"for groups and data providers, while the following gives some examples of "
+"items you may wish to synchronize;"
+msgstr ""
+"Batzuetan eman dezake Conduit konplikatuegia dela; hala ere, diseinu-"
+"helburuetako bat beti izan da interfazea ahalik eta sinpleena eta "
+"intuitiboena egitea. Nolanahi ere, diseinu sinpleak aditzera eman dezakeena "
+"baino askoz ere ahaltsuagoa da Conduit. Dokumentazio honetan azalduko dira "
+"taldeek nahiz datu-hornitzaileek dauzkaten konfigurazio-aukera guztiak, eta "
+"ondoren sinkronizatu ahal izango dituzun elementuen adibide batzuk;"
+
+#: C/conduit.xml:88(para)
+msgid ""
+"A <ulink type=\"http\" url=\"http://www.gnome.org\">GNOME</ulink> user might "
+"store information in a wide variety of places on the desktop including;"
+msgstr ""
+"<ulink type=\"http\" url=\"http://www.gnome.org\">GNOME</ulink>ren erabiltzaile "
+"batek hainbat lekutan gorde nahi izango du informazioa mahaigainean; "
+"horietako batzuk:"
+
+#: C/conduit.xml:91(para)
+msgid ""
+"<ulink type=\"http\" "
+"url=\"http://www.gnome.org/projects/evolution/\">Evolution</ulink> (email, "
+"calendar, address book)"
+msgstr ""
+"<ulink type=\"http\" "
+"url=\"http://www.gnome.org/projects/evolution/\">Evolution</ulink> (posta, "
+"egutegia, helbide-liburua)"
+
+#: C/conduit.xml:95(para)
+msgid ""
+"<ulink type=\"http\" "
+"url=\"http://www.gnome.org/projects/tomboy/\">Tomboy</ulink> (notes)"
+msgstr ""
+"<ulink type=\"http\" "
+"url=\"http://www.gnome.org/projects/tomboy/\">Tomboy</ulink> (oharrak)"
+
+#: C/conduit.xml:98(para)
+msgid "Directories (important files)"
+msgstr "Direktorioak (fitxategi garrantzitsuak)"
+
+#: C/conduit.xml:99(para)
+msgid "Photos"
+msgstr "Argazkiak"
+
+#: C/conduit.xml:100(para)
+msgid "Bookmarks (web and feeds)"
+msgstr "Laster-markak (web eta jarioak)"
+
+#: C/conduit.xml:101(para)
+msgid "Music"
+msgstr "Musika"
+
+#: C/conduit.xml:104(para)
+msgid "<ulink type=\"http\" url=\"http://del.icio.us\">Delicious</ulink> (bookmarks)"
+msgstr ""
+"<ulink type=\"http\" url=\"http://del.icio.us\">Delicious</ulink> (laster-"
+"markak)"
+
+#: C/conduit.xml:104(para)
+msgid ""
+"<ulink type=\"http\" url=\"http://www.gmail.com\">Gmail</ulink> (bookmarks, "
+"calendar, feeds, email, photos)"
+msgstr ""
+"<ulink type=\"http\" url=\"http://www.gmail.com\">Gmail</ulink> (laster-markak, "
+"egutegia, jarioak, posta elektronikoa, argazkiak)"
+
+#: C/conduit.xml:104(para)
+msgid "<ulink type=\"http\" url=\"http://www.flickr.com\">Flickr</ulink> (photos)"
+msgstr "<ulink type=\"http\" url=\"http://www.flickr.com\">Flickr</ulink> (argazkiak)"
+
+#: C/conduit.xml:104(para)
+msgid ""
+"The user might also use one of the many popular online services including "
+"<placeholder-1/>"
+msgstr ""
+"Baliteke erabiltzaileak lineako zerbitzu ezagunenetako bat ezagutzea, "
+"besteak beste: <placeholder-1/>"
+
+#: C/conduit.xml:105(para)
+msgid "A second laptop, also running GNOME"
+msgstr "Bigarren eramangarri bat, GNOME exekutatzen duena"
+
+#: C/conduit.xml:105(para)
+msgid "A mobile phone"
+msgstr "Telefono mugikor bat"
+
+#: C/conduit.xml:105(para)
+msgid "A <ulink type=\"http\" url=\"http://www.nokia.com\">Nokia</ulink> 770/800"
+msgstr "<ulink type=\"http\" url=\"http://www.nokia.com\">Nokia</ulink> 770/800 bat"
+
+#: C/conduit.xml:105(para)
+msgid ""
+"A <ulink type=\"http\" url=\"http://www.palm.com\">Palm</ulink> or <ulink "
+"type=\"http\" "
+"url=\"http://www.microsoft.com/windowsmobile/default.mspx\">Windows "
+"Mobile</ulink> Pocket PC"
+msgstr ""
+"<ulink type=\"http\" url=\"http://www.palm.com\">Palm</ulink> edo <ulink "
+"type=\"http\" "
+"url=\"http://www.microsoft.com/windowsmobile/default.mspx\">Windows "
+"Mobile</ulink> Sakelako PC bat"
+
+#: C/conduit.xml:105(para)
+msgid "An iPod"
+msgstr "iPod bat"
+
+#: C/conduit.xml:105(para)
+msgid "They probably also own another electronic device such as <placeholder-1/>"
+msgstr "Beste gailu elektroniko bat eduki dezakete, <placeholder-1/> esate baterako"
+
+#: C/conduit.xml:107(para)
+msgid ""
+"Its hard enough keeping your information organized when limited to the "
+"desktop, let alone the added burden of keeping your information in sync with "
+"any of the other services or devices listed above."
+msgstr ""
+"Nahiko zaila badenez mahaigaineko informazioa antolatuta edukitzea, oraindik "
+"zailagoa informazioa ondo sinkronizatuta mantentzea goiko zerbitzuekin edo "
+"gailuekin."
+
+#: C/conduit.xml:108(para)
+msgid ""
+"Our goal for Conduit is to allow GNOME users to keep their information in "
+"sync. Irrespective of the type, irrespective of the way in which that "
+"information is stored. Conduit should just work."
+msgstr ""
+"Conduit-en helburua da GNOMEren erabiltzaileei haien informazioa "
+"sinkronizatuta edukitzeko aukera ematea. Kontuan hartu gabe informazio hori "
+"gorde den modua. Conduit-ek funtzionatuko du."
+
+#: C/conduit.xml:112(title)
+msgid "Understanding the Conduit Interface"
+msgstr "Conduit-en interfazea ulertzea"
+
+#: C/conduit.xml:115(para)
+msgid ""
+"Conduit has a few basic concepts worth understanding before you begin. "
+"Knowing these concepts will help you discover things that you never knew you "
+"could keep in sync, for example, uploading photos right from your mobile "
+"phone to Picasa!"
+msgstr ""
+"Komeni da Conduit-en oinarrizko kontzeptu batzuk ulertzea, lanean hasi "
+"aurretik. Kontzeptu horiek ulertzean, konturatuko zara ez zenekiela hainbat "
+"gauza sinkroniza zitezkeenik, adibidez, argazkiak zure mugikorretik "
+"kargatzea Picasara!"
+
+#: C/conduit.xml:118(title)
+msgid "Conduit GUI"
+msgstr "Conduit-en interfazea"
+
+#: C/conduit.xml:125(para)
+msgid "The Parts of the Conduit GUI"
+msgstr "Conduit-en interfazearen zatiak"
+
+#: C/conduit.xml:131(para)
+msgid ""
+"<xref linkend=\"conduit-FIG-gui-parts\"/> shows the Conduit interface's four "
+"main components;"
+msgstr ""
+"<xref linkend=\"conduit-FIG-gui-parts\"/>(e)k Conduit-en interfazearen lau "
+"osagarri nagusiak erakusten ditu;"
+
+#: C/conduit.xml:133(para)
+msgid ""
+"The file, edit and help menus store operations which apply to all groups. "
+"For more information on the contents of these menus, see below."
+msgstr ""
+"Fitxategia, Editatu eta Laguntza menuek talde guztiei aplikatzen zaizkien "
+"eragiketak dauzkate. Menu horien edukiari buruzko informazio gehiago "
+"lortzeko, ikus behean."
+
+#: C/conduit.xml:133(para)
+msgid "The Menu<placeholder-1/>"
+msgstr "Menua<placeholder-1/>"
+
+#: C/conduit.xml:134(para)
+msgid ""
+"Located on the left hand side of the window, lists all of the data providers "
+"that are detected and ready for use on your system."
+msgstr ""
+"Leihoaren ezkerraldean dago, eta sisteman detektatutako eta erabiltzeko "
+"prest dauden datu-hornitzaile guztiak azaltzen dira zerrendan."
+
+#: C/conduit.xml:134(para)
+msgid ""
+"Data providers are the source or destination of data you wish to sync. "
+"Please refer to the <emphasis>Data Provider</emphasis> section of the "
+"documentation to receive instructions on how to configure each data "
+"provider."
+msgstr ""
+"Datu-hornitzaileak sinkronizatu nahi dituzun datuen iturburua edo helburua "
+"dira. Informazio gehiago lortzeko, ikus dokumentazioan <emphasis>Datu-"
+"hornitzailea</emphasis> atala, datu-hornitzaile bakoitza konfiguratzeko "
+"jarraibideak lortzeko."
+
+#: C/conduit.xml:134(para)
+msgid "The Data Provider Pane <placeholder-1/>"
+msgstr "Datu-hornitzaileen panela <placeholder-1/>"
+
+#: C/conduit.xml:135(para)
+msgid ""
+"Used to create groups of data providers to synchronize. Drag a data source "
+"to the left of the canvas pane and one or more data sinks to the right of "
+"the data pane to create a group. For more explanation on groups please check "
+"<xref linkend=\"conduit-providers-and-groups\"/>."
+msgstr ""
+"Datu-hornitzaileen taldeak sinkronizatzeko sortzeko erabiltzen da. Arrastatu "
+"datu-iturburu bat oihalaren panelaren ezkerraldera, eta datu-kategoria bat edo "
+"gehiago datu-paneleko eskuinaldera, talde bat sortzeko. Taldeei buruzko "
+"xehetasun gehiago lortzeko, ikus <xref linkend=\"conduit-providers-and-"
+"groups\"/>."
+
+#: C/conduit.xml:135(para)
+msgid "The Canvas Pane <placeholder-1/>"
+msgstr "Oihalaren panela <placeholder-1/>"
+
+#: C/conduit.xml:136(para)
+msgid ""
+"If you receive any conflict notifications while trying to run a sync job "
+"they will be listed here. For information on how to deal with possible "
+"conflicts please check the <emphasis>Conflicts and Resolutions</emphasis> "
+"section of the documentation."
+msgstr ""
+"Sinkronizazio-lan bat exekutatzen saiatzean gatazka-jakinarazpenen bat "
+"jasotzen baduzu, hemen agertuko da. Sor daitezkeen gatazkak nola konpondu "
+"jakiteko, ikus dokumentazioko <emphasis>Gatazkak eta konponbideak</emphasis> "
+"atala."
+
+#: C/conduit.xml:136(para)
+msgid "The Conflicts Pane <placeholder-1/>"
+msgstr "Gatazken panela <placeholder-1/>"
+
+#: C/conduit.xml:140(title)
+msgid "The Menus"
+msgstr "Menuak"
+
+#: C/conduit.xml:142(title)
+msgid "The File Menu"
+msgstr "Fitxategia menua"
+
+#: C/conduit.xml:144(para)
+msgid ""
+"<menuchoice><guimenu>File</guimenu><guimenuitem>Save</guimenuitem></menuchoi"
+"ce> Saves all configured synchronization groups. Groups are saved "
+"automatically when you exit Conduit if you have selected <guilabel>Save "
+"Settings on Exit</guilabel> in <xref linkend=\"conduit-preferences-window\"/>"
+msgstr ""
+"<menuchoice><guimenu>Fitxategia</guimenu><guimenuitem>Gorde</guimenuitem></m"
+"enuchoice> Konfiguratutako sinkronizazio-talde guztiak gordetzen ditu. "
+"Taldeak automatikoki gordetzen dira Conduit-etik irteten zarenean "
+"<guilabel>Gorde ezarpenak irtetean</guilabel> hautatu baduzu hemen: <xref "
+"linkend=\"conduit-preferences-window\"/>"
+
+#: C/conduit.xml:145(para)
+msgid ""
+"<menuchoice><guimenu>File</guimenu><guimenuitem>Synchronize "
+"All</guimenuitem></menuchoice> Synchronizes all groups at the same time. You "
+"can still run each sync group separately (see the "
+"<emphasis>Groups</emphasis> section), but this saves you the time of having "
+"to select and manually going through each group to start the sync process."
+msgstr ""
+"<menuchoice><guimenu>Fitxategia</guimenu><guimenuitem>Sinkronizatu "
+"dena</guimenuitem></menuchoice> Talde guztiak batera sinkronizatzen ditu. "
+"Sinkronizazio-talde bakoitza bere aldetik exekutatu ahal izango duzu (ikus "
+"<emphasis>Taldeak</emphasis> atala), baina honekin denbora aurreztuko duzu, "
+"ez baituzu talde bakoitza hautatu eta banan-banan joan beharko "
+"sinkronizazio-prozesuarekin hasteko."
+
+#: C/conduit.xml:146(para)
+msgid ""
+"<menuchoice><guimenu>File</guimenu><guimenuitem>Quit</guimenuitem></menuchoi"
+"ce> Closes conduit. You will be prompted to stop any synchronization "
+"currently in progress."
+msgstr ""
+"<menuchoice><guimenu>Fitxategia</guimenu><guimenuitem>Irten</guimenuitem></m"
+"enuchoice> Conduit ixten du. Eskatuko zaizu martxan dauden sinkronizazioak "
+"geldiarazteko."
+
+#: C/conduit.xml:150(title)
+msgid "The Edit Menu"
+msgstr "'Editatu' menua"
+
+#: C/conduit.xml:152(para)
+msgid ""
+"<menuchoice><guimenu>Edit</guimenu><guimenuitem>Clear "
+"Canvas</guimenuitem></menuchoice> Removes all configurations, data "
+"providers, and groups from the canvas pane. This allows you start using the "
+"canvas as it was a clean slate. The best time to use this is when you are "
+"re-configuring a large portion of your sync groups. There is no quick way to "
+"revert back after selecting this setting."
+msgstr ""
+"<menuchoice><guimenu>Editatu</guimenu><guimenuitem>Garbitu "
+"oihala</guimenuitem></menuchoice>Oihalaren panelean dauden konfigurazio, datu-"
+"hornitzaile eta talde guztiak kentzen ditu. Aukera hau hautatuz gero, oihalaren  "
+"panela guztiz garbitu eta hasieratik hasi ahal izango duzu. Oso "
+"erabilgarria izaten da sinkronizazio-taldeen zati handi bat berriro "
+"konfiguratzen ari zarenean, adibidez. Ezarpen hau hautatuz gero, ezin da "
+"atzera egin modu azkar batean."
+
+#: C/conduit.xml:153(para)
+msgid ""
+"<menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></m"
+"enuchoice> Global Conduit settings that effect all of your sync groups and "
+"basic Conduit operations. For more information please see <xref linkend"
+"=\"conduit-preferences-window\"/>"
+msgstr ""
+"<menuchoice><guimenu>Editatu</guimenu><guimenuitem>Hobespenak</guimenuitem><"
+"/menuchoice> Conduit-en ezarpen orokorrak, zure sinkronizazio-taldeei eta "
+"oinarrizko Conduit eragiketei eragiten dietenak. Informazio gehiago hemen: "
+"<xref linkend=\"conduit-preferences-window\"/>"
+
+#: C/conduit.xml:157(title)
+msgid "The Help Menu"
+msgstr "Laguntza menua"
+
+#: C/conduit.xml:159(para)
+msgid ""
+"<menuchoice><guimenu>Help</guimenu><guimenuitem>Developers</guimenuitem></me"
+"nuchoice> If you are developer, and interested in contributing to Conduit, "
+"then this option includes links to all the appropriate documentation."
+msgstr ""
+"<menuchoice><guimenu>Laguntza</guimenu><guimenuitem>Garatzaileak</guimenuite"
+"m></menuchoice> Garatzailea bazara, eta interesa baduzu Conduit-i ekarpenen "
+"bat egiteko, aukera honek dokumentazio egoki osorako estekak ditu."
+
+#: C/conduit.xml:160(para)
+msgid ""
+"<menuchoice><guimenu>Help</guimenu><guimenuitem>Contents</guimenuitem></menu"
+"choice> Shows this help document."
+msgstr ""
+"<menuchoice><guimenu>Laguntza</guimenu><guimenuitem>Edukia</guimenuitem></me"
+"nuchoice> Laguntza-dokumentu hau bistaratzen du."
+
+#: C/conduit.xml:161(para)
+msgid ""
+"<menuchoice><guimenu>Help</guimenu><guimenuitem>About</guimenuitem></menucho"
+"ice> Shows the version number and a list of Conduit developers."
+msgstr ""
+"<menuchoice><guimenu>Laguntza</guimenu><guimenuitem>Honi "
+"buruz</guimenuitem></menuchoice> Bertsio-zenbakia eta Conduit-en "
+"garatzaileen zerrenda bat bistaratzen ditu."
+
+#: C/conduit.xml:166(title)
+msgid "The Preferences Window"
+msgstr "Hobespenen leihoa"
+
+#: C/conduit.xml:167(para)
+msgid ""
+"The Conduit preferences is accessed from the Edit menu. Any setting or "
+"change that you make within the preferences menu affect all of your sync "
+"groups and basic Conduit operations."
+msgstr ""
+"'Editatu' menutik sartzen da Conduit-en hobespenetan. Hobespenen menuan "
+"egindako ezarpen nahiz aldaketa guztiek eragina izango dute sinkronizazio-"
+"talde guztietan eta oinarrizko Conduit eragiketetan."
+
+#: C/conduit.xml:169(title)
+msgid "Configuration Tab"
+msgstr "Konfigurazioa fitxa"
+
+#: C/conduit.xml:170(para)
+msgid ""
+"The configuration tab is where all of Conduit's global settings are "
+"configured. There are six global settings:"
+msgstr ""
+"Conduit-en ezarpen orokor guztiak konfiguratzen dira Konfigurazioa fitxan. "
+"Sei ezarpen orokor daude:"
+
+#: C/conduit.xml:173(guilabel)
+msgid "Save Settings on Exit"
+msgstr "Gorde ezarpenak irtetean"
+
+#: C/conduit.xml:174(para)
+msgid ""
+"Instructs Conduit that all configured dataproviders and groups should be "
+"saved when the application exits."
+msgstr ""
+"Konfiguratutako datu-hornitzaile eta talde guztiak aplikaziotik irtetean "
+"gordetzeko agintzen dio Conduit-i."
+
+#: C/conduit.xml:177(guilabel)
+msgid "Show Status Icon"
+msgstr "Erakutsi egoeraren ikonoa"
+
+#: C/conduit.xml:178(para)
+msgid ""
+"Shows a status icon in the notification area. This icon animates to indicate "
+"a sync is in progress."
+msgstr ""
+"Egoeraren ikono bat erakusten du jakinarazpen-arean. Ikonoa animatzen da "
+"sinkronizazio bat martxan dagoela adierazteko."
+
+#: C/conduit.xml:181(guilabel)
+msgid "Minimize to Notification Area"
+msgstr "Ikonotu jakinarazpen-arean"
+
+#: C/conduit.xml:182(para)
+msgid ""
+"Instructs Conduit to minimize to the notification area instead of to the "
+"panel."
+msgstr ""
+"Panelean minimizatu beharrean jakinarazpen-arean ikonotzeko agintzen dio "
+"Conduit-i."
+
+#: C/conduit.xml:185(guilabel)
+msgid "Use Built in Web Browser"
+msgstr "Erabili web-arakatzaile inkorporatua"
+
+#: C/conduit.xml:186(para)
+msgid ""
+"When a data provider requires that you log onto a website, this option tells "
+"Conduit to use its own web browser to do so."
+msgstr ""
+"Datu-hornitzaile batek webgune batean saioa hasteko eskatzen dizunean, "
+"aukera honek horretarako bere web-arakatzaile propioa erabiltzeko agintzen "
+"dio Conduit-i."
+
+#: C/conduit.xml:188(guilabel)
+msgid "When an Item Has Been Deleted"
+msgstr "Elementu bat ezabatu denean"
+
+#: C/conduit.xml:189(guilabel)
+msgid "Where There is a Two Way Conflict"
+msgstr "Bi noranzkodun gatazka dagoenean"
+
+#: C/conduit.xml:193(title)
+msgid "Data Providers Tab"
+msgstr "Datu-hornitzaileen fitxa"
+
+#: C/conduit.xml:194(para)
+msgid "This tab shows a list of the data providers that are currently installed."
+msgstr "Fitxa honek instalatuta dauden datu-hornitzaileen zerrenda erakusten du."
+
+#: C/conduit.xml:197(title)
+msgid "Data Conversions Tab"
+msgstr "Datu-bihurketen fitxa"
+
+#: C/conduit.xml:198(para)
+msgid "This tab lists the data conversions that Conduit is capable of performing."
+msgstr "Conduit-ek egin ditzakeen datu-bihurketen zerrenda dago fitxa honetan."
+
+#: C/conduit.xml:201(title)
+msgid "Mapping DB"
+msgstr "Mapaketaren datu-basea"
+
+#: C/conduit.xml:202(para)
+msgid ""
+"This is a list of the UID that Conduit uses to maintain accurate sync data "
+"from different sources. Here you have the option to clear the mapping "
+"database."
+msgstr ""
+"Conduit-ek hainbat iturritako sinkronizazio-datu egokiak mantentzeko "
+"erabiltzen dituen UIDen zerrenda da. Mapaketaren datu-basea garbitzeko "
+"aukera duzu hemen."
+
+#: C/conduit.xml:206(title)
+msgid "The Web Login Window"
+msgstr "Webean saioa hasteko leihoa"
+
+#: C/conduit.xml:207(para)
+msgid ""
+"Sometimes you will be required to log into a website associated with certain "
+"data providers. The frequency at which you may have to log in is not "
+"determined by Conduit, but by the security policy of the respective data "
+"provider. For example, Box.net requires you to log in every time Conduit is "
+"run, whereas Flickr only requires you to log in once, to give permission to "
+"Conduit to upload photos. If you are required to log into a website, and you "
+"have selected the <guilabel>Use Built in Web Browser</guilabel> from the "
+"Conduit preferences, then a window will pop up like the one shown below."
+msgstr ""
+"Batzuetan, hainbat datu-hornitzailerekin asoziatutako webgune batean saioa "
+"hasteko eskatuko zaizu. Saioa hasi behar duzun maiztasuna ez du Conduit-ek "
+"erabakitzen, baizik eta dagokion datu-hornitzailearen segurtasun-"
+"gidalerroak. Esate baterako, Box.net-ek Conduit exekutatzen duzun bakoitzean "
+"eskatuko dizu saioa hasteko, eta Flickr-ek, berriz, saioa behin hasteko "
+"eskatuko dizu, Conduit-i argazkiak kargatzeko baimena emateko. Webgune "
+"batean saioa hasteko eskatzen bazaizu, eta Conduit-en hobespenetan "
+"<guilabel>Erabili web-arakatzaile inkorporatua</guilabel> hautatu baduzu, "
+"ondokoa bezalako leiho bat aterako da."
+
+#: C/conduit.xml:210(title)
+msgid "Conduit Login Window"
+msgstr "Conduit-en saioa hasteko leihoa"
+
+#: C/conduit.xml:217(para)
+msgid "The window shown when logging into data provider websites"
+msgstr "Datu-hornitzaileen webguneetan saioa hastean erakutsitako leihoa"
+
+#: C/conduit.xml:225(title)
+msgid "Data Providers and Groups"
+msgstr "Datu-hornitzaileak eta taldeak"
+
+#: C/conduit.xml:226(para)
+msgid ""
+"Conduit represents the things your want to synchronize graphically. When "
+"data providers get added to the canvas, they get arranged into so called "
+"groups. A group is a collection of data providers that share data. In the "
+"figure below you will see the following parts"
+msgstr ""
+"Conduit-ek grafikoki erakusten ditu sinkronizatu nahi dituzun gauzak. Datu-"
+"hornitzaileak oihalaren panelean gehitzean, taldeka antolatzen dira. Taldeak "
+"datuak partekatzen dituzten datu-hornitzaileen bildumak dira. Ondoko zatiak "
+"ikusiko dituzu beheko irudian:"
+
+#: C/conduit.xml:229(title)
+msgid "Conduit Depicts Synchronizations Graphically"
+msgstr "Conduit-ek grafikoki erakusten ditu sinkronizazioak"
+
+#: C/conduit.xml:236(para)
+msgid "Parts of a Synchronization Group"
+msgstr "Sinkronizazio-talde baten zatiak"
+
+#: C/conduit.xml:243(para)
+msgid ""
+"A data provider for synchronizing two way whose status indicates that it is "
+"ready to be synchronized."
+msgstr ""
+"Datu-hornitzaile bat, sinkronizatzeko prest daudela erakusten duten bi "
+"elementu sinkronizatzeko."
+
+#: C/conduit.xml:244(para)
+msgid ""
+"A group containing two folder dataproviders. The arrow has two ends, "
+"indicating that the two dataproviders will undergo a two way "
+"synchronization, that is data will flow in both directions, and both folders "
+"will contain the same information once the sync finishes."
+msgstr ""
+"Datu-hornitzaileen bi karpeta dituen talde bat. Geziak bi amaiera ditu; "
+"horrek adierazten du bi datu-hornitzaileek bi noranzkodun sinkronizazioa "
+"jasango dutela, hau da, datuak bi noranzkoetan mugituko direla, eta bi "
+"karpetek informazio bera edukiko dutela sinkronizazioa amaitutakoan."
+
+#: C/conduit.xml:245(para)
+msgid ""
+"A second folder data provider. By convention, data providers that lie on the "
+"right side of groups are called data sinks. This is because during a one "
+"way sync, data can only flow into them."
+msgstr ""
+"Bigarren datu-hornitzailearen karpeta. Taldeen eskuinaldean dauden datu-"
+"hornitzaileei datu-kategoria deituko diegu. Datu-kategoriek sinkronizazioko "
+"datuak jasoko dituzte."
+
+#: C/conduit.xml:246(para)
+msgid ""
+"A Facebook and Picasa data provider for uploading images to those sites. "
+"Notice that that the group has three data providers, and the arrow has "
+"changed to indicate that data will flow in only one direction, that is "
+"images will be uploaded from F-Spot to Facebook and Picasa."
+msgstr ""
+"Argazkiak Facebook eta Picasara kargatzeko datu-hornitzailea. Kontuan hartu "
+"taldeak hiru datu-hornitzaile dituela, eta gezia aldatu dela datuak noranzko "
+"bakarrean joango direla adierazteko, hau da, argazkiak kargatuko direla "
+"F-Spot datu-hornitzailetik Facebook eta Picasara."
+
+#: C/conduit.xml:251(title)
+msgid "Synchronizing Something"
+msgstr "Zerbait sinkronizatzea"
+
+#: C/conduit.xml:252(para)
+msgid ""
+"This section describes the steps required to synchronize two data providers. "
+"The example given illustrates how to synchronize two folders but the "
+"concepts are applicable to anything you wish to synchronize. If you need "
+"more information on specific settings please refer to the corresponding "
+"section of the documentation."
+msgstr ""
+"Atal honetan bi datu-hornitzaile sinkronizatzeko behar diren urratsak "
+"azaltzen dira. Emandako adibideak ilustratzen du nola sinkronizatzen diren "
+"bi karpeta, baina edozein gauza sinkronizatzeko ere balio du. Ezarpen "
+"zehatzei buruzko informazio gehiago nahi izanez gero, ikus dagokion atala "
+"dokumentazioan."
+
+#: C/conduit.xml:255(para)
+msgid ""
+"<xref linkend=\"conduit-FIG-dp-parts\"/> contains two groups. This section "
+"will describe the steps to recreate those groups."
+msgstr ""
+"<xref linkend=\"conduit-FIG-dp-parts\"/> irudiak bi talde ditu. Atal honetan "
+"talde horiek birsortzeko urratsak azaltzen dira."
+
+#: C/conduit.xml:257(para)
+msgid "The top group depicts a two way synchronization of two folders"
+msgstr "Goiko taldeak bi karpetaren bi noranzkodun sinkronizazioa erakusten du."
+
+#: C/conduit.xml:258(para)
+msgid ""
+"The bottom group depicts a one way sync of images, from F-Spot to Facebook, "
+"and to the Picasa web albums."
+msgstr ""
+"Beheko taldeak noranzko bateko argazki-sinkronizazioa erakusten du, F-Spot "
+"datu-hornitzailetik Facebook-era eta Picasa web-albumetara."
+
+#: C/conduit.xml:262(title)
+msgid "Example 1: Synchronizing Two Folders"
+msgstr "1. adibidea: Bi karpeta sinkronizatzea"
+
+#: C/conduit.xml:263(para)
+msgid ""
+"The following steps will recreate the two way synchronization group shown as "
+"<emphasis>#1</emphasis> in the figure above."
+msgstr ""
+"Ondoko urratsetan bi noranzkodun sinkronizazio-taldea azalduko da, goiko "
+"<emphasis>1 zenbakiko</emphasis> irudia."
+
+#: C/conduit.xml:265(para)
+msgid ""
+"On your desktop create three folders named folder1, folder2, and folder3. "
+"Drag a file of your choice into folder1."
+msgstr ""
+"Mahaigainean, sortu hiru karpeta: karpeta1, karpeta2, eta karpeta3. "
+"Arrastatu zuk nahi duzun fitxategia karpeta1 karpetara."
+
+#: C/conduit.xml:266(para)
+#: C/conduit.xml:305(para)
+msgid "Start Conduit"
+msgstr "Ireki Conduit"
+
+#: C/conduit.xml:268(para)
+msgid "Add a data provider for <emphasis>folder1</emphasis>"
+msgstr "Gehitu datu-hornitzaile bat <emphasis>karpeta1</emphasis> karpetarako"
+
+#: C/conduit.xml:269(para)
+msgid ""
+"From the data provider pane, drag the folder data provider and drop it on "
+"the left hand side of the canvas pane. This will be the data source that we "
+"are going to sync from."
+msgstr ""
+"Datu-hornitzailearen paneletik, arrastatu datu-hornitzailearen karpeta, eta "
+"jaregin oihalaren paneleko ezkerraldean. Hau izango da sinkronizaziorako "
+"erabiliko den datu-iturburua."
+
+#: C/conduit.xml:272(para)
+msgid "Configure <emphasis>folder1</emphasis>"
+msgstr "Konfiguratu <emphasis>karpeta1</emphasis>"
+
+#: C/conduit.xml:275(title)
+msgid "Configuring Folder 1"
+msgstr "Karpeta1 konfiguratzea"
+
+#: C/conduit.xml:273(para)
+msgid ""
+"Double click on the data provider you recently dropped on the canvas. This "
+"will bring up the folder configuration window as shown below. Enter "
+"something memorable in the name field and change the <emphasis>Folder "
+"Location</emphasis> to the folder you created in step 1. <placeholder-1/>"
+msgstr ""
+"Egin klik bikoitza oihalaren panelean jaregin duzun datu-hornitzailean. "
+"Horrekin, karpeta-konfigurazioaren leihoa aterako da, erakutsitako moduan. "
+"Sartu erraz gogoratzeko moduko zerbait izenaren eremuan, eta aldatu "
+"<emphasis>Karpetaren kokalekua</emphasis> 1. urratsean sortu duzun "
+"karpetara.<placeholder-1/>"
+
+#: C/conduit.xml:287(para)
+msgid "Add a data provider for <emphasis>folder2</emphasis>"
+msgstr "Gehitu datu-hornitzaile bat <emphasis>karpeta2</emphasis> karpetarako"
+
+#: C/conduit.xml:288(para)
+msgid ""
+"Drag another folder data provider from the pane on the left. This time drop "
+"it adjacent to the folder1 dataprovider. This should result in an arrow "
+"connecting it to folder1 being created."
+msgstr ""
+"Arrastatu ezkerraldeko paneleko beste datu-hornitzaileen karpeta bat. "
+"Oraingoan, jaregin ezazu karpeta1 karpetaren datu-hornitzailearen ondoan. "
+"Horren ondorioz, gezi bat sortuko da, sortutako karpeta1 karpetarekin "
+"konektatzeko."
+
+#: C/conduit.xml:291(para)
+msgid "Configure <emphasis>folder2</emphasis>"
+msgstr "Konfiguratu <emphasis>karpeta2</emphasis>"
+
+#: C/conduit.xml:292(para)
+msgid ""
+"Configure the data provider so that its <emphasis>Folder Location</emphasis> "
+"points to <emphasis>folder2</emphasis> on the desktop, and importantly, its "
+"<emphasis>Folder Name</emphasis> is the same as that entered in step "
+"<emphasis>#4</emphasis>."
+msgstr ""
+"Konfiguratu datu-hornitzailea haren <emphasis>Karpetaren kokalekuak "
+"/emphasis> mahaigaineko <emphasis>karpeta2</emphasis> karpeta seinala dezan, "
+"eta, batez ere, haren <emphasis>Karpetaren izena</emphasis> "
+"<emphasis>4.</emphasis> urratsean sartutakoa izan dadin."
+
+#: C/conduit.xml:295(para)
+msgid "Configure the synchronization parameters"
+msgstr "Konfiguratu sinkronizazio-parametroak"
+
+#: C/conduit.xml:296(para)
+msgid ""
+"Right click on the associated group, and under sync options, select a two "
+"way sync. Since this is just a basic run through on how to setup a sync we "
+"are not going to go through any advanced syncing options in this section of "
+"the documentation. If you wish more information on the options available, "
+"please see <xref linkend=\"conduit-providers-and-groups\"/>."
+msgstr ""
+"Egin klik eskuin-botoiarekin asoziatutako taldean, eta, sinkronizazio-"
+"aukeretan, hautatu bi noranzkodun sinkronizazioa. Hau sinkronizazio bat nola "
+"konfiguratu erakusteko oinarrizko exekuzioa denez, ez ditugu dokumentazioko "
+"atal honetan tratatuko sinkronizazio-aukera aurreratuak. Aukera "
+"erabilgarriei buruzko informazio gehiago lortzeko, ikus <xref linkend"
+"=\"conduit-providers-and-groups\"/>."
+
+#: C/conduit.xml:298(para)
+msgid ""
+"Synchronize the two folders by right clicking on them and selecting sync, or "
+"from the File menu. Once the sync is finished you should see the file that "
+"you placed in folder1 on your desktop within folder2."
+msgstr ""
+"Sinkronizatu bi karpetak karpetetan eskuin-botoiarekin klik eginez eta "
+"'Sinkronizatu' hautatuz, edo Fitxategia menutik. Behin sinkronizatzen "
+"amaituta, mahaigainean karpeta1 karpetan jarritako fitxategia ikusi beharko "
+"zenuke karpeta2 barruan."
+
+#: C/conduit.xml:302(title)
+msgid "Example 2: Exporting Images to Multiple Destinations"
+msgstr "2. adibidea: Argazkiak hainbat helburutara esportatzea"
+
+#: C/conduit.xml:303(para)
+msgid ""
+"The second group shown in <xref linkend=\"conduit-FIG-dp-parts\"/> shows a "
+"single F-Spot data source exporting its photos to two data sinks, a Facebook "
+"one, and a Picasa one."
+msgstr ""
+"<xref linkend=\"conduit-FIG-dp-parts\"/> irudian F-Spot datu-iturburu bat "
+"azaltzen da, eta datu-iturburu horretako argazkiak bi datu-kategoriatara "
+"esportatuko dira: Facebook-era eta Picasa-ra."
+
+#: C/conduit.xml:306(para)
+msgid "Start F-Spot"
+msgstr "Ireki F-Spot"
+
+#: C/conduit.xml:307(para)
+msgid ""
+"Drag a F-Spot data provider from the data provider pane and drop it onto an "
+"empty spot on the canvas. A new group containing just the F-Spot data "
+"provider will be created."
+msgstr ""
+"Arrastatu F-Spot datu-hornitzaile bat datu-hornitzaileen paneletik, eta "
+"jaregin ezazu oihalaren paneleko puntu huts batean. Talde berri bat sortuko da, "
+"F-Spot datu-hornitzailearekin."
+
+#: C/conduit.xml:308(para)
+msgid ""
+"Drag Facebook and Picasa data providers into the Group that was just "
+"created."
+msgstr "Arrastatu Facebook eta Picasa datu-hornitzaileak sortu berri den taldera."
+
+#: C/conduit.xml:309(para)
+msgid "Configure the data providers by double clicking on them."
+msgstr "Konfiguratu datu-hornitzaileak bertan klik bikoitza eginez."
+
+#: C/conduit.xml:310(para)
+msgid ""
+"Now synchronize the group to upload photos. You will be prompted to log into "
+"Facebook using the Conduit login window, shown in <xref linkend=\"conduit-"
+"FIG-login\"/>."
+msgstr ""
+"Orain sinkronizatu taldea, argazkiak kargatzeko. Facebook-en saioa hasteko "
+"eskatuko zaizu Conduit saioa hasteko leihoan (ikus hemen: <xref linkend"
+"=\"conduit-FIG-login\"/>.)"
+
+#: C/conduit.xml:314(title)
+msgid "Summary"
+msgstr "Laburpena"
+
+#: C/conduit.xml:315(para)
+msgid ""
+"All sync operations work exactly like this. The only difference is the data "
+"you are syncing and the providers you are using. You always follow the same "
+"sequence of steps,"
+msgstr ""
+"Sinkronizazio-eragiketa guztiek honek bezala funtzionatzen dute. "
+"Sinkronizatutako datuak eta erabilitako hornitzaileak bakarrik aldatuko "
+"dira. Urrats-sekuentzia bera jarraitu behar duzu beti:"
+
+#: C/conduit.xml:317(para)
+msgid "Add dataproviders to create a new group, or to an existing group."
+msgstr ""
+"Gehitu datu-hornitzaileak talde berri bat sortzeko edo lehendik dagoen talde "
+"batean."
+
+#: C/conduit.xml:318(para)
+msgid ""
+"Configure the data providers. Each data provider requires a unique "
+"configuration. For reference on these please the <emphasis>Data "
+"Providers</emphasis> section of the documentation."
+msgstr ""
+"Konfiguratu datu-hornitzaileak. Datu-hornitzaile batek konfigurazio bakarra "
+"behar du. Horiei buruzko erreferentziarako, ikus dokumentazioko <emphasis"
+">Datu-hornitzaileak</emphasis> atala."
+
+#: C/conduit.xml:319(para)
+msgid "Configure the group, selecting what should happen on conflict, etc."
+msgstr "Konfiguratu taldea, gatazka-kasuetan gertatu beharrekoak, etab."
+
+#: C/conduit.xml:320(para)
+msgid "Synchronize the dataproviders as you wish."
+msgstr "Sinkronizatu datu-hornitzaileak nahi bezala."
+
+#: C/conduit.xml:325(title)
+msgid "Network Synchronization"
+msgstr "Sare-sinkronizazioa"
+
+#: C/conduit.xml:326(para)
+msgid ""
+"If you have two computers at home, Conduit can be used to synchronize the "
+"data between them, directly, without first having to store the data "
+"somewhere else first. The steps below will illustrate how to synchronize "
+"Tomboy notes on two computers, called nzjrs-desktop and nzjrs-laptop. The "
+"following key will be used to help explain the setup procedure."
+msgstr ""
+"Etxean bi ordenagailu badituzu, Conduit erabil dezakezu datuak haien artean "
+"zuzenean sinkronizatzeko, aurretik datuak beste nonbait gordetzeko beharrik "
+"gabe. Beheko urratsetan azaltzen da nola sinkronizatu Tomboy oharrak nzjrs-"
+"mahaigaina eta nzjrs-mahaigaina izeneko bi ordenagailutan. Ondoko gakoa "
+"erabiliko da konfigurazio-prozedura azaltzen laguntzeko."
+
+#: C/conduit.xml:329(para)
+msgid ""
+"<inlinegraphic format=\"PNG\" fileref=\"figures/network-pc1.png\"/> Image taken "
+"on the first computer."
+msgstr ""
+"<inlinegraphic format=\"PNG\" fileref=\"figures/network-pc1.png\"/> Lehenengo "
+"ordenagailuaren argazkia."
+
+#: C/conduit.xml:330(para)
+msgid ""
+"<inlinegraphic format=\"PNG\" fileref=\"figures/network-pc2.png\"/> Image taken "
+"on the second computer."
+msgstr ""
+"<inlinegraphic format=\"PNG\" fileref=\"figures/network-pc1.png\"/> Bigarren "
+"ordenagailuaren argazkia."
+
+#: C/conduit.xml:335(title)
+msgid "Network Synchronization Tip"
+msgstr "Sare-sinkronizazioaren iradokizunak"
+
+#: C/conduit.xml:336(para)
+msgid ""
+"The process below, although describing Tomboy note synchronization, could be "
+"suitably modified to synchronize all sorts of data between two computers, "
+"including Contacts, Calendar information, and even F-Spot photos."
+msgstr ""
+"Beheko prozesua, Tomboy oharren sinkronizazioa deskribatu arren, bi "
+"ordenagailuren artean edozein datu mota sinkronizatzeko alda liteke, "
+"Kontaktuak, Egutegi-informazioa, eta F-Spot argazkiak, besteak beste."
+
+#: C/conduit.xml:341(title)
+msgid "Configuration of the First Computer"
+msgstr "Lehenengo ordenagailuaren konfigurazioa"
+
+#: C/conduit.xml:339(para)
+msgid ""
+"On the first computer create a synchronization group connecting Tomboy to "
+"the Network dataprovider, which is listed in the Miscellaneous category in "
+"the dataprovider pane. This makes Tomboy available for synchronization on "
+"the second computer. <placeholder-1/>"
+msgstr ""
+"Lehenengo ordenagailuan, sortu sinkronizazio-talde bat Tomboy sareko datu-"
+"hornitzailearekin konektatzeko (datu-hornitzailearen paneleko Hainbat "
+"kategoriaren zerrendan). Horrela, Tomboy erabilgarri egongo da bigarren "
+"ordenagailuarekin sinkronizatzeko. <placeholder-1/>"
+
+#: C/conduit.xml:351(para)
+msgid ""
+"After a short delay, this will result in a new category being created on the "
+"second computer. The category will take the name of the first computer, "
+"nzjrs-desktop in my case, and it shall contain any dataproviders currently "
+"available for synchronization."
+msgstr ""
+"Une baten ondoren, kategoria berri bat sortuko da bigarren ordenagailuan. "
+"Kategoriak lehenengo ordenagailuaren izena hartuko du, nzjrs-mahaigaina kasu "
+"honetan, eta sinkronizatzeko erabilgarri dauden datu-hornitzaile guztiak "
+"edukiko ditu."
+
+#: C/conduit.xml:354(title)
+msgid "Configuration of the Second Computer"
+msgstr "Bigarren ordenagailuaren konfigurazioa"
+
+#: C/conduit.xml:352(para)
+msgid ""
+"Still on the second computer, drag the Tomboy dataprovider from the newly "
+"created category onto the canvas. Notice how its name is Remote Tomboy, "
+"indicating it refers to data on the remote, or first, computer. "
+"<placeholder-1/>"
+msgstr ""
+"Bigarren ordenagailuan, arrastatu Tomboy datu-hornitzailea sortu berri den "
+"kategoriatik oihalaren panelera. Haren izena Urruneko Tomboy izango da, "
+"urruneko, edo lehenengo, ordenagailuko datuei erreferentzia egiten dielako "
+"adierazteko. <placeholder-1/>"
+
+#: C/conduit.xml:364(para)
+msgid "Finally, on the second computer, start the sync in the normal manner."
+msgstr "Azkenean, bigarren ordenagailuan, hasi sinkronizazioarekin modu normalean."
+
+#: C/conduit.xml:365(para)
+msgid "Your tomboy notes should now be synchronized between the two computers."
+msgstr ""
+"Orain bi ordenagailuetan sinkronizatuta egon beharko lukete zure Tomboy "
+"oharrek."
+
+#: C/conduit.xml:368(title)
+msgid "File Synchronization"
+msgstr "Fitxategi-sinkronizazioa"
+
+#: C/conduit.xml:369(para)
+msgid ""
+"Due to performance and security reasons, we do not recommend using the "
+"network sync feature to synchronize large files between two computers. We "
+"hope to address this limitation in the future."
+msgstr ""
+"Errendimendu- eta segurtasun-arrazoiak direla-eta, ez dugu gomendatzen "
+"sareko sinkronizazio-eginbidea erabiltzea bi ordenagailuren artean fitxategi "
+"handiak sinkronizatzeko. Muga hau etorkizunean konpontzea espero dugu."
+
+#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
+#: C/conduit.xml:0(None)
+msgid "translator-credits"
+msgstr "Hizkuntza Politikarako Sailburuordetza <hizkpol@ej-gv.es>"
+
