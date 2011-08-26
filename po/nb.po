@@ -1,14 +1,14 @@
 # Norwegian bokmål translation of conduit.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Kjartan Maraas <kmaraas@gnome.org>, 2008-2010.
+# Kjartan Maraas <kmaraas@gnome.org>, 2008-2011.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: conduit 0.3.16\n"
+"Project-Id-Version: conduit 0.3.18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-26 11:08+0200\n"
-"PO-Revision-Date: 2010-09-26 11:14+0200\n"
+"POT-Creation-Date: 2011-08-26 13:12+0200\n"
+"PO-Revision-Date: 2011-08-26 13:19+0200\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: \n"
@@ -205,9 +205,8 @@ msgid "Upload Photos to Facebook"
 msgstr "Last opp bilder til Facebook"
 
 #: ../conduit/Knowledge.py:39
-#, fuzzy
 msgid "Synchronize Desktop Wallpaper from a RSS Feed"
-msgstr "Synkroniser data fra YouTube"
+msgstr "Synkroniser skrivebordsbakgrunn fra en RSS-strøm"
 
 #: ../conduit/Main.py:57
 msgid "Conduit is a synchronization application."
@@ -221,7 +220,7 @@ msgstr "Start uten brukergrensesnitt [forvalg: %default]"
 #: ../conduit/Main.py:65
 #, python-format
 msgid "Save dataprovider configuration to FILE. [default: %default]"
-msgstr ""
+msgstr "Lagre konfigurasjon for datatilbyder til FIL. [forvalg: %default]"
 
 #: ../conduit/Main.py:69
 #, python-format
@@ -413,22 +412,20 @@ msgid "Introduction"
 msgstr "Innledning"
 
 #: ../conduit/gtkui/UI.py:34
-#, fuzzy
 msgid "Writing a Data Provider"
-msgstr "Datatilbydere"
+msgstr "Skriver en datatilbyder"
 
 #: ../conduit/gtkui/UI.py:35
-#, fuzzy
 msgid "API Documentation"
-msgstr "Dokumenter"
+msgstr "API-dokumentasjon"
 
 #: ../conduit/gtkui/UI.py:36
 msgid "Test Results"
-msgstr ""
+msgstr "Testresultater"
 
 #: ../conduit/gtkui/UI.py:52
 msgid "Examples"
-msgstr ""
+msgstr "Eksempler"
 
 #. Build some liststores to display
 #: ../conduit/gtkui/UI.py:139
@@ -441,7 +438,7 @@ msgstr "til"
 
 #: ../conduit/gtkui/UI.py:190
 msgid "Relationship Database"
-msgstr ""
+msgstr "Relasjonsdatabase"
 
 #: ../conduit/gtkui/UI.py:194
 msgid "Conversions Available"
@@ -459,15 +456,15 @@ msgstr "Lastet"
 #: ../conduit/gtkui/UI.py:329
 #, python-format
 msgid " - %s (Development Version)"
-msgstr ""
+msgstr " - %s (Utviklingsversjon)"
 
 #: ../conduit/gtkui/UI.py:331
 msgid " - Running Uninstalled"
-msgstr ""
+msgstr " - Kjører uinstallert"
 
 #: ../conduit/gtkui/UI.py:375
 msgid "Developers"
-msgstr ""
+msgstr "Utviklere"
 
 #: ../conduit/gtkui/UI.py:539 ../conduit/hildonui/UI.py:127
 msgid "Synchronization in progress. Do you want to cancel it?"
@@ -550,16 +547,15 @@ msgstr "Lagrede notater"
 
 #: ../conduit/modules/BackpackModule/BackpackModule.py:113
 msgid "Save notes in page"
-msgstr ""
+msgstr "Lagre notater på side"
 
 #: ../conduit/modules/BansheeModule/BansheeModule.py:52
 msgid "Banshee Playlists"
 msgstr "Spillelister fra Banshee"
 
 #: ../conduit/modules/BansheeModule/BansheeModule.py:53
-#, fuzzy
 msgid "Synchronize your Banshee playlists"
-msgstr "Spillelister fra Banshee"
+msgstr "Synkroniser spillelister fra Banshee"
 
 #: ../conduit/modules/BansheeModule/BansheeModule.py:187
 #: ../conduit/modules/BansheeModule/BansheeModule.py:188
@@ -573,9 +569,8 @@ msgid "Box.net"
 msgstr "Box.net"
 
 #: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:30
-#, fuzzy
 msgid "Synchronize your Box.net files"
-msgstr "Synkroniser mapper"
+msgstr "Synkroniser filer fra Box.net"
 
 #: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:290
 #: ../conduit/modules/FileModule/FileModule.py:86
@@ -591,17 +586,16 @@ msgid "Load folders"
 msgstr "Last mapper"
 
 #: ../conduit/modules/ConverterModule.py:91
-#, fuzzy
 msgid "Note-"
-msgstr "Note-"
+msgstr "Notat-"
 
 #: ../conduit/modules/DesktopWallpaperModule.py:38
 msgid "Wallpaper"
-msgstr ""
+msgstr "Bakgrunn"
 
 #: ../conduit/modules/DesktopWallpaperModule.py:39
 msgid "Changes your Desktop Wallpaper"
-msgstr ""
+msgstr "Bytt skrivebordsbakgrunn"
 
 #: ../conduit/modules/EvolutionModule/EvolutionModule.py:110
 #, python-format
@@ -689,18 +683,17 @@ msgid "RSS Feed"
 msgstr "RSS-strøm"
 
 #: ../conduit/modules/FeedModule/FeedModule.py:59
-#, fuzzy
 msgid "Synchronize data from RSS enclosures"
-msgstr "Synkroniser data fra YouTube"
+msgstr "Synkroniser data fra RSS-strømmer"
 
 #. FIXME: Add Randomize
 #: ../conduit/modules/FeedModule/FeedModule.py:114
 msgid "Feed details"
-msgstr ""
+msgstr "Detaljer om strøm"
 
 #: ../conduit/modules/FeedModule/FeedModule.py:115
 msgid "Feed address"
-msgstr ""
+msgstr "Adresse for strøm"
 
 #: ../conduit/modules/FeedModule/FeedModule.py:118
 msgid "Enclosure settings"
@@ -719,9 +712,8 @@ msgid "Randomize enclosures"
 msgstr ""
 
 #: ../conduit/modules/FeedModule/FeedModule.py:133
-#, fuzzy
 msgid "Download types"
-msgstr "Last ned bilder"
+msgstr "Last ned typer"
 
 #: ../conduit/modules/FeedModule/FeedModule.py:134
 msgid "Download audio files"
@@ -872,22 +864,22 @@ msgstr "Start F-Spot"
 
 #: ../conduit/modules/FspotModule/FspotModule.py:251
 #: ../conduit/modules/FspotModule/FspotModule.py:252
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:72
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:74
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:71
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:73
 msgid "Tags"
-msgstr ""
+msgstr "Merker"
 
 #: ../conduit/modules/FspotModule/FspotModule.py:265
 msgid "Add tags"
-msgstr ""
+msgstr "Legg til merker"
 
 #: ../conduit/modules/FspotModule/FspotModule.py:266
 msgid "Tag name"
-msgstr ""
+msgstr "Navn på merke"
 
 #: ../conduit/modules/FspotModule/FspotModule.py:269
 msgid "Add tag"
-msgstr ""
+msgstr "Legg til merke"
 
 #: ../conduit/modules/GConfModule/GConfModule.py:21
 msgid "Application Settings"
@@ -1105,14 +1097,18 @@ msgstr "Synkroniser sanger fra dine spillelister i Rhythmbox"
 msgid "Unknown"
 msgstr "Ukjent"
 
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:37
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:36
 msgid "Shotwell"
 msgstr "Shotwell"
 
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:38
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:37
 #, fuzzy
 msgid "Sync from your Shotwell photo library"
 msgstr "Synkroniser dine bilder fra F-Spot"
+
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:56
+msgid "Disabling Shotwell module, unable to open sqlite3 data source"
+msgstr ""
 
 #: ../conduit/modules/ShutterflyModule/ShutterflyModule.py:26
 msgid "Shutterfly"
@@ -1124,7 +1120,7 @@ msgstr "Synkroniser dine bilder med Shutterfly"
 
 #: ../conduit/modules/ShutterflyModule/shutterfly/shutterfly.py:33
 msgid "%Y-%m-%d %H:%M:%S"
-msgstr ""
+msgstr "%d.%m.%Y %H.%M.%S"
 
 #: ../conduit/modules/SmugMugModule/SmugMugModule.py:28
 msgid "SmugMug"
