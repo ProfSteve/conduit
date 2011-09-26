@@ -2,19 +2,20 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2009, 2010.
+# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2009, 2010, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: eu_to_be_translate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-10-07 23:35+0200\n"
-"PO-Revision-Date: 2010-10-07 23:41+0200\n"
+"POT-Creation-Date: 2011-09-26 16:05+0200\n"
+"PO-Revision-Date: 2011-09-26 16:04+0200\n"
 "Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>\n"
 "Language-Team: Basque <itzulpena@euskalgnu.org>\n"
+"Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../data/conduit.desktop.in.in.h:1
@@ -237,13 +238,13 @@ msgstr "Exekutatu zehaztutako UIarekin. [lehenetsia: %default]"
 #: ../conduit/Main.py:77
 msgid "Only load modules in the named files. [default: load all modules]"
 msgstr ""
-"Kargatu moduloak soilik izendatutako fitxategietan. [lehenetsia: kargatu "
-"modulo guztiak]"
+"Kargatu moduluak soilik izendatutako fitxategietan. [lehenetsia: kargatu "
+"modulu guztiak]"
 
 #: ../conduit/Main.py:81
 msgid "Do not load modules in the named files. [default: load all modules]"
 msgstr ""
-"Ez kargatu moduloak izendatutako fitxategietan. [lehenetsia: kargatu modulo "
+"Ez kargatu moduluak izendatutako fitxategietan. [lehenetsia: kargatu modulu "
 "guztiak]"
 
 #: ../conduit/Main.py:85
@@ -257,11 +258,11 @@ msgstr ""
 #: ../conduit/Main.py:89
 #, python-format
 msgid ""
-"Enable loading of unfinished or unsupported dataproviders. [default: %"
-"default]"
+"Enable loading of unfinished or unsupported dataproviders. [default: "
+"%default]"
 msgstr ""
-"Gaitu osatu edo onartu gabeko datuen hornitzaileak kargatzea. [lehenetsia: %"
-"default]"
+"Gaitu osatu edo onartu gabeko datuen hornitzaileak kargatzea. [lehenetsia: "
+"%default]"
 
 #: ../conduit/Main.py:93
 #, python-format
@@ -875,8 +876,8 @@ msgstr "Abiarazi F-Spot"
 
 #: ../conduit/modules/FspotModule/FspotModule.py:251
 #: ../conduit/modules/FspotModule/FspotModule.py:252
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:72
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:74
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:71
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:73
 msgid "Tags"
 msgstr "Etiketak"
 
@@ -1106,13 +1107,18 @@ msgstr "Sinkronizatu abestiak zure Rhythmbox-eko erreprodukzio-zerrendetatik"
 msgid "Unknown"
 msgstr "Ezezaguna"
 
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:37
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:36
 msgid "Shotwell"
 msgstr "Shotwell"
 
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:38
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:37
 msgid "Sync from your Shotwell photo library"
 msgstr "Sinkronizatu Shotwell-eko zure argazkiak"
+
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:56
+msgid "Disabling Shotwell module, unable to open sqlite3 data source"
+msgstr ""
+"Shotwell modulua desgaitzen, ezin delako sqlite3 datuen iturburua ireki"
 
 #: ../conduit/modules/ShutterflyModule/ShutterflyModule.py:26
 msgid "Shutterfly"
