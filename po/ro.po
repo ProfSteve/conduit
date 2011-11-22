@@ -2,14 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Licker Nandor <lickernandor@yahoo.com>, 2010.
-# Lucian Adrian Grijincu <lucian.grijincu@gmail.com>, 2010.
+# Lucian Adrian Grijincu <lucian.grijincu@gmail.com>, 2010, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=condui"
-"t&component=documentation and translation\n"
-"POT-Creation-Date: 2010-11-26 13:04+0000\n"
-"PO-Revision-Date: 2010-11-26 15:04+0300\n"
+"t&keywords=I18N+L10N&component=documentation and translation\n"
+"POT-Creation-Date: 2011-10-10 17:38+0000\n"
+"PO-Revision-Date: 2011-11-22 20:16+0300\n"
 "Last-Translator: Lucian Adrian Grijincu <lucian.grijincu@gmail.com>\n"
 "Language-Team: Romanian Gnome Team <gnomero-list@lists.sourceforge.net>\n"
 "Language: ro\n"
@@ -18,7 +18,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2);;\n"
-"X-Generator: Virtaal 0.6.1\n"
+"X-Generator: Virtaal 0.7.0\n"
+"X-Project-Style: gnome\n"
 
 #: ../data/conduit.desktop.in.in.h:1
 msgid "Conduit Synchronizer"
@@ -878,8 +879,8 @@ msgstr "Porniți F-Spot"
 
 #: ../conduit/modules/FspotModule/FspotModule.py:251
 #: ../conduit/modules/FspotModule/FspotModule.py:252
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:72
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:74
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:71
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:73
 msgid "Tags"
 msgstr "Etichete"
 
@@ -1109,13 +1110,18 @@ msgstr "Sincronizează melodii din listele de redare Rhythmbox"
 msgid "Unknown"
 msgstr "Necunoscut"
 
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:37
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:36
 msgid "Shotwell"
 msgstr "Shotwell"
 
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:38
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:37
 msgid "Sync from your Shotwell photo library"
 msgstr "Sincronizează cu biblioteca foto Shotwell"
+
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:56
+msgid "Disabling Shotwell module, unable to open sqlite3 data source"
+msgstr ""
+"S-a dezactivat modulul Shotwell, deschiderea sursei de date squite3 a eșuat"
 
 #: ../conduit/modules/ShutterflyModule/ShutterflyModule.py:26
 msgid "Shutterfly"
