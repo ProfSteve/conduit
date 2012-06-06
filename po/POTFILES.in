@@ -8,15 +8,15 @@ conduit/dataproviders/DataProvider.py
 conduit/dataproviders/Image.py
 conduit/dataproviders/__init__.py
 conduit/gtkui/Canvas.py
-conduit/gtkui/ConflictResolver.py
-conduit/gtkui/UI.py
-conduit/gtkui/Tree.py
 conduit/gtkui/ConfigItems.py
+conduit/gtkui/ConflictResolver.py
+conduit/gtkui/Tree.py
+conduit/gtkui/UI.py
 conduit/gtkui/WindowConfigurator.py
 conduit/hildonui/Canvas.py
 conduit/hildonui/UI.py
-conduit/modules/BackpackModule/BackpackModule.py
 conduit/modules/BackpackModule/backpack/backpack.py
+conduit/modules/BackpackModule/BackpackModule.py
 conduit/modules/BansheeModule/BansheeModule.py
 conduit/modules/BoxDotNetModule/BoxDotNetModule.py
 conduit/modules/ConverterModule.py
@@ -40,4 +40,5 @@ conduit/modules/ShotwellModule/ShotwellModule.py
 conduit/modules/ShutterflyModule/ShutterflyModule.py
 conduit/modules/ShutterflyModule/shutterfly/shutterfly.py
 conduit/modules/SmugMugModule/SmugMugModule.py
+conduit/modules/TomboyModule.py
 conduit/modules/ZotoModule/ZotoModule.py
