@@ -1,0 +1,1136 @@
+# Indonesian translation for conduit.
+# Copyright (C) 2012 conduit's COPYRIGHT HOLDER
+# This file is distributed under the same license as the conduit package.
+# Andika Triwidada <andika@gmail.com>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: conduit master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=conduit&keywords=I18N+L10N&component=documentation and translation\n"
+"POT-Creation-Date: 2011-11-22 18:16+0000\n"
+"PO-Revision-Date: 2012-06-06 20:51+0700\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
+"Language-Team: Indonesian <gnome@i15n.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-Language: Indonesian\n"
+"X-Poedit-Country: INDONESIA\n"
+
+#: ../data/conduit.desktop.in.in.h:1
+msgid "Conduit Synchronizer"
+msgstr "Conduit Penyelaras"
+
+#: ../data/conduit.desktop.in.in.h:2
+msgid "Synchronization for GNOME"
+msgstr "Penyelarasan bagi GNOME"
+
+#: ../data/conduit.ui.h:1
+msgid "Always Up-To-Date"
+msgstr "Selalu Terkini"
+
+#: ../data/conduit.ui.h:2
+msgid "Ask Me What to Do"
+msgstr "Tanya Padaku Apa Yang Mesti Dilakukan"
+
+#: ../data/conduit.ui.h:3
+msgid "Ask me what to do"
+msgstr "Tanya padaku apa yang mesti dilakukan"
+
+#: ../data/conduit.ui.h:4
+msgid "Compare"
+msgstr "Bandingkan"
+
+#: ../data/conduit.ui.h:5
+msgid "Conduit Preferences"
+msgstr "Preferensi Conduit"
+
+#: ../data/conduit.ui.h:6
+msgid "Configuration"
+msgstr "Konfigurasi"
+
+#: ../data/conduit.ui.h:7
+msgid "Conflict Options"
+msgstr "Opsi Konflik"
+
+#: ../data/conduit.ui.h:8
+msgid "Conflicts"
+msgstr "Konflik"
+
+#: ../data/conduit.ui.h:9
+msgid "Data Conversions"
+msgstr "Konversi Data"
+
+#: ../data/conduit.ui.h:10
+msgid "Data Providers"
+msgstr "Penyedia Data"
+
+#: ../data/conduit.ui.h:11
+msgid "Default Synchronization Options"
+msgstr "Opsi Penyelarasan Bawaan"
+
+#: ../data/conduit.ui.h:12
+msgid "Delete Options"
+msgstr "Opsi Penghapusan"
+
+#: ../data/conduit.ui.h:13
+msgid "Delete from the corresponding sink"
+msgstr "Hapus dari muara yang sesuai"
+
+#: ../data/conduit.ui.h:14
+msgid "Delete the Corresponding Item"
+msgstr "Hapus Butir Yang Sesuai"
+
+#: ../data/conduit.ui.h:15
+msgid "Editor"
+msgstr "Penyunting"
+
+#: ../data/conduit.ui.h:16
+msgid "General"
+msgstr "Umum"
+
+#: ../data/conduit.ui.h:17
+msgid "Minimize to notification area"
+msgstr "Minimumkan ke area pemberitahuan"
+
+#: ../data/conduit.ui.h:18
+msgid "Replace the Older Item"
+msgstr "Gantikan Butir Yang Lebih Tua"
+
+#: ../data/conduit.ui.h:19
+msgid "Replace the older item"
+msgstr "Gantikan butir yang lebih tua"
+
+#: ../data/conduit.ui.h:20
+msgid "Resolve Conflicts"
+msgstr "Selesaikan Konflik"
+
+#: ../data/conduit.ui.h:21
+msgid "Save settings on exit"
+msgstr "Simpan pengaturan saat keluar"
+
+#: ../data/conduit.ui.h:22
+msgid "Show Hints"
+msgstr "Tampilkan Petunjuk"
+
+#: ../data/conduit.ui.h:23
+msgid "Show status icon"
+msgstr "Tampilkan ikon status"
+
+#: ../data/conduit.ui.h:24
+msgid "Skip"
+msgstr "Lewati"
+
+#: ../data/conduit.ui.h:25
+msgid "Slow Synchronization"
+msgstr "Penyelarasan Lambat"
+
+#: ../data/conduit.ui.h:26
+msgid "Start Conduit at login"
+msgstr "Mulai Conduit Saat Log Masuk"
+
+#: ../data/conduit.ui.h:27
+msgid "Synchronization Options"
+msgstr "Opsi Penyelarasan"
+
+#: ../data/conduit.ui.h:28
+msgid "Title"
+msgstr "Judul"
+
+#: ../data/conduit.ui.h:29
+msgid "Two-Way Synchronization"
+msgstr "Penyelarasan Dua Arah"
+
+#: ../data/conduit.ui.h:30
+msgid "When an item has been deleted:"
+msgstr "Ketika suatu butir telah dihapus:"
+
+#: ../data/conduit.ui.h:31
+msgid "When there is a two-way conflict:"
+msgstr "Ketika ada konflik dua arah:"
+
+#: ../data/conduit.ui.h:32
+msgid "_Edit"
+msgstr "_Sunting"
+
+#: ../data/conduit.ui.h:33
+msgid "_File"
+msgstr "_Berkas"
+
+#: ../data/conduit.ui.h:34
+msgid "_Help"
+msgstr "B_antuan"
+
+#: ../conduit/Knowledge.py:8
+msgid "What Do You Want to Synchronize?"
+msgstr "Apa Yang Ingin Anda Selaraskan?"
+
+#: ../conduit/Knowledge.py:9
+msgid "Drag and Drop a Data Provider on the Canvas"
+msgstr "Seret dan Jatuhkan suatu Penyedia Data pada Kanvas"
+
+#: ../conduit/Knowledge.py:11
+msgid "Synchronization Group Created"
+msgstr "Grup Penyelarasan Dibuat"
+
+#: ../conduit/Knowledge.py:12
+msgid "Add Another Data Provider to the Group to Synchronize it"
+msgstr "Tambahkan Penyedia Data Lain ke Grup untuk Menyelaraskannya"
+
+#: ../conduit/Knowledge.py:14
+msgid "You Are Now Ready to Synchronize"
+msgstr "Anda Kini Siap Untuk Menyelaraskan"
+
+#: ../conduit/Knowledge.py:15
+msgid "Right Click on Group for Options"
+msgstr "Klik Kanan pada Grup untuk Opsi"
+
+#: ../conduit/Knowledge.py:24
+msgid "Synchronize Two Folders"
+msgstr "Selaraskan Dua Folder"
+
+#: ../conduit/Knowledge.py:27
+msgid "Backup Folder to Box.net"
+msgstr "Buat Cadangan Folder ke Box.net"
+
+#: ../conduit/Knowledge.py:30
+msgid "Synchronize Tagged F-Spot Photos to Flickr"
+msgstr "Selaraskan Foto F-Spot Yang Ditandai ke Flickr"
+
+#: ../conduit/Knowledge.py:33
+msgid "Synchronize Photos to Flickr"
+msgstr "Selaraskan Foto ke Flickr"
+
+#: ../conduit/Knowledge.py:36
+msgid "Upload Photos to Facebook"
+msgstr "Unggah Foto ke Facebook"
+
+#: ../conduit/Knowledge.py:39
+msgid "Synchronize Desktop Wallpaper from a RSS Feed"
+msgstr "Selaraskan Gambar Latar Desktop dari Asupan RSS"
+
+#: ../conduit/Main.py:57
+msgid "Conduit is a synchronization application."
+msgstr "Conduit adalah aplikasi penyelarasan."
+
+#: ../conduit/Main.py:61
+#, python-format
+msgid "Launch without GUI. [default: %default]"
+msgstr "Luncurkan tanpai GUI. [bawaan: %default]"
+
+#: ../conduit/Main.py:65
+#, python-format
+msgid "Save dataprovider configuration to FILE. [default: %default]"
+msgstr "Simpan konfigurasi penyedia data ke BERKAS. [bawaan: %default]"
+
+#: ../conduit/Main.py:69
+#, python-format
+msgid "Iconify on startup. [default: %default]"
+msgstr "Ikonkan saat awal mula. [bawaan: %default]"
+
+#: ../conduit/Main.py:73
+#, python-format
+msgid "Run with the specified UI. [default: %default]"
+msgstr "Jalankan dengan UI yang dinyatakan. [bawaan: %default]"
+
+#: ../conduit/Main.py:77
+msgid "Only load modules in the named files. [default: load all modules]"
+msgstr "Hanya muat module dalam berkas yang dinamai. [bawaan: muat semua modul]"
+
+#: ../conduit/Main.py:81
+msgid "Do not load modules in the named files. [default: load all modules]"
+msgstr "Jangan muat modul di dalam berkas yang dinamai. [bawaan: muat semua modul]"
+
+#: ../conduit/Main.py:85
+msgid "Explicitly set internal Conduit settings (keys) to the given values for this session. [default: do not set]"
+msgstr "Secara eksplisit menata pengaturan (kunci-kunci) Conduit internal ke nilai yang diberikan bagi sesi ini. [bawaan: jangan ditata]"
+
+#: ../conduit/Main.py:89
+#, python-format
+msgid "Enable loading of unfinished or unsupported dataproviders. [default: %default]"
+msgstr "Aktifkan memuat penyedia data yang belum selesai atau tak didukung. [bawaan: %default]"
+
+#: ../conduit/Main.py:93
+#, python-format
+msgid "Generate more debugging information. [default: %default]"
+msgstr "Jangkitkan lebih banyak informasi pengawakutuan. [bawaan: %default]"
+
+#: ../conduit/Main.py:97
+#, python-format
+msgid "Generate less debugging information. [default: %default]"
+msgstr "Jangkitkan lebih sedikit informasi pengawakutuan. [bawaan: %default]"
+
+#: ../conduit/Main.py:101
+#, python-format
+msgid "Generate no debugging information. [default: %default]"
+msgstr "Jangan jangkitkan informasi pengawakutuan. [bawaan: %default]"
+
+#: ../conduit/dataproviders/DataProvider.py:22
+msgid "Ready"
+msgstr "Siap"
+
+#: ../conduit/dataproviders/DataProvider.py:23
+msgid "New data to sync"
+msgstr "Data baru untuk diselaraskan"
+
+#: ../conduit/dataproviders/DataProvider.py:24
+msgid "Refreshing..."
+msgstr "Menyegarkan..."
+
+#: ../conduit/dataproviders/DataProvider.py:25
+msgid "Refreshed OK"
+msgstr "Beres Disegarkan"
+
+#: ../conduit/dataproviders/DataProvider.py:26
+msgid "Error Refreshing"
+msgstr "Galat Saat Menyegarkan"
+
+#: ../conduit/dataproviders/DataProvider.py:27
+msgid "Synchronizing..."
+msgstr "Menyelaraskan..."
+
+#: ../conduit/dataproviders/DataProvider.py:28
+msgid "Synchronized OK"
+msgstr "Beres Diselaraskan"
+
+#: ../conduit/dataproviders/DataProvider.py:29
+msgid "Error Synchronizing"
+msgstr "Galat Saat Menyelaraskan"
+
+#: ../conduit/dataproviders/DataProvider.py:30
+msgid "Synchronization Skipped"
+msgstr "Penyelarasan Dilewati"
+
+#: ../conduit/dataproviders/DataProvider.py:31
+msgid "Synchronization Cancelled"
+msgstr "Penyelarasan Dibatalkan"
+
+#: ../conduit/dataproviders/DataProvider.py:32
+#: ../conduit/gtkui/UI.py:743
+msgid "Synchronization Conflict"
+msgstr "Konflik Penyelarasan"
+
+#: ../conduit/dataproviders/DataProvider.py:33
+msgid "Not Configured"
+msgstr "Belum Ditata"
+
+#: ../conduit/dataproviders/Image.py:34
+#: ../conduit/modules/FlickrModule/FlickrModule.py:329
+msgid "640x480"
+msgstr "640x480"
+
+#: ../conduit/dataproviders/Image.py:34
+#: ../conduit/modules/FlickrModule/FlickrModule.py:329
+msgid "800x600"
+msgstr "800x600"
+
+#: ../conduit/dataproviders/Image.py:34
+#: ../conduit/modules/FlickrModule/FlickrModule.py:329
+msgid "1024x768"
+msgstr "1024x768"
+
+#. Signifies that a conversion should not take place
+#: ../conduit/dataproviders/Image.py:35
+#: ../conduit/modules/N800Module/N800Module.py:57
+msgid "None"
+msgstr "Nihil"
+
+#. Default Categories for the DataProviders
+#: ../conduit/dataproviders/__init__.py:6
+msgid "Files and Folders"
+msgstr "Berkas dan Folder"
+
+#: ../conduit/dataproviders/__init__.py:7
+#: ../conduit/modules/iPodModule/iPodModule.py:276
+msgid "Notes"
+msgstr "Catatan"
+
+#: ../conduit/dataproviders/__init__.py:8
+#: ../conduit/modules/iPodModule/iPodModule.py:464
+msgid "Photos"
+msgstr "Foto"
+
+#: ../conduit/dataproviders/__init__.py:9
+msgid "Office"
+msgstr "Perkantoran"
+
+#: ../conduit/dataproviders/__init__.py:10
+msgid "Settings"
+msgstr "Pengaturan"
+
+#: ../conduit/dataproviders/__init__.py:11
+msgid "Miscellaneous"
+msgstr "Rupa-rupa"
+
+#: ../conduit/dataproviders/__init__.py:12
+msgid "Media"
+msgstr "Media"
+
+#: ../conduit/dataproviders/__init__.py:13
+msgid "Bookmarks"
+msgstr "Penanda Taut"
+
+#: ../conduit/dataproviders/__init__.py:14
+msgid "Test"
+msgstr "Tes"
+
+#: ../conduit/gtkui/Canvas.py:152
+msgid "Drag a Data Provider here to continue"
+msgstr "Seret suatu Penyedia Data ke sini untuk melanjutkan"
+
+#: ../conduit/gtkui/Canvas.py:227
+msgid "Show me"
+msgstr "Tunjukkan"
+
+#. Visible column0 is
+#. [pixbuf + source display name] or
+#. [source_data.get_snippet()]
+#: ../conduit/gtkui/ConflictResolver.py:91
+msgid "Source"
+msgstr "Sumber"
+
+#: ../conduit/gtkui/ConflictResolver.py:105
+msgid "Resolution"
+msgstr "Resolusi"
+
+#. Visible column2 is the display name of source and source data
+#: ../conduit/gtkui/ConflictResolver.py:110
+msgid "Sink"
+msgstr "Muara"
+
+#: ../conduit/gtkui/ConflictResolver.py:150
+#: ../conduit/gtkui/ConflictResolver.py:151
+#, python-format
+msgid "Conflicts (%s)"
+msgstr "Konflik (%s)"
+
+#. name,                      #url
+#: ../conduit/gtkui/UI.py:33
+msgid "Introduction"
+msgstr "Pengantar"
+
+#: ../conduit/gtkui/UI.py:34
+msgid "Writing a Data Provider"
+msgstr "Menulis suatu Penyedia Data"
+
+#: ../conduit/gtkui/UI.py:35
+msgid "API Documentation"
+msgstr "Dokumentasi API"
+
+#: ../conduit/gtkui/UI.py:36
+msgid "Test Results"
+msgstr "Hasil Uji"
+
+#: ../conduit/gtkui/UI.py:52
+msgid "Examples"
+msgstr "Contoh"
+
+#. Build some liststores to display
+#: ../conduit/gtkui/UI.py:139
+msgid "Convert from"
+msgstr "Konversikan dari"
+
+#: ../conduit/gtkui/UI.py:140
+msgid "into"
+msgstr "ke"
+
+#: ../conduit/gtkui/UI.py:190
+msgid "Relationship Database"
+msgstr "Basis Data Relasi"
+
+#: ../conduit/gtkui/UI.py:194
+msgid "Conversions Available"
+msgstr "Konversi Tersedia"
+
+#: ../conduit/gtkui/UI.py:200
+#: ../conduit/gtkui/Tree.py:355
+#: ../conduit/modules/FileModule/FileConfiguration.py:118
+msgid "Name"
+msgstr "Nama"
+
+#: ../conduit/gtkui/UI.py:204
+msgid "Loaded"
+msgstr "Dimuat"
+
+#: ../conduit/gtkui/UI.py:329
+#, python-format
+msgid " - %s (Development Version)"
+msgstr " - %s (Versi Pengembangan)"
+
+#: ../conduit/gtkui/UI.py:331
+msgid " - Running Uninstalled"
+msgstr " - Berjalan Tanpa Terpasang"
+
+#: ../conduit/gtkui/UI.py:375
+msgid "Developers"
+msgstr "Para Pengembang"
+
+#: ../conduit/gtkui/UI.py:539
+#: ../conduit/hildonui/UI.py:127
+msgid "Synchronization in progress. Do you want to cancel it?"
+msgstr "Penyelarasan tengah berlangsung. Apakah Anda ingin membatalkannya?"
+
+#: ../conduit/gtkui/UI.py:712
+msgid "_Synchronize All"
+msgstr "_Selaraskan Semua"
+
+#: ../conduit/gtkui/UI.py:712
+msgid "Synchronizes All Groups"
+msgstr "Selaraskan Semua Grup"
+
+#: ../conduit/gtkui/UI.py:713
+msgid "_Cancel Synchronization"
+msgstr "_Batalkan Penyelarasan"
+
+#: ../conduit/gtkui/UI.py:713
+msgid "Cancels Currently Synchronizing Groups"
+msgstr "Batalkan Grup Yang Kini Tengah Diselaraskan"
+
+#: ../conduit/gtkui/UI.py:714
+msgid "_Quit"
+msgstr "_Keluar"
+
+#: ../conduit/gtkui/UI.py:714
+msgid "Close Conduit"
+msgstr "Tutup Conduit"
+
+#: ../conduit/gtkui/UI.py:731
+msgid "Synchronizing"
+msgstr "Menyelaraskan"
+
+#: ../conduit/gtkui/UI.py:737
+msgid "Synchronization Complete"
+msgstr "Penyelarasan Selesai"
+
+#: ../conduit/gtkui/UI.py:741
+msgid "Synchronization Error"
+msgstr "Galat Penyelarasan"
+
+#: ../conduit/gtkui/Tree.py:364
+msgid "Description"
+msgstr "Deskripsi"
+
+#: ../conduit/gtkui/ConfigItems.py:733
+#, python-format
+msgid "Total: %d"
+msgstr "Total: %d"
+
+#: ../conduit/gtkui/WindowConfigurator.py:14
+msgid "Configure"
+msgstr "Tata"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:58
+msgid "Backpack Notes"
+msgstr "Catatan Backpack"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:59
+msgid "Store things in Backpack Notes"
+msgstr "Simpan sesuatu dalam Backpack Notes"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:105
+#: ../conduit/modules/FlickrModule/FlickrModule.py:307
+#: ../conduit/modules/ZotoModule/ZotoModule.py:243
+msgid "Account details"
+msgstr "Rincian akun"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:106
+msgid "Login"
+msgstr "Log masuk"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:109
+msgid "API key"
+msgstr "Kunci API"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:112
+msgid "Saved notes"
+msgstr "Catatan tersimpan"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:113
+msgid "Save notes in page"
+msgstr "Simpan catatan dalam halaman"
+
+#: ../conduit/modules/BansheeModule/BansheeModule.py:52
+msgid "Banshee Playlists"
+msgstr "Daftar Putar Banshee"
+
+#: ../conduit/modules/BansheeModule/BansheeModule.py:53
+msgid "Synchronize your Banshee playlists"
+msgstr "Selaraskan daftar putar Banshee Anda"
+
+#: ../conduit/modules/BansheeModule/BansheeModule.py:187
+#: ../conduit/modules/BansheeModule/BansheeModule.py:188
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:120
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:121
+msgid "Playlists"
+msgstr "Daftar putar"
+
+#: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:29
+msgid "Box.net"
+msgstr "Box.net"
+
+#: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:30
+msgid "Synchronize your Box.net files"
+msgstr "Selaraskan berkas Box.net Anda"
+
+#: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:290
+#: ../conduit/modules/FileModule/FileModule.py:86
+msgid "Folder"
+msgstr "Folder"
+
+#: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:291
+msgid "Folder name"
+msgstr "Name folder"
+
+#: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:295
+msgid "Load folders"
+msgstr "Muat folder"
+
+#: ../conduit/modules/ConverterModule.py:91
+msgid "Note-"
+msgstr "Catatan-"
+
+#: ../conduit/modules/DesktopWallpaperModule.py:38
+msgid "Wallpaper"
+msgstr "Gambar latar"
+
+#: ../conduit/modules/DesktopWallpaperModule.py:39
+msgid "Changes your Desktop Wallpaper"
+msgstr "Ubah Gambar Latar Deskop Anda"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:110
+#, python-format
+msgid "Select %s"
+msgstr "Pilih %s"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:130
+msgid "Evolution Contacts"
+msgstr "Kontak Evolution"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:131
+msgid "Synchronize your contacts"
+msgstr "Selaraskan kontak Anda"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:181
+msgid "Evolution Calendar"
+msgstr "Kalender Evolution"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:182
+msgid "Synchronize your calendar"
+msgstr "Selaraskan kalender Anda"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:243
+msgid "Evolution Tasks"
+msgstr "Tugas Evolution"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:244
+msgid "Synchronize your tasks"
+msgstr "Selaraskan tugas Anda"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:300
+msgid "Evolution Memos"
+msgstr "Memo Evolution"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:301
+msgid "Synchronize your memos"
+msgstr "Selaraskan memo Anda"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:38
+msgid "Facebook"
+msgstr "Facebook"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:39
+msgid "Synchronize your Facebook photos"
+msgstr "Selaraskan foto Facebook Anda"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:124
+#: ../conduit/modules/FlickrModule/FlickrModule.py:282
+msgid "Loading album list..."
+msgstr "Memuat daftar album..."
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:128
+msgid "Failed to connect"
+msgstr "Gagal menyambung"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:131
+msgid "Logged in"
+msgstr "Log masuk"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:133
+msgid "Failed to login"
+msgstr "Gagal log masuk"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:145
+#: ../conduit/modules/FspotModule/FspotModule.py:246
+msgid "Status"
+msgstr "Status"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:150
+#: ../conduit/modules/iPodModule/iPodModule.py:566
+#: ../conduit/modules/ZotoModule/ZotoModule.py:252
+msgid "Album"
+msgstr "Album"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:151
+msgid "Album name"
+msgstr "Nama album"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:156
+msgid "Load albums"
+msgstr "Muat album"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:58
+msgid "RSS Feed"
+msgstr "Asupan RSS"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:59
+msgid "Synchronize data from RSS enclosures"
+msgstr "Selaraskan data dari lampiran RSS"
+
+#. FIXME: Add Randomize
+#: ../conduit/modules/FeedModule/FeedModule.py:114
+msgid "Feed details"
+msgstr "Rincian asupan"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:115
+msgid "Feed address"
+msgstr "Alamat asupan"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:118
+msgid "Enclosure settings"
+msgstr "Pengaturan lampiran"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:119
+msgid "Limit downloaded enclosures"
+msgstr "Batasi lampiran yang diunduh"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:125
+msgid "Limit to"
+msgstr "Batasi ke"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:129
+msgid "Randomize enclosures"
+msgstr "Acak lampiran"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:133
+msgid "Download types"
+msgstr "Tipe pengunduhan"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:134
+msgid "Download audio files"
+msgstr "Unduh berkas audio"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:135
+msgid "Download video files"
+msgstr "Unduh berkas video"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:136
+msgid "Download photo files"
+msgstr "Unduh berkas foto"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:112
+msgid "Icon"
+msgstr "Ikon"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:124
+#: ../conduit/modules/GConfModule/GConfModule.py:138
+msgid "Items"
+msgstr "Butir-butir"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:150
+#, python-format
+msgid "<i>Contains %s files</i>"
+msgstr "<i>Memuat %s berkas</i>"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:249
+msgid "Include file..."
+msgstr "Sertakan berkas..."
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:259
+msgid "All files"
+msgstr "Semua berkas"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:272
+msgid "Include folder..."
+msgstr "Sertakan folder..."
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:315
+msgid "Please Name All Folders"
+msgstr "Silakan Namai Semua Folder"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:316
+msgid "All folders require a descriptive name. To name a folder simply click on it"
+msgstr "Semua folder memerlukan nama yang deskriptif. Untuk menamai folder klik itu saja"
+
+#: ../conduit/modules/FileModule/FileModule.py:27
+msgid "Files"
+msgstr "Berkas"
+
+#: ../conduit/modules/FileModule/FileModule.py:28
+msgid "Source for synchronizing multiple files"
+msgstr "Sumber untuk menyelaraskan banyak berkas"
+
+#: ../conduit/modules/FileModule/FileModule.py:87
+msgid "Synchronize folders"
+msgstr "Menyelaraskan berkas"
+
+#: ../conduit/modules/Firefox3Module/Firefox3Module.py:40
+msgid "Firefox 3 Bookmarks"
+msgstr "Penanda Taut Firefox 3"
+
+#: ../conduit/modules/Firefox3Module/Firefox3Module.py:41
+msgid "Syncronize your Firefox 3 Bookmarks"
+msgstr "Selaraskan Penanda Buku Firefox 3 Anda"
+
+#: ../conduit/modules/Firefox3Module/Firefox3Module.py:100
+msgid "Firefox Profile"
+msgstr "Profil Firefox"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:76
+msgid "Flickr"
+msgstr "Flickr"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:77
+msgid "Synchronize your Flickr.com photos"
+msgstr "Selaraskan foto Flickr.com Anda"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:287
+msgid "Failed to connect."
+msgstr "Gagal menyambung."
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:290
+msgid "Album names loaded."
+msgstr "Nama album dimuat."
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:292
+msgid "Failed to login."
+msgstr "Gagal log masuk."
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:303
+msgid "Logging in, please wait..."
+msgstr "Sedang log masuk, mohon tunggu..."
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:308
+#: ../conduit/modules/GoogleBookmarksModule.py:67
+#: ../conduit/modules/ZotoModule/ZotoModule.py:244
+msgid "Username"
+msgstr "Nama pengguna"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:319
+msgid "Authenticate"
+msgstr "Otentikasikan"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:323
+#: ../conduit/modules/ZotoModule/ZotoModule.py:251
+msgid "Saved photo settings"
+msgstr "Pengaturan foto tersimpan"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:328
+msgid "Resize photos"
+msgstr "Ubah ukuran foto"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:329
+msgid "Do not resize"
+msgstr "Jangan ubah ukuran"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:332
+msgid "Photos are public"
+msgstr "Foto adalah publik"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:28
+msgid "F-Spot"
+msgstr "F-Spot"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:29
+msgid "Synchronize your F-Spot photos"
+msgstr "Selaraskan foto F-Spot Anda"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:155
+msgid "F-Spot DBus interface is operating in read-only mode"
+msgstr "Antarmuak DBus F-Spot beroperasi dalam mode hanya baca"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:221
+msgid "F-Spot is running"
+msgstr "F-Spot sedang berjalan"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:222
+msgid "Please start F-Spot or activate the D-Bus Extension"
+msgstr "Silakan memulai F-Spot atau aktifkan Ekstensi D-Bus"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:247
+msgid "Start F-Spot"
+msgstr "Memulai F-Spot"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:251
+#: ../conduit/modules/FspotModule/FspotModule.py:252
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:71
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:73
+msgid "Tags"
+msgstr "Tag"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:265
+msgid "Add tags"
+msgstr "Tambahkan tag"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:266
+msgid "Tag name"
+msgstr "Nama tag"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:269
+msgid "Add tag"
+msgstr "Tambahkan tag"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:21
+msgid "Application Settings"
+msgstr "Pengaturan Aplikasi"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:22
+msgid "Synchronize your application settings"
+msgstr "Selaraskan pengaturan aplikasi Anda"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:31
+msgid "Metacity"
+msgstr "Metacity"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:32
+msgid "Nautilus"
+msgstr "Nautilus"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:33
+msgid "Preferred Applications"
+msgstr "Aplikasi Yang Disukai"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:34
+msgid "Desktop Interface"
+msgstr "Antarmuka Desktop"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:35
+msgid "Gnome Terminal"
+msgstr "Terminal Gnome"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:137
+msgid "Applications to Synchronize"
+msgstr "Aplikasi yang Diselaraskan"
+
+#: ../conduit/modules/GoogleBookmarksModule.py:19
+msgid "Google Bookmarks"
+msgstr "Penanda Taut Google"
+
+#: ../conduit/modules/GoogleBookmarksModule.py:20
+msgid "Sync your Google Bookmarks"
+msgstr "Selaraskan Penanda Taut Google Anda"
+
+#: ../conduit/modules/GoogleBookmarksModule.py:66
+msgid "Login Details"
+msgstr "Rincian Log Masuk"
+
+#: ../conduit/modules/GoogleBookmarksModule.py:70
+#: ../conduit/modules/ZotoModule/ZotoModule.py:247
+msgid "Password"
+msgstr "Kata sandi"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:277
+msgid "Synchronize your iPod notes"
+msgstr "Selaraskan catatan iPod Anda"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:392
+msgid "Contacts"
+msgstr "Kontak"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:393
+msgid "Synchronize your iPod contacts"
+msgstr "Selaraskan kontak iPod Anda"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:428
+msgid "Calendar"
+msgstr "Kalender"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:429
+msgid "Synchronize your iPod calendar"
+msgstr "Selaraskan kalender iPod Anda"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:465
+msgid "Synchronize your iPod photos"
+msgstr "Selaraskan foto iPod Anda"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:570
+msgid "Delete"
+msgstr "Hapus"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:573
+msgid "Delete All Photos"
+msgstr "Hapus Semua Foto"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:803
+#: ../conduit/modules/iPodModule/iPodModule.py:920
+#: ../conduit/modules/N800Module/N800Module.py:77
+msgid "Encoding"
+msgstr "Enkoding"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:919
+msgid "Conversion options"
+msgstr "Opsi konversi"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:924
+msgid "Keep converted files"
+msgstr "Simpan berkas yang dikonversi"
+
+#. To translators: defaul music folder of N800
+#: ../conduit/modules/iPodModule/iPodModule.py:954
+#: ../conduit/modules/N800Module/N800Module.py:133
+msgid "Music"
+msgstr "Musik"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:955
+msgid "Synchronize your iPod music"
+msgstr "Selaraskan musik iPod Anda"
+
+#. To translators: defaul video folder of N800
+#: ../conduit/modules/iPodModule/iPodModule.py:990
+#: ../conduit/modules/N800Module/N800Module.py:157
+msgid "Video"
+msgstr "Video"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:991
+msgid "Synchronize your iPod videos"
+msgstr "Selaraskan video iPod Anda"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:1015
+msgid "Movie"
+msgstr "Film"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:1016
+msgid "Music Video"
+msgstr "Video Musik"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:1017
+msgid "TV Show"
+msgstr "Pertunjukan TV"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:1019
+msgid "Video kind"
+msgstr "Jenis video"
+
+#. Translators: Translate this in derived classes.
+#: ../conduit/modules/N800Module/N800Module.py:55
+msgid "Conduit"
+msgstr "Conduit"
+
+#: ../conduit/modules/N800Module/N800Module.py:105
+msgid "N800 Files"
+msgstr "Berkas N800"
+
+#: ../conduit/modules/N800Module/N800Module.py:106
+msgid "Synchronizes files/folders to a N800 device"
+msgstr "Selaraskan berkas/folder ke perangkat N800"
+
+#. To translators: default backup folder of N800
+#: ../conduit/modules/N800Module/N800Module.py:111
+msgid "Backups"
+msgstr "Cadangan"
+
+#: ../conduit/modules/N800Module/N800Module.py:126
+msgid "N800 Music"
+msgstr "Musik N800"
+
+#: ../conduit/modules/N800Module/N800Module.py:127
+msgid "Synchronizes music to a N800 device"
+msgstr "Selaraskan musik ke perangkat N800"
+
+#: ../conduit/modules/N800Module/N800Module.py:150
+msgid "N800 Videos"
+msgstr "Video N800"
+
+#: ../conduit/modules/N800Module/N800Module.py:151
+msgid "Synchronizes video to a N800 device"
+msgstr "Selaraskan video ke perangkat N800"
+
+#: ../conduit/modules/N800Module/N800Module.py:174
+msgid "N800 Photos"
+msgstr "Foto N800"
+
+#: ../conduit/modules/N800Module/N800Module.py:175
+msgid "Synchronizes photos to an N800 device"
+msgstr "Selaraskan foto ke perangkat N800"
+
+#. To translators: default photos folder of N800
+#: ../conduit/modules/N800Module/N800Module.py:181
+msgid "Photo"
+msgstr "Foto"
+
+#: ../conduit/modules/NautilusBookmarksModule.py:19
+msgid "Nautilus Bookmarks"
+msgstr "Penanda Taut Nautilus"
+
+#: ../conduit/modules/NautilusBookmarksModule.py:20
+msgid "Sync your Nautilus Bookmarks"
+msgstr "Selaraskan Penanda Taut Nautilus Anda"
+
+#: ../conduit/modules/NautilusBookmarksModule.py:145
+msgid "Sync bookmarks to local places/files"
+msgstr "Selaraskan penanda taut ke tempat/berkas lokal"
+
+#: ../conduit/modules/NautilusBookmarksModule.py:148
+msgid "Sync bookmarks to remote places/files"
+msgstr "Selaraskan penanda tau ke berkas/tempat jauh"
+
+#: ../conduit/modules/NetworkModule/Server.py:147
+msgid "Network"
+msgstr "Jaringan"
+
+#: ../conduit/modules/NetworkModule/Server.py:148
+msgid "Enable synchronization via network"
+msgstr "Aktifkan penyelarasan melalui jaringan"
+
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:48
+msgid "Rhythmbox Music"
+msgstr "Musik Rhythmbox"
+
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:49
+msgid "Synchronize songs from your Rhythmbox playlists"
+msgstr "Selaraskan lagu dari daftar putar Rhythmbox Anda"
+
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:73
+msgid "Unknown"
+msgstr "Tak dikenal"
+
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:36
+msgid "Shotwell"
+msgstr "Shotwell"
+
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:37
+msgid "Sync from your Shotwell photo library"
+msgstr "Selaraskan dari pustaka foto Shotwell Anda"
+
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:56
+msgid "Disabling Shotwell module, unable to open sqlite3 data source"
+msgstr "Menonaktifkan modul Shotwell, tak bisa membuka sumber data sqlite3"
+
+#: ../conduit/modules/ShutterflyModule/ShutterflyModule.py:26
+msgid "Shutterfly"
+msgstr "Shutterfly"
+
+#: ../conduit/modules/ShutterflyModule/ShutterflyModule.py:27
+msgid "Synchronize your Shutterfly photos"
+msgstr "Selaraskan foto Shutterfly Anda"
+
+#: ../conduit/modules/ShutterflyModule/shutterfly/shutterfly.py:33
+msgid "%Y-%m-%d %H:%M:%S"
+msgstr "%Y-%m-%d %H:%M:%S"
+
+#: ../conduit/modules/SmugMugModule/SmugMugModule.py:28
+msgid "SmugMug"
+msgstr "SmugMug"
+
+#: ../conduit/modules/SmugMugModule/SmugMugModule.py:29
+msgid "Synchronize your SmugMug.com photos"
+msgstr "Selaraskan foto SmugMug.com Anda"
+
+#: ../conduit/modules/ZotoModule/ZotoModule.py:154
+msgid "Zoto"
+msgstr "Zoto"
+
+#: ../conduit/modules/ZotoModule/ZotoModule.py:155
+msgid "Synchronize your Zoto photos"
+msgstr "Selaraskan foto Zoto Anda"
+
