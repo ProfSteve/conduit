@@ -1,0 +1,688 @@
+# Indonesian translation for conduit.
+# Copyright (C) 2012 conduit's COPYRIGHT HOLDER
+# This file is distributed under the same license as the conduit package.
+# Andika Triwidada <andika@gmail.com>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: conduit master\n"
+"POT-Creation-Date: 2011-11-22 18:16+0000\n"
+"PO-Revision-Date: 2012-06-07 12:57+0700\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
+"Language-Team: Indonesian <gnome@i15n.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-Language: Indonesian\n"
+"X-Poedit-Country: INDONESIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: C/conduit.xml:122(None)
+msgid "@@image: 'figures/conduit-gui-parts.png'; md5=e7c7ebe8cac03bd0768e2de105155630"
+msgstr "."
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: C/conduit.xml:214(None)
+msgid "@@image: 'figures/conduit-login.png'; md5=6e4fe96c2d518d23724e1a70a53fa026"
+msgstr "."
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: C/conduit.xml:233(None)
+msgid "@@image: 'figures/conduit-dp.png'; md5=ce99ba0bdc70c854b1f8a9999435e250"
+msgstr "."
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: C/conduit.xml:279(None)
+msgid "@@image: 'figures/conduit-folder-configuration.png'; md5=ece672e8cf42e26947eee6e3fb5af7f9"
+msgstr "."
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: C/conduit.xml:345(None)
+msgid "@@image: 'figures/network-sync-pc1.png'; md5=118578724965f8af01b66ccdc7e39328"
+msgstr "."
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: C/conduit.xml:358(None)
+msgid "@@image: 'figures/network-sync-pc2.png'; md5=565769e5f51b3decfebcfa18989ee391"
+msgstr "."
+
+#: C/conduit.xml:14(title)
+msgid "Conduit Manual"
+msgstr "Manual Conduit"
+
+#: C/conduit.xml:16(para)
+msgid "Conduit is a program that synchronizes things"
+msgstr "Conduit adalah program yang menyelaraskan berbagai hal"
+
+#: C/conduit.xml:19(year)
+msgid "2007"
+msgstr "2007"
+
+#: C/conduit.xml:20(holder)
+msgid "John Stowers"
+msgstr "John Stowers"
+
+#: C/conduit.xml:23(publishername)
+msgid "GNOME Documentation Project"
+msgstr "Projek Dokumentasi GNOME"
+
+#: C/conduit.xml:28(firstname)
+msgid "John"
+msgstr "John"
+
+#: C/conduit.xml:29(surname)
+msgid "Stowers"
+msgstr "Stowers"
+
+#: C/conduit.xml:32(firstname)
+msgid "Brent"
+msgstr "Brent"
+
+#: C/conduit.xml:33(surname)
+msgid "Gueth"
+msgstr "Gueth"
+
+#: C/conduit.xml:39(revnumber)
+msgid "Conduit Manual 1.0"
+msgstr "Manual Conduit 1.0"
+
+#: C/conduit.xml:40(date)
+msgid "2008-01-03"
+msgstr "2008-01-13"
+
+#: C/conduit.xml:44(releaseinfo)
+msgid "This manual describes version 1.0 of Conduit"
+msgstr "Manual ini menjelaskan Conduit versi 1.0"
+
+#: C/conduit.xml:48(title)
+msgid "What is Conduit"
+msgstr "Apa itu Conduit"
+
+#: C/conduit.xml:49(para)
+msgid "<ulink type=\"http\" url=\"http://www.conduit-project.org\">Conduit</ulink> is a synchronization application for GNOME. It allows you to synchronize your files, photos, emails, contacts, notes, calendar data and any other type of personal information and synchronize that data with another computer, an online service, or even another electronic device. Conduit manages the synchronization and conversion of data into other formats. For example, Conduit allows you to;"
+msgstr "<ulink type=\"http\" url=\"http://www.conduit-project.org\">Conduit</ulink> adalah sebuah aplikasi penyelarasan bagi GNOME. Ini mengijinkan Anda menyelaraskan berkas, foto, surel, kontak, catatan, data kalender Anda, dan sebarang informasi pribadi tipe lain dan menyelaraskan data itu dengan komputer lain, suatu layanan daring, atau bahkan perangkat elektronik lain. Conduit mengelola penyelarasan dan konversi data ke dalam format lain. Sebagai contoh, Conduit memungkinkan Anda untuk;"
+
+#: C/conduit.xml:53(para)
+msgid "Synchronize your <ulink type=\"http\" url=\"http://www.gnome.org/projects/tomboy/\">Tomboy notes</ulink> with another computer"
+msgstr "Menyelaraskan <ulink type=\"http\" url=\"http://www.gnome.org/projects/tomboy/\">catatan Tomboy</ulink> Anda dengan komputer lain"
+
+#: C/conduit.xml:56(para)
+msgid "Synchronize your PIM data to your mobile phone, <ulink type=\"http\" url=\"http://en.wikipedia.org/wiki/IPod\">iPod</ulink>, <ulink type=\"http\" url=\"http://en.wikipedia.org/wiki/Nokia_N800\">Nokia Internet tablet</ulink>, or between computers"
+msgstr "Menyelaraskan data PIM Anda ke telepon genggam Anda, <ulink type=\"http\" url=\"http://en.wikipedia.org/wiki/IPod\">iPod</ulink>, <ulink type=\"http\" url=\"http://en.wikipedia.org/wiki/Nokia_N800\">Nokia Internet tablet</ulink>, atau antara komputer"
+
+#: C/conduit.xml:59(para)
+msgid "Upload photos to <ulink type=\"http\" url=\"http://www.flickr.com\">Flickr</ulink>, <ulink type=\"http\" url=\"http://picasaweb.google.com\">Picasa</ulink>, <ulink type=\"http\" url=\"http://www.smugmug.com\">Smugmug</ulink>, <ulink type=\"http\" url=\"http://shutterfly.com\">Shutterfly</ulink> and your iPod,"
+msgstr "Mengunggah foto ke <ulink type=\"http\" url=\"http://www.flickr.com\">Flickr</ulink>, <ulink type=\"http\" url=\"http://picasaweb.google.com\">Picasa</ulink>, <ulink type=\"http\" url=\"http://www.smugmug.com\">Smugmug</ulink>, <ulink type=\"http\" url=\"http://shutterfly.com\">Shutterfly</ulink> dan iPod Anda,"
+
+#: C/conduit.xml:61(para)
+msgid "... and many more"
+msgstr "... dan banyak lagi"
+
+#: C/conduit.xml:63(para)
+msgid "Any combination you can imagine, Conduit will take care of the conversion and synchronization."
+msgstr "Sebarang kombinasi yang dapat Anda bayangkan, Conduit akan menangani konversi dan penyelarasan."
+
+#: C/conduit.xml:65(title)
+msgid "Use Cases"
+msgstr "Use Case"
+
+#: C/conduit.xml:68(para)
+msgid "Fred wants to sync his tomboy notes with <ulink type=\"http\" url=\"http://www.google.com/notebook\">Google notebook</ulink>"
+msgstr "Fred ingin menyelaraskan catatan tomboynya dengan <ulink type=\"http\" url=\"http://www.google.com/notebook\">Google notebook</ulink>"
+
+#: C/conduit.xml:71(para)
+msgid "Joey wants to sync whatever is on his desktop to his <ulink type=\"http\" url=\"http://www.backpackit.com\">backpack account</ulink>"
+msgstr "Joey ingin menyelaraskan apapun yang ada di desktopnya ke <ulink type=\"http\" url=\"http://www.backpackit.com\">akun backpacknya</ulink>"
+
+#: C/conduit.xml:73(para)
+msgid "Nellie wants to keep a directory on his laptop and his desktop in sync"
+msgstr "Nellie ingin menjaga agar suatu direktori pada laptopnya dan desktopnya selaras"
+
+#: C/conduit.xml:74(para)
+msgid "Paul wants to keep his evolution contacts in sync with his mobile phone"
+msgstr "Paul ingin menjaga agar kontak evolutionnya selaras dengan telepon genggamnya"
+
+#: C/conduit.xml:75(para)
+msgid "Steve wants to keep his gnome preferences in sync between his two computers"
+msgstr "Steve ingin menjaga agar preferensi gnomenya selaras antar kedua komputernya"
+
+#: C/conduit.xml:77(para)
+msgid "John wants to keep a directory of <ulink type=\"http\" url=\"http://openoffice.org\">OpenOffice</ulink> documents in sync with copies held on <ulink type=\"http\" url=\"http://docs.google.com\">Google Docs</ulink>"
+msgstr "John ingin menjaga agar direktori dokumen <ulink type=\"http\" url=\"http://openoffice.org\">OpenOffice</ulink> selaras dengan salinannya pada <ulink type=\"http\" url=\"http://docs.google.com\">Google Docs</ulink>"
+
+#: C/conduit.xml:79(para)
+msgid "Pete wants to have photos saved to his server to be pushed to an external back up (usb hard drive / off-site ftp)"
+msgstr "Pete ingin agar foto yang disimpan pada servernya di-push ke cadangan eksternal (hard drive usb / situs luar ftp)"
+
+#: C/conduit.xml:83(title)
+#: C/conduit.xml:114(title)
+#: C/conduit.xml:254(title)
+msgid "Introduction"
+msgstr "Perkenalan"
+
+#: C/conduit.xml:84(para)
+msgid "Conduit's goals are to synchronize your data as seamlessly as possible, be it from remote device or remote websites. It is about extending your life as you see it needs to be, no longer constrained by data, devices or formats. Conduit enables you to take your data where you want when you want. All of your mobile devices could be synchronized automatically by Conduit. Home file back-ups to a remote server? Synced automatically."
+msgstr "Tujuan Conduit adalah untuk menyelaraskan data Anda semulus mungkin, apakah dari perangkat jauh atau situs web jauh. Ini adalah tentang mengembangkan hidup Anda sebagaimana Anda perlukan, tak lagi dibatasi oleh data, perangkat, atau format. Conduit memungkinkan Anda membawa data kemanapun Anda mau. Semua perangkat bergerak Anda dapat diselaraskan secara otomatis oleh Conduit. Berkas di rumah dibuatkan cadangannya di server jauh? Diselaraskan secara otomatis."
+
+#: C/conduit.xml:85(para)
+msgid "It may sometimes seem that Conduit is overly complicated, one of the design goals has always been to make the interface as simple and intuitive as possible. However Conduit is much more powerful then the simplistic design may lead on. This documentation will describe all the configuration options for groups and data providers, while the following gives some examples of items you may wish to synchronize;"
+msgstr "Terkadang sepertinya Conduit terlalu rumit, satu dari tujuan disain adalah selalu membuat antar muka sesederhana dan seintuitif mungkin. Namun Conduit jauh lebih hebat daripada yang digambarkan oleh disain yang sederhana. Dokumentasi ini akan menjelaskan semua opsi konfigurasi bagi penyedia data dan grup, sementara yang berikut ini akan memberikan contoh-contoh dari hal-hal yang mungkin hendak Anda selaraskan."
+
+#: C/conduit.xml:88(para)
+msgid "A <ulink type=\"http\" url=\"http://www.gnome.org\">GNOME</ulink> user might store information in a wide variety of places on the desktop including;"
+msgstr "Seorang pengguna <ulink type=\"http\" url=\"http://www.gnome.org\">GNOME</ulink> mungkin menyimpan informasi di tempat pada desktop yang sangat berragam termasuk:"
+
+#: C/conduit.xml:91(para)
+msgid "<ulink type=\"http\" url=\"http://www.gnome.org/projects/evolution/\">Evolution</ulink> (email, calendar, address book)"
+msgstr "<ulink type=\"http\" url=\"http://www.gnome.org/projects/evolution/\">Evolution</ulink> (surel, kalender, buku alamat)"
+
+#: C/conduit.xml:95(para)
+msgid "<ulink type=\"http\" url=\"http://www.gnome.org/projects/tomboy/\">Tomboy</ulink> (notes)"
+msgstr "<ulink type=\"http\" url=\"http://www.gnome.org/projects/tomboy/\">Tomboy</ulink> (catatan)"
+
+#: C/conduit.xml:98(para)
+msgid "Directories (important files)"
+msgstr "Direktori (berkas-berkas penting)"
+
+#: C/conduit.xml:99(para)
+msgid "Photos"
+msgstr "Foto"
+
+#: C/conduit.xml:100(para)
+msgid "Bookmarks (web and feeds)"
+msgstr "Penanda taut (web dan asupan)"
+
+#: C/conduit.xml:101(para)
+msgid "Music"
+msgstr "Musik"
+
+#: C/conduit.xml:104(para)
+msgid "<ulink type=\"http\" url=\"http://del.icio.us\">Delicious</ulink> (bookmarks)"
+msgstr "<ulink type=\"http\" url=\"http://del.icio.us\">Delicious</ulink> (penanda taut)"
+
+#: C/conduit.xml:104(para)
+msgid "<ulink type=\"http\" url=\"http://www.gmail.com\">Gmail</ulink> (bookmarks, calendar, feeds, email, photos)"
+msgstr "<ulink type=\"http\" url=\"http://www.gmail.com\">Gmail</ulink> (penanda taut, kalender, asupan, surel, foto)"
+
+#: C/conduit.xml:104(para)
+msgid "<ulink type=\"http\" url=\"http://www.flickr.com\">Flickr</ulink> (photos)"
+msgstr "<ulink type=\"http\" url=\"http://www.flickr.com\">Flickr</ulink> (foto)"
+
+#: C/conduit.xml:104(para)
+msgid "The user might also use one of the many popular online services including <placeholder-1/>"
+msgstr "Pengguna mungkin juga memakai satu dari banyak layanan daring populer termasuk <placeholder-1/>"
+
+#: C/conduit.xml:105(para)
+msgid "A second laptop, also running GNOME"
+msgstr "Laptop kedua, juga menjalankan GNOME"
+
+#: C/conduit.xml:105(para)
+msgid "A mobile phone"
+msgstr "Telepon genggam"
+
+#: C/conduit.xml:105(para)
+msgid "A <ulink type=\"http\" url=\"http://www.nokia.com\">Nokia</ulink> 770/800"
+msgstr "Sebuah <ulink type=\"http\" url=\"http://www.nokia.com\">Nokia</ulink> 770/800"
+
+#: C/conduit.xml:105(para)
+msgid "A <ulink type=\"http\" url=\"http://www.palm.com\">Palm</ulink> or <ulink type=\"http\" url=\"http://www.microsoft.com/windowsmobile/default.mspx\">Windows Mobile</ulink> Pocket PC"
+msgstr "Sebuah <ulink type=\"http\" url=\"http://www.palm.com\">Palm</ulink> atau Pocket PC <ulink type=\"http\" url=\"http://www.microsoft.com/windowsmobile/default.mspx\">Windows Mobile</ulink>"
+
+#: C/conduit.xml:105(para)
+msgid "An iPod"
+msgstr "iPod"
+
+#: C/conduit.xml:105(para)
+msgid "They probably also own another electronic device such as <placeholder-1/>"
+msgstr "Mereka mungkin juga memiliki perangkat elektronik lain seperti <placeholder-1/>"
+
+#: C/conduit.xml:107(para)
+msgid "Its hard enough keeping your information organized when limited to the desktop, let alone the added burden of keeping your information in sync with any of the other services or devices listed above."
+msgstr "Cukup sulit untuk menjaga agar informasi Anda tertata ketika dibatasi ke desktop, apalagi dengan beban tambahan untuk menjaga agar informasi Anda tetap selaras dengan sebarang layanan lain atau perangkat yang didaftar di atas."
+
+#: C/conduit.xml:108(para)
+msgid "Our goal for Conduit is to allow GNOME users to keep their information in sync. Irrespective of the type, irrespective of the way in which that information is stored. Conduit should just work."
+msgstr "Tujuan kami bagi Conduit adalah untuk mengijinkan pengguna GNOME tetap menjaga informasi mereka selaras. Tak peduli pada tipe, tak peduli pada bagaimana informasi tersebut disimpan. Conduit mesti berjalan begitu saja."
+
+#: C/conduit.xml:112(title)
+msgid "Understanding the Conduit Interface"
+msgstr "Memahami Antar Muka Conduit"
+
+#: C/conduit.xml:115(para)
+msgid "Conduit has a few basic concepts worth understanding before you begin. Knowing these concepts will help you discover things that you never knew you could keep in sync, for example, uploading photos right from your mobile phone to Picasa!"
+msgstr "Conduit memiliki beberapa konsep dasar yang baik untuk dipahami sebelum Anda memulai. Mengetahui konsep-konsep ini akan membantu Anda menemukan hal-hal yang sebelumnya tidak Anda tahu dapat diselaraskan, sebagai contoh, mengunggah foto dari telepon genggam Anda langsung ke Picasa!"
+
+#: C/conduit.xml:118(title)
+msgid "Conduit GUI"
+msgstr "GUI Conduit"
+
+#: C/conduit.xml:125(para)
+msgid "The Parts of the Conduit GUI"
+msgstr "Bagian dari GUI Conduit"
+
+#: C/conduit.xml:131(para)
+msgid "<xref linkend=\"conduit-FIG-gui-parts\"/> shows the Conduit interface's four main components;"
+msgstr "<xref linkend=\"conduit-FIG-gui-parts\"/> menunjukkan empat komponen utama antar muka Conduit;"
+
+#: C/conduit.xml:133(para)
+msgid "The file, edit and help menus store operations which apply to all groups. For more information on the contents of these menus, see below."
+msgstr "Menu berkas, sunting, dan bantuan menyimpan operasi yang berlaku pada semua grup. Untuk informasi lebih lanjut tentang isi menu-menu tersebut, lihatlah di bawah."
+
+#: C/conduit.xml:133(para)
+msgid "The Menu<placeholder-1/>"
+msgstr "Menu <placeholder-1/>"
+
+#: C/conduit.xml:134(para)
+msgid "Located on the left hand side of the window, lists all of the data providers that are detected and ready for use on your system."
+msgstr "Terletak pada sisi kiri jendela, adalah daftar semua penyedia data yang terdeteksi dan siap dipakai pada sistem Anda."
+
+#: C/conduit.xml:134(para)
+msgid "Data providers are the source or destination of data you wish to sync. Please refer to the <emphasis>Data Provider</emphasis> section of the documentation to receive instructions on how to configure each data provider."
+msgstr "Penyedia data adalah sumber atau tujuan data yang ingin Anda selaraskan. Silakan mengacu ke dokumentasi bagian <emphasis>Penyedia Data</emphasis> untuk mendapat instruksi tentang bagaimana menata setiap penyedia data."
+
+#: C/conduit.xml:134(para)
+msgid "The Data Provider Pane <placeholder-1/>"
+msgstr "Panel Penyedia Data <placeholder-1/>"
+
+#: C/conduit.xml:135(para)
+msgid "Used to create groups of data providers to synchronize. Drag a data source to the left of the canvas pane and one or more data sinks to the right of the data pane to create a group. For more explanation on groups please check <xref linkend=\"conduit-providers-and-groups\"/>."
+msgstr "Dipakai untuk membuat grup penyedia data untuk penyelarasan. Seret suatu sumber data di kiri dari panel kanvas dan satu atau lebih muara data ke bagian kanan panel data untuk membuat suatu grup. Untuk penjelasan lebih lanjut tentang grup silakan periksa <xref linkend=\"conduit-providers-and-groups\"/>."
+
+#: C/conduit.xml:135(para)
+msgid "The Canvas Pane <placeholder-1/>"
+msgstr "Panel Kanvas <placeholder-1/>"
+
+#: C/conduit.xml:136(para)
+msgid "If you receive any conflict notifications while trying to run a sync job they will be listed here. For information on how to deal with possible conflicts please check the <emphasis>Conflicts and Resolutions</emphasis> section of the documentation."
+msgstr "Bila Anda menerima pemberitahuan konflik ketika mencoba menjalankan tugas penyelarasan maka mereka akan didaftar di sini. Untuk informasi tentang bagaimana menangani kemungkinan konflik silakan periksa dokumentasi bagian <emphasis>Konflik dan Penyelesaiannya</emphasis>."
+
+#: C/conduit.xml:136(para)
+msgid "The Conflicts Pane <placeholder-1/>"
+msgstr "Panel Konflik <placeholder-1/>"
+
+#: C/conduit.xml:140(title)
+msgid "The Menus"
+msgstr "Menu"
+
+#: C/conduit.xml:142(title)
+msgid "The File Menu"
+msgstr "Menu Berkas"
+
+#: C/conduit.xml:144(para)
+msgid "<menuchoice><guimenu>File</guimenu><guimenuitem>Save</guimenuitem></menuchoice> Saves all configured synchronization groups. Groups are saved automatically when you exit Conduit if you have selected <guilabel>Save Settings on Exit</guilabel> in <xref linkend=\"conduit-preferences-window\"/>"
+msgstr "<menuchoice><guimenu>Berkas</guimenu><guimenuitem>Simpan</guimenuitem></menuchoice> Menyimpan semua grup penyelarasan yang ditata. Grup disimpan secara otomatis ketika Anda keluar dari Conduit bila Anda telah memilih <guilabel>Simpan Pengaturan Saat Keluar</guilabel> dalam <xref linkend=\"conduit-preferences-window\"/>"
+
+#: C/conduit.xml:145(para)
+msgid "<menuchoice><guimenu>File</guimenu><guimenuitem>Synchronize All</guimenuitem></menuchoice> Synchronizes all groups at the same time. You can still run each sync group separately (see the <emphasis>Groups</emphasis> section), but this saves you the time of having to select and manually going through each group to start the sync process."
+msgstr "<menuchoice><guimenu>Berkas</guimenu><guimenuitem>Selaraskan Semua</guimenuitem></menuchoice> Menyelaraskan semua grup pada saat yang sama. Anda masih dapat menjalankan setip grup penyelarasan secara terpisah (lihat bagian <emphasis>Grup</emphasis>), namun ini menghemat waktu Anda daripada mesti memilih dan secara manual menuju ke grup satu per satu untuk memulai proses penyelarasan."
+
+#: C/conduit.xml:146(para)
+msgid "<menuchoice><guimenu>File</guimenu><guimenuitem>Quit</guimenuitem></menuchoice> Closes conduit. You will be prompted to stop any synchronization currently in progress."
+msgstr "<menuchoice><guimenu>Berkas</guimenu><guimenuitem>Keluar</guimenuitem></menuchoice> Menutup Conduit. Anda akan ditanya apakah akan menghentikan penyelarasan manapun yang tengah berjalan."
+
+#: C/conduit.xml:150(title)
+msgid "The Edit Menu"
+msgstr "Menu Sunting"
+
+#: C/conduit.xml:152(para)
+msgid "<menuchoice><guimenu>Edit</guimenu><guimenuitem>Clear Canvas</guimenuitem></menuchoice> Removes all configurations, data providers, and groups from the canvas pane. This allows you start using the canvas as it was a clean slate. The best time to use this is when you are re-configuring a large portion of your sync groups. There is no quick way to revert back after selecting this setting."
+msgstr "<menuchoice><guimenu>Sunting</guimenu><guimenuitem>Bersihkan Kanvas</guimenuitem></menuchoice> Menghapus semua konfigurasi, penyedia data, dan grup dari panel kanvas. Ini memungkinkan Anda untuk mulai memakai kanvas dari keadaan bersih. Waktu terbaik untuk memakai ini adalah ketika Anda menata ulang sebagian besar dari grup penyelarasan Anda. Tidak ada cara cepat untuk kembali setelah memilih pengaturan ini."
+
+#: C/conduit.xml:153(para)
+msgid "<menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice> Global Conduit settings that effect all of your sync groups and basic Conduit operations. For more information please see <xref linkend=\"conduit-preferences-window\"/>"
+msgstr "<menuchoice><guimenu>Sunting</guimenu><guimenuitem>Preferensi</guimenuitem></menuchoice> Pengaturan global Conduit yang mempengaruhi semua grup penyelarasan Anda dan operasi dasar Conduit. Untuk informasi lebih lanjut silakan lihat <xref linkend=\"conduit-preferences-window\"/>"
+
+#: C/conduit.xml:157(title)
+msgid "The Help Menu"
+msgstr "Menu Bantuan"
+
+#: C/conduit.xml:159(para)
+msgid "<menuchoice><guimenu>Help</guimenu><guimenuitem>Developers</guimenuitem></menuchoice> If you are developer, and interested in contributing to Conduit, then this option includes links to all the appropriate documentation."
+msgstr "<menuchoice><guimenu>Bantuan</guimenu><guimenuitem>Pengembang</guimenuitem></menuchoice> Bila Anda seorang pengembang, dan tertarik untuk menyumbang ke Conduit, maka opsi ini memuat taut ke semua dokumentasi yang sesuai."
+
+#: C/conduit.xml:160(para)
+msgid "<menuchoice><guimenu>Help</guimenu><guimenuitem>Contents</guimenuitem></menuchoice> Shows this help document."
+msgstr "<menuchoice><guimenu>Bantuan</guimenu><guimenuitem>Isi</guimenuitem></menuchoice> Menampilkan dokumen bantuan ini."
+
+#: C/conduit.xml:161(para)
+msgid "<menuchoice><guimenu>Help</guimenu><guimenuitem>About</guimenuitem></menuchoice> Shows the version number and a list of Conduit developers."
+msgstr "<menuchoice><guimenu>Bantuan</guimenu><guimenuitem>Tentang</guimenuitem></menuchoice> Menampilkan nomor versi dan daftar pengembang Conduit."
+
+#: C/conduit.xml:166(title)
+msgid "The Preferences Window"
+msgstr "Jendela Preferensi"
+
+#: C/conduit.xml:167(para)
+msgid "The Conduit preferences is accessed from the Edit menu. Any setting or change that you make within the preferences menu affect all of your sync groups and basic Conduit operations."
+msgstr "Preferensi Conduit diakses dari menu Sunting. Sebarang pengaturan atau perubahan yang Anda buat dalam menu preferensi mempengaruhi semua grup penyelarasan Anda dan operasi dasar Conduit."
+
+#: C/conduit.xml:169(title)
+msgid "Configuration Tab"
+msgstr "Tab Konfigurasi"
+
+#: C/conduit.xml:170(para)
+msgid "The configuration tab is where all of Conduit's global settings are configured. There are six global settings:"
+msgstr "Tab konfigurasi adalah tempat semua pengaturan global Conduit dikonfigurasi. Ada enam pengaturan global:"
+
+#: C/conduit.xml:173(guilabel)
+msgid "Save Settings on Exit"
+msgstr "Simpan Pengaturan saat Keluar"
+
+#: C/conduit.xml:174(para)
+msgid "Instructs Conduit that all configured dataproviders and groups should be saved when the application exits."
+msgstr "Menginstruksikan Conduit bahwa semua penyedia data dan grup yang ditata mesti disimpan ketika aplikasi keluar."
+
+#: C/conduit.xml:177(guilabel)
+msgid "Show Status Icon"
+msgstr "Tampilkan Ikon Status"
+
+#: C/conduit.xml:178(para)
+msgid "Shows a status icon in the notification area. This icon animates to indicate a sync is in progress."
+msgstr "Menampilkan ikon status pada area pemberitahuan. Ikon ini beranimasi untuk menandakan bahwa penyelarasan tengah berlangsung."
+
+#: C/conduit.xml:181(guilabel)
+msgid "Minimize to Notification Area"
+msgstr "Minimalkan ke Area Notifikasi"
+
+#: C/conduit.xml:182(para)
+msgid "Instructs Conduit to minimize to the notification area instead of to the panel."
+msgstr "Menginstruksikan Conduit untuk meminimalkan ke area pemberitahuan, bukan ke panel."
+
+#: C/conduit.xml:185(guilabel)
+msgid "Use Built in Web Browser"
+msgstr "Pakai Peramban Web Bawaan"
+
+#: C/conduit.xml:186(para)
+msgid "When a data provider requires that you log onto a website, this option tells Conduit to use its own web browser to do so."
+msgstr "Ketika suatu penyedia data memerlukan agar Anda log masuk ke suatu situs web, opsi ini memberitahu Conduit untuk memakai peramban webnya sendiri untuk melakukan hal itu."
+
+#: C/conduit.xml:188(guilabel)
+msgid "When an Item Has Been Deleted"
+msgstr "Ketika Suatu Butir Telah Dihapus"
+
+#: C/conduit.xml:189(guilabel)
+msgid "Where There is a Two Way Conflict"
+msgstr "Ketika Ada Konflik Dua Arah"
+
+#: C/conduit.xml:193(title)
+msgid "Data Providers Tab"
+msgstr "Tab Penyedia Data"
+
+#: C/conduit.xml:194(para)
+msgid "This tab shows a list of the data providers that are currently installed."
+msgstr "Tab ini menampilkan daftar penyedia data yang kini terpasang."
+
+#: C/conduit.xml:197(title)
+msgid "Data Conversions Tab"
+msgstr "Tab Konversi Data"
+
+#: C/conduit.xml:198(para)
+msgid "This tab lists the data conversions that Conduit is capable of performing."
+msgstr "Tab ini mendaftar konversi data yang dapat dilakukan oleh Conduit."
+
+#: C/conduit.xml:201(title)
+msgid "Mapping DB"
+msgstr "DB Pemetaan"
+
+#: C/conduit.xml:202(para)
+msgid "This is a list of the UID that Conduit uses to maintain accurate sync data from different sources. Here you have the option to clear the mapping database."
+msgstr "Ini adalah daftar UID yang dipakai Conduit untuk memelihara data penyelarasan yang akurat dari sumber yang berbeda-beda. Di sini Anda punya pilihan untuk membersihkan basis data pemetaan."
+
+#: C/conduit.xml:206(title)
+msgid "The Web Login Window"
+msgstr "Jendela Log Masuk Web"
+
+#: C/conduit.xml:207(para)
+msgid "Sometimes you will be required to log into a website associated with certain data providers. The frequency at which you may have to log in is not determined by Conduit, but by the security policy of the respective data provider. For example, Box.net requires you to log in every time Conduit is run, whereas Flickr only requires you to log in once, to give permission to Conduit to upload photos. If you are required to log into a website, and you have selected the <guilabel>Use Built in Web Browser</guilabel> from the Conduit preferences, then a window will pop up like the one shown below."
+msgstr "Terkadang Anda perlu log masuk ke suatu situs web yang terkait dengan penyedia data tertentu. Frekuensi Anda mungkin harus log masuk tak ditentukan oleh Conduit, melainkan oleh kebijakan keamanan dari masing-masing penyedia data. Sebagai contoh, Box.net menuntut Anda untuk log masuk setiap kali Conduit dijalankan, sedangkan Flickr hanya menuntut Anda untuk log masuk sekali, untuk mengijinkan Conduit mengunggah foto. Bila Anda diharuskan untuk log masuk ke suatu situs web, dan Anda telah memilih <guilabel>Pakai Peramban Web Bawaan</guilabel> dari preferensi Conduit, maka suatu jendela akan muncul seperti yang ditampilkan di bawah."
+
+#: C/conduit.xml:210(title)
+msgid "Conduit Login Window"
+msgstr "Jendela Log Masuk Conduit"
+
+#: C/conduit.xml:217(para)
+msgid "The window shown when logging into data provider websites"
+msgstr "Jendela ditampilkan ketika log masuk ke situs web penyedia data"
+
+#: C/conduit.xml:225(title)
+msgid "Data Providers and Groups"
+msgstr "Penyedia Data dan Grup"
+
+#: C/conduit.xml:226(para)
+msgid "Conduit represents the things your want to synchronize graphically. When data providers get added to the canvas, they get arranged into so called groups. A group is a collection of data providers that share data. In the figure below you will see the following parts"
+msgstr "Conduit mewakili hal-hal yang ingin Anda selaraskan secara grafis. Ketika penyedia data ditambahkan ke kanvas, mereka diatur ke dalam grup. Suatu grup adalah kumpulan penyedia data yang berbagi data. Pada gambar di bawah Anda akan melihat bagian-bagian berikut"
+
+#: C/conduit.xml:229(title)
+msgid "Conduit Depicts Synchronizations Graphically"
+msgstr "Conduit Menggambarkan Penyelarasan Secara Grafis"
+
+#: C/conduit.xml:236(para)
+msgid "Parts of a Synchronization Group"
+msgstr "Bagian dari Grup Penyelarasan"
+
+#: C/conduit.xml:243(para)
+msgid "A data provider for synchronizing two way whose status indicates that it is ready to be synchronized."
+msgstr "Suatu penyedia data untuk penyelarasan dua arah yang statusnya menandakan bahwa itu telah siap untuk diselaraskan."
+
+#: C/conduit.xml:244(para)
+msgid "A group containing two folder dataproviders. The arrow has two ends, indicating that the two dataproviders will undergo a two way synchronization, that is data will flow in both directions, and both folders will contain the same information once the sync finishes."
+msgstr "Suatu grup yang memuat dua folder penyedia data. Panah memiliki dua ujung, menunjukkan bahwa dua penyedia data akan mengalami penyelarasan dua arah, bahwa data akan mengalir dalam kedua arah, dan kedua folder akan memuat informasi yang sama setelah penyelarasan berakhir."
+
+#: C/conduit.xml:245(para)
+msgid "A second folder data provider. By convention, data providers that lie on the right side of groups are called data sinks. This is because during a one way sync, data can only flow into them."
+msgstr "Folder penyedia data kedua. Sesuai perjanjian, penyedia data yang terletak di sisi kanan grup dinamai muara data. Ini karena dalam penyelarasan satu arah, data hanya dapat mengalir ke mereka."
+
+#: C/conduit.xml:246(para)
+msgid "A Facebook and Picasa data provider for uploading images to those sites. Notice that that the group has three data providers, and the arrow has changed to indicate that data will flow in only one direction, that is images will be uploaded from F-Spot to Facebook and Picasa."
+msgstr "Penyedia data Facebook dan Picasa untuk mengunggah gambar ke situs-situs tersebut. Perhatikan bahwa grup tersebut memiliki tiga penyedia data, dan panah telah berubah untuk menandakan bahwa data hanya akan mengalir pada satu arah, yaitu bahwa gambar akan diunggah dari F-Spot ke Facebook dan Picasa."
+
+#: C/conduit.xml:251(title)
+msgid "Synchronizing Something"
+msgstr "Menyelaraskan Sesuatu"
+
+#: C/conduit.xml:252(para)
+msgid "This section describes the steps required to synchronize two data providers. The example given illustrates how to synchronize two folders but the concepts are applicable to anything you wish to synchronize. If you need more information on specific settings please refer to the corresponding section of the documentation."
+msgstr "Bagian ini menjelaskan langkah-langkah yang diperlukan untuk menyelaraskan dua penyedia data. Contoh yang diberikan menggambarkan bagaimana penyelarasan dua folder tapi konsepnya juga berlaku bagi apapun yang hendak Anda selaraskan. Bila Anda perlu informasi lebih lanjut tentang pengaturan spesifik silakan mengacu ke bagian dokumentasi yang sesuai."
+
+#: C/conduit.xml:255(para)
+msgid "<xref linkend=\"conduit-FIG-dp-parts\"/> contains two groups. This section will describe the steps to recreate those groups."
+msgstr "<xref linkend=\"conduit-FIG-dp-parts\"/> memuat dua grup. Bagian ini akan menjelaskan langkah-langkah untuk membuat ulang grup tersebut."
+
+#: C/conduit.xml:257(para)
+msgid "The top group depicts a two way synchronization of two folders"
+msgstr "Grup bagian atas menggambarkan penyelarasan dua arah atas dua folder"
+
+#: C/conduit.xml:258(para)
+msgid "The bottom group depicts a one way sync of images, from F-Spot to Facebook, and to the Picasa web albums."
+msgstr "Grup bagian bawah menggambarkan penyelarasan searah atas gambar-gambar, dari F-Spot ke Facebook, dan ke album web Picasa."
+
+#: C/conduit.xml:262(title)
+msgid "Example 1: Synchronizing Two Folders"
+msgstr "Contoh 1: Penyelarasan Dua Folder"
+
+#: C/conduit.xml:263(para)
+msgid "The following steps will recreate the two way synchronization group shown as <emphasis>#1</emphasis> in the figure above."
+msgstr "Langkah-langkah berikut akan membuat ulang grup penyelarasan dua arah yang ditampilkan sebagai <emphasis>#1</emphasis> pada gambar di atas."
+
+#: C/conduit.xml:265(para)
+msgid "On your desktop create three folders named folder1, folder2, and folder3. Drag a file of your choice into folder1."
+msgstr "Pada desktop Anda buatlah tiga folder bernama folder1, folder2, dan folder3. Seret suatu berkas pilihan Anda ke folder1."
+
+#: C/conduit.xml:266(para)
+#: C/conduit.xml:305(para)
+msgid "Start Conduit"
+msgstr "Mulai Conduit"
+
+#: C/conduit.xml:268(para)
+msgid "Add a data provider for <emphasis>folder1</emphasis>"
+msgstr "Tambahkan suatu penyedia data bagi <emphasis>folder1</emphasis>"
+
+#: C/conduit.xml:269(para)
+msgid "From the data provider pane, drag the folder data provider and drop it on the left hand side of the canvas pane. This will be the data source that we are going to sync from."
+msgstr "Dari panel penyedia data, seret folder penyedia data dan jatuhkan ke sisi kiri dari panel kanvas. Ini akan menjadi sumber data tempat kita akan menyelaraskan."
+
+#: C/conduit.xml:272(para)
+msgid "Configure <emphasis>folder1</emphasis>"
+msgstr "Konfigur <emphasis>folder1</emphasis>"
+
+#: C/conduit.xml:275(title)
+msgid "Configuring Folder 1"
+msgstr "Menata Folder 1"
+
+#: C/conduit.xml:273(para)
+msgid "Double click on the data provider you recently dropped on the canvas. This will bring up the folder configuration window as shown below. Enter something memorable in the name field and change the <emphasis>Folder Location</emphasis> to the folder you created in step 1. <placeholder-1/>"
+msgstr "Klik ganda pada penyedia data yang baru saja Anda jatuhkan pada kanvas. Ini akan memunculkan jendela konfigurasi folder seperti ditampilkan di bawah. Masukkan sesuatu yang mudah diingat pada ruas nama dan ubah <emphasis>Lokasi Folder</emphasis> ke folder yang Anda buat pada langkah 1. <placeholder-1/>"
+
+#: C/conduit.xml:287(para)
+msgid "Add a data provider for <emphasis>folder2</emphasis>"
+msgstr "Tambahkan penyedia data bagi <emphasis>folder2</emphasis>"
+
+#: C/conduit.xml:288(para)
+msgid "Drag another folder data provider from the pane on the left. This time drop it adjacent to the folder1 dataprovider. This should result in an arrow connecting it to folder1 being created."
+msgstr "Seret folder penyedia data lain dari panel di kiri. Kali ini jatuhkan di sebelah penyedia data folder1. Ini akan menyebabkan panah yang menyambungkannya ke folder1 dibuat."
+
+#: C/conduit.xml:291(para)
+msgid "Configure <emphasis>folder2</emphasis>"
+msgstr "Konfigur <emphasis>folder2</emphasis>"
+
+#: C/conduit.xml:292(para)
+msgid "Configure the data provider so that its <emphasis>Folder Location</emphasis> points to <emphasis>folder2</emphasis> on the desktop, and importantly, its <emphasis>Folder Name</emphasis> is the same as that entered in step <emphasis>#4</emphasis>."
+msgstr "Tata penyedia data sehingga <emphasis>Lokasi Folder</emphasis>nya menunjuk ke <emphasis>folder2</emphasis> pada desktop, dan yang penting, <emphasis>Nama Folder</emphasis>nya sama dengan yang dimasukkan pada langkah <emphasis>#4</emphasis>."
+
+#: C/conduit.xml:295(para)
+msgid "Configure the synchronization parameters"
+msgstr "Tata parameter penyelarasan"
+
+#: C/conduit.xml:296(para)
+msgid "Right click on the associated group, and under sync options, select a two way sync. Since this is just a basic run through on how to setup a sync we are not going to go through any advanced syncing options in this section of the documentation. If you wish more information on the options available, please see <xref linkend=\"conduit-providers-and-groups\"/>."
+msgstr "Klik kanan pada grup yang sesuai, dan di bawah opsi penyelarasan, pilih penyelarasan dua arah. Karena ini hanya merupakan latihan dasar tentang bagaimana menyiapkan suatu penyelarasan, kita tidak akan mencoba opsi penyelarasan tingkat lanjut apapun pada bagian dokumentasi ini. Bila Anda menghendaki lebih banyak informasi atas opsi yang tersedia, silakan lihat <xref linkend=\"conduit-providers-and-groups\"/>."
+
+#: C/conduit.xml:298(para)
+msgid "Synchronize the two folders by right clicking on them and selecting sync, or from the File menu. Once the sync is finished you should see the file that you placed in folder1 on your desktop within folder2."
+msgstr "Selaraskan kedua folder dengan klik kanan pada mereka dan memilih selaraskan, atau dari menu Berkas. Setelah penyelarasan selesai Anda mesti melihat bahwa berkas yang Anda tempatkan di folder1 pada desktop Anda juga ada di dalam folder2."
+
+#: C/conduit.xml:302(title)
+msgid "Example 2: Exporting Images to Multiple Destinations"
+msgstr "Contoh 2: Mengekspor Gambar ke Beberapa Tujuan"
+
+#: C/conduit.xml:303(para)
+msgid "The second group shown in <xref linkend=\"conduit-FIG-dp-parts\"/> shows a single F-Spot data source exporting its photos to two data sinks, a Facebook one, and a Picasa one."
+msgstr "Grup kedua yang ditunjukkan dalam <xref linkend=\"conduit-FIG-dp-parts\"/> menampilkan sebuah sumber data tunggal F-Spot yang mengekspor fotonya ke dua muara data, ke Facebook, dan ke Picasa."
+
+#: C/conduit.xml:306(para)
+msgid "Start F-Spot"
+msgstr "Mulai F-Spot"
+
+#: C/conduit.xml:307(para)
+msgid "Drag a F-Spot data provider from the data provider pane and drop it onto an empty spot on the canvas. A new group containing just the F-Spot data provider will be created."
+msgstr "Seret sebuah penyedia data F-Spot dari panel penyedia data dan jatuhkan ke tempat kosong di kanvas. Suatu grup baru yang hanya memuat penyedia data F-Spot akan dibuat."
+
+#: C/conduit.xml:308(para)
+msgid "Drag Facebook and Picasa data providers into the Group that was just created."
+msgstr "Seret penyedia data Facebook dan Picasa ke dalam Grup yang baru saja dibuat."
+
+#: C/conduit.xml:309(para)
+msgid "Configure the data providers by double clicking on them."
+msgstr "Tata penyedia data dengan melakukan klik ganda pada mereka."
+
+#: C/conduit.xml:310(para)
+msgid "Now synchronize the group to upload photos. You will be prompted to log into Facebook using the Conduit login window, shown in <xref linkend=\"conduit-FIG-login\"/>."
+msgstr "Kini selaraskan grup untuk mengunggah foto. Anda akan diminta untuk log masuk ke Facebook memakai jendela log masuk Conduit, ditunjukkna dalam <xref linkend=\"conduit-FIG-login\"/>."
+
+#: C/conduit.xml:314(title)
+msgid "Summary"
+msgstr "Ringkasan"
+
+#: C/conduit.xml:315(para)
+msgid "All sync operations work exactly like this. The only difference is the data you are syncing and the providers you are using. You always follow the same sequence of steps,"
+msgstr "Semua operasi penyelarasan bekerja tepat seperti ini. Perbedaannya hanya pada data yang Anda selaraskan dan penyedia yang Anda pakai. Anda selalu mengikuti urutan langkah yang sama,"
+
+#: C/conduit.xml:317(para)
+msgid "Add dataproviders to create a new group, or to an existing group."
+msgstr "Tambahkan penyedia data untuk membuat suatu grup baru, atau ke grup yang telah ada."
+
+#: C/conduit.xml:318(para)
+msgid "Configure the data providers. Each data provider requires a unique configuration. For reference on these please the <emphasis>Data Providers</emphasis> section of the documentation."
+msgstr "Menata penyedia data. Setiap penyedia data memerlukan suatu konfigurasi unik. Untuk acuan tentang hal ini silakan lihat bagian dokumentasi <emphasis>Penyedia Data</emphasis>"
+
+#: C/conduit.xml:319(para)
+msgid "Configure the group, selecting what should happen on conflict, etc."
+msgstr "Menata grup, memilih apa yang mesti dilakukan saat konflik, dsb."
+
+#: C/conduit.xml:320(para)
+msgid "Synchronize the dataproviders as you wish."
+msgstr "Menyelaraskan penyedia data sekehendak Anda."
+
+#: C/conduit.xml:325(title)
+msgid "Network Synchronization"
+msgstr "Penyelarasan Jaringan"
+
+#: C/conduit.xml:326(para)
+msgid "If you have two computers at home, Conduit can be used to synchronize the data between them, directly, without first having to store the data somewhere else first. The steps below will illustrate how to synchronize Tomboy notes on two computers, called nzjrs-desktop and nzjrs-laptop. The following key will be used to help explain the setup procedure."
+msgstr "Bila Anda memiliki dua komputer di rumah, Conduit dapat dipakai untuk menyelaraskan data antara keduanya, secara langsung, tanpa perlu diawali dengan menyimpan data di suatu tempat. Langkah-langkah di bawah menggambarkan bagaimana menyelaraskan catatan Tomboy pada dua komputer, yang bernama nzjrs-desktop dan nzjrs-laptop. Kunci berikut akan dipakai untuk membantu menjelaskan prosedur penyiapan."
+
+#: C/conduit.xml:329(para)
+msgid "<inlinegraphic format=\"PNG\" fileref=\"figures/network-pc1.png\"/> Image taken on the first computer."
+msgstr "<inlinegraphic format=\"PNG\" fileref=\"figures/network-pc1.png\"/> Gambar diambil pada komputer pertama."
+
+#: C/conduit.xml:330(para)
+msgid "<inlinegraphic format=\"PNG\" fileref=\"figures/network-pc2.png\"/> Image taken on the second computer."
+msgstr "<inlinegraphic format=\"PNG\" fileref=\"figures/network-pc2.png\"/> Gambar diambil pada komputer keduaa."
+
+#: C/conduit.xml:335(title)
+msgid "Network Synchronization Tip"
+msgstr "Tip Penyelarasan Jaringan"
+
+#: C/conduit.xml:336(para)
+msgid "The process below, although describing Tomboy note synchronization, could be suitably modified to synchronize all sorts of data between two computers, including Contacts, Calendar information, and even F-Spot photos."
+msgstr "Proses di bawah, walaupun menjelaskan penyelarasan catatan Tomboy, dapat diubah agar cocok untuk menyelaraskan segala macam data antara dua komputer, termasuk informasi Kontak, Kalender, dan bahkan foto F-Spot."
+
+#: C/conduit.xml:341(title)
+msgid "Configuration of the First Computer"
+msgstr "Konfigurasi Komputer Pertama"
+
+#: C/conduit.xml:339(para)
+msgid "On the first computer create a synchronization group connecting Tomboy to the Network dataprovider, which is listed in the Miscellaneous category in the dataprovider pane. This makes Tomboy available for synchronization on the second computer. <placeholder-1/>"
+msgstr "Pada komputer pertama buatlah grup penyelarasan yang menghubungkan Tomboy ke penyedia data Jaringan, yang didaftar dalam kategori Rupa-rupa pada panel penyedia data. Ini membuat Tomboy menjadi tersedia untuk penyelarasan pada komputer kedua. <placeholder-1/>"
+
+#: C/conduit.xml:351(para)
+msgid "After a short delay, this will result in a new category being created on the second computer. The category will take the name of the first computer, nzjrs-desktop in my case, and it shall contain any dataproviders currently available for synchronization."
+msgstr "Setelah tundaan sejenak, ini akan menghasilkan suatu kategori baru yang dibuat pada komputer kedua. Kategodi ini akan mengambil nama komputer pertama, dalam kasus saya nzjrs-desktop, dan itu akan memuat sebarang penyedia data yang kini tersedia untuk penyelarasan."
+
+#: C/conduit.xml:354(title)
+msgid "Configuration of the Second Computer"
+msgstr "Konfigurasi Komputer Kedua"
+
+#: C/conduit.xml:352(para)
+msgid "Still on the second computer, drag the Tomboy dataprovider from the newly created category onto the canvas. Notice how its name is Remote Tomboy, indicating it refers to data on the remote, or first, computer. <placeholder-1/>"
+msgstr "Masih pada komputer kedua, seret penyedia data Tomboy dari kategori yang baru dibuat ke kanvas. Perhatikan bahwa namanya adalah Tomboy Jauh, menunjukkan bahwa itu mengacu ke data di tempat jauh, yaitu komputer pertama. <placeholder-1/>"
+
+#: C/conduit.xml:364(para)
+msgid "Finally, on the second computer, start the sync in the normal manner."
+msgstr "Akhirnya, pada komputer kedua, mulailah penyelarasan dengan cara biasa."
+
+#: C/conduit.xml:365(para)
+msgid "Your tomboy notes should now be synchronized between the two computers."
+msgstr "Catatan tomboy Anda kini mestinya telah selaras antara dua komputer."
+
+#: C/conduit.xml:368(title)
+msgid "File Synchronization"
+msgstr "Penyelarasan Berkas"
+
+#: C/conduit.xml:369(para)
+msgid "Due to performance and security reasons, we do not recommend using the network sync feature to synchronize large files between two computers. We hope to address this limitation in the future."
+msgstr "Karena alasan kinerja dan keamanan, kami tidak menyarankan memakai fitur penyelarasan jaringan untuk menyelaraskan berkas besar antara dua komputer. Kami berharap untuk mengatasi keterbatasn ini di masa mendatang."
+
+#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
+#: C/conduit.xml:0(None)
+msgid "translator-credits"
+msgstr "Andika Triwidada <andika@gmail.com>, 2012."
+
