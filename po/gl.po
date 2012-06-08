@@ -3,23 +3,23 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Ignacio Casal Quinteiro <nacho.resa@gmail.com>, 2008.
-# Fran Dieguez <fran.dieguez@glug.es>, 2009.
 # Fran Diéguez <frandieguez@gnome.org>, 2010, 2011.
+# Fran Dieguez <frandieguez@gnome.org>, 2009, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-28 17:39+0200\n"
-"PO-Revision-Date: 2011-08-28 17:38+0200\n"
-"Last-Translator: Fran Diéguez <frandieguez@gnome.org>\n"
+"POT-Creation-Date: 2012-06-08 19:53+0200\n"
+"PO-Revision-Date: 2012-06-08 19:54+0200\n"
+"Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
 "Language-Team: Galician <gnome-l10n-gl@gnome.org>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 0.3\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.4\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 #: ../data/conduit.desktop.in.in.h:1
 msgid "Conduit Synchronizer"
@@ -30,140 +30,140 @@ msgid "Synchronization for GNOME"
 msgstr "Sincronización para GNOME"
 
 #: ../data/conduit.ui.h:1
-msgid "Always Up-To-Date"
-msgstr "Sempre actualizado"
+msgid "Title"
+msgstr "Título"
 
 #: ../data/conduit.ui.h:2
-msgid "Ask Me What to Do"
-msgstr "Preguntarme o que facer"
-
-#: ../data/conduit.ui.h:3
-msgid "Ask me what to do"
-msgstr "Preguntarme o que facer"
-
-#: ../data/conduit.ui.h:4
-msgid "Compare"
-msgstr "Comparar"
-
-#: ../data/conduit.ui.h:5
-msgid "Conduit Preferences"
-msgstr "Preferencias de Conduit"
-
-#: ../data/conduit.ui.h:6
-msgid "Configuration"
-msgstr "Configuración"
-
-#: ../data/conduit.ui.h:7
-msgid "Conflict Options"
-msgstr "Opcións de conflitos"
-
-#: ../data/conduit.ui.h:8
-msgid "Conflicts"
-msgstr "Conflitos"
-
-#: ../data/conduit.ui.h:9
-msgid "Data Conversions"
-msgstr "Conversións de datos"
-
-#: ../data/conduit.ui.h:10
-msgid "Data Providers"
-msgstr "Proveedores de datos"
-
-#: ../data/conduit.ui.h:11
-msgid "Default Synchronization Options"
-msgstr "Opcións de sincronización predeterminadas"
-
-#: ../data/conduit.ui.h:12
-msgid "Delete Options"
-msgstr "Opcións de borrado"
-
-#: ../data/conduit.ui.h:13
-msgid "Delete from the corresponding sink"
-msgstr "Borrar o destino correspondente"
-
-#: ../data/conduit.ui.h:14
-msgid "Delete the Corresponding Item"
-msgstr "Borrar o elemento correspondente"
-
-#: ../data/conduit.ui.h:15
 msgid "Editor"
 msgstr "Editor"
 
-#: ../data/conduit.ui.h:16
-msgid "General"
-msgstr "Xeral"
+#: ../data/conduit.ui.h:3
+msgid "_File"
+msgstr "_Ficheiro"
 
-#: ../data/conduit.ui.h:17
-msgid "Minimize to notification area"
-msgstr "Minimizar á área de notificación"
+#: ../data/conduit.ui.h:4
+msgid "_Edit"
+msgstr "_Editar"
 
-#: ../data/conduit.ui.h:18
-msgid "Replace the Older Item"
-msgstr "Substituír o elemento antigo"
+#: ../data/conduit.ui.h:5
+msgid "_Help"
+msgstr "_Axuda"
 
-#: ../data/conduit.ui.h:19
-msgid "Replace the older item"
-msgstr "Substituír o elemento antigo"
+#: ../data/conduit.ui.h:6
+msgid "Data Providers"
+msgstr "Proveedores de datos"
 
-#: ../data/conduit.ui.h:20
+#: ../data/conduit.ui.h:7
+msgid "Compare"
+msgstr "Comparar"
+
+#: ../data/conduit.ui.h:8
 msgid "Resolve Conflicts"
 msgstr "Resolver conflitos"
 
+#: ../data/conduit.ui.h:9
+msgid "Conflicts"
+msgstr "Conflitos"
+
+#: ../data/conduit.ui.h:10
+msgid "Synchronization Options"
+msgstr "Opcións de sincronización"
+
+#: ../data/conduit.ui.h:11
+msgid "Slow Synchronization"
+msgstr "Sincronización lenta"
+
+#: ../data/conduit.ui.h:12
+msgid "Two-Way Synchronization"
+msgstr "Sincronización a dúas bandas"
+
+#: ../data/conduit.ui.h:13
+msgid "Always Up-To-Date"
+msgstr "Sempre actualizado"
+
+#: ../data/conduit.ui.h:14
+msgid "Conflict Options"
+msgstr "Opcións de conflitos"
+
+#: ../data/conduit.ui.h:15
+msgid "Ask Me What to Do"
+msgstr "Preguntarme o que facer"
+
+#: ../data/conduit.ui.h:16
+msgid "Replace the Older Item"
+msgstr "Substituír o elemento antigo"
+
+#: ../data/conduit.ui.h:17
+msgid "Skip"
+msgstr "Saltar"
+
+#: ../data/conduit.ui.h:18
+msgid "Delete Options"
+msgstr "Opcións de borrado"
+
+#: ../data/conduit.ui.h:19
+msgid "Delete the Corresponding Item"
+msgstr "Borrar o elemento correspondente"
+
+#: ../data/conduit.ui.h:20
+msgid "Conduit Preferences"
+msgstr "Preferencias de Conduit"
+
 #: ../data/conduit.ui.h:21
-msgid "Save settings on exit"
-msgstr "Gardar os axustes ao saír"
+msgid "Start Conduit at login"
+msgstr "Arrincar Conduit ao iniciar sesión"
 
 #: ../data/conduit.ui.h:22
-msgid "Show Hints"
-msgstr "Mostrar consellos"
+msgid "Save settings on exit"
+msgstr "Gardar os axustes ao saír"
 
 #: ../data/conduit.ui.h:23
 msgid "Show status icon"
 msgstr "Mostrar icona de estado"
 
 #: ../data/conduit.ui.h:24
-msgid "Skip"
-msgstr "Saltar"
+msgid "Minimize to notification area"
+msgstr "Minimizar á área de notificación"
 
 #: ../data/conduit.ui.h:25
-msgid "Slow Synchronization"
-msgstr "Sincronización lenta"
+msgid "Show Hints"
+msgstr "Mostrar consellos"
 
 #: ../data/conduit.ui.h:26
-msgid "Start Conduit at login"
-msgstr "Arrincar Conduit ao iniciar sesión"
+msgid "General"
+msgstr "Xeral"
 
 #: ../data/conduit.ui.h:27
-msgid "Synchronization Options"
-msgstr "Opcións de sincronización"
-
-#: ../data/conduit.ui.h:28
-msgid "Title"
-msgstr "Título"
-
-#: ../data/conduit.ui.h:29
-msgid "Two-Way Synchronization"
-msgstr "Sincronización a dúas bandas"
-
-#: ../data/conduit.ui.h:30
 msgid "When an item has been deleted:"
 msgstr "Cando se borrou un elemento:"
 
-#: ../data/conduit.ui.h:31
+#: ../data/conduit.ui.h:28
+msgid "Ask me what to do"
+msgstr "Preguntarme o que facer"
+
+#: ../data/conduit.ui.h:29
+msgid "Delete from the corresponding sink"
+msgstr "Borrar o destino correspondente"
+
+#: ../data/conduit.ui.h:30
 msgid "When there is a two-way conflict:"
 msgstr "Cando hai un conflito a dúas bandas:"
 
+#: ../data/conduit.ui.h:31
+msgid "Replace the older item"
+msgstr "Substituír o elemento antigo"
+
 #: ../data/conduit.ui.h:32
-msgid "_Edit"
-msgstr "_Editar"
+msgid "Default Synchronization Options"
+msgstr "Opcións de sincronización predeterminadas"
 
 #: ../data/conduit.ui.h:33
-msgid "_File"
-msgstr "_Ficheiro"
+msgid "Configuration"
+msgstr "Configuración"
 
 #: ../data/conduit.ui.h:34
-msgid "_Help"
-msgstr "_Axuda"
+msgid "Data Conversions"
+msgstr "Conversións de datos"
 
 #: ../conduit/Knowledge.py:8
 msgid "What Do You Want to Synchronize?"
@@ -400,6 +400,11 @@ msgstr "Solte aquí o proveedor de datos para continuar"
 msgid "Show me"
 msgstr "Mostrarmo"
 
+#: ../conduit/gtkui/ConfigItems.py:733
+#, python-format
+msgid "Total: %d"
+msgstr "Total: %d"
+
 #. Visible column0 is
 #. [pixbuf + source display name] or
 #. [source_data.get_snippet()]
@@ -421,6 +426,15 @@ msgstr "Destino"
 #, python-format
 msgid "Conflicts (%s)"
 msgstr "Conflitos (%s)"
+
+#: ../conduit/gtkui/Tree.py:355 ../conduit/gtkui/UI.py:200
+#: ../conduit/modules/FileModule/FileConfiguration.py:118
+msgid "Name"
+msgstr "Nome"
+
+#: ../conduit/gtkui/Tree.py:364
+msgid "Description"
+msgstr "Descrición"
 
 #. name,                      #url
 #: ../conduit/gtkui/UI.py:33
@@ -459,11 +473,6 @@ msgstr "Base de datos relacional"
 #: ../conduit/gtkui/UI.py:194
 msgid "Conversions Available"
 msgstr "Conversións dispoñibeis"
-
-#: ../conduit/gtkui/UI.py:200 ../conduit/gtkui/Tree.py:355
-#: ../conduit/modules/FileModule/FileConfiguration.py:118
-msgid "Name"
-msgstr "Nome"
 
 #: ../conduit/gtkui/UI.py:204
 msgid "Loaded"
@@ -521,15 +530,6 @@ msgstr "Sincronización completada"
 #: ../conduit/gtkui/UI.py:741
 msgid "Synchronization Error"
 msgstr "Erro de sincronización"
-
-#: ../conduit/gtkui/Tree.py:364
-msgid "Description"
-msgstr "Descrición"
-
-#: ../conduit/gtkui/ConfigItems.py:733
-#, python-format
-msgid "Total: %d"
-msgstr "Total: %d"
 
 #: ../conduit/gtkui/WindowConfigurator.py:14
 msgid "Configure"
@@ -1145,6 +1145,14 @@ msgstr "SmugMug"
 #: ../conduit/modules/SmugMugModule/SmugMugModule.py:29
 msgid "Synchronize your SmugMug.com photos"
 msgstr "Sincroniza as súas fotos en SmugMug"
+
+#: ../conduit/modules/TomboyModule.py:106
+msgid "Tomboy Notes"
+msgstr "Notas de Tomboy"
+
+#: ../conduit/modules/TomboyModule.py:107
+msgid "Synchronize your Tomboy notes"
+msgstr "Sincroniza as súas notas de Tomboy"
 
 #: ../conduit/modules/ZotoModule/ZotoModule.py:154
 msgid "Zoto"
