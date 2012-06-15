@@ -6,7 +6,7 @@
 # Claude Paroz <claude@2xlibre.net>, 2007-2010.
 # Robert-André Mauchin <zebob.m@pengzone.org>, 2007.
 # Stéphane Raimbault <stephane.raimbault@gmail.com>, 2008.
-# Bruno Brouard <annoa.b@gmail.com>, 2009,2011
+# Bruno Brouard <annoa.b@gmail.com>, 2009,2012
 # Laurent Coudeur <laurentc@iol.ie>, 2009.
 #
 msgid ""
@@ -14,8 +14,8 @@ msgstr ""
 "Project-Id-Version: Conduit master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=conduit&keywords=I18N+L10N&component=documentation and translation\n"
-"POT-Creation-Date: 2011-03-17 21:01+0000\n"
-"PO-Revision-Date: 2011-03-20 12:35+0100\n"
+"POT-Creation-Date: 2012-06-06 19:18+0000\n"
+"PO-Revision-Date: 2012-06-15 20:48+0200 \n"
 "Last-Translator: Bruno Brouard <annoa.b@gmail.com>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
@@ -31,140 +31,140 @@ msgid "Synchronization for GNOME"
 msgstr "Synchronisation pour GNOME"
 
 #: ../data/conduit.ui.h:1
-msgid "Always Up-To-Date"
-msgstr "Toujours à jour"
+msgid "Title"
+msgstr "Titre"
 
 #: ../data/conduit.ui.h:2
-msgid "Ask Me What to Do"
-msgstr "Me demander quoi faire"
-
-#: ../data/conduit.ui.h:3
-msgid "Ask me what to do"
-msgstr "Me demander quoi faire"
-
-#: ../data/conduit.ui.h:4
-msgid "Compare"
-msgstr "Comparer"
-
-#: ../data/conduit.ui.h:5
-msgid "Conduit Preferences"
-msgstr "Préférences de Conduit"
-
-#: ../data/conduit.ui.h:6
-msgid "Configuration"
-msgstr "Configuration"
-
-#: ../data/conduit.ui.h:7
-msgid "Conflict Options"
-msgstr "Options de conflits"
-
-#: ../data/conduit.ui.h:8
-msgid "Conflicts"
-msgstr "Conflits"
-
-#: ../data/conduit.ui.h:9
-msgid "Data Conversions"
-msgstr "Conversions de données"
-
-#: ../data/conduit.ui.h:10
-msgid "Data Providers"
-msgstr "Sources de données"
-
-#: ../data/conduit.ui.h:11
-msgid "Default Synchronization Options"
-msgstr "Options de synchronisation par défaut"
-
-#: ../data/conduit.ui.h:12
-msgid "Delete Options"
-msgstr "Options de suppression"
-
-#: ../data/conduit.ui.h:13
-msgid "Delete from the corresponding sink"
-msgstr "Supprimer du collecteur correspondant"
-
-#: ../data/conduit.ui.h:14
-msgid "Delete the Corresponding Item"
-msgstr "Supprimer l'élément correspondant"
-
-#: ../data/conduit.ui.h:15
 msgid "Editor"
 msgstr "Éditeur"
 
-#: ../data/conduit.ui.h:16
-msgid "General"
-msgstr "Général"
+#: ../data/conduit.ui.h:3
+msgid "_File"
+msgstr "_Fichier"
 
-#: ../data/conduit.ui.h:17
-msgid "Minimize to notification area"
-msgstr "Minimiser dans la zone de notification"
+#: ../data/conduit.ui.h:4
+msgid "_Edit"
+msgstr "É_dition"
 
-#: ../data/conduit.ui.h:18
-msgid "Replace the Older Item"
-msgstr "Remplacer l'élément le plus ancien"
+#: ../data/conduit.ui.h:5
+msgid "_Help"
+msgstr "Aid_e"
 
-#: ../data/conduit.ui.h:19
-msgid "Replace the older item"
-msgstr "Remplacer l'élément le plus ancien"
+#: ../data/conduit.ui.h:6
+msgid "Data Providers"
+msgstr "Sources de données"
 
-#: ../data/conduit.ui.h:20
+#: ../data/conduit.ui.h:7
+msgid "Compare"
+msgstr "Comparer"
+
+#: ../data/conduit.ui.h:8
 msgid "Resolve Conflicts"
 msgstr "Résoudre les conflits"
 
+#: ../data/conduit.ui.h:9
+msgid "Conflicts"
+msgstr "Conflits"
+
+#: ../data/conduit.ui.h:10
+msgid "Synchronization Options"
+msgstr "Options de synchronisation"
+
+#: ../data/conduit.ui.h:11
+msgid "Slow Synchronization"
+msgstr "Synchronisation lente"
+
+#: ../data/conduit.ui.h:12
+msgid "Two-Way Synchronization"
+msgstr "Synchronisation bidirectionnelle"
+
+#: ../data/conduit.ui.h:13
+msgid "Always Up-To-Date"
+msgstr "Toujours à jour"
+
+#: ../data/conduit.ui.h:14
+msgid "Conflict Options"
+msgstr "Options de conflits"
+
+#: ../data/conduit.ui.h:15
+msgid "Ask Me What to Do"
+msgstr "Me demander quoi faire"
+
+#: ../data/conduit.ui.h:16
+msgid "Replace the Older Item"
+msgstr "Remplacer l'élément le plus ancien"
+
+#: ../data/conduit.ui.h:17
+msgid "Skip"
+msgstr "Ignorer"
+
+#: ../data/conduit.ui.h:18
+msgid "Delete Options"
+msgstr "Options de suppression"
+
+#: ../data/conduit.ui.h:19
+msgid "Delete the Corresponding Item"
+msgstr "Supprimer l'élément correspondant"
+
+#: ../data/conduit.ui.h:20
+msgid "Conduit Preferences"
+msgstr "Préférences de Conduit"
+
 #: ../data/conduit.ui.h:21
-msgid "Save settings on exit"
-msgstr "Enregistrer les paramètres à la fermeture"
+msgid "Start Conduit at login"
+msgstr "Démarrer Conduit à la connexion"
 
 #: ../data/conduit.ui.h:22
-msgid "Show Hints"
-msgstr "Afficher les astuces"
+msgid "Save settings on exit"
+msgstr "Enregistrer les paramètres à la fermeture"
 
 #: ../data/conduit.ui.h:23
 msgid "Show status icon"
 msgstr "Afficher l'icône d'état"
 
 #: ../data/conduit.ui.h:24
-msgid "Skip"
-msgstr "Ignorer"
+msgid "Minimize to notification area"
+msgstr "Minimiser dans la zone de notification"
 
 #: ../data/conduit.ui.h:25
-msgid "Slow Synchronization"
-msgstr "Synchronisation lente"
+msgid "Show Hints"
+msgstr "Afficher les astuces"
 
 #: ../data/conduit.ui.h:26
-msgid "Start Conduit at login"
-msgstr "Démarrer Conduit à la connexion"
+msgid "General"
+msgstr "Général"
 
 #: ../data/conduit.ui.h:27
-msgid "Synchronization Options"
-msgstr "Options de synchronisation"
-
-#: ../data/conduit.ui.h:28
-msgid "Title"
-msgstr "Titre"
-
-#: ../data/conduit.ui.h:29
-msgid "Two-Way Synchronization"
-msgstr "Synchronisation bidirectionnelle"
-
-#: ../data/conduit.ui.h:30
 msgid "When an item has been deleted:"
 msgstr "Quand un objet a été supprimé :"
 
-#: ../data/conduit.ui.h:31
+#: ../data/conduit.ui.h:28
+msgid "Ask me what to do"
+msgstr "Me demander quoi faire"
+
+#: ../data/conduit.ui.h:29
+msgid "Delete from the corresponding sink"
+msgstr "Supprimer du collecteur correspondant"
+
+#: ../data/conduit.ui.h:30
 msgid "When there is a two-way conflict:"
 msgstr "Quand il y a un conflit bidirectionnel :"
 
+#: ../data/conduit.ui.h:31
+msgid "Replace the older item"
+msgstr "Remplacer l'élément le plus ancien"
+
 #: ../data/conduit.ui.h:32
-msgid "_Edit"
-msgstr "É_dition"
+msgid "Default Synchronization Options"
+msgstr "Options de synchronisation par défaut"
 
 #: ../data/conduit.ui.h:33
-msgid "_File"
-msgstr "_Fichier"
+msgid "Configuration"
+msgstr "Configuration"
 
 #: ../data/conduit.ui.h:34
-msgid "_Help"
-msgstr "Aid_e"
+msgid "Data Conversions"
+msgstr "Conversions de données"
 
 #: ../conduit/Knowledge.py:8
 msgid "What Do You Want to Synchronize?"
@@ -400,6 +400,11 @@ msgstr "Déplacer une source de données ici pour poursuivre"
 msgid "Show me"
 msgstr "Montre-moi"
 
+#: ../conduit/gtkui/ConfigItems.py:733
+#, python-format
+msgid "Total: %d"
+msgstr "Total : %d"
+
 #. Visible column0 is
 #. [pixbuf + source display name] or
 #. [source_data.get_snippet()]
@@ -421,6 +426,15 @@ msgstr "Collecteur"
 #, python-format
 msgid "Conflicts (%s)"
 msgstr "Conflits (%s)"
+
+#: ../conduit/gtkui/Tree.py:355 ../conduit/gtkui/UI.py:200
+#: ../conduit/modules/FileModule/FileConfiguration.py:118
+msgid "Name"
+msgstr "Nom"
+
+#: ../conduit/gtkui/Tree.py:364
+msgid "Description"
+msgstr "Description"
 
 #. name,                      #url
 #: ../conduit/gtkui/UI.py:33
@@ -459,11 +473,6 @@ msgstr "Base de données des relations"
 #: ../conduit/gtkui/UI.py:194
 msgid "Conversions Available"
 msgstr "Conversions disponibles"
-
-#: ../conduit/gtkui/UI.py:200 ../conduit/gtkui/Tree.py:355
-#: ../conduit/modules/FileModule/FileConfiguration.py:118
-msgid "Name"
-msgstr "Nom"
 
 #: ../conduit/gtkui/UI.py:204
 msgid "Loaded"
@@ -521,15 +530,6 @@ msgstr "Synchronisation terminée"
 #: ../conduit/gtkui/UI.py:741
 msgid "Synchronization Error"
 msgstr "Erreur de synchronisation"
-
-#: ../conduit/gtkui/Tree.py:364
-msgid "Description"
-msgstr "Description"
-
-#: ../conduit/gtkui/ConfigItems.py:733
-#, python-format
-msgid "Total: %d"
-msgstr "Total : %d"
 
 #: ../conduit/gtkui/WindowConfigurator.py:14
 msgid "Configure"
@@ -1123,7 +1123,9 @@ msgstr "Synchroniser les photos de votre bibliothèque Shotwell"
 
 #: ../conduit/modules/ShotwellModule/ShotwellModule.py:56
 msgid "Disabling Shotwell module, unable to open sqlite3 data source"
-msgstr "Désactivation du module Shotwell, impossible d'ouvrir la source de données sqlite3"
+msgstr ""
+"Désactivation du module Shotwell, impossible d'ouvrir la source de données "
+"sqlite3"
 
 #: ../conduit/modules/ShutterflyModule/ShutterflyModule.py:26
 msgid "Shutterfly"
@@ -1144,6 +1146,14 @@ msgstr "SmugMug"
 #: ../conduit/modules/SmugMugModule/SmugMugModule.py:29
 msgid "Synchronize your SmugMug.com photos"
 msgstr "Synchroniser vos photos SmugMug.com"
+
+#: ../conduit/modules/TomboyModule.py:106
+msgid "Tomboy Notes"
+msgstr "Notes Tomboy"
+
+#: ../conduit/modules/TomboyModule.py:107
+msgid "Synchronize your Tomboy notes"
+msgstr "Synchroniser vos notes Tomboy"
 
 #: ../conduit/modules/ZotoModule/ZotoModule.py:154
 msgid "Zoto"
