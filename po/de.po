@@ -4,7 +4,7 @@
 #
 # Andre Klapper <ak-47@gmx.net>, 2008, 2009.
 # Hendrik Richter <hendrikr@gnome.org>, 2008.
-# Mario Blättermann <mariobl@gnome.org>, 2008-2010.
+# Mario Blättermann <mario.blaettermann@gmail.com>, 2008-2010, 2012.
 # Christian Kirbach <Christian.Kirbach@googlemail.com>, 2009, 2010.
 # Wolfgang Stöggl <c72578@yahoo.de>, 2011.
 #
@@ -13,9 +13,9 @@ msgstr ""
 "Project-Id-Version: conduit\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=conduit&keywords=I18N+L10N&component=documentation and translation\n"
-"POT-Creation-Date: 2011-04-03 18:10+0000\n"
-"PO-Revision-Date: 2011-04-04 20:19+0200\n"
-"Last-Translator: Wolfgang Stoeggl <c72578@yahoo.de>\n"
+"POT-Creation-Date: 2012-06-06 19:17+0000\n"
+"PO-Revision-Date: 2012-06-28 10:27+0100\n"
+"Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,140 +33,140 @@ msgid "Synchronization for GNOME"
 msgstr "Datenabgleich für GNOME"
 
 #: ../data/conduit.ui.h:1
-msgid "Always Up-To-Date"
-msgstr "Immer aktuell"
+msgid "Title"
+msgstr "Titel"
 
 #: ../data/conduit.ui.h:2
-msgid "Ask Me What to Do"
-msgstr "Beim Benutzer nachfragen"
-
-#: ../data/conduit.ui.h:3
-msgid "Ask me what to do"
-msgstr "Beim Benutzer nachfragen"
-
-#: ../data/conduit.ui.h:4
-msgid "Compare"
-msgstr "Vergleichen"
-
-#: ../data/conduit.ui.h:5
-msgid "Conduit Preferences"
-msgstr "Conduit-Einstellungen"
-
-#: ../data/conduit.ui.h:6
-msgid "Configuration"
-msgstr "Allgemein"
-
-#: ../data/conduit.ui.h:7
-msgid "Conflict Options"
-msgstr "Konflikteinstellungen"
-
-#: ../data/conduit.ui.h:8
-msgid "Conflicts"
-msgstr "Konflikte"
-
-#: ../data/conduit.ui.h:9
-msgid "Data Conversions"
-msgstr "Datenumwandler"
-
-#: ../data/conduit.ui.h:10
-msgid "Data Providers"
-msgstr "Datenquellen"
-
-#: ../data/conduit.ui.h:11
-msgid "Default Synchronization Options"
-msgstr "Vorgegebene Einstellungen zum Abgleich"
-
-#: ../data/conduit.ui.h:12
-msgid "Delete Options"
-msgstr "Optionen löschen"
-
-#: ../data/conduit.ui.h:13
-msgid "Delete from the corresponding sink"
-msgstr "Aus dem zugehörigen Empfänger löschen"
-
-#: ../data/conduit.ui.h:14
-msgid "Delete the Corresponding Item"
-msgstr "Das dazugehörige Element löschen"
-
-#: ../data/conduit.ui.h:15
 msgid "Editor"
 msgstr "Editor"
 
-#: ../data/conduit.ui.h:16
-msgid "General"
-msgstr "Allgemein"
+#: ../data/conduit.ui.h:3
+msgid "_File"
+msgstr "_Datei"
 
-#: ../data/conduit.ui.h:17
-msgid "Minimize to notification area"
-msgstr "Im Benachrichtigungsfeld minimieren"
+#: ../data/conduit.ui.h:4
+msgid "_Edit"
+msgstr "_Bearbeiten"
 
-#: ../data/conduit.ui.h:18
-msgid "Replace the Older Item"
-msgstr "Älteres Element ersetzen"
+#: ../data/conduit.ui.h:5
+msgid "_Help"
+msgstr "_Hilfe"
 
-#: ../data/conduit.ui.h:19
-msgid "Replace the older item"
-msgstr "Älteres Element ersetzen"
+#: ../data/conduit.ui.h:6
+msgid "Data Providers"
+msgstr "Datenquellen"
 
-#: ../data/conduit.ui.h:20
+#: ../data/conduit.ui.h:7
+msgid "Compare"
+msgstr "Vergleichen"
+
+#: ../data/conduit.ui.h:8
 msgid "Resolve Conflicts"
 msgstr "Konflikte auflösen"
 
+#: ../data/conduit.ui.h:9
+msgid "Conflicts"
+msgstr "Konflikte"
+
+#: ../data/conduit.ui.h:10
+msgid "Synchronization Options"
+msgstr "Datenabgleich-Optionen"
+
+#: ../data/conduit.ui.h:11
+msgid "Slow Synchronization"
+msgstr "Langsamer Datenabgleich"
+
+#: ../data/conduit.ui.h:12
+msgid "Two-Way Synchronization"
+msgstr "Zweiwege-Abgleich"
+
+#: ../data/conduit.ui.h:13
+msgid "Always Up-To-Date"
+msgstr "Immer aktuell"
+
+#: ../data/conduit.ui.h:14
+msgid "Conflict Options"
+msgstr "Konflikteinstellungen"
+
+#: ../data/conduit.ui.h:15
+msgid "Ask Me What to Do"
+msgstr "Beim Benutzer nachfragen"
+
+#: ../data/conduit.ui.h:16
+msgid "Replace the Older Item"
+msgstr "Älteres Element ersetzen"
+
+#: ../data/conduit.ui.h:17
+msgid "Skip"
+msgstr "Überspringen"
+
+#: ../data/conduit.ui.h:18
+msgid "Delete Options"
+msgstr "Optionen löschen"
+
+#: ../data/conduit.ui.h:19
+msgid "Delete the Corresponding Item"
+msgstr "Das dazugehörige Element löschen"
+
+#: ../data/conduit.ui.h:20
+msgid "Conduit Preferences"
+msgstr "Conduit-Einstellungen"
+
 #: ../data/conduit.ui.h:21
-msgid "Save settings on exit"
-msgstr "Einstellungen beim Beenden speichern"
+msgid "Start Conduit at login"
+msgstr "Conduit beim Anmelden starten"
 
 #: ../data/conduit.ui.h:22
-msgid "Show Hints"
-msgstr "Hinweise anzeigen"
+msgid "Save settings on exit"
+msgstr "Einstellungen beim Beenden speichern"
 
 #: ../data/conduit.ui.h:23
 msgid "Show status icon"
 msgstr "Statussymbol anzeigen"
 
 #: ../data/conduit.ui.h:24
-msgid "Skip"
-msgstr "Überspringen"
+msgid "Minimize to notification area"
+msgstr "Im Benachrichtigungsfeld minimieren"
 
 #: ../data/conduit.ui.h:25
-msgid "Slow Synchronization"
-msgstr "Langsamer Datenabgleich"
+msgid "Show Hints"
+msgstr "Hinweise anzeigen"
 
 #: ../data/conduit.ui.h:26
-msgid "Start Conduit at login"
-msgstr "Conduit beim Anmelden starten"
+msgid "General"
+msgstr "Allgemein"
 
 #: ../data/conduit.ui.h:27
-msgid "Synchronization Options"
-msgstr "Datenabgleich-Optionen"
-
-#: ../data/conduit.ui.h:28
-msgid "Title"
-msgstr "Titel"
-
-#: ../data/conduit.ui.h:29
-msgid "Two-Way Synchronization"
-msgstr "Zweiwege-Abgleich"
-
-#: ../data/conduit.ui.h:30
 msgid "When an item has been deleted:"
 msgstr "Wenn ein Element gelöscht wurde:"
 
-#: ../data/conduit.ui.h:31
+#: ../data/conduit.ui.h:28
+msgid "Ask me what to do"
+msgstr "Beim Benutzer nachfragen"
+
+#: ../data/conduit.ui.h:29
+msgid "Delete from the corresponding sink"
+msgstr "Aus dem zugehörigen Empfänger löschen"
+
+#: ../data/conduit.ui.h:30
 msgid "When there is a two-way conflict:"
 msgstr "Wenn ein zweiseitiger Konflikt auftritt:"
 
+#: ../data/conduit.ui.h:31
+msgid "Replace the older item"
+msgstr "Älteres Element ersetzen"
+
 #: ../data/conduit.ui.h:32
-msgid "_Edit"
-msgstr "_Bearbeiten"
+msgid "Default Synchronization Options"
+msgstr "Vorgegebene Einstellungen zum Abgleich"
 
 #: ../data/conduit.ui.h:33
-msgid "_File"
-msgstr "_Datei"
+msgid "Configuration"
+msgstr "Allgemein"
 
 #: ../data/conduit.ui.h:34
-msgid "_Help"
-msgstr "_Hilfe"
+msgid "Data Conversions"
+msgstr "Datenumwandler"
 
 #: ../conduit/Knowledge.py:8
 msgid "What Do You Want to Synchronize?"
@@ -261,8 +261,7 @@ msgstr ""
 #: ../conduit/Main.py:89
 #, python-format
 msgid ""
-"Enable loading of unfinished or unsupported dataproviders. [default: %"
-"default]"
+"Enable loading of unfinished or unsupported dataproviders. [default: %default]"
 msgstr ""
 "Laden von unvollständig eingerichteten oder nicht unterstützten Datenquellen "
 "aktivieren. [Vorgabe: %default]"
@@ -275,8 +274,7 @@ msgstr "Mehr Informationen zur Fehlerdiagnose erstellen. [Vorgabe: %default]"
 #: ../conduit/Main.py:97
 #, python-format
 msgid "Generate less debugging information. [default: %default]"
-msgstr ""
-"Weniger Informationen zur Fehlerdiagnose erstellen. [Vorgabe: %default]"
+msgstr "Weniger Informationen zur Fehlerdiagnose erstellen. [Vorgabe: %default]"
 
 #: ../conduit/Main.py:101
 #, python-format
@@ -399,6 +397,11 @@ msgstr "Legen Sie hier eine Datenquelle ab, um fortzufahren"
 msgid "Show me"
 msgstr "Zeigen"
 
+#: ../conduit/gtkui/ConfigItems.py:733
+#, python-format
+msgid "Total: %d"
+msgstr "Gesamt: %d"
+
 #. Visible column0 is
 #. [pixbuf + source display name] or
 #. [source_data.get_snippet()]
@@ -420,6 +423,15 @@ msgstr "Empfänger"
 #, python-format
 msgid "Conflicts (%s)"
 msgstr "Konflikte (%s)"
+
+#: ../conduit/gtkui/Tree.py:355 ../conduit/gtkui/UI.py:200
+#: ../conduit/modules/FileModule/FileConfiguration.py:118
+msgid "Name"
+msgstr "Name"
+
+#: ../conduit/gtkui/Tree.py:364
+msgid "Description"
+msgstr "Beschreibung"
 
 #. name,                      #url
 #: ../conduit/gtkui/UI.py:33
@@ -458,11 +470,6 @@ msgstr "Beziehungsdatenbank"
 #: ../conduit/gtkui/UI.py:194
 msgid "Conversions Available"
 msgstr "Umwandlungen verfügbar"
-
-#: ../conduit/gtkui/UI.py:200 ../conduit/gtkui/Tree.py:355
-#: ../conduit/modules/FileModule/FileConfiguration.py:118
-msgid "Name"
-msgstr "Name"
 
 #: ../conduit/gtkui/UI.py:204
 msgid "Loaded"
@@ -520,15 +527,6 @@ msgstr "Datenabgleich abgeschlossen"
 #: ../conduit/gtkui/UI.py:741
 msgid "Synchronization Error"
 msgstr "Fehler beim Datenabgleich"
-
-#: ../conduit/gtkui/Tree.py:364
-msgid "Description"
-msgstr "Beschreibung"
-
-#: ../conduit/gtkui/ConfigItems.py:733
-#, python-format
-msgid "Total: %d"
-msgstr "Gesamt: %d"
 
 #: ../conduit/gtkui/WindowConfigurator.py:14
 msgid "Configure"
@@ -1146,6 +1144,14 @@ msgstr "SmugMug"
 #: ../conduit/modules/SmugMugModule/SmugMugModule.py:29
 msgid "Synchronize your SmugMug.com photos"
 msgstr "SmugMug.com-Fotos abgleichen"
+
+#: ../conduit/modules/TomboyModule.py:106
+msgid "Tomboy Notes"
+msgstr "Tomboy Notizen"
+
+#: ../conduit/modules/TomboyModule.py:107
+msgid "Synchronize your Tomboy notes"
+msgstr "Tomboy-Notizen abgleichen"
 
 #: ../conduit/modules/ZotoModule/ZotoModule.py:154
 msgid "Zoto"
