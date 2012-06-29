@@ -9,10 +9,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: conduit.HEAD\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-12 02:38+0200\n"
-"PO-Revision-Date: 2010-12-12 02:40+0200\n"
-"Last-Translator: Simos Xenitellis <simos@gnome.org>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=conduit&keywords=I18N+L10N&component=documentation and translation\n"
+"POT-Creation-Date: 2012-06-06 19:17+0000\n"
+"PO-Revision-Date: 2012-06-29 11:21+0200\n"
+"Last-Translator: Tom Tryfonidis <tomtryf@gmail.com>\n"
 "Language-Team: Greek <team@gnome.gr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,140 +29,140 @@ msgid "Synchronization for GNOME"
 msgstr "Συγχρονισμός για GNOME"
 
 #: ../data/conduit.ui.h:1
-msgid "Always Up-To-Date"
-msgstr "Πάντα επικαιροποιημένη"
+msgid "Title"
+msgstr "Τίτλος"
 
 #: ../data/conduit.ui.h:2
-msgid "Ask Me What to Do"
-msgstr "Ερώτηση για το τι θα συμβεί"
-
-#: ../data/conduit.ui.h:3
-msgid "Ask me what to do"
-msgstr "Ερώτηση για το τι θα συμβεί"
-
-#: ../data/conduit.ui.h:4
-msgid "Compare"
-msgstr "Σύγκριση"
-
-#: ../data/conduit.ui.h:5
-msgid "Conduit Preferences"
-msgstr "Προτιμήσεις του Conduit"
-
-#: ../data/conduit.ui.h:6
-msgid "Configuration"
-msgstr "Ρύθμιση"
-
-#: ../data/conduit.ui.h:7
-msgid "Conflict Options"
-msgstr "Επιλογές σε περίπτωση συγκρούσεων"
-
-#: ../data/conduit.ui.h:8
-msgid "Conflicts"
-msgstr "Συγκρούσεις"
-
-#: ../data/conduit.ui.h:9
-msgid "Data Conversions"
-msgstr "Μετατροπές δεδομένων"
-
-#: ../data/conduit.ui.h:10
-msgid "Data Providers"
-msgstr "Πάροχοι δεδομένων"
-
-#: ../data/conduit.ui.h:11
-msgid "Default Synchronization Options"
-msgstr "<b>Προεπιλογές συγχρονισμού</b>"
-
-#: ../data/conduit.ui.h:12
-msgid "Delete Options"
-msgstr "Επιλογές διαγραφής"
-
-#: ../data/conduit.ui.h:13
-msgid "Delete from the corresponding sink"
-msgstr "Διαγραφή από τον αντίστοιχο ταμιευτήρα"
-
-#: ../data/conduit.ui.h:14
-msgid "Delete the Corresponding Item"
-msgstr "Διαγραφή του αντίστοιχου αντικειμένου"
-
-#: ../data/conduit.ui.h:15
 msgid "Editor"
 msgstr "Επεξεργαστής"
 
-#: ../data/conduit.ui.h:16
-msgid "General"
-msgstr "<b>Γενικά</b>"
+#: ../data/conduit.ui.h:3
+msgid "_File"
+msgstr "_Αρχείο"
 
-#: ../data/conduit.ui.h:17
-msgid "Minimize to notification area"
-msgstr "Ελαχιστοποίηση στην περιοχή ειδοποιήσεων"
+#: ../data/conduit.ui.h:4
+msgid "_Edit"
+msgstr "_Επεξεργασία"
 
-#: ../data/conduit.ui.h:18
-msgid "Replace the Older Item"
-msgstr "Αντικατάσταση του παλαιότερου αντικειμένου"
+#: ../data/conduit.ui.h:5
+msgid "_Help"
+msgstr "_Βοήθεια"
 
-#: ../data/conduit.ui.h:19
-msgid "Replace the older item"
-msgstr "Αντικατάσταση του παλαιότερου αντικειμένου"
+#: ../data/conduit.ui.h:6
+msgid "Data Providers"
+msgstr "Πάροχοι δεδομένων"
 
-#: ../data/conduit.ui.h:20
+#: ../data/conduit.ui.h:7
+msgid "Compare"
+msgstr "Σύγκριση"
+
+#: ../data/conduit.ui.h:8
 msgid "Resolve Conflicts"
 msgstr "Επίλυση συγκρούσεων"
 
+#: ../data/conduit.ui.h:9
+msgid "Conflicts"
+msgstr "Συγκρούσεις"
+
+#: ../data/conduit.ui.h:10
+msgid "Synchronization Options"
+msgstr "Επιλογές συγχρονισμού"
+
+#: ../data/conduit.ui.h:11
+msgid "Slow Synchronization"
+msgstr "Αργός συγχρονισμός"
+
+#: ../data/conduit.ui.h:12
+msgid "Two-Way Synchronization"
+msgstr "Αμφίδρομος συγχρονισμός"
+
+#: ../data/conduit.ui.h:13
+msgid "Always Up-To-Date"
+msgstr "Πάντα επικαιροποιημένη"
+
+#: ../data/conduit.ui.h:14
+msgid "Conflict Options"
+msgstr "Επιλογές σε περίπτωση συγκρούσεων"
+
+#: ../data/conduit.ui.h:15
+msgid "Ask Me What to Do"
+msgstr "Ερώτηση για το τι θα συμβεί"
+
+#: ../data/conduit.ui.h:16
+msgid "Replace the Older Item"
+msgstr "Αντικατάσταση του παλαιότερου αντικειμένου"
+
+#: ../data/conduit.ui.h:17
+msgid "Skip"
+msgstr "Προσπέραση"
+
+#: ../data/conduit.ui.h:18
+msgid "Delete Options"
+msgstr "Επιλογές διαγραφής"
+
+#: ../data/conduit.ui.h:19
+msgid "Delete the Corresponding Item"
+msgstr "Διαγραφή του αντίστοιχου αντικειμένου"
+
+#: ../data/conduit.ui.h:20
+msgid "Conduit Preferences"
+msgstr "Προτιμήσεις του Conduit"
+
 #: ../data/conduit.ui.h:21
-msgid "Save settings on exit"
-msgstr "Αποθήκευση των αλλαγών κατά την έξοδο"
+msgid "Start Conduit at login"
+msgstr "Εκκίνηση του Conduit κατά την είσοδο"
 
 #: ../data/conduit.ui.h:22
-msgid "Show Hints"
-msgstr "Εμφάνιση συμβουλών"
+msgid "Save settings on exit"
+msgstr "Αποθήκευση των αλλαγών κατά την έξοδο"
 
 #: ../data/conduit.ui.h:23
 msgid "Show status icon"
 msgstr "Εμφάνιση εικονιδίου κατάστασης στην περιοχή ειδοποιήσεων"
 
 #: ../data/conduit.ui.h:24
-msgid "Skip"
-msgstr "Προσπέραση"
+msgid "Minimize to notification area"
+msgstr "Ελαχιστοποίηση στην περιοχή ειδοποιήσεων"
 
 #: ../data/conduit.ui.h:25
-msgid "Slow Synchronization"
-msgstr "Αργός συγχρονισμός"
+msgid "Show Hints"
+msgstr "Εμφάνιση συμβουλών"
 
 #: ../data/conduit.ui.h:26
-msgid "Start Conduit at login"
-msgstr "Εκκίνηση του Conduit κατά την είσοδο"
+msgid "General"
+msgstr "<b>Γενικά</b>"
 
 #: ../data/conduit.ui.h:27
-msgid "Synchronization Options"
-msgstr "Επιλογές συγχρονισμού"
-
-#: ../data/conduit.ui.h:28
-msgid "Title"
-msgstr "Τίτλος"
-
-#: ../data/conduit.ui.h:29
-msgid "Two-Way Synchronization"
-msgstr "Αμφίδρομος συγχρονισμός"
-
-#: ../data/conduit.ui.h:30
 msgid "When an item has been deleted:"
 msgstr "Όταν ένα αντικείμενο έχει διαγραφεί:"
 
-#: ../data/conduit.ui.h:31
+#: ../data/conduit.ui.h:28
+msgid "Ask me what to do"
+msgstr "Ερώτηση για το τι θα συμβεί"
+
+#: ../data/conduit.ui.h:29
+msgid "Delete from the corresponding sink"
+msgstr "Διαγραφή από τον αντίστοιχο ταμιευτήρα"
+
+#: ../data/conduit.ui.h:30
 msgid "When there is a two-way conflict:"
 msgstr "Όταν υπάρχει αμφίδρομη σύγκρουση:"
 
+#: ../data/conduit.ui.h:31
+msgid "Replace the older item"
+msgstr "Αντικατάσταση του παλαιότερου αντικειμένου"
+
 #: ../data/conduit.ui.h:32
-msgid "_Edit"
-msgstr "_Επεξεργασία"
+msgid "Default Synchronization Options"
+msgstr "<b>Προεπιλογές συγχρονισμού</b>"
 
 #: ../data/conduit.ui.h:33
-msgid "_File"
-msgstr "_Αρχείο"
+msgid "Configuration"
+msgstr "Ρύθμιση"
 
 #: ../data/conduit.ui.h:34
-msgid "_Help"
-msgstr "_Βοήθεια"
+msgid "Data Conversions"
+msgstr "Μετατροπές δεδομένων"
 
 #: ../conduit/Knowledge.py:8
 msgid "What Do You Want to Synchronize?"
@@ -234,43 +234,29 @@ msgstr "Εικονοποίηση κατά την εκκίνση [default: %defau
 #: ../conduit/Main.py:73
 #, python-format
 msgid "Run with the specified UI. [default: %default]"
-msgstr ""
-"Να γίνει εκτέλεση με το καθορισμένο περιβάλλον χρήστη [default: %default]"
+msgstr "Να γίνει εκτέλεση με το καθορισμένο περιβάλλον χρήστη [default: %default]"
 
 #: ../conduit/Main.py:77
 msgid "Only load modules in the named files. [default: load all modules]"
-msgstr ""
-"Να φορτωθούν τα αρθρώματα στα αρχεία με όνομα. [default: Φόρτωση όλων των "
-"αρθρωμάτων]"
+msgstr "Να φορτωθούν τα αρθρώματα στα αρχεία με όνομα. [default: Φόρτωση όλων των αρθρωμάτων]"
 
 #: ../conduit/Main.py:81
 msgid "Do not load modules in the named files. [default: load all modules]"
-msgstr ""
-"Να μην φορτωθούν τα αρθρώματα στα αρχεία με όνομα. [default: Φόρτωση όλων "
-"των αρθρωμάτων]"
+msgstr "Να μην φορτωθούν τα αρθρώματα στα αρχεία με όνομα. [default: Φόρτωση όλων των αρθρωμάτων]"
 
 #: ../conduit/Main.py:85
-msgid ""
-"Explicitly set internal Conduit settings (keys) to the given values for this "
-"session. [default: do not set]"
-msgstr ""
-"Καθορισμός εσωτερικών ρυθμίσεων (κλειδιά) του Conduit στις δοθείσες τιμές "
-"για τη συνεδρία. [προεπιλογή: να μη τεθούν]"
+msgid "Explicitly set internal Conduit settings (keys) to the given values for this session. [default: do not set]"
+msgstr "Καθορισμός εσωτερικών ρυθμίσεων (κλειδιά) του Conduit στις δοθείσες τιμές για τη συνεδρία. [προεπιλογή: να μη τεθούν]"
 
 #: ../conduit/Main.py:89
 #, python-format
-msgid ""
-"Enable loading of unfinished or unsupported dataproviders. [default: %"
-"default]"
-msgstr ""
-"Ενεργοποίηση φόρτωσης μη ολοκληρωμένων ή μη υποστηριζόμενων πάροχων "
-"δεδομένων. [default: %default]"
+msgid "Enable loading of unfinished or unsupported dataproviders. [default: %default]"
+msgstr "Ενεργοποίηση φόρτωσης μη ολοκληρωμένων ή μη υποστηριζόμενων πάροχων δεδομένων. [default: %default]"
 
 #: ../conduit/Main.py:93
 #, python-format
 msgid "Generate more debugging information. [default: %default]"
-msgstr ""
-"Δημιουργία περισσότερων πληροφοριών αποσφαλμάτωσης. [default: %default]"
+msgstr "Δημιουργία περισσότερων πληροφοριών αποσφαλμάτωσης. [default: %default]"
 
 #: ../conduit/Main.py:97
 #, python-format
@@ -322,7 +308,8 @@ msgstr "Έγινε προσπέραση του συγχρονισμού"
 msgid "Synchronization Cancelled"
 msgstr "Ακυρώθηκε ο συγχρονισμός"
 
-#: ../conduit/dataproviders/DataProvider.py:32 ../conduit/gtkui/UI.py:743
+#: ../conduit/dataproviders/DataProvider.py:32
+#: ../conduit/gtkui/UI.py:743
 msgid "Synchronization Conflict"
 msgstr "Σύγκρουση συγχρονισμού"
 
@@ -398,6 +385,11 @@ msgstr "Για να συνεχίσετε, σύρτε έναν πάροχο δε�
 msgid "Show me"
 msgstr "Εμφάνιση"
 
+#: ../conduit/gtkui/ConfigItems.py:733
+#, python-format
+msgid "Total: %d"
+msgstr "Σύνολο: %d"
+
 #. Visible column0 is
 #. [pixbuf + source display name] or
 #. [source_data.get_snippet()]
@@ -419,6 +411,16 @@ msgstr "Ταμιευτήρας"
 #, python-format
 msgid "Conflicts (%s)"
 msgstr "Συγκρούσεις (%s)"
+
+#: ../conduit/gtkui/Tree.py:355
+#: ../conduit/gtkui/UI.py:200
+#: ../conduit/modules/FileModule/FileConfiguration.py:118
+msgid "Name"
+msgstr "Όνομα"
+
+#: ../conduit/gtkui/Tree.py:364
+msgid "Description"
+msgstr "Περιγραφή"
 
 #. name,                      #url
 #: ../conduit/gtkui/UI.py:33
@@ -458,11 +460,6 @@ msgstr "Βάση συσχετισμών"
 msgid "Conversions Available"
 msgstr "Διαθέσιμες μετατροπές"
 
-#: ../conduit/gtkui/UI.py:200 ../conduit/gtkui/Tree.py:355
-#: ../conduit/modules/FileModule/FileConfiguration.py:118
-msgid "Name"
-msgstr "Όνομα"
-
 #: ../conduit/gtkui/UI.py:204
 msgid "Loaded"
 msgstr "Φορτωμένο"
@@ -480,7 +477,8 @@ msgstr " - Εκτέλεση απεγκατάστασης"
 msgid "Developers"
 msgstr "Προγραμματιστές"
 
-#: ../conduit/gtkui/UI.py:539 ../conduit/hildonui/UI.py:127
+#: ../conduit/gtkui/UI.py:539
+#: ../conduit/hildonui/UI.py:127
 msgid "Synchronization in progress. Do you want to cancel it?"
 msgstr "Γίνεται συγχρονισμός. Θέλετε να τον ακυρώσετε;"
 
@@ -519,15 +517,6 @@ msgstr "Ο συγχρονισμός ολοκληρώθηκε"
 #: ../conduit/gtkui/UI.py:741
 msgid "Synchronization Error"
 msgstr "Σφάλμα συγχρονισμού"
-
-#: ../conduit/gtkui/Tree.py:364
-msgid "Description"
-msgstr "Περιγραφή"
-
-#: ../conduit/gtkui/ConfigItems.py:733
-#, python-format
-msgid "Total: %d"
-msgstr "Σύνολο: %d"
 
 #: ../conduit/gtkui/WindowConfigurator.py:14
 msgid "Configure"
@@ -772,11 +761,8 @@ msgid "Please Name All Folders"
 msgstr "Παρακαλώ, ονομάστε όλους τους φακέλους"
 
 #: ../conduit/modules/FileModule/FileConfiguration.py:316
-msgid ""
-"All folders require a descriptive name. To name a folder simply click on it"
-msgstr ""
-"Όλοι οι φάκελοι πρέπει να διαθέτουν ένα περιγραφικό όνομα. Για να ονομάσετε "
-"ένα φάκελο, απλά κάντε κλικ πάνω του"
+msgid "All folders require a descriptive name. To name a folder simply click on it"
+msgstr "Όλοι οι φάκελοι πρέπει να διαθέτουν ένα περιγραφικό όνομα. Για να ονομάσετε ένα φάκελο, απλά κάντε κλικ πάνω του"
 
 #: ../conduit/modules/FileModule/FileModule.py:27
 msgid "Files"
@@ -879,8 +865,8 @@ msgstr "Εκκινήστε το F-Spot"
 
 #: ../conduit/modules/FspotModule/FspotModule.py:251
 #: ../conduit/modules/FspotModule/FspotModule.py:252
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:72
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:74
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:71
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:73
 msgid "Tags"
 msgstr "Ετικέτες"
 
@@ -1110,13 +1096,17 @@ msgstr "Συγχρονισμός τραγουδιών από τις λίστες
 msgid "Unknown"
 msgstr "Άγνωστο"
 
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:37
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:36
 msgid "Shotwell"
 msgstr "Shotwell"
 
-#: ../conduit/modules/ShotwellModule/ShotwellModule.py:38
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:37
 msgid "Sync from your Shotwell photo library"
 msgstr "Συγχρονισμός φωτογραφικών βιβλιοθηκών σας από το Shotwell"
+
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:56
+msgid "Disabling Shotwell module, unable to open sqlite3 data source"
+msgstr "Απενεργοποίηση του αρθρώματος Shotwell, αδυναμία ανοίγματος της πηγής δεδομένων sqlite3"
 
 #: ../conduit/modules/ShutterflyModule/ShutterflyModule.py:26
 msgid "Shutterfly"
@@ -1137,6 +1127,15 @@ msgstr "SmugMug"
 #: ../conduit/modules/SmugMugModule/SmugMugModule.py:29
 msgid "Synchronize your SmugMug.com photos"
 msgstr "Συγχρονισμός των φωτογραφιών σας στο SmugMug.com"
+
+#: ../conduit/modules/TomboyModule.py:106
+msgid "Tomboy Notes"
+msgstr "Σημειώσεις Tomboy"
+
+#: ../conduit/modules/TomboyModule.py:107
+#| msgid "Synchronize your iPod notes"
+msgid "Synchronize your Tomboy notes"
+msgstr "Συγχρονισμός των Tomboy σημειώσεων σας"
 
 #: ../conduit/modules/ZotoModule/ZotoModule.py:154
 msgid "Zoto"
