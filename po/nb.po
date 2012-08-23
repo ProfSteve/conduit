@@ -1,14 +1,14 @@
 # Norwegian bokmål translation of conduit.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Kjartan Maraas <kmaraas@gnome.org>, 2008-2011.
+# Kjartan Maraas <kmaraas@gnome.org>, 2008-2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: conduit 0.3.18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-26 13:12+0200\n"
-"PO-Revision-Date: 2011-08-26 13:19+0200\n"
+"POT-Creation-Date: 2012-08-23 08:00+0200\n"
+"PO-Revision-Date: 2012-08-23 08:02+0200\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: \n"
@@ -25,144 +25,144 @@ msgid "Synchronization for GNOME"
 msgstr "Synkronisering for GNOME"
 
 #: ../data/conduit.ui.h:1
-msgid "Always Up-To-Date"
-msgstr "Alltid oppdatert"
+msgid "Title"
+msgstr "Tittel"
 
 #: ../data/conduit.ui.h:2
-msgid "Ask Me What to Do"
-msgstr "Spør meg hva som skal gjøres"
-
-#: ../data/conduit.ui.h:3
-msgid "Ask me what to do"
-msgstr "Spør meg hva som skal gjøres"
-
-#: ../data/conduit.ui.h:4
-msgid "Compare"
-msgstr "Sammenligne"
-
-#: ../data/conduit.ui.h:5
-msgid "Conduit Preferences"
-msgstr "Brukervalg for Conduit"
-
-#: ../data/conduit.ui.h:6
-msgid "Configuration"
-msgstr "Konfigurasjon"
-
-#: ../data/conduit.ui.h:7
-msgid "Conflict Options"
-msgstr "Konfliktvalg"
-
-#: ../data/conduit.ui.h:8
-msgid "Conflicts"
-msgstr "Konflikter"
-
-#: ../data/conduit.ui.h:9
-msgid "Data Conversions"
-msgstr "Datakonvertering"
-
-#: ../data/conduit.ui.h:10
-msgid "Data Providers"
-msgstr "Datatilbydere"
-
-#: ../data/conduit.ui.h:11
-msgid "Default Synchronization Options"
-msgstr "Forvalgte synkroniseringsvalg"
-
-#: ../data/conduit.ui.h:12
-msgid "Delete Options"
-msgstr "Slett alternativer"
-
-#: ../data/conduit.ui.h:13
-msgid "Delete from the corresponding sink"
-msgstr "Slett fra tilhørende vask"
-
-#: ../data/conduit.ui.h:14
-msgid "Delete the Corresponding Item"
-msgstr "Slett tilhørende oppføring"
-
-#: ../data/conduit.ui.h:15
 msgid "Editor"
 msgstr "Redigering"
 
-#: ../data/conduit.ui.h:16
-msgid "General"
-msgstr "Generelt"
+#: ../data/conduit.ui.h:3
+msgid "_File"
+msgstr "_Fil"
 
-#: ../data/conduit.ui.h:17
-msgid "Minimize to notification area"
-msgstr "Minimer til varslingsområdet"
+#: ../data/conduit.ui.h:4
+msgid "_Edit"
+msgstr "R_ediger"
 
-#: ../data/conduit.ui.h:18
-msgid "Replace the Older Item"
-msgstr "Erstatt den eldste oppføringen"
+#: ../data/conduit.ui.h:5
+msgid "_Help"
+msgstr "_Hjelp"
 
-#: ../data/conduit.ui.h:19
-msgid "Replace the older item"
-msgstr "Erstatt den eldste oppføringen"
+#: ../data/conduit.ui.h:6
+msgid "Data Providers"
+msgstr "Datatilbydere"
 
-#: ../data/conduit.ui.h:20
+#: ../data/conduit.ui.h:7
+msgid "Compare"
+msgstr "Sammenligne"
+
+#: ../data/conduit.ui.h:8
 msgid "Resolve Conflicts"
 msgstr "Løs konflikter"
 
+#: ../data/conduit.ui.h:9
+msgid "Conflicts"
+msgstr "Konflikter"
+
+#: ../data/conduit.ui.h:10
+msgid "Synchronization Options"
+msgstr "Alternativer for synkronisering"
+
+#: ../data/conduit.ui.h:11
+msgid "Slow Synchronization"
+msgstr "Langsom synkronisering"
+
+#: ../data/conduit.ui.h:12
+msgid "Two-Way Synchronization"
+msgstr "Toveis synkronisering"
+
+#: ../data/conduit.ui.h:13
+msgid "Always Up-To-Date"
+msgstr "Alltid oppdatert"
+
+#: ../data/conduit.ui.h:14
+msgid "Conflict Options"
+msgstr "Konfliktvalg"
+
+#: ../data/conduit.ui.h:15
+msgid "Ask Me What to Do"
+msgstr "Spør meg hva som skal gjøres"
+
+#: ../data/conduit.ui.h:16
+msgid "Replace the Older Item"
+msgstr "Erstatt den eldste oppføringen"
+
+#: ../data/conduit.ui.h:17
+msgid "Skip"
+msgstr "Hopp over"
+
+#: ../data/conduit.ui.h:18
+msgid "Delete Options"
+msgstr "Slett alternativer"
+
+#: ../data/conduit.ui.h:19
+msgid "Delete the Corresponding Item"
+msgstr "Slett tilhørende oppføring"
+
+#: ../data/conduit.ui.h:20
+msgid "Conduit Preferences"
+msgstr "Brukervalg for Conduit"
+
 #: ../data/conduit.ui.h:21
-msgid "Save settings on exit"
-msgstr "Lagre innstillinger når du avslutter"
+msgid "Start Conduit at login"
+msgstr "Start Conduit ved pålogging"
 
 #: ../data/conduit.ui.h:22
-msgid "Show Hints"
-msgstr ""
+msgid "Save settings on exit"
+msgstr "Lagre innstillinger når du avslutter"
 
 #: ../data/conduit.ui.h:23
 msgid "Show status icon"
 msgstr "Vis statusikon"
 
 #: ../data/conduit.ui.h:24
-msgid "Skip"
-msgstr "Hopp over"
+msgid "Minimize to notification area"
+msgstr "Minimer til varslingsområdet"
 
 #: ../data/conduit.ui.h:25
-msgid "Slow Synchronization"
-msgstr "Langsom synkronisering"
+msgid "Show Hints"
+msgstr "Vis hint"
 
 #: ../data/conduit.ui.h:26
-msgid "Start Conduit at login"
-msgstr "Start Conduit ved pålogging"
+msgid "General"
+msgstr "Generelt"
 
 #: ../data/conduit.ui.h:27
-msgid "Synchronization Options"
-msgstr "Alternativer for synkronisering"
-
-#: ../data/conduit.ui.h:28
-msgid "Title"
-msgstr "Tittel"
-
-#: ../data/conduit.ui.h:29
-msgid "Two-Way Synchronization"
-msgstr "Toveis synkronisering"
-
-#: ../data/conduit.ui.h:30
 msgid "When an item has been deleted:"
 msgstr "Når en oppføring er slettet:"
 
-#: ../data/conduit.ui.h:31
+#: ../data/conduit.ui.h:28
+msgid "Ask me what to do"
+msgstr "Spør meg hva som skal gjøres"
+
+#: ../data/conduit.ui.h:29
+msgid "Delete from the corresponding sink"
+msgstr "Slett fra tilhørende vask"
+
+#: ../data/conduit.ui.h:30
 msgid "When there is a two-way conflict:"
 msgstr "Når du har en toveis konflikt:"
 
+#: ../data/conduit.ui.h:31
+msgid "Replace the older item"
+msgstr "Erstatt den eldste oppføringen"
+
 #: ../data/conduit.ui.h:32
-msgid "_Edit"
-msgstr "R_ediger"
+msgid "Default Synchronization Options"
+msgstr "Forvalgte synkroniseringsvalg"
 
 #: ../data/conduit.ui.h:33
-msgid "_File"
-msgstr "_Fil"
+msgid "Configuration"
+msgstr "Konfigurasjon"
 
 #: ../data/conduit.ui.h:34
-msgid "_Help"
-msgstr "_Hjelp"
+msgid "Data Conversions"
+msgstr "Datakonvertering"
 
 #: ../conduit/Knowledge.py:8
 msgid "What Do You Want to Synchronize?"
-msgstr ""
+msgstr "Hva vil du synkronisere?"
 
 #: ../conduit/Knowledge.py:9
 msgid "Drag and Drop a Data Provider on the Canvas"
@@ -384,6 +384,11 @@ msgstr "Dra en datatilbyder hit for å fortsette"
 msgid "Show me"
 msgstr "Vis meg"
 
+#: ../conduit/gtkui/ConfigItems.py:733
+#, python-format
+msgid "Total: %d"
+msgstr "Totalt: %d"
+
 #. Visible column0 is
 #. [pixbuf + source display name] or
 #. [source_data.get_snippet()]
@@ -405,6 +410,15 @@ msgstr "Vask"
 #, python-format
 msgid "Conflicts (%s)"
 msgstr "Konflikter (%s)"
+
+#: ../conduit/gtkui/Tree.py:355 ../conduit/gtkui/UI.py:200
+#: ../conduit/modules/FileModule/FileConfiguration.py:118
+msgid "Name"
+msgstr "Navn"
+
+#: ../conduit/gtkui/Tree.py:364
+msgid "Description"
+msgstr "Beskrivelse"
 
 #. name,                      #url
 #: ../conduit/gtkui/UI.py:33
@@ -443,11 +457,6 @@ msgstr "Relasjonsdatabase"
 #: ../conduit/gtkui/UI.py:194
 msgid "Conversions Available"
 msgstr "Konvertering tilgjengelig"
-
-#: ../conduit/gtkui/UI.py:200 ../conduit/gtkui/Tree.py:355
-#: ../conduit/modules/FileModule/FileConfiguration.py:118
-msgid "Name"
-msgstr "Navn"
 
 #: ../conduit/gtkui/UI.py:204
 msgid "Loaded"
@@ -505,15 +514,6 @@ msgstr "Synkronisering fullført"
 #: ../conduit/gtkui/UI.py:741
 msgid "Synchronization Error"
 msgstr "Feil ved synkronisering"
-
-#: ../conduit/gtkui/Tree.py:364
-msgid "Description"
-msgstr "Beskrivelse"
-
-#: ../conduit/gtkui/ConfigItems.py:733
-#, python-format
-msgid "Total: %d"
-msgstr "Totalt: %d"
 
 #: ../conduit/gtkui/WindowConfigurator.py:14
 msgid "Configure"
@@ -645,11 +645,11 @@ msgstr "Synkroniser dine Facebook-bilder"
 #: ../conduit/modules/FacebookModule/FacebookModule.py:124
 #: ../conduit/modules/FlickrModule/FlickrModule.py:282
 msgid "Loading album list..."
-msgstr ""
+msgstr "Laster albumliste …"
 
 #: ../conduit/modules/FacebookModule/FacebookModule.py:128
 msgid "Failed to connect"
-msgstr ""
+msgstr "Klarte ikke å koble til"
 
 #: ../conduit/modules/FacebookModule/FacebookModule.py:131
 msgid "Logged in"
@@ -657,7 +657,7 @@ msgstr "Logget inn"
 
 #: ../conduit/modules/FacebookModule/FacebookModule.py:133
 msgid "Failed to login"
-msgstr ""
+msgstr "Klarte ikke å logge inn"
 
 #: ../conduit/modules/FacebookModule/FacebookModule.py:145
 #: ../conduit/modules/FspotModule/FspotModule.py:246
@@ -1009,9 +1009,8 @@ msgid "TV Show"
 msgstr "TV-show"
 
 #: ../conduit/modules/iPodModule/iPodModule.py:1019
-#, fuzzy
 msgid "Video kind"
-msgstr "Video"
+msgstr "Video kind"
 
 #. Translators: Translate this in derived classes.
 #: ../conduit/modules/N800Module/N800Module.py:55
@@ -1065,9 +1064,8 @@ msgid "Nautilus Bookmarks"
 msgstr "Nautilus-bokmerker"
 
 #: ../conduit/modules/NautilusBookmarksModule.py:20
-#, fuzzy
 msgid "Sync your Nautilus Bookmarks"
-msgstr "Synkroniser dine Gmail-kontakter"
+msgstr "Synkroniser dine Nautilus-bokmerker"
 
 #: ../conduit/modules/NautilusBookmarksModule.py:145
 msgid "Sync bookmarks to local places/files"
@@ -1102,9 +1100,8 @@ msgid "Shotwell"
 msgstr "Shotwell"
 
 #: ../conduit/modules/ShotwellModule/ShotwellModule.py:37
-#, fuzzy
 msgid "Sync from your Shotwell photo library"
-msgstr "Synkroniser dine bilder fra F-Spot"
+msgstr "Synkroniser bilder fra ditt Shotwell-fotobibliotek"
 
 #: ../conduit/modules/ShotwellModule/ShotwellModule.py:56
 msgid "Disabling Shotwell module, unable to open sqlite3 data source"
@@ -1129,6 +1126,14 @@ msgstr "SmugMug"
 #: ../conduit/modules/SmugMugModule/SmugMugModule.py:29
 msgid "Synchronize your SmugMug.com photos"
 msgstr "Synkroniser dine bilder med SmugMug.com"
+
+#: ../conduit/modules/TomboyModule.py:106
+msgid "Tomboy Notes"
+msgstr "Tomboy-notater"
+
+#: ../conduit/modules/TomboyModule.py:107
+msgid "Synchronize your Tomboy notes"
+msgstr "Synkroniser dine Tomboy-notater"
 
 #: ../conduit/modules/ZotoModule/ZotoModule.py:154
 msgid "Zoto"
