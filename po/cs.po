@@ -5,15 +5,15 @@
 # Jiří Eischmann <jiri@eischmann.cz>, 2008.
 # Jan Dobrovolný <dobrovolnyh@seznam.cz>, 2008.
 # Petr Kovar <pknbe@volny.cz>, 2008, 2010.
-# Marek Černocký <marek@manet.cz>, 2009, 2010, 2011.
+# Marek Černocký <marek@manet.cz>, 2009, 2010, 2011, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: conduit master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=conduit&keywords=I18N+L10N&component=documentation and translation\n"
-"POT-Creation-Date: 2011-03-17 21:01+0000\n"
-"PO-Revision-Date: 2011-03-26 16:42+0100\n"
+"POT-Creation-Date: 2012-06-06 19:17+0000\n"
+"PO-Revision-Date: 2012-09-01 00:48+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -32,140 +32,140 @@ msgid "Synchronization for GNOME"
 msgstr "Synchronizace pro prostředí GNOME"
 
 #: ../data/conduit.ui.h:1
-msgid "Always Up-To-Date"
-msgstr "Vždy aktuální"
+msgid "Title"
+msgstr "Název"
 
 #: ../data/conduit.ui.h:2
-msgid "Ask Me What to Do"
-msgstr "Dotázat se, co dělat"
-
-#: ../data/conduit.ui.h:3
-msgid "Ask me what to do"
-msgstr "Dotázat se, co dělat"
-
-#: ../data/conduit.ui.h:4
-msgid "Compare"
-msgstr "Srovnat"
-
-#: ../data/conduit.ui.h:5
-msgid "Conduit Preferences"
-msgstr "Předvolby Conduit"
-
-#: ../data/conduit.ui.h:6
-msgid "Configuration"
-msgstr "Nastavení"
-
-#: ../data/conduit.ui.h:7
-msgid "Conflict Options"
-msgstr "Volby konfliktů"
-
-#: ../data/conduit.ui.h:8
-msgid "Conflicts"
-msgstr "Konflikty"
-
-#: ../data/conduit.ui.h:9
-msgid "Data Conversions"
-msgstr "Převody dat"
-
-#: ../data/conduit.ui.h:10
-msgid "Data Providers"
-msgstr "Poskytovatelé dat"
-
-#: ../data/conduit.ui.h:11
-msgid "Default Synchronization Options"
-msgstr "Výchozí volby synchronizace"
-
-#: ../data/conduit.ui.h:12
-msgid "Delete Options"
-msgstr "Volby mazání"
-
-#: ../data/conduit.ui.h:13
-msgid "Delete from the corresponding sink"
-msgstr "Smazat z odpovídajícího cíle"
-
-#: ../data/conduit.ui.h:14
-msgid "Delete the Corresponding Item"
-msgstr "Smazat odpovídající položku"
-
-#: ../data/conduit.ui.h:15
 msgid "Editor"
 msgstr "Editor"
 
-#: ../data/conduit.ui.h:16
-msgid "General"
-msgstr "Obecné"
+#: ../data/conduit.ui.h:3
+msgid "_File"
+msgstr "_Soubor"
 
-#: ../data/conduit.ui.h:17
-msgid "Minimize to notification area"
-msgstr "Minimalizovat do oznamovací oblasti"
+#: ../data/conduit.ui.h:4
+msgid "_Edit"
+msgstr "_Upravit"
 
-#: ../data/conduit.ui.h:18
-msgid "Replace the Older Item"
-msgstr "Nahradit starší položku"
+#: ../data/conduit.ui.h:5
+msgid "_Help"
+msgstr "_Nápověda"
 
-#: ../data/conduit.ui.h:19
-msgid "Replace the older item"
-msgstr "Nahradit starší položku"
+#: ../data/conduit.ui.h:6
+msgid "Data Providers"
+msgstr "Poskytovatelé dat"
 
-#: ../data/conduit.ui.h:20
+#: ../data/conduit.ui.h:7
+msgid "Compare"
+msgstr "Srovnat"
+
+#: ../data/conduit.ui.h:8
 msgid "Resolve Conflicts"
 msgstr "Vyřešit konflikty"
 
+#: ../data/conduit.ui.h:9
+msgid "Conflicts"
+msgstr "Konflikty"
+
+#: ../data/conduit.ui.h:10
+msgid "Synchronization Options"
+msgstr "Volby synchronizace"
+
+#: ../data/conduit.ui.h:11
+msgid "Slow Synchronization"
+msgstr "Pomalá synchronizace"
+
+#: ../data/conduit.ui.h:12
+msgid "Two-Way Synchronization"
+msgstr "Obousměrná synchronizace"
+
+#: ../data/conduit.ui.h:13
+msgid "Always Up-To-Date"
+msgstr "Vždy aktuální"
+
+#: ../data/conduit.ui.h:14
+msgid "Conflict Options"
+msgstr "Volby konfliktů"
+
+#: ../data/conduit.ui.h:15
+msgid "Ask Me What to Do"
+msgstr "Dotázat se, co dělat"
+
+#: ../data/conduit.ui.h:16
+msgid "Replace the Older Item"
+msgstr "Nahradit starší položku"
+
+#: ../data/conduit.ui.h:17
+msgid "Skip"
+msgstr "Přeskočit"
+
+#: ../data/conduit.ui.h:18
+msgid "Delete Options"
+msgstr "Volby mazání"
+
+#: ../data/conduit.ui.h:19
+msgid "Delete the Corresponding Item"
+msgstr "Smazat odpovídající položku"
+
+#: ../data/conduit.ui.h:20
+msgid "Conduit Preferences"
+msgstr "Předvolby Conduit"
+
 #: ../data/conduit.ui.h:21
-msgid "Save settings on exit"
-msgstr "Uložit nastavení při ukončení"
+msgid "Start Conduit at login"
+msgstr "Spustit aplikaci Conduit při přihlášení"
 
 #: ../data/conduit.ui.h:22
-msgid "Show Hints"
-msgstr "Zobrazovat rady"
+msgid "Save settings on exit"
+msgstr "Uložit nastavení při ukončení"
 
 #: ../data/conduit.ui.h:23
 msgid "Show status icon"
 msgstr "Zobrazovat stavovou ikonu"
 
 #: ../data/conduit.ui.h:24
-msgid "Skip"
-msgstr "Přeskočit"
+msgid "Minimize to notification area"
+msgstr "Minimalizovat do oznamovací oblasti"
 
 #: ../data/conduit.ui.h:25
-msgid "Slow Synchronization"
-msgstr "Pomalá synchronizace"
+msgid "Show Hints"
+msgstr "Zobrazovat rady"
 
 #: ../data/conduit.ui.h:26
-msgid "Start Conduit at login"
-msgstr "Spustit aplikaci Conduit při přihlášení"
+msgid "General"
+msgstr "Obecné"
 
 #: ../data/conduit.ui.h:27
-msgid "Synchronization Options"
-msgstr "Volby synchronizace"
-
-#: ../data/conduit.ui.h:28
-msgid "Title"
-msgstr "Název"
-
-#: ../data/conduit.ui.h:29
-msgid "Two-Way Synchronization"
-msgstr "Obousměrná synchronizace"
-
-#: ../data/conduit.ui.h:30
 msgid "When an item has been deleted:"
 msgstr "Když byla některá položka smazána:"
 
-#: ../data/conduit.ui.h:31
+#: ../data/conduit.ui.h:28
+msgid "Ask me what to do"
+msgstr "Dotázat se, co dělat"
+
+#: ../data/conduit.ui.h:29
+msgid "Delete from the corresponding sink"
+msgstr "Smazat z odpovídajícího cíle"
+
+#: ../data/conduit.ui.h:30
 msgid "When there is a two-way conflict:"
 msgstr "Když nastane obousměrný konflikt:"
 
+#: ../data/conduit.ui.h:31
+msgid "Replace the older item"
+msgstr "Nahradit starší položku"
+
 #: ../data/conduit.ui.h:32
-msgid "_Edit"
-msgstr "_Upravit"
+msgid "Default Synchronization Options"
+msgstr "Výchozí volby synchronizace"
 
 #: ../data/conduit.ui.h:33
-msgid "_File"
-msgstr "_Soubor"
+msgid "Configuration"
+msgstr "Nastavení"
 
 #: ../data/conduit.ui.h:34
-msgid "_Help"
-msgstr "_Nápověda"
+msgid "Data Conversions"
+msgstr "Převody dat"
 
 #: ../conduit/Knowledge.py:8
 msgid "What Do You Want to Synchronize?"
@@ -399,6 +399,11 @@ msgstr "Přetáhněte sem poskytovatele dat, abyste mohli pokračovat"
 msgid "Show me"
 msgstr "Domovskou složku"
 
+#: ../conduit/gtkui/ConfigItems.py:733
+#, python-format
+msgid "Total: %d"
+msgstr "Celkem: %d"
+
 #. Visible column0 is
 #. [pixbuf + source display name] or
 #. [source_data.get_snippet()]
@@ -420,6 +425,15 @@ msgstr "Cíl"
 #, python-format
 msgid "Conflicts (%s)"
 msgstr "Konflikty (%s)"
+
+#: ../conduit/gtkui/Tree.py:355 ../conduit/gtkui/UI.py:200
+#: ../conduit/modules/FileModule/FileConfiguration.py:118
+msgid "Name"
+msgstr "Název"
+
+#: ../conduit/gtkui/Tree.py:364
+msgid "Description"
+msgstr "Popis"
 
 #. name,                      #url
 #: ../conduit/gtkui/UI.py:33
@@ -458,11 +472,6 @@ msgstr "Databáze vztahů"
 #: ../conduit/gtkui/UI.py:194
 msgid "Conversions Available"
 msgstr "Dostupné převody"
-
-#: ../conduit/gtkui/UI.py:200 ../conduit/gtkui/Tree.py:355
-#: ../conduit/modules/FileModule/FileConfiguration.py:118
-msgid "Name"
-msgstr "Název"
 
 #: ../conduit/gtkui/UI.py:204
 msgid "Loaded"
@@ -520,15 +529,6 @@ msgstr "Synchronizace dokončena"
 #: ../conduit/gtkui/UI.py:741
 msgid "Synchronization Error"
 msgstr "Chyba v synchronizaci"
-
-#: ../conduit/gtkui/Tree.py:364
-msgid "Description"
-msgstr "Popis"
-
-#: ../conduit/gtkui/ConfigItems.py:733
-#, python-format
-msgid "Total: %d"
-msgstr "Celkem: %d"
 
 #: ../conduit/gtkui/WindowConfigurator.py:14
 msgid "Configure"
@@ -1105,7 +1105,7 @@ msgstr "Hudba Rhythmbox"
 
 #: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:49
 msgid "Synchronize songs from your Rhythmbox playlists"
-msgstr "Synchronizace skladeb ze seznamů skladeb Rhythmbox"
+msgstr "Synchronizace skladeb ze seznamů k přehrávání Rhythmbox"
 
 #: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:73
 msgid "Unknown"
@@ -1141,7 +1141,15 @@ msgstr "SmugMug"
 
 #: ../conduit/modules/SmugMugModule/SmugMugModule.py:29
 msgid "Synchronize your SmugMug.com photos"
-msgstr "Synchronizace fotografií na SmugMug.com"
+msgstr "Synchronizace vašich fotografií na SmugMug.com"
+
+#: ../conduit/modules/TomboyModule.py:106
+msgid "Tomboy Notes"
+msgstr "Poznámky Tomboy"
+
+#: ../conduit/modules/TomboyModule.py:107
+msgid "Synchronize your Tomboy notes"
+msgstr "Synchronizace vašich poznámek Tomboy"
 
 #: ../conduit/modules/ZotoModule/ZotoModule.py:154
 msgid "Zoto"
