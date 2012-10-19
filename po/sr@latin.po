@@ -1,0 +1,1154 @@
+# Serbian translation for conduit.
+# Copyright (C) 2012 conduit's COPYRIGHT HOLDER
+# This file is distributed under the same license as the conduit package.
+# Miroslav Nikolić <miroslavnikolic@rocketmail.com>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: conduit master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=condui"
+"t&keywords=I18N+L10N&component=documentation and translation\n"
+"POT-Creation-Date: 2012-09-23 19:11+0000\n"
+"PO-Revision-Date: 2012-10-19 22:21+0200\n"
+"Last-Translator: Miroslav Nikolić <miroslavnikolic@rocketmail.com>\n"
+"Language-Team: Serbian <gnom@prevod.org>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : "
+"n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Project-Style: gnome\n"
+
+#: ../data/conduit.desktop.in.in.h:1
+msgid "Conduit Synchronizer"
+msgstr "Vodovođa usaglašavač"
+
+#: ../data/conduit.desktop.in.in.h:2
+msgid "Synchronization for GNOME"
+msgstr "Usaglašavanje za Gnom"
+
+#: ../data/conduit.ui.h:1
+msgid "Title"
+msgstr "Naslov"
+
+#: ../data/conduit.ui.h:2
+msgid "Editor"
+msgstr "Uređivač"
+
+#: ../data/conduit.ui.h:3
+msgid "_File"
+msgstr "_Datoteka"
+
+#: ../data/conduit.ui.h:4
+msgid "_Edit"
+msgstr "_Uredi"
+
+#: ../data/conduit.ui.h:5
+msgid "_Help"
+msgstr "Po_moć"
+
+#: ../data/conduit.ui.h:6
+msgid "Data Providers"
+msgstr "Dostavljač podataka"
+
+#: ../data/conduit.ui.h:7
+msgid "Compare"
+msgstr "Uporedi"
+
+#: ../data/conduit.ui.h:8
+msgid "Resolve Conflicts"
+msgstr "Razreši sukobe"
+
+#: ../data/conduit.ui.h:9
+msgid "Conflicts"
+msgstr "Sukobljava se"
+
+#: ../data/conduit.ui.h:10
+msgid "Synchronization Options"
+msgstr "Opcije usaglašavanja"
+
+#: ../data/conduit.ui.h:11
+msgid "Slow Synchronization"
+msgstr "Sporo usaglašavanje"
+
+#: ../data/conduit.ui.h:12
+msgid "Two-Way Synchronization"
+msgstr "Dvosmerno usaglašavanje"
+
+#: ../data/conduit.ui.h:13
+msgid "Always Up-To-Date"
+msgstr "Uvek ažurirano"
+
+#: ../data/conduit.ui.h:14
+msgid "Conflict Options"
+msgstr "Opcije sukoba"
+
+#: ../data/conduit.ui.h:15
+msgid "Ask Me What to Do"
+msgstr "Pitaj me šta da radiš"
+
+#: ../data/conduit.ui.h:16
+msgid "Replace the Older Item"
+msgstr "Zameni stare stavke"
+
+#: ../data/conduit.ui.h:17
+msgid "Skip"
+msgstr "Preskoči"
+
+#: ../data/conduit.ui.h:18
+msgid "Delete Options"
+msgstr "Obriši opcije"
+
+#: ../data/conduit.ui.h:19
+msgid "Delete the Corresponding Item"
+msgstr "Obriši odgovarajuću stavku"
+
+#: ../data/conduit.ui.h:20
+msgid "Conduit Preferences"
+msgstr "Postavke Vodovođe"
+
+#: ../data/conduit.ui.h:21
+msgid "Start Conduit at login"
+msgstr "Pokreni Vodovođu prilikom prijave"
+
+#: ../data/conduit.ui.h:22
+msgid "Save settings on exit"
+msgstr "Sačuvaj postavke pri napuštanju"
+
+#: ../data/conduit.ui.h:23
+msgid "Show status icon"
+msgstr "Prikaži ikonicu stanja"
+
+#: ../data/conduit.ui.h:24
+msgid "Minimize to notification area"
+msgstr "Umanji u oblast obaveštenja"
+
+#: ../data/conduit.ui.h:25
+msgid "Show Hints"
+msgstr "Prikaži savete"
+
+#: ../data/conduit.ui.h:26
+msgid "General"
+msgstr "Opšte"
+
+#: ../data/conduit.ui.h:27
+msgid "When an item has been deleted:"
+msgstr "Kada je obrisana neka stavka:"
+
+#: ../data/conduit.ui.h:28
+msgid "Ask me what to do"
+msgstr "Pitaj me šta da radiš"
+
+#: ../data/conduit.ui.h:29
+msgid "Delete from the corresponding sink"
+msgstr "Obriši iz odgovarajućeg usaglašavanja"
+
+#: ../data/conduit.ui.h:30
+msgid "When there is a two-way conflict:"
+msgstr "Kada postoji dvosmerni sukob:"
+
+#: ../data/conduit.ui.h:31
+msgid "Replace the older item"
+msgstr "Zameni staru stavku"
+
+#: ../data/conduit.ui.h:32
+msgid "Default Synchronization Options"
+msgstr "Osnovne opcije usaglašavanja"
+
+#: ../data/conduit.ui.h:33
+msgid "Configuration"
+msgstr "Podešavanje"
+
+#: ../data/conduit.ui.h:34
+msgid "Data Conversions"
+msgstr "Pretvaranje podataka"
+
+#: ../conduit/Knowledge.py:8
+msgid "What Do You Want to Synchronize?"
+msgstr "Šta želite da usaglasite?"
+
+#: ../conduit/Knowledge.py:9
+msgid "Drag and Drop a Data Provider on the Canvas"
+msgstr "Prevucite i ubacite dostavljača podataka na platno"
+
+#: ../conduit/Knowledge.py:11
+msgid "Synchronization Group Created"
+msgstr "Stvorena je grupa usaglašavanja"
+
+#: ../conduit/Knowledge.py:12
+msgid "Add Another Data Provider to the Group to Synchronize it"
+msgstr "Dodaj još jednog dostavljača podataka u grupu za usaglašavanje"
+
+#: ../conduit/Knowledge.py:14
+msgid "You Are Now Ready to Synchronize"
+msgstr "Sada ste spremni za usaglašavanje"
+
+#: ../conduit/Knowledge.py:15
+msgid "Right Click on Group for Options"
+msgstr "Desni klik na grupu za opcije"
+
+#: ../conduit/Knowledge.py:24
+msgid "Synchronize Two Folders"
+msgstr "Usaglasi dve fascikle"
+
+#: ../conduit/Knowledge.py:27
+msgid "Backup Folder to Box.net"
+msgstr "Napravi rezervu fascikle na Boks.netu"
+
+#: ../conduit/Knowledge.py:30
+msgid "Synchronize Tagged F-Spot Photos to Flickr"
+msgstr "Usaglasi fotografije označene F-brojem na Flikr"
+
+#: ../conduit/Knowledge.py:33
+msgid "Synchronize Photos to Flickr"
+msgstr "Usaglasi fotografije na Flikr"
+
+#: ../conduit/Knowledge.py:36
+msgid "Upload Photos to Facebook"
+msgstr "Otpremi fotografije na Fejsbuk"
+
+#: ../conduit/Knowledge.py:39
+msgid "Synchronize Desktop Wallpaper from a RSS Feed"
+msgstr "Usaglasi pozadinu radne površi sa RSS dovoda"
+
+#: ../conduit/Main.py:57
+msgid "Conduit is a synchronization application."
+msgstr "Vodovođa je program za usaglašavanje."
+
+#: ../conduit/Main.py:61
+#, python-format
+msgid "Launch without GUI. [default: %default]"
+msgstr "Pokreće bez grafičkog sučelja. [osnovno: %default]"
+
+#: ../conduit/Main.py:65
+#, python-format
+msgid "Save dataprovider configuration to FILE. [default: %default]"
+msgstr "Čuva podešavanja dostavljača podataka u DATOTEKU. [osnovno: %default]"
+
+#: ../conduit/Main.py:69
+#, python-format
+msgid "Iconify on startup. [default: %default]"
+msgstr "Smanji na ikonicu prilikom pokretanja. [osnovno: %default]"
+
+#: ../conduit/Main.py:73
+#, python-format
+msgid "Run with the specified UI. [default: %default]"
+msgstr "Pokreće sa navedenim korisničkim sučeljem. [osnovno: %default]"
+
+#: ../conduit/Main.py:77
+msgid "Only load modules in the named files. [default: load all modules]"
+msgstr ""
+"Učitava module samo u imenovanim datotekama. [osnovno: učitaj sve module]"
+
+#: ../conduit/Main.py:81
+msgid "Do not load modules in the named files. [default: load all modules]"
+msgstr "Ne učitava module u imenovanim datotekama. [osnovno: učitaj sve module]"
+
+#: ../conduit/Main.py:85
+msgid ""
+"Explicitly set internal Conduit settings (keys) to the given values for this "
+"session. [default: do not set]"
+msgstr ""
+"Izričito podešava unutrašnja podešavanja Vodovođe (ključevi) na date vrednosti "
+"za tu sesiju. [osnovno: ne podešava]"
+
+#: ../conduit/Main.py:89
+#, python-format
+msgid ""
+"Enable loading of unfinished or unsupported dataproviders. [default: "
+"%default]"
+msgstr ""
+"Uključuje učitavanje nedovršenih ili nepodržanih dostavljača podataka. "
+"[osnovno: %default]"
+
+#: ../conduit/Main.py:93
+#, python-format
+msgid "Generate more debugging information. [default: %default]"
+msgstr "Stvara više podataka o uklanjanju grešaka. [osnovno: %default]"
+
+#: ../conduit/Main.py:97
+#, python-format
+msgid "Generate less debugging information. [default: %default]"
+msgstr "Stvara manje podataka o uklanjanju grešaka. [osnovno: %default]"
+
+#: ../conduit/Main.py:101
+#, python-format
+msgid "Generate no debugging information. [default: %default]"
+msgstr "Ne stvara nikakve podatke o uklanjanju grešaka. [osnovno: %default]"
+
+#: ../conduit/dataproviders/DataProvider.py:22
+msgid "Ready"
+msgstr "Spreman"
+
+#: ../conduit/dataproviders/DataProvider.py:23
+msgid "New data to sync"
+msgstr "Novi podaci za usaglašavnje"
+
+#: ../conduit/dataproviders/DataProvider.py:24
+msgid "Refreshing..."
+msgstr "Osvežavam..."
+
+#: ../conduit/dataproviders/DataProvider.py:25
+msgid "Refreshed OK"
+msgstr "Osveženo je"
+
+#: ../conduit/dataproviders/DataProvider.py:26
+msgid "Error Refreshing"
+msgstr "Greška osvežavanja"
+
+#: ../conduit/dataproviders/DataProvider.py:27
+msgid "Synchronizing..."
+msgstr "Usaglašavam..."
+
+#: ../conduit/dataproviders/DataProvider.py:28
+msgid "Synchronized OK"
+msgstr "Usaglašeno je"
+
+#: ../conduit/dataproviders/DataProvider.py:29
+msgid "Error Synchronizing"
+msgstr "Greška usaglašavanja"
+
+#: ../conduit/dataproviders/DataProvider.py:30
+msgid "Synchronization Skipped"
+msgstr "Usaglašavanje je preskočeno"
+
+#: ../conduit/dataproviders/DataProvider.py:31
+msgid "Synchronization Cancelled"
+msgstr "Usaglašavanje je prekinuto"
+
+#: ../conduit/dataproviders/DataProvider.py:32 ../conduit/gtkui/UI.py:743
+msgid "Synchronization Conflict"
+msgstr "Sukob usaglašavanja"
+
+#: ../conduit/dataproviders/DataProvider.py:33
+msgid "Not Configured"
+msgstr "Nije podešeno"
+
+#: ../conduit/dataproviders/Image.py:34
+#: ../conduit/modules/FlickrModule/FlickrModule.py:329
+msgid "640x480"
+msgstr "640x480"
+
+#: ../conduit/dataproviders/Image.py:34
+#: ../conduit/modules/FlickrModule/FlickrModule.py:329
+msgid "800x600"
+msgstr "800x600"
+
+#: ../conduit/dataproviders/Image.py:34
+#: ../conduit/modules/FlickrModule/FlickrModule.py:329
+msgid "1024x768"
+msgstr "1024x768"
+
+#. Signifies that a conversion should not take place
+#: ../conduit/dataproviders/Image.py:35
+#: ../conduit/modules/N800Module/N800Module.py:57
+msgid "None"
+msgstr "Ništa"
+
+#. Default Categories for the DataProviders
+#: ../conduit/dataproviders/__init__.py:6
+msgid "Files and Folders"
+msgstr "Datoteke i fascikle"
+
+#: ../conduit/dataproviders/__init__.py:7
+#: ../conduit/modules/iPodModule/iPodModule.py:276
+msgid "Notes"
+msgstr "Beleške"
+
+#: ../conduit/dataproviders/__init__.py:8
+#: ../conduit/modules/iPodModule/iPodModule.py:464
+msgid "Photos"
+msgstr "Fotografije"
+
+#: ../conduit/dataproviders/__init__.py:9
+msgid "Office"
+msgstr "Kancelarija"
+
+#: ../conduit/dataproviders/__init__.py:10
+msgid "Settings"
+msgstr "Podešavanja"
+
+#: ../conduit/dataproviders/__init__.py:11
+msgid "Miscellaneous"
+msgstr "Razno"
+
+#: ../conduit/dataproviders/__init__.py:12
+msgid "Media"
+msgstr "Mediji"
+
+#: ../conduit/dataproviders/__init__.py:13
+msgid "Bookmarks"
+msgstr "Obeleživači"
+
+#: ../conduit/dataproviders/__init__.py:14
+msgid "Test"
+msgstr "Proveri"
+
+#: ../conduit/gtkui/Canvas.py:152
+msgid "Drag a Data Provider here to continue"
+msgstr "Ovde prevucite dostavljača podataka da nastavite"
+
+#: ../conduit/gtkui/Canvas.py:227
+msgid "Show me"
+msgstr "Prikaži mi"
+
+#: ../conduit/gtkui/ConfigItems.py:733
+#, python-format
+msgid "Total: %d"
+msgstr "Ukupno: %d"
+
+#. Visible column0 is
+#. [pixbuf + source display name] or
+#. [source_data.get_snippet()]
+#: ../conduit/gtkui/ConflictResolver.py:91
+msgid "Source"
+msgstr "Izvor"
+
+#: ../conduit/gtkui/ConflictResolver.py:105
+msgid "Resolution"
+msgstr "Rezolucija"
+
+#. Visible column2 is the display name of source and source data
+#: ../conduit/gtkui/ConflictResolver.py:110
+msgid "Sink"
+msgstr "Usaglasi"
+
+#: ../conduit/gtkui/ConflictResolver.py:150
+#: ../conduit/gtkui/ConflictResolver.py:151
+#, python-format
+msgid "Conflicts (%s)"
+msgstr "Sukobi: (%s)"
+
+#: ../conduit/gtkui/Tree.py:355 ../conduit/gtkui/UI.py:200
+#: ../conduit/modules/FileModule/FileConfiguration.py:118
+msgid "Name"
+msgstr "Naziv"
+
+#: ../conduit/gtkui/Tree.py:364
+msgid "Description"
+msgstr "Opis"
+
+#. name,                      #url
+#: ../conduit/gtkui/UI.py:33
+msgid "Introduction"
+msgstr "Uvod"
+
+#: ../conduit/gtkui/UI.py:34
+msgid "Writing a Data Provider"
+msgstr "Zapisivanje dostavljača podataka"
+
+#: ../conduit/gtkui/UI.py:35
+msgid "API Documentation"
+msgstr "API dokumentacija"
+
+#: ../conduit/gtkui/UI.py:36
+msgid "Test Results"
+msgstr "Rezultati provere"
+
+#: ../conduit/gtkui/UI.py:52
+msgid "Examples"
+msgstr "Primeri"
+
+#. Build some liststores to display
+#: ../conduit/gtkui/UI.py:139
+msgid "Convert from"
+msgstr "Pretvori iz"
+
+#: ../conduit/gtkui/UI.py:140
+msgid "into"
+msgstr "u"
+
+#: ../conduit/gtkui/UI.py:190
+msgid "Relationship Database"
+msgstr "Odnosna baza podataka"
+
+#: ../conduit/gtkui/UI.py:194
+msgid "Conversions Available"
+msgstr "Dostupna pretvaranja"
+
+#: ../conduit/gtkui/UI.py:204
+msgid "Loaded"
+msgstr "Učitano"
+
+#: ../conduit/gtkui/UI.py:329
+#, python-format
+msgid " - %s (Development Version)"
+msgstr " — %s (Razvojno izdanje)"
+
+#: ../conduit/gtkui/UI.py:331
+msgid " - Running Uninstalled"
+msgstr " — Pokrećem neinstalirano"
+
+#: ../conduit/gtkui/UI.py:375
+msgid "Developers"
+msgstr "Programeri"
+
+#: ../conduit/gtkui/UI.py:539 ../conduit/hildonui/UI.py:127
+msgid "Synchronization in progress. Do you want to cancel it?"
+msgstr "Usaglašavanje je u toku. Da li želite da ga otkažete?"
+
+#: ../conduit/gtkui/UI.py:712
+msgid "_Synchronize All"
+msgstr "_Usaglasi sve"
+
+#: ../conduit/gtkui/UI.py:712
+msgid "Synchronizes All Groups"
+msgstr "Usaglasi sve grupe"
+
+#: ../conduit/gtkui/UI.py:713
+msgid "_Cancel Synchronization"
+msgstr "_Otkaži usaglašavanje"
+
+#: ../conduit/gtkui/UI.py:713
+msgid "Cancels Currently Synchronizing Groups"
+msgstr "Otkaži tekuće usaglašavanje grupa"
+
+#: ../conduit/gtkui/UI.py:714
+msgid "_Quit"
+msgstr "_Izađi"
+
+#: ../conduit/gtkui/UI.py:714
+msgid "Close Conduit"
+msgstr "Zatvori Vodovođu"
+
+#: ../conduit/gtkui/UI.py:731
+msgid "Synchronizing"
+msgstr "Usaglašavam"
+
+#: ../conduit/gtkui/UI.py:737
+msgid "Synchronization Complete"
+msgstr "Usaglašavanje je završeno"
+
+#: ../conduit/gtkui/UI.py:741
+msgid "Synchronization Error"
+msgstr "Greška usaglašavanja"
+
+#: ../conduit/gtkui/WindowConfigurator.py:14
+msgid "Configure"
+msgstr "Podesi"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:58
+msgid "Backpack Notes"
+msgstr "Rančeve beleške"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:59
+msgid "Store things in Backpack Notes"
+msgstr "Uskladištite stvari u Rančevim beleškama"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:105
+#: ../conduit/modules/FlickrModule/FlickrModule.py:307
+#: ../conduit/modules/ZotoModule/ZotoModule.py:243
+msgid "Account details"
+msgstr "Detalji o nalogu"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:106
+msgid "Login"
+msgstr "Prijavi me"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:109
+msgid "API key"
+msgstr "API ključ"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:112
+msgid "Saved notes"
+msgstr "Sačuvane beleške"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:113
+msgid "Save notes in page"
+msgstr "Sačuvaj beleške kao stranicu"
+
+#: ../conduit/modules/BansheeModule/BansheeModule.py:52
+msgid "Banshee Playlists"
+msgstr "Liste numera Zloslutnice"
+
+#: ../conduit/modules/BansheeModule/BansheeModule.py:53
+msgid "Synchronize your Banshee playlists"
+msgstr "Usaglasite vašu listu numera Zloslutnice"
+
+#: ../conduit/modules/BansheeModule/BansheeModule.py:187
+#: ../conduit/modules/BansheeModule/BansheeModule.py:188
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:120
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:121
+msgid "Playlists"
+msgstr "Lista numera"
+
+#: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:29
+msgid "Box.net"
+msgstr "Boks.net"
+
+#: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:30
+msgid "Synchronize your Box.net files"
+msgstr "Usaglasite vaše datoteke Boks.neta"
+
+#: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:290
+#: ../conduit/modules/FileModule/FileModule.py:86
+msgid "Folder"
+msgstr "Fascikla"
+
+#: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:291
+msgid "Folder name"
+msgstr "Naziv fascikle"
+
+#: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:295
+msgid "Load folders"
+msgstr "Učitaj fascikle"
+
+#: ../conduit/modules/ConverterModule.py:91
+msgid "Note-"
+msgstr "Beleška-"
+
+#: ../conduit/modules/DesktopWallpaperModule.py:38
+msgid "Wallpaper"
+msgstr "Pozadina"
+
+#: ../conduit/modules/DesktopWallpaperModule.py:39
+msgid "Changes your Desktop Wallpaper"
+msgstr "Promenite pozadinu radne površi"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:110
+#, python-format
+msgid "Select %s"
+msgstr "Izaberi %s"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:130
+msgid "Evolution Contacts"
+msgstr "Kontakti Evolucije"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:131
+msgid "Synchronize your contacts"
+msgstr "Usaglasite vaše kontakte"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:181
+msgid "Evolution Calendar"
+msgstr "Kalendar Evolucije"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:182
+msgid "Synchronize your calendar"
+msgstr "Usaglasite vaš kalendar"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:243
+msgid "Evolution Tasks"
+msgstr "Zadaci Evolucije"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:244
+msgid "Synchronize your tasks"
+msgstr "Usaglasite vaše zadatke"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:300
+msgid "Evolution Memos"
+msgstr "Beleške Evolucije"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:301
+msgid "Synchronize your memos"
+msgstr "Usaglasite vaše beleške"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:38
+msgid "Facebook"
+msgstr "Fejsbuk"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:39
+msgid "Synchronize your Facebook photos"
+msgstr "Usaglasite vaše Fejsbuk fotografije"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:124
+#: ../conduit/modules/FlickrModule/FlickrModule.py:282
+msgid "Loading album list..."
+msgstr "Učitavam spisak albuma..."
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:128
+msgid "Failed to connect"
+msgstr "Nisam uspeo da se povežem"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:131
+msgid "Logged in"
+msgstr "Prijavljen sam"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:133
+msgid "Failed to login"
+msgstr "Nisam uspeo da se prijavim"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:145
+#: ../conduit/modules/FspotModule/FspotModule.py:246
+msgid "Status"
+msgstr "Stanje"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:150
+#: ../conduit/modules/iPodModule/iPodModule.py:566
+#: ../conduit/modules/ZotoModule/ZotoModule.py:252
+msgid "Album"
+msgstr "Album"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:151
+msgid "Album name"
+msgstr "Naziv albuma"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:156
+msgid "Load albums"
+msgstr "Učitaj albume"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:58
+msgid "RSS Feed"
+msgstr "RSS dovod"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:59
+msgid "Synchronize data from RSS enclosures"
+msgstr "Usaglasite podatke sa RSS priloga"
+
+#. FIXME: Add Randomize
+#: ../conduit/modules/FeedModule/FeedModule.py:114
+msgid "Feed details"
+msgstr "Detalji dovoda"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:115
+msgid "Feed address"
+msgstr "Adresa dovoda"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:118
+msgid "Enclosure settings"
+msgstr "Podešavanja priloga"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:119
+msgid "Limit downloaded enclosures"
+msgstr "Ograniči preuzete priloge"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:125
+msgid "Limit to"
+msgstr "Ograniči na"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:129
+msgid "Randomize enclosures"
+msgstr "Postavi nasumično priloge"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:133
+msgid "Download types"
+msgstr "Preuzmi vrste"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:134
+msgid "Download audio files"
+msgstr "Preuzmi zvučne datoteke"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:135
+msgid "Download video files"
+msgstr "Preuzmi video datoteke"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:136
+msgid "Download photo files"
+msgstr "Preuzmi datoteke fotografija"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:112
+msgid "Icon"
+msgstr "Ikonica"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:124
+#: ../conduit/modules/GConfModule/GConfModule.py:138
+msgid "Items"
+msgstr "Stavke"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:150
+#, python-format
+msgid "<i>Contains %s files</i>"
+msgstr "<i>Sadrži %s datoteke</i>"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:249
+msgid "Include file..."
+msgstr "Uključi datoteku..."
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:259
+msgid "All files"
+msgstr "Sve datoteke"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:272
+msgid "Include folder..."
+msgstr "Uključi fasciklu..."
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:315
+msgid "Please Name All Folders"
+msgstr "Imenujte sve fascikle"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:316
+msgid ""
+"All folders require a descriptive name. To name a folder simply click on it"
+msgstr ""
+"Sve fascikle zahtevaju opisni naziv. Da imenujete fasciklu jednostavno "
+"kliknite na nju"
+
+#: ../conduit/modules/FileModule/FileModule.py:27
+msgid "Files"
+msgstr "Datoteke"
+
+#: ../conduit/modules/FileModule/FileModule.py:28
+msgid "Source for synchronizing multiple files"
+msgstr "Izvor za usaglašavanje više datoteka"
+
+#: ../conduit/modules/FileModule/FileModule.py:87
+msgid "Synchronize folders"
+msgstr "Usaglasi fascikle"
+
+#: ../conduit/modules/Firefox3Module/Firefox3Module.py:40
+msgid "Firefox 3 Bookmarks"
+msgstr "Obeleživači Fajerfoksa 3"
+
+#: ../conduit/modules/Firefox3Module/Firefox3Module.py:41
+msgid "Syncronize your Firefox 3 Bookmarks"
+msgstr "Usaglasite obeleživače Fajerfoksa 3"
+
+#: ../conduit/modules/Firefox3Module/Firefox3Module.py:100
+msgid "Firefox Profile"
+msgstr "Profil Fajerfoksa"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:76
+msgid "Flickr"
+msgstr "Flikr"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:77
+msgid "Synchronize your Flickr.com photos"
+msgstr "Usaglasite vaše Flikr.kom fotografije"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:287
+msgid "Failed to connect."
+msgstr "Nisam uspeo da se povežem."
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:290
+msgid "Album names loaded."
+msgstr "Učitani su nazivi albuma."
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:292
+msgid "Failed to login."
+msgstr "Nisam uspeo da se prijavim."
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:303
+msgid "Logging in, please wait..."
+msgstr "Prijavljujem se, molim sačekajte..."
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:308
+#: ../conduit/modules/GoogleBookmarksModule.py:67
+#: ../conduit/modules/ZotoModule/ZotoModule.py:244
+msgid "Username"
+msgstr "Korisničko ime"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:319
+msgid "Authenticate"
+msgstr "Potvrdi identitet"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:323
+#: ../conduit/modules/ZotoModule/ZotoModule.py:251
+msgid "Saved photo settings"
+msgstr "Podešavanja sačuvanih fotografija"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:328
+msgid "Resize photos"
+msgstr "Promeni veličinu fotografija"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:329
+msgid "Do not resize"
+msgstr "Nemoj menjati veličinu"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:332
+msgid "Photos are public"
+msgstr "Fotografije su javne"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:28
+msgid "F-Spot"
+msgstr "F-broj"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:29
+msgid "Synchronize your F-Spot photos"
+msgstr "Usaglasite fotografije iz F-broja"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:155
+msgid "F-Spot DBus interface is operating in read-only mode"
+msgstr "Sučelje D-sabirnice F-broja deluje samo u režimu za čitanje"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:221
+msgid "F-Spot is running"
+msgstr "F-broj je pokrenut"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:222
+msgid "Please start F-Spot or activate the D-Bus Extension"
+msgstr "Molim pokrenite F-broj ili aktivirajte proširenje D-sabirnice"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:247
+msgid "Start F-Spot"
+msgstr "Pokreni F-broj"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:251
+#: ../conduit/modules/FspotModule/FspotModule.py:252
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:71
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:73
+msgid "Tags"
+msgstr "Oznake"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:265
+msgid "Add tags"
+msgstr "Dodaj oznake"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:266
+msgid "Tag name"
+msgstr "Naziv oznake"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:269
+msgid "Add tag"
+msgstr "Dodaj oznaku"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:21
+msgid "Application Settings"
+msgstr "Podešavanja programa"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:22
+msgid "Synchronize your application settings"
+msgstr "Usaglasite podešavanja programa"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:31
+msgid "Metacity"
+msgstr "Metasiti"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:32
+msgid "Nautilus"
+msgstr "Nautilus"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:33
+msgid "Preferred Applications"
+msgstr "Omiljeni programi"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:34
+msgid "Desktop Interface"
+msgstr "Radno sučelje"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:35
+msgid "Gnome Terminal"
+msgstr "Gnomov terminal"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:137
+msgid "Applications to Synchronize"
+msgstr "Programi za usaglašavanje"
+
+#: ../conduit/modules/GoogleBookmarksModule.py:19
+msgid "Google Bookmarks"
+msgstr "Gugl obeleživači"
+
+#: ../conduit/modules/GoogleBookmarksModule.py:20
+msgid "Sync your Google Bookmarks"
+msgstr "Usaglasite Guglove obeleživače"
+
+#: ../conduit/modules/GoogleBookmarksModule.py:66
+msgid "Login Details"
+msgstr "Detalji prijavljivanja"
+
+#: ../conduit/modules/GoogleBookmarksModule.py:70
+#: ../conduit/modules/ZotoModule/ZotoModule.py:247
+msgid "Password"
+msgstr "Lozinka"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:277
+msgid "Synchronize your iPod notes"
+msgstr "Usaglasite vaše ajPod beleške"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:392
+msgid "Contacts"
+msgstr "Kontakti"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:393
+msgid "Synchronize your iPod contacts"
+msgstr "Usaglasite vaše ajPod kontakte"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:428
+msgid "Calendar"
+msgstr "Kalendar"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:429
+msgid "Synchronize your iPod calendar"
+msgstr "Usaglasite vaš ajPod kalendar"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:465
+msgid "Synchronize your iPod photos"
+msgstr "Usaglasite vaše ajPod fotografije"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:570
+msgid "Delete"
+msgstr "Obriši"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:573
+msgid "Delete All Photos"
+msgstr "Obriši sve fotografije"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:803
+#: ../conduit/modules/iPodModule/iPodModule.py:920
+#: ../conduit/modules/N800Module/N800Module.py:77
+msgid "Encoding"
+msgstr "Kodiranje"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:919
+msgid "Conversion options"
+msgstr "Opcije pretvaranja"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:924
+msgid "Keep converted files"
+msgstr "Zadrži pretvorene datoteke"
+
+#. To translators: defaul music folder of N800
+#: ../conduit/modules/iPodModule/iPodModule.py:954
+#: ../conduit/modules/N800Module/N800Module.py:133
+msgid "Music"
+msgstr "Muzika"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:955
+msgid "Synchronize your iPod music"
+msgstr "Usaglasite vašu ajPod muziku"
+
+#. To translators: defaul video folder of N800
+#: ../conduit/modules/iPodModule/iPodModule.py:990
+#: ../conduit/modules/N800Module/N800Module.py:157
+msgid "Video"
+msgstr "Video"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:991
+msgid "Synchronize your iPod videos"
+msgstr "Usaglasite vaše ajPod snimke"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:1015
+msgid "Movie"
+msgstr "Film"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:1016
+msgid "Music Video"
+msgstr "Muzički snimci"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:1017
+msgid "TV Show"
+msgstr "TV emisija"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:1019
+msgid "Video kind"
+msgstr "Vrsta snimka"
+
+#. Translators: Translate this in derived classes.
+#: ../conduit/modules/N800Module/N800Module.py:55
+msgid "Conduit"
+msgstr "Vodovođa"
+
+#: ../conduit/modules/N800Module/N800Module.py:105
+msgid "N800 Files"
+msgstr "N800 datoteke"
+
+#: ../conduit/modules/N800Module/N800Module.py:106
+msgid "Synchronizes files/folders to a N800 device"
+msgstr "Usaglasi datoteke/fascikle na N800 uređaj"
+
+#. To translators: default backup folder of N800
+#: ../conduit/modules/N800Module/N800Module.py:111
+msgid "Backups"
+msgstr "Rezerve"
+
+#: ../conduit/modules/N800Module/N800Module.py:126
+msgid "N800 Music"
+msgstr "N800 muzika"
+
+#: ../conduit/modules/N800Module/N800Module.py:127
+msgid "Synchronizes music to a N800 device"
+msgstr "Usaglasi muziku na N800 uređaj"
+
+#: ../conduit/modules/N800Module/N800Module.py:150
+msgid "N800 Videos"
+msgstr "N800 snimci"
+
+#: ../conduit/modules/N800Module/N800Module.py:151
+msgid "Synchronizes video to a N800 device"
+msgstr "Usaglasi snimke na N800 uređaj"
+
+#: ../conduit/modules/N800Module/N800Module.py:174
+msgid "N800 Photos"
+msgstr "N800 fotografije"
+
+#: ../conduit/modules/N800Module/N800Module.py:175
+msgid "Synchronizes photos to an N800 device"
+msgstr "Usaglasi fotografije na N800 uređaj"
+
+#. To translators: default photos folder of N800
+#: ../conduit/modules/N800Module/N800Module.py:181
+msgid "Photo"
+msgstr "Fotografija"
+
+#: ../conduit/modules/NautilusBookmarksModule.py:19
+msgid "Nautilus Bookmarks"
+msgstr "Nautilusovi obeleživači"
+
+#: ../conduit/modules/NautilusBookmarksModule.py:20
+msgid "Sync your Nautilus Bookmarks"
+msgstr "Usaglasite Nautilusove obeleživače"
+
+#: ../conduit/modules/NautilusBookmarksModule.py:145
+msgid "Sync bookmarks to local places/files"
+msgstr "Usaglasi obeleživače na lokalna mesta/datoteke"
+
+#: ../conduit/modules/NautilusBookmarksModule.py:148
+msgid "Sync bookmarks to remote places/files"
+msgstr "Usaglasi obeleživače na udaljena mesta/datoteke"
+
+#: ../conduit/modules/NetworkModule/Server.py:147
+msgid "Network"
+msgstr "Mreža"
+
+#: ../conduit/modules/NetworkModule/Server.py:148
+msgid "Enable synchronization via network"
+msgstr "Uključi usaglašavanje putem mreže"
+
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:48
+msgid "Rhythmbox Music"
+msgstr "Muzika Ritam mašine"
+
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:49
+msgid "Synchronize songs from your Rhythmbox playlists"
+msgstr "Usaglasite pesme iz spiskova numera Ritam mašine"
+
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:73
+msgid "Unknown"
+msgstr "Nepoznato"
+
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:36
+msgid "Shotwell"
+msgstr "Foto-bunar"
+
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:37
+msgid "Sync from your Shotwell photo library"
+msgstr "Usaglasite iz biblioteke fotografija Foto-bunara"
+
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:56
+msgid "Disabling Shotwell module, unable to open sqlite3 data source"
+msgstr ""
+"Isključujem modul Foto-bunara, ne mogu da otvorim izvor podataka skulajta 3"
+
+#: ../conduit/modules/ShutterflyModule/ShutterflyModule.py:26
+msgid "Shutterfly"
+msgstr "Šaterflaj"
+
+#: ../conduit/modules/ShutterflyModule/ShutterflyModule.py:27
+msgid "Synchronize your Shutterfly photos"
+msgstr "Usaglasite vaše Šaterflaj fotografije"
+
+#: ../conduit/modules/ShutterflyModule/shutterfly/shutterfly.py:33
+msgid "%Y-%m-%d %H:%M:%S"
+msgstr "%d. %m. %Y. %H:%M:%S"
+
+#: ../conduit/modules/SmugMugModule/SmugMugModule.py:28
+msgid "SmugMug"
+msgstr "SmugMug"
+
+#: ../conduit/modules/SmugMugModule/SmugMugModule.py:29
+msgid "Synchronize your SmugMug.com photos"
+msgstr "Usaglasite vaše SmugMug fotografije"
+
+#: ../conduit/modules/TomboyModule.py:106
+msgid "Tomboy Notes"
+msgstr "Tomičine beleške"
+
+#: ../conduit/modules/TomboyModule.py:107
+msgid "Synchronize your Tomboy notes"
+msgstr "Usaglasite vaše Tomičine beleške"
+
+#: ../conduit/modules/ZotoModule/ZotoModule.py:154
+msgid "Zoto"
+msgstr "Zoto"
+
+#: ../conduit/modules/ZotoModule/ZotoModule.py:155
+msgid "Synchronize your Zoto photos"
+msgstr "Usaglasite vaše Zoto fotografije"

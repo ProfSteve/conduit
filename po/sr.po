@@ -1,0 +1,1154 @@
+# Serbian translation for conduit.
+# Copyright (C) 2012 conduit's COPYRIGHT HOLDER
+# This file is distributed under the same license as the conduit package.
+# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: conduit master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=condui"
+"t&keywords=I18N+L10N&component=documentation and translation\n"
+"POT-Creation-Date: 2012-09-23 19:11+0000\n"
+"PO-Revision-Date: 2012-10-19 22:21+0200\n"
+"Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
+"Language-Team: Serbian <gnom@prevod.org>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : "
+"n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Project-Style: gnome\n"
+
+#: ../data/conduit.desktop.in.in.h:1
+msgid "Conduit Synchronizer"
+msgstr "Водовођа усаглашавач"
+
+#: ../data/conduit.desktop.in.in.h:2
+msgid "Synchronization for GNOME"
+msgstr "Усаглашавање за Гном"
+
+#: ../data/conduit.ui.h:1
+msgid "Title"
+msgstr "Наслов"
+
+#: ../data/conduit.ui.h:2
+msgid "Editor"
+msgstr "Уређивач"
+
+#: ../data/conduit.ui.h:3
+msgid "_File"
+msgstr "_Датотека"
+
+#: ../data/conduit.ui.h:4
+msgid "_Edit"
+msgstr "_Уреди"
+
+#: ../data/conduit.ui.h:5
+msgid "_Help"
+msgstr "По_моћ"
+
+#: ../data/conduit.ui.h:6
+msgid "Data Providers"
+msgstr "Достављач података"
+
+#: ../data/conduit.ui.h:7
+msgid "Compare"
+msgstr "Упореди"
+
+#: ../data/conduit.ui.h:8
+msgid "Resolve Conflicts"
+msgstr "Разреши сукобе"
+
+#: ../data/conduit.ui.h:9
+msgid "Conflicts"
+msgstr "Сукобљава се"
+
+#: ../data/conduit.ui.h:10
+msgid "Synchronization Options"
+msgstr "Опције усаглашавања"
+
+#: ../data/conduit.ui.h:11
+msgid "Slow Synchronization"
+msgstr "Споро усаглашавање"
+
+#: ../data/conduit.ui.h:12
+msgid "Two-Way Synchronization"
+msgstr "Двосмерно усаглашавање"
+
+#: ../data/conduit.ui.h:13
+msgid "Always Up-To-Date"
+msgstr "Увек ажурирано"
+
+#: ../data/conduit.ui.h:14
+msgid "Conflict Options"
+msgstr "Опције сукоба"
+
+#: ../data/conduit.ui.h:15
+msgid "Ask Me What to Do"
+msgstr "Питај ме шта да радиш"
+
+#: ../data/conduit.ui.h:16
+msgid "Replace the Older Item"
+msgstr "Замени старе ставке"
+
+#: ../data/conduit.ui.h:17
+msgid "Skip"
+msgstr "Прескочи"
+
+#: ../data/conduit.ui.h:18
+msgid "Delete Options"
+msgstr "Обриши опције"
+
+#: ../data/conduit.ui.h:19
+msgid "Delete the Corresponding Item"
+msgstr "Обриши одговарајућу ставку"
+
+#: ../data/conduit.ui.h:20
+msgid "Conduit Preferences"
+msgstr "Поставке Водовође"
+
+#: ../data/conduit.ui.h:21
+msgid "Start Conduit at login"
+msgstr "Покрени Водовођу приликом пријаве"
+
+#: ../data/conduit.ui.h:22
+msgid "Save settings on exit"
+msgstr "Сачувај поставке при напуштању"
+
+#: ../data/conduit.ui.h:23
+msgid "Show status icon"
+msgstr "Прикажи иконицу стања"
+
+#: ../data/conduit.ui.h:24
+msgid "Minimize to notification area"
+msgstr "Умањи у област обавештења"
+
+#: ../data/conduit.ui.h:25
+msgid "Show Hints"
+msgstr "Прикажи савете"
+
+#: ../data/conduit.ui.h:26
+msgid "General"
+msgstr "Опште"
+
+#: ../data/conduit.ui.h:27
+msgid "When an item has been deleted:"
+msgstr "Када је обрисана нека ставка:"
+
+#: ../data/conduit.ui.h:28
+msgid "Ask me what to do"
+msgstr "Питај ме шта да радиш"
+
+#: ../data/conduit.ui.h:29
+msgid "Delete from the corresponding sink"
+msgstr "Обриши из одговарајућег усаглашавања"
+
+#: ../data/conduit.ui.h:30
+msgid "When there is a two-way conflict:"
+msgstr "Када постоји двосмерни сукоб:"
+
+#: ../data/conduit.ui.h:31
+msgid "Replace the older item"
+msgstr "Замени стару ставку"
+
+#: ../data/conduit.ui.h:32
+msgid "Default Synchronization Options"
+msgstr "Основне опције усаглашавања"
+
+#: ../data/conduit.ui.h:33
+msgid "Configuration"
+msgstr "Подешавање"
+
+#: ../data/conduit.ui.h:34
+msgid "Data Conversions"
+msgstr "Претварање података"
+
+#: ../conduit/Knowledge.py:8
+msgid "What Do You Want to Synchronize?"
+msgstr "Шта желите да усагласите?"
+
+#: ../conduit/Knowledge.py:9
+msgid "Drag and Drop a Data Provider on the Canvas"
+msgstr "Превуците и убаците достављача података на платно"
+
+#: ../conduit/Knowledge.py:11
+msgid "Synchronization Group Created"
+msgstr "Створена је група усаглашавања"
+
+#: ../conduit/Knowledge.py:12
+msgid "Add Another Data Provider to the Group to Synchronize it"
+msgstr "Додај још једног достављача података у групу за усаглашавање"
+
+#: ../conduit/Knowledge.py:14
+msgid "You Are Now Ready to Synchronize"
+msgstr "Сада сте спремни за усаглашавање"
+
+#: ../conduit/Knowledge.py:15
+msgid "Right Click on Group for Options"
+msgstr "Десни клик на групу за опције"
+
+#: ../conduit/Knowledge.py:24
+msgid "Synchronize Two Folders"
+msgstr "Усагласи две фасцикле"
+
+#: ../conduit/Knowledge.py:27
+msgid "Backup Folder to Box.net"
+msgstr "Направи резерву фасцикле на Бокс.нету"
+
+#: ../conduit/Knowledge.py:30
+msgid "Synchronize Tagged F-Spot Photos to Flickr"
+msgstr "Усагласи фотографије означене Ф-бројем на Фликр"
+
+#: ../conduit/Knowledge.py:33
+msgid "Synchronize Photos to Flickr"
+msgstr "Усагласи фотографије на Фликр"
+
+#: ../conduit/Knowledge.py:36
+msgid "Upload Photos to Facebook"
+msgstr "Отпреми фотографије на Фејсбук"
+
+#: ../conduit/Knowledge.py:39
+msgid "Synchronize Desktop Wallpaper from a RSS Feed"
+msgstr "Усагласи позадину радне површи са РСС довода"
+
+#: ../conduit/Main.py:57
+msgid "Conduit is a synchronization application."
+msgstr "Водовођа је програм за усаглашавање."
+
+#: ../conduit/Main.py:61
+#, python-format
+msgid "Launch without GUI. [default: %default]"
+msgstr "Покреће без графичког сучеља. [основно: %default]"
+
+#: ../conduit/Main.py:65
+#, python-format
+msgid "Save dataprovider configuration to FILE. [default: %default]"
+msgstr "Чува подешавања достављача података у ДАТОТЕКУ. [основно: %default]"
+
+#: ../conduit/Main.py:69
+#, python-format
+msgid "Iconify on startup. [default: %default]"
+msgstr "Смањи на иконицу приликом покретања. [основно: %default]"
+
+#: ../conduit/Main.py:73
+#, python-format
+msgid "Run with the specified UI. [default: %default]"
+msgstr "Покреће са наведеним корисничким сучељем. [основно: %default]"
+
+#: ../conduit/Main.py:77
+msgid "Only load modules in the named files. [default: load all modules]"
+msgstr ""
+"Учитава модуле само у именованим датотекама. [основно: учитај све модуле]"
+
+#: ../conduit/Main.py:81
+msgid "Do not load modules in the named files. [default: load all modules]"
+msgstr "Не учитава модуле у именованим датотекама. [основно: учитај све модуле]"
+
+#: ../conduit/Main.py:85
+msgid ""
+"Explicitly set internal Conduit settings (keys) to the given values for this "
+"session. [default: do not set]"
+msgstr ""
+"Изричито подешава унутрашња подешавања Водовође (кључеви) на дате вредности "
+"за ту сесију. [основно: не подешава]"
+
+#: ../conduit/Main.py:89
+#, python-format
+msgid ""
+"Enable loading of unfinished or unsupported dataproviders. [default: "
+"%default]"
+msgstr ""
+"Укључује учитавање недовршених или неподржаних достављача података. "
+"[основно: %default]"
+
+#: ../conduit/Main.py:93
+#, python-format
+msgid "Generate more debugging information. [default: %default]"
+msgstr "Ствара више података о уклањању грешака. [основно: %default]"
+
+#: ../conduit/Main.py:97
+#, python-format
+msgid "Generate less debugging information. [default: %default]"
+msgstr "Ствара мање података о уклањању грешака. [основно: %default]"
+
+#: ../conduit/Main.py:101
+#, python-format
+msgid "Generate no debugging information. [default: %default]"
+msgstr "Не ствара никакве податке о уклањању грешака. [основно: %default]"
+
+#: ../conduit/dataproviders/DataProvider.py:22
+msgid "Ready"
+msgstr "Спреман"
+
+#: ../conduit/dataproviders/DataProvider.py:23
+msgid "New data to sync"
+msgstr "Нови подаци за усаглашавње"
+
+#: ../conduit/dataproviders/DataProvider.py:24
+msgid "Refreshing..."
+msgstr "Освежавам..."
+
+#: ../conduit/dataproviders/DataProvider.py:25
+msgid "Refreshed OK"
+msgstr "Освежено је"
+
+#: ../conduit/dataproviders/DataProvider.py:26
+msgid "Error Refreshing"
+msgstr "Грешка освежавања"
+
+#: ../conduit/dataproviders/DataProvider.py:27
+msgid "Synchronizing..."
+msgstr "Усаглашавам..."
+
+#: ../conduit/dataproviders/DataProvider.py:28
+msgid "Synchronized OK"
+msgstr "Усаглашено је"
+
+#: ../conduit/dataproviders/DataProvider.py:29
+msgid "Error Synchronizing"
+msgstr "Грешка усаглашавања"
+
+#: ../conduit/dataproviders/DataProvider.py:30
+msgid "Synchronization Skipped"
+msgstr "Усаглашавање је прескочено"
+
+#: ../conduit/dataproviders/DataProvider.py:31
+msgid "Synchronization Cancelled"
+msgstr "Усаглашавање је прекинуто"
+
+#: ../conduit/dataproviders/DataProvider.py:32 ../conduit/gtkui/UI.py:743
+msgid "Synchronization Conflict"
+msgstr "Сукоб усаглашавања"
+
+#: ../conduit/dataproviders/DataProvider.py:33
+msgid "Not Configured"
+msgstr "Није подешено"
+
+#: ../conduit/dataproviders/Image.py:34
+#: ../conduit/modules/FlickrModule/FlickrModule.py:329
+msgid "640x480"
+msgstr "640x480"
+
+#: ../conduit/dataproviders/Image.py:34
+#: ../conduit/modules/FlickrModule/FlickrModule.py:329
+msgid "800x600"
+msgstr "800x600"
+
+#: ../conduit/dataproviders/Image.py:34
+#: ../conduit/modules/FlickrModule/FlickrModule.py:329
+msgid "1024x768"
+msgstr "1024x768"
+
+#. Signifies that a conversion should not take place
+#: ../conduit/dataproviders/Image.py:35
+#: ../conduit/modules/N800Module/N800Module.py:57
+msgid "None"
+msgstr "Ништа"
+
+#. Default Categories for the DataProviders
+#: ../conduit/dataproviders/__init__.py:6
+msgid "Files and Folders"
+msgstr "Датотеке и фасцикле"
+
+#: ../conduit/dataproviders/__init__.py:7
+#: ../conduit/modules/iPodModule/iPodModule.py:276
+msgid "Notes"
+msgstr "Белешке"
+
+#: ../conduit/dataproviders/__init__.py:8
+#: ../conduit/modules/iPodModule/iPodModule.py:464
+msgid "Photos"
+msgstr "Фотографије"
+
+#: ../conduit/dataproviders/__init__.py:9
+msgid "Office"
+msgstr "Канцеларија"
+
+#: ../conduit/dataproviders/__init__.py:10
+msgid "Settings"
+msgstr "Подешавања"
+
+#: ../conduit/dataproviders/__init__.py:11
+msgid "Miscellaneous"
+msgstr "Разно"
+
+#: ../conduit/dataproviders/__init__.py:12
+msgid "Media"
+msgstr "Медији"
+
+#: ../conduit/dataproviders/__init__.py:13
+msgid "Bookmarks"
+msgstr "Обележивачи"
+
+#: ../conduit/dataproviders/__init__.py:14
+msgid "Test"
+msgstr "Провери"
+
+#: ../conduit/gtkui/Canvas.py:152
+msgid "Drag a Data Provider here to continue"
+msgstr "Овде превуците достављача података да наставите"
+
+#: ../conduit/gtkui/Canvas.py:227
+msgid "Show me"
+msgstr "Прикажи ми"
+
+#: ../conduit/gtkui/ConfigItems.py:733
+#, python-format
+msgid "Total: %d"
+msgstr "Укупно: %d"
+
+#. Visible column0 is
+#. [pixbuf + source display name] or
+#. [source_data.get_snippet()]
+#: ../conduit/gtkui/ConflictResolver.py:91
+msgid "Source"
+msgstr "Извор"
+
+#: ../conduit/gtkui/ConflictResolver.py:105
+msgid "Resolution"
+msgstr "Резолуција"
+
+#. Visible column2 is the display name of source and source data
+#: ../conduit/gtkui/ConflictResolver.py:110
+msgid "Sink"
+msgstr "Усагласи"
+
+#: ../conduit/gtkui/ConflictResolver.py:150
+#: ../conduit/gtkui/ConflictResolver.py:151
+#, python-format
+msgid "Conflicts (%s)"
+msgstr "Сукоби: (%s)"
+
+#: ../conduit/gtkui/Tree.py:355 ../conduit/gtkui/UI.py:200
+#: ../conduit/modules/FileModule/FileConfiguration.py:118
+msgid "Name"
+msgstr "Назив"
+
+#: ../conduit/gtkui/Tree.py:364
+msgid "Description"
+msgstr "Опис"
+
+#. name,                      #url
+#: ../conduit/gtkui/UI.py:33
+msgid "Introduction"
+msgstr "Увод"
+
+#: ../conduit/gtkui/UI.py:34
+msgid "Writing a Data Provider"
+msgstr "Записивање достављача података"
+
+#: ../conduit/gtkui/UI.py:35
+msgid "API Documentation"
+msgstr "АПИ документација"
+
+#: ../conduit/gtkui/UI.py:36
+msgid "Test Results"
+msgstr "Резултати провере"
+
+#: ../conduit/gtkui/UI.py:52
+msgid "Examples"
+msgstr "Примери"
+
+#. Build some liststores to display
+#: ../conduit/gtkui/UI.py:139
+msgid "Convert from"
+msgstr "Претвори из"
+
+#: ../conduit/gtkui/UI.py:140
+msgid "into"
+msgstr "у"
+
+#: ../conduit/gtkui/UI.py:190
+msgid "Relationship Database"
+msgstr "Односна база података"
+
+#: ../conduit/gtkui/UI.py:194
+msgid "Conversions Available"
+msgstr "Доступна претварања"
+
+#: ../conduit/gtkui/UI.py:204
+msgid "Loaded"
+msgstr "Учитано"
+
+#: ../conduit/gtkui/UI.py:329
+#, python-format
+msgid " - %s (Development Version)"
+msgstr " — %s (Развојно издање)"
+
+#: ../conduit/gtkui/UI.py:331
+msgid " - Running Uninstalled"
+msgstr " — Покрећем неинсталирано"
+
+#: ../conduit/gtkui/UI.py:375
+msgid "Developers"
+msgstr "Програмери"
+
+#: ../conduit/gtkui/UI.py:539 ../conduit/hildonui/UI.py:127
+msgid "Synchronization in progress. Do you want to cancel it?"
+msgstr "Усаглашавање је у току. Да ли желите да га откажете?"
+
+#: ../conduit/gtkui/UI.py:712
+msgid "_Synchronize All"
+msgstr "_Усагласи све"
+
+#: ../conduit/gtkui/UI.py:712
+msgid "Synchronizes All Groups"
+msgstr "Усагласи све групе"
+
+#: ../conduit/gtkui/UI.py:713
+msgid "_Cancel Synchronization"
+msgstr "_Откажи усаглашавање"
+
+#: ../conduit/gtkui/UI.py:713
+msgid "Cancels Currently Synchronizing Groups"
+msgstr "Откажи текуће усаглашавање група"
+
+#: ../conduit/gtkui/UI.py:714
+msgid "_Quit"
+msgstr "_Изађи"
+
+#: ../conduit/gtkui/UI.py:714
+msgid "Close Conduit"
+msgstr "Затвори Водовођу"
+
+#: ../conduit/gtkui/UI.py:731
+msgid "Synchronizing"
+msgstr "Усаглашавам"
+
+#: ../conduit/gtkui/UI.py:737
+msgid "Synchronization Complete"
+msgstr "Усаглашавање је завршено"
+
+#: ../conduit/gtkui/UI.py:741
+msgid "Synchronization Error"
+msgstr "Грешка усаглашавања"
+
+#: ../conduit/gtkui/WindowConfigurator.py:14
+msgid "Configure"
+msgstr "Подеси"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:58
+msgid "Backpack Notes"
+msgstr "Ранчеве белешке"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:59
+msgid "Store things in Backpack Notes"
+msgstr "Ускладиштите ствари у Ранчевим белешкама"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:105
+#: ../conduit/modules/FlickrModule/FlickrModule.py:307
+#: ../conduit/modules/ZotoModule/ZotoModule.py:243
+msgid "Account details"
+msgstr "Детаљи о налогу"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:106
+msgid "Login"
+msgstr "Пријави ме"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:109
+msgid "API key"
+msgstr "АПИ кључ"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:112
+msgid "Saved notes"
+msgstr "Сачуване белешке"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:113
+msgid "Save notes in page"
+msgstr "Сачувај белешке као страницу"
+
+#: ../conduit/modules/BansheeModule/BansheeModule.py:52
+msgid "Banshee Playlists"
+msgstr "Листе нумера Злослутнице"
+
+#: ../conduit/modules/BansheeModule/BansheeModule.py:53
+msgid "Synchronize your Banshee playlists"
+msgstr "Усагласите вашу листу нумера Злослутнице"
+
+#: ../conduit/modules/BansheeModule/BansheeModule.py:187
+#: ../conduit/modules/BansheeModule/BansheeModule.py:188
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:120
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:121
+msgid "Playlists"
+msgstr "Листа нумера"
+
+#: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:29
+msgid "Box.net"
+msgstr "Бокс.нет"
+
+#: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:30
+msgid "Synchronize your Box.net files"
+msgstr "Усагласите ваше датотеке Бокс.нета"
+
+#: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:290
+#: ../conduit/modules/FileModule/FileModule.py:86
+msgid "Folder"
+msgstr "Фасцикла"
+
+#: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:291
+msgid "Folder name"
+msgstr "Назив фасцикле"
+
+#: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:295
+msgid "Load folders"
+msgstr "Учитај фасцикле"
+
+#: ../conduit/modules/ConverterModule.py:91
+msgid "Note-"
+msgstr "Белешка-"
+
+#: ../conduit/modules/DesktopWallpaperModule.py:38
+msgid "Wallpaper"
+msgstr "Позадина"
+
+#: ../conduit/modules/DesktopWallpaperModule.py:39
+msgid "Changes your Desktop Wallpaper"
+msgstr "Промените позадину радне површи"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:110
+#, python-format
+msgid "Select %s"
+msgstr "Изабери %s"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:130
+msgid "Evolution Contacts"
+msgstr "Контакти Еволуције"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:131
+msgid "Synchronize your contacts"
+msgstr "Усагласите ваше контакте"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:181
+msgid "Evolution Calendar"
+msgstr "Календар Еволуције"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:182
+msgid "Synchronize your calendar"
+msgstr "Усагласите ваш календар"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:243
+msgid "Evolution Tasks"
+msgstr "Задаци Еволуције"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:244
+msgid "Synchronize your tasks"
+msgstr "Усагласите ваше задатке"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:300
+msgid "Evolution Memos"
+msgstr "Белешке Еволуције"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:301
+msgid "Synchronize your memos"
+msgstr "Усагласите ваше белешке"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:38
+msgid "Facebook"
+msgstr "Фејсбук"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:39
+msgid "Synchronize your Facebook photos"
+msgstr "Усагласите ваше Фејсбук фотографије"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:124
+#: ../conduit/modules/FlickrModule/FlickrModule.py:282
+msgid "Loading album list..."
+msgstr "Учитавам списак албума..."
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:128
+msgid "Failed to connect"
+msgstr "Нисам успео да се повежем"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:131
+msgid "Logged in"
+msgstr "Пријављен сам"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:133
+msgid "Failed to login"
+msgstr "Нисам успео да се пријавим"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:145
+#: ../conduit/modules/FspotModule/FspotModule.py:246
+msgid "Status"
+msgstr "Стање"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:150
+#: ../conduit/modules/iPodModule/iPodModule.py:566
+#: ../conduit/modules/ZotoModule/ZotoModule.py:252
+msgid "Album"
+msgstr "Албум"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:151
+msgid "Album name"
+msgstr "Назив албума"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:156
+msgid "Load albums"
+msgstr "Учитај албуме"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:58
+msgid "RSS Feed"
+msgstr "РСС довод"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:59
+msgid "Synchronize data from RSS enclosures"
+msgstr "Усагласите податке са РСС прилога"
+
+#. FIXME: Add Randomize
+#: ../conduit/modules/FeedModule/FeedModule.py:114
+msgid "Feed details"
+msgstr "Детаљи довода"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:115
+msgid "Feed address"
+msgstr "Адреса довода"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:118
+msgid "Enclosure settings"
+msgstr "Подешавања прилога"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:119
+msgid "Limit downloaded enclosures"
+msgstr "Ограничи преузете прилоге"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:125
+msgid "Limit to"
+msgstr "Ограничи на"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:129
+msgid "Randomize enclosures"
+msgstr "Постави насумично прилоге"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:133
+msgid "Download types"
+msgstr "Преузми врсте"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:134
+msgid "Download audio files"
+msgstr "Преузми звучне датотеке"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:135
+msgid "Download video files"
+msgstr "Преузми видео датотеке"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:136
+msgid "Download photo files"
+msgstr "Преузми датотеке фотографија"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:112
+msgid "Icon"
+msgstr "Иконица"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:124
+#: ../conduit/modules/GConfModule/GConfModule.py:138
+msgid "Items"
+msgstr "Ставке"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:150
+#, python-format
+msgid "<i>Contains %s files</i>"
+msgstr "<i>Садржи %s датотеке</i>"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:249
+msgid "Include file..."
+msgstr "Укључи датотеку..."
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:259
+msgid "All files"
+msgstr "Све датотеке"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:272
+msgid "Include folder..."
+msgstr "Укључи фасциклу..."
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:315
+msgid "Please Name All Folders"
+msgstr "Именујте све фасцикле"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:316
+msgid ""
+"All folders require a descriptive name. To name a folder simply click on it"
+msgstr ""
+"Све фасцикле захтевају описни назив. Да именујете фасциклу једноставно "
+"кликните на њу"
+
+#: ../conduit/modules/FileModule/FileModule.py:27
+msgid "Files"
+msgstr "Датотеке"
+
+#: ../conduit/modules/FileModule/FileModule.py:28
+msgid "Source for synchronizing multiple files"
+msgstr "Извор за усаглашавање више датотека"
+
+#: ../conduit/modules/FileModule/FileModule.py:87
+msgid "Synchronize folders"
+msgstr "Усагласи фасцикле"
+
+#: ../conduit/modules/Firefox3Module/Firefox3Module.py:40
+msgid "Firefox 3 Bookmarks"
+msgstr "Обележивачи Фајерфокса 3"
+
+#: ../conduit/modules/Firefox3Module/Firefox3Module.py:41
+msgid "Syncronize your Firefox 3 Bookmarks"
+msgstr "Усагласите обележиваче Фајерфокса 3"
+
+#: ../conduit/modules/Firefox3Module/Firefox3Module.py:100
+msgid "Firefox Profile"
+msgstr "Профил Фајерфокса"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:76
+msgid "Flickr"
+msgstr "Фликр"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:77
+msgid "Synchronize your Flickr.com photos"
+msgstr "Усагласите ваше Фликр.ком фотографије"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:287
+msgid "Failed to connect."
+msgstr "Нисам успео да се повежем."
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:290
+msgid "Album names loaded."
+msgstr "Учитани су називи албума."
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:292
+msgid "Failed to login."
+msgstr "Нисам успео да се пријавим."
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:303
+msgid "Logging in, please wait..."
+msgstr "Пријављујем се, молим сачекајте..."
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:308
+#: ../conduit/modules/GoogleBookmarksModule.py:67
+#: ../conduit/modules/ZotoModule/ZotoModule.py:244
+msgid "Username"
+msgstr "Корисничко име"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:319
+msgid "Authenticate"
+msgstr "Потврди идентитет"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:323
+#: ../conduit/modules/ZotoModule/ZotoModule.py:251
+msgid "Saved photo settings"
+msgstr "Подешавања сачуваних фотографија"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:328
+msgid "Resize photos"
+msgstr "Промени величину фотографија"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:329
+msgid "Do not resize"
+msgstr "Немој мењати величину"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:332
+msgid "Photos are public"
+msgstr "Фотографије су јавне"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:28
+msgid "F-Spot"
+msgstr "Ф-број"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:29
+msgid "Synchronize your F-Spot photos"
+msgstr "Усагласите фотографије из Ф-броја"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:155
+msgid "F-Spot DBus interface is operating in read-only mode"
+msgstr "Сучеље Д-сабирнице Ф-броја делује само у режиму за читање"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:221
+msgid "F-Spot is running"
+msgstr "Ф-број је покренут"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:222
+msgid "Please start F-Spot or activate the D-Bus Extension"
+msgstr "Молим покрените Ф-број или активирајте проширење Д-сабирнице"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:247
+msgid "Start F-Spot"
+msgstr "Покрени Ф-број"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:251
+#: ../conduit/modules/FspotModule/FspotModule.py:252
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:71
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:73
+msgid "Tags"
+msgstr "Ознаке"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:265
+msgid "Add tags"
+msgstr "Додај ознаке"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:266
+msgid "Tag name"
+msgstr "Назив ознаке"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:269
+msgid "Add tag"
+msgstr "Додај ознаку"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:21
+msgid "Application Settings"
+msgstr "Подешавања програма"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:22
+msgid "Synchronize your application settings"
+msgstr "Усагласите подешавања програма"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:31
+msgid "Metacity"
+msgstr "Метасити"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:32
+msgid "Nautilus"
+msgstr "Наутилус"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:33
+msgid "Preferred Applications"
+msgstr "Омиљени програми"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:34
+msgid "Desktop Interface"
+msgstr "Радно сучеље"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:35
+msgid "Gnome Terminal"
+msgstr "Гномов терминал"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:137
+msgid "Applications to Synchronize"
+msgstr "Програми за усаглашавање"
+
+#: ../conduit/modules/GoogleBookmarksModule.py:19
+msgid "Google Bookmarks"
+msgstr "Гугл обележивачи"
+
+#: ../conduit/modules/GoogleBookmarksModule.py:20
+msgid "Sync your Google Bookmarks"
+msgstr "Усагласите Гуглове обележиваче"
+
+#: ../conduit/modules/GoogleBookmarksModule.py:66
+msgid "Login Details"
+msgstr "Детаљи пријављивања"
+
+#: ../conduit/modules/GoogleBookmarksModule.py:70
+#: ../conduit/modules/ZotoModule/ZotoModule.py:247
+msgid "Password"
+msgstr "Лозинка"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:277
+msgid "Synchronize your iPod notes"
+msgstr "Усагласите ваше ајПод белешке"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:392
+msgid "Contacts"
+msgstr "Контакти"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:393
+msgid "Synchronize your iPod contacts"
+msgstr "Усагласите ваше ајПод контакте"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:428
+msgid "Calendar"
+msgstr "Календар"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:429
+msgid "Synchronize your iPod calendar"
+msgstr "Усагласите ваш ајПод календар"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:465
+msgid "Synchronize your iPod photos"
+msgstr "Усагласите ваше ајПод фотографије"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:570
+msgid "Delete"
+msgstr "Обриши"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:573
+msgid "Delete All Photos"
+msgstr "Обриши све фотографије"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:803
+#: ../conduit/modules/iPodModule/iPodModule.py:920
+#: ../conduit/modules/N800Module/N800Module.py:77
+msgid "Encoding"
+msgstr "Кодирање"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:919
+msgid "Conversion options"
+msgstr "Опције претварања"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:924
+msgid "Keep converted files"
+msgstr "Задржи претворене датотеке"
+
+#. To translators: defaul music folder of N800
+#: ../conduit/modules/iPodModule/iPodModule.py:954
+#: ../conduit/modules/N800Module/N800Module.py:133
+msgid "Music"
+msgstr "Музика"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:955
+msgid "Synchronize your iPod music"
+msgstr "Усагласите вашу ајПод музику"
+
+#. To translators: defaul video folder of N800
+#: ../conduit/modules/iPodModule/iPodModule.py:990
+#: ../conduit/modules/N800Module/N800Module.py:157
+msgid "Video"
+msgstr "Видео"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:991
+msgid "Synchronize your iPod videos"
+msgstr "Усагласите ваше ајПод снимке"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:1015
+msgid "Movie"
+msgstr "Филм"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:1016
+msgid "Music Video"
+msgstr "Музички снимци"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:1017
+msgid "TV Show"
+msgstr "ТВ емисија"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:1019
+msgid "Video kind"
+msgstr "Врста снимка"
+
+#. Translators: Translate this in derived classes.
+#: ../conduit/modules/N800Module/N800Module.py:55
+msgid "Conduit"
+msgstr "Водовођа"
+
+#: ../conduit/modules/N800Module/N800Module.py:105
+msgid "N800 Files"
+msgstr "Н800 датотеке"
+
+#: ../conduit/modules/N800Module/N800Module.py:106
+msgid "Synchronizes files/folders to a N800 device"
+msgstr "Усагласи датотеке/фасцикле на Н800 уређај"
+
+#. To translators: default backup folder of N800
+#: ../conduit/modules/N800Module/N800Module.py:111
+msgid "Backups"
+msgstr "Резерве"
+
+#: ../conduit/modules/N800Module/N800Module.py:126
+msgid "N800 Music"
+msgstr "Н800 музика"
+
+#: ../conduit/modules/N800Module/N800Module.py:127
+msgid "Synchronizes music to a N800 device"
+msgstr "Усагласи музику на Н800 уређај"
+
+#: ../conduit/modules/N800Module/N800Module.py:150
+msgid "N800 Videos"
+msgstr "Н800 снимци"
+
+#: ../conduit/modules/N800Module/N800Module.py:151
+msgid "Synchronizes video to a N800 device"
+msgstr "Усагласи снимке на Н800 уређај"
+
+#: ../conduit/modules/N800Module/N800Module.py:174
+msgid "N800 Photos"
+msgstr "Н800 фотографије"
+
+#: ../conduit/modules/N800Module/N800Module.py:175
+msgid "Synchronizes photos to an N800 device"
+msgstr "Усагласи фотографије на Н800 уређај"
+
+#. To translators: default photos folder of N800
+#: ../conduit/modules/N800Module/N800Module.py:181
+msgid "Photo"
+msgstr "Фотографија"
+
+#: ../conduit/modules/NautilusBookmarksModule.py:19
+msgid "Nautilus Bookmarks"
+msgstr "Наутилусови обележивачи"
+
+#: ../conduit/modules/NautilusBookmarksModule.py:20
+msgid "Sync your Nautilus Bookmarks"
+msgstr "Усагласите Наутилусове обележиваче"
+
+#: ../conduit/modules/NautilusBookmarksModule.py:145
+msgid "Sync bookmarks to local places/files"
+msgstr "Усагласи обележиваче на локална места/датотеке"
+
+#: ../conduit/modules/NautilusBookmarksModule.py:148
+msgid "Sync bookmarks to remote places/files"
+msgstr "Усагласи обележиваче на удаљена места/датотеке"
+
+#: ../conduit/modules/NetworkModule/Server.py:147
+msgid "Network"
+msgstr "Мрежа"
+
+#: ../conduit/modules/NetworkModule/Server.py:148
+msgid "Enable synchronization via network"
+msgstr "Укључи усаглашавање путем мреже"
+
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:48
+msgid "Rhythmbox Music"
+msgstr "Музика Ритам машине"
+
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:49
+msgid "Synchronize songs from your Rhythmbox playlists"
+msgstr "Усагласите песме из спискова нумера Ритам машине"
+
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:73
+msgid "Unknown"
+msgstr "Непознато"
+
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:36
+msgid "Shotwell"
+msgstr "Фото-бунар"
+
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:37
+msgid "Sync from your Shotwell photo library"
+msgstr "Усагласите из библиотеке фотографија Фото-бунара"
+
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:56
+msgid "Disabling Shotwell module, unable to open sqlite3 data source"
+msgstr ""
+"Искључујем модул Фото-бунара, не могу да отворим извор података скулајта 3"
+
+#: ../conduit/modules/ShutterflyModule/ShutterflyModule.py:26
+msgid "Shutterfly"
+msgstr "Шатерфлај"
+
+#: ../conduit/modules/ShutterflyModule/ShutterflyModule.py:27
+msgid "Synchronize your Shutterfly photos"
+msgstr "Усагласите ваше Шатерфлај фотографије"
+
+#: ../conduit/modules/ShutterflyModule/shutterfly/shutterfly.py:33
+msgid "%Y-%m-%d %H:%M:%S"
+msgstr "%d. %m. %Y. %H:%M:%S"
+
+#: ../conduit/modules/SmugMugModule/SmugMugModule.py:28
+msgid "SmugMug"
+msgstr "СмугМуг"
+
+#: ../conduit/modules/SmugMugModule/SmugMugModule.py:29
+msgid "Synchronize your SmugMug.com photos"
+msgstr "Усагласите ваше СмугМуг фотографије"
+
+#: ../conduit/modules/TomboyModule.py:106
+msgid "Tomboy Notes"
+msgstr "Томичине белешке"
+
+#: ../conduit/modules/TomboyModule.py:107
+msgid "Synchronize your Tomboy notes"
+msgstr "Усагласите ваше Томичине белешке"
+
+#: ../conduit/modules/ZotoModule/ZotoModule.py:154
+msgid "Zoto"
+msgstr "Зото"
+
+#: ../conduit/modules/ZotoModule/ZotoModule.py:155
+msgid "Synchronize your Zoto photos"
+msgstr "Усагласите ваше Зото фотографије"
