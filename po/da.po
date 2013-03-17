@@ -1,15 +1,16 @@
 # Danish translation for conduit.
-# Copyright (C) 2010 conduit's COPYRIGHT HOLDER
+# Copyright (C) 2013 conduit's COPYRIGHT HOLDER
 # This file is distributed under the same license as the conduit package.
 # Kris Thomsen <lakristho@gmail.com>, 2010.
+# Joe Hansen <joedalton2@yahoo.dk>, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: conduit master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-03 20:10+0200\n"
-"PO-Revision-Date: 2011-04-02 23:35+0100\n"
-"Last-Translator: Kris Thomsen <lakristho@gmail.com>\n"
+"POT-Creation-Date: 2013-03-17 16:21+0100\n"
+"PO-Revision-Date: 2013-03-17 23:35+0100\n"
+"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
@@ -26,140 +27,140 @@ msgid "Synchronization for GNOME"
 msgstr "Synkronisering til GNOME"
 
 #: ../data/conduit.ui.h:1
-msgid "Always Up-To-Date"
-msgstr "Altid opdateret"
+msgid "Title"
+msgstr "Titel"
 
 #: ../data/conduit.ui.h:2
-msgid "Ask Me What to Do"
-msgstr "Spørg mig, hvad der skal gøres"
-
-#: ../data/conduit.ui.h:3
-msgid "Ask me what to do"
-msgstr "Spørg mig, hvad der skal gøres"
-
-#: ../data/conduit.ui.h:4
-msgid "Compare"
-msgstr "Sammenlign"
-
-#: ../data/conduit.ui.h:5
-msgid "Conduit Preferences"
-msgstr "Indstillinger for Conduit"
-
-#: ../data/conduit.ui.h:6
-msgid "Configuration"
-msgstr "Konfiguration"
-
-#: ../data/conduit.ui.h:7
-msgid "Conflict Options"
-msgstr "Indstillinger for konflikter"
-
-#: ../data/conduit.ui.h:8
-msgid "Conflicts"
-msgstr "Konflikter"
-
-#: ../data/conduit.ui.h:9
-msgid "Data Conversions"
-msgstr "Datakonverteringer"
-
-#: ../data/conduit.ui.h:10
-msgid "Data Providers"
-msgstr "Dataudbydere"
-
-#: ../data/conduit.ui.h:11
-msgid "Default Synchronization Options"
-msgstr "Standardindstillinger for synkronisering"
-
-#: ../data/conduit.ui.h:12
-msgid "Delete Options"
-msgstr "Slet indstillinger"
-
-#: ../data/conduit.ui.h:13
-msgid "Delete from the corresponding sink"
-msgstr "Slet fra den tilhørende datamodtagerfil"
-
-#: ../data/conduit.ui.h:14
-msgid "Delete the Corresponding Item"
-msgstr "Slet det tilhørende element"
-
-#: ../data/conduit.ui.h:15
 msgid "Editor"
 msgstr "Redigeringsprogram"
 
-#: ../data/conduit.ui.h:16
-msgid "General"
-msgstr "Generelt"
+#: ../data/conduit.ui.h:3
+msgid "_File"
+msgstr "_Fil"
 
-#: ../data/conduit.ui.h:17
-msgid "Minimize to notification area"
-msgstr "Minimér til statusfelt"
+#: ../data/conduit.ui.h:4
+msgid "_Edit"
+msgstr "_Redigér"
 
-#: ../data/conduit.ui.h:18
-msgid "Replace the Older Item"
-msgstr "Erstat det gamle element"
+#: ../data/conduit.ui.h:5
+msgid "_Help"
+msgstr "_Hjælp"
 
-#: ../data/conduit.ui.h:19
-msgid "Replace the older item"
-msgstr "Erstat det gamle element"
+#: ../data/conduit.ui.h:6
+msgid "Data Providers"
+msgstr "Dataudbydere"
 
-#: ../data/conduit.ui.h:20
+#: ../data/conduit.ui.h:7
+msgid "Compare"
+msgstr "Sammenlign"
+
+#: ../data/conduit.ui.h:8
 msgid "Resolve Conflicts"
 msgstr "Løs konflikter"
 
+#: ../data/conduit.ui.h:9
+msgid "Conflicts"
+msgstr "Konflikter"
+
+#: ../data/conduit.ui.h:10
+msgid "Synchronization Options"
+msgstr "Indstillinger for synkronisering"
+
+#: ../data/conduit.ui.h:11
+msgid "Slow Synchronization"
+msgstr "Langsom synkronisering"
+
+#: ../data/conduit.ui.h:12
+msgid "Two-Way Synchronization"
+msgstr "Tovejssynkronisering"
+
+#: ../data/conduit.ui.h:13
+msgid "Always Up-To-Date"
+msgstr "Altid opdateret"
+
+#: ../data/conduit.ui.h:14
+msgid "Conflict Options"
+msgstr "Indstillinger for konflikter"
+
+#: ../data/conduit.ui.h:15
+msgid "Ask Me What to Do"
+msgstr "Spørg mig, hvad der skal gøres"
+
+#: ../data/conduit.ui.h:16
+msgid "Replace the Older Item"
+msgstr "Erstat det gamle element"
+
+#: ../data/conduit.ui.h:17
+msgid "Skip"
+msgstr "Spring over"
+
+#: ../data/conduit.ui.h:18
+msgid "Delete Options"
+msgstr "Slet indstillinger"
+
+#: ../data/conduit.ui.h:19
+msgid "Delete the Corresponding Item"
+msgstr "Slet det tilhørende element"
+
+#: ../data/conduit.ui.h:20
+msgid "Conduit Preferences"
+msgstr "Indstillinger for Conduit"
+
 #: ../data/conduit.ui.h:21
-msgid "Save settings on exit"
-msgstr "Gem indstillinger ved afslutning"
+msgid "Start Conduit at login"
+msgstr "Start Conduit ved logind"
 
 #: ../data/conduit.ui.h:22
-msgid "Show Hints"
-msgstr "Vis fif"
+msgid "Save settings on exit"
+msgstr "Gem indstillinger ved afslutning"
 
 #: ../data/conduit.ui.h:23
 msgid "Show status icon"
 msgstr "Vis statusikon"
 
 #: ../data/conduit.ui.h:24
-msgid "Skip"
-msgstr "Spring over"
+msgid "Minimize to notification area"
+msgstr "Minimér til statusfelt"
 
 #: ../data/conduit.ui.h:25
-msgid "Slow Synchronization"
-msgstr "Langsom synkronisering"
+msgid "Show Hints"
+msgstr "Vis fif"
 
 #: ../data/conduit.ui.h:26
-msgid "Start Conduit at login"
-msgstr "Start Conduit ved logind"
+msgid "General"
+msgstr "Generelt"
 
 #: ../data/conduit.ui.h:27
-msgid "Synchronization Options"
-msgstr "Indstillinger for synkronisering"
-
-#: ../data/conduit.ui.h:28
-msgid "Title"
-msgstr "Titel"
-
-#: ../data/conduit.ui.h:29
-msgid "Two-Way Synchronization"
-msgstr "Tovejssynkronisering"
-
-#: ../data/conduit.ui.h:30
 msgid "When an item has been deleted:"
 msgstr "Når et element er blevet slettet:"
 
-#: ../data/conduit.ui.h:31
+#: ../data/conduit.ui.h:28
+msgid "Ask me what to do"
+msgstr "Spørg mig, hvad der skal gøres"
+
+#: ../data/conduit.ui.h:29
+msgid "Delete from the corresponding sink"
+msgstr "Slet fra den tilhørende datamodtagerfil"
+
+#: ../data/conduit.ui.h:30
 msgid "When there is a two-way conflict:"
 msgstr "Når der er en tovejskonflikt:"
 
+#: ../data/conduit.ui.h:31
+msgid "Replace the older item"
+msgstr "Erstat det gamle element"
+
 #: ../data/conduit.ui.h:32
-msgid "_Edit"
-msgstr "_Redigér"
+msgid "Default Synchronization Options"
+msgstr "Standardindstillinger for synkronisering"
 
 #: ../data/conduit.ui.h:33
-msgid "_File"
-msgstr "_Fil"
+msgid "Configuration"
+msgstr "Konfiguration"
 
 #: ../data/conduit.ui.h:34
-msgid "_Help"
-msgstr "_Hjælp"
+msgid "Data Conversions"
+msgstr "Datakonverteringer"
 
 #: ../conduit/Knowledge.py:8
 msgid "What Do You Want to Synchronize?"
@@ -391,6 +392,11 @@ msgstr "Træk en dataudbyder hertil for at fortsætte"
 msgid "Show me"
 msgstr "Vis mig"
 
+#: ../conduit/gtkui/ConfigItems.py:733
+#, python-format
+msgid "Total: %d"
+msgstr "I alt: %d"
+
 #. Visible column0 is
 #. [pixbuf + source display name] or
 #. [source_data.get_snippet()]
@@ -412,6 +418,15 @@ msgstr "Datamodtagerfil"
 #, python-format
 msgid "Conflicts (%s)"
 msgstr "Konflikter (%s)"
+
+#: ../conduit/gtkui/Tree.py:355 ../conduit/gtkui/UI.py:200
+#: ../conduit/modules/FileModule/FileConfiguration.py:118
+msgid "Name"
+msgstr "Navn"
+
+#: ../conduit/gtkui/Tree.py:364
+msgid "Description"
+msgstr "Beskrivelse"
 
 #. name,                      #url
 #: ../conduit/gtkui/UI.py:33
@@ -450,11 +465,6 @@ msgstr "Forholdsdatabase"
 #: ../conduit/gtkui/UI.py:194
 msgid "Conversions Available"
 msgstr "Tilgængelige konverteringer"
-
-#: ../conduit/gtkui/UI.py:200 ../conduit/gtkui/Tree.py:355
-#: ../conduit/modules/FileModule/FileConfiguration.py:118
-msgid "Name"
-msgstr "Navn"
 
 #: ../conduit/gtkui/UI.py:204
 msgid "Loaded"
@@ -512,15 +522,6 @@ msgstr "Synkronisering færdig"
 #: ../conduit/gtkui/UI.py:741
 msgid "Synchronization Error"
 msgstr "Synkroniseringsfejl"
-
-#: ../conduit/gtkui/Tree.py:364
-msgid "Description"
-msgstr "Beskrivelse"
-
-#: ../conduit/gtkui/ConfigItems.py:733
-#, python-format
-msgid "Total: %d"
-msgstr "I alt: %d"
 
 #: ../conduit/gtkui/WindowConfigurator.py:14
 msgid "Configure"
@@ -1135,6 +1136,14 @@ msgstr "SmugMug"
 msgid "Synchronize your SmugMug.com photos"
 msgstr "Synkronisér dine SmugMug.com-billeder"
 
+#: ../conduit/modules/TomboyModule.py:106
+msgid "Tomboy Notes"
+msgstr "Tomboy-noter"
+
+#: ../conduit/modules/TomboyModule.py:107
+msgid "Synchronize your Tomboy notes"
+msgstr "Synkronisér dine Tomboy-noter"
+
 #: ../conduit/modules/ZotoModule/ZotoModule.py:154
 msgid "Zoto"
 msgstr "Zoto"
@@ -1142,42 +1151,3 @@ msgstr "Zoto"
 #: ../conduit/modules/ZotoModule/ZotoModule.py:155
 msgid "Synchronize your Zoto photos"
 msgstr "Synkronisér dine Zoto-billeder"
-
-#~ msgid "Google Calendar"
-#~ msgstr "Google-kalender"
-
-#~ msgid "Synchronize your Google Calendar"
-#~ msgstr "Synkronisér din Google-kalender"
-
-#~ msgid "Picasa"
-#~ msgstr "Picasa"
-
-#~ msgid "Synchronize your Google Picasa photos"
-#~ msgstr "Synkronisér dine Google Picasa-billeder"
-
-#~ msgid "Synchronize your Google Mail contacts"
-#~ msgstr "Synkronisér dine Google Mail-kontakter"
-
-#~ msgid "Google Documents"
-#~ msgstr "Google-dokumenter"
-
-#~ msgid "Synchronize your Google Documents"
-#~ msgstr "Synkronisér dine Google-dokumenter"
-
-#~ msgid "miscellaneous"
-#~ msgstr "blandet"
-
-#~ msgid "No description."
-#~ msgstr "Ingen beskrivelse."
-
-#~ msgid "YouTube"
-#~ msgstr "YouTube"
-
-#~ msgid "Synchronize data from YouTube"
-#~ msgstr "Synkronisér data fra YouTube"
-
-#~ msgid "iPod Music"
-#~ msgstr "iPod-musik"
-
-#~ msgid "iPod Video"
-#~ msgstr "iPod-video"
