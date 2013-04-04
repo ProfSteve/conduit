@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=conduit&keywords=I18N+L10N&component=documentation and translation\n"
 "POT-Creation-Date: 2013-03-21 09:24+0000\n"
-"PO-Revision-Date: 2013-04-04 11:38+0500\n"
+"PO-Revision-Date: 2013-04-04 15:38+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik <tg@li.org>\n"
 "Language: tg\n"
@@ -20,11 +20,11 @@ msgstr ""
 
 #: ../data/conduit.desktop.in.in.h:1
 msgid "Conduit Synchronizer"
-msgstr ""
+msgstr "Ҳамоҳангсозии Conduit"
 
 #: ../data/conduit.desktop.in.in.h:2
 msgid "Synchronization for GNOME"
-msgstr ""
+msgstr "Ҳамоҳангсозӣ барои GNOME"
 
 #: ../data/conduit.ui.h:1
 msgid "Title"
@@ -48,47 +48,47 @@ msgstr "_Кӯмак"
 
 #: ../data/conduit.ui.h:6
 msgid "Data Providers"
-msgstr ""
+msgstr "Провайдерҳои иттилоот"
 
 #: ../data/conduit.ui.h:7
 msgid "Compare"
-msgstr ""
+msgstr "Муқоиса кардан"
 
 #: ../data/conduit.ui.h:8
 msgid "Resolve Conflicts"
-msgstr ""
+msgstr "Ҳал кардани ихтилофҳо"
 
 #: ../data/conduit.ui.h:9
 msgid "Conflicts"
-msgstr ""
+msgstr "Ихтилофҳо"
 
 #: ../data/conduit.ui.h:10
 msgid "Synchronization Options"
-msgstr ""
+msgstr "Имконоти ҳамоҳангсозӣ"
 
 #: ../data/conduit.ui.h:11
 msgid "Slow Synchronization"
-msgstr ""
+msgstr "Ҳамоҳангсозии суст"
 
 #: ../data/conduit.ui.h:12
 msgid "Two-Way Synchronization"
-msgstr ""
+msgstr "Ҳамоҳангсозии дусамта"
 
 #: ../data/conduit.ui.h:13
 msgid "Always Up-To-Date"
-msgstr ""
+msgstr "Ҳамеша навсозишуда"
 
 #: ../data/conduit.ui.h:14
 msgid "Conflict Options"
-msgstr ""
+msgstr "Имконоти ихтилоф"
 
 #: ../data/conduit.ui.h:15
 msgid "Ask Me What to Do"
-msgstr ""
+msgstr "Амалро аз ман пурсед"
 
 #: ../data/conduit.ui.h:16
 msgid "Replace the Older Item"
-msgstr ""
+msgstr "Ҷойгузин кардани объекти кӯҳна"
 
 #: ../data/conduit.ui.h:17
 msgid "Skip"
@@ -96,35 +96,35 @@ msgstr "Нодида гузарондан"
 
 #: ../data/conduit.ui.h:18
 msgid "Delete Options"
-msgstr ""
+msgstr "Имконоти несткунӣ"
 
 #: ../data/conduit.ui.h:19
 msgid "Delete the Corresponding Item"
-msgstr ""
+msgstr "Нест кардани объекти мувофиқ"
 
 #: ../data/conduit.ui.h:20
 msgid "Conduit Preferences"
-msgstr ""
+msgstr "Бартариҳои Conduit"
 
 #: ../data/conduit.ui.h:21
 msgid "Start Conduit at login"
-msgstr ""
+msgstr "Оғоз додани Conduit ҳангоми воридшавӣ"
 
 #: ../data/conduit.ui.h:22
 msgid "Save settings on exit"
-msgstr ""
+msgstr "Захира кардани танзимот пеш аз хориҷшавӣ"
 
 #: ../data/conduit.ui.h:23
 msgid "Show status icon"
-msgstr ""
+msgstr "Намоиш додани нишонаи вазъият"
 
 #: ../data/conduit.ui.h:24
 msgid "Minimize to notification area"
-msgstr ""
+msgstr "Ҳадди ақал сохтан ба ноҳияи огоҳиҳо"
 
 #: ../data/conduit.ui.h:25
 msgid "Show Hints"
-msgstr ""
+msgstr "Намоиш додани луқмаҳо"
 
 #: ../data/conduit.ui.h:26
 msgid "General"
@@ -132,27 +132,27 @@ msgstr "Умумӣ"
 
 #: ../data/conduit.ui.h:27
 msgid "When an item has been deleted:"
-msgstr ""
+msgstr "Ҳангоми нест шудани объект:"
 
 #: ../data/conduit.ui.h:28
 msgid "Ask me what to do"
-msgstr ""
+msgstr "Амалро аз ман пурсед"
 
 #: ../data/conduit.ui.h:29
 msgid "Delete from the corresponding sink"
-msgstr ""
+msgstr "Нест кардан аз қабулгоҳ"
 
 #: ../data/conduit.ui.h:30
 msgid "When there is a two-way conflict:"
-msgstr ""
+msgstr "Ҳангоми ба вуҷуд омадани ихтилофи дусамта:"
 
 #: ../data/conduit.ui.h:31
 msgid "Replace the older item"
-msgstr ""
+msgstr "Ҷойгузин кардани объекти кӯҳна"
 
 #: ../data/conduit.ui.h:32
 msgid "Default Synchronization Options"
-msgstr ""
+msgstr "Имконоти пешфарзи ҳамоҳангсозӣ"
 
 #: ../data/conduit.ui.h:33
 msgid "Configuration"
@@ -160,93 +160,102 @@ msgstr "Конфигуратсия"
 
 #: ../data/conduit.ui.h:34
 msgid "Data Conversions"
-msgstr ""
+msgstr "Табдилдиҳиҳои иттилоот"
 
 #: ../conduit/Knowledge.py:8
 msgid "What Do You Want to Synchronize?"
-msgstr ""
+msgstr "Шумо мехоҳед чиро ҳамоҳанг намоед?"
 
 #: ../conduit/Knowledge.py:9
 msgid "Drag and Drop a Data Provider on the Canvas"
-msgstr ""
+msgstr "Провайдери иттилоотро ба матоъ кашида баред"
 
 #: ../conduit/Knowledge.py:11
 msgid "Synchronization Group Created"
-msgstr ""
+msgstr "Гурӯҳи ҳамоҳангсозӣ эҷод карда шуд"
 
 #: ../conduit/Knowledge.py:12
 msgid "Add Another Data Provider to the Group to Synchronize it"
 msgstr ""
+"Илова кардани провайдери дигари иттилоот ба гурӯҳ барои ҳамоҳанг кардани он"
 
 #: ../conduit/Knowledge.py:14
 msgid "You Are Now Ready to Synchronize"
-msgstr ""
+msgstr "Акнун шумо барои ҳамоҳангсозӣ тайёр мебошед"
 
 #: ../conduit/Knowledge.py:15
 msgid "Right Click on Group for Options"
-msgstr ""
+msgstr "Барои имконот дар болои гурӯҳ бо тугмаи рости муш зер кунед"
 
 #: ../conduit/Knowledge.py:24
 msgid "Synchronize Two Folders"
-msgstr ""
+msgstr "Ҳамоҳанг кардани ду ҷузвдон"
 
 #: ../conduit/Knowledge.py:27
 msgid "Backup Folder to Box.net"
-msgstr ""
+msgstr "Эҷод кардани нусхаи эҳтиётӣ ба Box.net"
 
 #: ../conduit/Knowledge.py:30
 msgid "Synchronize Tagged F-Spot Photos to Flickr"
-msgstr ""
+msgstr "Ҳамоҳанг кардани суратҳои барчаспдори F-Spot ба Flickr"
 
 #: ../conduit/Knowledge.py:33
 msgid "Synchronize Photos to Flickr"
-msgstr ""
+msgstr "Ҳамоҳанг кардани суратҳо ба Flickr"
 
 #: ../conduit/Knowledge.py:36
 msgid "Upload Photos to Facebook"
-msgstr ""
+msgstr "Бор кардани суратҳо ба Facebook"
 
 #: ../conduit/Knowledge.py:39
 msgid "Synchronize Desktop Wallpaper from a RSS Feed"
-msgstr ""
+msgstr "Ҳамоҳанг кардани тасвири заминаи мизи корӣ аз навори навсозии RSS"
 
 #: ../conduit/Main.py:57
 msgid "Conduit is a synchronization application."
-msgstr ""
+msgstr "Conduit барномаи ҳамоҳангсозӣ мебошад."
 
 #: ../conduit/Main.py:61
 #, python-format
 msgid "Launch without GUI. [default: %default]"
-msgstr ""
+msgstr "Иҷро кардан бе GUI . [пешфарз: %default]"
 
 #: ../conduit/Main.py:65
 #, python-format
 msgid "Save dataprovider configuration to FILE. [default: %default]"
 msgstr ""
+"Захира кардани конфигуратсияи провайдери иттилоот ба ФАЙЛ. [пешфарз: "
+"%default]"
 
 #: ../conduit/Main.py:69
 #, python-format
 msgid "Iconify on startup. [default: %default]"
-msgstr ""
+msgstr "Намоиш додан ҳамчун нишона ҳангоми оғози кор. [пешфарз: %default]"
 
 #: ../conduit/Main.py:73
 #, python-format
 msgid "Run with the specified UI. [default: %default]"
-msgstr ""
+msgstr "Иҷро кардан бо интерфейси муайяншудаи корбар. [пешфарз: %default]"
 
 #: ../conduit/Main.py:77
 msgid "Only load modules in the named files. [default: load all modules]"
 msgstr ""
+"Бор кардани модулҳо танҳо дар файлҳои номгузоришуда. [пешфарз: бор кардани "
+"ҳамаи модулҳо]"
 
 #: ../conduit/Main.py:81
 msgid "Do not load modules in the named files. [default: load all modules]"
 msgstr ""
+"Модулҳоро дар файлҳои номгузоришуда бор накунед. [пешфарз: бор кардани ҳамаи "
+"модулҳо]"
 
 #: ../conduit/Main.py:85
 msgid ""
 "Explicitly set internal Conduit settings (keys) to the given values for this "
 "session. [default: do not set]"
 msgstr ""
+"Ба таври муфассал таъин кардани танзимоти дохилии Conduit (тугмаҳо) ба "
+"қиматҳои додашуда барои ҷаласаи ҷорӣ. [пешфарз: таъин накардан]"
 
 #: ../conduit/Main.py:89
 #, python-format
@@ -254,21 +263,23 @@ msgid ""
 "Enable loading of unfinished or unsupported dataproviders. [default: "
 "%default]"
 msgstr ""
+"Фаъол кардани боркунии провайдерҳои иттилооти анҷомнаёфта ё "
+"дастгиринашаванда. [default: %default]"
 
 #: ../conduit/Main.py:93
 #, python-format
 msgid "Generate more debugging information. [default: %default]"
-msgstr ""
+msgstr "Эҷод кардани маълумоти бештари ислоҳи хатоҳо. [пешфарз: %default]"
 
 #: ../conduit/Main.py:97
 #, python-format
 msgid "Generate less debugging information. [default: %default]"
-msgstr ""
+msgstr "Эҷод кардани маълумоти камтари ислоҳи хатоҳо. [пешфарз: %default]"
 
 #: ../conduit/Main.py:101
 #, python-format
 msgid "Generate no debugging information. [default: %default]"
-msgstr ""
+msgstr "Эҷод накардани маълумоти ислоҳи хатоҳо. [пешфарз: %default]"
 
 #: ../conduit/dataproviders/DataProvider.py:22
 msgid "Ready"
@@ -276,47 +287,47 @@ msgstr "Тайёр"
 
 #: ../conduit/dataproviders/DataProvider.py:23
 msgid "New data to sync"
-msgstr ""
+msgstr "Иттилооти нав барои ҳамоҳангсозӣ"
 
 #: ../conduit/dataproviders/DataProvider.py:24
 msgid "Refreshing..."
-msgstr ""
+msgstr "Навсозӣ шуда истодааст..."
 
 #: ../conduit/dataproviders/DataProvider.py:25
 msgid "Refreshed OK"
-msgstr ""
+msgstr "Навсозӣ бомуваффақият ба анҷом расидааст"
 
 #: ../conduit/dataproviders/DataProvider.py:26
 msgid "Error Refreshing"
-msgstr ""
+msgstr "Хатогии навсозӣ"
 
 #: ../conduit/dataproviders/DataProvider.py:27
 msgid "Synchronizing..."
-msgstr ""
+msgstr "Ҳамоҳангсозӣ рафта истодааст..."
 
 #: ../conduit/dataproviders/DataProvider.py:28
 msgid "Synchronized OK"
-msgstr ""
+msgstr "Ҳамоҳангсозӣ бомуваффақият ба анҷом расидааст"
 
 #: ../conduit/dataproviders/DataProvider.py:29
 msgid "Error Synchronizing"
-msgstr ""
+msgstr "Хатогии ҳамоҳангсозӣ"
 
 #: ../conduit/dataproviders/DataProvider.py:30
 msgid "Synchronization Skipped"
-msgstr ""
+msgstr "Ҳамоҳангсозӣ нодида гузаронида шуд"
 
 #: ../conduit/dataproviders/DataProvider.py:31
 msgid "Synchronization Cancelled"
-msgstr ""
+msgstr "Ҳамоҳангсозӣ бекор карда шуд"
 
 #: ../conduit/dataproviders/DataProvider.py:32 ../conduit/gtkui/UI.py:743
 msgid "Synchronization Conflict"
-msgstr ""
+msgstr "Ихтилофи ҳамоҳангсозӣ"
 
 #: ../conduit/dataproviders/DataProvider.py:33
 msgid "Not Configured"
-msgstr ""
+msgstr "Конфигуратсиянашуда"
 
 #: ../conduit/dataproviders/Image.py:34
 #: ../conduit/modules/FlickrModule/FlickrModule.py:329
@@ -342,7 +353,7 @@ msgstr "Ҳеҷ чиз"
 #. Default Categories for the DataProviders
 #: ../conduit/dataproviders/__init__.py:6
 msgid "Files and Folders"
-msgstr ""
+msgstr "Файлҳо ва ҷузвдонҳо"
 
 #: ../conduit/dataproviders/__init__.py:7
 #: ../conduit/modules/iPodModule/iPodModule.py:276
@@ -352,11 +363,11 @@ msgstr "Тавзеҳҳо"
 #: ../conduit/dataproviders/__init__.py:8
 #: ../conduit/modules/iPodModule/iPodModule.py:464
 msgid "Photos"
-msgstr ""
+msgstr "Суратҳо"
 
 #: ../conduit/dataproviders/__init__.py:9
 msgid "Office"
-msgstr ""
+msgstr "Офис"
 
 #: ../conduit/dataproviders/__init__.py:10
 msgid "Settings"
@@ -380,11 +391,11 @@ msgstr "Санҷиш"
 
 #: ../conduit/gtkui/Canvas.py:152
 msgid "Drag a Data Provider here to continue"
-msgstr ""
+msgstr "Барои идома додан, провайдери иттилоотро ба ин ҷо кашида баред"
 
 #: ../conduit/gtkui/Canvas.py:227
 msgid "Show me"
-msgstr ""
+msgstr "Ба ман намоиш диҳед"
 
 #: ../conduit/gtkui/ConfigItems.py:733
 #, python-format
@@ -405,13 +416,13 @@ msgstr "Возеҳӣ"
 #. Visible column2 is the display name of source and source data
 #: ../conduit/gtkui/ConflictResolver.py:110
 msgid "Sink"
-msgstr ""
+msgstr "Қабулгоҳ"
 
 #: ../conduit/gtkui/ConflictResolver.py:150
 #: ../conduit/gtkui/ConflictResolver.py:151
 #, python-format
 msgid "Conflicts (%s)"
-msgstr ""
+msgstr "Ихтилофҳо (%s)"
 
 #: ../conduit/gtkui/Tree.py:355 ../conduit/gtkui/UI.py:200
 #: ../conduit/modules/FileModule/FileConfiguration.py:118
@@ -429,15 +440,15 @@ msgstr "Муқаддима"
 
 #: ../conduit/gtkui/UI.py:34
 msgid "Writing a Data Provider"
-msgstr ""
+msgstr "Навиштани провайдери иттилоот"
 
 #: ../conduit/gtkui/UI.py:35
 msgid "API Documentation"
-msgstr ""
+msgstr "Санадҳои API"
 
 #: ../conduit/gtkui/UI.py:36
 msgid "Test Results"
-msgstr ""
+msgstr "Натиҷаҳои матн"
 
 #: ../conduit/gtkui/UI.py:52
 msgid "Examples"
@@ -446,19 +457,19 @@ msgstr "Мисолҳо"
 #. Build some liststores to display
 #: ../conduit/gtkui/UI.py:139
 msgid "Convert from"
-msgstr ""
+msgstr "Табдил додан аз"
 
 #: ../conduit/gtkui/UI.py:140
 msgid "into"
-msgstr ""
+msgstr "ба"
 
 #: ../conduit/gtkui/UI.py:190
 msgid "Relationship Database"
-msgstr ""
+msgstr "Пойгоҳи иттилоотии вобастагиҳо"
 
 #: ../conduit/gtkui/UI.py:194
 msgid "Conversions Available"
-msgstr ""
+msgstr "Табдилдиҳиҳо дастрасанд"
 
 #: ../conduit/gtkui/UI.py:204
 msgid "Loaded"
@@ -475,27 +486,27 @@ msgstr " - Иҷрокунии тозашуда"
 
 #: ../conduit/gtkui/UI.py:375
 msgid "Developers"
-msgstr ""
+msgstr "Таҳиягарон"
 
 #: ../conduit/gtkui/UI.py:539 ../conduit/hildonui/UI.py:127
 msgid "Synchronization in progress. Do you want to cancel it?"
-msgstr ""
+msgstr "Ҳамоҳангсозӣ рафта истодааст. Шумо мехоҳед, ки онро бекор кунед?"
 
 #: ../conduit/gtkui/UI.py:712
 msgid "_Synchronize All"
-msgstr ""
+msgstr "_Ҳамоҳанг кардани ҳама"
 
 #: ../conduit/gtkui/UI.py:712
 msgid "Synchronizes All Groups"
-msgstr ""
+msgstr "Ҳамаи гурӯҳҳоро ҳамоҳанг мекунад"
 
 #: ../conduit/gtkui/UI.py:713
 msgid "_Cancel Synchronization"
-msgstr ""
+msgstr "_Бекор кардани ҳамоҳангсозӣ"
 
 #: ../conduit/gtkui/UI.py:713
 msgid "Cancels Currently Synchronizing Groups"
-msgstr ""
+msgstr "Гурӯҳҳои дар айни ҳол ҳамоҳангшавандаро бекор мекунад"
 
 #: ../conduit/gtkui/UI.py:714
 msgid "_Quit"
@@ -503,31 +514,31 @@ msgstr "_Хуруҷ"
 
 #: ../conduit/gtkui/UI.py:714
 msgid "Close Conduit"
-msgstr ""
+msgstr "Пӯшидани Conduit"
 
 #: ../conduit/gtkui/UI.py:731
 msgid "Synchronizing"
-msgstr ""
+msgstr "Ҳамоҳангсозӣ рафта истодааст"
 
 #: ../conduit/gtkui/UI.py:737
 msgid "Synchronization Complete"
-msgstr ""
+msgstr "Ҳамоҳангсозӣ ба анҷом расид"
 
 #: ../conduit/gtkui/UI.py:741
 msgid "Synchronization Error"
-msgstr ""
+msgstr "Хатогии ҳамоҳангсозӣ"
 
 #: ../conduit/gtkui/WindowConfigurator.py:14
 msgid "Configure"
-msgstr ""
+msgstr "Конфигуратсия кардан"
 
 #: ../conduit/modules/BackpackModule/BackpackModule.py:58
 msgid "Backpack Notes"
-msgstr ""
+msgstr "Тавзеҳҳои Backpack"
 
 #: ../conduit/modules/BackpackModule/BackpackModule.py:59
 msgid "Store things in Backpack Notes"
-msgstr ""
+msgstr "Нигоҳ доштани чизҳо дар Backpack Notes"
 
 #: ../conduit/modules/BackpackModule/BackpackModule.py:105
 #: ../conduit/modules/FlickrModule/FlickrModule.py:307
@@ -541,23 +552,23 @@ msgstr "Даромад"
 
 #: ../conduit/modules/BackpackModule/BackpackModule.py:109
 msgid "API key"
-msgstr ""
+msgstr "Калиди API"
 
 #: ../conduit/modules/BackpackModule/BackpackModule.py:112
 msgid "Saved notes"
-msgstr ""
+msgstr "Тавзеҳҳои захирашуда"
 
 #: ../conduit/modules/BackpackModule/BackpackModule.py:113
 msgid "Save notes in page"
-msgstr ""
+msgstr "Захира кардани тавзеҳҳо дар саҳифа"
 
 #: ../conduit/modules/BansheeModule/BansheeModule.py:52
 msgid "Banshee Playlists"
-msgstr ""
+msgstr "Феҳристҳои пахши Banshee"
 
 #: ../conduit/modules/BansheeModule/BansheeModule.py:53
 msgid "Synchronize your Banshee playlists"
-msgstr ""
+msgstr "Ҳамоҳанг кардани феҳристҳои пахши Banshee-и шумо"
 
 #: ../conduit/modules/BansheeModule/BansheeModule.py:187
 #: ../conduit/modules/BansheeModule/BansheeModule.py:188
@@ -568,11 +579,11 @@ msgstr "Феҳристҳои пахш"
 
 #: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:29
 msgid "Box.net"
-msgstr ""
+msgstr "Box.net"
 
 #: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:30
 msgid "Synchronize your Box.net files"
-msgstr ""
+msgstr "Ҳамоҳанг кардани файлҳои Box.net-и шумо"
 
 #: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:290
 #: ../conduit/modules/FileModule/FileModule.py:86
@@ -581,11 +592,11 @@ msgstr "Ҷузвдон"
 
 #: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:291
 msgid "Folder name"
-msgstr ""
+msgstr "Номи ҷузвдон"
 
 #: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:295
 msgid "Load folders"
-msgstr ""
+msgstr "Бор кардани ҷузвдонҳо"
 
 #: ../conduit/modules/ConverterModule.py:91
 msgid "Note-"
@@ -593,11 +604,11 @@ msgstr "Тавзеҳ-"
 
 #: ../conduit/modules/DesktopWallpaperModule.py:38
 msgid "Wallpaper"
-msgstr ""
+msgstr "Тасвири замина"
 
 #: ../conduit/modules/DesktopWallpaperModule.py:39
 msgid "Changes your Desktop Wallpaper"
-msgstr ""
+msgstr "Тасвири заминаи мизи кории шуморо тағйир медиҳад"
 
 #: ../conduit/modules/EvolutionModule/EvolutionModule.py:110
 #, python-format
@@ -606,35 +617,35 @@ msgstr "Интихоб кардани %s"
 
 #: ../conduit/modules/EvolutionModule/EvolutionModule.py:130
 msgid "Evolution Contacts"
-msgstr ""
+msgstr "Тамосҳои Evolution"
 
 #: ../conduit/modules/EvolutionModule/EvolutionModule.py:131
 msgid "Synchronize your contacts"
-msgstr ""
+msgstr "Ҳамоҳанг кардани тамосҳои шумо"
 
 #: ../conduit/modules/EvolutionModule/EvolutionModule.py:181
 msgid "Evolution Calendar"
-msgstr ""
+msgstr "Тақвими Evolution"
 
 #: ../conduit/modules/EvolutionModule/EvolutionModule.py:182
 msgid "Synchronize your calendar"
-msgstr ""
+msgstr "Ҳамоҳанг кардани тақвими шумо"
 
 #: ../conduit/modules/EvolutionModule/EvolutionModule.py:243
 msgid "Evolution Tasks"
-msgstr ""
+msgstr "Вазифаҳои Evolution"
 
 #: ../conduit/modules/EvolutionModule/EvolutionModule.py:244
 msgid "Synchronize your tasks"
-msgstr ""
+msgstr "Ҳамоҳанг кардани вазифаҳои шумо"
 
 #: ../conduit/modules/EvolutionModule/EvolutionModule.py:300
 msgid "Evolution Memos"
-msgstr ""
+msgstr "Ёддоштҳои Evolution"
 
 #: ../conduit/modules/EvolutionModule/EvolutionModule.py:301
 msgid "Synchronize your memos"
-msgstr ""
+msgstr "Ҳамоҳанг кардани ёддоштҳои шумо"
 
 #: ../conduit/modules/FacebookModule/FacebookModule.py:38
 msgid "Facebook"
@@ -642,24 +653,24 @@ msgstr "Facebook"
 
 #: ../conduit/modules/FacebookModule/FacebookModule.py:39
 msgid "Synchronize your Facebook photos"
-msgstr ""
+msgstr "Ҳамоҳанг кардани суратҳои Facebook-и шумо"
 
 #: ../conduit/modules/FacebookModule/FacebookModule.py:124
 #: ../conduit/modules/FlickrModule/FlickrModule.py:282
 msgid "Loading album list..."
-msgstr ""
+msgstr "Боркунии рӯйхати албомҳо..."
 
 #: ../conduit/modules/FacebookModule/FacebookModule.py:128
 msgid "Failed to connect"
-msgstr ""
+msgstr "Пайваст шудан нашуд"
 
 #: ../conduit/modules/FacebookModule/FacebookModule.py:131
 msgid "Logged in"
-msgstr ""
+msgstr "Воридшуда"
 
 #: ../conduit/modules/FacebookModule/FacebookModule.py:133
 msgid "Failed to login"
-msgstr ""
+msgstr "Ворид шудан нашуд"
 
 #: ../conduit/modules/FacebookModule/FacebookModule.py:145
 #: ../conduit/modules/FspotModule/FspotModule.py:246
@@ -674,40 +685,40 @@ msgstr "Албом"
 
 #: ../conduit/modules/FacebookModule/FacebookModule.py:151
 msgid "Album name"
-msgstr ""
+msgstr "Номи албом"
 
 #: ../conduit/modules/FacebookModule/FacebookModule.py:156
 msgid "Load albums"
-msgstr ""
+msgstr "Бор кардани албомҳо"
 
 #: ../conduit/modules/FeedModule/FeedModule.py:58
 msgid "RSS Feed"
-msgstr ""
+msgstr "Навори навсозии RSS"
 
 #: ../conduit/modules/FeedModule/FeedModule.py:59
 msgid "Synchronize data from RSS enclosures"
-msgstr ""
+msgstr "Ҳамоҳанг кардани иттилоот аз замимаҳои наворҳои навсозии RSS"
 
 #. FIXME: Add Randomize
 #: ../conduit/modules/FeedModule/FeedModule.py:114
 msgid "Feed details"
-msgstr ""
+msgstr "Тафсилоти навори навсозӣ"
 
 #: ../conduit/modules/FeedModule/FeedModule.py:115
 msgid "Feed address"
-msgstr ""
+msgstr "Суроғаи навори навсозӣ"
 
 #: ../conduit/modules/FeedModule/FeedModule.py:118
 msgid "Enclosure settings"
-msgstr ""
+msgstr "Танзимоти замимаҳо"
 
 #: ../conduit/modules/FeedModule/FeedModule.py:119
 msgid "Limit downloaded enclosures"
-msgstr ""
+msgstr "Маҳдуд кардани замимаҳои боршуда"
 
 #: ../conduit/modules/FeedModule/FeedModule.py:125
 msgid "Limit to"
-msgstr ""
+msgstr "Маҳдуд кардан ба"
 
 #: ../conduit/modules/FeedModule/FeedModule.py:129
 msgid "Randomize enclosures"
@@ -872,15 +883,15 @@ msgstr "Барчаспҳо"
 
 #: ../conduit/modules/FspotModule/FspotModule.py:265
 msgid "Add tags"
-msgstr ""
+msgstr "Илова кардани барчаспҳо"
 
 #: ../conduit/modules/FspotModule/FspotModule.py:266
 msgid "Tag name"
-msgstr ""
+msgstr "Номи барчасп"
 
 #: ../conduit/modules/FspotModule/FspotModule.py:269
 msgid "Add tag"
-msgstr ""
+msgstr "Илова кардани барчасп"
 
 #: ../conduit/modules/GConfModule/GConfModule.py:21
 msgid "Application Settings"
