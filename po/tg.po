@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=conduit&keywords=I18N+L10N&component=documentation and translation\n"
 "POT-Creation-Date: 2013-03-21 09:24+0000\n"
-"PO-Revision-Date: 2013-04-04 15:38+0500\n"
+"PO-Revision-Date: 2013-04-05 13:20+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik <tg@li.org>\n"
 "Language: tg\n"
@@ -568,7 +568,7 @@ msgstr "Феҳристҳои пахши Banshee"
 
 #: ../conduit/modules/BansheeModule/BansheeModule.py:53
 msgid "Synchronize your Banshee playlists"
-msgstr "Ҳамоҳанг кардани феҳристҳои пахши Banshee-и шумо"
+msgstr "Ҳамоҳанг кардани феҳристҳои пахши Banshee"
 
 #: ../conduit/modules/BansheeModule/BansheeModule.py:187
 #: ../conduit/modules/BansheeModule/BansheeModule.py:188
@@ -583,7 +583,7 @@ msgstr "Box.net"
 
 #: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:30
 msgid "Synchronize your Box.net files"
-msgstr "Ҳамоҳанг кардани файлҳои Box.net-и шумо"
+msgstr "Ҳамоҳанг кардани файлҳои Box.net"
 
 #: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:290
 #: ../conduit/modules/FileModule/FileModule.py:86
@@ -653,7 +653,7 @@ msgstr "Facebook"
 
 #: ../conduit/modules/FacebookModule/FacebookModule.py:39
 msgid "Synchronize your Facebook photos"
-msgstr "Ҳамоҳанг кардани суратҳои Facebook-и шумо"
+msgstr "Ҳамоҳанг кардани суратҳои Facebook"
 
 #: ../conduit/modules/FacebookModule/FacebookModule.py:124
 #: ../conduit/modules/FlickrModule/FlickrModule.py:282
@@ -722,23 +722,23 @@ msgstr "Маҳдуд кардан ба"
 
 #: ../conduit/modules/FeedModule/FeedModule.py:129
 msgid "Randomize enclosures"
-msgstr ""
+msgstr "Тагурӯ кардани замимаҳо"
 
 #: ../conduit/modules/FeedModule/FeedModule.py:133
 msgid "Download types"
-msgstr ""
+msgstr "Намудҳои боргирӣ"
 
 #: ../conduit/modules/FeedModule/FeedModule.py:134
 msgid "Download audio files"
-msgstr ""
+msgstr "Боргирӣ кардани файлҳои аудиоӣ"
 
 #: ../conduit/modules/FeedModule/FeedModule.py:135
 msgid "Download video files"
-msgstr ""
+msgstr "Боргирӣ кардани файлҳои видеоӣ"
 
 #: ../conduit/modules/FeedModule/FeedModule.py:136
 msgid "Download photo files"
-msgstr ""
+msgstr "Боргирӣ кардани файлҳои тасвирӣ"
 
 #: ../conduit/modules/FileModule/FileConfiguration.py:112
 msgid "Icon"
@@ -756,7 +756,7 @@ msgstr "<i>Дорои %s файл мебошад</i>"
 
 #: ../conduit/modules/FileModule/FileConfiguration.py:249
 msgid "Include file..."
-msgstr ""
+msgstr "Илова кардани файл..."
 
 #: ../conduit/modules/FileModule/FileConfiguration.py:259
 msgid "All files"
@@ -764,16 +764,18 @@ msgstr "Ҳамаи файлҳо"
 
 #: ../conduit/modules/FileModule/FileConfiguration.py:272
 msgid "Include folder..."
-msgstr ""
+msgstr "Илова кардани ҷузвдон..."
 
 #: ../conduit/modules/FileModule/FileConfiguration.py:315
 msgid "Please Name All Folders"
-msgstr ""
+msgstr "Ба ҳамаи ҷузвдонҳо ном гузоред"
 
 #: ../conduit/modules/FileModule/FileConfiguration.py:316
 msgid ""
 "All folders require a descriptive name. To name a folder simply click on it"
 msgstr ""
+"ҳамаи ҷузвдонҳо номҳои ботафсилро талаб мекунанд. Барои гузоштани ном ба "
+"ҷузвдон, онро зер кунед"
 
 #: ../conduit/modules/FileModule/FileModule.py:27
 msgid "Files"
@@ -781,47 +783,47 @@ msgstr "Файлҳо"
 
 #: ../conduit/modules/FileModule/FileModule.py:28
 msgid "Source for synchronizing multiple files"
-msgstr ""
+msgstr "Манбаъ барои ҳамоҳангсозии якчанд файлҳо"
 
 #: ../conduit/modules/FileModule/FileModule.py:87
 msgid "Synchronize folders"
-msgstr ""
+msgstr "Ҳамоҳанг кардани ҷузвдонҳо"
 
 #: ../conduit/modules/Firefox3Module/Firefox3Module.py:40
 msgid "Firefox 3 Bookmarks"
-msgstr ""
+msgstr "Хатбаракҳои Firefox 3"
 
 #: ../conduit/modules/Firefox3Module/Firefox3Module.py:41
 msgid "Syncronize your Firefox 3 Bookmarks"
-msgstr ""
+msgstr "Ҳамоҳанг кардани хатбаракҳои Firefox 3"
 
 #: ../conduit/modules/Firefox3Module/Firefox3Module.py:100
 msgid "Firefox Profile"
-msgstr ""
+msgstr "Профили Firefox"
 
 #: ../conduit/modules/FlickrModule/FlickrModule.py:76
 msgid "Flickr"
-msgstr ""
+msgstr "Flickr"
 
 #: ../conduit/modules/FlickrModule/FlickrModule.py:77
 msgid "Synchronize your Flickr.com photos"
-msgstr ""
+msgstr "Ҳамоҳанг кардани суратҳои Flickr.com"
 
 #: ../conduit/modules/FlickrModule/FlickrModule.py:287
 msgid "Failed to connect."
-msgstr ""
+msgstr "Пайваст шудан нашуд."
 
 #: ../conduit/modules/FlickrModule/FlickrModule.py:290
 msgid "Album names loaded."
-msgstr ""
+msgstr "Номҳои албом бор шудаанд."
 
 #: ../conduit/modules/FlickrModule/FlickrModule.py:292
 msgid "Failed to login."
-msgstr ""
+msgstr "Ворид шудан нашуд."
 
 #: ../conduit/modules/FlickrModule/FlickrModule.py:303
 msgid "Logging in, please wait..."
-msgstr ""
+msgstr "Воридшавӣ рафта истодааст, лутфан, интизор шавед..."
 
 #: ../conduit/modules/FlickrModule/FlickrModule.py:308
 #: ../conduit/modules/GoogleBookmarksModule.py:67
@@ -831,48 +833,49 @@ msgstr "Номи корбар"
 
 #: ../conduit/modules/FlickrModule/FlickrModule.py:319
 msgid "Authenticate"
-msgstr ""
+msgstr "Аслшиносӣ"
 
 #: ../conduit/modules/FlickrModule/FlickrModule.py:323
 #: ../conduit/modules/ZotoModule/ZotoModule.py:251
 msgid "Saved photo settings"
-msgstr ""
+msgstr "Танзимоти захирашудаи суратҳо"
 
 #: ../conduit/modules/FlickrModule/FlickrModule.py:328
 msgid "Resize photos"
-msgstr ""
+msgstr "Тағйири андозаи суратҳо"
 
 #: ../conduit/modules/FlickrModule/FlickrModule.py:329
 msgid "Do not resize"
-msgstr ""
+msgstr "Андозаро тағйир надиҳед"
 
 #: ../conduit/modules/FlickrModule/FlickrModule.py:332
 msgid "Photos are public"
-msgstr ""
+msgstr "Суратҳо барои ҳама дастрасанд"
 
 #: ../conduit/modules/FspotModule/FspotModule.py:28
 msgid "F-Spot"
-msgstr ""
+msgstr "Нуқтаи-F"
 
 #: ../conduit/modules/FspotModule/FspotModule.py:29
 msgid "Synchronize your F-Spot photos"
-msgstr ""
+msgstr "Ҳамоҳанг кардани суратҳои Нуқтаи-F"
 
 #: ../conduit/modules/FspotModule/FspotModule.py:155
 msgid "F-Spot DBus interface is operating in read-only mode"
 msgstr ""
+"Интерфейси Нуқтаи-F DBus дар ҳолати танҳо барои хондан иҷро шуда истодааст"
 
 #: ../conduit/modules/FspotModule/FspotModule.py:221
 msgid "F-Spot is running"
-msgstr ""
+msgstr "Нуқтаи-F иҷро шуда истодааст"
 
 #: ../conduit/modules/FspotModule/FspotModule.py:222
 msgid "Please start F-Spot or activate the D-Bus Extension"
-msgstr ""
+msgstr "Лутфан, Нуқтаи-F-ро оғоз кунед ё пасванди D-Bus-ро фаъол созед"
 
 #: ../conduit/modules/FspotModule/FspotModule.py:247
 msgid "Start F-Spot"
-msgstr ""
+msgstr "Оғоз кардани Нуқтаи-F"
 
 #: ../conduit/modules/FspotModule/FspotModule.py:251
 #: ../conduit/modules/FspotModule/FspotModule.py:252
@@ -895,47 +898,47 @@ msgstr "Илова кардани барчасп"
 
 #: ../conduit/modules/GConfModule/GConfModule.py:21
 msgid "Application Settings"
-msgstr ""
+msgstr "Танзимоти барномаҳо"
 
 #: ../conduit/modules/GConfModule/GConfModule.py:22
 msgid "Synchronize your application settings"
-msgstr ""
+msgstr "Ҳамоҳанг кардани танзимоти барномаҳо"
 
 #: ../conduit/modules/GConfModule/GConfModule.py:31
 msgid "Metacity"
-msgstr ""
+msgstr "Metacity"
 
 #: ../conduit/modules/GConfModule/GConfModule.py:32
 msgid "Nautilus"
-msgstr ""
+msgstr "Nautilus"
 
 #: ../conduit/modules/GConfModule/GConfModule.py:33
 msgid "Preferred Applications"
-msgstr ""
+msgstr "Барномаҳои пазируфта"
 
 #: ../conduit/modules/GConfModule/GConfModule.py:34
 msgid "Desktop Interface"
-msgstr ""
+msgstr "Интерфейси мизи корӣ"
 
 #: ../conduit/modules/GConfModule/GConfModule.py:35
 msgid "Gnome Terminal"
-msgstr ""
+msgstr "Терминали Gnome"
 
 #: ../conduit/modules/GConfModule/GConfModule.py:137
 msgid "Applications to Synchronize"
-msgstr ""
+msgstr "Ҳамоҳангсозии барномаҳо"
 
 #: ../conduit/modules/GoogleBookmarksModule.py:19
 msgid "Google Bookmarks"
-msgstr ""
+msgstr "Хатбаракҳои Google"
 
 #: ../conduit/modules/GoogleBookmarksModule.py:20
 msgid "Sync your Google Bookmarks"
-msgstr ""
+msgstr "Ҳамоҳанг кардани хатбаракҳои Google"
 
 #: ../conduit/modules/GoogleBookmarksModule.py:66
 msgid "Login Details"
-msgstr ""
+msgstr "Тафсилоти воридшавӣ"
 
 #: ../conduit/modules/GoogleBookmarksModule.py:70
 #: ../conduit/modules/ZotoModule/ZotoModule.py:247
@@ -944,7 +947,7 @@ msgstr "Парол"
 
 #: ../conduit/modules/iPodModule/iPodModule.py:277
 msgid "Synchronize your iPod notes"
-msgstr ""
+msgstr "Ҳамоҳанг кардани ёддоштҳои iPod"
 
 #: ../conduit/modules/iPodModule/iPodModule.py:392
 msgid "Contacts"
@@ -952,7 +955,7 @@ msgstr "Тамосҳо"
 
 #: ../conduit/modules/iPodModule/iPodModule.py:393
 msgid "Synchronize your iPod contacts"
-msgstr ""
+msgstr "Ҳамоҳанг кардани тамосҳои iPod"
 
 #: ../conduit/modules/iPodModule/iPodModule.py:428
 msgid "Calendar"
@@ -960,11 +963,11 @@ msgstr "Тақвим"
 
 #: ../conduit/modules/iPodModule/iPodModule.py:429
 msgid "Synchronize your iPod calendar"
-msgstr ""
+msgstr "Ҳамоҳанг кардани тақвими iPod"
 
 #: ../conduit/modules/iPodModule/iPodModule.py:465
 msgid "Synchronize your iPod photos"
-msgstr ""
+msgstr "Ҳамоҳанг кардани суратҳои iPod"
 
 #: ../conduit/modules/iPodModule/iPodModule.py:570
 msgid "Delete"
@@ -972,7 +975,7 @@ msgstr "Нест кардан"
 
 #: ../conduit/modules/iPodModule/iPodModule.py:573
 msgid "Delete All Photos"
-msgstr ""
+msgstr "Нест кардани ҳамаи суратҳо"
 
 #: ../conduit/modules/iPodModule/iPodModule.py:803
 #: ../conduit/modules/iPodModule/iPodModule.py:920
@@ -982,11 +985,11 @@ msgstr "Рамзгузорӣ"
 
 #: ../conduit/modules/iPodModule/iPodModule.py:919
 msgid "Conversion options"
-msgstr ""
+msgstr "Имконоти табдил"
 
 #: ../conduit/modules/iPodModule/iPodModule.py:924
 msgid "Keep converted files"
-msgstr ""
+msgstr "Нигоҳ доштани файлҳои табдилшуда"
 
 #. To translators: defaul music folder of N800
 #: ../conduit/modules/iPodModule/iPodModule.py:954
@@ -996,7 +999,7 @@ msgstr "Мӯсиқӣ"
 
 #: ../conduit/modules/iPodModule/iPodModule.py:955
 msgid "Synchronize your iPod music"
-msgstr ""
+msgstr "Ҳамоҳанг кардани мусиқии iPod"
 
 #. To translators: defaul video folder of N800
 #: ../conduit/modules/iPodModule/iPodModule.py:990
@@ -1006,7 +1009,7 @@ msgstr "Видео"
 
 #: ../conduit/modules/iPodModule/iPodModule.py:991
 msgid "Synchronize your iPod videos"
-msgstr ""
+msgstr "Ҳамоҳанг кардани видеоҳои iPod"
 
 #: ../conduit/modules/iPodModule/iPodModule.py:1015
 msgid "Movie"
@@ -1014,57 +1017,57 @@ msgstr "Филм"
 
 #: ../conduit/modules/iPodModule/iPodModule.py:1016
 msgid "Music Video"
-msgstr ""
+msgstr "Виедои мусиқӣ"
 
 #: ../conduit/modules/iPodModule/iPodModule.py:1017
 msgid "TV Show"
-msgstr ""
+msgstr "ТВ-шоу"
 
 #: ../conduit/modules/iPodModule/iPodModule.py:1019
 msgid "Video kind"
-msgstr ""
+msgstr "Насли видео"
 
 #. Translators: Translate this in derived classes.
 #: ../conduit/modules/N800Module/N800Module.py:55
 msgid "Conduit"
-msgstr ""
+msgstr "Қубур"
 
 #: ../conduit/modules/N800Module/N800Module.py:105
 msgid "N800 Files"
-msgstr ""
+msgstr "Файлҳои N800"
 
 #: ../conduit/modules/N800Module/N800Module.py:106
 msgid "Synchronizes files/folders to a N800 device"
-msgstr ""
+msgstr "Ҳамоҳанг кардани файлҳо/ҷузвдонҳо бо дастгоҳи N800"
 
 #. To translators: default backup folder of N800
 #: ../conduit/modules/N800Module/N800Module.py:111
 msgid "Backups"
-msgstr ""
+msgstr "Нусхаҳои эҳтиётӣ"
 
 #: ../conduit/modules/N800Module/N800Module.py:126
 msgid "N800 Music"
-msgstr ""
+msgstr "Мусиқии N800"
 
 #: ../conduit/modules/N800Module/N800Module.py:127
 msgid "Synchronizes music to a N800 device"
-msgstr ""
+msgstr "Ҳамоҳанг кардани мусиқӣ бо дастгоҳи N800"
 
 #: ../conduit/modules/N800Module/N800Module.py:150
 msgid "N800 Videos"
-msgstr ""
+msgstr "Видеоҳои N800"
 
 #: ../conduit/modules/N800Module/N800Module.py:151
 msgid "Synchronizes video to a N800 device"
-msgstr ""
+msgstr "Ҳамоҳанг кардани видеоҳо бо дастгоҳи N800"
 
 #: ../conduit/modules/N800Module/N800Module.py:174
 msgid "N800 Photos"
-msgstr ""
+msgstr "Суратҳои N800"
 
 #: ../conduit/modules/N800Module/N800Module.py:175
 msgid "Synchronizes photos to an N800 device"
-msgstr ""
+msgstr "Ҳамоҳанг кардани суратҳо бо дастгоҳи N800"
 
 #. To translators: default photos folder of N800
 #: ../conduit/modules/N800Module/N800Module.py:181
@@ -1073,19 +1076,19 @@ msgstr "Сурат"
 
 #: ../conduit/modules/NautilusBookmarksModule.py:19
 msgid "Nautilus Bookmarks"
-msgstr ""
+msgstr "Хатбаракҳои Nautilus"
 
 #: ../conduit/modules/NautilusBookmarksModule.py:20
 msgid "Sync your Nautilus Bookmarks"
-msgstr ""
+msgstr "\"Ҳамоҳанг кардани хатбаракҳои Nautilus"
 
 #: ../conduit/modules/NautilusBookmarksModule.py:145
 msgid "Sync bookmarks to local places/files"
-msgstr ""
+msgstr "Ҳамоҳангсозии хатбаракҳо ба ҷойҳо/файлҳои маҳаллӣ"
 
 #: ../conduit/modules/NautilusBookmarksModule.py:148
 msgid "Sync bookmarks to remote places/files"
-msgstr ""
+msgstr "Ҳамоҳангсозии хатбаракҳо ба ҷойҳо/файлҳои дурдаст"
 
 #: ../conduit/modules/NetworkModule/Server.py:147
 msgid "Network"
@@ -1093,15 +1096,15 @@ msgstr "Шабака"
 
 #: ../conduit/modules/NetworkModule/Server.py:148
 msgid "Enable synchronization via network"
-msgstr ""
+msgstr "Фаъол кардани ҳамоҳангсозӣ тавассути шабака"
 
 #: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:48
 msgid "Rhythmbox Music"
-msgstr ""
+msgstr "Мусиқии Rhythmbox"
 
 #: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:49
 msgid "Synchronize songs from your Rhythmbox playlists"
-msgstr ""
+msgstr "Ҳамоҳанг кардани сурудҳо аз феҳристи пахши Rhythmbox"
 
 #: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:73
 msgid "Unknown"
@@ -1109,23 +1112,25 @@ msgstr "Номаълум"
 
 #: ../conduit/modules/ShotwellModule/ShotwellModule.py:36
 msgid "Shotwell"
-msgstr ""
+msgstr "Shotwell"
 
 #: ../conduit/modules/ShotwellModule/ShotwellModule.py:37
 msgid "Sync from your Shotwell photo library"
-msgstr ""
+msgstr "Ҳамоҳанг кардани аз китобҳонаи суратҳои Shotwell-и худ"
 
 #: ../conduit/modules/ShotwellModule/ShotwellModule.py:56
 msgid "Disabling Shotwell module, unable to open sqlite3 data source"
 msgstr ""
+"Ғайрифаъол кардани модули Shotwell, кушодани манбаъи иттилооти sqlite3 "
+"имконпазир нест"
 
 #: ../conduit/modules/ShutterflyModule/ShutterflyModule.py:26
 msgid "Shutterfly"
-msgstr ""
+msgstr "Shutterfly"
 
 #: ../conduit/modules/ShutterflyModule/ShutterflyModule.py:27
 msgid "Synchronize your Shutterfly photos"
-msgstr ""
+msgstr "Ҳамоҳанг кардани суратҳои Shutterfly"
 
 #: ../conduit/modules/ShutterflyModule/shutterfly/shutterfly.py:33
 msgid "%Y-%m-%d %H:%M:%S"
@@ -1133,24 +1138,24 @@ msgstr "%Y-%m-%d %H:%M:%S"
 
 #: ../conduit/modules/SmugMugModule/SmugMugModule.py:28
 msgid "SmugMug"
-msgstr ""
+msgstr "SmugMug"
 
 #: ../conduit/modules/SmugMugModule/SmugMugModule.py:29
 msgid "Synchronize your SmugMug.com photos"
-msgstr ""
+msgstr "Ҳамоҳанг кардани суратҳои SmugMug.com"
 
 #: ../conduit/modules/TomboyModule.py:106
 msgid "Tomboy Notes"
-msgstr ""
+msgstr "Тавзеҳҳои Tomboy"
 
 #: ../conduit/modules/TomboyModule.py:107
 msgid "Synchronize your Tomboy notes"
-msgstr ""
+msgstr "Ҳамоҳанг кардани ёддоштҳои Tomboy"
 
 #: ../conduit/modules/ZotoModule/ZotoModule.py:154
 msgid "Zoto"
-msgstr ""
+msgstr "Zoto"
 
 #: ../conduit/modules/ZotoModule/ZotoModule.py:155
 msgid "Synchronize your Zoto photos"
-msgstr ""
+msgstr "Ҳамоҳанг кардани суратҳои Zoto"
