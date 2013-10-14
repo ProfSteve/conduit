@@ -1,0 +1,1155 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=conduit&keywords=I18N+L10N&component=documentation and translation\n"
+"POT-Creation-Date: 2013-09-27 21:19+0000\n"
+"PO-Revision-Date: 2013-10-14 21:43+0300\n"
+"Last-Translator: Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>\n"
+"Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: ../data/conduit.desktop.in.in.h:1
+msgid "Conduit Synchronizer"
+msgstr "Conduit sinhronizētājs"
+
+#: ../data/conduit.desktop.in.in.h:2
+msgid "Synchronization for GNOME"
+msgstr "GNOME sinhronizācija"
+
+#: ../data/conduit.ui.h:1
+msgid "Title"
+msgstr "Virsraksts"
+
+#: ../data/conduit.ui.h:2
+msgid "Editor"
+msgstr "Redaktors"
+
+#: ../data/conduit.ui.h:3
+msgid "_File"
+msgstr "_Datne"
+
+#: ../data/conduit.ui.h:4
+msgid "_Edit"
+msgstr "R_ediģēt"
+
+#: ../data/conduit.ui.h:5
+msgid "_Help"
+msgstr "_Palīdzība"
+
+#: ../data/conduit.ui.h:6
+msgid "Data Providers"
+msgstr "Datu sniedzēji"
+
+#: ../data/conduit.ui.h:7
+msgid "Compare"
+msgstr "Salīdzināt"
+
+#: ../data/conduit.ui.h:8
+msgid "Resolve Conflicts"
+msgstr "Risināt konfliktus"
+
+#: ../data/conduit.ui.h:9
+msgid "Conflicts"
+msgstr "Konflikti"
+
+#: ../data/conduit.ui.h:10
+msgid "Synchronization Options"
+msgstr "Sinhronizācijas opcijas"
+
+#: ../data/conduit.ui.h:11
+msgid "Slow Synchronization"
+msgstr "Lēna sinhronizācija"
+
+#: ../data/conduit.ui.h:12
+msgid "Two-Way Synchronization"
+msgstr "Divvirzienu sinhronizācija"
+
+#: ../data/conduit.ui.h:13
+msgid "Always Up-To-Date"
+msgstr "Vienmēr aktuāls"
+
+#: ../data/conduit.ui.h:14
+msgid "Conflict Options"
+msgstr "Konfliktu opcijas"
+
+#: ../data/conduit.ui.h:15
+msgid "Ask Me What to Do"
+msgstr "Jautāt man, kā rīkoties"
+
+#: ../data/conduit.ui.h:16
+msgid "Replace the Older Item"
+msgstr "Aizvietot vecāku vienumu"
+
+#: ../data/conduit.ui.h:17
+msgid "Skip"
+msgstr "Izlaist"
+
+#: ../data/conduit.ui.h:18
+msgid "Delete Options"
+msgstr "Dzēst opcijas"
+
+#: ../data/conduit.ui.h:19
+msgid "Delete the Corresponding Item"
+msgstr "Dzēst attiecīgo vienumu"
+
+#: ../data/conduit.ui.h:20
+msgid "Conduit Preferences"
+msgstr "Conduit iestatījumi"
+
+#: ../data/conduit.ui.h:21
+msgid "Start Conduit at login"
+msgstr "Conduit palaist piesakoties"
+
+#: ../data/conduit.ui.h:22
+msgid "Save settings on exit"
+msgstr "Izejot saglabāt iestatījumus"
+
+#: ../data/conduit.ui.h:23
+msgid "Show status icon"
+msgstr "Rādīt statusa ikonu"
+
+#: ../data/conduit.ui.h:24
+msgid "Minimize to notification area"
+msgstr "Minimizēt uz paziņojumu laukumu"
+
+#: ../data/conduit.ui.h:25
+msgid "Show Hints"
+msgstr "Rādīt padomus"
+
+#: ../data/conduit.ui.h:26
+msgid "General"
+msgstr "Vispārīgi"
+
+#: ../data/conduit.ui.h:27
+msgid "When an item has been deleted:"
+msgstr "Kad vienums ir izdzēsts:"
+
+#: ../data/conduit.ui.h:28
+msgid "Ask me what to do"
+msgstr "Jautāt man, kā rīkoties"
+
+#: ../data/conduit.ui.h:29
+msgid "Delete from the corresponding sink"
+msgstr "Dzēst no atbilstošā savācēja"
+
+#: ../data/conduit.ui.h:30
+msgid "When there is a two-way conflict:"
+msgstr "Kad ir divvirzienu konflikts:"
+
+#: ../data/conduit.ui.h:31
+msgid "Replace the older item"
+msgstr "Aizvietot vecāku vienumu"
+
+#: ../data/conduit.ui.h:32
+msgid "Default Synchronization Options"
+msgstr "Noklusējuma sinhronizācijas opcijas"
+
+#: ../data/conduit.ui.h:33
+msgid "Configuration"
+msgstr "Konfigurācija"
+
+#: ../data/conduit.ui.h:34
+msgid "Data Conversions"
+msgstr "Datu pārveidojumi"
+
+#: ../conduit/Knowledge.py:8
+msgid "What Do You Want to Synchronize?"
+msgstr "Ko vēlaties sinhronizēt?"
+
+#: ../conduit/Knowledge.py:9
+msgid "Drag and Drop a Data Provider on the Canvas"
+msgstr "Velciet un nometiet datu sniedzēju uz audekla"
+
+#: ../conduit/Knowledge.py:11
+msgid "Synchronization Group Created"
+msgstr "Izveidota sinhronizācijas grupa"
+
+#: ../conduit/Knowledge.py:12
+msgid "Add Another Data Provider to the Group to Synchronize it"
+msgstr "Pievienojiet citu datu nesēju grupai, lai to sinhronizētu"
+
+#: ../conduit/Knowledge.py:14
+msgid "You Are Now Ready to Synchronize"
+msgstr "Esat gatavs sinhronizēt?"
+
+#: ../conduit/Knowledge.py:15
+msgid "Right Click on Group for Options"
+msgstr "Spiediet labo peles pogu uz grupām, lai piekļūtu opcijām"
+
+#: ../conduit/Knowledge.py:24
+msgid "Synchronize Two Folders"
+msgstr "Sinhronizēt divas mapes"
+
+#: ../conduit/Knowledge.py:27
+msgid "Backup Folder to Box.net"
+msgstr "Dublēt mapi uz Box.net"
+
+#: ../conduit/Knowledge.py:30
+msgid "Synchronize Tagged F-Spot Photos to Flickr"
+msgstr "Sinhronizēt marķētās F-Spot fotogrāfijas ar Flickr"
+
+#: ../conduit/Knowledge.py:33
+msgid "Synchronize Photos to Flickr"
+msgstr "Sinhronizēt fotogrāfijas ar Flickr"
+
+#: ../conduit/Knowledge.py:36
+msgid "Upload Photos to Facebook"
+msgstr "Augšupielādēt fotogrāfijas uz Facebook"
+
+#: ../conduit/Knowledge.py:39
+msgid "Synchronize Desktop Wallpaper from a RSS Feed"
+msgstr "Sinhronizēt darbvirsmas tapeti no RSS plūsmas"
+
+#: ../conduit/Main.py:57
+msgid "Conduit is a synchronization application."
+msgstr "Conduit ir sinhronizēšanas lietotne."
+
+#: ../conduit/Main.py:61
+#, python-format
+msgid "Launch without GUI. [default: %default]"
+msgstr "Palaist bez GUI. [noklusējuma: %default]"
+
+#: ../conduit/Main.py:65
+#, python-format
+msgid "Save dataprovider configuration to FILE. [default: %default]"
+msgstr "Saglabāt datu sniedzēju konfigurāciju DATNĒ. [noklusējuma: %default]"
+
+#: ../conduit/Main.py:69
+#, python-format
+msgid "Iconify on startup. [default: %default]"
+msgstr "Ikonificēt palaižoties. [noklusējuma: %default]"
+
+#: ../conduit/Main.py:73
+#, python-format
+msgid "Run with the specified UI. [default: %default]"
+msgstr "Palaist ar norādīto UI. [noklusējuma: %default]"
+
+#: ../conduit/Main.py:77
+msgid "Only load modules in the named files. [default: load all modules]"
+msgstr ""
+"Ielādēt tikai moduļus nosauktajās datnēs. [noklusējuma: ielādēt visus moduļus]"
+
+#: ../conduit/Main.py:81
+msgid "Do not load modules in the named files. [default: load all modules]"
+msgstr ""
+"Neielādēt moduļus nosauktajās datnēs. [noklusējuma: ielādēt visus moduļus]"
+
+#: ../conduit/Main.py:85
+msgid ""
+"Explicitly set internal Conduit settings (keys) to the given values for this "
+"session. [default: do not set]"
+msgstr ""
+"Šai sesijai tieši iestatīt iekšējos Conduit iestatījumus (atslēgas) uz doto "
+"vērtību. [noklusējuma: neiestatīt]"
+
+#: ../conduit/Main.py:89
+#, python-format
+msgid ""
+"Enable loading of unfinished or unsupported dataproviders. [default: "
+"%default]"
+msgstr ""
+"Aktivēt nepabeigto vai neatbalstīto datu sniedzēju ielādēšanu. [noklusējuma: %"
+"default]"
+
+#: ../conduit/Main.py:93
+#, python-format
+msgid "Generate more debugging information. [default: %default]"
+msgstr "Radīt vairāk atkļūdošanas informācijas. [noklusējuma: %default]"
+
+#: ../conduit/Main.py:97
+#, python-format
+msgid "Generate less debugging information. [default: %default]"
+msgstr "Radīt mazāk atkļūdošanas informācijas. [noklusējuma: %default]"
+
+#: ../conduit/Main.py:101
+#, python-format
+msgid "Generate no debugging information. [default: %default]"
+msgstr "Neradīt atkļūdošanas informāciju. [noklusējuma: %default]"
+
+#: ../conduit/dataproviders/DataProvider.py:22
+msgid "Ready"
+msgstr "Gatavs"
+
+#: ../conduit/dataproviders/DataProvider.py:23
+msgid "New data to sync"
+msgstr "Jauni datni, ko sinhronizēt"
+
+#: ../conduit/dataproviders/DataProvider.py:24
+msgid "Refreshing..."
+msgstr "Atsvaidzina..."
+
+#: ../conduit/dataproviders/DataProvider.py:25
+msgid "Refreshed OK"
+msgstr "Atsvaidzināts korekti"
+
+#: ../conduit/dataproviders/DataProvider.py:26
+msgid "Error Refreshing"
+msgstr "Kļūda atsvaidzinot"
+
+#: ../conduit/dataproviders/DataProvider.py:27
+msgid "Synchronizing..."
+msgstr "Sinhronizē..."
+
+#: ../conduit/dataproviders/DataProvider.py:28
+msgid "Synchronized OK"
+msgstr "Sinhronizēts korekti"
+
+#: ../conduit/dataproviders/DataProvider.py:29
+msgid "Error Synchronizing"
+msgstr "Kļūda sinhronizējot"
+
+#: ../conduit/dataproviders/DataProvider.py:30
+msgid "Synchronization Skipped"
+msgstr "Izlaista sinhronizācija"
+
+#: ../conduit/dataproviders/DataProvider.py:31
+msgid "Synchronization Cancelled"
+msgstr "Atcelta sinhronizācija"
+
+#: ../conduit/dataproviders/DataProvider.py:32 ../conduit/gtkui/UI.py:743
+msgid "Synchronization Conflict"
+msgstr "Sinhronizācijas konflikts"
+
+#: ../conduit/dataproviders/DataProvider.py:33
+msgid "Not Configured"
+msgstr "Nav konfigurēts"
+
+#: ../conduit/dataproviders/Image.py:34
+#: ../conduit/modules/FlickrModule/FlickrModule.py:329
+msgid "640x480"
+msgstr "640x480"
+
+#: ../conduit/dataproviders/Image.py:34
+#: ../conduit/modules/FlickrModule/FlickrModule.py:329
+msgid "800x600"
+msgstr "800x600"
+
+#: ../conduit/dataproviders/Image.py:34
+#: ../conduit/modules/FlickrModule/FlickrModule.py:329
+msgid "1024x768"
+msgstr "1024x768"
+
+#. Signifies that a conversion should not take place
+#: ../conduit/dataproviders/Image.py:35
+#: ../conduit/modules/N800Module/N800Module.py:57
+msgid "None"
+msgstr "Nav"
+
+#. Default Categories for the DataProviders
+#: ../conduit/dataproviders/__init__.py:6
+msgid "Files and Folders"
+msgstr "Datnes un mapes"
+
+#: ../conduit/dataproviders/__init__.py:7
+#: ../conduit/modules/iPodModule/iPodModule.py:276
+msgid "Notes"
+msgstr "Piezīmes"
+
+#: ../conduit/dataproviders/__init__.py:8
+#: ../conduit/modules/iPodModule/iPodModule.py:464
+msgid "Photos"
+msgstr "Fotogrāfijas"
+
+#: ../conduit/dataproviders/__init__.py:9
+msgid "Office"
+msgstr "Birojs"
+
+#: ../conduit/dataproviders/__init__.py:10
+msgid "Settings"
+msgstr "Iestatījumi"
+
+#: ../conduit/dataproviders/__init__.py:11
+msgid "Miscellaneous"
+msgstr "Dažādi"
+
+#: ../conduit/dataproviders/__init__.py:12
+msgid "Media"
+msgstr "Skaņa un video"
+
+#: ../conduit/dataproviders/__init__.py:13
+msgid "Bookmarks"
+msgstr "Grāmatzīmes"
+
+#: ../conduit/dataproviders/__init__.py:14
+msgid "Test"
+msgstr "Tests"
+
+#: ../conduit/gtkui/Canvas.py:152
+msgid "Drag a Data Provider here to continue"
+msgstr "Velciet datu sniedzēju šeit, lai turpinātu"
+
+#: ../conduit/gtkui/Canvas.py:227
+msgid "Show me"
+msgstr "Rādīt man"
+
+#: ../conduit/gtkui/ConfigItems.py:733
+#, python-format
+msgid "Total: %d"
+msgstr "Kopā: %d"
+
+#. Visible column0 is
+#. [pixbuf + source display name] or
+#. [source_data.get_snippet()]
+#: ../conduit/gtkui/ConflictResolver.py:91
+msgid "Source"
+msgstr "Avots"
+
+#: ../conduit/gtkui/ConflictResolver.py:105
+msgid "Resolution"
+msgstr "Izšķirtspēja"
+
+#. Visible column2 is the display name of source and source data
+#: ../conduit/gtkui/ConflictResolver.py:110
+msgid "Sink"
+msgstr "Saņēmējs"
+
+#: ../conduit/gtkui/ConflictResolver.py:150
+#: ../conduit/gtkui/ConflictResolver.py:151
+#, python-format
+msgid "Conflicts (%s)"
+msgstr "Konflikti (%s)"
+
+#: ../conduit/gtkui/Tree.py:355 ../conduit/gtkui/UI.py:200
+#: ../conduit/modules/FileModule/FileConfiguration.py:118
+msgid "Name"
+msgstr "Nosaukums"
+
+#: ../conduit/gtkui/Tree.py:364
+msgid "Description"
+msgstr "Apraksts"
+
+#. name,                      #url
+#: ../conduit/gtkui/UI.py:33
+msgid "Introduction"
+msgstr "Ievads"
+
+#: ../conduit/gtkui/UI.py:34
+msgid "Writing a Data Provider"
+msgstr "Raksta datu sniedzēju"
+
+#: ../conduit/gtkui/UI.py:35
+msgid "API Documentation"
+msgstr "API dokumentācija"
+
+#: ../conduit/gtkui/UI.py:36
+msgid "Test Results"
+msgstr "Testa rezultāti"
+
+#: ../conduit/gtkui/UI.py:52
+msgid "Examples"
+msgstr "Piemēri"
+
+#. Build some liststores to display
+#: ../conduit/gtkui/UI.py:139
+msgid "Convert from"
+msgstr "Konvertēt no"
+
+#: ../conduit/gtkui/UI.py:140
+msgid "into"
+msgstr "uz"
+
+#: ../conduit/gtkui/UI.py:190
+msgid "Relationship Database"
+msgstr "Relāciju datubāze"
+
+#: ../conduit/gtkui/UI.py:194
+msgid "Conversions Available"
+msgstr "Pieejamie pārveidojumi"
+
+#: ../conduit/gtkui/UI.py:204
+msgid "Loaded"
+msgstr "Ielādēts"
+
+#: ../conduit/gtkui/UI.py:329
+#, python-format
+msgid " - %s (Development Version)"
+msgstr " - %s (izstrādes versija)"
+
+#: ../conduit/gtkui/UI.py:331
+msgid " - Running Uninstalled"
+msgstr " -palaiž neinstalētu"
+
+#: ../conduit/gtkui/UI.py:375
+msgid "Developers"
+msgstr "Izstrādātāji"
+
+#: ../conduit/gtkui/UI.py:539 ../conduit/hildonui/UI.py:127
+msgid "Synchronization in progress. Do you want to cancel it?"
+msgstr "Notiek sinhronizēšana. Vai vēlaties to atcelt?"
+
+#: ../conduit/gtkui/UI.py:712
+msgid "_Synchronize All"
+msgstr "_Sinhronizēt visu"
+
+#: ../conduit/gtkui/UI.py:712
+msgid "Synchronizes All Groups"
+msgstr "Sinhronizēt visas grupas"
+
+#: ../conduit/gtkui/UI.py:713
+msgid "_Cancel Synchronization"
+msgstr "At_celt sinhronizēšanu"
+
+#: ../conduit/gtkui/UI.py:713
+msgid "Cancels Currently Synchronizing Groups"
+msgstr "Atceļ pašlaik sinhronizētās grupas"
+
+#: ../conduit/gtkui/UI.py:714
+msgid "_Quit"
+msgstr "I_ziet"
+
+#: ../conduit/gtkui/UI.py:714
+msgid "Close Conduit"
+msgstr "Aizvērt Conduit"
+
+#: ../conduit/gtkui/UI.py:731
+msgid "Synchronizing"
+msgstr "Sinhronizē"
+
+#: ../conduit/gtkui/UI.py:737
+msgid "Synchronization Complete"
+msgstr "Sinhronizēšana beigusies"
+
+#: ../conduit/gtkui/UI.py:741
+msgid "Synchronization Error"
+msgstr "Sinhronizēšanas kļūda"
+
+#: ../conduit/gtkui/WindowConfigurator.py:14
+msgid "Configure"
+msgstr "Konfigurē"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:58
+msgid "Backpack Notes"
+msgstr "Mugursomas piezīmes"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:59
+msgid "Store things in Backpack Notes"
+msgstr "Saglabāt lietas mugursomas piezīmēs"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:105
+#: ../conduit/modules/FlickrModule/FlickrModule.py:307
+#: ../conduit/modules/ZotoModule/ZotoModule.py:243
+msgid "Account details"
+msgstr "Konta informācija"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:106
+msgid "Login"
+msgstr "Lietotājs"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:109
+msgid "API key"
+msgstr "API atslēga"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:112
+msgid "Saved notes"
+msgstr "Saglabātās piezīmes"
+
+#: ../conduit/modules/BackpackModule/BackpackModule.py:113
+msgid "Save notes in page"
+msgstr "Saglabāt piezīmes lappusē"
+
+#: ../conduit/modules/BansheeModule/BansheeModule.py:52
+msgid "Banshee Playlists"
+msgstr "Banshee repertuārs"
+
+#: ../conduit/modules/BansheeModule/BansheeModule.py:53
+msgid "Synchronize your Banshee playlists"
+msgstr "Sinhronizē savu Banshee repertuāru"
+
+#: ../conduit/modules/BansheeModule/BansheeModule.py:187
+#: ../conduit/modules/BansheeModule/BansheeModule.py:188
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:120
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:121
+msgid "Playlists"
+msgstr "Repertuāri"
+
+#: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:29
+msgid "Box.net"
+msgstr "Box.net"
+
+#: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:30
+msgid "Synchronize your Box.net files"
+msgstr "Sinhronizē savas Box.net datnes"
+
+#: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:290
+#: ../conduit/modules/FileModule/FileModule.py:86
+msgid "Folder"
+msgstr "Mape"
+
+#: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:291
+msgid "Folder name"
+msgstr "Mapes nosaukums"
+
+#: ../conduit/modules/BoxDotNetModule/BoxDotNetModule.py:295
+msgid "Load folders"
+msgstr "Ielādēt mapes"
+
+#: ../conduit/modules/ConverterModule.py:91
+msgid "Note-"
+msgstr "Piezīme-"
+
+#: ../conduit/modules/DesktopWallpaperModule.py:38
+msgid "Wallpaper"
+msgstr "Tapete"
+
+#: ../conduit/modules/DesktopWallpaperModule.py:39
+msgid "Changes your Desktop Wallpaper"
+msgstr "Izmaiņas jūsu darbvirsmas tapetē"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:110
+#, python-format
+msgid "Select %s"
+msgstr "Izvēlieties %s"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:130
+msgid "Evolution Contacts"
+msgstr "Evolution kontakti"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:131
+msgid "Synchronize your contacts"
+msgstr "Sinhronizē savus kontaktus"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:181
+msgid "Evolution Calendar"
+msgstr "Evolution kalendārs"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:182
+msgid "Synchronize your calendar"
+msgstr "Sinhronizē savu kalendāru"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:243
+msgid "Evolution Tasks"
+msgstr "Evolution uzdevumi"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:244
+msgid "Synchronize your tasks"
+msgstr "Sinhronizē savus uzdevumus"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:300
+msgid "Evolution Memos"
+msgstr "Evolution memo"
+
+#: ../conduit/modules/EvolutionModule/EvolutionModule.py:301
+msgid "Synchronize your memos"
+msgstr "Sinhronizē savus memo"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:38
+msgid "Facebook"
+msgstr "Facebook"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:39
+msgid "Synchronize your Facebook photos"
+msgstr "Sinhronizē savas Facebook fotogrāfijas"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:124
+#: ../conduit/modules/FlickrModule/FlickrModule.py:282
+msgid "Loading album list..."
+msgstr "Ielādē albumu sarakstu..."
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:128
+msgid "Failed to connect"
+msgstr "Neizdevās savienoties"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:131
+msgid "Logged in"
+msgstr "Ierakstījās"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:133
+msgid "Failed to login"
+msgstr "Neizdevās ierakstīties"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:145
+#: ../conduit/modules/FspotModule/FspotModule.py:246
+msgid "Status"
+msgstr "Statuss"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:150
+#: ../conduit/modules/iPodModule/iPodModule.py:566
+#: ../conduit/modules/ZotoModule/ZotoModule.py:252
+msgid "Album"
+msgstr "Albums"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:151
+msgid "Album name"
+msgstr "Albuma nosaukums"
+
+#: ../conduit/modules/FacebookModule/FacebookModule.py:156
+msgid "Load albums"
+msgstr "Ielādēt albumus"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:58
+msgid "RSS Feed"
+msgstr "RSS plūsma"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:59
+msgid "Synchronize data from RSS enclosures"
+msgstr "Sinhronizēt datus no RSS ietvariem"
+
+#. FIXME: Add Randomize
+#: ../conduit/modules/FeedModule/FeedModule.py:114
+msgid "Feed details"
+msgstr "Informācija par plūsmu"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:115
+msgid "Feed address"
+msgstr "Plūsmas adrese"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:118
+msgid "Enclosure settings"
+msgstr "Ietvara iestatījumi"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:119
+msgid "Limit downloaded enclosures"
+msgstr "Ierobežot lejupielādētos ietvarus"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:125
+msgid "Limit to"
+msgstr "Ierobežot līdz"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:129
+msgid "Randomize enclosures"
+msgstr "Nejauši izkliedēt ietvarus"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:133
+msgid "Download types"
+msgstr "Lejupielādēt tipus"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:134
+msgid "Download audio files"
+msgstr "Lejupielādēt audio datnes"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:135
+msgid "Download video files"
+msgstr "Lejupielādēt video datnes"
+
+#: ../conduit/modules/FeedModule/FeedModule.py:136
+msgid "Download photo files"
+msgstr "Lejupielādēt fotogrāfiju datnes"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:112
+msgid "Icon"
+msgstr "Ikona"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:124
+#: ../conduit/modules/GConfModule/GConfModule.py:138
+msgid "Items"
+msgstr "Vienumi"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:150
+#, python-format
+msgid "<i>Contains %s files</i>"
+msgstr "<i>Satur %s datnes</i>"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:249
+msgid "Include file..."
+msgstr "Iekļaut datni..."
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:259
+msgid "All files"
+msgstr "Visas datnes"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:272
+msgid "Include folder..."
+msgstr "Iekļaut mapi..."
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:315
+msgid "Please Name All Folders"
+msgstr "Lūdzu, nosauciet visas datnes"
+
+#: ../conduit/modules/FileModule/FileConfiguration.py:316
+msgid ""
+"All folders require a descriptive name. To name a folder simply click on it"
+msgstr ""
+"Visām mapēm vajag aprakstošus nosaukumus. Lai nosauktu datni, vienkārši uz "
+"tās spiediet"
+
+#: ../conduit/modules/FileModule/FileModule.py:27
+msgid "Files"
+msgstr "Datnes"
+
+#: ../conduit/modules/FileModule/FileModule.py:28
+msgid "Source for synchronizing multiple files"
+msgstr "Vairāku datņu sinhronizēšanas avots"
+
+#: ../conduit/modules/FileModule/FileModule.py:87
+msgid "Synchronize folders"
+msgstr "Sinhronizēt mapes"
+
+#: ../conduit/modules/Firefox3Module/Firefox3Module.py:40
+msgid "Firefox 3 Bookmarks"
+msgstr "Firefox 3 grāmatzīmes"
+
+#: ../conduit/modules/Firefox3Module/Firefox3Module.py:41
+msgid "Syncronize your Firefox 3 Bookmarks"
+msgstr "Sinhronizē savas Firefox 3 grāmatzīmes"
+
+#: ../conduit/modules/Firefox3Module/Firefox3Module.py:100
+msgid "Firefox Profile"
+msgstr "Firefox profils"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:76
+msgid "Flickr"
+msgstr "Flickr"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:77
+msgid "Synchronize your Flickr.com photos"
+msgstr "Sinhronizē savas Flickr.com fotogrāfijas"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:287
+msgid "Failed to connect."
+msgstr "Neizdevās savienoties."
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:290
+msgid "Album names loaded."
+msgstr "Ielādēti albumu nosaukumi."
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:292
+msgid "Failed to login."
+msgstr "Neizdevās ierakstīties."
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:303
+msgid "Logging in, please wait..."
+msgstr "Ierakstās, lūdzu, uzgaidiet..."
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:308
+#: ../conduit/modules/GoogleBookmarksModule.py:67
+#: ../conduit/modules/ZotoModule/ZotoModule.py:244
+msgid "Username"
+msgstr "Lietotājvārds"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:319
+msgid "Authenticate"
+msgstr "Autentificēt"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:323
+#: ../conduit/modules/ZotoModule/ZotoModule.py:251
+msgid "Saved photo settings"
+msgstr "Saglabātie fotogrāfiju iestatījumi"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:328
+msgid "Resize photos"
+msgstr "Mainīt fotogrāfiju izmērus"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:329
+msgid "Do not resize"
+msgstr "Nemainīt izmēru"
+
+#: ../conduit/modules/FlickrModule/FlickrModule.py:332
+msgid "Photos are public"
+msgstr "Fotogrāfijas ir publiskas"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:28
+msgid "F-Spot"
+msgstr "F-Spot"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:29
+msgid "Synchronize your F-Spot photos"
+msgstr "Sinhronizē savas F-Spot fotogrāfijas"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:155
+msgid "F-Spot DBus interface is operating in read-only mode"
+msgstr "F-Spot DBus saskarne darbojas tikai lasīšanas režīmā"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:221
+msgid "F-Spot is running"
+msgstr "F-Spot ir palaists"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:222
+msgid "Please start F-Spot or activate the D-Bus Extension"
+msgstr "Lūdzu, palaidiet F-Spot vai aktivējiet D-Bus paplašinājumu"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:247
+msgid "Start F-Spot"
+msgstr "Palaist F-Spot"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:251
+#: ../conduit/modules/FspotModule/FspotModule.py:252
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:71
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:73
+msgid "Tags"
+msgstr "Birkas"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:265
+msgid "Add tags"
+msgstr "Pievienot birkas"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:266
+msgid "Tag name"
+msgstr "Birkas nosaukums"
+
+#: ../conduit/modules/FspotModule/FspotModule.py:269
+msgid "Add tag"
+msgstr "Pievienot birku"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:21
+msgid "Application Settings"
+msgstr "Lietotnes iestatījumi"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:22
+msgid "Synchronize your application settings"
+msgstr "Sinhronizējiet savas lietotnes iestatījumus"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:31
+msgid "Metacity"
+msgstr "Metacity"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:32
+msgid "Nautilus"
+msgstr "Nautilus"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:33
+msgid "Preferred Applications"
+msgstr "Vēlamās lietotnes"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:34
+msgid "Desktop Interface"
+msgstr "Darbvirsmas saskarne"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:35
+msgid "Gnome Terminal"
+msgstr "GNOME terminālis"
+
+#: ../conduit/modules/GConfModule/GConfModule.py:137
+msgid "Applications to Synchronize"
+msgstr "Sinhronizējamās lietotnes"
+
+#: ../conduit/modules/GoogleBookmarksModule.py:19
+msgid "Google Bookmarks"
+msgstr "Google grāmatzīmes"
+
+#: ../conduit/modules/GoogleBookmarksModule.py:20
+msgid "Sync your Google Bookmarks"
+msgstr "Sinhronizēt savas Google grāmatzīmes"
+
+#: ../conduit/modules/GoogleBookmarksModule.py:66
+msgid "Login Details"
+msgstr "Ierakstīšanās informācija"
+
+#: ../conduit/modules/GoogleBookmarksModule.py:70
+#: ../conduit/modules/ZotoModule/ZotoModule.py:247
+msgid "Password"
+msgstr "Parole"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:277
+msgid "Synchronize your iPod notes"
+msgstr "Sinhronizē savas iPod piezīmes"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:392
+msgid "Contacts"
+msgstr "Kontakti"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:393
+msgid "Synchronize your iPod contacts"
+msgstr "Sinhronizē savus kontaktus"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:428
+msgid "Calendar"
+msgstr "Kalendārs"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:429
+msgid "Synchronize your iPod calendar"
+msgstr "Sinhronizē savu iPod kalendāru"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:465
+msgid "Synchronize your iPod photos"
+msgstr "Sinhronizē savas iPod fotogrāfijas"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:570
+msgid "Delete"
+msgstr "Dzēst"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:573
+msgid "Delete All Photos"
+msgstr "Dzēst visas fotogrāfijas"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:803
+#: ../conduit/modules/iPodModule/iPodModule.py:920
+#: ../conduit/modules/N800Module/N800Module.py:77
+msgid "Encoding"
+msgstr "Kodējums"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:919
+msgid "Conversion options"
+msgstr "Pārveidošanas opcijas"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:924
+msgid "Keep converted files"
+msgstr "Paturēt pārveidotās datnes"
+
+#. To translators: defaul music folder of N800
+#: ../conduit/modules/iPodModule/iPodModule.py:954
+#: ../conduit/modules/N800Module/N800Module.py:133
+msgid "Music"
+msgstr "Mūzika"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:955
+msgid "Synchronize your iPod music"
+msgstr "Sinhronizē savu iPod mūziku"
+
+#. To translators: defaul video folder of N800
+#: ../conduit/modules/iPodModule/iPodModule.py:990
+#: ../conduit/modules/N800Module/N800Module.py:157
+msgid "Video"
+msgstr "Video"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:991
+msgid "Synchronize your iPod videos"
+msgstr "Sinhronizē savus iPod video"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:1015
+msgid "Movie"
+msgstr "Filma"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:1016
+msgid "Music Video"
+msgstr "Mūzikas video"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:1017
+msgid "TV Show"
+msgstr "TV pārraides"
+
+#: ../conduit/modules/iPodModule/iPodModule.py:1019
+msgid "Video kind"
+msgstr "Video veids"
+
+#. Translators: Translate this in derived classes.
+#: ../conduit/modules/N800Module/N800Module.py:55
+msgid "Conduit"
+msgstr "Conduit"
+
+#: ../conduit/modules/N800Module/N800Module.py:105
+msgid "N800 Files"
+msgstr "N800 datnes"
+
+#: ../conduit/modules/N800Module/N800Module.py:106
+msgid "Synchronizes files/folders to a N800 device"
+msgstr "Sinhronizē datnes/mapes uz N800 ierīci"
+
+#. To translators: default backup folder of N800
+#: ../conduit/modules/N800Module/N800Module.py:111
+msgid "Backups"
+msgstr "Dublējumi"
+
+#: ../conduit/modules/N800Module/N800Module.py:126
+msgid "N800 Music"
+msgstr "N800 mūzika"
+
+#: ../conduit/modules/N800Module/N800Module.py:127
+msgid "Synchronizes music to a N800 device"
+msgstr "Sinhronizē mūziku ar N800 ierīci"
+
+#: ../conduit/modules/N800Module/N800Module.py:150
+msgid "N800 Videos"
+msgstr "N800 video"
+
+#: ../conduit/modules/N800Module/N800Module.py:151
+msgid "Synchronizes video to a N800 device"
+msgstr "Sinhronizē video ar N800 ierīci"
+
+#: ../conduit/modules/N800Module/N800Module.py:174
+msgid "N800 Photos"
+msgstr "N800 fotogrāfijas"
+
+#: ../conduit/modules/N800Module/N800Module.py:175
+msgid "Synchronizes photos to an N800 device"
+msgstr "Sinhronizē fotogrāfijas ar N800 ierīci"
+
+#. To translators: default photos folder of N800
+#: ../conduit/modules/N800Module/N800Module.py:181
+msgid "Photo"
+msgstr "Fotogrāfijas"
+
+#: ../conduit/modules/NautilusBookmarksModule.py:19
+msgid "Nautilus Bookmarks"
+msgstr "Nautilus grāmatzīmes"
+
+#: ../conduit/modules/NautilusBookmarksModule.py:20
+msgid "Sync your Nautilus Bookmarks"
+msgstr "Sinhronizē savas Nautilus grāmatzīmes"
+
+#: ../conduit/modules/NautilusBookmarksModule.py:145
+msgid "Sync bookmarks to local places/files"
+msgstr "Sinhronizēt grāmatzīmes ar lokālām vietām/datnēm"
+
+#: ../conduit/modules/NautilusBookmarksModule.py:148
+msgid "Sync bookmarks to remote places/files"
+msgstr "Sinhronizēt grāmatzīmes ar attālinātām vietām/datnēm"
+
+#: ../conduit/modules/NetworkModule/Server.py:147
+msgid "Network"
+msgstr "Tīkls"
+
+#: ../conduit/modules/NetworkModule/Server.py:148
+msgid "Enable synchronization via network"
+msgstr "Aktivēt sinhronizēšanu caur tīklu"
+
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:48
+msgid "Rhythmbox Music"
+msgstr "Rhythmbox mūzika"
+
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:49
+msgid "Synchronize songs from your Rhythmbox playlists"
+msgstr "Sinhronizē dziesmas no sava Rhythmbox repertuāra"
+
+#: ../conduit/modules/RhythmboxModule/RhythmboxModule.py:73
+msgid "Unknown"
+msgstr "Nezināms"
+
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:36
+msgid "Shotwell"
+msgstr "Shotwell"
+
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:37
+msgid "Sync from your Shotwell photo library"
+msgstr "Sinhronizē no savas Shotwell fotogrāfiju bibliotēkas"
+
+#: ../conduit/modules/ShotwellModule/ShotwellModule.py:56
+msgid "Disabling Shotwell module, unable to open sqlite3 data source"
+msgstr "Deaktivē Shotwell moduli, nevar atvērt sqlite3 datu avotu"
+
+#: ../conduit/modules/ShutterflyModule/ShutterflyModule.py:26
+msgid "Shutterfly"
+msgstr "Shutterfly"
+
+#: ../conduit/modules/ShutterflyModule/ShutterflyModule.py:27
+msgid "Synchronize your Shutterfly photos"
+msgstr "Sinhronizē savas Shutterfly fotogrāfijas"
+
+#: ../conduit/modules/ShutterflyModule/shutterfly/shutterfly.py:33
+msgid "%Y-%m-%d %H:%M:%S"
+msgstr "%Y-%m-%d %H.%M.%S"
+
+#: ../conduit/modules/SmugMugModule/SmugMugModule.py:28
+msgid "SmugMug"
+msgstr "SmugMug"
+
+#: ../conduit/modules/SmugMugModule/SmugMugModule.py:29
+msgid "Synchronize your SmugMug.com photos"
+msgstr "Sinhronizē savas SmugMug.com fotogrāfijas"
+
+#: ../conduit/modules/TomboyModule.py:106
+msgid "Tomboy Notes"
+msgstr "Tomboy piezīmes"
+
+#: ../conduit/modules/TomboyModule.py:107
+msgid "Synchronize your Tomboy notes"
+msgstr "Sinhronizē savas Tomboy piezīmes"
+
+#: ../conduit/modules/ZotoModule/ZotoModule.py:154
+msgid "Zoto"
+msgstr "Zoto"
+
+#: ../conduit/modules/ZotoModule/ZotoModule.py:155
+msgid "Synchronize your Zoto photos"
+msgstr "Sinhronizē savas Zoto fotogrāfijas"
+
